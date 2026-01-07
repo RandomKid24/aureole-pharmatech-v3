@@ -20,7 +20,7 @@ const AboutSection: React.FC = () => {
               <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-blue">ABOUT</h2>
             </div>
             <h3 className="text-4xl lg:text-6xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.85] mb-6">
-              THE PRECISION <br /> <span className="text-aureole-blue">STANDARD.</span>
+              THE PRECISION <br /> <span className="text-aureole-cyan">STANDARD.</span>
             </h3>
             <div className="p-8 border-l-[3px] border-aureole-blue/20 bg-slate-50/50">
               <p className="text-lg lg:text-xl text-slate-600 font-bold leading-relaxed italic mb-4">
@@ -60,18 +60,18 @@ const AboutSection: React.FC = () => {
             {AUREOLE_VALUES.map((val, idx) => (
               <div
                 key={idx}
-                className="group p-6 border border-slate-100 bg-white transition-all duration-300 hover:border-[#00C2FF] hover:shadow-2xl hover:shadow-cyan-100 flex flex-col min-h-[220px] lg:min-h-[240px] relative overflow-hidden rounded-sm cursor-default"
+                className="group p-6 border border-slate-100 bg-white transition-all duration-300 hover:border-aureole-cyan hover:shadow-2xl hover:shadow-cyan-100 flex flex-col min-h-[220px] lg:min-h-[240px] relative overflow-hidden rounded-sm cursor-default"
               >
                 {/* Background Letter - Highlighting in Cyan on Hover */}
-                <div className="text-8xl font-[950] text-slate-50 group-hover:text-[#00C2FF]/40 transition-all duration-500 absolute -right-4 -top-4 select-none pointer-events-none group-hover:scale-125 group-hover:-rotate-12">
+                <div className="text-8xl font-[950] text-slate-50 group-hover:text-aureole-cyan/40 transition-all duration-500 absolute -right-4 -top-4 select-none pointer-events-none group-hover:scale-125 group-hover:-rotate-12">
                   {val.letter}
                 </div>
 
-                <div className="text-aureole-blue mb-6 group-hover:text-[#00C2FF] transition-colors relative z-10 duration-300">
+                <div className="text-aureole-blue mb-6 group-hover:text-aureole-cyan transition-colors relative z-10 duration-300">
                   {React.cloneElement(val.icon as React.ReactElement<any>, { size: 24 })}
                 </div>
 
-                <h5 className="text-[11px] font-black text-aureole-slate uppercase tracking-[0.15em] mb-3 group-hover:text-[#00C2FF] transition-colors relative z-10">
+                <h5 className="text-[11px] font-black text-aureole-slate uppercase tracking-[0.15em] mb-3 group-hover:text-aureole-cyan transition-colors relative z-10">
                   {val.title}
                 </h5>
 

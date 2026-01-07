@@ -13,7 +13,7 @@ const VideoSection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-slate-50 relative overflow-hidden border-y border-slate-100 py-12 lg:py-16">
+    <section id="video" className="bg-slate-50 relative overflow-hidden border-y border-slate-100 py-12 lg:py-16">
       {/* Background Video Element - subtle on light theme */}
       <div className="absolute inset-0 z-0">
         <video
@@ -32,11 +32,11 @@ const VideoSection: React.FC = () => {
           {/* Header Compact - Light */}
           <div className="lg:w-1/3">
             <div className="flex items-center gap-4 mb-4">
-              <span className="w-8 h-px bg-[#00C2FF]"></span>
-              <h2 className="text-[9px] font-black uppercase tracking-[0.4em] text-[#00C2FF]">QUALITY</h2>
+              <span className="w-8 h-px bg-aureole-blue"></span>
+              <h2 className="text-[9px] font-black uppercase tracking-[0.4em] text-aureole-blue">QUALITY</h2>
             </div>
             <h3 className="text-3xl sm:text-4xl font-[950] text-slate-800 uppercase tracking-tighter leading-none mb-4">
-              ENGINEERING <span className="text-[#00C2FF]">PRECISION.</span>
+              ENGINEERING <span className="text-aureole-cyan">PRECISION.</span>
             </h3>
             <p className="text-slate-500 text-[10px] uppercase tracking-widest leading-relaxed max-w-sm">
               Certified standards for global pharmaceutical excellence.
@@ -49,9 +49,9 @@ const VideoSection: React.FC = () => {
               {stats.map((item, idx) => (
                 <div
                   key={idx}
-                  className="bg-white p-6 group hover:bg-[#00C2FF] cursor-default transition-colors duration-300"
+                  className="bg-white p-6 group hover:bg-aureole-cyan cursor-default transition-colors duration-300"
                 >
-                  <div className="text-[#00C2FF] group-hover:text-white mb-3 transition-colors">
+                  <div className="text-aureole-blue group-hover:text-white mb-3 transition-colors">
                     {item.icon}
                   </div>
                   <div className="flex flex-col">

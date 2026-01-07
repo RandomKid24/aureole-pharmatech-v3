@@ -19,8 +19,8 @@ const Leadership: React.FC = () => {
                   <div className="mt-10">
                      <h4 className="text-4xl font-black text-[#001529] uppercase tracking-tighter">Dr. Kiran Badgujar</h4>
                      <div className="flex items-center gap-4 mt-2">
-                        <div className="h-[2px] w-12 bg-[#0066CC]"></div>
-                        <span className="text-[11px] font-black uppercase tracking-[0.4em] text-[#0066CC]">Managing Director</span>
+                        <div className="h-[2px] w-12 bg-aureole-blue"></div>
+                        <span className="text-[11px] font-black uppercase tracking-[0.4em] text-aureole-blue">Managing Director</span>
                      </div>
                   </div>
                </div>
@@ -29,16 +29,16 @@ const Leadership: React.FC = () => {
                <div className="lg:col-span-7">
                   <Quote className="w-20 h-20 text-slate-100 mb-8" />
                   <h3 className="text-4xl lg:text-6xl font-black text-[#001529] uppercase tracking-tighter leading-[0.9] mb-12">
-                     "We engineer <span className="text-[#0066CC]">trust</span> through thermal precision."
+                     "We engineer <span className="text-aureole-blue">trust</span> through thermal precision."
                   </h3>
                   <p className="text-xl text-slate-600 font-medium leading-relaxed italic mb-12">
                      "Our journey over the last three decades has been defined by a relentless pursuit of engineering excellence. At Aureole, we ensure that the pharmaceutical industry's most sensitive products are tested and stored under absolute environmental equilibrium."
                   </p>
                   <div className="flex gap-10">
-                     <button className="bg-[#001529] text-white px-10 py-5 text-[10px] font-black uppercase tracking-widest flex items-center gap-4 hover:bg-[#0066CC] transition-colors">
+                     <button className="bg-[#001529] text-white px-10 py-5 text-[10px] font-black uppercase tracking-widest flex items-center gap-4 hover:bg-aureole-cyan transition-colors">
                         Full Biography <FileText className="w-4 h-4" />
                      </button>
-                     <a href="#" className="flex items-center gap-4 text-slate-400 hover:text-[#0066CC] transition-colors">
+                     <a href="#" className="flex items-center gap-4 text-slate-400 hover:text-aureole-cyan transition-colors">
                         <Linkedin className="w-5 h-5" />
                         <span className="text-[10px] font-black uppercase tracking-widest">Connect</span>
                      </a>
@@ -55,7 +55,7 @@ const Leadership: React.FC = () => {
                      alt="Mission Context"
                   />
                   <div className="relative z-10">
-                     <div className="w-14 h-14 bg-white shadow-xl flex items-center justify-center text-[#0066CC] mb-8 group-hover:bg-[#0066CC] group-hover:text-white transition-all">
+                     <div className="w-14 h-14 bg-white shadow-xl flex items-center justify-center text-aureole-blue mb-8 group-hover:bg-aureole-cyan group-hover:text-white transition-all">
                         <Target className="w-6 h-6" />
                      </div>
                      <h4 className="text-3xl font-black text-[#001529] uppercase tracking-tighter mb-4">Our Mission</h4>
@@ -73,7 +73,7 @@ const Leadership: React.FC = () => {
                      alt="Goal Context"
                   />
                   <div className="relative z-10">
-                     <div className="w-14 h-14 bg-white shadow-xl flex items-center justify-center text-[#0066CC] mb-8 group-hover:bg-[#0066CC] group-hover:text-white transition-all">
+                     <div className="w-14 h-14 bg-white shadow-xl flex items-center justify-center text-aureole-blue mb-8 group-hover:bg-aureole-cyan group-hover:text-white transition-all">
                         <Compass className="w-6 h-6" />
                      </div>
                      <h4 className="text-3xl font-black text-[#001529] uppercase tracking-tighter mb-4">Strategic Goal</h4>

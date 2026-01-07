@@ -14,11 +14,11 @@ const ProductShowcase: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 sm:mb-24 gap-8 sm:gap-10">
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-              <span className="w-8 sm:w-12 h-[1px] bg-[#0066CC]"></span>
-              <h2 className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] text-[#0066CC]">CORE CATALOG</h2>
+              <span className="w-8 sm:w-12 h-[1px] bg-aureole-blue"></span>
+              <h2 className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] text-aureole-blue">CORE CATALOG</h2>
             </div>
             <h3 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#001529] uppercase tracking-tighter leading-none">
-              ENGINEERED <span className="text-[#0066CC]">SYSTEMS.</span>
+              ENGINEERED <span className="text-aureole-cyan">SYSTEMS.</span>
             </h3>
           </div>
           <button className="flex items-center gap-3 px-8 sm:px-10 py-4 sm:py-5 border border-slate-200 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] text-[#001529] hover:bg-[#001529] hover:text-white transition-all w-full md:w-auto justify-center">
@@ -42,12 +42,12 @@ const ProductShowcase: React.FC = () => {
 
               <div className="mb-4 flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#0066CC] animate-pulse"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-aureole-blue animate-pulse"></div>
                   <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest">{product.category}</span>
                 </div>
               </div>
 
-              <h4 className="text-2xl sm:text-3xl font-[900] text-[#001529] mb-4 uppercase tracking-tighter leading-[0.9] group-hover:text-[#0066CC] transition-colors">
+              <h4 className="text-2xl sm:text-3xl font-[900] text-[#001529] mb-4 uppercase tracking-tighter leading-[0.9] group-hover:text-aureole-cyan transition-colors">
                 {product.name}
               </h4>
 
@@ -67,12 +67,12 @@ const ProductShowcase: React.FC = () => {
               <div>
                 <div className="flex justify-between items-center group/btn cursor-pointer">
                   <div className="flex flex-col">
-                    <span className="text-[10px] font-black text-[#001529] uppercase tracking-widest group-hover/btn:text-[#0066CC] transition-colors">
+                    <span className="text-[10px] font-black text-[#001529] uppercase tracking-widest group-hover/btn:text-aureole-cyan transition-colors">
                       Technical Sheet
                     </span>
                     <div className="w-0 h-[1px] bg-aureole-blue transition-all group-hover/btn:w-full"></div>
                   </div>
-                  <div className="p-2 border border-slate-100 group-hover/btn:bg-[#0066CC] group-hover/btn:border-[#0066CC] transition-all">
+                  <div className="p-2 border border-slate-100 group-hover/btn:bg-aureole-cyan group-hover/btn:border-aureole-cyan transition-all">
                     <ArrowUpRight className="w-4 h-4 text-slate-300 group-hover/btn:text-white transition-colors" />
                   </div>
                 </div>

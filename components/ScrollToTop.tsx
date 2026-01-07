@@ -35,14 +35,14 @@ const ScrollToTop: React.FC = () => {
       <button
         onClick={scrollToTop}
         aria-label="Scroll to top"
-        className="group relative w-14 h-14 bg-aureole-slate flex items-center justify-center border border-white/10 shadow-2xl hover:bg-aureole-blue hover:border-aureole-blue transition-all duration-300"
+        className="group relative w-14 h-14 bg-aureole-slate flex items-center justify-center border border-white/10 shadow-2xl hover:bg-aureole-cyan hover:border-aureole-cyan transition-all duration-300"
       >
         {/* Technical Corner Details */}
         <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-white/20 group-hover:border-white transition-colors"></div>
         <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white/20 group-hover:border-white transition-colors"></div>
-        
+
         <ArrowUp className="w-5 h-5 text-white group-hover:-translate-y-1 transition-transform duration-300" />
-        
+
         {/* Label appearing on hover (Desktop) */}
         <span className="absolute right-full mr-4 px-3 py-1 bg-aureole-slate text-[8px] font-black text-white uppercase tracking-[0.3em] whitespace-nowrap opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 transition-all pointer-events-none hidden md:block">
           TOP_LEVEL_NAV

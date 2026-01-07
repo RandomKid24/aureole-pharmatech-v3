@@ -39,18 +39,18 @@ const App: React.FC = () => {
   return (
     <div className="relative selection:bg-blue-100 selection:text-blue-900">
       <Header />
-      
+
       <main>
         <Hero />
         <VideoSection />
-        <ProductShowcase />
-        <Industries />
         <AboutSection />
         <Leadership />
+        <ProductShowcase />
+        <Industries />
         <ClientsSection />
         <MapSection />
       </main>
-      
+
       <Footer />
       <ScrollToTop />
     </div>

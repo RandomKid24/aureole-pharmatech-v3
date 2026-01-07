@@ -5,8 +5,17 @@ import { ArrowDown, ShieldCheck, Award, CheckCircle2 } from 'lucide-react';
 const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center bg-white pt-52 pb-16 sm:pt-60">
-      <div className="absolute inset-0 z-0 opacity-[0.03] bg-[radial-gradient(#0066CC_1px,transparent_1px)] [background-size:40px_40px]"></div>
+      <div className="absolute inset-0 z-0 opacity-[0.03] bg-[radial-gradient(#0079ac_1px,transparent_1px)] [background-size:40px_40px]"></div>
       <div className="absolute right-0 top-0 w-1/3 h-full bg-slate-50/50 -z-10 hidden lg:block"></div>
+
+      {/* Large Logo Watermark on Right Side */}
+      <div className="absolute -right-48 top-1/2 -translate-y-1/2 opacity-[0.08] pointer-events-none select-none hidden lg:block">
+        <img
+          src="/aureole-logo.png"
+          alt=""
+          className="h-[150vh] w-auto grayscale brightness-110"
+        />
+      </div>
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-24 relative z-10">
         <div className="max-w-7xl">
@@ -36,7 +45,7 @@ const Hero: React.FC = () => {
               <h1 className="text-5xl md:text-7xl lg:text-[85px] xl:text-[95px] font-[950] leading-[0.95] tracking-tighter text-aureole-slate uppercase mb-12">
                 PRECISION <br className="hidden md:block" />
                 TEMPERATURE & <br className="hidden md:block" />
-                HUMIDITY <span className="text-aureole-blue">CONTROL.</span>
+                HUMIDITY <span className="text-aureole-cyan">CONTROL.</span>
               </h1>
 
               <p className="text-lg lg:text-xl text-slate-500 font-medium leading-relaxed max-w-xl mb-14">

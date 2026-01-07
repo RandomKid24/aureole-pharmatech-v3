@@ -15,15 +15,15 @@ const ClientsSection: React.FC = () => {
     <div className="flex overflow-hidden select-none mb-4 sm:mb-6 last:mb-0">
       <div className={`flex items-center gap-6 sm:gap-12 whitespace-nowrap ${animationClass}`}>
         {[...items, ...items].map((client, idx) => (
-          <div key={idx} className="flex items-center gap-4 sm:gap-6 group grayscale hover:grayscale-0 transition-all duration-300">
-            <div className="w-24 h-12 sm:w-28 sm:h-14 flex-shrink-0 bg-white rounded-sm overflow-hidden p-2 border border-slate-100 group-hover:border-aureole-blue/30 group-hover:scale-105 transition-all duration-300">
+          <div key={idx} className="flex items-center gap-6 group grayscale hover:grayscale-0 transition-all duration-300 w-[240px] sm:w-[300px] flex-shrink-0">
+            <div className="w-16 h-8 sm:w-20 sm:h-10 flex-shrink-0 bg-white rounded-sm overflow-hidden p-1.5 border border-slate-100 group-hover:border-aureole-cyan/30 group-hover:scale-105 transition-all duration-300">
               <img
                 src={client.logo}
                 alt={client.name}
                 className="w-full h-full object-contain opacity-60 group-hover:opacity-100 transition-opacity"
               />
             </div>
-            <span className="text-[9px] sm:text-[10px] font-black tracking-[0.15em] text-slate-300 group-hover:text-aureole-blue uppercase transition-colors">
+            <span className="text-[8px] sm:text-[9px] font-black tracking-[0.1em] text-slate-300 group-hover:text-aureole-cyan uppercase transition-colors whitespace-nowrap overflow-hidden text-ellipsis">
               {client.name}
             </span>
           </div>
@@ -71,7 +71,7 @@ const ClientsSection: React.FC = () => {
             { label: 'CLIENT RETENTION', value: '98.5% Index' },
             { label: 'SERVICE RATIO', value: '24/7 Global' }
           ].map((cert, idx) => (
-            <div key={idx} className="border-l border-slate-200 pl-6 hover:border-aureole-blue transition-colors">
+            <div key={idx} className="border-l border-slate-200 pl-6 hover:border-aureole-cyan transition-colors">
               <div className="text-[8px] font-black text-slate-400 uppercase tracking-widest mb-1">{cert.label}</div>
               <div className="text-lg font-black text-aureole-slate uppercase tracking-tight">{cert.value}</div>
             </div>

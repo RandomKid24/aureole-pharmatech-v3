@@ -45,11 +45,11 @@ const Industries: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-10">
           <div className="max-w-3xl">
             <div className="flex items-center gap-4 mb-4">
-              <span className="w-12 h-[2px] bg-[#00C2FF]"></span>
-              <h2 className="text-[11px] font-black uppercase tracking-[0.4em] text-[#00C2FF]">MARKETS</h2>
+              <span className="w-12 h-[2px] bg-aureole-blue"></span>
+              <h2 className="text-[11px] font-black uppercase tracking-[0.4em] text-aureole-blue">MARKETS</h2>
             </div>
             <h3 className="text-4xl lg:text-6xl font-[900] text-slate-800 uppercase tracking-tighter leading-none">
-              INDUSTRIES <span className="text-[#00C2FF]">SERVED.</span>
+              INDUSTRIES <span className="text-aureole-cyan">SERVED.</span>
             </h3>
           </div>
           <p className="text-slate-500 font-medium text-sm max-w-sm text-right hidden md:block">
@@ -79,7 +79,7 @@ const Industries: React.FC = () => {
               </div>
 
               <div className="p-6 flex flex-col flex-1 relative">
-                <h4 className="text-xl font-[900] text-slate-800 uppercase tracking-tight mb-3 group-hover:text-[#00C2FF] transition-colors">
+                <h4 className="text-xl font-[900] text-slate-800 uppercase tracking-tight mb-3 group-hover:text-aureole-cyan transition-colors">
                   {sector.name}
                 </h4>
 
@@ -98,7 +98,7 @@ const Industries: React.FC = () => {
 
                   <div className="w-full h-px bg-slate-100"></div>
 
-                  <button className="flex items-center gap-2 text-[10px] font-black text-[#00C2FF] uppercase tracking-[0.2em] hover:text-[#0099CC] transition-colors">
+                  <button className="flex items-center gap-2 text-[10px] font-black text-aureole-blue uppercase tracking-[0.2em] hover:text-aureole-cyan transition-colors">
                     Explore Solutions <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                 </div>
