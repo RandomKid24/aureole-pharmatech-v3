@@ -4,67 +4,72 @@ import { Activity, ShieldCheck, FlaskConical, Settings, Cpu, Gauge } from 'lucid
 
 const VideoSection: React.FC = () => {
   const stats = [
-    { label: 'Thermal', icon: <Activity className="w-5 h-5" />, value: '± 0.1°C Stability' },
-    { label: 'Calibration', icon: <ShieldCheck className="w-5 h-5" />, value: 'ISO 17025' },
-    { label: 'Logic', icon: <Settings className="w-5 h-5" />, value: 'Industrial PLC' },
-    { label: 'Standards', icon: <FlaskConical className="w-5 h-5" />, value: 'ICH Q1A / Q1B' },
-    { label: 'Energy', icon: <Gauge className="w-5 h-5" />, value: 'Eco Systems' },
-    { label: 'Integrity', icon: <Cpu className="w-5 h-5" />, value: '21 CFR Part 11' }
+    { label: 'Guidelines', icon: <Activity className="w-5 h-5" />, value: 'ICH Q1A / Q1B' },
+    { label: 'Compliance', icon: <ShieldCheck className="w-5 h-5" />, value: '21 CFR Part 11' },
+    { label: 'Quality', icon: <Settings className="w-5 h-5" />, value: 'ISO 9001 & GxP' },
+    { label: 'Control', icon: <FlaskConical className="w-5 h-5" />, value: 'Industrial PLC' },
+    { label: 'System', icon: <Gauge className="w-5 h-5" />, value: 'SCADA Integration' },
+    { label: 'Validation', icon: <Cpu className="w-5 h-5" />, value: 'DQ IQ OQ PQ' }
   ];
 
   return (
-    <section className="bg-aureole-slate relative overflow-hidden border-y border-white/5">
-      <div className="w-full">
-        <div className="flex flex-col lg:flex-row min-h-[600px]">
-          
-          <div className="lg:w-2/3 relative group overflow-hidden">
-            <video 
-              src="https://joy1.videvo.net/videvo_files/video/free/2019-11/large_watermarked/190828_27_Laboratory_12_preview.mp4"
-              autoPlay 
-              muted 
-              loop 
-              playsInline 
-              className="w-full h-full object-cover grayscale opacity-30 group-hover:opacity-60 group-hover:grayscale-0 transition-all duration-1000"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-aureole-slate via-aureole-slate/40 to-transparent"></div>
-            
-            <div className="absolute bottom-12 left-12 right-12 z-10">
-              <div className="flex items-center gap-4 mb-6">
-                <span className="w-12 h-px bg-aureole-blue"></span>
-                <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-blue">QUALITY</h2>
-              </div>
-              <h3 className="text-5xl sm:text-7xl font-[950] text-white uppercase tracking-tighter leading-[0.85]">
-                ENGINEERING <br /> 
-                <span className="text-aureole-blue">PRECISION.</span>
-              </h3>
+    <section className="bg-slate-50 relative overflow-hidden border-y border-slate-100 py-12 lg:py-16">
+      {/* Background Video Element - subtle on light theme */}
+      <div className="absolute inset-0 z-0">
+        <video
+          src="https://joy1.videvo.net/videvo_files/video/free/2019-11/large_watermarked/190828_27_Laboratory_12_preview.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover grayscale opacity-[0.03]"
+        />
+      </div>
+
+      <div className="container mx-auto px-6 lg:px-16 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+
+          {/* Header Compact - Light */}
+          <div className="lg:w-1/3">
+            <div className="flex items-center gap-4 mb-4">
+              <span className="w-8 h-px bg-[#00C2FF]"></span>
+              <h2 className="text-[9px] font-black uppercase tracking-[0.4em] text-[#00C2FF]">QUALITY</h2>
+            </div>
+            <h3 className="text-3xl sm:text-4xl font-[950] text-slate-800 uppercase tracking-tighter leading-none mb-4">
+              ENGINEERING <span className="text-[#00C2FF]">PRECISION.</span>
+            </h3>
+            <p className="text-slate-500 text-[10px] uppercase tracking-widest leading-relaxed max-w-sm">
+              Certified standards for global pharmaceutical excellence.
+            </p>
+          </div>
+
+          {/* Stats Grid Compact - Light */}
+          <div className="lg:w-2/3 w-full">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 border border-slate-200 shadow-xl shadow-cyan-100/50">
+              {stats.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white p-6 group hover:bg-[#00C2FF] cursor-default transition-colors duration-300"
+                >
+                  <div className="text-[#00C2FF] group-hover:text-white mb-3 transition-colors">
+                    {item.icon}
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-[8px] font-black text-slate-400 group-hover:text-white/80 uppercase tracking-widest mb-1 transition-colors">
+                      {item.label}
+                    </span>
+                    <span className="text-xs font-bold text-slate-800 group-hover:text-white uppercase tracking-wide">
+                      {item.value}
+                    </span>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="lg:w-1/3 flex flex-col bg-white/5 divide-y divide-white/5">
-            {stats.map((item, idx) => (
-              <div 
-                key={idx} 
-                className="flex-1 flex items-center gap-8 p-10 group hover:bg-aureole-blue transition-all duration-500 cursor-default"
-              >
-                <div className="text-aureole-blue group-hover:text-white shrink-0 group-hover:scale-110 transition-all duration-500">
-                  {item.icon}
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[9px] font-black text-white/30 group-hover:text-white/60 uppercase tracking-[0.25em] mb-1.5 transition-colors">
-                    {item.label}
-                  </span>
-                  <span className="text-sm font-black text-white uppercase tracking-wider group-hover:tracking-widest transition-all">
-                    {item.value}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-          
         </div>
       </div>
     </section>
   );
 };
-
 export default VideoSection;

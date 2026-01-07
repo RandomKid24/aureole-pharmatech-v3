@@ -22,27 +22,22 @@ const ProductShowcase: React.FC = () => {
             </h3>
           </div>
           <button className="flex items-center gap-3 px-8 sm:px-10 py-4 sm:py-5 border border-slate-200 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] text-[#001529] hover:bg-[#001529] hover:text-white transition-all w-full md:w-auto justify-center">
-             Full Inventory <Database className="w-3.5 h-3.5" />
+            Full Inventory <Database className="w-3.5 h-3.5" />
           </button>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-slate-100">
           {PRODUCTS.map((product) => (
-            <div 
-              key={product.id} 
+            <div
+              key={product.id}
               className="group flex flex-col bg-white p-8 sm:p-12 border-r border-b border-slate-100 transition-all duration-300 hover:bg-slate-50/80"
             >
-              <div className="aspect-[5/4] relative mb-10 overflow-hidden bg-slate-100 rounded-sm">
-                <img 
-                  src={product.image} 
+              <div className="aspect-[5/4] relative mb-10 overflow-hidden bg-white rounded-sm border border-slate-50 flex items-center justify-center p-6">
+                <img
+                  src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover grayscale brightness-95 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                  className="w-full h-full object-contain grayscale brightness-95 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                 />
-                <div className="absolute top-0 right-0 p-4">
-                  <div className="bg-[#001529] text-white text-[7px] font-mono font-bold px-3 py-1.5 tracking-widest shadow-lg">
-                    {product.code}
-                  </div>
-                </div>
               </div>
 
               <div className="mb-4 flex items-center justify-between">
@@ -55,18 +50,18 @@ const ProductShowcase: React.FC = () => {
               <h4 className="text-2xl sm:text-3xl font-[900] text-[#001529] mb-4 uppercase tracking-tighter leading-[0.9] group-hover:text-[#0066CC] transition-colors">
                 {product.name}
               </h4>
-              
+
               <p className="text-slate-500 text-[10px] sm:text-[12px] font-medium leading-relaxed mb-10 line-clamp-3">
                 {product.description}
               </p>
 
               <div className="mt-auto grid grid-cols-2 gap-4 pb-10 border-b border-slate-100 mb-8">
-                 {Object.entries(product.specs).slice(0, 2).map(([key, val]) => (
-                   <div key={key}>
-                      <div className="text-[7px] font-black text-slate-300 uppercase tracking-widest mb-1">{key}</div>
-                      <div className="text-[10px] font-bold text-aureole-slate uppercase tracking-tight">{val}</div>
-                   </div>
-                 ))}
+                {Object.entries(product.specs).slice(0, 2).map(([key, val]) => (
+                  <div key={key}>
+                    <div className="text-[7px] font-black text-slate-300 uppercase tracking-widest mb-1">{key}</div>
+                    <div className="text-[10px] font-bold text-aureole-slate uppercase tracking-tight">{val}</div>
+                  </div>
+                ))}
               </div>
 
               <div>

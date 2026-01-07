@@ -98,5 +98,5 @@ const placeholderIds = [
 
 export const CLIENTS = CLIENT_LOGOS.map((client, i) => ({
   name: client.name,
-  logo: `https://images.unsplash.com/photo-${placeholderIds[i % placeholderIds.length]}?auto=format&fit=crop&q=80&w=400`
+  logo: client.logo || `https://images.unsplash.com/photo-${placeholderIds[i % placeholderIds.length]}?auto=format&fit=crop&q=80&w=400`
 }));

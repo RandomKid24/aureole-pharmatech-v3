@@ -25,52 +25,44 @@ const Hero: React.FC = () => {
               <span className="text-[10px] font-bold tracking-[0.2em] text-aureole-blue uppercase">ESTD. 1996</span>
             </div>
           </div>
-          
+
           <div className="flex flex-col lg:flex-row lg:items-center gap-12 lg:gap-24">
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-4">
                 <span className="w-10 h-[2px] bg-aureole-blue"></span>
                 <span className="text-[11px] font-black uppercase tracking-[0.4em] text-aureole-blue">PHARMA ENGINEERING</span>
               </div>
-              
+
               <h1 className="text-5xl md:text-7xl lg:text-[85px] xl:text-[95px] font-[950] leading-[0.95] tracking-tighter text-aureole-slate uppercase mb-12">
                 PRECISION <br className="hidden md:block" />
                 TEMPERATURE & <br className="hidden md:block" />
                 HUMIDITY <span className="text-aureole-blue">CONTROL.</span>
               </h1>
-              
+
               <p className="text-lg lg:text-xl text-slate-500 font-medium leading-relaxed max-w-xl mb-14">
                 Advanced environmental machinery engineered for Pharmaceutical Stability and Cleanroom monitoring.
               </p>
 
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
                 <button className="bg-aureole-blue text-white px-12 py-6 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-aureole-slate transition-all flex items-center gap-6 group shadow-2xl shadow-blue-500/10">
-                  Core Portfolio <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
+                  Explore Machinery <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
                 </button>
                 <div className="flex items-center gap-8">
-                   <div className="flex flex-col">
-                      <div className="text-3xl font-black text-aureole-slate tracking-tighter leading-none">28+</div>
-                      <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest mt-1">Years</span>
-                   </div>
-                   <div className="w-px h-8 bg-slate-200"></div>
-                   <div className="flex flex-col">
-                      <div className="text-3xl font-black text-aureole-slate tracking-tighter leading-none">1500+</div>
-                      <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest mt-1">Deployments</span>
-                   </div>
+                  <div className="flex flex-col">
+                    <div className="text-3xl font-black text-aureole-slate tracking-tighter leading-none">28+</div>
+                    <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest mt-1">Years</span>
+                  </div>
+                  <div className="w-px h-8 bg-slate-200"></div>
+                  <div className="flex flex-col">
+                    <div className="text-3xl font-black text-aureole-slate tracking-tighter leading-none">1500+</div>
+                    <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest mt-1">Deployments</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="lg:w-[480px] shrink-0">
-              <div className="relative group grayscale hover:grayscale-0 transition-all duration-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200" 
-                  alt="Precision Machinery" 
-                  className="w-full h-auto aspect-[4/5] object-cover rounded-sm shadow-2xl"
-                />
-                <div className="absolute inset-0 border-[20px] border-white/10 group-hover:border-aureole-blue/10 transition-colors"></div>
-              </div>
-            </div>
+            {/* Hero Image Removed as requested */}
+
           </div>
         </div>
       </div>

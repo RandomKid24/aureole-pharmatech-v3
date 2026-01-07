@@ -6,7 +6,7 @@ const ClientsSection: React.FC = () => {
   // Splitting the massive list into 3 rows for high-density impact
   const count = CLIENTS.length;
   const split = Math.ceil(count / 3);
-  
+
   const row1 = CLIENTS.slice(0, split);
   const row2 = CLIENTS.slice(split, split * 2);
   const row3 = CLIENTS.slice(split * 2);
@@ -16,11 +16,11 @@ const ClientsSection: React.FC = () => {
       <div className={`flex items-center gap-6 sm:gap-12 whitespace-nowrap ${animationClass}`}>
         {[...items, ...items].map((client, idx) => (
           <div key={idx} className="flex items-center gap-4 sm:gap-6 group grayscale hover:grayscale-0 transition-all duration-300">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 bg-white rounded-sm overflow-hidden p-1.5 border border-slate-100 group-hover:border-aureole-blue/30 group-hover:scale-105 transition-all duration-300">
-              <img 
-                src={client.logo} 
-                alt={client.name} 
-                className="w-full h-full object-contain opacity-40 group-hover:opacity-100 transition-opacity"
+            <div className="w-24 h-12 sm:w-28 sm:h-14 flex-shrink-0 bg-white rounded-sm overflow-hidden p-2 border border-slate-100 group-hover:border-aureole-blue/30 group-hover:scale-105 transition-all duration-300">
+              <img
+                src={client.logo}
+                alt={client.name}
+                className="w-full h-full object-contain opacity-60 group-hover:opacity-100 transition-opacity"
               />
             </div>
             <span className="text-[9px] sm:text-[10px] font-black tracking-[0.15em] text-slate-300 group-hover:text-aureole-blue uppercase transition-colors">
@@ -62,7 +62,7 @@ const ClientsSection: React.FC = () => {
           <MarqueeRow items={row3} animationClass="animate-marquee-fast" />
         </div>
       </div>
-      
+
       <div className="container mx-auto px-6 sm:px-8 lg:px-20 mt-20">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {[
