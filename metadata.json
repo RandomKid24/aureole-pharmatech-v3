@@ -1,0 +1,7 @@
+{
+  "name": "Aureole Pharmatech - Precision Pharmaceutical Engineering",
+  "description": "Professional corporate website for Aureole Pharmatech, specialized in temperature and humidity control machinery for the pharmaceutical industry.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
