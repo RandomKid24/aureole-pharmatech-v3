@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { PRODUCTS } from '../constants';
-import { ArrowUpRight, Database, Settings } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 const ProductShowcase: React.FC = () => {
   return (
@@ -21,9 +21,6 @@ const ProductShowcase: React.FC = () => {
               ENGINEERED <span className="text-aureole-cyan">SYSTEMS.</span>
             </h3>
           </div>
-          <button className="flex items-center gap-3 px-8 sm:px-10 py-4 sm:py-5 border border-slate-200 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] text-[#001529] hover:bg-[#001529] hover:text-white transition-all w-full md:w-auto justify-center">
-            Full Inventory <Database className="w-3.5 h-3.5" />
-          </button>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-slate-100">

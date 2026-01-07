@@ -8,50 +8,41 @@ const MapSection: React.FC = () => {
       <div className="container mx-auto px-8 lg:px-16 relative z-10">
         <div className="grid lg:grid-cols-12 gap-16 lg:gap-24 items-start">
 
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-12 xl:col-span-5">
             <div className="flex items-center gap-4 mb-8">
               <span className="w-12 h-[2px] bg-aureole-blue"></span>
-              <h2 className="text-[12px] font-black uppercase tracking-[0.4em] text-aureole-blue">HEADQUARTERS</h2>
+              <h2 className="text-[12px] font-black uppercase tracking-[0.4em] text-aureole-blue">LOCATION</h2>
             </div>
-            <h3 className="text-7xl lg:text-[100px] font-black text-[#001529] leading-[0.85] tracking-tighter uppercase mb-16">
-              GET IN <br /> <span className="text-aureole-blue">TOUCH</span>
+            <h3 className="text-7xl lg:text-8xl font-black text-[#001529] leading-[0.85] tracking-tighter uppercase mb-12">
+              OUR <br /> <span className="text-aureole-blue">UNIT.</span>
             </h3>
 
-            <div className="mb-16 rounded-sm overflow-hidden h-32 relative group border border-slate-100">
-              <img
-                src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&q=80&w=1200"
-                className="w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
-                alt="Technical Support"
-              />
-              <div className="absolute inset-0 bg-aureole-slate/20"></div>
-              <div className="absolute inset-0 flex items-center px-8 justify-between">
-                <span className="text-white text-[10px] font-black uppercase tracking-[0.3em]">Support Desk</span>
-                <Activity className="text-aureole-blue w-5 h-5 animate-pulse" />
-              </div>
-            </div>
-
-            <div className="space-y-12 mb-16">
-              <div className="border-l-[3px] border-aureole-blue pl-8">
-                <div className="text-[11px] font-black text-slate-500 uppercase tracking-widest mb-3">Email</div>
-                <div className="text-2xl font-black text-[#001529]">enquiry@aureolepharmatech.com</div>
-              </div>
-
-              <div className="border-l-[3px] border-aureole-blue pl-8">
-                <div className="text-[11px] font-black text-slate-500 uppercase tracking-widest mb-3">Phone</div>
-                <div className="text-2xl font-black text-[#001529]">+91 86005 22240</div>
-              </div>
-
-              <div className="border-l-[3px] border-aureole-blue pl-8">
-                <div className="text-[11px] font-black text-slate-500 uppercase tracking-widest mb-3">Unit</div>
-                <div className="text-md font-bold text-slate-600 uppercase leading-relaxed max-w-xs">
-                  Sinnar Industrial Area, Nashik, India.
-                </div>
-              </div>
+            <div className="w-full h-[500px] rounded-sm overflow-hidden border border-slate-100 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.666991195393!2d73.94827417596525!3d19.853331426466964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddc68d89e27607%3A0xe7a505e60d2b1bfb!2sAureole%20Pharma-Tech%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1704646200000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
 
-          <div className="lg:col-span-7 bg-[#F8FAFC] shadow-2xl rounded-[60px] p-12 lg:p-20 border border-slate-200 relative overflow-hidden">
+          <div className="lg:col-span-12 xl:col-span-7 bg-[#F8FAFC] shadow-2xl rounded-[60px] p-12 lg:p-20 border border-slate-200 relative overflow-hidden">
             <div className="relative z-10">
+              <div className="flex flex-col gap-10 mb-16 border-b border-slate-200 pb-12">
+                <div>
+                  <h4 className="text-[10px] font-black text-aureole-blue uppercase tracking-widest mb-2">Email</h4>
+                  <a href="mailto:enquiry@aureolepharmatech.com" className="text-xl sm:text-2xl font-black text-[#001529] hover:text-aureole-cyan transition-colors break-all sm:break-normal">enquiry@aureolepharmatech.com</a>
+                </div>
+                <div>
+                  <h4 className="text-[10px] font-black text-aureole-blue uppercase tracking-widest mb-2">Phone</h4>
+                  <a href="tel:+918600522240" className="text-xl sm:text-2xl font-black text-[#001529] hover:text-aureole-cyan transition-colors">+91 86005 22240</a>
+                </div>
+              </div>
+
               <h4 className="text-4xl font-black text-[#001529] mb-4 uppercase tracking-tighter">CONTACT <span className="text-aureole-blue">US.</span></h4>
               <p className="text-slate-500 text-sm font-bold mb-12 uppercase tracking-widest">Request a technical consultation.</p>
 

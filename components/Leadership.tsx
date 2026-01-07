@@ -45,45 +45,6 @@ const Leadership: React.FC = () => {
                   </div>
                </div>
             </div>
-
-            {/* Mission & Goal Pillars with integrated industrial visuals */}
-            <div className="grid md:grid-cols-2 gap-12 border-t border-slate-100 pt-20">
-               <div className="group relative overflow-hidden p-12 bg-slate-50 min-h-[400px] flex flex-col justify-end">
-                  <img
-                     src="https://images.unsplash.com/photo-1581093199185-ce4763e0ad6a?auto=format&fit=crop&q=80&w=800"
-                     className="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:scale-105 group-hover:opacity-30 transition-all duration-1000 grayscale"
-                     alt="Mission Context"
-                  />
-                  <div className="relative z-10">
-                     <div className="w-14 h-14 bg-white shadow-xl flex items-center justify-center text-aureole-blue mb-8 group-hover:bg-aureole-cyan group-hover:text-white transition-all">
-                        <Target className="w-6 h-6" />
-                     </div>
-                     <h4 className="text-3xl font-black text-[#001529] uppercase tracking-tighter mb-4">Our Mission</h4>
-                     <p className="text-sm text-slate-500 font-bold uppercase tracking-tight leading-relaxed max-w-sm mb-8">
-                        To pioneer zero-tolerance thermal stability systems that empower pharmaceutical innovators to deliver safe medicines globally through 21 CFR compliant engineering.
-                     </p>
-                     <div className="w-12 h-1 bg-aureole-blue"></div>
-                  </div>
-               </div>
-
-               <div className="group relative overflow-hidden p-12 bg-slate-50 min-h-[400px] flex flex-col justify-end">
-                  <img
-                     src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=800"
-                     className="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:scale-105 group-hover:opacity-30 transition-all duration-1000 grayscale"
-                     alt="Goal Context"
-                  />
-                  <div className="relative z-10">
-                     <div className="w-14 h-14 bg-white shadow-xl flex items-center justify-center text-aureole-blue mb-8 group-hover:bg-aureole-cyan group-hover:text-white transition-all">
-                        <Compass className="w-6 h-6" />
-                     </div>
-                     <h4 className="text-3xl font-black text-[#001529] uppercase tracking-tighter mb-4">Strategic Goal</h4>
-                     <p className="text-sm text-slate-500 font-bold uppercase tracking-tight leading-relaxed max-w-sm mb-8">
-                        Becoming the primary global reference for environmental control machinery while maintaining a sustainable footprint across 50+ countries.
-                     </p>
-                     <div className="w-12 h-1 bg-aureole-blue"></div>
-                  </div>
-               </div>
-            </div>
          </div>
       </section>
    );
