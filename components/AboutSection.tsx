@@ -23,11 +23,11 @@ const AboutSection: React.FC = () => {
               28 YEARS OF <br /> <span className="text-aureole-cyan">PRECISION STANDARD.</span>
             </h3>
             <div className="p-8 border-l-[3px] border-aureole-blue/20 bg-slate-50/50">
-              <p className="text-lg lg:text-xl text-slate-600 font-bold leading-relaxed italic mb-4">
-                "Aureole represents the radiant halo of protection."
+              <p className="text-lg lg:text-xl text-slate-700 font-bold leading-relaxed mb-6">
+                When you choose Aureole PharmaTech, you're choosing a partner dedicated to the pursuit of excellence.
               </p>
-              <p className="text-[11px] text-slate-500 font-bold leading-relaxed uppercase tracking-wider">
-                Our machinery is engineered to surround and safeguard critical pharmaceutical formulations with absolute environmental equilibrium.
+              <p className="text-[11px] text-slate-500 font-bold leading-relaxed uppercase tracking-widest text-justify">
+                Our name reflects our promise to deliver pharmaceutical technology and services that are nothing short of exceptional. With us, you'll find the brilliance of innovation and the radiance of excellence in every aspect of our work.
               </p>
             </div>
           </div>
