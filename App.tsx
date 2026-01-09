@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import VideoSection from './components/VideoSection';
 import ProductShowcase from './components/ProductShowcase';
 import AboutSection from './components/AboutSection';
 import Industries from './components/Industries';
@@ -42,7 +41,6 @@ const App: React.FC = () => {
 
       <main>
         <Hero />
-        <VideoSection />
         <AboutSection />
         <Leadership />
         <ProductShowcase />

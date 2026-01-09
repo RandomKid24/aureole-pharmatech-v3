@@ -10,7 +10,7 @@ import { Microscope } from 'lucide-react';
 const AboutSection: React.FC = () => {
   return (
     <section id="about" className="py-16 lg:py-20 bg-white relative overflow-hidden border-y border-slate-100">
-      <div className="container mx-auto px-6 lg:px-16 relative z-10">
+      <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
 
         {/* Brand Header */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center mb-16">
@@ -20,7 +20,7 @@ const AboutSection: React.FC = () => {
               <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-blue">ABOUT</h2>
             </div>
             <h3 className="text-4xl lg:text-6xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.85] mb-6">
-              THE PRECISION <br /> <span className="text-aureole-cyan">STANDARD.</span>
+              28 YEARS OF <br /> <span className="text-aureole-cyan">PRECISION STANDARD.</span>
             </h3>
             <div className="p-8 border-l-[3px] border-aureole-blue/20 bg-slate-50/50">
               <p className="text-lg lg:text-xl text-slate-600 font-bold leading-relaxed italic mb-4">

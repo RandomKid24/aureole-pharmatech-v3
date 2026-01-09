@@ -4,7 +4,7 @@ import { Linkedin, Twitter, Facebook, Instagram, MapPin, Mail, Phone, Globe, Shi
 
 const Footer: React.FC = () => {
    return (
-      <footer className="bg-aureole-slate text-white pt-48 pb-16 relative overflow-hidden">
+      <footer className="bg-aureole-slate text-white pt-24 pb-16 relative overflow-hidden">
          {/* Visual Header - Branding Mask Effect */}
          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none">
             <h2 className="text-[31vw] font-bold tracking-tighter leading-none text-aureole-cyan opacity-[0.05]" style={{ fontFamily: '"Levenim MT", "Questrial", sans-serif' }}>
@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
             </h2>
          </div>
 
-         <div className="container mx-auto px-8 lg:px-16 relative z-10">
+         <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 mb-32">
 
                <div className="space-y-10">
@@ -59,22 +59,26 @@ const Footer: React.FC = () => {
                   </ul>
                </div>
 
-               <div className="bg-white/5 p-10 border border-white/5 rounded-sm relative overflow-hidden">
-                  <h4 className="text-[11px] font-black uppercase tracking-[0.3em] mb-8 text-aureole-blue">Headquarters</h4>
-                  <div className="space-y-8 relative z-10">
-                     <div className="flex gap-5">
-                        <MapPin className="w-5 h-5 text-aureole-blue shrink-0" />
-                        <span className="text-slate-300 text-[11px] font-black uppercase tracking-wider leading-relaxed">
+               <div>
+                  <h4 className="text-[11px] font-black uppercase tracking-[0.3em] mb-10 text-aureole-blue">Headquarters</h4>
+                  <div className="space-y-6 relative z-10">
+                     <div className="flex gap-4">
+                        <MapPin className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />
+                        <span className="text-slate-400 font-bold uppercase tracking-[0.15em] text-[10px] leading-relaxed">
                            B-61, Dist, MIDC Area, Malegaon, Maharashtra 422113.
                         </span>
                      </div>
-                     <div className="flex gap-5">
-                        <Mail className="w-5 h-5 text-aureole-blue shrink-0" />
-                        <span className="text-slate-300 text-[11px] font-black uppercase tracking-wider">enquiry@aureolepharmatech.com</span>
+                     <div className="flex gap-4">
+                        <Mail className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />
+                        <span className="text-slate-400 font-bold uppercase tracking-[0.15em] text-[10px]">
+                           enquiry@aureolepharmatech.com
+                        </span>
                      </div>
-                     <div className="flex gap-5">
-                        <Phone className="w-5 h-5 text-aureole-blue shrink-0" />
-                        <span className="text-xl font-black tracking-tighter text-white">+91 86005 22240</span>
+                     <div className="flex gap-4">
+                        <Phone className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />
+                        <span className="text-lg font-bold tracking-tighter text-white">
+                           +91 86005 22240
+                        </span>
                      </div>
                   </div>
                </div>
@@ -96,7 +100,7 @@ const Footer: React.FC = () => {
                </div>
                <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="text-[9px] font-black uppercase tracking-[0.4em] text-slate-500 hover:text-aureole-cyan transition-all"
+                  className="text-[9px] font-black uppercase tracking-[0.4em] text-aureole-cyan hover:text-white transition-all"
                >
                   Back to top
                </button>

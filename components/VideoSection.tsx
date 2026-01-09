@@ -26,25 +26,10 @@ const VideoSection: React.FC = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 lg:px-16 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-
-          {/* Header Compact - Light */}
-          <div className="lg:w-1/3">
-            <div className="flex items-center gap-4 mb-4">
-              <span className="w-8 h-px bg-aureole-blue"></span>
-              <h2 className="text-[9px] font-black uppercase tracking-[0.4em] text-aureole-blue">QUALITY</h2>
-            </div>
-            <h3 className="text-3xl sm:text-4xl font-[950] text-slate-800 uppercase tracking-tighter leading-none mb-4">
-              ENGINEERING <span className="text-aureole-cyan">PRECISION.</span>
-            </h3>
-            <p className="text-slate-500 text-[10px] uppercase tracking-widest leading-relaxed max-w-sm">
-              Certified standards for global pharmaceutical excellence.
-            </p>
-          </div>
-
+      <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
+        <div className="w-full">
           {/* Stats Grid Compact - Light */}
-          <div className="lg:w-2/3 w-full">
+          <div className="w-full">
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 border border-slate-200 shadow-xl shadow-cyan-100/50">
               {stats.map((item, idx) => (
                 <div
@@ -66,7 +51,6 @@ const VideoSection: React.FC = () => {
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </section>

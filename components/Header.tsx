@@ -82,39 +82,41 @@ const Header: React.FC = () => {
       </div>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="absolute top-0 left-0 w-full h-screen bg-white z-[60] p-10 flex flex-col">
-          <div className="flex justify-between items-center mb-16">
-            <div className="flex items-center gap-3">
-              <img
-                src="/aureole-logo.png"
-                alt="Aureole Pharma-Tech"
-                className="h-10 w-auto"
-              />
-            </div>
-            <button onClick={() => setMobileMenuOpen(false)} className="p-2 bg-slate-100 rounded-full"><X className="w-5 h-5" /></button>
+      <div
+        className={`fixed inset-0 bg-white z-[60] p-6 flex flex-col transition-all duration-500 transform ${mobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'
+          }`}
+      >
+        <div className="flex justify-between items-center mb-12">
+          <div className="flex items-center gap-3">
+            <img
+              src="/aureole-logo.png"
+              alt="Aureole Pharma-Tech"
+              className="h-10 w-auto"
+            />
           </div>
-          <div className="flex flex-col gap-6">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-3xl font-black text-aureole-slate uppercase tracking-tighter border-b border-slate-50 pb-4"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
-          <div className="mt-auto space-y-6">
-            <div className="flex flex-col gap-2">
-              <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Global HQ</span>
-              <span className="text-sm font-bold text-aureole-slate">+91 86005 22240</span>
-            </div>
-            <button className="w-full bg-aureole-blue text-white py-5 font-black uppercase tracking-widest text-xs">Contact Headquarters</button>
-          </div>
+          <button
+            onClick={() => setMobileMenuOpen(false)}
+            className="p-3 bg-slate-50 rounded-full hover:bg-slate-100 transition-colors"
+          >
+            <X className="w-6 h-6 text-aureole-slate" />
+          </button>
         </div>
-      )}
+
+        <div className="flex flex-col gap-4 overflow-y-auto">
+          {navLinks.map((link, idx) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className={`text-2xl font-black text-aureole-slate uppercase tracking-tighter border-b border-slate-50 pb-4 transition-all duration-500 delay-[${idx * 50}ms] ${mobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                }`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
+
+      </div>
     </header>
   );
 };

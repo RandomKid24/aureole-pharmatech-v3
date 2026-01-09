@@ -5,6 +5,22 @@ import { Microscope, Activity, FlaskConical, ArrowRight, Binary, Gauge, ShieldCh
 const SECTORS_DATA = [
   {
     id: '01',
+    name: 'PHARMACEUTICAL',
+    icon: <Microscope className="w-8 h-8" />,
+    image: '/industries/pharmaceutical.png',
+    desc: 'Precision stability testing and environmental storage for life-saving drug formulations and vaccines.',
+    capabilities: ['Stability Testing', 'GMP Compliance', 'Cold Chain']
+  },
+  {
+    id: '02',
+    name: 'HOSPITAL',
+    icon: <Activity className="w-8 h-8" />,
+    image: '/industries/hospital.png',
+    desc: 'Sterilization and temperature-controlled machinery for surgical environments and pharmacy storage.',
+    capabilities: ['Sterilization', 'Clean Rooms', 'Sample Storage']
+  },
+  {
+    id: '03',
     name: 'CHEMICAL',
     icon: <FlaskConical className="w-8 h-8" />,
     image: '/industries/chemical.png',
@@ -12,35 +28,27 @@ const SECTORS_DATA = [
     capabilities: ['Reaction Control', 'Volatile Storage', 'Safety Compliance']
   },
   {
-    id: '02',
-    name: 'OIL & GAS',
+    id: '04',
+    name: 'OIL INDUSTRY',
     icon: <Gauge className="w-8 h-8" />,
     image: '/industries/oil_gas.png',
     desc: 'Ruggedized environmental chambers designed for downstream testing and petrochemical sample preservation.',
-    capabilities: ['Sample Preservation', 'Downstream Testing', 'Rugged Chambers']
+    capabilities: ['Downstream Testing', 'Rugged Chambers', 'Heat Stress']
   },
   {
-    id: '03',
-    name: 'CONSTRUCTION',
-    icon: <Binary className="w-8 h-8" />,
-    image: '/industries/construction.png',
-    desc: 'Material testing environments for concrete curing and structural integrity analysis under controlled conditions.',
-    capabilities: ['Concrete Curing', 'Material Testing', 'Structural Analysis']
-  },
-  {
-    id: '04',
-    name: 'STEEL',
+    id: '05',
+    name: 'FOOD INDUSTRY',
     icon: <ShieldCheck className="w-8 h-8" />,
-    image: '/industries/steel.png',
-    desc: 'High-temperature furnaces and thermal stress testing units for metallurgical quality assurance.',
-    capabilities: ['Thermal Stress', 'Metallurgy', 'Heat Treatment']
+    image: '/industries/food_v3.png',
+    desc: 'Incubation and environmental chambers (BOD) for food safety testing and quality assurance.',
+    capabilities: ['Safety Testing', 'Quality Control', 'BOD Incubation']
   }
 ];
 
 const Industries: React.FC = () => {
   return (
     <section id="industries" className="py-16 lg:py-20 bg-slate-50 relative overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-16 relative z-10">
+      <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
 
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-10">
           <div className="max-w-3xl">
@@ -57,7 +65,7 @@ const Industries: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {SECTORS_DATA.map((sector) => (
             <div
               key={sector.id}
@@ -96,11 +104,6 @@ const Industries: React.FC = () => {
                     ))}
                   </div>
 
-                  <div className="w-full h-px bg-slate-100"></div>
-
-                  <button className="flex items-center gap-2 text-[10px] font-black text-aureole-blue uppercase tracking-[0.2em] hover:text-aureole-cyan transition-colors">
-                    Explore Solutions <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
                 </div>
               </div>
             </div>

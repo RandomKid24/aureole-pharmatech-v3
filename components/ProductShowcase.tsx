@@ -1,25 +1,67 @@
 
 import React from 'react';
 import { PRODUCTS } from '../constants';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Activity, ShieldCheck, FlaskConical, Settings, Cpu, Gauge } from 'lucide-react';
 
 const ProductShowcase: React.FC = () => {
+  const stats = [
+    { label: 'Guidelines', icon: <Activity className="w-5 h-5" />, value: 'ICH Q1A / Q1B' },
+    { label: 'Compliance', icon: <ShieldCheck className="w-5 h-5" />, value: '21 CFR Part 11' },
+    { label: 'Quality', icon: <Settings className="w-5 h-5" />, value: 'ISO 9001 & GxP' },
+    { label: 'Control', icon: <FlaskConical className="w-5 h-5" />, value: 'Industrial PLC' },
+    { label: 'System', icon: <Gauge className="w-5 h-5" />, value: 'SCADA Integration' },
+    { label: 'Validation', icon: <Cpu className="w-5 h-5" />, value: 'DQ IQ OQ PQ' }
+  ];
+
   return (
     <section id="products" className="py-16 sm:py-20 bg-white relative overflow-hidden border-b border-slate-100">
       <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none hidden sm:block">
         <span className="text-[150px] font-black text-[#001529] tracking-tighter leading-none uppercase">Precision</span>
       </div>
 
-      <div className="container mx-auto px-6 sm:px-8 lg:px-16 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 sm:mb-16 gap-8 sm:gap-10">
+      <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
+        <div className="flex flex-col lg:flex-row justify-between items-start mb-16 sm:mb-24 gap-12 lg:gap-20">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+            {/* Combined Catalog & Quality Meta */}
+            <div className="flex items-center gap-3 sm:gap-4 mb-6">
               <span className="w-8 sm:w-12 h-[1px] bg-aureole-blue"></span>
-              <h2 className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] text-aureole-blue">CORE CATALOG</h2>
+              <h2 className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] text-aureole-blue">
+                CORE CATALOG / <span className="text-aureole-cyan">QUALITY STANDARDS</span>
+              </h2>
             </div>
-            <h3 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#001529] uppercase tracking-tighter leading-none">
-              ENGINEERED <span className="text-aureole-cyan">SYSTEMS.</span>
+
+            {/* Unified Combined Heading */}
+            <h3 className="text-5xl sm:text-6xl lg:text-7xl font-black text-[#001529] uppercase tracking-tighter leading-[0.85] mb-8">
+              PRECISION <br /> ENGINEERED <span className="text-aureole-cyan">SYSTEMS.</span>
             </h3>
+
+            <p className="text-slate-500 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest leading-relaxed max-w-sm">
+              Engineering excellence with certified standards <br className="hidden sm:block" /> for global pharmaceutical excellence.
+            </p>
+          </div>
+
+          {/* Stats Grid - Right Aligned as per image */}
+          <div className="w-full lg:max-w-2xl bg-white border border-slate-100 shadow-2xl shadow-slate-200/50">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-px bg-slate-100">
+              {stats.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white p-6 sm:p-8 group hover:bg-aureole-blue cursor-default transition-all duration-500"
+                >
+                  <div className="text-aureole-blue group-hover:text-white mb-4 transition-colors">
+                    {React.cloneElement(item.icon as React.ReactElement, { size: 20 })}
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-[8px] font-black text-slate-400 group-hover:text-white/60 uppercase tracking-widest mb-2 transition-colors">
+                      {item.label}
+                    </span>
+                    <span className="text-[10px] sm:text-[11px] font-black text-aureole-slate group-hover:text-white uppercase tracking-tight transition-colors">
+                      {item.value}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

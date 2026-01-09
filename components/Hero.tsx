@@ -4,7 +4,7 @@ import { ArrowDown, ShieldCheck, Award, CheckCircle2 } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center bg-white pt-52 pb-16 sm:pt-60">
+    <section className="relative min-h-screen flex items-center bg-white pt-32 pb-16 sm:pt-52 lg:pt-60">
       <div className="absolute inset-0 z-0 opacity-[0.03] bg-[radial-gradient(#0079ac_1px,transparent_1px)] [background-size:40px_40px]"></div>
       <div className="absolute right-0 top-0 w-1/3 h-full bg-slate-50/50 -z-10 hidden lg:block"></div>
 
@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
                 <span className="text-[11px] font-black uppercase tracking-[0.4em] text-aureole-blue">PHARMA ENGINEERING</span>
               </div>
 
-              <h1 className="text-5xl md:text-7xl lg:text-[85px] xl:text-[95px] font-[950] leading-[0.95] tracking-tighter text-aureole-slate uppercase mb-12">
+              <h1 className="text-4xl xs:text-5xl md:text-7xl lg:text-[85px] xl:text-[95px] font-[950] leading-[0.95] tracking-tighter text-aureole-slate uppercase mb-12">
                 PRECISION <br className="hidden md:block" />
                 TEMPERATURE & <br className="hidden md:block" />
                 HUMIDITY <span className="text-aureole-cyan">CONTROL.</span>
