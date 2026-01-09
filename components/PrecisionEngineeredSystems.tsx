@@ -3,7 +3,7 @@ import React from 'react';
 import { PRODUCTS } from '../constants';
 import { ArrowUpRight, Activity, ShieldCheck, FlaskConical, Settings, Cpu, Gauge } from 'lucide-react';
 
-const ProductShowcase: React.FC = () => {
+const PrecisionEngineeredSystems: React.FC = () => {
   const stats = [
     { label: 'Guidelines', icon: <Activity className="w-5 h-5" />, value: 'ICH Q1A / Q1B' },
     { label: 'Compliance', icon: <ShieldCheck className="w-5 h-5" />, value: '21 CFR Part 11' },
@@ -124,4 +124,4 @@ const ProductShowcase: React.FC = () => {
   );
 };
 
-export default ProductShowcase;
+export default PrecisionEngineeredSystems;

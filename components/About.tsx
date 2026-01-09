@@ -7,7 +7,7 @@ import { Microscope } from 'lucide-react';
  * AboutSection: Redesigned for a high-density, compact 7-letter brand mnemonic grid.
  * Optimized with faster transitions for performance.
  */
-const AboutSection: React.FC = () => {
+const About: React.FC = () => {
   return (
     <section id="about" className="py-16 lg:py-20 bg-white relative overflow-hidden border-y border-slate-100">
       <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
@@ -79,4 +79,4 @@ const AboutSection: React.FC = () => {
   );
 };
 
-export default AboutSection;
+export default About;

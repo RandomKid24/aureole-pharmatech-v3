@@ -2,7 +2,7 @@
 import React from 'react';
 import { CLIENTS } from '../constants';
 
-const ClientsSection: React.FC = () => {
+const GlobalValidation: React.FC = () => {
   // Splitting the massive list into 3 rows for high-density impact
   const count = CLIENTS.length;
   const split = Math.ceil(count / 3);
@@ -66,4 +66,4 @@ const ClientsSection: React.FC = () => {
   );
 };
 
-export default ClientsSection;
+export default GlobalValidation;

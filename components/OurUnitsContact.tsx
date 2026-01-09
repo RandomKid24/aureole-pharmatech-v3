@@ -1,7 +1,7 @@
 import React from 'react';
 import { MapPin, ArrowRight, ChevronDown, Activity } from 'lucide-react';
 
-const MapSection: React.FC = () => {
+const OurUnitsContact: React.FC = () => {
   return (
     <section id="contact" className="py-12 lg:py-16 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
@@ -92,4 +92,4 @@ const MapSection: React.FC = () => {
   );
 };
 
-export default MapSection;
+export default OurUnitsContact;

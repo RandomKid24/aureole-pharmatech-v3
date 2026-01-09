@@ -2,7 +2,7 @@
 import React from 'react';
 import { Quote, Linkedin, FileText, Target, Compass, ArrowRight } from 'lucide-react';
 
-const Leadership: React.FC = () => {
+const ManagingDirectorProfile: React.FC = () => {
    return (
       <section id="leadership" className="py-20 bg-white relative overflow-hidden">
          <div className="container mx-auto px-4 sm:px-8 lg:px-16">
@@ -61,4 +61,4 @@ const Leadership: React.FC = () => {
    );
 };
 
-export default Leadership;
+export default ManagingDirectorProfile;

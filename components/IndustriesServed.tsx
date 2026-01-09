@@ -45,7 +45,7 @@ const SECTORS_DATA = [
   }
 ];
 
-const Industries: React.FC = () => {
+const IndustriesServed: React.FC = () => {
   return (
     <section id="industries" className="py-16 lg:py-20 bg-slate-50 relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
@@ -114,4 +114,4 @@ const Industries: React.FC = () => {
   );
 };
 
-export default Industries;
+export default IndustriesServed;

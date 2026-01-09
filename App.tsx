@@ -2,12 +2,12 @@
 import React, { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import ProductShowcase from './components/ProductShowcase';
-import AboutSection from './components/AboutSection';
-import Industries from './components/Industries';
-import Leadership from './components/Leadership';
-import ClientsSection from './components/ClientsSection';
-import MapSection from './components/MapSection';
+import About from './components/About';
+import ManagingDirectorProfile from './components/ManagingDirectorProfile';
+import PrecisionEngineeredSystems from './components/PrecisionEngineeredSystems';
+import IndustriesServed from './components/IndustriesServed';
+import GlobalValidation from './components/GlobalValidation';
+import OurUnitsContact from './components/OurUnitsContact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -41,12 +41,12 @@ const App: React.FC = () => {
 
       <main>
         <Hero />
-        <AboutSection />
-        <Leadership />
-        <ProductShowcase />
-        <Industries />
-        <ClientsSection />
-        <MapSection />
+        <About />
+        <ManagingDirectorProfile />
+        <PrecisionEngineeredSystems />
+        <IndustriesServed />
+        <GlobalValidation />
+        <OurUnitsContact />
       </main>
 
       <Footer />

@@ -36,9 +36,9 @@ const Footer: React.FC = () => {
                <div>
                   <h4 className="text-[11px] font-black uppercase tracking-[0.3em] mb-10 text-aureole-blue">Quick Links</h4>
                   <ul className="space-y-5">
-                     {['Home', 'Software', 'About Us', 'Products', 'Services', 'Events', 'Careers'].map(item => (
+                     {['Home', 'About', 'Leadership', 'Precision Systems', 'Industries', 'Partners', 'Contact'].map(item => (
                         <li key={item}>
-                           <a href="#" className="text-slate-400 font-bold uppercase tracking-[0.15em] text-[10px] hover:text-white transition-colors flex items-center gap-3 group">
+                           <a href={`#${item.toLowerCase().replace(' ', '')}`} className="text-slate-400 font-bold uppercase tracking-[0.15em] text-[10px] hover:text-white transition-colors flex items-center gap-3 group">
                               <span className="w-1.5 h-[1px] bg-slate-700 group-hover:w-4 group-hover:bg-aureole-cyan transition-all"></span> {item}
                            </a>
                         </li>
