@@ -1,10 +1,9 @@
-
 import React from 'react';
 import { MapPin, ArrowRight, ChevronDown, Activity } from 'lucide-react';
 
 const MapSection: React.FC = () => {
   return (
-    <section id="contact" className="py-40 bg-white relative overflow-hidden">
+    <section id="contact" className="py-12 lg:py-16 bg-white relative overflow-hidden">
       <div className="container mx-auto px-8 lg:px-16 relative z-10">
         <div className="grid lg:grid-cols-12 gap-16 lg:gap-24 items-start">
 
@@ -19,7 +18,7 @@ const MapSection: React.FC = () => {
 
             <div className="w-full h-[500px] rounded-sm overflow-hidden border border-slate-100 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.666991195393!2d73.94827417596525!3d19.853331426466964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddc68d89e27607%3A0xe7a505e60d2b1bfb!2sAureole%20Pharma-Tech%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1704646200000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.939773140443!2d73.975841775226!3d19.884764881493496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddbbc51726bf65%3A0x1346993e205c4667!2sAureole%20Pharma-Tech%20(Mfg.of%20Stability%20Chambers%20%2C%20autoclave%20and%20table%20top%20equipments)!5e0!3m2!1sen!2sin!4v1767930922662!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

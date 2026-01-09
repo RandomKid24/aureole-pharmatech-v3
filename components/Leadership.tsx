@@ -4,11 +4,11 @@ import { Quote, Linkedin, FileText, Target, Compass, ArrowRight } from 'lucide-r
 
 const Leadership: React.FC = () => {
    return (
-      <section id="leadership" className="py-32 bg-white relative overflow-hidden">
+      <section id="leadership" className="py-20 bg-white relative overflow-hidden">
          <div className="container mx-auto px-8 lg:px-16">
-            <div className="grid lg:grid-cols-12 gap-20 items-center mb-32">
+            <div className="grid lg:grid-cols-12 gap-16 items-center">
                {/* Executive Profile */}
-               <div className="lg:col-span-5 relative">
+               <div className="lg:col-span-12 xl:col-span-5 relative mb-12 xl:mb-0">
                   <div className="aspect-[3/4] grayscale hover:grayscale-0 transition-all duration-1000 overflow-hidden border-b-[12px] border-[#001529] bg-slate-50 relative">
                      <img
                         src="/about/md_profile.jpg"
@@ -16,7 +16,7 @@ const Leadership: React.FC = () => {
                         className="w-full h-full object-cover object-top"
                      />
                   </div>
-                  <div className="mt-10">
+                  <div className="mt-8">
                      <h4 className="text-4xl font-black text-[#001529] uppercase tracking-tighter">Dr. Kiran Badgujar</h4>
                      <div className="flex items-center gap-4 mt-2">
                         <div className="h-[2px] w-12 bg-aureole-blue"></div>
@@ -26,16 +26,25 @@ const Leadership: React.FC = () => {
                </div>
 
                {/* Narrative Block */}
-               <div className="lg:col-span-7">
-                  <Quote className="w-20 h-20 text-slate-100 mb-8" />
-                  <h3 className="text-4xl lg:text-6xl font-black text-[#001529] uppercase tracking-tighter leading-[0.9] mb-12">
+               <div className="lg:col-span-12 xl:col-span-7">
+                  <Quote className="w-16 h-16 text-slate-100 mb-6" />
+                  <h3 className="text-4xl lg:text-5xl font-black text-[#001529] uppercase tracking-tighter leading-[0.9] mb-8">
                      "We engineer <span className="text-aureole-blue">trust</span> through thermal precision."
                   </h3>
-                  <p className="text-xl text-slate-600 font-medium leading-relaxed italic mb-12">
+                  <p className="text-lg text-slate-600 font-medium leading-relaxed italic mb-8">
                      "Our journey over the last three decades has been defined by a relentless pursuit of engineering excellence. At Aureole, we ensure that the pharmaceutical industry's most sensitive products are tested and stored under absolute environmental equilibrium."
                   </p>
-                  <div className="flex gap-10">
-                     <button className="bg-[#001529] text-white px-10 py-5 text-[10px] font-black uppercase tracking-widest flex items-center gap-4 hover:bg-aureole-cyan transition-colors">
+
+                  <div className="space-y-4 text-slate-500 text-xs font-medium leading-relaxed uppercase tracking-wider mb-10">
+                     <p>
+                        At Aureole PharmaTech, we believe in the power of inspiration. Our name, "Aureole", draws inspiration from the radiant halo or aura often associated with revered figures in spirituality. This symbolism holds a profound significance for us as our core values are inspired by it.
+                     </p>
+                     <p>
+                        "Aureole" represents our unwavering commitment to excellence and distinction. Just as the halo symbolizes the sacred and divine, our name embodies a commitment to upholding the highest standards of quality, integrity, and innovation in the pharmaceutical industry.
+                     </p>
+                  </div>
+                  <div className="flex gap-8">
+                     <button className="bg-[#001529] text-white px-8 py-4 text-[10px] font-black uppercase tracking-widest flex items-center gap-4 hover:bg-aureole-cyan transition-colors">
                         Full Biography <FileText className="w-4 h-4" />
                      </button>
                      <a href="#" className="flex items-center gap-4 text-slate-400 hover:text-aureole-cyan transition-colors">

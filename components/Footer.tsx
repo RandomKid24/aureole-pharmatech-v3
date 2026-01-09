@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
                      <div className="flex gap-5">
                         <MapPin className="w-5 h-5 text-aureole-blue shrink-0" />
                         <span className="text-slate-300 text-[11px] font-black uppercase tracking-wider leading-relaxed">
-                           Plot No. W-124, MIDC Malegaon, Sinnar, Nashik, India.
+                           B-61, Dist, MIDC Area, Malegaon, Maharashtra 422113.
                         </span>
                      </div>
                      <div className="flex gap-5">

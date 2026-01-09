@@ -9,11 +9,11 @@ import { Microscope } from 'lucide-react';
  */
 const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="py-24 lg:py-32 bg-white relative overflow-hidden border-y border-slate-100">
+    <section id="about" className="py-16 lg:py-20 bg-white relative overflow-hidden border-y border-slate-100">
       <div className="container mx-auto px-6 lg:px-16 relative z-10">
 
         {/* Brand Header */}
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center mb-24">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center mb-16">
           <div className="lg:w-1/2 flex flex-col justify-center">
             <div className="flex items-center gap-4 mb-6">
               <span className="w-12 h-[2px] bg-aureole-blue"></span>

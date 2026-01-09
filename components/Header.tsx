@@ -47,13 +47,13 @@ const Header: React.FC = () => {
       </div>
 
       {/* Main Navigation - Visible on LG and up */}
-      <div className={`${isScrolled ? 'bg-white/95 shadow-xl py-3' : 'bg-white py-5'} transition-all duration-300 backdrop-blur-md border-b border-slate-100`}>
+      <div className={`${isScrolled ? 'bg-white/95 shadow-xl py-1' : 'bg-white py-2'} transition-all duration-300 backdrop-blur-md border-b border-slate-100`}>
         <div className="container mx-auto px-8 lg:px-16 flex justify-between items-center">
           <div className="flex items-center gap-5 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <img
               src="/aureole-logo.png"
               alt="Aureole Pharma-Tech"
-              className="h-14 w-auto transition-transform group-hover:scale-105"
+              className={`${isScrolled ? 'h-16' : 'h-20'} w-auto transition-all duration-300 group-hover:scale-105`}
             />
           </div>
 

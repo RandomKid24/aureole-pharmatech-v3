@@ -33,12 +33,12 @@ const ClientsSection: React.FC = () => {
   );
 
   return (
-    <section id="clients" className="py-24 sm:py-32 bg-white relative overflow-hidden border-t border-slate-100">
+    <section id="clients" className="py-16 sm:py-20 bg-white relative overflow-hidden border-t border-slate-100">
       <div className="absolute top-0 right-0 p-20 opacity-[0.02] pointer-events-none select-none hidden lg:block">
         <span className="text-[180px] font-black text-aureole-slate tracking-tighter uppercase leading-none">TRUST</span>
       </div>
 
-      <div className="container mx-auto px-6 sm:px-8 lg:px-20 relative z-10 mb-20">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-20 relative z-10 mb-12">
         <div className="max-w-4xl">
           <div className="flex items-center gap-4 mb-6">
             <span className="w-12 h-[1px] bg-aureole-blue"></span>
@@ -60,22 +60,6 @@ const ClientsSection: React.FC = () => {
           <MarqueeRow items={row1} animationClass="animate-marquee" />
           <MarqueeRow items={row2} animationClass="animate-marquee-reverse" />
           <MarqueeRow items={row3} animationClass="animate-marquee-fast" />
-        </div>
-      </div>
-
-      <div className="container mx-auto px-6 sm:px-8 lg:px-20 mt-20">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {[
-            { label: 'INSTALLED BASE', value: '1500+ Units' },
-            { label: 'GEOGRAPHIES', value: '45+ Countries' },
-            { label: 'CLIENT RETENTION', value: '98.5% Index' },
-            { label: 'SERVICE RATIO', value: '24/7 Global' }
-          ].map((cert, idx) => (
-            <div key={idx} className="border-l border-slate-200 pl-6 hover:border-aureole-cyan transition-colors">
-              <div className="text-[8px] font-black text-slate-400 uppercase tracking-widest mb-1">{cert.label}</div>
-              <div className="text-lg font-black text-aureole-slate uppercase tracking-tight">{cert.value}</div>
-            </div>
-          ))}
         </div>
       </div>
     </section>

@@ -5,13 +5,13 @@ import { ArrowUpRight } from 'lucide-react';
 
 const ProductShowcase: React.FC = () => {
   return (
-    <section id="products" className="py-24 sm:py-32 bg-white relative overflow-hidden border-b border-slate-100">
+    <section id="products" className="py-16 sm:py-20 bg-white relative overflow-hidden border-b border-slate-100">
       <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none hidden sm:block">
         <span className="text-[150px] font-black text-[#001529] tracking-tighter leading-none uppercase">Precision</span>
       </div>
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-16 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 sm:mb-24 gap-8 sm:gap-10">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 sm:mb-16 gap-8 sm:gap-10">
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
               <span className="w-8 sm:w-12 h-[1px] bg-aureole-blue"></span>
@@ -27,9 +27,9 @@ const ProductShowcase: React.FC = () => {
           {PRODUCTS.map((product) => (
             <div
               key={product.id}
-              className="group flex flex-col bg-white p-8 sm:p-12 border-r border-b border-slate-100 transition-all duration-300 hover:bg-slate-50/80"
+              className="group flex flex-col bg-white p-6 sm:p-10 border-r border-b border-slate-100 transition-all duration-300 hover:bg-slate-50/80"
             >
-              <div className="aspect-[5/4] relative mb-10 overflow-hidden bg-white rounded-sm border border-slate-50 flex items-center justify-center p-6">
+              <div className="aspect-[5/4] relative mb-8 overflow-hidden bg-white rounded-sm border border-slate-50 flex items-center justify-center p-6">
                 <img
                   src={product.image}
                   alt={product.name}
@@ -48,11 +48,11 @@ const ProductShowcase: React.FC = () => {
                 {product.name}
               </h4>
 
-              <p className="text-slate-500 text-[10px] sm:text-[12px] font-medium leading-relaxed mb-10 line-clamp-3">
+              <p className="text-slate-500 text-[10px] sm:text-[11px] font-medium leading-relaxed mb-8 line-clamp-3">
                 {product.description}
               </p>
 
-              <div className="mt-auto grid grid-cols-2 gap-4 pb-10 border-b border-slate-100 mb-8">
+              <div className="mt-auto grid grid-cols-2 gap-4 pb-8 border-b border-slate-100 mb-6">
                 {Object.entries(product.specs).slice(0, 2).map(([key, val]) => (
                   <div key={key}>
                     <div className="text-[7px] font-black text-slate-300 uppercase tracking-widest mb-1">{key}</div>

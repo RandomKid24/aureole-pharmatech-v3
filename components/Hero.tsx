@@ -56,17 +56,6 @@ const Hero: React.FC = () => {
                 <button className="bg-aureole-blue text-white px-12 py-6 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-aureole-slate transition-all flex items-center gap-6 group shadow-2xl shadow-blue-500/10">
                   Explore Machinery <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
                 </button>
-                <div className="flex items-center gap-8">
-                  <div className="flex flex-col">
-                    <div className="text-3xl font-black text-aureole-slate tracking-tighter leading-none">28+</div>
-                    <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest mt-1">Years</span>
-                  </div>
-                  <div className="w-px h-8 bg-slate-200"></div>
-                  <div className="flex flex-col">
-                    <div className="text-3xl font-black text-aureole-slate tracking-tighter leading-none">1500+</div>
-                    <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest mt-1">Deployments</span>
-                  </div>
-                </div>
               </div>
             </div>
 
