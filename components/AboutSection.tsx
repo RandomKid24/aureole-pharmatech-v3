@@ -41,14 +41,6 @@ const AboutSection: React.FC = () => {
                 className="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 transition-all duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-aureole-slate/40 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 flex items-center gap-3">
-                <div className="w-10 h-10 bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
-                  <Microscope className="text-white w-4 h-4" />
-                </div>
-                <div className="text-white">
-                  <div className="text-[8px] font-black uppercase tracking-widest">Global HQ</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
