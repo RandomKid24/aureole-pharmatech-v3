@@ -1,8 +1,24 @@
 
 import React from 'react';
 import { Linkedin, Twitter, Facebook, Instagram, MapPin, Mail, Phone, Globe, Shield } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Footer: React.FC = () => {
+   const location = useLocation();
+
+   const handleScrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+   };
+
+   const handleHashScroll = (id: string) => {
+      if (location.pathname === '/') {
+         const element = document.getElementById(id);
+         if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+         }
+      }
+   };
+
    return (
       <footer className="bg-aureole-slate text-white pt-24 pb-16 relative overflow-hidden">
          {/* Visual Header - Branding Mask Effect */}
@@ -16,11 +32,13 @@ const Footer: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 mb-32">
 
                <div className="space-y-10">
-                  <img
-                     src="/aureole-logo.png"
-                     alt="Aureole Pharma-Tech"
-                     className="h-20 w-auto"
-                  />
+                  <Link to="/" onClick={handleScrollToTop}>
+                     <img
+                        src="/aureole-logo.png"
+                        alt="Aureole Pharma-Tech"
+                        className="h-20 w-auto"
+                     />
+                  </Link>
                   <p className="text-slate-400 text-sm font-medium leading-relaxed max-w-xs">
                      Precision engineering leaders in environmental stabilization and thermal control solutions for global pharmaceutical manufacturing.
                   </p>
@@ -36,11 +54,33 @@ const Footer: React.FC = () => {
                <div>
                   <h4 className="text-[11px] font-black uppercase tracking-[0.3em] mb-10 text-aureole-blue">Quick Links</h4>
                   <ul className="space-y-5">
-                     {['Home', 'About', 'Leadership', 'Precision Systems', 'Industries', 'Partners', 'Contact'].map(item => (
-                        <li key={item}>
-                           <a href={`#${item.toLowerCase().replace(' ', '')}`} className="text-slate-400 font-bold uppercase tracking-[0.15em] text-[10px] hover:text-white transition-colors flex items-center gap-3 group">
-                              <span className="w-1.5 h-[1px] bg-slate-700 group-hover:w-4 group-hover:bg-aureole-cyan transition-all"></span> {item}
-                           </a>
+                     {[
+                        { name: 'Home', href: '/' },
+                        { name: 'Overview', href: '/about/overview' },
+                        { name: 'Aureole Team', href: '/about/team' },
+                        { name: 'Products', href: '/#products' },
+                        { name: 'Industries', href: '/#industries' },
+                        { name: 'Partners', href: '/#clients' },
+                        { name: 'Contact', href: '/#contact' }
+                     ].map(item => (
+                        <li key={item.name}>
+                           {item.href.startsWith('/#') ? (
+                              <Link
+                                 to={item.href}
+                                 className="text-slate-400 font-bold uppercase tracking-[0.15em] text-[10px] hover:text-white transition-colors flex items-center gap-3 group"
+                                 onClick={() => handleHashScroll(item.href.substring(2))}
+                              >
+                                 <span className="w-1.5 h-[1px] bg-slate-700 group-hover:w-4 group-hover:bg-aureole-cyan transition-all"></span> {item.name}
+                              </Link>
+                           ) : (
+                              <Link
+                                 to={item.href}
+                                 className="text-slate-400 font-bold uppercase tracking-[0.15em] text-[10px] hover:text-white transition-colors flex items-center gap-3 group"
+                                 onClick={item.href === '/' ? handleScrollToTop : undefined}
+                              >
+                                 <span className="w-1.5 h-[1px] bg-slate-700 group-hover:w-4 group-hover:bg-aureole-cyan transition-all"></span> {item.name}
+                              </Link>
+                           )}
                         </li>
                      ))}
                   </ul>
@@ -99,7 +139,7 @@ const Footer: React.FC = () => {
                   </div>
                </div>
                <button
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  onClick={handleScrollToTop}
                   className="text-[9px] font-black uppercase tracking-[0.4em] text-aureole-cyan hover:text-white transition-all"
                >
                   Back to top

@@ -1,57 +1,29 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import ManagingDirectorProfile from './components/ManagingDirectorProfile';
-import PrecisionEngineeredSystems from './components/PrecisionEngineeredSystems';
-import IndustriesServed from './components/IndustriesServed';
-import GlobalValidation from './components/GlobalValidation';
-import OurUnitsContact from './components/OurUnitsContact';
 import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
+import Home from './pages/Home';
+import Overview from './pages/about/Overview';
+import Team from './pages/about/Team';
+import Certification from './pages/about/Certification';
+import Plants from './pages/about/Plants';
 
 const App: React.FC = () => {
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -100px 0px"
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, observerOptions);
-
-    const animatedSections = document.querySelectorAll('section');
-    animatedSections.forEach(sec => {
-      sec.classList.add('reveal');
-      observer.observe(sec);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <div className="relative selection:bg-blue-100 selection:text-blue-900">
-      <Header />
-
-      <main>
-        <Hero />
-        <About />
-        <ManagingDirectorProfile />
-        <PrecisionEngineeredSystems />
-        <IndustriesServed />
-        <GlobalValidation />
-        <OurUnitsContact />
-      </main>
-
-      <Footer />
-      <ScrollToTop />
-    </div>
+    <Router>
+      <div className="relative selection:bg-blue-100 selection:text-blue-900">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about/overview" element={<Overview />} />
+          <Route path="/about/team" element={<Team />} />
+          <Route path="/about/certification-compliance" element={<Certification />} />
+          <Route path="/about/plants" element={<Plants />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 };
 
