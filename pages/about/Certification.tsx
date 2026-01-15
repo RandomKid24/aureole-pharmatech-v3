@@ -74,51 +74,57 @@ const Certification: React.FC = () => {
                 </div>
             </section>
 
-            {/* Quality Policy */}
-            <section className="py-24 lg:py-40 bg-white">
+
+
+            {/* CE Compliance */}
+            <section className="py-24 lg:py-40 bg-slate-50/50">
                 <div className="container mx-auto px-6 sm:px-8 lg:px-24">
-                    <div className="grid lg:grid-cols-2 gap-24 items-center">
-                        <div>
-                            <div className="flex items-center gap-4 mb-8">
-                                <span className="w-12 h-[2px] bg-slate-200"></span>
-                                <h3 className="text-[10px] font-black uppercase tracking-[0.5em] text-slate-400">QUALITY FRAMEWORK</h3>
+                    <div className="max-w-3xl mb-24">
+                        <div className="flex items-center gap-4 mb-8">
+                            <span className="w-12 h-[2px] bg-aureole-cyan"></span>
+                            <h3 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-cyan">CE STANDARDS</h3>
+                        </div>
+                        <h2 className="text-5xl lg:text-7xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.9] mb-8">
+                            TECHNICAL <br /> <span className="text-aureole-blue">CERTIFICATION.</span>
+                        </h2>
+                    </div>
+
+                    <div className="grid lg:grid-cols-3 gap-px bg-white border border-slate-100 shadow-xl shadow-slate-100/50">
+                        <div className="bg-white p-12 lg:p-16 lg:col-span-1">
+                            <div className="mb-12">
+                                <span className="text-[9px] font-black text-slate-300 uppercase tracking-widest block mb-4">Directive</span>
+                                <p className="text-xl font-black text-aureole-slate uppercase tracking-tighter italic">2007/47/EC (MDR)</p>
                             </div>
-                            <h2 className="text-5xl lg:text-7xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.9] mb-8">
-                                OUR QUALITY <br /> <span className="text-aureole-blue">POLICY.</span>
-                            </h2>
-                            <p className="text-[12px] font-bold text-slate-500 uppercase tracking-widest leading-relaxed mb-12 text-justify">
-                                We are committed to achieving total customer satisfaction by providing the best available modern instrumentation technology. Our focus remains on continuous improvement, adherence to government and international norms, and maintaining 100% precision in domestic and export markets.
-                            </p>
+                            <div className="mb-12">
+                                <span className="text-[9px] font-black text-slate-300 uppercase tracking-widest block mb-4">Issuer</span>
+                                <p className="text-[11px] font-bold text-slate-500 uppercase tracking-widest leading-relaxed">{ceDetails.issuer}</p>
+                            </div>
                             <a
-                                href="/compliance/Quality Policy.pdf"
+                                href={ceDetails.file}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-4 px-10 py-5 bg-aureole-slate text-white text-[10px] font-black uppercase tracking-widest hover:bg-aureole-blue transition-all"
+                                className="flex items-center gap-4 text-aureole-cyan text-[10px] font-black uppercase tracking-widest hover:text-aureole-blue transition-colors"
                             >
-                                <Download size={16} /> Download Quality Policy
+                                <Download size={16} /> Download CE Doc
                             </a>
                         </div>
-                        <div className="grid grid-cols-2 gap-px bg-slate-100 border border-slate-100">
-                            {[
-                                { title: "Customer Sat", icon: <CheckCircle2 className="text-aureole-cyan" /> },
-                                { title: "Modern Tech", icon: <CheckCircle2 className="text-aureole-blue" /> },
-                                { title: "Precision", icon: <CheckCircle2 className="text-aureole-cyan" /> },
-                                { title: "Compliance", icon: <CheckCircle2 className="text-aureole-blue" /> }
-                            ].map((item, i) => (
-                                <div key={i} className="bg-white p-12 flex flex-col items-center text-center group hover:bg-slate-50 transition-colors">
-                                    <div className="mb-6 transform group-hover:scale-110 transition-transform">
-                                        {item.icon}
+                        <div className="bg-white p-12 lg:p-16 lg:col-span-2">
+                            <h4 className="text-[11px] font-black text-aureole-blue uppercase tracking-[0.2em] mb-12">Certified Product Line</h4>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
+                                {ceProducts.map((p, i) => (
+                                    <div key={i} className="flex items-center gap-4 group">
+                                        <div className="w-1 h-1 bg-aureole-cyan group-hover:w-4 transition-all"></div>
+                                        <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest group-hover:text-aureole-slate transition-colors">{p}</span>
                                     </div>
-                                    <span className="text-[10px] font-black text-aureole-slate uppercase tracking-widest">{item.title}</span>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* ISO Certification */}
-            <section className="py-24 lg:py-40 bg-slate-50/50">
+            {/* ISO Certification (QRO Registration) */}
+            <section className="py-24 lg:py-40 bg-white">
                 <div className="container mx-auto px-6 sm:px-8 lg:px-24">
                     <div className="max-w-3xl mb-24">
                         <div className="flex items-center gap-4 mb-8">
@@ -176,55 +182,8 @@ const Certification: React.FC = () => {
                 </div>
             </section>
 
-            {/* CE Compliance */}
-            <section className="py-24 lg:py-40 bg-white">
-                <div className="container mx-auto px-6 sm:px-8 lg:px-24">
-                    <div className="max-w-3xl mb-24">
-                        <div className="flex items-center gap-4 mb-8">
-                            <span className="w-12 h-[2px] bg-aureole-cyan"></span>
-                            <h3 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-cyan">CE STANDARDS</h3>
-                        </div>
-                        <h2 className="text-5xl lg:text-7xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.9] mb-8">
-                            TECHNICAL <span className="text-aureole-blue">CERTIFICATION.</span>
-                        </h2>
-                    </div>
-
-                    <div className="grid lg:grid-cols-3 gap-px bg-slate-100 border border-slate-100 shadow-xl shadow-slate-100/50">
-                        <div className="bg-white p-12 lg:p-16 lg:col-span-1">
-                            <div className="mb-12">
-                                <span className="text-[9px] font-black text-slate-300 uppercase tracking-widest block mb-4">Directive</span>
-                                <p className="text-xl font-black text-aureole-slate uppercase tracking-tighter italic">2007/47/EC (MDR)</p>
-                            </div>
-                            <div className="mb-12">
-                                <span className="text-[9px] font-black text-slate-300 uppercase tracking-widest block mb-4">Issuer</span>
-                                <p className="text-[11px] font-bold text-slate-500 uppercase tracking-widest leading-relaxed">{ceDetails.issuer}</p>
-                            </div>
-                            <a
-                                href={ceDetails.file}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-4 text-aureole-cyan text-[10px] font-black uppercase tracking-widest hover:text-aureole-blue transition-colors"
-                            >
-                                <Download size={16} /> Download CE Doc
-                            </a>
-                        </div>
-                        <div className="bg-white p-12 lg:p-16 lg:col-span-2">
-                            <h4 className="text-[11px] font-black text-aureole-blue uppercase tracking-[0.2em] mb-12">Certified Product Line</h4>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
-                                {ceProducts.map((p, i) => (
-                                    <div key={i} className="flex items-center gap-4 group">
-                                        <div className="w-1 h-1 bg-aureole-cyan group-hover:w-4 transition-all"></div>
-                                        <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest group-hover:text-aureole-slate transition-colors">{p}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             {/* Referenced Standards */}
-            <section className="py-24 lg:py-40 bg-white relative overflow-hidden">
+            <section className="py-24 lg:py-40 bg-slate-50/50 relative overflow-hidden">
                 <div className="container mx-auto px-6 sm:px-8 lg:px-24 relative z-10">
                     <div className="max-w-3xl mb-24">
                         <div className="flex items-center gap-4 mb-8">
@@ -261,6 +220,53 @@ const Certification: React.FC = () => {
                                 <div className="absolute bottom-0 left-0 w-0 h-[3px] bg-aureole-cyan group-hover:w-full transition-all duration-700 ease-in-out"></div>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Quality Policy */}
+            <section className="py-24 lg:py-40 bg-white">
+                <div className="container mx-auto px-6 sm:px-8 lg:px-24">
+                    <div className="grid lg:grid-cols-2 gap-24 items-center">
+                        <div>
+                            <div className="flex items-center gap-4 mb-8">
+                                <span className="w-12 h-[2px] bg-slate-200"></span>
+                                <h3 className="text-[10px] font-black uppercase tracking-[0.5em] text-slate-400">QUALITY FRAMEWORK</h3>
+                            </div>
+                            <h2 className="text-5xl lg:text-7xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.9] mb-8">
+                                QUALITY <br /> <span className="text-aureole-blue">POLICY.</span>
+                            </h2>
+                            <div className="mb-10 p-6 bg-slate-50 border-l-4 border-aureole-blue">
+                                <p className="text-[14px] font-[900] text-aureole-slate uppercase tracking-wider mb-2">Aureole Pharma Pvt. Ltd.</p>
+                                <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Issue Date: 05-10-2023 | Managing Director: Dr. Kiran Badgujar</p>
+                            </div>
+                            <p className="text-[12px] font-bold text-slate-500 uppercase tracking-widest leading-relaxed mb-12 text-justify">
+                                We are committed to achieving total customer satisfaction in domestic and international markets by providing the best available modern instrumentation technology. Our focus remains on continuous improvement, adherence to government and international norms, and maintaining 100% accuracy and employee responsibility across all manufacturing processes.
+                            </p>
+                            <a
+                                href="/compliance/Quality Policy.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-4 px-10 py-5 bg-aureole-slate text-white text-[10px] font-black uppercase tracking-widest hover:bg-aureole-blue transition-all"
+                            >
+                                <Download size={16} /> Download Quality Policy
+                            </a>
+                        </div>
+                        <div className="grid grid-cols-2 gap-px bg-slate-100 border border-slate-100">
+                            {[
+                                { title: "Customer Sat", icon: <CheckCircle2 className="text-aureole-cyan" /> },
+                                { title: "Modern Tech", icon: <CheckCircle2 className="text-aureole-blue" /> },
+                                { title: "Accuracy", icon: <CheckCircle2 className="text-aureole-cyan" /> },
+                                { title: "Improvement", icon: <CheckCircle2 className="text-aureole-blue" /> }
+                            ].map((item, i) => (
+                                <div key={i} className="bg-white p-12 flex flex-col items-center text-center group hover:bg-slate-50 transition-colors">
+                                    <div className="mb-6 transform group-hover:scale-110 transition-transform">
+                                        {item.icon}
+                                    </div>
+                                    <span className="text-[10px] font-black text-aureole-slate uppercase tracking-widest">{item.title}</span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>

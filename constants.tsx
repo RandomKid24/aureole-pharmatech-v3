@@ -69,9 +69,34 @@ const IconEnthusiastic = ({ size = 20 }) => (
 );
 
 /**
- * Global product list derived from organized catalog
+ * Global product list derived from organized catalog for Homepage Showcase
  */
-export const PRODUCTS = PRODUCT_CATALOG;
+export const PRODUCTS = [
+  {
+    id: 'stability-chambers',
+    name: 'STABILITY CHAMBER',
+    category: 'STABILITY',
+    image: '/products/Stability/Humidity-Chamber.jpg',
+    description: 'Precise environmental control for long-term stability studies and ICH compliance.',
+    specs: { 'Control': 'HMI / PLC', 'Range': '-20°C to 80°C' }
+  },
+  {
+    id: 'walk-in-rooms',
+    name: 'WALK-IN CHAMBER',
+    category: 'WALK-IN',
+    image: '/products/WalkIn/Walk-In-Room.jpg',
+    description: 'Large-scale environmental rooms with modular design and uniform airflow.',
+    specs: { 'Volume': 'Upto 50,000L', 'Uniformity': '± 1°C' }
+  },
+  {
+    id: 'deep-freezers',
+    name: 'DEEP FREEZER',
+    category: 'STABILITY',
+    image: '/products/Stability/Deep-Freezer.jpg',
+    description: 'High-performance ultra-low cooling for critical sample preservation.',
+    specs: { 'Cooling': 'Cascade Sys', 'Temp': '-80°C' }
+  }
+];
 
 /**
  * A-U-R-E-O-L-E Brand Values
