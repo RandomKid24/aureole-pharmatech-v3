@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { ChevronRight, Layers, Thermometer, Droplets, Zap, Ruler, Beaker, Shield, Activity, Award, Box, Wind, FlaskConical, Construction } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { slugify } from '../utils/urlUtils';
 import { PRODUCT_CATALOG } from '../data/products';
 
 const Products: React.FC = () => {
@@ -123,7 +124,7 @@ const Products: React.FC = () => {
                                                     {subType.products.map((productName, pIdx) => (
                                                         <Link
                                                             key={pIdx}
-                                                            to={`/products/${encodeURIComponent(productName)}`}
+                                                            to={`/products/${slugify(productName)}`}
                                                             className="flex items-center group/item py-1"
                                                         >
                                                             <div className="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover/item:bg-aureole-cyan mr-3 transition-colors"></div>

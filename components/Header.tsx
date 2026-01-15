@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, Phone, Mail, Linkedin, Facebook, Twitter, ChevronDown, Rocket, Building2, Users, ShieldCheck, Box, Thermometer, Activity, ArrowRight, ChevronRight } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { slugify } from '../utils/urlUtils';
 import { PRODUCT_CATALOG } from '../data/products';
 
 const Header: React.FC = () => {
@@ -207,7 +208,7 @@ const Header: React.FC = () => {
                                         {sub.products.map((pName) => (
                                           <Link
                                             key={pName}
-                                            to={`/products/${encodeURIComponent(pName)}`}
+                                            to={`/products/${slugify(pName)}`}
                                             className="text-[10px] font-bold text-slate-500 hover:text-aureole-blue hover:pl-2 transition-all uppercase tracking-wide py-1 block w-full truncate"
                                             title={pName}
                                           >
@@ -311,7 +312,7 @@ const Header: React.FC = () => {
                                   {sub.products.map(pName => (
                                     <Link
                                       key={pName}
-                                      to={`/products/${encodeURIComponent(pName)}`}
+                                      to={`/products/${slugify(pName)}`}
                                       className="text-[11px] font-bold text-slate-600 hover:text-aureole-cyan uppercase tracking-wide truncate"
                                       onClick={() => setMobileMenuOpen(false)}
                                     >

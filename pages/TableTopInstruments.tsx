@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Clock, Target, Box, Layers } from 'lucide-react';
+import { slugify } from '../utils/urlUtils';
 import { PRODUCT_CATALOG } from '../data/products';
 
 const TableTopInstruments: React.FC = () => {
@@ -184,7 +185,7 @@ const TableTopInstruments: React.FC = () => {
                                     {sub.products.map((pName, pIdx) => (
                                         <Link
                                             key={pIdx}
-                                            to={`/products/${encodeURIComponent(pName)}`}
+                                            to={`/products/${slugify(pName)}`}
                                             className="group flex flex-col gap-6 p-6 border border-slate-100 hover:border-aureole-cyan hover:bg-slate-50/50 transition-all duration-300"
                                         >
                                             <div className="w-10 h-10 flex items-center justify-center border border-slate-100 bg-white text-slate-300 group-hover:text-aureole-cyan group-hover:border-aureole-cyan transition-all duration-300">

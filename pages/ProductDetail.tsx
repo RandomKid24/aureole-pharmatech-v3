@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { PRODUCT_DETAILS } from '../data/products';
+import { findValuesBySlug } from '../utils/urlUtils';
 import { ArrowLeft, CheckCircle2, Zap, Settings, Box, List, PlusCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const ProductGallery: React.FC<{ images: string[], name: string, captions?: string[] }> = ({ images, name, captions }) => {
@@ -77,8 +78,8 @@ const ProductGallery: React.FC<{ images: string[], name: string, captions?: stri
 
 const ProductDetail: React.FC = () => {
     const { productName } = useParams<{ productName: string }>();
-    const decodedName = decodeURIComponent(productName || '');
-    const product = PRODUCT_DETAILS[decodedName];
+    const { product, originalName } = findValuesBySlug(productName || '', PRODUCT_DETAILS);
+    const decodedName = originalName;
 
     useEffect(() => {
         window.scrollTo(0, 0);
