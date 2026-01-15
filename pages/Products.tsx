@@ -64,7 +64,7 @@ const Products: React.FC = () => {
             {/* Hero Section */}
             <section className="relative py-24 sm:py-32 overflow-hidden border-b border-slate-100 bg-white">
                 <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none">
-                    <span className="text-[100px] lg:text-[150px] font-black text-[#001529] tracking-tighter leading-none uppercase italic">PRODUCTS</span>
+                    <span className="text-[100px] lg:text-[150px] font-black text-[#001529] tracking-tighter leading-none uppercase">PRODUCTS</span>
                 </div>
 
                 <div className="container mx-auto px-6 sm:px-12 lg:px-24 relative z-10 text-center sm:text-left">
@@ -73,7 +73,7 @@ const Products: React.FC = () => {
                             <span className="w-12 h-[2px] bg-aureole-blue"></span>
                             <h2 className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.5em] text-aureole-blue">PRODUCT CATALOG</h2>
                         </div>
-                        <h1 className="text-5xl sm:text-7xl lg:text-9xl font-[950] text-[#001529] uppercase tracking-tighter leading-[0.8] mb-12 italic">
+                        <h1 className="text-5xl sm:text-7xl lg:text-9xl font-[950] text-[#001529] uppercase tracking-tighter leading-[0.8] mb-12">
                             OUR <br /> <span className="text-aureole-cyan">COLLECTION.</span>
                         </h1>
                         <p className="text-slate-500 text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.2em] leading-relaxed max-w-lg mx-auto sm:mx-0">

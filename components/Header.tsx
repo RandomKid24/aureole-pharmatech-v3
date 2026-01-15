@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, Phone, Mail, Linkedin, Facebook, Twitter, ChevronDown, Rocket, Building2, Users, ShieldCheck, Box, Thermometer, Activity, ArrowRight, ChevronRight } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { PRODUCT_CATALOG } from '../data/products';
@@ -10,6 +10,8 @@ const Header: React.FC = () => {
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const [mobileExpandedCat, setMobileExpandedCat] = useState<string | null>(null);
+
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -31,8 +33,8 @@ const Header: React.FC = () => {
     { name: 'Home', href: '/' },
     {
       name: 'About',
+      href: '/about',
       dropdown: [
-        { name: 'Overview', href: '/about/overview', icon: <Rocket className="w-4 h-4" /> },
         { name: 'Certification & Compliance', href: '/about/certification-compliance', icon: <ShieldCheck className="w-4 h-4" /> },
         { name: 'Plants', href: '/about/plants', icon: <Building2 className="w-4 h-4" /> },
         { name: 'Team', href: '/about/team', icon: <Users className="w-4 h-4" /> },
@@ -70,6 +72,27 @@ const Header: React.FC = () => {
 
   const toggleMobileCat = (catId: string) => {
     setMobileExpandedCat(mobileExpandedCat === catId ? null : catId);
+  };
+
+  const handleMouseEnter = (menu: 'about' | 'products') => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    if (menu === 'about') {
+      setAboutDropdownOpen(true);
+      setProductsDropdownOpen(false);
+    } else {
+      setProductsDropdownOpen(true);
+      setAboutDropdownOpen(false);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setAboutDropdownOpen(false);
+      setProductsDropdownOpen(false);
+    }, 300);
   };
 
   return (
@@ -114,15 +137,19 @@ const Header: React.FC = () => {
                 {link.name === 'Products' || link.name === 'About' ? (
                   <div
                     className="flex items-center gap-1.5 cursor-pointer text-[10px] font-extrabold uppercase tracking-[0.25em] text-aureole-slate hover:text-aureole-cyan transition-colors py-4"
-                    onMouseEnter={() => link.name === 'About' ? setAboutDropdownOpen(true) : setProductsDropdownOpen(true)}
-                    onMouseLeave={() => link.name === 'About' ? setAboutDropdownOpen(false) : setProductsDropdownOpen(false)}
+                    onMouseEnter={() => handleMouseEnter(link.name === 'About' ? 'about' : 'products')}
+                    onMouseLeave={handleMouseLeave}
                   >
                     <Link to={link.href || '#'} className="hover:text-aureole-cyan transition-colors">{link.name}</Link>
                     <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${(link.name === 'About' ? aboutDropdownOpen : productsDropdownOpen) ? 'rotate-180' : ''}`} />
 
                     {/* Standard Dropdown for 'About' */}
                     {link.name === 'About' && (
-                      <div className={`absolute top-full left-0 w-64 bg-white shadow-2xl border border-slate-100 p-4 transition-all duration-300 ${aboutDropdownOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
+                      <div
+                        className={`absolute top-full left-0 w-64 bg-white shadow-2xl border border-slate-100 p-4 transition-all duration-300 ${aboutDropdownOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}
+                        onMouseEnter={() => handleMouseEnter('about')}
+                        onMouseLeave={handleMouseLeave}
+                      >
                         <div className="flex flex-col gap-1">
                           {link.dropdown?.map((item) => (
                             <Link
@@ -147,6 +174,8 @@ const Header: React.FC = () => {
                       <div
                         className={`fixed left-0 w-full bg-white/95 backdrop-blur-xl border-t border-b border-r border-slate-100 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] transition-all duration-500 origin-top z-40 ${productsDropdownOpen ? 'opacity-100 translate-y-0 scale-y-100' : 'opacity-0 -translate-y-4 scale-y-0 pointer-events-none'}`}
                         style={{ top: isScrolled ? '64px' : '96px' }}
+                        onMouseEnter={() => handleMouseEnter('products')}
+                        onMouseLeave={handleMouseLeave}
                       >
                         <div className="container mx-auto px-16 py-12">
                           <div className="grid grid-cols-3 gap-8 xl:gap-12">
