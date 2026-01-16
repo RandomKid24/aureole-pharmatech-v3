@@ -16,7 +16,7 @@ const OurUnitsContact: React.FC = () => {
               OUR <br /> <span className="text-aureole-blue">UNITS.</span>
             </h3>
 
-            <div className="w-full h-[400px] sm:h-[500px] rounded-sm overflow-hidden border border-slate-100 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+            <div className="w-full h-[400px] sm:h-[500px] rounded-sm overflow-hidden border border-slate-100 shadow-2xl transition-all duration-700">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.939773140443!2d73.975841775226!3d19.884764881493496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddbbc51726bf65%3A0x1346993e205c4667!2sAureole%20Pharma-Tech%20(Mfg.of%20Stability%20Chambers%20%2C%20autoclave%20and%20table%20top%20equipments)!5e0!3m2!1sen!2sin!4v1767930922662!5m2!1sen!2sin"
                 width="100%"

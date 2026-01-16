@@ -70,7 +70,7 @@ const Team: React.FC = () => {
             {/* Leadership Hero */}
             <section className="relative py-24 sm:py-32 overflow-hidden border-b border-slate-100">
                 <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none">
-                    <span className="text-[180px] lg:text-[250px] font-black text-[#001529] tracking-tighter leading-none uppercase italic">TEAM</span>
+                    <span className="text-[180px] lg:text-[250px] font-black text-[#001529] tracking-tighter leading-none uppercase">TEAM</span>
                 </div>
 
                 <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
@@ -82,7 +82,7 @@ const Team: React.FC = () => {
                         <h1 className="text-5xl sm:text-7xl lg:text-8xl font-[950] text-[#001529] uppercase tracking-tighter leading-[0.85] mb-12">
                             PRECISION <br /> MINDSET, <span className="text-aureole-cyan">COLLECTIVE IMPACT.</span>
                         </h1>
-                        <p className="text-slate-500 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] leading-relaxed max-w-sm">
+                        <p className="text-slate-500 text-[10px] sm:text-[11px] font-bold tracking-[0.2em] leading-relaxed max-w-sm">
                             The driving force behind our precision engineering <br /> and global innovation excellence.
                         </p>
                     </div>
@@ -93,7 +93,7 @@ const Team: React.FC = () => {
             <section className="py-24 lg:py-40 relative overflow-hidden bg-white">
                 {/* Section Watermark */}
                 <div className="absolute top-10 right-10 opacity-[0.03] pointer-events-none select-none">
-                    <span className="text-[150px] font-black text-[#001529] tracking-tighter leading-none uppercase italic">CORE</span>
+                    <span className="text-[150px] font-black text-[#001529] tracking-tighter leading-none uppercase">CORE</span>
                 </div>
 
                 <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
@@ -105,7 +105,7 @@ const Team: React.FC = () => {
                         <h3 className="text-5xl lg:text-7xl font-[950] text-[#001529] uppercase tracking-tighter leading-[0.85] mb-8">
                             EXECUTIVE <br /> <span className="text-aureole-cyan">ARCHITECTURE.</span>
                         </h3>
-                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-relaxed max-w-sm">
+                        <p className="text-[10px] font-bold text-slate-400 tracking-widest leading-relaxed max-w-sm">
                             A tiered leadership structure driving global vision through specialized functional expertise.
                         </p>
                     </div>
@@ -113,7 +113,7 @@ const Team: React.FC = () => {
                     {/* Spotlight MD */}
                     <div className="grid lg:grid-cols-12 gap-16 items-center mb-32 border-b border-slate-100 pb-32">
                         <div className="lg:col-span-4">
-                            <div className="aspect-[3/4] grayscale hover:grayscale-0 transition-all duration-1000 border-b-[15px] border-[#001529] shadow-2xl overflow-hidden bg-slate-50">
+                            <div className="aspect-[3/4] transition-all duration-1000 border-b-[15px] border-[#001529] shadow-2xl overflow-hidden bg-slate-50">
                                 <img
                                     src={coreTeam[0].img}
                                     alt={coreTeam[0].name}
@@ -133,7 +133,7 @@ const Team: React.FC = () => {
                         </div>
                         <div className="lg:col-span-8">
                             <div className="relative mb-10">
-                                <span className="text-8xl text-slate-100 font-serif absolute -top-12 -left-4 select-none">"</span>
+                                <span className="text-8xl text-slate-100 font-questrial absolute -top-12 -left-4 select-none italic opacity-50">"</span>
                                 <p className="text-2xl lg:text-4xl font-[950] text-[#001529] tracking-tighter leading-[0.9] relative z-10 border-l-4 border-aureole-cyan pl-10">
                                     "{coreTeam[0].quote}"
                                 </p>
@@ -173,7 +173,7 @@ const Team: React.FC = () => {
                                             </a>
                                         </div>
 
-                                        <div className="w-1/3 aspect-[3/4] overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700 border border-slate-100">
+                                        <div className="w-1/3 aspect-[3/4] overflow-hidden transition-all duration-700 border border-slate-100">
                                             <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
                                         </div>
                                         <div className="w-2/3 flex flex-col pt-6">
@@ -207,7 +207,7 @@ const Team: React.FC = () => {
                                             <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-px h-10 bg-slate-100 hidden lg:block"></div>
 
                                             <div className="p-10 flex-grow">
-                                                <div className="aspect-[4/5] mb-10 overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700 border border-slate-100">
+                                                <div className="aspect-[4/5] mb-10 overflow-hidden transition-all duration-700 border border-slate-100">
                                                     <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
                                                 </div>
                                                 <h4 className="text-2xl font-[950] text-[#001529] uppercase tracking-tighter leading-none mb-3">{member.name}</h4>
@@ -236,7 +236,7 @@ const Team: React.FC = () => {
             <section className="py-24 lg:py-40 bg-white relative overflow-hidden">
                 {/* Minimal Watermark */}
                 <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none">
-                    <span className="text-[150px] font-black text-[#001529] tracking-tighter leading-none uppercase italic">TEAM</span>
+                    <span className="text-[150px] font-black text-[#001529] tracking-tighter leading-none uppercase">TEAM</span>
                 </div>
 
                 <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
@@ -251,7 +251,7 @@ const Team: React.FC = () => {
                             </h3>
                         </div>
                         <div className="lg:max-w-xs pt-4">
-                            <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest leading-relaxed">
+                            <p className="text-[11px] font-bold text-slate-400 tracking-widest leading-relaxed">
                                 A nationwide network of specialists delivering precision and excellence across every regional touchpoint.
                             </p>
                         </div>
@@ -289,7 +289,7 @@ const Team: React.FC = () => {
                                 </div>
 
                                 {/* Background Spatial Decal (Index) - Subtle enough not to be taken as strict hierarchy */}
-                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[120px] font-black text-slate-50 opacity-[0.4] pointer-events-none select-none tracking-tighter uppercase italic group-hover:text-aureole-cyan/[0.03] transition-colors leading-none">
+                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[120px] font-black text-slate-50 opacity-[0.4] pointer-events-none select-none tracking-tighter uppercase group-hover:text-aureole-cyan/[0.03] transition-colors leading-none">
                                     {(idx + 1).toString().padStart(2, '0')}
                                 </div>
                             </div>

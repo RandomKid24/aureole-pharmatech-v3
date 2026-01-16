@@ -15,6 +15,8 @@ import TableTopInstruments from './pages/TableTopInstruments';
 import LaboratoryFurniture from './pages/LaboratoryFurniture';
 import Service from './pages/Service';
 import Software from './pages/Software';
+import Events from './pages/Events';
+import Careers from './pages/Careers';
 
 const App: React.FC = () => {
   return (
@@ -25,6 +27,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/service" element={<Service />} />
           <Route path="/software" element={<Software />} />
+          <Route path="/events" element={<Events />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/stability-chambers" element={<StabilityChambers />} />
           <Route path="/products/table-top-instruments" element={<TableTopInstruments />} />
@@ -34,6 +37,7 @@ const App: React.FC = () => {
           <Route path="/about/team" element={<Team />} />
           <Route path="/about/certification-compliance" element={<Certification />} />
           <Route path="/about/plants" element={<Plants />} />
+          <Route path="/careers" element={<Careers />} />
         </Routes>
         <Footer />
       </div>

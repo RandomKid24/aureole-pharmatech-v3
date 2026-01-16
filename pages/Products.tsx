@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import { ChevronRight, Layers, Thermometer, Droplets, Zap, Ruler, Beaker, Shield, Activity, Award, Box, Wind, FlaskConical, Construction } from 'lucide-react';
+import { Layers, Droplets, Activity, Award, Box, Wind, Shield, Construction } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { slugify } from '../utils/urlUtils';
 import { PRODUCT_CATALOG } from '../data/products';
@@ -31,21 +31,6 @@ const Products: React.FC = () => {
         return () => observer.disconnect();
     }, []);
 
-    const complianceStandards = [
-        {
-            title: "ICH Guidelines",
-            desc: "Quality Standards"
-        },
-        {
-            title: "CE Approved",
-            desc: "Safety Standards"
-        },
-        {
-            title: "21 CFR Part 11",
-            desc: "Data Integrity"
-        }
-    ];
-
     const getIcon = (subtypeId: string) => {
         switch (subtypeId) {
             case 'walk-in-units': return <Layers className="w-4 h-4 text-aureole-blue" />;
@@ -75,9 +60,9 @@ const Products: React.FC = () => {
                             <h2 className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.5em] text-aureole-blue">PRODUCT CATALOG</h2>
                         </div>
                         <h1 className="text-5xl sm:text-7xl lg:text-9xl font-[950] text-[#001529] uppercase tracking-tighter leading-[0.8] mb-12">
-                            OUR <br /> <span className="text-aureole-cyan">COLLECTION.</span>
+                            OUR <br /> <span className="text-aureole-cyan uppercase tracking-normal">Collection.</span>
                         </h1>
-                        <p className="text-slate-500 text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.2em] leading-relaxed max-w-lg mx-auto sm:mx-0">
+                        <p className="text-slate-500 text-lg lg:text-xl font-medium leading-relaxed max-w-lg mx-auto sm:mx-0 tracking-tight">
                             Engineering precision for pharmaceutical excellence and global regulatory compliance.
                         </p>
                     </div>
@@ -97,14 +82,13 @@ const Products: React.FC = () => {
                                             {category.title}
                                         </h2>
                                     </div>
-                                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest max-w-sm">
+                                    <p className="text-[12px] font-medium text-slate-500 max-w-sm tracking-tight leading-relaxed">
                                         {category.description}
                                     </p>
                                 </div>
 
                                 <div className={`grid grid-cols-1 ${category.subTypes.length > 1 ? 'md:grid-cols-2 xl:grid-cols-4' : 'grid-cols-1'} gap-6`}>
                                     {category.subTypes.map((subType) => {
-                                        // Hide title if it's the exact same as the main category or a generic holder
                                         const isRedundant = subType.name.toLowerCase() === category.title.toLowerCase();
 
                                         return (
@@ -128,7 +112,7 @@ const Products: React.FC = () => {
                                                             className="flex items-center group/item py-1"
                                                         >
                                                             <div className="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover/item:bg-aureole-cyan mr-3 transition-colors"></div>
-                                                            <span className="text-[11px] font-bold text-slate-500 hover:text-aureole-cyan uppercase tracking-wider transition-colors truncate">
+                                                            <span className="text-[12px] font-medium text-slate-600 hover:text-aureole-cyan tracking-tight transition-colors truncate">
                                                                 {productName}
                                                             </span>
                                                         </Link>

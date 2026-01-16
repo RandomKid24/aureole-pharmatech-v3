@@ -55,37 +55,35 @@ const Certification: React.FC = () => {
             {/* Hero Section */}
             <section className="relative py-24 sm:py-32 overflow-hidden border-b border-slate-100 bg-white">
                 <div className="absolute top-10 right-10 opacity-[0.03] pointer-events-none select-none">
-                    <span className="text-[180px] lg:text-[250px] font-black text-aureole-slate tracking-tighter leading-none uppercase italic">VALIDATED</span>
+                    <span className="text-[180px] lg:text-[250px] font-black text-aureole-slate tracking-tighter leading-none uppercase">VALIDATED</span>
                 </div>
 
-                <div className="container mx-auto px-6 sm:px-8 lg:px-24 relative z-10">
-                    <div className="max-w-4xl">
-                        <div className="flex items-center gap-4 mb-8">
+                <div className="container mx-auto px-6 sm:px-8 lg:px-24 relative z-10 text-center lg:text-left">
+                    <div className="max-w-4xl mx-auto lg:mx-0">
+                        <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
                             <span className="w-12 h-[2px] bg-aureole-blue"></span>
                             <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-blue">CERTIFICATION & COMPLIANCE</h2>
                         </div>
                         <h1 className="text-5xl sm:text-7xl lg:text-8xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.85] mb-12">
-                            QUALITY <br /> ASSURED <span className="text-aureole-cyan uppercase">PROCESSES.</span>
+                            QUALITY <br /> <span className="text-aureole-cyan uppercase tracking-normal">Assured.</span>
                         </h1>
-                        <p className="text-slate-500 text-[11px] font-bold tracking-[0.2em] leading-relaxed max-w-sm">
+                        <p className="text-slate-500 text-[11px] font-bold tracking-[0.2em] leading-relaxed max-w-sm mx-auto lg:mx-0">
                             Authentication and regulatory compliance frameworks governing our precision engineering protocols.
                         </p>
                     </div>
                 </div>
             </section>
 
-
-
             {/* CE Compliance */}
             <section className="py-24 lg:py-40 bg-slate-50/50">
                 <div className="container mx-auto px-6 sm:px-8 lg:px-24">
-                    <div className="max-w-3xl mb-24">
-                        <div className="flex items-center gap-4 mb-8">
+                    <div className="max-w-3xl mb-24 text-center lg:text-left mx-auto lg:mx-0">
+                        <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
                             <span className="w-12 h-[2px] bg-aureole-cyan"></span>
                             <h3 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-cyan">CE STANDARDS</h3>
                         </div>
                         <h2 className="text-5xl lg:text-7xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.9] mb-8">
-                            TECHNICAL <br /> <span className="text-aureole-blue">CERTIFICATION.</span>
+                            TECHNICAL <br /> <span className="text-aureole-blue uppercase tracking-normal">Certification.</span>
                         </h2>
                     </div>
 
@@ -126,13 +124,13 @@ const Certification: React.FC = () => {
             {/* ISO Certification (QRO Registration) */}
             <section className="py-24 lg:py-40 bg-white">
                 <div className="container mx-auto px-6 sm:px-8 lg:px-24">
-                    <div className="max-w-3xl mb-24">
-                        <div className="flex items-center gap-4 mb-8">
+                    <div className="max-w-3xl mb-24 text-center lg:text-left mx-auto lg:mx-0">
+                        <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
                             <span className="w-12 h-[2px] bg-aureole-blue"></span>
                             <h3 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-blue">ISO 9001:2015</h3>
                         </div>
                         <h2 className="text-5xl lg:text-7xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.9] mb-8">
-                            QRO <span className="text-aureole-cyan">REGISTRATION.</span>
+                            QRO <span className="text-aureole-cyan uppercase tracking-normal">Registration.</span>
                         </h2>
                     </div>
 
@@ -185,13 +183,13 @@ const Certification: React.FC = () => {
             {/* Referenced Standards */}
             <section className="py-24 lg:py-40 bg-slate-50/50 relative overflow-hidden">
                 <div className="container mx-auto px-6 sm:px-8 lg:px-24 relative z-10">
-                    <div className="max-w-3xl mb-24">
-                        <div className="flex items-center gap-4 mb-8">
+                    <div className="max-w-3xl mb-24 text-center lg:text-left mx-auto lg:mx-0">
+                        <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
                             <span className="w-12 h-[2px] bg-aureole-blue"></span>
                             <h3 className="text-[11px] font-black uppercase tracking-[0.5em] text-aureole-blue">TECHNICAL FRAMEWORK</h3>
                         </div>
                         <h2 className="text-5xl lg:text-7xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.9] mb-8">
-                            REFERENCED <br /> GLOBAL <span className="text-aureole-cyan">STANDARDS.</span>
+                            REFERENCED <br /> GLOBAL <span className="text-aureole-cyan uppercase tracking-normal">Standards.</span>
                         </h2>
                     </div>
 
@@ -234,7 +232,7 @@ const Certification: React.FC = () => {
                                 <h3 className="text-[10px] font-black uppercase tracking-[0.5em] text-slate-400">QUALITY FRAMEWORK</h3>
                             </div>
                             <h2 className="text-5xl lg:text-7xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.9] mb-8">
-                                QUALITY <br /> <span className="text-aureole-blue">POLICY.</span>
+                                QUALITY <br /> <span className="text-aureole-blue uppercase tracking-normal">Policy.</span>
                             </h2>
                             <div className="mb-10 p-6 bg-slate-50 border-l-4 border-aureole-blue">
                                 <p className="text-[14px] font-[900] text-aureole-slate uppercase tracking-wider mb-2">Aureole Pharma Pvt. Ltd.</p>

@@ -75,16 +75,16 @@ const TableTopInstruments: React.FC = () => {
                     <span className="text-[60px] md:text-[100px] lg:text-[150px] font-black text-[#001529] tracking-tighter leading-none uppercase">TABLE TOP</span>
                 </div>
 
-                <div className="container mx-auto px-6 sm:px-12 lg:px-24 relative z-10">
-                    <div className="max-w-4xl">
-                        <div className="flex items-center gap-4 mb-8 sm:mb-10">
+                <div className="container mx-auto px-6 sm:px-12 lg:px-24 relative z-10 text-center lg:text-left">
+                    <div className="max-w-4xl mx-auto lg:mx-0">
+                        <div className="flex items-center justify-center lg:justify-start gap-4 mb-8 sm:mb-10">
                             <span className="w-8 sm:w-12 h-[2px] bg-aureole-blue"></span>
                             <h2 className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.5em] text-aureole-blue">BENCHTOP SOLUTIONS</h2>
                         </div>
                         <h1 className="text-4xl sm:text-7xl lg:text-[100px] font-[950] text-[#001529] uppercase tracking-tighter leading-[0.9] mb-8 sm:mb-12">
-                            TABLE TOP <br /> <span className="text-aureole-cyan">INSTRUMENTS.</span>
+                            TABLE TOP <br /> <span className="text-aureole-cyan uppercase tracking-normal">Instruments.</span>
                         </h1>
-                        <p className="text-slate-500 text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.2em] leading-relaxed max-w-xl">
+                        <p className="text-slate-500 text-[11px] sm:text-[12px] font-bold tracking-[0.2em] leading-relaxed max-w-xl mx-auto lg:mx-0">
                             {tabletopCategory.description}
                         </p>
                     </div>
@@ -100,7 +100,7 @@ const TableTopInstruments: React.FC = () => {
                             <div className="mb-12">
                                 <h3 className="text-[10px] font-black text-aureole-blue uppercase tracking-[0.4em] mb-4">Overview</h3>
                                 <h2 className="text-4xl font-[950] text-[#001529] uppercase tracking-tighter leading-none">
-                                    KEY <br /> <span className="text-aureole-cyan">DETAILS.</span>
+                                    KEY <br /> <span className="text-aureole-cyan uppercase tracking-normal">Details.</span>
                                 </h2>
                             </div>
 
@@ -132,7 +132,7 @@ const TableTopInstruments: React.FC = () => {
                         </div>
 
                         {/* Content Column */}
-                        <div className="lg:col-span-8 bg-slate-50/50 border border-slate-100 p-8 lg:p-16 relative overflow-hidden flex flex-col min-h-[300px]">
+                        <div className="lg:col-span-8 bg-slate-50/50 border border-slate-100 p-8 lg:p-16 relative overflow-hidden flex flex-col min-h-[400px]">
                             <div className="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none font-black text-8xl text-aureole-slate uppercase tracking-tighter">
                                 {navItems[activeSection].title}
                             </div>
@@ -141,7 +141,7 @@ const TableTopInstruments: React.FC = () => {
                                 {sections[activeSection].items.map((item, i) => (
                                     <div key={i} className="flex gap-4 group">
                                         <div className="mt-2 min-w-[5px] h-[5px] rounded-full bg-aureole-cyan"></div>
-                                        <p className="text-[10px] font-bold text-[#001529] uppercase tracking-widest leading-relaxed opacity-70">
+                                        <p className="text-[10px] font-bold text-[#001529] tracking-widest leading-relaxed opacity-70">
                                             {item}
                                         </p>
                                     </div>
@@ -167,7 +167,7 @@ const TableTopInstruments: React.FC = () => {
                                 <h2 className="text-[11px] font-black uppercase tracking-[0.5em] text-aureole-blue">PRODUCT RANGE</h2>
                             </div>
                             <h2 className="text-4xl lg:text-6xl font-[950] text-[#001529] uppercase tracking-tighter leading-none">
-                                AVAILABLE <span className="text-aureole-cyan">MODELS.</span>
+                                AVAILABLE <span className="text-aureole-cyan uppercase tracking-normal">Models.</span>
                             </h2>
                         </div>
                     </div>
@@ -186,16 +186,16 @@ const TableTopInstruments: React.FC = () => {
                                         <Link
                                             key={pIdx}
                                             to={`/products/${slugify(pName)}`}
-                                            className="group flex flex-col gap-6 p-6 border border-slate-100 hover:border-aureole-cyan hover:bg-slate-50/50 transition-all duration-300"
+                                            className="group flex flex-col gap-6 p-6 border border-slate-100 transition-all duration-300"
                                         >
-                                            <div className="w-10 h-10 flex items-center justify-center border border-slate-100 bg-white text-slate-300 group-hover:text-aureole-cyan group-hover:border-aureole-cyan transition-all duration-300">
+                                            <div className="w-10 h-10 flex items-center justify-center border border-slate-100 bg-white text-slate-400 transition-all duration-300">
                                                 {sIdx === 0 ? <Box size={18} /> : <Layers size={18} />}
                                             </div>
                                             <div className="space-y-3">
-                                                <span className="text-[11px] font-[900] text-[#001529] uppercase tracking-widest transition-colors leading-relaxed block group-hover:text-aureole-cyan">
+                                                <span className="text-[11px] font-[900] text-[#001529] uppercase tracking-widest transition-colors leading-relaxed block">
                                                     {pName}
                                                 </span>
-                                                <div className="flex items-center gap-2 text-aureole-blue opacity-50 group-hover:opacity-100 transition-all">
+                                                <div className="flex items-center gap-2 text-aureole-blue">
                                                     <span className="text-[8px] font-black uppercase tracking-[0.2em]">View Details</span>
                                                     <ArrowRight size={10} className="group-hover:translate-x-1 transition-transform" />
                                                 </div>

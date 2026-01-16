@@ -14,8 +14,10 @@ import {
     Wrench,
     Layers,
     Microscope,
-    Activity
+    Activity,
+    Maximize2
 } from 'lucide-react';
+import Lightbox from '../components/Lightbox';
 
 const FAQ_DATA = [
     {
@@ -53,6 +55,9 @@ const SERVICE_CENTERS = [
 
 const Service: React.FC = () => {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
+    const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
+    const serviceImage = "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200";
 
     return (
         <div className="pt-24 lg:pt-32 pb-20 bg-white">
@@ -62,24 +67,24 @@ const Service: React.FC = () => {
                     <span className="text-[180px] lg:text-[250px] font-black text-aureole-slate tracking-tighter leading-none uppercase">SERVICE</span>
                 </div>
 
-                <div className="container mx-auto px-6 lg:px-16 relative z-10">
-                    <div className="max-w-5xl">
-                        <div className="flex items-center gap-4 mb-8">
+                <div className="container mx-auto px-6 lg:px-16 relative z-10 text-center lg:text-left">
+                    <div className="max-w-5xl mx-auto lg:mx-0">
+                        <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
                             <span className="w-12 h-[2px] bg-aureole-blue"></span>
                             <h1 className="text-[11px] font-black uppercase tracking-[0.5em] text-aureole-blue">SUPPORT SERVICES</h1>
                         </div>
 
                         <h2 className="text-4xl lg:text-[85px] font-[950] text-[#001529] uppercase tracking-tighter leading-[0.95] mb-12">
                             SUPPORT <br />
-                            <span className="text-aureole-cyan uppercase">SERVICES.</span>
+                            <span className="text-aureole-cyan uppercase tracking-normal">Services.</span>
                         </h2>
 
-                        <div className="max-w-3xl border-l-[3px] border-aureole-blue/20 bg-slate-50/50 p-10">
+                        <div className="max-w-3xl border-l-[3px] border-aureole-blue/20 bg-slate-50/50 p-10 mx-auto lg:mx-0">
                             <p className="text-lg lg:text-xl text-[#001529] font-bold leading-relaxed mb-8">
                                 In the ever-evolving pharmaceutical and laboratory equipment landscape, quality and customer service are the cornerstones of success. Aureole PharmaTech stands as a beacon of excellence in this competitive industry, delivering reliable products backed by responsive and comprehensive support services.
                             </p>
                             <p className="text-[11px] text-slate-500 font-bold leading-loose tracking-widest">
-                                Founded with a mission to provide high-quality pharmaceutical products and equipment, the company operates on core values of integrity, innovation, and customer focus. Over the years, Aureole PharmaTech has earned the trust of clients by aligning its operations with global standards and evolving healthcare requirements.
+                                Founded with a mission to provide high-quality pharmaceutical products and equipment, the company operates on core values of integrity, innovation, and customer focus.
                             </p>
                         </div>
                     </div>
@@ -96,7 +101,7 @@ const Service: React.FC = () => {
                                 <ShieldCheck className="w-8 h-8 text-aureole-blue" />
                                 <h3 className="text-3xl lg:text-4xl font-black uppercase tracking-tighter text-[#001529] leading-none">QUALITY STANDARDS</h3>
                             </div>
-                            <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-relaxed text-justify">
+                            <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-relaxed text-left">
                                 Quality is uncompromising at Aureole PharmaTech. The company maintains stringent regulatory compliance and holds multiple certifications that reflect international quality benchmarks. Internally enforced quality control processes ensure that every product dispatched is safe, effective, and reliable.
                             </p>
                         </div>
@@ -107,7 +112,7 @@ const Service: React.FC = () => {
                                 <Factory className="w-8 h-8 text-aureole-cyan" />
                                 <h3 className="text-3xl lg:text-4xl font-black uppercase tracking-tighter text-[#001529] leading-none">MANUFACTURING EXCELLENCE</h3>
                             </div>
-                            <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-relaxed text-justify">
+                            <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-relaxed text-left">
                                 Aureole PharmaTech leverages advanced manufacturing facilities equipped with state-of-the-art technology. Supported by a skilled workforce and continuous training programs, the manufacturing process ensures precision, consistency, and adherence to the highest quality standards.
                             </p>
                         </div>
@@ -119,24 +124,32 @@ const Service: React.FC = () => {
             <section className="py-24 bg-slate-50/50">
                 <div className="container mx-auto px-6 lg:px-16">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                        <div className="relative overflow-hidden border border-slate-100 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 aspect-video lg:aspect-square">
+                        <div
+                            className="relative overflow-hidden border border-slate-100 shadow-2xl group transition-all duration-700 aspect-video lg:aspect-square cursor-zoom-in"
+                            onClick={() => setIsLightboxOpen(true)}
+                        >
                             <img
-                                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200"
+                                src={serviceImage}
                                 alt="MANUFACTURING"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000"
                             />
-                            <div className="absolute inset-0 bg-aureole-slate/10"></div>
+                            <div className="absolute inset-0 bg-aureole-slate/10 group-hover:bg-transparent transition-colors"></div>
+                            <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div className="bg-white p-3 shadow-xl">
+                                    <Maximize2 size={24} className="text-aureole-blue" />
+                                </div>
+                            </div>
                         </div>
                         <div className="space-y-16">
                             <div>
                                 <h3 className="text-4xl lg:text-5xl font-black uppercase tracking-tighter text-[#001529] leading-[0.9] mb-6">DIVERSE & INNOVATIVE <br /><span className="text-aureole-cyan">PRODUCT RANGE.</span></h3>
-                                <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-loose text-justify">
+                                <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-loose text-left">
                                     The product portfolio is both broad and forward-thinking. From essential pharmaceutical and laboratory equipment to advanced systems, each product is developed through a meticulous R&D process emphasizing safety, efficacy, and adaptability to dynamic healthcare needs.
                                 </p>
                             </div>
                             <div>
                                 <h3 className="text-4xl lg:text-5xl font-black uppercase tracking-tighter text-[#001529] leading-[0.9] mb-6">CUSTOMER-CENTRIC <br /><span className="text-aureole-blue">PHILOSOPHY.</span></h3>
-                                <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-loose text-justify">
+                                <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-loose text-left">
                                     Building long-term client relationships is central to Aureole PharmaTech’s strategy. Customer feedback is actively valued and used for continuous improvement. By proactively addressing requirements and consistently delivering on commitments, the company fosters trust and long-term loyalty.
                                 </p>
                             </div>
@@ -145,88 +158,12 @@ const Service: React.FC = () => {
                 </div>
             </section>
 
-            {/* Support & Portfolio */}
-            <section className="py-24 px-6 lg:px-16 container mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
-                    <div>
-                        <h3 className="text-3xl font-black uppercase tracking-tighter text-[#001529] mb-8 border-b border-slate-100 pb-4">COMMUNICATION & AFTER-SALES</h3>
-                        <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-loose mb-12">
-                            Aureole PharmaTech offers multiple responsive communication channels—including phone, email, and online contact forms—to ensure efficient handling of inquiries, service requests, and technical concerns.
-                        </p>
-                        <h4 className="text-[11px] font-black uppercase tracking-[0.3em] text-aureole-blue mb-8">AFTER-SALES SUPPORT INCLUDES:</h4>
-                        <div className="space-y-6">
-                            {[
-                                "COMPREHENSIVE WARRANTY AND SERVICE POLICIES",
-                                "PROMPT SAFETY NOTIFICATIONS AND PRODUCT UPDATES",
-                                "ONGOING CUSTOMER EDUCATION AND TECHNICAL GUIDANCE"
-                            ].map((item, idx) => (
-                                <div key={idx} className="flex items-center gap-4 group">
-                                    <div className="w-1.5 h-1.5 bg-aureole-cyan rounded-full transition-all group-hover:scale-150"></div>
-                                    <span className="text-[10px] font-black uppercase tracking-widest text-[#001529]">{item}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className="bg-slate-50 p-12 border border-slate-100">
-                        <h3 className="text-3xl font-black uppercase tracking-tighter text-[#001529] mb-8 border-b border-white pb-4">PRODUCT PORTFOLIO</h3>
-                        <p className="text-[11px] font-bold text-slate-400 tracking-widest mb-12">
-                            Aureole PharmaTech designs and manufactures a wide range of pharmaceutical and laboratory equipment, including but not limited to:
-                        </p>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6">
-                            {[
-                                "STABILITY CHAMBERS",
-                                "WALK-IN CHAMBERS",
-                                "VERTICAL AUTOCLAVES",
-                                "COLD CHAMBERS",
-                                "DUAL-ZONE CHAMBERS",
-                                "TABLETOP LABORATORY INSTRUMENTS"
-                            ].map((item, idx) => (
-                                <div key={idx} className="flex items-center gap-4">
-                                    <CheckCircle2 className="w-4 h-4 text-aureole-blue" />
-                                    <span className="text-[10px] font-black uppercase tracking-widest text-[#001529]">{item}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Global & Sustainability */}
-            <section className="py-24 border-y border-slate-100 relative">
-                <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none hidden lg:block">
-                    <span className="text-[180px] font-black text-aureole-slate tracking-tighter leading-none uppercase">GLOBAL</span>
-                </div>
-                <div className="container mx-auto px-6 lg:px-16 relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
-                        <div className="space-y-8">
-                            <div className="flex items-center gap-4">
-                                <Globe className="w-6 h-6 text-aureole-blue" />
-                                <h3 className="text-3xl font-black uppercase tracking-tighter text-[#001529]">GLOBAL REACH</h3>
-                            </div>
-                            <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-loose text-justify">
-                                Operating across diverse regulatory environments, Aureole PharmaTech serves both domestic and international markets. Strategic partnerships and collaborations strengthen its global presence and ensure compliance with varied regulatory and customer requirements worldwide.
-                            </p>
-                        </div>
-                        <div className="space-y-8">
-                            <div className="flex items-center gap-4">
-                                <Leaf className="w-6 h-6 text-green-600" />
-                                <h3 className="text-3xl font-black uppercase tracking-tighter text-[#001529]">SUSTAINABILITY</h3>
-                            </div>
-                            <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-loose text-justify">
-                                Environmental stewardship and social responsibility are embedded in Aureole PharmaTech’s operations. Ethical sourcing, environmentally responsible manufacturing practices, and community-focused initiatives reflect the company’s commitment to sustainable and responsible business growth.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             {/* Service Centers */}
             <section className="py-24 bg-slate-50/30">
                 <div className="container mx-auto px-6 lg:px-16">
-                    <div className="flex flex-col mb-16">
-                        <h3 className="text-5xl lg:text-7xl font-[950] uppercase tracking-tighter text-[#001529] leading-none mb-6">SERVICE <span className="text-aureole-cyan">CENTERS.</span></h3>
-                        <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest max-w-2xl leading-loose">
+                    <div className="flex flex-col mb-16 text-center lg:text-left">
+                        <h3 className="text-5xl lg:text-7xl font-[950] uppercase tracking-tighter text-[#001529] leading-none mb-6">SERVICE <span className="text-aureole-cyan tracking-normal">Centers.</span></h3>
+                        <p className="text-[11px] font-bold text-slate-400 tracking-widest max-w-2xl mx-auto lg:mx-0 leading-loose">
                             An extensive service network across India ensures prompt and localized support:
                         </p>
                     </div>
@@ -271,6 +208,16 @@ const Service: React.FC = () => {
                     </div>
                 </div>
             </section>
+
+            <Lightbox
+                images={[serviceImage]}
+                currentIndex={0}
+                isOpen={isLightboxOpen}
+                onClose={() => setIsLightboxOpen(false)}
+                onNext={() => { }}
+                onPrev={() => { }}
+                title="Aureole Manufacturing Excellence"
+            />
         </div>
     );
 };

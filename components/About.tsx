@@ -38,7 +38,7 @@ const About: React.FC = () => {
               <img
                 src="/about/office-hq-v2.jpg"
                 alt="Radiant Engineering"
-                className="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 transition-all duration-500"
+                className="w-full h-full object-cover transition-all duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-aureole-slate/40 to-transparent"></div>
             </div>

@@ -20,7 +20,7 @@ The application follows a strictly defined corporate blue palette. **Pure black 
 We use a high-density, brutalist typographic approach.
 
 - **Primary Sans**: `Inter` (sans-serif)
-- **Monospace**: `JetBrains Mono` (for technical data)
+- **Secondary Sans**: `Questrial` (sans-serif)
 - **Font Weights**:
   - `font-[950]` or `font-black`: Used for main headings.
   - `font-bold`: Used for labels and secondary text.

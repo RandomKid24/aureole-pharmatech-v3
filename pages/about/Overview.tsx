@@ -53,20 +53,20 @@ const Overview: React.FC = () => {
                     <span className="text-[180px] lg:text-[250px] font-black text-[#001529] tracking-tighter leading-none uppercase">GROUP</span>
                 </div>
 
-                <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
-                    <div className="max-w-4xl">
-                        <div className="flex items-center gap-4 mb-8">
+                <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10 text-center lg:text-left">
+                    <div className="max-w-4xl mx-auto lg:mx-0">
+                        <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
                             <span className="w-12 h-[2px] bg-aureole-blue"></span>
                             <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-blue">CORPORATE OVERVIEW</h2>
                         </div>
                         <h1 className="text-5xl sm:text-7xl lg:text-8xl font-[950] text-[#001529] uppercase tracking-tighter leading-[0.85] mb-12">
-                            A DYNAMIC <br /> FAMILY OF <span className="text-aureole-cyan">COMPANIES.</span>
+                            A DYNAMIC <br /> FAMILY OF <span className="text-aureole-cyan uppercase tracking-normal">Companies.</span>
                         </h1>
-                        <div className="p-8 sm:p-12 border-l-[4px] border-aureole-blue bg-slate-50/50 max-w-3xl">
+                        <div className="p-8 sm:p-12 border-l-[4px] border-aureole-blue bg-slate-50/50 max-w-3xl mx-auto lg:mx-0">
                             <p className="text-xl sm:text-2xl text-[#001529] font-black tracking-tight leading-[1.1] mb-6">
                                 Pharmaceutical solutions, process equipment, healthcare, and hospitality—all grounded in quality, innovation, and integrity.
                             </p>
-                            <p className="text-[11px] text-slate-500 font-bold leading-relaxed tracking-[0.15em] text-justify max-w-2xl">
+                            <p className="text-[11px] text-slate-500 font-bold leading-relaxed tracking-[0.15em] text-justify max-w-2xl mx-auto lg:mx-0">
                                 What began as a vision has today flourished into a globally recognized family of ventures, redefined by our habit of excellence and our commitment to improving lives with purpose.
                             </p>
                         </div>
@@ -79,7 +79,7 @@ const Overview: React.FC = () => {
                 <div className="container mx-auto px-4 sm:px-8 lg:px-16">
                     <div className="grid lg:grid-cols-12 gap-16 items-start">
                         <div className="lg:col-span-5 relative group">
-                            <div className="aspect-[3/4] overflow-hidden grayscale brightness-90 group-hover:grayscale-0 transition-all duration-1000 border-b-[20px] border-[#001529] shadow-2xl">
+                            <div className="aspect-[3/4] overflow-hidden transition-all duration-1000 border-b-[20px] border-[#001529] shadow-2xl bg-slate-50">
                                 <img
                                     src="/about/md_profile.jpg"
                                     alt="Dr. Kiran Badgujar"
@@ -104,11 +104,11 @@ const Overview: React.FC = () => {
                                 <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-slate-400">DIRECTOR'S DESK</h2>
                             </div>
                             <h3 className="text-4xl lg:text-6xl font-[950] text-[#001529] uppercase tracking-tighter leading-[0.85] mb-10">
-                                EXCELLENCE IS NOT <br /> AN ACT, BUT A <span className="text-aureole-blue">HABIT.</span>
+                                Excellence is not <br /> an act, but a <span className="text-aureole-blue uppercase tracking-normal">Habit.</span>
                             </h3>
 
                             <div className="space-y-8 text-slate-600">
-                                <p className="text-xl font-bold text-[#001529] leading-tight tracking-tight border-l-2 border-aureole-cyan pl-6">
+                                <p className="text-xl font-bold text-[#001529] leading-tight tracking-tight border-l-2 border-aureole-cyan pl-6 italic">
                                     "It gives me immense pride to address you from the Director's Desk at Aureole Group. Our mission remains steadfast—to improve lives with purpose."
                                 </p>
                                 <div className="text-[12px] font-bold leading-relaxed tracking-wider text-justify space-y-6">
@@ -166,7 +166,7 @@ const Overview: React.FC = () => {
             {/* Ventures - Typographic Slot Design */}
             <section className="py-24 lg:py-40 bg-white relative overflow-hidden">
                 <div className="absolute top-10 right-10 opacity-[0.03] pointer-events-none select-none">
-                    <span className="text-[150px] font-black text-[#001529] tracking-tighter leading-none uppercase italic">VENTURE</span>
+                    <span className="text-[150px] font-black text-[#001529] tracking-tighter leading-none uppercase">VENTURE</span>
                 </div>
 
                 <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">

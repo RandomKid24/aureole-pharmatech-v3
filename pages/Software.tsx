@@ -19,8 +19,10 @@ import {
     HardDrive,
     Eye,
     Settings,
-    Cpu
+    Cpu,
+    Maximize2
 } from 'lucide-react';
+import Lightbox from '../components/Lightbox';
 
 const FAQ_DATA = [
     {
@@ -51,6 +53,9 @@ const FAQ_DATA = [
 
 const Software: React.FC = () => {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
+    const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
+    const architectureImg = "/software/architecture.png";
 
     return (
         <div className="pt-24 lg:pt-32 pb-20 bg-white">
@@ -60,21 +65,21 @@ const Software: React.FC = () => {
                     <span className="text-[180px] lg:text-[250px] font-black text-aureole-slate tracking-tighter leading-none uppercase">SOFTWARE</span>
                 </div>
 
-                <div className="container mx-auto px-6 lg:px-16 relative z-10">
-                    <div className="max-w-5xl">
-                        <div className="flex items-center gap-4 mb-8">
+                <div className="container mx-auto px-6 lg:px-16 relative z-10 text-center lg:text-left">
+                    <div className="max-w-5xl mx-auto lg:mx-0">
+                        <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
                             <span className="w-12 h-[2px] bg-aureole-blue"></span>
                             <h1 className="text-[11px] font-black uppercase tracking-[0.5em] text-aureole-blue">SOFTWARE SOLUTIONS</h1>
                         </div>
 
                         <h2 className="text-4xl lg:text-[85px] font-[950] text-[#001529] uppercase tracking-tighter leading-[0.95] mb-12">
                             SOFTWARE <br />
-                            <span className="text-aureole-cyan uppercase">SOLUTIONS.</span>
+                            <span className="text-aureole-cyan uppercase tracking-normal">Solutions.</span>
                         </h2>
 
-                        <div className="max-w-3xl border-l-[3px] border-aureole-blue/20 bg-slate-50/50 p-10">
+                        <div className="max-w-3xl border-l-[3px] border-aureole-blue/20 bg-slate-50/50 p-10 mx-auto lg:mx-0">
                             <p className="text-lg lg:text-xl text-[#001529] font-bold leading-relaxed mb-8">
-                                In today’s regulated pharmaceutical and laboratory environment, reliable software is as critical as precision equipment. Aureole PharmaTech delivers intelligent, compliant, and user-friendly software solutions designed to enhance monitoring, control, data integrity, and operational efficiency across pharmaceutical, biotech, and research applications.
+                                In today’s regulated pharmaceutical and laboratory environment, reliable software is as critical as precision equipment. Aureole PharmaTech delivers intelligent, compliant, and user-friendly software solutions designed to enhance monitoring, control, data integrity, and operational efficiency.
                             </p>
                             <p className="text-[11px] text-slate-500 font-bold leading-loose tracking-widest">
                                 Aureole PharmaTech software solutions are developed to meet global regulatory expectations while ensuring ease of use, accuracy, and long-term reliability.
@@ -93,7 +98,7 @@ const Software: React.FC = () => {
                                 <ShieldCheck className="w-8 h-8 text-aureole-blue" />
                                 <h3 className="text-3xl lg:text-4xl font-black uppercase tracking-tighter text-[#001529] leading-none">REGULATORY COMPLIANCE & DATA INTEGRITY</h3>
                             </div>
-                            <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-relaxed text-justify">
+                            <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-relaxed text-left">
                                 Aureole PharmaTech software solutions are designed in alignment with international regulatory requirements. Emphasis is placed on data integrity, traceability, and security to support compliance with industry standards such as audit readiness and controlled documentation practices.
                             </p>
                         </div>
@@ -128,7 +133,7 @@ const Software: React.FC = () => {
                                     <Monitor className="w-8 h-8 text-aureole-cyan" />
                                     <h3 className="text-3xl lg:text-5xl font-black uppercase tracking-tighter text-[#001529] leading-[0.9]">ADVANCED MONITORING <br /> & CONTROL</h3>
                                 </div>
-                                <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-loose text-justify">
+                                <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-loose text-left">
                                     The software enables precise monitoring and control of critical parameters such as temperature, humidity, pressure, and alarms. Real-time data visualization and automated alerts help ensure consistent environmental conditions and rapid response to deviations.
                                 </p>
                             </div>
@@ -148,64 +153,22 @@ const Software: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="relative group overflow-hidden border border-slate-100 bg-white p-6 shadow-2xl transition-all duration-700 aspect-square flex items-center justify-center">
+                        <div
+                            className="relative group overflow-hidden border border-slate-100 bg-white p-6 shadow-2xl transition-all duration-700 aspect-square flex items-center justify-center cursor-zoom-in"
+                            onClick={() => setIsLightboxOpen(true)}
+                        >
                             <img
-                                src="/software/architecture.png"
+                                src={architectureImg}
                                 alt="Software Architecture Diagram"
-                                className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-1000 object-contain"
+                                className="w-full h-auto transition-all duration-1000 object-contain p-4"
                             />
-                            <div className="absolute inset-0 bg-aureole-slate/5 pointer-events-none transition-opacity group-hover:opacity-0"></div>
+                            <div className="absolute inset-0 bg-aureole-slate/5 pointer-events-none transition-opacity"></div>
+                            <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div className="bg-white p-3 shadow-xl">
+                                    <Maximize2 size={24} className="text-aureole-blue" />
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Features Grid */}
-            <section className="py-24 px-6 lg:px-16 container mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {/* User-Friendly Interface */}
-                    <div className="p-10 border border-slate-100 hover:border-aureole-cyan transition-colors group">
-                        <Layout className="w-8 h-8 text-aureole-blue mb-8 group-hover:scale-110 transition-transform" />
-                        <h3 className="text-xl font-black uppercase tracking-tighter text-[#001529] mb-6">USER-FRIENDLY INTERFACE & CUSTOMIZATION</h3>
-                        <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-loose">
-                            Aureole PharmaTech software is designed with a clear, intuitive interface that minimizes training requirements and operational errors. Customizable dashboards, reports, and alert settings allow users to tailor the system to their specific application and workflow needs.
-                        </p>
-                    </div>
-
-                    {/* Data Logging */}
-                    <div className="p-10 border border-slate-100 hover:border-aureole-cyan transition-colors group">
-                        <BarChart3 className="w-8 h-8 text-aureole-cyan mb-8 group-hover:scale-110 transition-transform" />
-                        <h3 className="text-xl font-black uppercase tracking-tighter text-[#001529] mb-6">DATA LOGGING, REPORTING & ANALYTICS</h3>
-                        <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-loose">
-                            Comprehensive data logging and reporting tools enable accurate documentation and analysis. Automated reports, graphical trends, and exportable data formats support regulatory audits, internal reviews, and long-term performance analysis.
-                        </p>
-                    </div>
-
-                    {/* Integration */}
-                    <div className="p-10 border border-slate-100 hover:border-aureole-cyan transition-colors group">
-                        <Link2 className="w-8 h-8 text-aureole-blue mb-8 group-hover:scale-110 transition-transform" />
-                        <h3 className="text-xl font-black uppercase tracking-tighter text-[#001529] mb-6">INTEGRATION WITH EQUIPMENT & SYSTEMS</h3>
-                        <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-loose">
-                            The software seamlessly integrates with Aureole PharmaTech equipment such as stability chambers, cold chambers, walk-in chambers, and other laboratory instruments. Compatibility with existing systems ensures smooth deployment without disrupting current operations.
-                        </p>
-                    </div>
-
-                    {/* Security */}
-                    <div className="p-10 border border-slate-100 hover:border-aureole-cyan transition-colors group">
-                        <Shield className="w-8 h-8 text-aureole-cyan mb-8 group-hover:scale-110 transition-transform" />
-                        <h3 className="text-xl font-black uppercase tracking-tighter text-[#001529] mb-6">SECURITY & RELIABILITY</h3>
-                        <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-loose">
-                            Security is a core focus of Aureole PharmaTech software solutions. Advanced access controls, encrypted data handling, and system reliability features ensure uninterrupted operation and protection of critical information.
-                        </p>
-                    </div>
-
-                    {/* Support */}
-                    <div className="p-10 border border-slate-100 hover:border-aureole-cyan transition-colors group">
-                        <LifeBuoy className="w-8 h-8 text-aureole-blue mb-8 group-hover:scale-110 transition-transform" />
-                        <h3 className="text-xl font-black uppercase tracking-tighter text-[#001529] mb-6">ONGOING SUPPORT & UPDATES</h3>
-                        <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-loose">
-                            Aureole PharmaTech provides continuous technical support, software updates, and system guidance to ensure long-term performance and compliance. Customers benefit from expert assistance throughout the software lifecycle—from installation to upgrades.
-                        </p>
                     </div>
                 </div>
             </section>
@@ -238,6 +201,16 @@ const Software: React.FC = () => {
                     </div>
                 </div>
             </section>
+
+            <Lightbox
+                images={[architectureImg]}
+                currentIndex={0}
+                isOpen={isLightboxOpen}
+                onClose={() => setIsLightboxOpen(false)}
+                onNext={() => { }}
+                onPrev={() => { }}
+                title="Software Architecture Ecosystem"
+            />
         </div>
     );
 };

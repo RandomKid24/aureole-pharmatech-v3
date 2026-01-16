@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
         <img
           src="/aureole-logo.png"
           alt=""
-          className="h-[150vh] w-auto grayscale brightness-110"
+          className="h-[150vh] w-auto opacity-[0.03]"
         />
       </div>
 

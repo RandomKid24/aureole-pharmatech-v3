@@ -48,7 +48,8 @@ const Header: React.FC = () => {
     },
     { name: 'Service', href: '/service' },
     { name: 'Software', href: '/software' },
-    { name: 'Contact', href: '/#contact' }
+    { name: 'Events', href: '/events' },
+    { name: 'Careers', href: '/careers' }
   ];
 
   const handleNavClick = (href: string) => {
@@ -243,9 +244,6 @@ const Header: React.FC = () => {
                 )}
               </div>
             ))}
-            <button className="bg-aureole-blue text-white px-8 py-3.5 text-[10px] font-black uppercase tracking-widest hover:bg-aureole-slate transition-all shadow-lg shadow-blue-500/10 ml-4">
-              Technical Inquiry
-            </button>
           </nav>
 
           {/* Mobile Menu Button */}

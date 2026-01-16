@@ -15,12 +15,12 @@ const GlobalValidation: React.FC = () => {
     <div className="flex overflow-hidden select-none mb-4 sm:mb-6 last:mb-0">
       <div className={`flex items-center gap-6 sm:gap-12 whitespace-nowrap ${animationClass}`}>
         {[...items, ...items].map((client, idx) => (
-          <div key={idx} className="flex items-center gap-6 sm:gap-10 group grayscale hover:grayscale-0 transition-all duration-300 w-[240px] sm:w-[450px] flex-shrink-0">
+          <div key={idx} className="flex items-center gap-6 sm:gap-10 group transition-all duration-300 w-[240px] sm:w-[450px] flex-shrink-0">
             <div className="w-20 h-10 sm:w-32 sm:h-16 flex-shrink-0 bg-white rounded-sm overflow-hidden p-2 border border-slate-100 group-hover:border-aureole-cyan/30 group-hover:scale-105 transition-all duration-300">
               <img
                 src={client.logo}
                 alt={client.name}
-                className="w-full h-full object-contain opacity-60 group-hover:opacity-100 transition-opacity"
+                className="w-full h-full object-contain transition-opacity"
               />
             </div>
             <span className="text-[10px] sm:text-xs font-black tracking-[0.15em] text-slate-300 group-hover:text-aureole-cyan uppercase transition-colors whitespace-nowrap overflow-hidden text-ellipsis">
