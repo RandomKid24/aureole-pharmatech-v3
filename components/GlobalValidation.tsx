@@ -44,10 +44,10 @@ const GlobalValidation: React.FC = () => {
             <span className="w-12 h-[1px] bg-aureole-blue"></span>
             <h2 className="text-[9px] font-black uppercase tracking-[0.4em] text-aureole-blue">PARTNERS</h2>
           </div>
-          <h3 className="text-4xl sm:text-6xl lg:text-7xl font-[950] text-aureole-slate tracking-tighter leading-[0.9] uppercase mb-8">
+          <h3 className="text-4xl sm:text-6xl lg:text-7xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.9] mb-8">
             GLOBAL <br /> <span className="text-aureole-blue">VALIDATION.</span>
           </h3>
-          <p className="text-slate-500 font-bold text-[10px] sm:text-[11px] uppercase tracking-[0.3em] max-w-2xl leading-relaxed">
+          <p className="text-slate-500 font-bold text-[10px] sm:text-[11px] tracking-[0.3em] max-w-2xl leading-relaxed">
             A comprehensive network of {CLIENTS.length} verified pharmaceutical entities utilizing Aureole's precision engineering.
           </p>
         </div>

@@ -35,7 +35,7 @@ const PrecisionEngineeredSystems: React.FC = () => {
               PRECISION <br /> ENGINEERED <span className="text-aureole-cyan">SYSTEMS.</span>
             </h3>
 
-            <p className="text-slate-500 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest leading-relaxed max-w-sm">
+            <p className="text-slate-500 text-[10px] sm:text-[11px] font-bold tracking-widest leading-relaxed max-w-sm">
               Engineering excellence with certified standards <br className="hidden sm:block" /> for global pharmaceutical excellence.
             </p>
           </div>

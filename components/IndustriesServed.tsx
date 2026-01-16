@@ -5,7 +5,7 @@ import { Microscope, Activity, FlaskConical, ArrowRight, Binary, Gauge, ShieldCh
 const SECTORS_DATA = [
   {
     id: '01',
-    name: 'PHARMACEUTICAL',
+    name: 'Pharmaceutical',
     icon: <Microscope className="w-8 h-8" />,
     image: '/industries/pharmaceutical.png',
     desc: 'Precision stability testing and environmental storage for life-saving drug formulations and vaccines.',
@@ -13,7 +13,7 @@ const SECTORS_DATA = [
   },
   {
     id: '02',
-    name: 'HOSPITAL',
+    name: 'Hospital',
     icon: <Activity className="w-8 h-8" />,
     image: '/industries/hospital.png',
     desc: 'Sterilization and temperature-controlled machinery for surgical environments and pharmacy storage.',
@@ -21,7 +21,7 @@ const SECTORS_DATA = [
   },
   {
     id: '03',
-    name: 'CHEMICAL',
+    name: 'Chemical',
     icon: <FlaskConical className="w-8 h-8" />,
     image: '/industries/chemical.png',
     desc: 'Precision thermal control and stabilization for sensitive chemical synthesis and volatile compound storage.',
@@ -29,7 +29,7 @@ const SECTORS_DATA = [
   },
   {
     id: '04',
-    name: 'OIL INDUSTRY',
+    name: 'Oil Industry',
     icon: <Gauge className="w-8 h-8" />,
     image: '/industries/oil_gas.png',
     desc: 'Ruggedized environmental chambers designed for downstream testing and petrochemical sample preservation.',
@@ -37,7 +37,7 @@ const SECTORS_DATA = [
   },
   {
     id: '05',
-    name: 'FOOD INDUSTRY',
+    name: 'Food Industry',
     icon: <ShieldCheck className="w-8 h-8" />,
     image: '/industries/food_v3.png',
     desc: 'Incubation and environmental chambers (BOD) for food safety testing and quality assurance.',
@@ -91,7 +91,7 @@ const IndustriesServed: React.FC = () => {
                   {sector.name}
                 </h4>
 
-                <p className="text-slate-500 text-[11px] font-bold uppercase tracking-wide leading-relaxed mb-6 line-clamp-3">
+                <p className="text-slate-500 text-[11px] font-bold tracking-wide leading-relaxed mb-6 line-clamp-3">
                   {sector.desc}
                 </p>
 

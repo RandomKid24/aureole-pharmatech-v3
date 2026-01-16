@@ -43,7 +43,7 @@ const OurUnitsContact: React.FC = () => {
               </div>
 
               <h4 className="text-3xl font-black text-[#001529] mb-3 uppercase tracking-tighter">CONTACT <span className="text-aureole-blue">US.</span></h4>
-              <p className="text-slate-500 text-[10px] font-bold mb-10 uppercase tracking-widest">Request a technical consultation.</p>
+              <p className="text-slate-500 text-[10px] font-bold mb-10 tracking-widest">Request a technical consultation.</p>
 
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-8">

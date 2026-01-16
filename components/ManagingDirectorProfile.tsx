@@ -37,7 +37,7 @@ const ManagingDirectorProfile: React.FC = () => {
                      "Our journey over the last three decades has been defined by a relentless pursuit of engineering excellence. At Aureole, we ensure that the pharmaceutical industry's most sensitive products are tested and stored under absolute environmental equilibrium."
                   </p>
 
-                  <div className="space-y-4 text-slate-500 text-xs font-medium leading-relaxed uppercase tracking-wider mb-10">
+                  <div className="space-y-4 text-slate-500 text-xs font-medium leading-relaxed tracking-wider mb-10">
                      <p>
                         At Aureole PharmaTech, we believe in the power of inspiration. Our name, "Aureole", draws inspiration from the radiant halo or aura often associated with revered figures in spirituality. This symbolism holds a profound significance for us as our core values are inspired by it.
                      </p>
