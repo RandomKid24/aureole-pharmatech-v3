@@ -58,8 +58,8 @@ const Plants: React.FC = () => {
                             <span className="w-12 h-[2px] bg-aureole-cyan"></span>
                             <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-cyan">AUREOLE INFRASTRUCTURE</h2>
                         </div>
-                        <h1 className="text-5xl sm:text-7xl lg:text-[85px] font-[950] text-white uppercase tracking-tighter leading-[0.9] mb-12 italic">
-                            OUR <br /> <span className="text-aureole-cyan not-italic">PLANTS.</span>
+                        <h1 className="text-5xl sm:text-7xl lg:text-[85px] font-[950] text-white uppercase tracking-tighter leading-[0.9] mb-12">
+                            OUR <br /> <span className="text-aureole-cyan">PLANTS.</span>
                         </h1>
                         <p className="text-lg lg:text-xl text-slate-300 font-medium leading-relaxed max-w-xl">
                             Our manufacturing facilities are equipped with precision engineering systems to ensure global compliance and quality standards for pharmaceutical laboratory equipment.
@@ -99,7 +99,7 @@ const Plants: React.FC = () => {
                                     </h3>
                                     <div className="flex items-center gap-3 text-slate-400 mb-8 pb-6 border-b border-slate-50">
                                         <MapPin size={18} className="text-aureole-cyan" />
-                                        <span className="text-[11px] font-bold uppercase tracking-widest">{facility.location}</span>
+                                        <span className="text-[11px] font-bold tracking-widest">{facility.location}</span>
                                     </div>
                                     <p className="text-slate-500 text-lg leading-relaxed mb-12">
                                         {facility.desc}
@@ -130,7 +130,7 @@ const Plants: React.FC = () => {
                                 <h3 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-blue">FACILITY DOCUMENTATION</h3>
                             </div>
                             <h2 className="text-4xl lg:text-6xl font-[950] text-aureole-slate uppercase tracking-tighter leading-none">
-                                INFRASTRUCTURE <br /> <span className="text-aureole-cyan italic">GALLERY.</span>
+                                INFRASTRUCTURE <br /> <span className="text-aureole-cyan">GALLERY.</span>
                             </h2>
                         </div>
                     </div>

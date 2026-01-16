@@ -134,11 +134,11 @@ const Team: React.FC = () => {
                         <div className="lg:col-span-8">
                             <div className="relative mb-10">
                                 <span className="text-8xl text-slate-100 font-serif absolute -top-12 -left-4 select-none">"</span>
-                                <p className="text-2xl lg:text-4xl font-[950] text-[#001529] uppercase tracking-tighter leading-[0.9] relative z-10 italic border-l-4 border-aureole-cyan pl-10">
+                                <p className="text-2xl lg:text-4xl font-[950] text-[#001529] tracking-tighter leading-[0.9] relative z-10 border-l-4 border-aureole-cyan pl-10">
                                     "{coreTeam[0].quote}"
                                 </p>
                             </div>
-                            <p className="text-slate-500 text-[12px] font-bold uppercase tracking-widest leading-relaxed max-w-2xl text-justify mb-12">
+                            <p className="text-slate-500 text-[12px] font-bold tracking-widest leading-relaxed max-w-2xl text-justify mb-12">
                                 Our latest endeavor, Aureole Pharma, marks the commencement of a journey characterized by a fresh vision and state-of-the-art technology, undertaken alongside my trusted team. I consistently hold the conviction that individuals constitute the invaluable cornerstone of any organization.
                             </p>
                             <div className="flex gap-6">

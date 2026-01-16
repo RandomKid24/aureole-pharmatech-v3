@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
                            {item.href.startsWith('/#') ? (
                               <Link
                                  to={item.href}
-                                 className="text-slate-400 font-bold uppercase tracking-[0.15em] text-[10px] hover:text-white transition-colors flex items-center gap-3 group"
+                                 className="text-slate-400 font-bold tracking-[0.15em] text-[10px] hover:text-white transition-colors flex items-center gap-3 group"
                                  onClick={() => handleHashScroll(item.href.substring(2))}
                               >
                                  <span className="w-1.5 h-[1px] bg-slate-700 group-hover:w-4 group-hover:bg-aureole-cyan transition-all"></span> {item.name}
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
                            ) : (
                               <Link
                                  to={item.href}
-                                 className="text-slate-400 font-bold uppercase tracking-[0.15em] text-[10px] hover:text-white transition-colors flex items-center gap-3 group"
+                                 className="text-slate-400 font-bold tracking-[0.15em] text-[10px] hover:text-white transition-colors flex items-center gap-3 group"
                                  onClick={item.href === '/' ? handleScrollToTop : undefined}
                               >
                                  <span className="w-1.5 h-[1px] bg-slate-700 group-hover:w-4 group-hover:bg-aureole-cyan transition-all"></span> {item.name}
@@ -91,7 +91,7 @@ const Footer: React.FC = () => {
                   <ul className="space-y-5">
                      {['Walk-in Chambers', 'Air Samplers', 'Stability Chambers', 'Photostability', 'Cold Storage'].map(item => (
                         <li key={item}>
-                           <a href="#" className="text-slate-400 font-bold uppercase tracking-[0.15em] text-[10px] hover:text-white transition-colors flex items-center gap-3 group">
+                           <a href="#" className="text-slate-400 font-bold tracking-[0.15em] text-[10px] hover:text-white transition-colors flex items-center gap-3 group">
                               <span className="w-1.5 h-[1px] bg-slate-700 group-hover:w-4 group-hover:bg-aureole-cyan transition-all"></span> {item}
                            </a>
                         </li>
@@ -104,13 +104,13 @@ const Footer: React.FC = () => {
                   <div className="space-y-6 relative z-10">
                      <div className="flex gap-4">
                         <MapPin className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />
-                        <span className="text-slate-400 font-bold uppercase tracking-[0.15em] text-[10px] leading-relaxed">
+                        <span className="text-slate-400 font-bold tracking-[0.15em] text-[10px] leading-relaxed">
                            B-61, Dist, MIDC Area, Malegaon, Maharashtra 422113.
                         </span>
                      </div>
                      <div className="flex gap-4">
                         <Mail className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />
-                        <span className="text-slate-400 font-bold uppercase tracking-[0.15em] text-[10px]">
+                        <span className="text-slate-400 font-bold tracking-[0.15em] text-[10px]">
                            enquiry@aureolepharmatech.com
                         </span>
                      </div>

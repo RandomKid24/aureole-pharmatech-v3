@@ -63,10 +63,10 @@ const Overview: React.FC = () => {
                             A DYNAMIC <br /> FAMILY OF <span className="text-aureole-cyan">COMPANIES.</span>
                         </h1>
                         <div className="p-8 sm:p-12 border-l-[4px] border-aureole-blue bg-slate-50/50 max-w-3xl">
-                            <p className="text-xl sm:text-2xl text-[#001529] font-black uppercase tracking-tight leading-[1.1] mb-6">
+                            <p className="text-xl sm:text-2xl text-[#001529] font-black tracking-tight leading-[1.1] mb-6">
                                 Pharmaceutical solutions, process equipment, healthcare, and hospitality—all grounded in quality, innovation, and integrity.
                             </p>
-                            <p className="text-[11px] text-slate-500 font-bold leading-relaxed uppercase tracking-[0.15em] text-justify max-w-2xl">
+                            <p className="text-[11px] text-slate-500 font-bold leading-relaxed tracking-[0.15em] text-justify max-w-2xl">
                                 What began as a vision has today flourished into a globally recognized family of ventures, redefined by our habit of excellence and our commitment to improving lives with purpose.
                             </p>
                         </div>
@@ -108,10 +108,10 @@ const Overview: React.FC = () => {
                             </h3>
 
                             <div className="space-y-8 text-slate-600">
-                                <p className="text-xl font-bold text-[#001529] leading-tight uppercase tracking-tight italic border-l-2 border-aureole-cyan pl-6">
+                                <p className="text-xl font-bold text-[#001529] leading-tight tracking-tight border-l-2 border-aureole-cyan pl-6">
                                     "It gives me immense pride to address you from the Director's Desk at Aureole Group. Our mission remains steadfast—to improve lives with purpose."
                                 </p>
-                                <div className="text-[12px] font-bold leading-relaxed uppercase tracking-wider text-justify space-y-6">
+                                <div className="text-[12px] font-bold leading-relaxed tracking-wider text-justify space-y-6">
                                     <p>
                                         With over 27 years of experience in the pharmaceutical industry, my journey has been driven by the belief that innovation and compassion must go hand in hand. Whether it's through cutting-edge technologies or social initiatives via Adityam Foundation, we strive for impact.
                                     </p>
@@ -154,7 +154,7 @@ const Overview: React.FC = () => {
                                 <h4 className="text-3xl font-[950] text-[#001529] uppercase tracking-tighter mb-4 group-hover:text-white transition-colors">
                                     {box.title}
                                 </h4>
-                                <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest leading-relaxed group-hover:text-white/80 transition-colors">
+                                <p className="text-slate-400 text-[10px] font-bold tracking-widest leading-relaxed group-hover:text-white/80 transition-colors">
                                     {box.desc}
                                 </p>
                             </div>
@@ -192,7 +192,7 @@ const Overview: React.FC = () => {
                                     <p className="text-[9px] font-black text-aureole-cyan uppercase tracking-widest mb-8 group-hover:text-white/80 transition-colors">
                                         {v.sub}
                                     </p>
-                                    <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider leading-relaxed group-hover:text-white/60 transition-all text-justify">
+                                    <p className="text-[11px] text-slate-500 font-bold tracking-wider leading-relaxed group-hover:text-white/60 transition-all text-justify">
                                         {v.desc}
                                     </p>
                                 </div>
