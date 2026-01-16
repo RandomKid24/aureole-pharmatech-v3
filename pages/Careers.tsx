@@ -133,7 +133,7 @@ const Careers: React.FC = () => {
             </section>
 
             {/* Compact Job Board */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-aureole-soft">
                 <div className="container mx-auto px-6 lg:px-24">
                     <div className="flex flex-col gap-10">
                         {/* Table Header */}

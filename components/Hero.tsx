@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
                 <span className="text-[11px] font-black uppercase tracking-[0.4em] text-aureole-blue">PHARMA ENGINEERING</span>
               </div>
 
-              <h1 className="text-4xl xs:text-5xl md:text-7xl lg:text-[85px] xl:text-[95px] font-[950] leading-[0.95] tracking-tighter text-aureole-slate uppercase mb-12">
+              <h1 className="text-4xl xs:text-5xl md:text-7xl lg:text-[85px] xl:text-[95px] 3xl:text-[120px] font-[950] leading-[0.95] tracking-tighter text-aureole-slate uppercase mb-12">
                 PRECISION <br className="hidden md:block" />
                 TEMPERATURE & <br className="hidden md:block" />
                 HUMIDITY <span className="text-aureole-cyan">CONTROL.</span>

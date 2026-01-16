@@ -39,7 +39,7 @@ const LaboratoryFurniture: React.FC = () => {
             </section>
 
             {/* Product List */}
-            <section className="py-16 sm:py-24 bg-white border-t border-slate-100">
+            <section className="py-16 sm:py-24 bg-aureole-soft border-t border-slate-100">
                 <div className="container mx-auto px-6 lg:px-24">
                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
                         <div className="max-w-2xl">

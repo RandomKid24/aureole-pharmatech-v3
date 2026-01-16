@@ -75,7 +75,7 @@ const Certification: React.FC = () => {
             </section>
 
             {/* CE Compliance */}
-            <section className="py-24 lg:py-40 bg-slate-50/50">
+            <section className="py-24 lg:py-40 bg-aureole-soft">
                 <div className="container mx-auto px-6 sm:px-8 lg:px-24">
                     <div className="max-w-3xl mb-24 text-center lg:text-left mx-auto lg:mx-0">
                         <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
@@ -181,7 +181,7 @@ const Certification: React.FC = () => {
             </section>
 
             {/* Referenced Standards */}
-            <section className="py-24 lg:py-40 bg-slate-50/50 relative overflow-hidden">
+            <section className="py-24 lg:py-40 bg-aureole-soft relative overflow-hidden">
                 <div className="container mx-auto px-6 sm:px-8 lg:px-24 relative z-10">
                     <div className="max-w-3xl mb-24 text-center lg:text-left mx-auto lg:mx-0">
                         <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">

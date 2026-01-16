@@ -93,7 +93,7 @@ const Plants: React.FC = () => {
             </section>
 
             {/* Core Units Section */}
-            <section className="py-24 lg:py-40 bg-white relative">
+            <section className="py-24 lg:py-40 bg-aureole-soft relative">
                 <div className="container mx-auto px-6 sm:px-8 lg:px-16 text-center lg:text-left">
                     <div className="space-y-32 lg:space-y-48">
                         {facilities.map((facility, idx) => (
@@ -148,7 +148,7 @@ const Plants: React.FC = () => {
             </section>
 
             {/* Capability Gallery */}
-            <section className="py-24 lg:py-40 bg-slate-50 relative overflow-hidden">
+            <section className="py-24 lg:py-40 bg-white relative overflow-hidden">
                 <div className="container mx-auto px-6 sm:px-8 lg:px-16 mb-24 relative z-10 text-center lg:text-left">
                     <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
                         <div>
@@ -188,7 +188,7 @@ const Plants: React.FC = () => {
             </section>
 
             {/* Industrial Capability Icons */}
-            <section className="py-24 lg:py-40 bg-white">
+            <section className="py-24 lg:py-40 bg-aureole-soft">
                 <div className="container mx-auto px-6 sm:px-8 lg:px-16">
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-slate-100 border border-slate-100">
                         {[

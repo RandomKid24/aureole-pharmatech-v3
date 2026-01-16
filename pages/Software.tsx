@@ -90,7 +90,7 @@ const Software: React.FC = () => {
             </section>
 
             {/* Regulatory Compliance & Data Integrity */}
-            <section className="py-24 border-b border-slate-100">
+            <section className="py-24 border-b border-slate-100 bg-aureole-soft">
                 <div className="container mx-auto px-6 lg:px-16">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
                         <div className="space-y-8">
@@ -124,7 +124,7 @@ const Software: React.FC = () => {
             </section>
 
             {/* Advanced Monitoring & Control */}
-            <section className="py-24 bg-slate-50/50">
+            <section className="py-24 bg-white">
                 <div className="container mx-auto px-6 lg:px-16">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                         <div className="space-y-12">
@@ -174,7 +174,7 @@ const Software: React.FC = () => {
             </section>
 
             {/* FAQs */}
-            <section className="py-24 border-t border-slate-100 bg-slate-50/30">
+            <section className="py-24 border-t border-slate-100 bg-aureole-soft">
                 <div className="container mx-auto px-6 lg:px-16">
                     <div className="max-w-4xl mx-auto">
                         <h3 className="text-4xl font-[950] uppercase tracking-tighter text-[#001529] mb-16 text-center leading-none">FAQS.</h3>

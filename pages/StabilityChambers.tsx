@@ -107,7 +107,7 @@ const StabilityChambers: React.FC = () => {
             </section>
 
             {/* Application Focus Section (When, Why, Where) */}
-            <section className="py-16 sm:py-24 bg-white relative">
+            <section className="py-16 sm:py-24 bg-aureole-soft relative">
                 <div className="container mx-auto px-6 lg:px-24">
                     <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
                         {/* Selector Column */}
@@ -147,7 +147,7 @@ const StabilityChambers: React.FC = () => {
                         </div>
 
                         {/* Content Column */}
-                        <div className="lg:col-span-8 bg-slate-50/50 border border-slate-100 p-8 lg:p-16 relative overflow-hidden flex flex-col min-h-[400px]">
+                        <div className="lg:col-span-8 bg-white border border-slate-100 p-8 lg:p-16 relative overflow-hidden flex flex-col min-h-[400px]">
                             <div className="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none font-black text-8xl text-aureole-slate uppercase tracking-tighter">
                                 {navItems[activeSection].title}
                             </div>

@@ -19,7 +19,7 @@ const PrecisionEngineeredSystems: React.FC = () => {
   const allProductImages = PRODUCTS.map(p => p.image);
 
   return (
-    <section id="products" className="py-16 sm:py-20 bg-white relative overflow-hidden border-b border-slate-100">
+    <section id="products" className="py-16 sm:py-20 bg-aureole-soft relative overflow-hidden border-b border-slate-100">
       <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none hidden sm:block">
         <span className="text-[150px] font-black text-[#001529] tracking-tighter leading-none uppercase">Precision</span>
       </div>

@@ -21,7 +21,14 @@
               cyan: '#00a6d6',      // Logo highlight color - for hovers and accents
               deep: '#003366',      // Deep blue for depth
               slate: '#001529',     // Dark slate for text
+              soft: '#f8fafc',      // Subtle background 1 (Slate 50)
+              pearl: '#f1f5f9',     // Subtle background 2 (Slate 100)
             }
+          },
+          screens: {
+            'xs': '475px',
+            '3xl': '1920px',
+            '4xl': '2560px',
           },
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
@@ -47,6 +54,19 @@
               '0%': { transform: 'translateX(-50%)' },
               '100%': { transform: 'translateX(0%)' },
             }
+          }
+        },
+        container: {
+          center: true,
+          padding: '2rem',
+          screens: {
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+            "2xl": "1536px",
+            "3xl": "1800px",
+            "4xl": "2200px",
           }
         }
       }

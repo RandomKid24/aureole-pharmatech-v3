@@ -47,19 +47,19 @@ const Overview: React.FC = () => {
 
     return (
         <div className="pt-24 min-h-screen bg-white selection:bg-aureole-blue selection:text-white">
-            {/* High-Impact Hero */}
-            <section className="relative py-24 sm:py-32 overflow-hidden border-b border-slate-100">
+            {/* Corporate Overview & Director's Desk */}
+            <section className="relative py-24 sm:py-32 overflow-hidden border-b border-slate-100 bg-white">
                 <div className="absolute top-10 right-10 opacity-[0.03] pointer-events-none select-none">
                     <span className="text-[180px] lg:text-[250px] font-black text-[#001529] tracking-tighter leading-none uppercase">GROUP</span>
                 </div>
 
-                <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10 text-center lg:text-left">
-                    <div className="max-w-4xl mx-auto lg:mx-0">
+                <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
+                    <div className="max-w-4xl mx-auto lg:mx-0 mb-24">
                         <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
                             <span className="w-12 h-[2px] bg-aureole-blue"></span>
                             <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-blue">CORPORATE OVERVIEW</h2>
                         </div>
-                        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-[950] text-[#001529] uppercase tracking-tighter leading-[0.85] mb-12">
+                        <h1 className="text-5xl sm:text-7xl lg:text-8xl 3xl:text-9xl font-[950] text-[#001529] uppercase tracking-tighter leading-[0.85] mb-12">
                             A DYNAMIC <br /> FAMILY OF <span className="text-aureole-cyan uppercase tracking-normal">Companies.</span>
                         </h1>
                         <div className="p-8 sm:p-12 border-l-[4px] border-aureole-blue bg-slate-50/50 max-w-3xl mx-auto lg:mx-0">
@@ -71,12 +71,7 @@ const Overview: React.FC = () => {
                             </p>
                         </div>
                     </div>
-                </div>
-            </section>
 
-            {/* Director's Desk - Brutalist Style */}
-            <section className="py-24 lg:py-40 bg-white">
-                <div className="container mx-auto px-4 sm:px-8 lg:px-16">
                     <div className="grid lg:grid-cols-12 gap-16 items-start">
                         <div className="lg:col-span-5 relative group">
                             <div className="aspect-[3/4] overflow-hidden transition-all duration-1000 border-b-[20px] border-[#001529] shadow-2xl bg-slate-50">
@@ -103,7 +98,7 @@ const Overview: React.FC = () => {
                                 <span className="w-12 h-[1px] bg-slate-200"></span>
                                 <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-slate-400">DIRECTOR'S DESK</h2>
                             </div>
-                            <h3 className="text-4xl lg:text-6xl font-[950] text-[#001529] uppercase tracking-tighter leading-[0.85] mb-10">
+                            <h3 className="text-4xl lg:text-6xl 3xl:text-7xl font-[950] text-[#001529] uppercase tracking-tighter leading-[0.85] mb-10">
                                 Excellence is not <br /> an act, but a <span className="text-aureole-blue uppercase tracking-normal">Habit.</span>
                             </h3>
 
@@ -139,7 +134,7 @@ const Overview: React.FC = () => {
             </section>
 
             {/* Philosophy Grid */}
-            <section className="py-24 bg-white border-y border-slate-100">
+            <section className="py-24 bg-aureole-soft border-y border-slate-100">
                 <div className="container mx-auto px-4 sm:px-8 lg:px-16">
                     <div className="grid md:grid-cols-3 gap-px bg-slate-100 border border-slate-100">
                         {[

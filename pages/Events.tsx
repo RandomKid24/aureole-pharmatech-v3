@@ -188,7 +188,7 @@ const Events: React.FC = () => {
             </section>
 
             {/* Past Exhibitions */}
-            <section className="py-24 border-b border-slate-100">
+            <section className="py-24 border-b border-slate-100 bg-aureole-soft">
                 <div className="container mx-auto px-6 lg:px-16">
                     <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
                         <div>
@@ -244,7 +244,7 @@ const Events: React.FC = () => {
             </section>
 
             {/* Company Events */}
-            <section className="py-24 bg-slate-50/50">
+            <section className="py-24 bg-white">
                 <div className="container mx-auto px-6 lg:px-16">
                     <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
                         <div>

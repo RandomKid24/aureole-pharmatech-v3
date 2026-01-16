@@ -33,7 +33,7 @@ const GlobalValidation: React.FC = () => {
   );
 
   return (
-    <section id="clients" className="py-16 sm:py-20 bg-white relative overflow-hidden border-t border-slate-100">
+    <section id="clients" className="py-16 sm:py-20 bg-aureole-soft relative overflow-hidden border-t border-slate-100">
       <div className="absolute top-0 right-0 p-20 opacity-[0.02] pointer-events-none select-none hidden lg:block">
         <span className="text-[180px] font-black text-aureole-slate tracking-tighter uppercase leading-none">TRUST</span>
       </div>

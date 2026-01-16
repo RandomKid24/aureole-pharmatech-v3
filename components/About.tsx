@@ -9,7 +9,7 @@ import { Microscope } from 'lucide-react';
  */
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-16 lg:py-20 bg-white relative overflow-hidden border-y border-slate-100">
+    <section id="about" className="py-16 lg:py-20 bg-aureole-soft relative overflow-hidden border-y border-slate-100">
       <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
 
         {/* Brand Header */}
@@ -22,7 +22,7 @@ const About: React.FC = () => {
             <h3 className="text-4xl lg:text-6xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.85] mb-6">
               28 YEARS OF <br /> <span className="text-aureole-cyan">PRECISION STANDARD.</span>
             </h3>
-            <div className="p-8 border-l-[3px] border-aureole-blue/20 bg-slate-50/50">
+            <div className="p-8 border-l-[3px] border-aureole-blue/20 bg-white shadow-sm">
               <p className="text-lg lg:text-xl text-slate-700 font-bold leading-relaxed mb-6">
                 When you choose Aureole PharmaTech, you're choosing a partner dedicated to the pursuit of excellence.
               </p>

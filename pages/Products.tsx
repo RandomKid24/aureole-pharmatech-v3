@@ -70,7 +70,7 @@ const Products: React.FC = () => {
             </section>
 
             {/* Product Catalog Hierarchy */}
-            <section className="py-12 lg:py-20 bg-white">
+            <section className="py-12 lg:py-20 bg-aureole-soft">
                 <div className="container mx-auto px-6 lg:px-24">
                     <div className="space-y-16">
                         {PRODUCT_CATALOG.map((category, catIdx) => (

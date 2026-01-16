@@ -92,7 +92,7 @@ const Service: React.FC = () => {
             </section>
 
             {/* Core Excellence Grid */}
-            <section className="py-24 border-b border-slate-100">
+            <section className="py-24 border-b border-slate-100 bg-aureole-soft">
                 <div className="container mx-auto px-6 lg:px-16">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
                         {/* Quality Standards */}
@@ -121,7 +121,7 @@ const Service: React.FC = () => {
             </section>
 
             {/* Product Range & Philosophy */}
-            <section className="py-24 bg-slate-50/50">
+            <section className="py-24 bg-white">
                 <div className="container mx-auto px-6 lg:px-16">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                         <div
@@ -159,7 +159,7 @@ const Service: React.FC = () => {
             </section>
 
             {/* Service Centers */}
-            <section className="py-24 bg-slate-50/30">
+            <section className="py-24 bg-aureole-soft">
                 <div className="container mx-auto px-6 lg:px-16">
                     <div className="flex flex-col mb-16 text-center lg:text-left">
                         <h3 className="text-5xl lg:text-7xl font-[950] uppercase tracking-tighter text-[#001529] leading-none mb-6">SERVICE <span className="text-aureole-cyan tracking-normal">Centers.</span></h3>

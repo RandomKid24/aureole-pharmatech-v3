@@ -160,7 +160,7 @@ const ProductDetail: React.FC = () => {
                                 <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-cyan">TECHNICAL SPECIFICATION</h2>
                             </div>
 
-                            <h1 className="text-4xl lg:text-[75px] font-[950] text-[#001529] uppercase tracking-tighter leading-none mb-10">
+                            <h1 className="text-4xl lg:text-[75px] 3xl:text-[90px] font-[950] text-[#001529] uppercase tracking-tighter leading-none mb-10">
                                 {decodedName}
                             </h1>
 
@@ -189,7 +189,7 @@ const ProductDetail: React.FC = () => {
 
             {/* Technical Data & Features */}
             {(product.specifications.length > 0 || product.keyFeatures.length > 0) && (
-                <section className="bg-white border-b border-slate-100">
+                <section className="bg-aureole-soft border-b border-slate-100">
                     <div className="grid lg:grid-cols-12 gap-0">
                         {/* Left Panel: Specifications */}
                         {product.specifications.length > 0 && (

@@ -90,7 +90,7 @@ const Team: React.FC = () => {
             </section>
 
             {/* Leadership Section - Strategic Tree */}
-            <section className="py-24 lg:py-40 relative overflow-hidden bg-white">
+            <section className="py-24 lg:py-40 relative overflow-hidden bg-aureole-soft">
                 {/* Section Watermark */}
                 <div className="absolute top-10 right-10 opacity-[0.03] pointer-events-none select-none">
                     <span className="text-[150px] font-black text-[#001529] tracking-tighter leading-none uppercase">CORE</span>
