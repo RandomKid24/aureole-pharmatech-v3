@@ -13,6 +13,8 @@ import ProductDetail from './pages/ProductDetail';
 import StabilityChambers from './pages/StabilityChambers';
 import TableTopInstruments from './pages/TableTopInstruments';
 import LaboratoryFurniture from './pages/LaboratoryFurniture';
+import Service from './pages/Service';
+import Software from './pages/Software';
 
 const App: React.FC = () => {
   return (
@@ -21,6 +23,8 @@ const App: React.FC = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/software" element={<Software />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/stability-chambers" element={<StabilityChambers />} />
           <Route path="/products/table-top-instruments" element={<TableTopInstruments />} />

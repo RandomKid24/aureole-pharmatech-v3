@@ -59,8 +59,8 @@ const Footer: React.FC = () => {
                         { name: 'Overview', href: '/about/overview' },
                         { name: 'Aureole Team', href: '/about/team' },
                         { name: 'Products', href: '/#products' },
-                        { name: 'Industries', href: '/#industries' },
-                        { name: 'Partners', href: '/#clients' },
+                        { name: 'Service', href: '/service' },
+                        { name: 'Software', href: '/software' },
                         { name: 'Contact', href: '/#contact' }
                      ].map(item => (
                         <li key={item.name}>

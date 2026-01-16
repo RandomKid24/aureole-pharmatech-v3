@@ -46,8 +46,8 @@ const Header: React.FC = () => {
       href: '/products',
       dropdown: [] // Handled via Mega Menu logic
     },
-    { name: 'Industries', href: '/#industries' },
-    { name: 'Partners', href: '/#clients' },
+    { name: 'Service', href: '/service' },
+    { name: 'Software', href: '/software' },
     { name: 'Contact', href: '/#contact' }
   ];
 
