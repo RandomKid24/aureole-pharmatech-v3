@@ -134,116 +134,125 @@ const Header: React.FC = () => {
 
           {/* Desktop Links */}
           <nav className="hidden lg:flex items-center gap-8 xl:gap-10">
-            {navLinks.map((link) => (
-              <div key={link.name} className="relative group/link-container">
-                {link.name === 'Products' || link.name === 'About' ? (
-                  <div
-                    className="flex items-center gap-1.5 cursor-pointer text-[10px] font-extrabold uppercase tracking-[0.25em] text-aureole-slate hover:text-aureole-cyan transition-colors py-4"
-                    onMouseEnter={() => handleMouseEnter(link.name === 'About' ? 'about' : 'products')}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    <Link to={link.href || '#'} className="hover:text-aureole-cyan transition-colors">{link.name}</Link>
-                    <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${(link.name === 'About' ? aboutDropdownOpen : productsDropdownOpen) ? 'rotate-180' : ''}`} />
+            {navLinks.map((link) => {
+              const isActive = location.pathname === link.href ||
+                (link.name === 'About' && location.pathname.startsWith('/about')) ||
+                (link.name === 'Products' && location.pathname.startsWith('/products'));
 
-                    {/* Standard Dropdown for 'About' */}
-                    {link.name === 'About' && (
-                      <div
-                        className={`absolute top-full left-0 w-64 bg-white shadow-2xl border border-slate-100 p-4 transition-all duration-300 ${aboutDropdownOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}
-                        onMouseEnter={() => handleMouseEnter('about')}
-                        onMouseLeave={handleMouseLeave}
-                      >
-                        <div className="flex flex-col gap-1">
-                          {link.dropdown?.map((item) => (
-                            <Link
-                              key={item.name}
-                              to={item.href}
-                              className="flex items-center gap-3 p-3 hover:bg-slate-50 transition-colors group/item"
-                            >
-                              <div className="text-slate-400 group-hover/item:text-aureole-blue transition-colors">
-                                {item.icon}
-                              </div>
-                              <span className="text-[9px] font-black uppercase tracking-widest text-aureole-slate group-hover/item:text-aureole-blue">
-                                {item.name}
-                              </span>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    )}
+              return (
+                <div key={link.name} className="relative group/link-container">
+                  {link.name === 'Products' || link.name === 'About' ? (
+                    <div
+                      className={`flex items-center gap-1.5 cursor-pointer text-[10px] font-extrabold uppercase tracking-[0.25em] transition-colors py-4 ${isActive ? 'text-aureole-cyan' : 'text-aureole-slate hover:text-aureole-cyan'
+                        }`}
+                      onMouseEnter={() => handleMouseEnter(link.name === 'About' ? 'about' : 'products')}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      <Link to={link.href || '#'} className="hover:text-aureole-cyan transition-colors">{link.name}</Link>
+                      <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${(link.name === 'About' ? aboutDropdownOpen : productsDropdownOpen) ? 'rotate-180' : ''}`} />
 
-                    {/* Mega Menu for 'Products' */}
-                    {link.name === 'Products' && (
-                      <div
-                        className={`fixed left-0 w-full bg-white/95 backdrop-blur-xl border-t border-b border-r border-slate-100 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] transition-all duration-500 origin-top z-40 ${productsDropdownOpen ? 'opacity-100 translate-y-0 scale-y-100' : 'opacity-0 -translate-y-4 scale-y-0 pointer-events-none'}`}
-                        style={{ top: isScrolled ? '64px' : '96px' }}
-                        onMouseEnter={() => handleMouseEnter('products')}
-                        onMouseLeave={handleMouseLeave}
-                      >
-                        <div className="container mx-auto px-16 py-12">
-                          <div className="grid grid-cols-3 gap-8 xl:gap-12">
-                            {PRODUCT_CATALOG.map((cat) => (
-                              <div key={cat.id} className="space-y-6">
-                                {/* Category Header */}
-                                <Link
-                                  to={cat.id === 'stability' ? '/products/stability-chambers' : cat.id === 'tabletop' ? '/products/table-top-instruments' : '/products/laboratory-furniture'}
-                                  className="flex items-center gap-3 group/cat mb-6 bg-slate-50 p-4 border border-slate-100/50 hover:bg-white hover:border-slate-200 transition-all"
-                                >
-                                  <div className="p-2 bg-white text-aureole-blue border border-slate-100 group-hover/cat:text-white group-hover/cat:bg-aureole-cyan transition-colors">
-                                    {cat.id === 'stability' ? <Thermometer size={16} /> : cat.id === 'tabletop' ? <Activity size={16} /> : <Box size={16} />}
-                                  </div>
-                                  <h3 className="text-lg font-black uppercase tracking-tighter text-aureole-slate group-hover/cat:text-aureole-cyan transition-colors">
-                                    {cat.title}
-                                  </h3>
-                                </Link>
-
-                                {/* Products Grid */}
-                                <div className="grid gap-y-2 gap-x-8 max-h-[40vh] overflow-y-auto pr-2 custom-scrollbar">
-                                  {cat.subTypes.map((sub) => (
-                                    <div key={sub.id} className="mb-4 break-inside-avoid">
-                                      {(cat.subTypes.length > 1 || sub.name !== cat.title) && (
-                                        <h4 className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3 pl-2 border-l-2 border-aureole-cyan/30">
-                                          {sub.name}
-                                        </h4>
-                                      )}
-                                      <div className="flex flex-col gap-1">
-                                        {sub.products.map((pName) => (
-                                          <Link
-                                            key={pName}
-                                            to={`/products/${slugify(pName)}`}
-                                            className="text-[10px] font-bold text-slate-500 hover:text-aureole-blue hover:pl-2 transition-all uppercase tracking-wide py-1 block w-full truncate"
-                                            title={pName}
-                                          >
-                                            {pName}
-                                          </Link>
-                                        ))}
-                                      </div>
-                                    </div>
-                                  ))}
+                      {/* Standard Dropdown for 'About' */}
+                      {link.name === 'About' && (
+                        <div
+                          className={`absolute top-full left-0 w-64 bg-white shadow-2xl border border-slate-100 p-4 transition-all duration-300 ${aboutDropdownOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}
+                          onMouseEnter={() => handleMouseEnter('about')}
+                          onMouseLeave={handleMouseLeave}
+                        >
+                          <div className="flex flex-col gap-1">
+                            {link.dropdown?.map((item) => (
+                              <Link
+                                key={item.name}
+                                to={item.href}
+                                className="flex items-center gap-3 p-3 hover:bg-slate-50 transition-colors group/item"
+                              >
+                                <div className="text-slate-400 group-hover/item:text-aureole-blue transition-colors">
+                                  {item.icon}
                                 </div>
-                              </div>
+                                <span className="text-[9px] font-black uppercase tracking-widest text-aureole-slate group-hover/item:text-aureole-blue">
+                                  {item.name}
+                                </span>
+                              </Link>
                             ))}
                           </div>
                         </div>
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <Link
-                    to={link.href}
-                    onClick={(e) => {
-                      if (link.href.includes('#')) {
-                        e.preventDefault();
-                        handleNavClick(link.href);
-                      }
-                    }}
-                    className="text-[10px] font-extrabold uppercase tracking-[0.25em] text-aureole-slate hover:text-aureole-cyan transition-colors relative group/link"
-                  >
-                    {link.name}
-                    <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-aureole-blue transition-all group-hover/link:w-full"></span>
-                  </Link>
-                )}
-              </div>
-            ))}
+                      )}
+
+                      {/* Mega Menu for 'Products' */}
+                      {link.name === 'Products' && (
+                        <div
+                          className={`fixed left-0 w-full bg-white/95 backdrop-blur-xl border-t border-b border-r border-slate-100 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] transition-all duration-500 origin-top z-40 ${productsDropdownOpen ? 'opacity-100 translate-y-0 scale-y-100' : 'opacity-0 -translate-y-4 scale-y-0 pointer-events-none'}`}
+                          style={{ top: isScrolled ? '64px' : '96px' }}
+                          onMouseEnter={() => handleMouseEnter('products')}
+                          onMouseLeave={handleMouseLeave}
+                        >
+                          <div className="container mx-auto px-16 py-12">
+                            <div className="grid grid-cols-3 gap-8 xl:gap-12">
+                              {PRODUCT_CATALOG.map((cat) => (
+                                <div key={cat.id} className="space-y-6">
+                                  {/* Category Header */}
+                                  <Link
+                                    to={cat.id === 'stability' ? '/products/stability-chambers' : cat.id === 'tabletop' ? '/products/table-top-instruments' : '/products/laboratory-furniture'}
+                                    className="flex items-center gap-3 group/cat mb-6 bg-slate-50 p-4 border border-slate-100/50 hover:bg-white hover:border-slate-200 transition-all"
+                                  >
+                                    <div className="p-2 bg-white text-aureole-blue border border-slate-100 group-hover/cat:text-white group-hover/cat:bg-aureole-cyan transition-colors">
+                                      {cat.id === 'stability' ? <Thermometer size={16} /> : cat.id === 'tabletop' ? <Activity size={16} /> : <Box size={16} />}
+                                    </div>
+                                    <h3 className="text-lg font-black uppercase tracking-tighter text-aureole-slate group-hover/cat:text-aureole-cyan transition-colors">
+                                      {cat.title}
+                                    </h3>
+                                  </Link>
+
+                                  {/* Products Grid */}
+                                  <div className="grid gap-y-2 gap-x-8 max-h-[40vh] overflow-y-auto pr-2 custom-scrollbar">
+                                    {cat.subTypes.map((sub) => (
+                                      <div key={sub.id} className="mb-4 break-inside-avoid">
+                                        {(cat.subTypes.length > 1 || sub.name !== cat.title) && (
+                                          <h4 className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3 pl-2 border-l-2 border-aureole-cyan/30">
+                                            {sub.name}
+                                          </h4>
+                                        )}
+                                        <div className="flex flex-col gap-1">
+                                          {sub.products.map((pName) => (
+                                            <Link
+                                              key={pName}
+                                              to={`/products/${slugify(pName)}`}
+                                              className="text-[10px] font-bold text-slate-500 hover:text-aureole-blue hover:pl-2 transition-all uppercase tracking-wide py-1 block w-full truncate"
+                                              title={pName}
+                                            >
+                                              {pName}
+                                            </Link>
+                                          ))}
+                                        </div>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      to={link.href}
+                      onClick={(e) => {
+                        if (link.href.includes('#')) {
+                          e.preventDefault();
+                          handleNavClick(link.href);
+                        }
+                      }}
+                      className={`text-[10px] font-extrabold uppercase tracking-[0.25em] transition-colors relative group/link ${isActive ? 'text-aureole-cyan' : 'text-aureole-slate hover:text-aureole-cyan'
+                        }`}
+                    >
+                      {link.name}
+                      <span className={`absolute -bottom-1 left-0 h-[2px] bg-aureole-cyan transition-all ${isActive ? 'w-full' : 'w-0 group-hover/link:w-full'
+                        }`}></span>
+                    </Link>
+                  )}
+                </div>
+              );
+            })}
           </nav>
 
           {/* Mobile Menu Button */}
