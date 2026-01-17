@@ -80,10 +80,10 @@ const Service: React.FC = () => {
                         </h2>
 
                         <div className="max-w-3xl border-l-[3px] border-aureole-blue/20 bg-slate-50/50 p-10 mx-auto lg:mx-0">
-                            <p className="text-lg lg:text-xl text-[#001529] font-bold leading-relaxed mb-8">
+                            <p className="text-lg lg:text-xl text-[#001529] font-normal leading-relaxed mb-8">
                                 In the ever-evolving pharmaceutical and laboratory equipment landscape, quality and customer service are the cornerstones of success. Aureole PharmaTech stands as a beacon of excellence in this competitive industry, delivering reliable products backed by responsive and comprehensive support services.
                             </p>
-                            <p className="text-[11px] text-slate-500 font-bold leading-loose tracking-widest">
+                            <p className="text-[14px] text-slate-500 font-normal leading-loose tracking-tight">
                                 Founded with a mission to provide high-quality pharmaceutical products and equipment, the company operates on core values of integrity, innovation, and customer focus.
                             </p>
                         </div>
@@ -101,7 +101,7 @@ const Service: React.FC = () => {
                                 <ShieldCheck className="w-8 h-8 text-aureole-blue" />
                                 <h3 className="text-3xl lg:text-4xl font-black font-heading uppercase tracking-tighter text-[#001529] leading-none">QUALITY STANDARDS</h3>
                             </div>
-                            <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-relaxed text-left">
+                            <p className="text-[14px] font-normal text-slate-500 tracking-tight leading-relaxed text-left">
                                 Quality is uncompromising at Aureole PharmaTech. The company maintains stringent regulatory compliance and holds multiple certifications that reflect international quality benchmarks. Internally enforced quality control processes ensure that every product dispatched is safe, effective, and reliable.
                             </p>
                         </div>
@@ -112,7 +112,7 @@ const Service: React.FC = () => {
                                 <Factory className="w-8 h-8 text-aureole-cyan" />
                                 <h3 className="text-3xl lg:text-4xl font-black font-heading uppercase tracking-tighter text-[#001529] leading-none">MANUFACTURING EXCELLENCE</h3>
                             </div>
-                            <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-relaxed text-left">
+                            <p className="text-[14px] font-normal text-slate-500 tracking-tight leading-relaxed text-left">
                                 Aureole PharmaTech leverages advanced manufacturing facilities equipped with state-of-the-art technology. Supported by a skilled workforce and continuous training programs, the manufacturing process ensures precision, consistency, and adherence to the highest quality standards.
                             </p>
                         </div>
@@ -143,13 +143,13 @@ const Service: React.FC = () => {
                         <div className="space-y-16">
                             <div>
                                 <h3 className="text-4xl lg:text-5xl font-black font-heading uppercase tracking-tighter text-[#001529] leading-[0.9] mb-6">DIVERSE & INNOVATIVE <br /><span className="text-aureole-cyan">PRODUCT RANGE.</span></h3>
-                                <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-loose text-left">
+                                <p className="text-[14px] font-normal text-slate-500 tracking-tight leading-loose text-left">
                                     The product portfolio is both broad and forward-thinking. From essential pharmaceutical and laboratory equipment to advanced systems, each product is developed through a meticulous R&D process emphasizing safety, efficacy, and adaptability to dynamic healthcare needs.
                                 </p>
                             </div>
                             <div>
                                 <h3 className="text-4xl lg:text-5xl font-black font-heading uppercase tracking-tighter text-[#001529] leading-[0.9] mb-6">CUSTOMER-CENTRIC <br /><span className="text-aureole-blue">PHILOSOPHY.</span></h3>
-                                <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-loose text-left">
+                                <p className="text-[14px] font-normal text-slate-500 tracking-tight leading-loose text-left">
                                     Building long-term client relationships is central to Aureole PharmaTech’s strategy. Customer feedback is actively valued and used for continuous improvement. By proactively addressing requirements and consistently delivering on commitments, the company fosters trust and long-term loyalty.
                                 </p>
                             </div>
@@ -163,7 +163,7 @@ const Service: React.FC = () => {
                 <div className="container mx-auto px-6 lg:px-16">
                     <div className="flex flex-col mb-16 text-center lg:text-left">
                         <h3 className="text-5xl lg:text-7xl font-[950] font-heading uppercase tracking-tighter text-[#001529] leading-none mb-6">SERVICE <span className="text-aureole-cyan tracking-normal">Centers.</span></h3>
-                        <p className="text-[11px] font-bold text-slate-400 tracking-widest max-w-2xl mx-auto lg:mx-0 leading-loose">
+                        <p className="text-[14px] font-normal text-slate-400 tracking-tight max-w-2xl mx-auto lg:mx-0 leading-loose">
                             An extensive service network across India ensures prompt and localized support:
                         </p>
                     </div>
@@ -197,7 +197,7 @@ const Service: React.FC = () => {
                                     </button>
                                     <div className={`transition-all duration-500 overflow-hidden ${openFaq === idx ? 'max-h-[500px]' : 'max-h-0'}`}>
                                         <div className="p-8 pt-0 border-t border-slate-50">
-                                            <p className="text-[10px] font-bold text-slate-500 tracking-[0.2em] leading-loose">
+                                            <p className="text-[13px] font-normal text-slate-500 tracking-tight leading-loose">
                                                 {faq.answer}
                                             </p>
                                         </div>

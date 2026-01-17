@@ -91,7 +91,7 @@ const IndustriesServed: React.FC = () => {
                   {sector.name}
                 </h3>
 
-                <p className="text-slate-500 text-[11px] font-bold tracking-wide leading-relaxed mb-6 line-clamp-3">
+                <p className="text-slate-500 text-[14px] font-normal tracking-tight leading-relaxed mb-6 line-clamp-3">
                   {sector.desc}
                 </p>
 

@@ -26,7 +26,7 @@ const About: React.FC = () => {
               <p className="text-lg lg:text-xl text-slate-700 font-bold leading-relaxed mb-6">
                 When you choose Aureole PharmaTech, you're choosing a partner dedicated to the pursuit of excellence.
               </p>
-              <p className="text-[11px] text-slate-500 font-bold leading-relaxed tracking-widest text-justify">
+              <p className="text-[15px] text-slate-500 font-normal leading-relaxed tracking-tight">
                 Our name reflects our promise to deliver pharmaceutical technology and services that are nothing short of exceptional. With us, you'll find the brilliance of innovation and the radiance of excellence in every aspect of our work.
               </p>
             </div>
@@ -67,7 +67,7 @@ const About: React.FC = () => {
                   {val.title}
                 </h5>
 
-                <p className="text-slate-400 font-bold text-[9px] leading-relaxed tracking-wider group-hover:text-slate-600 transition-colors mt-auto relative z-10">
+                <p className="text-slate-400 font-normal text-[11px] leading-relaxed tracking-wide group-hover:text-slate-600 transition-colors mt-auto relative z-10">
                   {val.desc}
                 </p>
               </div>

@@ -40,7 +40,7 @@ const PrecisionEngineeredSystems: React.FC = () => {
               PRECISION <br /> ENGINEERED <span className="text-aureole-cyan">SYSTEMS.</span>
             </h3>
 
-            <p className="text-slate-500 text-[10px] sm:text-[11px] font-bold tracking-widest leading-relaxed max-w-sm">
+            <p className="text-slate-500 text-[14px] sm:text-[15px] font-normal tracking-tight leading-relaxed max-w-sm">
               Engineering excellence with certified standards <br className="hidden sm:block" /> for global pharmaceutical excellence.
             </p>
           </div>
@@ -102,15 +102,15 @@ const PrecisionEngineeredSystems: React.FC = () => {
                 {product.name}
               </h4>
 
-              <p className="text-slate-500 text-[10px] sm:text-[11px] font-medium leading-relaxed mb-8 line-clamp-3">
+              <p className="text-slate-500 text-[14px] font-normal leading-relaxed mb-8 line-clamp-3">
                 {product.description}
               </p>
 
               <div className="mt-auto grid grid-cols-2 gap-4 pb-8 border-b border-slate-100 mb-6">
                 {Object.entries(product.specs).slice(0, 2).map(([key, val]) => (
                   <div key={key}>
-                    <div className="text-[7px] font-black text-slate-300 uppercase tracking-widest mb-1">{key}</div>
-                    <div className="text-[10px] font-bold text-aureole-slate uppercase tracking-tight">{val}</div>
+                    <div className="text-[10px] font-black text-slate-300 uppercase tracking-wide mb-1">{key}</div>
+                    <div className="text-[13px] font-bold text-aureole-slate uppercase tracking-tight">{val}</div>
                   </div>
                 ))}
               </div>

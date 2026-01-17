@@ -87,10 +87,10 @@ const Overview: React.FC = () => {
                             </h3>
 
                             <div className="space-y-8 text-slate-600">
-                                <p className="text-xl font-bold text-[#001529] leading-tight tracking-tight border-l-2 border-aureole-cyan pl-6 italic">
+                                <p className="text-xl font-normal text-[#001529] leading-tight tracking-tight border-l-2 border-aureole-cyan pl-6">
                                     "It gives me immense pride to address you from the Director's Desk at Aureole Group. Our mission remains steadfast—to improve lives with purpose."
                                 </p>
-                                <div className="text-[12px] font-bold leading-relaxed tracking-wider text-justify space-y-6">
+                                <div className="text-[15px] font-normal leading-relaxed tracking-tight text-justify space-y-6">
                                     <p>
                                         With over 27 years of experience in the pharmaceutical industry, my journey has been driven by the belief that innovation and compassion must go hand in hand. Whether it's through cutting-edge technologies or social initiatives via Adityam Foundation, we strive for impact.
                                     </p>

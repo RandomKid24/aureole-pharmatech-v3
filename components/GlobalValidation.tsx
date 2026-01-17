@@ -42,12 +42,12 @@ const GlobalValidation: React.FC = () => {
         <div className="max-w-4xl">
           <div className="flex items-center gap-4 mb-6">
             <span className="w-12 h-[1px] bg-aureole-blue"></span>
-            <h2 className="text-[9px] font-black uppercase tracking-[0.4em] text-aureole-blue">PARTNERS</h2>
+            <h2 className="text-[11px] font-black uppercase tracking-[0.4em] text-aureole-blue">PARTNERS</h2>
           </div>
           <h3 className="text-4xl sm:text-6xl lg:text-7xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.9] mb-8">
             GLOBAL <br /> <span className="text-aureole-blue">VALIDATION.</span>
           </h3>
-          <p className="text-slate-500 font-bold text-[10px] sm:text-[11px] tracking-[0.3em] max-w-2xl leading-relaxed">
+          <p className="text-slate-500 font-normal text-[14px] sm:text-[15px] tracking-tight max-w-2xl leading-relaxed">
             A comprehensive network of {CLIENTS.length} verified pharmaceutical entities utilizing Aureole's precision engineering.
           </p>
         </div>

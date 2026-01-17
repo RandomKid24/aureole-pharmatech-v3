@@ -31,7 +31,7 @@ const LaboratoryFurniture: React.FC = () => {
                         <h1 className="text-4xl sm:text-7xl lg:text-[100px] font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-[0.9] mb-8 sm:mb-12">
                             LABORATORY <br /> <span className="text-aureole-cyan uppercase tracking-normal">Furniture.</span>
                         </h1>
-                        <p className="text-slate-500 text-[11px] sm:text-[12px] font-bold tracking-[0.2em] leading-relaxed max-w-xl mx-auto lg:mx-0">
+                        <p className="text-slate-500 text-[14px] sm:text-[15px] font-bold tracking-tight leading-relaxed max-w-xl mx-auto lg:mx-0">
                             {furnitureCategory.description}
                         </p>
                     </div>
