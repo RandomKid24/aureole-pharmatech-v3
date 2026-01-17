@@ -99,7 +99,7 @@ const Service: React.FC = () => {
                         <div className="space-y-8">
                             <div className="flex items-center gap-4">
                                 <ShieldCheck className="w-8 h-8 text-aureole-blue" />
-                                <h3 className="text-3xl lg:text-4xl font-black uppercase tracking-tighter text-[#001529] leading-none">QUALITY STANDARDS</h3>
+                                <h3 className="text-3xl lg:text-4xl font-black font-heading uppercase tracking-tighter text-[#001529] leading-none">QUALITY STANDARDS</h3>
                             </div>
                             <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-relaxed text-left">
                                 Quality is uncompromising at Aureole PharmaTech. The company maintains stringent regulatory compliance and holds multiple certifications that reflect international quality benchmarks. Internally enforced quality control processes ensure that every product dispatched is safe, effective, and reliable.
@@ -110,7 +110,7 @@ const Service: React.FC = () => {
                         <div className="space-y-8">
                             <div className="flex items-center gap-4">
                                 <Factory className="w-8 h-8 text-aureole-cyan" />
-                                <h3 className="text-3xl lg:text-4xl font-black uppercase tracking-tighter text-[#001529] leading-none">MANUFACTURING EXCELLENCE</h3>
+                                <h3 className="text-3xl lg:text-4xl font-black font-heading uppercase tracking-tighter text-[#001529] leading-none">MANUFACTURING EXCELLENCE</h3>
                             </div>
                             <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-relaxed text-left">
                                 Aureole PharmaTech leverages advanced manufacturing facilities equipped with state-of-the-art technology. Supported by a skilled workforce and continuous training programs, the manufacturing process ensures precision, consistency, and adherence to the highest quality standards.
@@ -142,13 +142,13 @@ const Service: React.FC = () => {
                         </div>
                         <div className="space-y-16">
                             <div>
-                                <h3 className="text-4xl lg:text-5xl font-black uppercase tracking-tighter text-[#001529] leading-[0.9] mb-6">DIVERSE & INNOVATIVE <br /><span className="text-aureole-cyan">PRODUCT RANGE.</span></h3>
+                                <h3 className="text-4xl lg:text-5xl font-black font-heading uppercase tracking-tighter text-[#001529] leading-[0.9] mb-6">DIVERSE & INNOVATIVE <br /><span className="text-aureole-cyan">PRODUCT RANGE.</span></h3>
                                 <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-loose text-left">
                                     The product portfolio is both broad and forward-thinking. From essential pharmaceutical and laboratory equipment to advanced systems, each product is developed through a meticulous R&D process emphasizing safety, efficacy, and adaptability to dynamic healthcare needs.
                                 </p>
                             </div>
                             <div>
-                                <h3 className="text-4xl lg:text-5xl font-black uppercase tracking-tighter text-[#001529] leading-[0.9] mb-6">CUSTOMER-CENTRIC <br /><span className="text-aureole-blue">PHILOSOPHY.</span></h3>
+                                <h3 className="text-4xl lg:text-5xl font-black font-heading uppercase tracking-tighter text-[#001529] leading-[0.9] mb-6">CUSTOMER-CENTRIC <br /><span className="text-aureole-blue">PHILOSOPHY.</span></h3>
                                 <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-loose text-left">
                                     Building long-term client relationships is central to Aureole PharmaTech’s strategy. Customer feedback is actively valued and used for continuous improvement. By proactively addressing requirements and consistently delivering on commitments, the company fosters trust and long-term loyalty.
                                 </p>
@@ -162,7 +162,7 @@ const Service: React.FC = () => {
             <section className="py-24 bg-aureole-soft">
                 <div className="container mx-auto px-6 lg:px-16">
                     <div className="flex flex-col mb-16 text-center lg:text-left">
-                        <h3 className="text-5xl lg:text-7xl font-[950] uppercase tracking-tighter text-[#001529] leading-none mb-6">SERVICE <span className="text-aureole-cyan tracking-normal">Centers.</span></h3>
+                        <h3 className="text-5xl lg:text-7xl font-[950] font-heading uppercase tracking-tighter text-[#001529] leading-none mb-6">SERVICE <span className="text-aureole-cyan tracking-normal">Centers.</span></h3>
                         <p className="text-[11px] font-bold text-slate-400 tracking-widest max-w-2xl mx-auto lg:mx-0 leading-loose">
                             An extensive service network across India ensures prompt and localized support:
                         </p>
@@ -184,7 +184,7 @@ const Service: React.FC = () => {
             <section className="py-24 border-t border-slate-100">
                 <div className="container mx-auto px-6 lg:px-16">
                     <div className="max-w-4xl mx-auto">
-                        <h3 className="text-4xl font-[950] uppercase tracking-tighter text-[#001529] mb-16 text-center leading-none">FAQS.</h3>
+                        <h3 className="text-4xl font-[950] font-heading uppercase tracking-tighter text-[#001529] mb-16 text-center leading-none">FAQS.</h3>
                         <div className="space-y-4">
                             {FAQ_DATA.map((faq, idx) => (
                                 <div key={idx} className="bg-white border border-slate-100">

@@ -73,28 +73,28 @@ const IconEnthusiastic = ({ size = 20 }) => (
  */
 export const PRODUCTS = [
   {
-    id: 'stability-chambers',
+    id: 'humidity-chamber-stability-chamber',
     name: 'STABILITY CHAMBER',
     category: 'STABILITY',
     image: '/products/StablilityChamber-Standalone/humidity-chamber.png',
     description: 'Precise environmental control for long-term stability studies and ICH compliance.',
-    specs: { 'Control': 'HMI / PLC', 'Range': '-20°C to 80°C' }
+    specs: { 'Range': '20°C to 60°C', 'Humidity': '40% to 95% RH' }
   },
   {
-    id: 'walk-in-rooms',
+    id: 'walk-in-humidity-chamber',
     name: 'WALK-IN CHAMBER',
     category: 'WALK-IN',
     image: '/products/StablilityChamber-Standalone/walk-in-humidity-chamber.png',
     description: 'Large-scale environmental rooms with modular design and uniform airflow.',
-    specs: { 'Volume': 'Upto 50,000L', 'Uniformity': '± 1°C' }
+    specs: { 'Range': '20°C to 60°C', 'Control': '7" Touch HMI' }
   },
   {
-    id: 'deep-freezers',
+    id: 'deep-freezer-upto-20c-upto-40c',
     name: 'DEEP FREEZER',
     category: 'STABILITY',
     image: '/products/StablilityChamber-Standalone/deep-freezer.png',
     description: 'High-performance ultra-low cooling for critical sample preservation.',
-    specs: { 'Cooling': 'Cascade Sys', 'Temp': '-80°C' }
+    specs: { 'Range': '-25°C to -40°C', 'Control': 'Microprocessor' }
   }
 ];
 

@@ -33,14 +33,13 @@ const Products: React.FC = () => {
 
     const getIcon = (subtypeId: string) => {
         switch (subtypeId) {
-            case 'walk-in-units': return <Layers className="w-4 h-4 text-aureole-blue" />;
-            case 'standalone-units': return <Box className="w-4 h-4 text-aureole-blue" />;
+            case 'walk-in': return <Layers className="w-4 h-4 text-aureole-blue" />;
+            case 'standalone': return <Box className="w-4 h-4 text-aureole-blue" />;
             case 'ultrasonic': return <Activity className="w-4 h-4 text-aureole-blue" />;
             case 'waterbaths': return <Droplets className="w-4 h-4 text-aureole-blue" />;
             case 'air-sampler': return <Wind className="w-4 h-4 text-aureole-blue" />;
             case 'ss-accessories': return <Award className="w-4 h-4 text-aureole-blue" />;
-            case 'furniture-systems': return <Construction className="w-4 h-4 text-aureole-blue" />;
-            case 'safety-storage': return <Shield className="w-4 h-4 text-aureole-blue" />;
+            case 'furniture-list': return <Construction className="w-4 h-4 text-aureole-blue" />;
             default: return <Activity className="w-4 h-4 text-aureole-blue" />;
         }
     };
@@ -59,7 +58,7 @@ const Products: React.FC = () => {
                             <span className="w-12 h-[2px] bg-aureole-blue"></span>
                             <h2 className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.5em] text-aureole-blue">PRODUCT CATALOG</h2>
                         </div>
-                        <h1 className="text-5xl sm:text-7xl lg:text-9xl font-[950] text-[#001529] uppercase tracking-tighter leading-[0.8] mb-12">
+                        <h1 className="text-5xl sm:text-7xl lg:text-9xl font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-[0.8] mb-12">
                             OUR <br /> <span className="text-aureole-cyan uppercase tracking-normal">Collection.</span>
                         </h1>
                         <p className="text-slate-500 text-lg lg:text-xl font-medium leading-relaxed max-w-lg mx-auto sm:mx-0 tracking-tight">
@@ -78,7 +77,7 @@ const Products: React.FC = () => {
                                 <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-4 mb-10">
                                     <div className="flex items-center gap-3">
                                         <span className="text-[10px] font-black text-aureole-cyan uppercase tracking-[0.3em]">0{catIdx + 1}</span>
-                                        <h2 className="text-2xl lg:text-4xl font-[950] text-[#001529] uppercase tracking-tighter leading-none group-hover/cat:translate-x-1 transition-transform duration-500">
+                                        <h2 className="text-2xl lg:text-4xl font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-none group-hover/cat:translate-x-1 transition-transform duration-500">
                                             {category.title}
                                         </h2>
                                     </div>
@@ -98,7 +97,7 @@ const Products: React.FC = () => {
                                                         <div className="w-8 h-8 flex items-center justify-center bg-white border border-slate-200 text-aureole-blue">
                                                             {getIcon(subType.id)}
                                                         </div>
-                                                        <h4 className="text-[14px] font-[950] text-[#001529] uppercase tracking-tight">
+                                                        <h4 className="text-[14px] font-[950] font-heading text-[#001529] uppercase tracking-tight">
                                                             {subType.name}
                                                         </h4>
                                                     </div>

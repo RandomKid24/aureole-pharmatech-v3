@@ -113,16 +113,16 @@ const Careers: React.FC = () => {
             {/* Hero Section */}
             <section className="relative py-20 lg:py-32 overflow-hidden border-b border-slate-100 bg-white">
                 <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none hidden lg:block">
-                    <span className="text-[150px] font-black text-aureole-slate tracking-tighter leading-none uppercase">JOIN CAREERS</span>
+                    <span className="text-[150px] font-black font-heading text-aureole-slate tracking-tighter leading-none uppercase">JOIN CAREERS</span>
                 </div>
 
                 <div className="container mx-auto px-6 lg:px-24 relative z-10">
                     <div className="max-w-4xl text-center lg:text-left mx-auto lg:mx-0">
                         <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
                             <span className="w-10 h-[2px] bg-aureole-blue"></span>
-                            <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-blue">PEOPLE & CULTURE</h2>
+                            <h2 className="text-[10px] font-black font-heading uppercase tracking-[0.5em] text-aureole-blue">PEOPLE & CULTURE</h2>
                         </div>
-                        <h1 className="text-5xl lg:text-8xl font-[950] text-[#001529] uppercase tracking-tighter leading-none mb-10">
+                        <h1 className="text-5xl lg:text-8xl font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-none mb-10">
                             Careers.
                         </h1>
                         <p className="text-slate-500 text-lg lg:text-xl font-medium leading-relaxed max-w-2xl text-justify tracking-tight">
@@ -159,7 +159,7 @@ const Careers: React.FC = () => {
                                             <span className="text-[10px] font-black bg-slate-100 text-[#001529] px-3 py-1 uppercase tracking-widest border border-slate-200">{job.code}</span>
                                         </div>
                                         <div className="col-span-12 lg:col-span-4">
-                                            <h3 className="text-xl lg:text-2xl font-[950] text-[#001529] uppercase tracking-tighter leading-none group-hover:text-aureole-blue transition-colors">
+                                            <h3 className="text-xl lg:text-2xl font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-none group-hover:text-aureole-blue transition-colors">
                                                 {job.department}
                                             </h3>
                                         </div>
@@ -243,7 +243,7 @@ const Careers: React.FC = () => {
                     {/* Compact Footer */}
                     <div className="mt-24 p-12 bg-slate-900 border-l-[6px] border-aureole-cyan relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
                         <div className="relative z-10 text-center lg:text-left">
-                            <h3 className="text-3xl lg:text-4xl font-[950] text-white uppercase tracking-tighter mb-4 leading-none">
+                            <h3 className="text-3xl lg:text-4xl font-[950] font-heading text-white uppercase tracking-tighter mb-4 leading-none">
                                 JOIN THE FAMILY.
                             </h3>
                             <p className="text-slate-400 text-lg lg:text-xl font-medium leading-relaxed max-w-xl">

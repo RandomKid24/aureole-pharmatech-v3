@@ -62,17 +62,17 @@ const Software: React.FC = () => {
             {/* Hero Section */}
             <section className="relative overflow-hidden border-b border-slate-100 bg-white py-24 lg:py-40">
                 <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none hidden lg:block">
-                    <span className="text-[180px] lg:text-[250px] font-black text-aureole-slate tracking-tighter leading-none uppercase">SOFTWARE</span>
+                    <span className="text-[180px] lg:text-[250px] font-black font-heading text-aureole-slate tracking-tighter leading-none uppercase">SOFTWARE</span>
                 </div>
 
                 <div className="container mx-auto px-6 lg:px-16 relative z-10 text-center lg:text-left">
                     <div className="max-w-5xl mx-auto lg:mx-0">
                         <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
                             <span className="w-12 h-[2px] bg-aureole-blue"></span>
-                            <h1 className="text-[11px] font-black uppercase tracking-[0.5em] text-aureole-blue">SOFTWARE SOLUTIONS</h1>
+                            <h1 className="text-[11px] font-black font-heading uppercase tracking-[0.5em] text-aureole-blue">SOFTWARE SOLUTIONS</h1>
                         </div>
 
-                        <h2 className="text-4xl lg:text-[85px] font-[950] text-[#001529] uppercase tracking-tighter leading-[0.95] mb-12">
+                        <h2 className="text-4xl lg:text-[85px] font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-[0.95] mb-12">
                             SOFTWARE <br />
                             <span className="text-aureole-cyan uppercase tracking-normal">Solutions.</span>
                         </h2>
@@ -96,7 +96,7 @@ const Software: React.FC = () => {
                         <div className="space-y-8">
                             <div className="flex items-center gap-4">
                                 <ShieldCheck className="w-8 h-8 text-aureole-blue" />
-                                <h3 className="text-3xl lg:text-4xl font-black uppercase tracking-tighter text-[#001529] leading-none">REGULATORY COMPLIANCE & DATA INTEGRITY</h3>
+                                <h3 className="text-3xl lg:text-4xl font-black font-heading uppercase tracking-tighter text-[#001529] leading-none">REGULATORY COMPLIANCE & DATA INTEGRITY</h3>
                             </div>
                             <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-relaxed text-left">
                                 Aureole PharmaTech software solutions are designed in alignment with international regulatory requirements. Emphasis is placed on data integrity, traceability, and security to support compliance with industry standards such as audit readiness and controlled documentation practices.
@@ -131,7 +131,7 @@ const Software: React.FC = () => {
                             <div>
                                 <div className="flex items-center gap-4 mb-6">
                                     <Monitor className="w-8 h-8 text-aureole-cyan" />
-                                    <h3 className="text-3xl lg:text-5xl font-black uppercase tracking-tighter text-[#001529] leading-[0.9]">ADVANCED MONITORING <br /> & CONTROL</h3>
+                                    <h3 className="text-3xl lg:text-5xl font-black font-heading uppercase tracking-tighter text-[#001529] leading-[0.9]">ADVANCED MONITORING <br /> & CONTROL</h3>
                                 </div>
                                 <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-loose text-left">
                                     The software enables precise monitoring and control of critical parameters such as temperature, humidity, pressure, and alarms. Real-time data visualization and automated alerts help ensure consistent environmental conditions and rapid response to deviations.
@@ -177,7 +177,7 @@ const Software: React.FC = () => {
             <section className="py-24 border-t border-slate-100 bg-aureole-soft">
                 <div className="container mx-auto px-6 lg:px-16">
                     <div className="max-w-4xl mx-auto">
-                        <h3 className="text-4xl font-[950] uppercase tracking-tighter text-[#001529] mb-16 text-center leading-none">FAQS.</h3>
+                        <h3 className="text-4xl font-[950] font-heading uppercase tracking-tighter text-[#001529] mb-16 text-center leading-none">FAQS.</h3>
                         <div className="space-y-4">
                             {FAQ_DATA.map((faq, idx) => (
                                 <div key={idx} className="bg-white border border-slate-100">

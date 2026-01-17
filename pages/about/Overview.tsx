@@ -50,27 +50,11 @@ const Overview: React.FC = () => {
             {/* Corporate Overview & Director's Desk */}
             <section className="relative py-24 sm:py-32 overflow-hidden border-b border-slate-100 bg-white">
                 <div className="absolute top-10 right-10 opacity-[0.03] pointer-events-none select-none">
-                    <span className="text-[180px] lg:text-[250px] font-black text-[#001529] tracking-tighter leading-none uppercase">GROUP</span>
+                    <span className="text-[180px] lg:text-[250px] font-black font-heading text-[#001529] tracking-tighter leading-none uppercase">GROUP</span>
                 </div>
 
                 <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
-                    <div className="max-w-4xl mx-auto lg:mx-0 mb-24">
-                        <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
-                            <span className="w-12 h-[2px] bg-aureole-blue"></span>
-                            <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-blue">CORPORATE OVERVIEW</h2>
-                        </div>
-                        <h1 className="text-5xl sm:text-7xl lg:text-8xl 3xl:text-9xl font-[950] text-[#001529] uppercase tracking-tighter leading-[0.85] mb-12">
-                            A DYNAMIC <br /> FAMILY OF <span className="text-aureole-cyan uppercase tracking-normal">Companies.</span>
-                        </h1>
-                        <div className="p-8 sm:p-12 border-l-[4px] border-aureole-blue bg-slate-50/50 max-w-3xl mx-auto lg:mx-0">
-                            <p className="text-xl sm:text-2xl text-[#001529] font-black tracking-tight leading-[1.1] mb-6">
-                                Pharmaceutical solutions, process equipment, healthcare, and hospitality—all grounded in quality, innovation, and integrity.
-                            </p>
-                            <p className="text-[11px] text-slate-500 font-bold leading-relaxed tracking-[0.15em] text-justify max-w-2xl mx-auto lg:mx-0">
-                                What began as a vision has today flourished into a globally recognized family of ventures, redefined by our habit of excellence and our commitment to improving lives with purpose.
-                            </p>
-                        </div>
-                    </div>
+
 
                     <div className="grid lg:grid-cols-12 gap-16 items-start">
                         <div className="lg:col-span-5 relative group">
@@ -85,7 +69,7 @@ const Overview: React.FC = () => {
                                 />
                             </div>
                             <div className="mt-8">
-                                <h4 className="text-4xl font-[950] text-[#001529] uppercase tracking-tighter leading-none mb-2">Dr. Kiran Badgujar</h4>
+                                <h4 className="text-4xl font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-none mb-2">Dr. Kiran Badgujar</h4>
                                 <div className="flex items-center gap-4">
                                     <div className="h-[1px] w-12 bg-aureole-cyan"></div>
                                     <span className="text-[10px] font-black uppercase tracking-[0.4em] text-aureole-cyan">FOUNDER & DIRECTOR</span>
@@ -96,9 +80,9 @@ const Overview: React.FC = () => {
                         <div className="lg:col-span-7">
                             <div className="flex items-center gap-4 mb-8">
                                 <span className="w-12 h-[1px] bg-slate-200"></span>
-                                <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-slate-400">DIRECTOR'S DESK</h2>
+                                <h2 className="text-[10px] font-black font-heading uppercase tracking-[0.5em] text-slate-400">DIRECTOR'S DESK</h2>
                             </div>
-                            <h3 className="text-4xl lg:text-6xl 3xl:text-7xl font-[950] text-[#001529] uppercase tracking-tighter leading-[0.85] mb-10">
+                            <h3 className="text-4xl lg:text-6xl 3xl:text-7xl font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-[0.85] mb-10">
                                 Excellence is not <br /> an act, but a <span className="text-aureole-blue uppercase tracking-normal">Habit.</span>
                             </h3>
 
@@ -146,7 +130,7 @@ const Overview: React.FC = () => {
                                 <div className="text-aureole-cyan group-hover:text-white mb-8 transition-colors">
                                     {box.icon}
                                 </div>
-                                <h4 className="text-3xl font-[950] text-[#001529] uppercase tracking-tighter mb-4 group-hover:text-white transition-colors">
+                                <h4 className="text-3xl font-[950] font-heading text-[#001529] uppercase tracking-tighter mb-4 group-hover:text-white transition-colors">
                                     {box.title}
                                 </h4>
                                 <p className="text-slate-400 text-[10px] font-bold tracking-widest leading-relaxed group-hover:text-white/80 transition-colors">
@@ -161,27 +145,27 @@ const Overview: React.FC = () => {
             {/* Ventures - Typographic Slot Design */}
             <section className="py-24 lg:py-40 bg-white relative overflow-hidden">
                 <div className="absolute top-10 right-10 opacity-[0.03] pointer-events-none select-none">
-                    <span className="text-[150px] font-black text-[#001529] tracking-tighter leading-none uppercase">VENTURE</span>
+                    <span className="text-[150px] font-black font-heading text-[#001529] tracking-tighter leading-none uppercase">VENTURE</span>
                 </div>
 
                 <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
                     <div className="flex items-center gap-4 mb-20">
                         <span className="w-12 h-[2px] bg-aureole-blue"></span>
-                        <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-blue">OPERATIONAL ENTITIES</h2>
+                        <h2 className="text-[10px] font-black font-heading uppercase tracking-[0.5em] text-aureole-blue">OPERATIONAL ENTITIES</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 border-t border-l border-slate-100 bg-slate-100">
                         {ventures.map((v, idx) => (
                             <div key={idx} className="bg-white p-10 group hover:bg-aureole-blue transition-all duration-700 flex flex-col min-h-[450px] border-r border-b border-slate-100">
                                 <div className="mb-12">
-                                    <span className="text-5xl font-[950] text-slate-100 group-hover:text-white/20 transition-all duration-700 block mb-2 leading-none">
+                                    <span className="text-5xl font-[950] font-heading text-slate-100 group-hover:text-white/20 transition-all duration-700 block mb-2 leading-none">
                                         {v.year}
                                     </span>
                                     <div className="w-8 h-[2px] bg-aureole-cyan group-hover:bg-white transition-colors"></div>
                                 </div>
 
                                 <div className="flex-grow flex flex-col">
-                                    <h4 className="text-2xl font-[950] text-[#001529] group-hover:text-white uppercase tracking-tighter leading-none mb-4 transition-colors">
+                                    <h4 className="text-2xl font-[950] font-heading text-[#001529] group-hover:text-white uppercase tracking-tighter leading-none mb-4 transition-colors">
                                         {v.name}
                                     </h4>
                                     <p className="text-[9px] font-black text-aureole-cyan uppercase tracking-widest mb-8 group-hover:text-white/80 transition-colors">

@@ -55,16 +55,16 @@ const Certification: React.FC = () => {
             {/* Hero Section */}
             <section className="relative py-24 sm:py-32 overflow-hidden border-b border-slate-100 bg-white">
                 <div className="absolute top-10 right-10 opacity-[0.03] pointer-events-none select-none">
-                    <span className="text-[180px] lg:text-[250px] font-black text-aureole-slate tracking-tighter leading-none uppercase">VALIDATED</span>
+                    <span className="text-[180px] lg:text-[250px] font-black font-heading text-aureole-slate tracking-tighter leading-none uppercase">VALIDATED</span>
                 </div>
 
                 <div className="container mx-auto px-6 sm:px-8 lg:px-24 relative z-10 text-center lg:text-left">
                     <div className="max-w-4xl mx-auto lg:mx-0">
                         <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
                             <span className="w-12 h-[2px] bg-aureole-blue"></span>
-                            <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-blue">CERTIFICATION & COMPLIANCE</h2>
+                            <h2 className="text-[10px] font-black font-heading uppercase tracking-[0.5em] text-aureole-blue">CERTIFICATION & COMPLIANCE</h2>
                         </div>
-                        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.85] mb-12">
+                        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter leading-[0.85] mb-12">
                             QUALITY <br /> <span className="text-aureole-cyan uppercase tracking-normal">Assured.</span>
                         </h1>
                         <p className="text-slate-500 text-[11px] font-bold tracking-[0.2em] leading-relaxed max-w-sm mx-auto lg:mx-0">
@@ -80,9 +80,9 @@ const Certification: React.FC = () => {
                     <div className="max-w-3xl mb-24 text-center lg:text-left mx-auto lg:mx-0">
                         <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
                             <span className="w-12 h-[2px] bg-aureole-cyan"></span>
-                            <h3 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-cyan">CE STANDARDS</h3>
+                            <h3 className="text-[10px] font-black font-heading uppercase tracking-[0.5em] text-aureole-cyan">CE STANDARDS</h3>
                         </div>
-                        <h2 className="text-5xl lg:text-7xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.9] mb-8">
+                        <h2 className="text-5xl lg:text-7xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter leading-[0.9] mb-8">
                             TECHNICAL <br /> <span className="text-aureole-blue uppercase tracking-normal">Certification.</span>
                         </h2>
                     </div>
@@ -107,7 +107,7 @@ const Certification: React.FC = () => {
                             </a>
                         </div>
                         <div className="bg-white p-12 lg:p-16 lg:col-span-2">
-                            <h4 className="text-[11px] font-black text-aureole-blue uppercase tracking-[0.2em] mb-12">Certified Product Line</h4>
+                            <h4 className="text-[11px] font-black font-heading text-aureole-blue uppercase tracking-[0.2em] mb-12">Certified Product Line</h4>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
                                 {ceProducts.map((p, i) => (
                                     <div key={i} className="flex items-center gap-4 group">
@@ -127,9 +127,9 @@ const Certification: React.FC = () => {
                     <div className="max-w-3xl mb-24 text-center lg:text-left mx-auto lg:mx-0">
                         <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
                             <span className="w-12 h-[2px] bg-aureole-blue"></span>
-                            <h3 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-blue">ISO 9001:2015</h3>
+                            <h3 className="text-[10px] font-black font-heading uppercase tracking-[0.5em] text-aureole-blue">ISO 9001:2015</h3>
                         </div>
-                        <h2 className="text-5xl lg:text-7xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.9] mb-8">
+                        <h2 className="text-5xl lg:text-7xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter leading-[0.9] mb-8">
                             QRO <span className="text-aureole-cyan uppercase tracking-normal">Registration.</span>
                         </h2>
                     </div>
@@ -158,7 +158,7 @@ const Certification: React.FC = () => {
                             </div>
                             <div className="bg-slate-50 p-10 flex flex-col justify-between">
                                 <div className="space-y-6">
-                                    <h4 className="text-[11px] font-black text-aureole-blue uppercase tracking-[0.2em] mb-4">Surveillance Schedule</h4>
+                                    <h4 className="text-[11px] font-black font-heading text-aureole-blue uppercase tracking-[0.2em] mb-4">Surveillance Schedule</h4>
                                     {isoDetails.surveillance.map((s, i) => (
                                         <div key={i} className="flex justify-between items-center py-4 border-b border-white">
                                             <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{s.label}</span>
@@ -186,9 +186,9 @@ const Certification: React.FC = () => {
                     <div className="max-w-3xl mb-24 text-center lg:text-left mx-auto lg:mx-0">
                         <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
                             <span className="w-12 h-[2px] bg-aureole-blue"></span>
-                            <h3 className="text-[11px] font-black uppercase tracking-[0.5em] text-aureole-blue">TECHNICAL FRAMEWORK</h3>
+                            <h3 className="text-[11px] font-black font-heading uppercase tracking-[0.5em] text-aureole-blue">TECHNICAL FRAMEWORK</h3>
                         </div>
-                        <h2 className="text-5xl lg:text-7xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.9] mb-8">
+                        <h2 className="text-5xl lg:text-7xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter leading-[0.9] mb-8">
                             REFERENCED <br /> GLOBAL <span className="text-aureole-cyan uppercase tracking-normal">Standards.</span>
                         </h2>
                     </div>
@@ -207,7 +207,7 @@ const Certification: React.FC = () => {
 
                                 <div>
                                     <Globe className="text-slate-200 group-hover:text-aureole-cyan transition-colors duration-500 mb-10" size={32} />
-                                    <h4 className="text-2xl lg:text-3xl font-black text-aureole-slate uppercase tracking-tighter leading-none mb-6 group-hover:text-aureole-blue transition-colors">
+                                    <h4 className="text-2xl lg:text-3xl font-black font-heading text-aureole-slate uppercase tracking-tighter leading-none mb-6 group-hover:text-aureole-blue transition-colors">
                                         {std.split(' (')[0]}
                                     </h4>
                                     <p className="text-[11px] font-bold text-slate-400 tracking-[0.15em] leading-relaxed group-hover:text-slate-500 transition-colors">
@@ -229,9 +229,9 @@ const Certification: React.FC = () => {
                         <div>
                             <div className="flex items-center gap-4 mb-8">
                                 <span className="w-12 h-[2px] bg-slate-200"></span>
-                                <h3 className="text-[10px] font-black uppercase tracking-[0.5em] text-slate-400">QUALITY FRAMEWORK</h3>
+                                <h3 className="text-[10px] font-black font-heading uppercase tracking-[0.5em] text-slate-400">QUALITY FRAMEWORK</h3>
                             </div>
-                            <h2 className="text-5xl lg:text-7xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.9] mb-8">
+                            <h2 className="text-5xl lg:text-7xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter leading-[0.9] mb-8">
                                 QUALITY <br /> <span className="text-aureole-blue uppercase tracking-normal">Policy.</span>
                             </h2>
                             <div className="mb-10 p-6 bg-slate-50 border-l-4 border-aureole-blue">

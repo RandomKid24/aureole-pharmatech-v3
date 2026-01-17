@@ -3,9 +3,11 @@ import React, { useState } from 'react';
 import { PRODUCTS } from '../constants';
 import { ArrowUpRight, Activity, ShieldCheck, FlaskConical, Settings, Cpu, Gauge, Maximize2 } from 'lucide-react';
 import Lightbox from './Lightbox';
+import { useNavigate } from 'react-router-dom';
 
 const PrecisionEngineeredSystems: React.FC = () => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const navigate = useNavigate();
 
   const stats = [
     { label: 'Guidelines', icon: <Activity className="w-5 h-5" />, value: 'ICH Q1A / Q1B' },
@@ -43,21 +45,21 @@ const PrecisionEngineeredSystems: React.FC = () => {
             </p>
           </div>
 
-          <div className="w-full lg:max-w-2xl bg-white border border-slate-100 shadow-2xl shadow-slate-200/50">
+          <div className="w-full lg:max-w-4xl bg-white border border-slate-100 shadow-2xl shadow-slate-200/50">
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-px bg-slate-100">
               {stats.map((item, idx) => (
                 <div
                   key={idx}
-                  className="bg-white p-6 sm:p-8 cursor-default transition-all duration-500"
+                  className="bg-white p-8 sm:p-12 cursor-default transition-all duration-500"
                 >
-                  <div className="text-aureole-blue mb-4 transition-colors">
-                    {React.cloneElement(item.icon as React.ReactElement, { size: 20 })}
+                  <div className="text-aureole-blue mb-6 transition-colors group-hover:text-aureole-cyan">
+                    {React.cloneElement(item.icon as React.ReactElement, { size: 28 })}
                   </div>
-                  <div className="flex flex-col">
-                    <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest mb-2 transition-colors">
+                  <div className="flex flex-col gap-1">
+                    <span className="text-[10px] sm:text-[11px] font-black text-slate-400 uppercase tracking-widest transition-colors">
                       {item.label}
                     </span>
-                    <span className="text-[10px] sm:text-[11px] font-black text-aureole-slate uppercase tracking-tight transition-colors">
+                    <span className="text-sm sm:text-lg font-black text-aureole-slate uppercase tracking-tight leading-tight transition-colors">
                       {item.value}
                     </span>
                   </div>
@@ -114,7 +116,10 @@ const PrecisionEngineeredSystems: React.FC = () => {
               </div>
 
               <div>
-                <div className="flex justify-between items-center group/btn cursor-pointer">
+                <div
+                  className="flex justify-between items-center group/btn cursor-pointer"
+                  onClick={() => navigate(`/products/${product.id}`)}
+                >
                   <div className="flex flex-col">
                     <span className="text-[10px] font-black text-[#001529] uppercase tracking-widest group-hover/btn:text-aureole-cyan transition-colors">
                       Technical Sheet

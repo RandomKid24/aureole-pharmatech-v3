@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Questrial&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&family=Questrial&display=swap"
     rel="stylesheet">
   <script>
     tailwind.config = {
@@ -31,7 +31,8 @@
             '4xl': '2560px',
           },
           fontFamily: {
-            sans: ['Inter', 'sans-serif'],
+            sans: ['Manrope', 'sans-serif'],
+            heading: ['Inter', 'sans-serif'],
             questrial: ['Questrial', 'sans-serif'],
           },
           animation: {
@@ -77,6 +78,16 @@
       scroll-behavior: smooth;
       -webkit-font-smoothing: antialiased;
       background-color: #ffffff;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Inter', sans-serif;
     }
 
     /* Optimized static grain instead of expensive SVG turbulence */

@@ -157,15 +157,15 @@ const ProductDetail: React.FC = () => {
                         <div className="lg:col-span-7">
                             <div className="flex items-center gap-4 mb-6">
                                 <span className="w-10 h-[2px] bg-aureole-cyan"></span>
-                                <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-cyan">TECHNICAL SPECIFICATION</h2>
+                                <h2 className="text-[10px] font-black font-heading uppercase tracking-[0.5em] text-aureole-cyan">TECHNICAL SPECIFICATION</h2>
                             </div>
 
-                            <h1 className="text-4xl lg:text-[75px] 3xl:text-[90px] font-[950] text-[#001529] uppercase tracking-tighter leading-none mb-10">
+                            <h1 className="text-4xl lg:text-[75px] 3xl:text-[90px] font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-none mb-10">
                                 {decodedName}
                             </h1>
 
                             <div className="pt-8 border-t border-slate-50">
-                                <h3 className="text-[11px] font-black uppercase tracking-[0.4em] text-aureole-slate mb-6">Description</h3>
+                                <h3 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-aureole-slate mb-6">Description</h3>
                                 <div className="max-w-4xl">
                                     <p className="text-[15px] font-bold text-slate-500 leading-relaxed text-left tracking-tight">
                                         {product.description}
@@ -196,7 +196,7 @@ const ProductDetail: React.FC = () => {
                             <div className={`${product.keyFeatures.length > 0 ? 'lg:col-span-7' : 'lg:col-span-12'} bg-white p-12 lg:p-20 border-r border-slate-200`}>
                                 <div className="flex items-center gap-4 mb-12">
                                     <Settings className="text-aureole-blue" size={18} />
-                                    <h3 className="text-[11px] font-black uppercase tracking-[0.4em] text-aureole-slate">Specifications</h3>
+                                    <h3 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-aureole-slate">Specifications</h3>
                                 </div>
 
                                 <div className="grid gap-px bg-slate-800 border border-slate-800 shadow-sm overflow-hidden rounded-sm">
@@ -222,7 +222,7 @@ const ProductDetail: React.FC = () => {
                                         <>
                                             <div className="flex items-center gap-4 mb-12">
                                                 <Zap className="text-aureole-cyan" size={18} />
-                                                <h3 className="text-[11px] font-black uppercase tracking-[0.4em] text-aureole-slate">Key Features</h3>
+                                                <h3 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-aureole-slate">Key Features</h3>
                                             </div>
                                             <div className="space-y-6 mb-20">
                                                 {product.keyFeatures.map((feature, i) => (
@@ -243,7 +243,7 @@ const ProductDetail: React.FC = () => {
                                             <div>
                                                 <div className="flex items-center gap-3 mb-6">
                                                     <List className="text-aureole-blue" size={16} />
-                                                    <h4 className="text-[10px] font-black text-aureole-slate uppercase tracking-widest border-b border-aureole-blue/20 pb-2">Regular</h4>
+                                                    <h4 className="text-[10px] font-black font-heading text-aureole-slate uppercase tracking-widest border-b border-aureole-blue/20 pb-2">Regular</h4>
                                                 </div>
                                                 <div className="space-y-4">
                                                     {product.regularAttributes.map((attr, i) => (
@@ -259,7 +259,7 @@ const ProductDetail: React.FC = () => {
                                             <div>
                                                 <div className="flex items-center gap-3 mb-6">
                                                     <PlusCircle className="text-aureole-cyan" size={16} />
-                                                    <h4 className="text-[10px] font-black text-aureole-slate uppercase tracking-widest border-b border-aureole-cyan/20 pb-2">Add-ons</h4>
+                                                    <h4 className="text-[10px] font-black font-heading text-aureole-slate uppercase tracking-widest border-b border-aureole-cyan/20 pb-2">Add-ons</h4>
                                                 </div>
                                                 <div className="space-y-4">
                                                     {product.addOnsAttributes.map((attr, i) => (
@@ -285,7 +285,7 @@ const ProductDetail: React.FC = () => {
                     <div className="container mx-auto px-6 lg:px-24">
                         <div className="flex items-center gap-4 mb-16">
                             <Box className="text-aureole-blue" size={18} />
-                            <h3 className="text-[11px] font-black uppercase tracking-[0.4em] text-aureole-slate">Models & Dimensions</h3>
+                            <h3 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-aureole-slate">Models & Dimensions</h3>
                         </div>
 
                         <div className="overflow-x-auto border-[3px] border-aureole-slate shadow-2xl">

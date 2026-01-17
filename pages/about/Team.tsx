@@ -70,7 +70,7 @@ const Team: React.FC = () => {
             {/* Leadership Hero */}
             <section className="relative py-24 sm:py-32 overflow-hidden border-b border-slate-100">
                 <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none">
-                    <span className="text-[180px] lg:text-[250px] font-black text-[#001529] tracking-tighter leading-none uppercase">TEAM</span>
+                    <span className="text-[180px] lg:text-[250px] font-black font-heading text-[#001529] tracking-tighter leading-none uppercase">TEAM</span>
                 </div>
 
                 <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
@@ -79,7 +79,7 @@ const Team: React.FC = () => {
                             <span className="w-12 h-[2px] bg-aureole-blue"></span>
                             <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-blue">ORGANIZATIONAL TALENT</h2>
                         </div>
-                        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-[950] text-[#001529] uppercase tracking-tighter leading-[0.85] mb-12">
+                        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-[0.85] mb-12">
                             PRECISION <br /> MINDSET, <span className="text-aureole-cyan">COLLECTIVE IMPACT.</span>
                         </h1>
                         <p className="text-slate-500 text-[10px] sm:text-[11px] font-bold tracking-[0.2em] leading-relaxed max-w-sm">
@@ -93,7 +93,7 @@ const Team: React.FC = () => {
             <section className="py-24 lg:py-40 relative overflow-hidden bg-aureole-soft">
                 {/* Section Watermark */}
                 <div className="absolute top-10 right-10 opacity-[0.03] pointer-events-none select-none">
-                    <span className="text-[150px] font-black text-[#001529] tracking-tighter leading-none uppercase">CORE</span>
+                    <span className="text-[150px] font-black font-heading text-[#001529] tracking-tighter leading-none uppercase">CORE</span>
                 </div>
 
                 <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
@@ -102,7 +102,7 @@ const Team: React.FC = () => {
                             <span className="w-12 h-[2px] bg-aureole-blue"></span>
                             <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-blue">STRATEGIC HIERARCHY</h2>
                         </div>
-                        <h3 className="text-5xl lg:text-7xl font-[950] text-[#001529] uppercase tracking-tighter leading-[0.85] mb-8">
+                        <h3 className="text-5xl lg:text-7xl font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-[0.85] mb-8">
                             EXECUTIVE <br /> <span className="text-aureole-cyan">ARCHITECTURE.</span>
                         </h3>
                         <p className="text-[10px] font-bold text-slate-400 tracking-widest leading-relaxed max-w-sm">

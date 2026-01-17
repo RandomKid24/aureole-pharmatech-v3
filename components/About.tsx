@@ -55,7 +55,7 @@ const About: React.FC = () => {
                 className="group p-6 border border-slate-100 bg-white transition-all duration-300 hover:border-aureole-cyan hover:shadow-2xl hover:shadow-cyan-100 flex flex-col min-h-[220px] lg:min-h-[240px] relative overflow-hidden rounded-sm cursor-default"
               >
                 {/* Background Letter - Highlighting in Cyan on Hover */}
-                <div className="text-8xl font-[950] text-slate-400 group-hover:text-aureole-cyan/40 transition-all duration-500 absolute -right-4 -top-4 select-none pointer-events-none group-hover:scale-125 group-hover:-rotate-12">
+                <div className="text-8xl font-[950] font-heading text-slate-400 group-hover:text-aureole-cyan/40 transition-all duration-500 absolute -right-4 -top-4 select-none pointer-events-none group-hover:scale-125 group-hover:-rotate-12">
                   {val.letter}
                 </div>
 

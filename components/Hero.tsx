@@ -6,14 +6,12 @@ const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center bg-white pt-32 pb-16 sm:pt-52 lg:pt-60">
       <div className="absolute inset-0 z-0 opacity-[0.03] bg-[radial-gradient(#0079ac_1px,transparent_1px)] [background-size:40px_40px]"></div>
-      <div className="absolute right-0 top-0 w-1/3 h-full bg-slate-50/50 -z-10 hidden lg:block"></div>
-
       {/* Large Logo Watermark on Right Side */}
-      <div className="absolute -right-48 top-1/2 -translate-y-1/2 opacity-[0.08] pointer-events-none select-none hidden lg:block">
+      <div className="absolute -right-48 top-1/2 -translate-y-1/2 opacity-[0.05] pointer-events-none select-none hidden lg:block">
         <img
           src="/aureole-logo.png"
           alt=""
-          className="h-[150vh] w-auto opacity-[0.03]"
+          className="h-[150vh] w-auto"
         />
       </div>
 
@@ -52,11 +50,7 @@ const Hero: React.FC = () => {
                 Advanced environmental machinery engineered for Pharmaceutical Stability and Cleanroom monitoring.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
-                <button className="bg-aureole-blue text-white px-12 py-6 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-aureole-slate transition-all flex items-center gap-6 group shadow-2xl shadow-blue-500/10">
-                  Explore Machinery <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
-                </button>
-              </div>
+
             </div>
 
             {/* Hero Image Removed as requested */}

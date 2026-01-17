@@ -87,7 +87,7 @@ const StabilityChambers: React.FC = () => {
             {/* Hero Section */}
             <section className="relative py-16 sm:py-32 overflow-hidden border-b border-slate-100 bg-white">
                 <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none">
-                    <span className="text-[60px] md:text-[100px] lg:text-[150px] font-black text-[#001529] tracking-tighter leading-none uppercase">CHAMBERS</span>
+                    <span className="text-[60px] md:text-[100px] lg:text-[150px] font-black font-heading text-[#001529] tracking-tighter leading-none uppercase">CHAMBERS</span>
                 </div>
 
                 <div className="container mx-auto px-6 sm:px-12 lg:px-24 relative z-10 text-center lg:text-left">
@@ -96,7 +96,7 @@ const StabilityChambers: React.FC = () => {
                             <span className="w-8 sm:w-12 h-[2px] bg-aureole-blue"></span>
                             <h2 className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.5em] text-aureole-blue">ENVIRONMENTAL CONTROL</h2>
                         </div>
-                        <h1 className="text-4xl sm:text-7xl lg:text-[100px] font-[950] text-[#001529] uppercase tracking-tighter leading-[0.9] mb-8 sm:mb-12">
+                        <h1 className="text-4xl sm:text-7xl lg:text-[100px] font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-[0.9] mb-8 sm:mb-12">
                             STABILITY <br /> <span className="text-aureole-cyan uppercase tracking-normal">Chambers.</span>
                         </h1>
                         <p className="text-slate-500 text-[11px] sm:text-[12px] font-bold tracking-[0.2em] leading-relaxed max-w-xl mx-auto lg:mx-0">
@@ -113,8 +113,8 @@ const StabilityChambers: React.FC = () => {
                         {/* Selector Column */}
                         <div className="lg:col-span-4 space-y-3">
                             <div className="mb-12">
-                                <h3 className="text-[10px] font-black text-aureole-blue uppercase tracking-[0.4em] mb-4">Overview</h3>
-                                <h2 className="text-4xl font-[950] text-[#001529] uppercase tracking-tighter leading-none">
+                                <h3 className="text-[10px] font-black font-heading text-aureole-blue uppercase tracking-[0.4em] mb-4">Overview</h3>
+                                <h2 className="text-4xl font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-none">
                                     KEY <br /> <span className="text-aureole-cyan uppercase tracking-normal">Details.</span>
                                 </h2>
                             </div>
@@ -148,7 +148,7 @@ const StabilityChambers: React.FC = () => {
 
                         {/* Content Column */}
                         <div className="lg:col-span-8 bg-white border border-slate-100 p-8 lg:p-16 relative overflow-hidden flex flex-col min-h-[400px]">
-                            <div className="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none font-black text-8xl text-aureole-slate uppercase tracking-tighter">
+                            <div className="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none font-black font-heading text-8xl text-aureole-slate uppercase tracking-tighter">
                                 {navItems[activeSection].title}
                             </div>
 
@@ -181,7 +181,7 @@ const StabilityChambers: React.FC = () => {
                                 <span className="w-12 h-[2px] bg-aureole-blue"></span>
                                 <h2 className="text-[11px] font-black uppercase tracking-[0.5em] text-aureole-blue">PRODUCT RANGE</h2>
                             </div>
-                            <h2 className="text-4xl lg:text-6xl font-[950] text-[#001529] uppercase tracking-tighter leading-none">
+                            <h2 className="text-4xl lg:text-6xl font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-none">
                                 AVAILABLE <span className="text-aureole-cyan uppercase tracking-normal">Models.</span>
                             </h2>
                         </div>
@@ -192,7 +192,7 @@ const StabilityChambers: React.FC = () => {
                             <div key={sIdx} className="bg-white border border-slate-100 p-8 lg:p-12">
                                 <div className="flex items-center gap-4 mb-10 pb-4 border-b border-slate-100">
                                     <div className="w-2 h-2 rounded-full bg-aureole-blue"></div>
-                                    <h3 className="text-2xl font-[950] text-[#001529] uppercase tracking-tighter leading-none">
+                                    <h3 className="text-2xl font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-none">
                                         {sub.name}
                                     </h3>
                                 </div>

@@ -87,9 +87,9 @@ const IndustriesServed: React.FC = () => {
               </div>
 
               <div className="p-6 flex flex-col flex-1 relative">
-                <h4 className="text-xl font-[900] text-slate-800 uppercase tracking-tight mb-3 group-hover:text-aureole-cyan transition-colors">
+                <h3 className="text-xl font-[900] font-heading text-slate-800 uppercase tracking-tight mb-3 group-hover:text-aureole-cyan transition-colors">
                   {sector.name}
-                </h4>
+                </h3>
 
                 <p className="text-slate-500 text-[11px] font-bold tracking-wide leading-relaxed mb-6 line-clamp-3">
                   {sector.desc}
