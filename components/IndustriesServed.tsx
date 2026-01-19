@@ -91,14 +91,14 @@ const IndustriesServed: React.FC = () => {
                   {sector.name}
                 </h3>
 
-                <p className="text-slate-500 text-[14px] font-normal tracking-tight leading-relaxed mb-6 line-clamp-3">
+                <p className="text-slate-500 text-[14px] font-medium tracking-tight leading-relaxed mb-6 line-clamp-3">
                   {sector.desc}
                 </p>
 
                 <div className="mt-auto space-y-4">
                   <div className="flex flex-wrap gap-2">
                     {sector.capabilities.map((cap, i) => (
-                      <span key={i} className="text-[8px] font-bold text-slate-400 bg-slate-50 border border-slate-100 px-2 py-1 uppercase tracking-wider rounded-sm">
+                      <span key={i} className="text-[8px] font-black text-slate-400 bg-slate-50 border border-slate-100 px-2 py-1 uppercase tracking-wider rounded-sm">
                         {cap}
                       </span>
                     ))}

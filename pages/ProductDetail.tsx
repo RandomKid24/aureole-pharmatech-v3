@@ -59,7 +59,7 @@ const ProductGallery: React.FC<{ images: string[], name: string, captions?: stri
 
             {captions && captions[activeIndex] && (
                 <div className="p-4 bg-slate-50 border-l-[3px] border-aureole-cyan">
-                    <p className="text-[10px] font-bold text-slate-500 tracking-widest leading-relaxed uppercase">
+                    <p className="text-[12px] font-medium text-slate-500 tracking-widest leading-relaxed uppercase">
                         {captions[activeIndex]}
                     </p>
                 </div>
@@ -167,7 +167,7 @@ const ProductDetail: React.FC = () => {
                             <div className="pt-8 border-t border-slate-50">
                                 <h3 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-aureole-slate mb-6">Description</h3>
                                 <div className="max-w-4xl">
-                                    <p className="text-[15px] font-bold text-slate-500 leading-relaxed text-left tracking-tight">
+                                    <p className="text-[15px] font-medium text-slate-500 leading-relaxed text-left tracking-tight">
                                         {product.description}
                                     </p>
                                 </div>

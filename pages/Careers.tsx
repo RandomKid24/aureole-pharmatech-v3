@@ -203,7 +203,7 @@ const Careers: React.FC = () => {
                                                         {job.description.map((item, i) => (
                                                             <li key={i} className="flex gap-4">
                                                                 <div className="w-1 h-3 bg-aureole-cyan mt-0.5 flex-shrink-0"></div>
-                                                                <span className="text-[13px] font-medium text-slate-600 leading-relaxed tracking-tight">{item}</span>
+                                                                <span className="text-[15px] font-medium text-slate-600 leading-relaxed tracking-tight">{item}</span>
                                                             </li>
                                                         ))}
                                                     </ul>
@@ -217,7 +217,7 @@ const Careers: React.FC = () => {
                                                         {job.skills.map((skill, i) => (
                                                             <li key={i} className="flex gap-4">
                                                                 <div className="w-1.5 h-1.5 rounded-full bg-aureole-blue mt-1.5 flex-shrink-0"></div>
-                                                                <span className="text-[14px] font-bold text-[#001529] tracking-tight">{skill}</span>
+                                                                <span className="text-[15px] font-medium text-[#001529] tracking-tight">{skill}</span>
                                                             </li>
                                                         ))}
                                                     </ul>

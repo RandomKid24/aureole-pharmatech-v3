@@ -179,7 +179,7 @@ const Events: React.FC = () => {
                         </h2>
 
                         <div className="max-w-3xl border-l-[3px] border-aureole-blue/20 bg-slate-50/50 p-10">
-                            <p className="text-lg lg:text-xl text-[#001529] font-bold leading-relaxed mb-8">
+                            <p className="text-lg lg:text-xl text-slate-700 font-medium leading-relaxed mb-8">
                                 Journey through our past events and exhibitions. Click on any event to explore the full gallery of images and videos.
                             </p>
                         </div>
@@ -228,7 +228,7 @@ const Events: React.FC = () => {
                                         <span className="text-[10px] font-black uppercase tracking-widest text-aureole-blue">{exh.location}</span>
                                     </div>
                                     <h3 className="text-xl font-black uppercase tracking-tighter text-[#001529] group-hover:text-aureole-cyan transition-colors">{exh.title}</h3>
-                                    <p className="text-[10px] font-bold text-slate-500 tracking-widest leading-loose h-20 overflow-hidden text-ellipsis">
+                                    <p className="text-[15px] font-medium text-slate-500 tracking-widest leading-relaxed h-20 overflow-hidden text-ellipsis">
                                         {exh.description}
                                     </p>
                                     <div className="pt-4">
@@ -274,7 +274,7 @@ const Events: React.FC = () => {
                                 </div>
                                 <div className="p-8">
                                     <h3 className="text-lg font-black uppercase tracking-tighter text-[#001529] mb-4 group-hover:text-aureole-blue transition-colors">{event.title}</h3>
-                                    <p className="text-[10px] font-bold text-slate-500 tracking-widest leading-loose mb-6 line-clamp-2">
+                                    <p className="text-[15px] font-medium text-slate-500 tracking-widest leading-relaxed mb-6 line-clamp-2">
                                         {event.description}
                                     </p>
                                     <div className="flex items-center gap-2 text-[9px] font-black uppercase tracking-widest text-aureole-blue">

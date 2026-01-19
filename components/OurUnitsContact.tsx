@@ -78,7 +78,7 @@ const OurUnitsContact: React.FC = () => {
                     <ArrowRight className="w-6 h-6" />
                   </div>
                   <div className="text-left">
-                    <div className="text-[9px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-1">REVIEW</div>
+                    <div className="text-[9px] font-black text-slate-500 uppercase tracking-[0.2em] mb-1">REVIEW</div>
                     <div className="text-[12px] font-black text-[#001529] uppercase tracking-[0.3em]">SEND MESSAGE</div>
                   </div>
                 </button>

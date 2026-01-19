@@ -17,18 +17,24 @@ The application follows a strictly defined corporate blue palette. **Pure black 
 
 ## 2. Typography
 
-We use a high-density, brutalist typographic approach.
+We use a high-density, brutalist typographic approach with consistent font weights.
 
-- **Primary Sans**: `Inter` (sans-serif)
-- **Secondary Sans**: `Questrial` (sans-serif)
+- **Primary Sans**: `Manrope` (sans-serif) - Used for body text
+- **Secondary Sans**: `Inter` (sans-serif) - Used for headings
+- **Tertiary Sans**: `Questrial` (sans-serif) - Available for special use cases
 - **Font Weights**:
-  - `font-[950]` or `font-black`: Used for main headings.
-  - `font-bold`: Used for labels and secondary text.
-  - `font-medium`: Used for body text.
+  - `font-[950]` or `font-black`: Used for main headings and display text.
+  - `font-bold`: Used for labels, buttons, and emphasis text.
+  - `font-medium`: Used for body text, descriptions, and regular content.
 
 ### Heading Styles
-- **Main Heading**: Uppercase, tracking-tighter, leading-none/tight.
+- **Main Heading**: Uppercase, tracking-tighter, leading-none/tight, using Inter font family.
 - **Section Labels**: 10px - 11px, font-black, uppercase, tracking-[0.4em] to [0.5em].
+
+### Body Text Styles
+- **Primary Body Text**: Use `font-medium` (400-500 weight) with Manrope font family.
+- **Secondary Text**: Use `font-medium` for descriptions and supporting content.
+- **Avoid**: `font-normal` and `font-bold` for body text to maintain consistency.
 
 ## 3. UI Elements & Layout
 

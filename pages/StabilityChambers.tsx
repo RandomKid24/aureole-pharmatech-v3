@@ -99,7 +99,7 @@ const StabilityChambers: React.FC = () => {
                         <h1 className="text-4xl sm:text-7xl lg:text-[100px] font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-[0.9] mb-8 sm:mb-12">
                             STABILITY <br /> <span className="text-aureole-cyan uppercase tracking-normal">Chambers.</span>
                         </h1>
-                        <p className="text-slate-500 text-[14px] sm:text-[15px] font-bold tracking-tight leading-relaxed max-w-xl mx-auto lg:mx-0">
+                        <p className="text-slate-500 text-[15px] font-medium tracking-tight leading-relaxed max-w-xl mx-auto lg:mx-0">
                             {stabilityCategory.description}
                         </p>
                     </div>
@@ -135,7 +135,7 @@ const StabilityChambers: React.FC = () => {
                                             </div>
                                             <div>
                                                 <div className={`text-lg font-black uppercase tracking-tighter leading-none mb-1 ${activeSection === idx ? 'text-aureole-cyan' : 'text-[#001529]'}`}>{item.title}</div>
-                                                <div className="text-[11px] font-bold uppercase tracking-wide text-slate-400">
+                                                <div className="text-[11px] font-black uppercase tracking-wide text-slate-400">
                                                     {item.subtitle}
                                                 </div>
                                             </div>
@@ -156,7 +156,7 @@ const StabilityChambers: React.FC = () => {
                                 {sections[activeSection].items.map((item, i) => (
                                     <div key={i} className="flex gap-4 group">
                                         <div className="mt-2 min-w-[5px] h-[5px] rounded-full bg-aureole-cyan"></div>
-                                        <p className="text-[13px] font-bold text-[#001529] tracking-wide leading-relaxed opacity-70">
+                                        <p className="text-[15px] font-medium text-[#001529] tracking-wide leading-relaxed opacity-70">
                                             {item}
                                         </p>
                                     </div>

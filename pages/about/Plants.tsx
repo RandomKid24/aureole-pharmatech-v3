@@ -126,7 +126,7 @@ const Plants: React.FC = () => {
                                     </h3>
                                     <div className="flex items-center gap-3 text-slate-400 mb-8 pb-6 border-b border-slate-50 justify-center lg:justify-start">
                                         <MapPin size={18} className="text-aureole-cyan" />
-                                        <span className="text-[11px] font-bold tracking-widest">{facility.location}</span>
+                                        <span className="text-[12px] font-medium tracking-widest">{facility.location}</span>
                                     </div>
                                     <p className="text-slate-500 text-lg leading-relaxed mb-12">
                                         {facility.desc}

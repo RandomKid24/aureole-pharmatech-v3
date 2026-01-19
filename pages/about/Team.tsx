@@ -82,7 +82,7 @@ const Team: React.FC = () => {
                         <h1 className="text-5xl sm:text-7xl lg:text-8xl font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-[0.85] mb-12">
                             PRECISION <br /> MINDSET, <span className="text-aureole-cyan">COLLECTIVE IMPACT.</span>
                         </h1>
-                        <p className="text-slate-500 text-[10px] sm:text-[11px] font-bold tracking-[0.2em] leading-relaxed max-w-sm">
+                        <p className="text-slate-500 text-[12px] font-medium tracking-[0.2em] leading-relaxed max-w-sm">
                             The driving force behind our precision engineering <br /> and global innovation excellence.
                         </p>
                     </div>
@@ -105,7 +105,7 @@ const Team: React.FC = () => {
                         <h3 className="text-5xl lg:text-7xl font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-[0.85] mb-8">
                             EXECUTIVE <br /> <span className="text-aureole-cyan">ARCHITECTURE.</span>
                         </h3>
-                        <p className="text-[10px] font-bold text-slate-400 tracking-widest leading-relaxed max-w-sm">
+                        <p className="text-[12px] font-medium text-slate-400 tracking-widest leading-relaxed max-w-sm">
                             A tiered leadership structure driving global vision through specialized functional expertise.
                         </p>
                     </div>
@@ -138,7 +138,7 @@ const Team: React.FC = () => {
                                     "{coreTeam[0].quote}"
                                 </p>
                             </div>
-                            <p className="text-slate-500 text-[12px] font-bold tracking-widest leading-relaxed max-w-2xl text-justify mb-12">
+                            <p className="text-slate-500 text-[15px] font-medium tracking-widest leading-relaxed max-w-2xl text-justify mb-12">
                                 Our latest endeavor, Aureole Pharma, marks the commencement of a journey characterized by a fresh vision and state-of-the-art technology, undertaken alongside my trusted team. I consistently hold the conviction that individuals constitute the invaluable cornerstone of any organization.
                             </p>
                             <div className="flex gap-6">
@@ -182,7 +182,7 @@ const Team: React.FC = () => {
                                                 <div className="h-px flex-grow bg-slate-100"></div>
                                             </div>
                                             <h4 className="text-5xl font-[950] text-[#001529] uppercase tracking-tighter leading-none mb-4">{member.name}</h4>
-                                            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest leading-relaxed">{member.role}</p>
+                                            <p className="text-sm font-medium text-slate-400 uppercase tracking-widest leading-relaxed">{member.role}</p>
 
                                             <div className="mt-auto flex items-center gap-6">
                                                 <div className="flex flex-col">
@@ -251,7 +251,7 @@ const Team: React.FC = () => {
                             </h3>
                         </div>
                         <div className="lg:max-w-xs pt-4">
-                            <p className="text-[11px] font-bold text-slate-400 tracking-widest leading-relaxed">
+                            <p className="text-[12px] font-medium text-slate-400 tracking-widest leading-relaxed">
                                 A nationwide network of specialists delivering precision and excellence across every regional touchpoint.
                             </p>
                         </div>

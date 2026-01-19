@@ -40,7 +40,7 @@ const PrecisionEngineeredSystems: React.FC = () => {
               PRECISION <br /> ENGINEERED <span className="text-aureole-cyan">SYSTEMS.</span>
             </h3>
 
-            <p className="text-slate-500 text-[14px] sm:text-[15px] font-normal tracking-tight leading-relaxed max-w-sm">
+            <p className="text-slate-500 text-[14px] sm:text-[15px] font-medium tracking-tight leading-relaxed max-w-sm">
               Engineering excellence with certified standards <br className="hidden sm:block" /> for global pharmaceutical excellence.
             </p>
           </div>
@@ -102,7 +102,7 @@ const PrecisionEngineeredSystems: React.FC = () => {
                 {product.name}
               </h4>
 
-              <p className="text-slate-500 text-[14px] font-normal leading-relaxed mb-8 line-clamp-3">
+              <p className="text-slate-500 text-[14px] font-medium leading-relaxed mb-8 line-clamp-3">
                 {product.description}
               </p>
 

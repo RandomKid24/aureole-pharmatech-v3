@@ -78,10 +78,10 @@ const Software: React.FC = () => {
                         </h2>
 
                         <div className="max-w-3xl border-l-[3px] border-aureole-blue/20 bg-slate-50/50 p-10 mx-auto lg:mx-0">
-                            <p className="text-lg lg:text-xl text-[#001529] font-normal leading-relaxed mb-8">
+                            <p className="text-lg lg:text-xl text-slate-700 font-medium leading-relaxed mb-8">
                                 In today’s regulated pharmaceutical and laboratory environment, reliable software is as critical as precision equipment. Aureole PharmaTech delivers intelligent, compliant, and user-friendly software solutions designed to enhance monitoring, control, data integrity, and operational efficiency.
                             </p>
-                            <p className="text-[14px] text-slate-500 font-normal leading-loose tracking-tight">
+                            <p className="text-[15px] text-slate-500 font-medium leading-relaxed tracking-tight">
                                 Aureole PharmaTech software solutions are developed to meet global regulatory expectations while ensuring ease of use, accuracy, and long-term reliability.
                             </p>
                         </div>
@@ -98,7 +98,7 @@ const Software: React.FC = () => {
                                 <ShieldCheck className="w-8 h-8 text-aureole-blue" />
                                 <h3 className="text-3xl lg:text-4xl font-black font-heading uppercase tracking-tighter text-[#001529] leading-none">REGULATORY COMPLIANCE & DATA INTEGRITY</h3>
                             </div>
-                            <p className="text-[14px] font-normal text-slate-500 tracking-tight leading-relaxed text-left">
+                            <p className="text-[15px] font-medium text-slate-500 tracking-tight leading-relaxed text-left">
                                 Aureole PharmaTech software solutions are designed in alignment with international regulatory requirements. Emphasis is placed on data integrity, traceability, and security to support compliance with industry standards such as audit readiness and controlled documentation practices.
                             </p>
                         </div>
@@ -133,7 +133,7 @@ const Software: React.FC = () => {
                                     <Monitor className="w-8 h-8 text-aureole-cyan" />
                                     <h3 className="text-3xl lg:text-5xl font-black font-heading uppercase tracking-tighter text-[#001529] leading-[0.9]">ADVANCED MONITORING <br /> & CONTROL</h3>
                                 </div>
-                                <p className="text-[14px] font-normal text-slate-500 tracking-tight leading-loose text-left">
+                                <p className="text-[15px] font-medium text-slate-500 tracking-tight leading-relaxed text-left">
                                     The software enables precise monitoring and control of critical parameters such as temperature, humidity, pressure, and alarms. Real-time data visualization and automated alerts help ensure consistent environmental conditions and rapid response to deviations.
                                 </p>
                             </div>
@@ -190,7 +190,7 @@ const Software: React.FC = () => {
                                     </button>
                                     <div className={`transition-all duration-500 overflow-hidden ${openFaq === idx ? 'max-h-[500px]' : 'max-h-0'}`}>
                                         <div className="p-8 pt-0 border-t border-slate-50">
-                                            <p className="text-[13px] font-normal text-slate-500 tracking-tight leading-loose">
+                                            <p className="text-[15px] font-medium text-slate-500 tracking-tight leading-relaxed">
                                                 {faq.answer}
                                             </p>
                                         </div>

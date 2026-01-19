@@ -21,11 +21,11 @@ const Hero: React.FC = () => {
           <div className="flex flex-wrap items-center gap-x-4 gap-y-4 mb-12 animate-in fade-in slide-in-from-left-4 duration-500">
             <div className="flex items-center gap-3 bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm">
               <ShieldCheck className="w-3.5 h-3.5 text-aureole-blue" />
-              <span className="text-[10px] font-bold tracking-[0.2em] text-slate-500 uppercase">ISO 9001</span>
+              <span className="text-[10px] font-black tracking-[0.2em] text-slate-500 uppercase">ISO 9001</span>
             </div>
             <div className="flex items-center gap-3 bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm">
               <Award className="w-3.5 h-3.5 text-aureole-blue" />
-              <span className="text-[10px] font-bold tracking-[0.2em] text-slate-500 uppercase">GMP COMPLIANT</span>
+              <span className="text-[10px] font-black tracking-[0.2em] text-slate-500 uppercase">GMP COMPLIANT</span>
             </div>
             <div className="flex items-center gap-3 bg-blue-50/30 border border-blue-100/50 px-4 py-2 rounded-full shadow-sm">
               <CheckCircle2 className="w-3.5 h-3.5 text-aureole-blue" />

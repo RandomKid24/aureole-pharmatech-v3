@@ -216,7 +216,7 @@ const Header: React.FC = () => {
                                             <Link
                                               key={pName}
                                               to={`/products/${slugify(pName)}`}
-                                              className="text-[10px] font-bold text-slate-500 hover:text-aureole-blue hover:pl-2 transition-all uppercase tracking-wide py-1 block w-full truncate"
+                                              className="text-[10px] font-black text-slate-500 hover:text-aureole-blue hover:pl-2 transition-all uppercase tracking-wide py-1 block w-full truncate"
                                               title={pName}
                                             >
                                               {pName}
@@ -320,7 +320,7 @@ const Header: React.FC = () => {
                                     <Link
                                       key={pName}
                                       to={`/products/${slugify(pName)}`}
-                                      className="text-[11px] font-bold text-slate-600 hover:text-aureole-cyan uppercase tracking-wide truncate"
+                                      className="text-[11px] font-black text-slate-600 hover:text-aureole-cyan uppercase tracking-wide truncate"
                                       onClick={() => setMobileMenuOpen(false)}
                                     >
                                       {pName}

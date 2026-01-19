@@ -47,7 +47,7 @@ const GlobalValidation: React.FC = () => {
           <h3 className="text-4xl sm:text-6xl lg:text-7xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.9] mb-8">
             GLOBAL <br /> <span className="text-aureole-blue">VALIDATION.</span>
           </h3>
-          <p className="text-slate-500 font-normal text-[14px] sm:text-[15px] tracking-tight max-w-2xl leading-relaxed">
+          <p className="text-slate-500 font-medium text-[14px] sm:text-[15px] tracking-tight max-w-2xl leading-relaxed">
             A comprehensive network of {CLIENTS.length} verified pharmaceutical entities utilizing Aureole's precision engineering.
           </p>
         </div>

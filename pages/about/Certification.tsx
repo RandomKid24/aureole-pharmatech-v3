@@ -67,7 +67,7 @@ const Certification: React.FC = () => {
                         <h1 className="text-5xl sm:text-7xl lg:text-8xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter leading-[0.85] mb-12">
                             QUALITY <br /> <span className="text-aureole-cyan uppercase tracking-normal">Assured.</span>
                         </h1>
-                        <p className="text-slate-500 text-[11px] font-bold tracking-[0.2em] leading-relaxed max-w-sm mx-auto lg:mx-0">
+                        <p className="text-slate-500 text-[12px] font-medium tracking-[0.2em] leading-relaxed max-w-sm mx-auto lg:mx-0">
                             Authentication and regulatory compliance frameworks governing our precision engineering protocols.
                         </p>
                     </div>
@@ -95,7 +95,7 @@ const Certification: React.FC = () => {
                             </div>
                             <div className="mb-12">
                                 <span className="text-[9px] font-black text-slate-300 uppercase tracking-widest block mb-4">Issuer</span>
-                                <p className="text-[11px] font-bold text-slate-500 tracking-widest leading-relaxed">{ceDetails.issuer}</p>
+                                <p className="text-[12px] font-medium text-slate-500 tracking-widest leading-relaxed">{ceDetails.issuer}</p>
                             </div>
                             <a
                                 href={ceDetails.file}
@@ -143,7 +143,7 @@ const Certification: React.FC = () => {
                                 </div>
                                 <div className="flex flex-col gap-2">
                                     <span className="text-[9px] font-black text-slate-300 uppercase tracking-widest">Certified Location</span>
-                                    <span className="text-[12px] font-bold text-slate-600 tracking-wider">{isoDetails.location}</span>
+                                    <span className="text-[13px] font-medium text-slate-600 tracking-wider">{isoDetails.location}</span>
                                 </div>
                                 <div className="pt-10 border-t border-slate-50 flex gap-8">
                                     <div>
@@ -161,7 +161,7 @@ const Certification: React.FC = () => {
                                     <h4 className="text-[11px] font-black font-heading text-aureole-blue uppercase tracking-[0.2em] mb-4">Surveillance Schedule</h4>
                                     {isoDetails.surveillance.map((s, i) => (
                                         <div key={i} className="flex justify-between items-center py-4 border-b border-white">
-                                            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{s.label}</span>
+                                            <span className="text-[11px] font-medium text-slate-400 uppercase tracking-widest">{s.label}</span>
                                             <span className="text-[10px] font-black text-aureole-slate uppercase">{s.date}</span>
                                         </div>
                                     ))}
@@ -210,7 +210,7 @@ const Certification: React.FC = () => {
                                     <h4 className="text-2xl lg:text-3xl font-black font-heading text-aureole-slate uppercase tracking-tighter leading-none mb-6 group-hover:text-aureole-blue transition-colors">
                                         {std.split(' (')[0]}
                                     </h4>
-                                    <p className="text-[11px] font-bold text-slate-400 tracking-[0.15em] leading-relaxed group-hover:text-slate-500 transition-colors">
+                                    <p className="text-[12px] font-medium text-slate-400 tracking-[0.15em] leading-relaxed group-hover:text-slate-500 transition-colors">
                                         {std.split(' (')[1]?.replace(')', '') || 'TECHNICAL COMPLIANCE FRAMEWORK'}
                                     </p>
                                 </div>
@@ -238,7 +238,7 @@ const Certification: React.FC = () => {
                                 <p className="text-[14px] font-[900] text-aureole-slate uppercase tracking-wider mb-2">Aureole Pharma Pvt. Ltd.</p>
                                 <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Issue Date: 05-10-2023 | Managing Director: Dr. Kiran Badgujar</p>
                             </div>
-                            <p className="text-[12px] font-bold text-slate-500 tracking-widest leading-relaxed mb-12 text-justify">
+                            <p className="text-[15px] font-medium text-slate-500 tracking-widest leading-relaxed mb-12 text-justify">
                                 We are committed to achieving total customer satisfaction in domestic and international markets by providing the best available modern instrumentation technology. Our focus remains on continuous improvement, adherence to government and international norms, and maintaining 100% accuracy and employee responsibility across all manufacturing processes.
                             </p>
                             <a
