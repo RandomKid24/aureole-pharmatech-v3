@@ -18,6 +18,7 @@ import {
     Maximize2
 } from 'lucide-react';
 import Lightbox from '../components/Lightbox';
+import LazyImage from '../components/LazyImage';
 
 const FAQ_DATA = [
     {
@@ -128,7 +129,7 @@ const Service: React.FC = () => {
                             className="relative overflow-hidden border border-slate-100 shadow-2xl group transition-all duration-700 aspect-video lg:aspect-square cursor-zoom-in"
                             onClick={() => setIsLightboxOpen(true)}
                         >
-                            <img
+                            <LazyImage
                                 src={serviceImage}
                                 alt="MANUFACTURING"
                                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000"

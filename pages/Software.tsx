@@ -23,6 +23,7 @@ import {
     Maximize2
 } from 'lucide-react';
 import Lightbox from '../components/Lightbox';
+import LazyImage from '../components/LazyImage';
 
 const FAQ_DATA = [
     {
@@ -157,7 +158,7 @@ const Software: React.FC = () => {
                             className="relative group overflow-hidden border border-slate-100 bg-white p-6 shadow-2xl transition-all duration-700 aspect-square flex items-center justify-center cursor-zoom-in"
                             onClick={() => setIsLightboxOpen(true)}
                         >
-                            <img
+                            <LazyImage
                                 src={architectureImg}
                                 alt="Software Architecture Diagram"
                                 className="w-full h-auto transition-all duration-1000 object-contain p-4"

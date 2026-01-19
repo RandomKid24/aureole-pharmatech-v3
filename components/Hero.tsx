@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ArrowDown, ShieldCheck, Award, CheckCircle2 } from 'lucide-react';
+import LazyImage from './LazyImage';
 
 const Hero: React.FC = () => {
   return (
@@ -8,7 +9,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 z-0 opacity-[0.03] bg-[radial-gradient(#0079ac_1px,transparent_1px)] [background-size:40px_40px]"></div>
       {/* Large Logo Watermark on Right Side */}
       <div className="absolute -right-48 top-1/2 -translate-y-1/2 opacity-[0.05] pointer-events-none select-none hidden lg:block">
-        <img
+        <LazyImage
           src="/aureole-logo.png"
           alt=""
           className="h-[150vh] w-auto"

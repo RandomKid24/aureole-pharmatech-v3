@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { CLIENTS } from '../constants';
+import LazyImage from './LazyImage';
 
 const GlobalValidation: React.FC = () => {
   // Splitting the massive list into 3 rows for high-density impact
@@ -17,7 +18,7 @@ const GlobalValidation: React.FC = () => {
         {[...items, ...items].map((client, idx) => (
           <div key={idx} className="flex items-center gap-6 sm:gap-10 group transition-all duration-300 w-[240px] sm:w-[450px] flex-shrink-0">
             <div className="w-20 h-10 sm:w-32 sm:h-16 flex-shrink-0 bg-white rounded-sm overflow-hidden p-2 border border-slate-100 group-hover:border-aureole-cyan/30 group-hover:scale-105 transition-all duration-300">
-              <img
+              <LazyImage
                 src={client.logo}
                 alt={client.name}
                 className="w-full h-full object-contain transition-opacity"

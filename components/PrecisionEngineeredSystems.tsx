@@ -4,6 +4,7 @@ import { PRODUCTS } from '../constants';
 import { ArrowUpRight, Activity, ShieldCheck, FlaskConical, Settings, Cpu, Gauge, Maximize2 } from 'lucide-react';
 import Lightbox from './Lightbox';
 import { useNavigate } from 'react-router-dom';
+import LazyImage from './LazyImage';
 
 const PrecisionEngineeredSystems: React.FC = () => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
@@ -79,7 +80,7 @@ const PrecisionEngineeredSystems: React.FC = () => {
                 className="aspect-[5/4] relative mb-8 overflow-hidden bg-white rounded-sm border border-slate-50 flex items-center justify-center p-6 cursor-zoom-in"
                 onClick={() => setLightboxIndex(idx)}
               >
-                <img
+                <LazyImage
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-contain transition-all duration-500"

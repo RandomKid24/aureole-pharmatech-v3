@@ -4,30 +4,28 @@ import { useParams, Link } from 'react-router-dom';
 import { PRODUCT_DETAILS } from '../data/products';
 import { findValuesBySlug } from '../utils/urlUtils';
 import { ArrowLeft, CheckCircle2, Zap, Settings, Box, List, PlusCircle, ChevronLeft, ChevronRight, X, Maximize2 } from 'lucide-react';
+import LazyImage from '../components/LazyImage';
+import ProductImage from '../components/ProductImage';
 
 const ProductGallery: React.FC<{ images: string[], name: string, captions?: string[] }> = ({ images, name, captions }) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
+    // Handle placeholder images
     if (!images || images.length === 0 || images[0] === 'PLACEHOLDER') {
         return (
-            <div className="aspect-square bg-slate-50 flex flex-col items-center justify-center border border-slate-100 p-12 text-center group">
-                <div className="text-6xl mb-6 transition-all duration-700 transform group-hover:scale-110">
-                    🔬
-                </div>
-                <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-aureole-slate mb-2">IMAGE ARRIVING SOON</h3>
-                <p className="text-[14px] font-[950] text-[#001529] uppercase tracking-tighter leading-none">
-                    {name}
-                </p>
-                <div className="mt-8 w-12 h-[2px] bg-aureole-cyan/30 group-hover:w-24 transition-all duration-700"></div>
-            </div>
+            <ProductImage
+                src="PLACEHOLDER"
+                alt={name}
+                className="group"
+            />
         );
     }
 
     return (
         <div className="space-y-4">
             <div className="relative aspect-square overflow-hidden bg-white border border-slate-100 group/hero cursor-zoom-in" onClick={() => setIsLightboxOpen(true)}>
-                <img
+                <LazyImage
                     src={images[activeIndex]}
                     alt={`${name} - ${activeIndex + 1}`}
                     className="w-full h-full object-contain transition-all duration-700 p-4"
@@ -74,7 +72,11 @@ const ProductGallery: React.FC<{ images: string[], name: string, captions?: stri
                             className={`aspect-square border-2 transition-all p-1 bg-white ${activeIndex === i ? 'border-aureole-cyan' : 'border-transparent hover:border-slate-200'
                                 }`}
                         >
-                            <img src={img} alt={`${name} thumb ${i + 1}`} className="w-full h-full object-contain" />
+                            <LazyImage 
+                                src={img} 
+                                alt={`${name} thumb ${i + 1}`} 
+                                className="w-full h-full object-contain" 
+                            />
                         </button>
                     ))}
                 </div>
@@ -95,7 +97,7 @@ const ProductGallery: React.FC<{ images: string[], name: string, captions?: stri
                             <ChevronLeft size={48} />
                         </button>
 
-                        <img
+                        <LazyImage
                             src={images[activeIndex]}
                             className="max-w-full max-h-[80vh] object-contain shadow-2xl animate-in zoom-in duration-500 p-4 bg-white"
                             alt={name}

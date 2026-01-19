@@ -2,6 +2,7 @@
 import React from 'react';
 import { AUREOLE_VALUES } from '../constants';
 import { Microscope } from 'lucide-react';
+import LazyImage from './LazyImage';
 
 /**
  * AboutSection: Redesigned for a high-density, compact 7-letter brand mnemonic grid.
@@ -35,7 +36,7 @@ const About: React.FC = () => {
           <div className="lg:w-1/2 relative group w-full">
             <div className="absolute -inset-10 bg-aureole-blue/5 rounded-full scale-75 group-hover:scale-100 transition-transform duration-500 opacity-20 blur-3xl"></div>
             <div className="relative aspect-video lg:aspect-square overflow-hidden rounded-sm border border-slate-100 shadow-xl">
-              <img
+              <LazyImage
                 src="/about/office-hq-v2.jpg"
                 alt="Radiant Engineering"
                 className="w-full h-full object-cover transition-all duration-500"

@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Factory, MapPin, Gauge, Shield, Cpu, Zap, Microscope, Boxes, X, ChevronLeft, ChevronRight, Image as ImageIcon } from 'lucide-react';
+import LazyImage from '../../components/LazyImage';
 
 const Plants: React.FC = () => {
     const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
@@ -68,7 +69,7 @@ const Plants: React.FC = () => {
             {/* Hero Section */}
             <section className="relative h-[70vh] flex items-center overflow-hidden bg-aureole-slate">
                 <div className="absolute inset-0 z-0">
-                    <img
+                    <LazyImage
                         src="/plants/DJI_20240723121709_0011_D.JPG"
                         alt="Aureole Manufacturing Aerial View"
                         className="w-full h-full object-cover opacity-50 shadow-inner"
@@ -101,7 +102,7 @@ const Plants: React.FC = () => {
                                 {/* Image Column */}
                                 <div className="w-full lg:w-1/2 relative group cursor-pointer" onClick={() => setLightboxIndex(galleryImages.indexOf(facility.image) !== -1 ? galleryImages.indexOf(facility.image) : 0)}>
                                     <div className="relative overflow-hidden aspect-[4/3] shadow-2xl shadow-slate-200 border border-slate-100">
-                                        <img
+                                        <LazyImage
                                             src={facility.image}
                                             alt={facility.title}
                                             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000"
@@ -171,7 +172,7 @@ const Plants: React.FC = () => {
                                 className="relative group overflow-hidden break-inside-avoid shadow-xl shadow-slate-200 rounded-sm cursor-pointer"
                                 onClick={() => setLightboxIndex(i)}
                             >
-                                <img
+                                <LazyImage
                                     src={img}
                                     alt={`Aureole Plant Gallery ${i + 1}`}
                                     className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
@@ -228,7 +229,7 @@ const Plants: React.FC = () => {
                             <ChevronLeft size={48} />
                         </button>
 
-                        <img
+                        <LazyImage
                             src={galleryImages[lightboxIndex]}
                             className="max-w-full max-h-[80vh] object-contain shadow-2xl animate-in zoom-in duration-500"
                             alt="Plant view"

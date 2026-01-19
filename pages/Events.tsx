@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Calendar, MapPin, Image as ImageIcon, Users, Award, ArrowRight, X, ChevronLeft, ChevronRight, Play } from 'lucide-react';
+import LazyImage from '../components/LazyImage';
 
 interface EventMedia {
     title: string;
@@ -205,7 +206,7 @@ const Events: React.FC = () => {
                             <div key={idx} className="group cursor-pointer" onClick={() => setSelectedEvent(exh)}>
                                 <div className="relative aspect-[16/9] overflow-hidden bg-slate-100 mb-8">
                                     <div className="absolute inset-0 bg-aureole-slate/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-                                    <img
+                                    <LazyImage
                                         src={exh.thumbnail}
                                         alt={exh.title}
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -260,7 +261,7 @@ const Events: React.FC = () => {
                         {COMPANY_EVENTS.map((event, idx) => (
                             <div key={idx} className="bg-white border border-slate-100 hover:border-aureole-cyan transition-all group cursor-pointer" onClick={() => setSelectedEvent(event)}>
                                 <div className="aspect-[4/3] relative overflow-hidden">
-                                    <img
+                                    <LazyImage
                                         src={event.thumbnail}
                                         alt={event.title}
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -326,7 +327,7 @@ const Events: React.FC = () => {
                                     autoPlay
                                 />
                             ) : (
-                                <img
+                                <LazyImage
                                     src={`${selectedEvent.folderPath}/${galleryItems[lightboxIndex]}`}
                                     alt="Gallery item"
                                     className="max-w-full max-h-full object-contain shadow-2xl animate-in fade-in zoom-in duration-500"
@@ -355,7 +356,7 @@ const Events: React.FC = () => {
                                         <Play size={20} className="text-white fill-white" />
                                     </div>
                                 ) : (
-                                    <img
+                                    <LazyImage
                                         src={`${selectedEvent.folderPath}/${item}`}
                                         className="w-full h-full object-cover"
                                         alt={`Thumbnail ${idx}`}

@@ -41,6 +41,7 @@
             'marquee': 'marquee 180s linear infinite',
             'marquee-reverse': 'marquee-reverse 180s linear infinite',
             'marquee-fast': 'marquee 150s linear infinite',
+            'shimmer': 'shimmer 2s infinite',
           },
           keyframes: {
             float: {
@@ -54,6 +55,10 @@
             'marquee-reverse': {
               '0%': { transform: 'translateX(-50%)' },
               '100%': { transform: 'translateX(0%)' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-200% 0' },
+              '100%': { backgroundPosition: '200% 0' },
             }
           }
         },
@@ -89,6 +94,24 @@
     h5,
     h6 {
       font-family: 'Inter', sans-serif;
+    }
+
+    /* Image loading optimizations */
+    img {
+      content-visibility: auto;
+      contain-intrinsic-size: 1px 400px;
+    }
+
+    /* Lazy loading skeleton shimmer effect */
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    .animate-shimmer {
+      background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+      background-size: 200% 100%;
+      animation: shimmer 2s infinite;
     }
 
     /* Optimized static grain instead of expensive SVG turbulence */

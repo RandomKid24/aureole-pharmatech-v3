@@ -17,6 +17,7 @@ import Service from './pages/Service';
 import Software from './pages/Software';
 import Events from './pages/Events';
 import Careers from './pages/Careers';
+import { preloadCriticalImages } from './utils/imagePreloader';
 
 // Component to handle scroll to top on route change
 const ScrollToTopOnRouteChange: React.FC = () => {
@@ -30,6 +31,11 @@ const ScrollToTopOnRouteChange: React.FC = () => {
 };
 
 const App: React.FC = () => {
+  // Preload critical images on app start
+  useEffect(() => {
+    preloadCriticalImages();
+  }, []);
+
   return (
     <Router>
       <ScrollToTopOnRouteChange />
