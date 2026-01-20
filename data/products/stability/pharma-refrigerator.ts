@@ -1,30 +1,17 @@
 import { ProductDetail } from '../types';
 
 export const pharmaRefrigerator: ProductDetail = {
-    description: "The Aureole Pharma Tech Dual Zone Chamber has been specifically designed to cater to the heightened requirements of highly accelerated stress tests (HAST) for electrical and electronic components. This chamber facilitates rapid specimen transfer between its hot and cold zones, enabling swift and dramatic changes in product temperature. This capability is particularly valuable for conducting thermal shock tests, also known as Environment Stress Screen (ESS) tests. These tests subject components to extreme temperature variations, helping to assess their resilience and reliability under challenging environmental conditions.",
-    keyFeatures: [
-        "Designed for Highly Accelerated Stress Tests (HAST)",
-        "Facilitates rapid specimen transfer between hot and cold zones",
-        "Enables swift and dramatic product temperature changes",
-        "Ideal for Thermal Shock and Environment Stress Screen (ESS) tests",
-        "Assess resilience and reliability under extreme temperature variations",
-        "Dual-zone configuration for versatile testing applications",
-        "Precise control and monitoring of temperature in both zones"
-    ],
+    description: "Pharmaceutical refrigerators hold a pivotal position in upholding the safety and potency of medications and vaccines. Inadequate storage conditions can result in product deterioration, diminished effectiveness, and potential harm to patients. As such, pharma refrigerators assume a critical role within the healthcare and pharmaceutical sectors, guaranteeing the stability and safety of temperature-sensitive products.\n\nAureole Pharma Tech stands as the foremost market leader for pharmaceutical refrigerators in India. Each refrigerator is meticulously crafted to adhere to the rigorous regulations, demonstrating our unwavering commitment to quality and compliance. Our products are renowned for their exceptional temperature stability and unmatched quality, setting the industry standard for reliability and performance.",
+    keyFeatures: [],
     specifications: [
-        { parameter: "Upper Zone: Temp Range", details: "-5°C to -20°C" },
-        { parameter: "Upper Zone: Accuracy", details: "± 3°C" },
-        { parameter: "Upper Zone: Uniformity", details: "± 5°C" },
-        { parameter: "Lower Zone: Temp Range", details: "2°C to 8°C" },
-        { parameter: "Lower Zone: Accuracy", details: "± 1°C" },
-        { parameter: "Lower Zone: Uniformity", details: "± 2°C" }
+        { parameter: "Upper Zone (DF): Temp Range", details: "-5°C to -20°C" },
+        { parameter: "Upper Zone (DF): Accuracy", details: "± 3°C" },
+        { parameter: "Upper Zone (DF): Uniformity", details: "± 5°C" },
+        { parameter: "Lower Zone (CC): Temp Range", details: "2°C to 8°C" },
+        { parameter: "Lower Zone (CC): Accuracy", details: "± 1°C" },
+        { parameter: "Lower Zone (CC): Uniformity", details: "± 2°C" }
     ],
-    models: [
-        { model: "AP_DC_DF-1.0_CC-1.0_V**", capacity: "100 (Upper) / 100 (Lower)", interior: "U: 640×350×500 | L: 640×350×600", exterior: "825 × 850 × 2055", trays: "1 (Upper) / 1 (Lower)", power: "Single Phase 230 V" },
-        { model: "AP_DC_DF-2.0_CC-2.0_V**", capacity: "200 (Upper) / 200 (Lower)", interior: "U: 700×575×500 | L: 700×475×600", exterior: "885 × 975 × 2055", trays: "2 (Upper) / 2 (Lower)", power: "Single Phase 230 V" },
-        { model: "AP_DC_DF-1.0_CC-2.0_V**", capacity: "100 (Upper) / 200 (Lower)", interior: "U: 700×350×450 | L: 700×475×600", exterior: "885 × 975 × 2010", trays: "1 (Upper) / 2 (Lower)", power: "Single Phase 230 V" },
-        { model: "AP_DC_DF-2.0_CC-4.0_V**", capacity: "200 (Upper) / 400 (Lower)", interior: "U: 800×500×500 | L: 800×600×850", exterior: "985 × 1100 × 2300", trays: "2 (Upper) / 3 (Lower)", power: "Single Phase 230 V" }
-    ],
+    models: [],
     regularAttributes: [
         "Master & standby sensor",
         "SS door with gasket",
@@ -39,5 +26,119 @@ export const pharmaRefrigerator: ProductDetail = {
         "Scanner: 4-point temperature sensor",
         "Door access system (Numeric / Biometric)"
     ],
-    image: "/products/StablilityChamber-Standalone/pharma-refrigerator-dual-zone-chamber.png"
+    image: "/products/StablilityChamber-Standalone/pharma-refrigerator-dual-zone-chamber.png",
+    complexTable: {
+        rows: [
+            {
+                cells: [
+                    { content: "Model", rowSpan: 2, isHeader: true },
+                    { content: "Capacity In Liters", rowSpan: 2, isHeader: true },
+                    { content: "Interior Dimension in MM", colSpan: 3, isHeader: true },
+                    { content: "Exterior Dimension in MM", colSpan: 3, isHeader: true },
+                    { content: "No of Trays", rowSpan: 2, isHeader: true },
+                    { content: "Power Supply", rowSpan: 2, isHeader: true }
+                ]
+            },
+            {
+                cells: [
+                    { content: "Width", isHeader: true },
+                    { content: "Depth", isHeader: true },
+                    { content: "Height", isHeader: true },
+                    { content: "Width", isHeader: true },
+                    { content: "Depth", isHeader: true },
+                    { content: "Height", isHeader: true }
+                ]
+            },
+            {
+                cells: [
+                    { content: "AP_DC_DF-1.0_CC-1.0_V**", rowSpan: 2 },
+                    { content: "Upper 100", align: 'center' },
+                    { content: "640", align: 'center' },
+                    { content: "350", align: 'center' },
+                    { content: "500", align: 'center' },
+                    { content: "825", rowSpan: 2, align: 'center' },
+                    { content: "850", rowSpan: 2, align: 'center' },
+                    { content: "2055", rowSpan: 2, align: 'center' },
+                    { content: "1", align: 'center' },
+                    { content: "Single Phase 230 V", rowSpan: 8, align: 'center' }
+                ]
+            },
+            {
+                cells: [
+                    { content: "Lower 100", align: 'center' },
+                    { content: "640", align: 'center' },
+                    { content: "350", align: 'center' },
+                    { content: "600", align: 'center' },
+                    { content: "1", align: 'center' }
+                ]
+            },
+            {
+                cells: [
+                    { content: "AP_DC_DF-2.0_CC-2.0_V**", rowSpan: 2 },
+                    { content: "Upper 200", align: 'center' },
+                    { content: "700", align: 'center' },
+                    { content: "575", align: 'center' },
+                    { content: "500", align: 'center' },
+                    { content: "885", rowSpan: 2, align: 'center' },
+                    { content: "975", rowSpan: 2, align: 'center' },
+                    { content: "2055", rowSpan: 2, align: 'center' },
+                    { content: "2", align: 'center' }
+                ]
+            },
+            {
+                cells: [
+                    { content: "Lower 200", align: 'center' },
+                    { content: "700", align: 'center' },
+                    { content: "475", align: 'center' },
+                    { content: "600", align: 'center' },
+                    { content: "2", align: 'center' }
+                ]
+            },
+            {
+                cells: [
+                    { content: "AP_DC_DF-1.0_CC-2.0_V**", rowSpan: 2 },
+                    { content: "Upper 100", align: 'center' },
+                    { content: "700", align: 'center' },
+                    { content: "350", align: 'center' },
+                    { content: "450", align: 'center' },
+                    { content: "885", rowSpan: 2, align: 'center' },
+                    { content: "975", rowSpan: 2, align: 'center' },
+                    { content: "2010", rowSpan: 2, align: 'center' },
+                    { content: "1", align: 'center' }
+                ]
+            },
+            {
+                cells: [
+                    { content: "Lower 200", align: 'center' },
+                    { content: "700", align: 'center' },
+                    { content: "475", align: 'center' },
+                    { content: "600", align: 'center' },
+                    { content: "2", align: 'center' }
+                ]
+            },
+            {
+                cells: [
+                    { content: "AP_DC_DF-2.0_CC-4.0_V**", rowSpan: 2 },
+                    { content: "Upper 200", align: 'center' },
+                    { content: "800", align: 'center' },
+                    { content: "500", align: 'center' },
+                    { content: "500", align: 'center' },
+                    { content: "985", rowSpan: 2, align: 'center' },
+                    { content: "1100", rowSpan: 2, align: 'center' },
+                    { content: "2300", rowSpan: 2, align: 'center' },
+                    { content: "2", align: 'center' }
+                ]
+            },
+            {
+                cells: [
+                    { content: "Lower 400", align: 'center' },
+                    { content: "800", align: 'center' },
+                    { content: "600", align: 'center' },
+                    { content: "850", align: 'center' },
+                    { content: "3", align: 'center' }
+                ]
+            }
+        ],
+        remark: "Above are standard sizes and we can offer other (customised) sizes also V** = variant based upon construction & body"
+    }
 };

@@ -1,36 +1,18 @@
 import { ProductDetail } from '../types';
 
 export const deepFreezer: ProductDetail = {
-    description: "Aureole Pharma Tech Deep freezers are widely recognized as the standard baseline for the storage of perishable, flammable, or hazardous materials in laboratory and clinical settings. Our range includes units capable of sustaining temperatures as low as -20°C and specialized configurations reaching up to -40°C.\n\nThese freezers come in various orientations—under-counter, chest, or upright—and utilize proprietary foam insulation for superior energy efficiency. Many models feature manual defrost systems with special thawing tubes to protect against unintended thaws and sample dehydration, ensuring the safe and stable storage of sensitive biological materials.",
-    keyFeatures: [
-        "Wide temperature range options: Fixed -20°C or flexible -13°C to -40°C",
-        "Available in multiple configurations: Under-counter, Chest, or Upright",
-        "Proprietary high-density foam insulation for favorable Energy Star ratings",
-        "Manual defrost systems with special thawing tubes to prevent sample dehydration",
-        "Heavy-duty refrigeration system with high accuracy and uniformity",
-        "CFC-Free refrigeration aligning with environmental standards",
-        "Robust compressors built for durability and reliable long-term performance"
-    ],
+    description: "Deep Freezer (upto -20° C)\nIn laboratory and clinical settings, maintaining a consistent temperature well below freezing is crucial for preserving perishable samples. Aureole Pharma Tech Deep freezer up to Minus 20 degrees Celsius (-20°C) is widely recognized as the standard baseline temperature for the storage of perishable, flammable, or hazardous materials. As such, the freezers listed below predominantly have the capacity to reach and sustain temperatures as low as -20°C, ensuring the safe storage of these sensitive materials.\n\nDeep Freezer (upto -40° C)\nDeep freezers come in different configurations to suit various needs. Some freezers are designed with a fixed temperature setting of -20°C, while others offer the flexibility of different temperature ranges, ranging from -13°C to -40°C. The specific operation voltage can vary, typically falling within the range of 115 to 230 V, depending on the freezer’s temperature range and sample capacity.\n\nFor example, a deep freezer up to -40°C is available in under-counter, chest, or upright orientations. These freezers often utilize proprietary foam insulation types that contribute to favorable Energy Star ratings, indicating their energy efficiency. Additionally, many of these freezers are equipped with manual defrost systems that include special thawing tubes, providing protection against unintended thaws and sample dehydration.",
+    keyFeatures: [],
     specifications: [
-        { parameter: "Temperature Range", details: "Up to -20°C / Up to -40°C" },
+        { parameter: "Temperature Range", details: "-5°C TO -20°C / -25°C TO -40°C" },
         { parameter: "Accuracy", details: "± 3°C" },
-        { parameter: "Uniformity", details: "± 5°C" },
-        { parameter: "Operating Voltage", details: "115V to 230V (based on capacity)" }
+        { parameter: "Uniformity", details: "± 5°C" }
     ],
-    models: [
-        { model: "AP_SA_DF-1.25_V**", capacity: "125", interior: "625 × 400 × 500", exterior: "810 × 700 × 1260", trays: "2", power: "Single Phase 230 V" },
-        { model: "AP_SA_DF-2.0_V**", capacity: "200", interior: "650 × 500 × 625", exterior: "835 × 800 × 1385", trays: "2", power: "Single Phase 230 V" },
-        { model: "AP_SA_DF-4.0_V**", capacity: "400", interior: "700 × 650 × 900", exterior: "885 × 950 × 1660", trays: "3", power: "Single Phase 230 V" },
-        { model: "AP_SA_DF-6.0_V**", capacity: "600", interior: "750 × 800 × 1000", exterior: "935 × 1100 × 1760", trays: "3", power: "Single Phase 230 V" },
-        { model: "AP_SA_DF-8.0_V**", capacity: "800", interior: "750 × 800 × 1350", exterior: "935 × 1100 × 2110", trays: "4", power: "Single Phase 230 V" },
-        { model: "AP_SA_DF-1.0K_V**", capacity: "1000", interior: "825 × 825 × 1500", exterior: "1010 × 1125 × 2260", trays: "4", power: "Single Phase 230 V" }
-    ],
+    models: [],
     regularAttributes: [
         "Master & stand By Sensor",
-        "Single SS Door sealed around the entire perimeter by silicon gasket",
-        "Heavy Duty refrigeration system",
-        "Proprietary foam insulation for energy efficiency",
-        "Manual defrost system with thawing tubes"
+        "Single SS Door sealed around the entire perimeter by silicon gasket.",
+        "Heavy Duty refrigeration system"
     ],
     addOnsAttributes: [
         "21 CFR part 11 compliance",
@@ -39,5 +21,109 @@ export const deepFreezer: ProductDetail = {
         "Password protected or Biometric door access system",
         "Extra Trays"
     ],
-    image: "/products/StablilityChamber-Standalone/deep-freezer.png"
+    image: "/products/StablilityChamber-Standalone/deep-freezer.png",
+    complexTable: {
+        rows: [
+            {
+                cells: [
+                    { content: "Model", rowSpan: 2, isHeader: true },
+                    { content: "Capacity In Liters", rowSpan: 2, isHeader: true },
+                    { content: "Interior Dimension in MM", colSpan: 3, isHeader: true },
+                    { content: "Exterior Dimension in MM", colSpan: 3, isHeader: true },
+                    { content: "No of Trays", rowSpan: 2, isHeader: true },
+                    { content: "Power Supply", rowSpan: 2, isHeader: true }
+                ]
+            },
+            {
+                cells: [
+                    { content: "Width", isHeader: true },
+                    { content: "Depth", isHeader: true },
+                    { content: "Height", isHeader: true },
+                    { content: "Width", isHeader: true },
+                    { content: "Depth", isHeader: true },
+                    { content: "Height", isHeader: true }
+                ]
+            },
+            {
+                cells: [
+                    { content: "AP_SA_DF-1.25_V**" },
+                    { content: "125", align: 'center' },
+                    { content: "625", align: 'center' },
+                    { content: "400", align: 'center' },
+                    { content: "500", align: 'center' },
+                    { content: "810", align: 'center' },
+                    { content: "725", align: 'center' },
+                    { content: "1260", align: 'center' },
+                    { content: "2", align: 'center' },
+                    { content: "Single Phase 230 V", rowSpan: 6, align: 'center' }
+                ]
+            },
+            {
+                cells: [
+                    { content: "AP_SA_DF-2.0_V**" },
+                    { content: "200", align: 'center' },
+                    { content: "650", align: 'center' },
+                    { content: "500", align: 'center' },
+                    { content: "625", align: 'center' },
+                    { content: "835", align: 'center' },
+                    { content: "825", align: 'center' },
+                    { content: "1385", align: 'center' },
+                    { content: "2", align: 'center' }
+                ]
+            },
+            {
+                cells: [
+                    { content: "AP_SA_DF-4.0_V**" },
+                    { content: "400", align: 'center' },
+                    { content: "700", align: 'center' },
+                    { content: "650", align: 'center' },
+                    { content: "900", align: 'center' },
+                    { content: "885", align: 'center' },
+                    { content: "975", align: 'center' },
+                    { content: "1660", align: 'center' },
+                    { content: "3", align: 'center' }
+                ]
+            },
+            {
+                cells: [
+                    { content: "AP_SA_DF-6.0_V**" },
+                    { content: "600", align: 'center' },
+                    { content: "750", align: 'center' },
+                    { content: "800", align: 'center' },
+                    { content: "1000", align: 'center' },
+                    { content: "935", align: 'center' },
+                    { content: "1125", align: 'center' },
+                    { content: "1760", align: 'center' },
+                    { content: "3", align: 'center' }
+                ]
+            },
+            {
+                cells: [
+                    { content: "AP_SA_DF-8.0_V**" },
+                    { content: "800", align: 'center' },
+                    { content: "750", align: 'center' },
+                    { content: "800", align: 'center' },
+                    { content: "1350", align: 'center' },
+                    { content: "935", align: 'center' },
+                    { content: "1125", align: 'center' },
+                    { content: "2110", align: 'center' },
+                    { content: "4", align: 'center' }
+                ]
+            },
+            {
+                cells: [
+                    { content: "AP_SA_DF-1.0K_V**" },
+                    { content: "1000", align: 'center' },
+                    { content: "825", align: 'center' },
+                    { content: "825", align: 'center' },
+                    { content: "1500", align: 'center' },
+                    { content: "1010", align: 'center' },
+                    { content: "1150", align: 'center' },
+                    { content: "2260", align: 'center' },
+                    { content: "4", align: 'center' }
+                ]
+            }
+        ],
+        remark: "Above are standard sizes and we can offer other (customised) sizes also V** = variant based upon construction & body"
+    }
 };

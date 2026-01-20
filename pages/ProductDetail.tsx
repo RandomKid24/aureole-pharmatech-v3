@@ -382,6 +382,49 @@ const ProductDetail: React.FC = () => {
                     </div>
                 </section>
             )}
+
+            {/* Complex Multi-level Table */}
+            {product.complexTable && (
+                <section className="py-24 bg-white">
+                    <div className="container mx-auto px-6 lg:px-24">
+                        <div className="flex items-center gap-4 mb-16">
+                            <Box className="text-aureole-blue" size={18} />
+                            <h3 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-aureole-slate">Technical Specifications & Models</h3>
+                        </div>
+
+                        <div className="overflow-x-auto border-[3px] border-aureole-slate shadow-2xl">
+                            <table className="w-full text-left min-w-[1000px] border-collapse">
+                                <tbody className="divide-y divide-slate-100 text-slate-600">
+                                    {product.complexTable.rows.map((row, i) => (
+                                        <tr key={i} className="transition-colors group">
+                                            {row.cells.map((cell, j) => {
+                                                const isHeader = cell.isHeader;
+                                                const Tag = isHeader ? 'th' : 'td';
+
+                                                return (
+                                                    <Tag
+                                                        key={j}
+                                                        colSpan={cell.colSpan || 1}
+                                                        rowSpan={cell.rowSpan || 1}
+                                                        className={`
+                                                            py-6 px-6 text-[11px] uppercase tracking-tight border border-slate-200
+                                                            ${isHeader ? 'bg-slate-50 font-black text-aureole-slate text-center' : 'font-bold'}
+                                                            ${cell.align === 'center' ? 'text-center' : cell.align === 'right' ? 'text-right' : 'text-left'}
+                                                            ${!isHeader && j === 0 ? 'text-aureole-blue bg-slate-50/30' : ''}
+                                                        `}
+                                                    >
+                                                        {cell.content}
+                                                    </Tag>
+                                                );
+                                            })}
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            )}
         </div>
     );
 };

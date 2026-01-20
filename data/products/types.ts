@@ -8,6 +8,22 @@ export interface ModelSpec {
     power: string;
 }
 
+export interface TableCell {
+    content: string;
+    colSpan?: number;
+    rowSpan?: number;
+    isHeader?: boolean;
+    align?: 'left' | 'center' | 'right';
+}
+
+export interface TableRow {
+    cells: TableCell[];
+}
+
+export interface ComplexTable {
+    rows: TableRow[];
+}
+
 export interface TechnicalSpec {
     parameter: string;
     details: string;
@@ -30,6 +46,7 @@ export interface ProductDetail {
         rows: string[][];
         remark?: string;
     };
+    complexTable?: ComplexTable;
 }
 
 export interface SubType {
