@@ -1,18 +1,12 @@
 import { ProductDetail } from '../types';
 
 export const walkInBodIncubator: ProductDetail = {
-    description: "Aureole PharmaTech’s premium walk-in BOD incubators are designed to maintain precise and uniform temperature conditions throughout the chamber. These incubators are renowned for their exceptional accuracy, making them ideal for applications that demand stringent temperature control. Engineered to meet the exacting requirements of laboratories and research facilities, they ensure reliable performance for experiments and processes requiring stable and uniform incubation environments.",
+    description: "Aureole Pharma Tech’s premium walk-in Incubators stand out as the preferred choice for maintaining precise and uniform temperature conditions within the chamber. These incubators are renowned for their exceptional accuracy, making them the top choice for applications that demand stringent temperature control.\n\nOur premium walk-in Incubators are engineered to meet the exacting requirements of laboratories and research facilities that rely on precise and uniform temperature control for their experiments and processes.",
     keyFeatures: [
-        "Precise and uniform temperature conditions",
-        "Exceptional accuracy for stringent temperature control",
-        "Full door made of toughened glass with polysulphides for safe sample viewing",
-        "Trays and detachable racks with adjustable angles",
-        "7” Touch Screen HMI (Allen Bradley)",
-        "Master & standby refrigeration system",
-        "Split-type refrigeration system",
-        "Scanner: 8-point temperature sensor",
-        "Person trap / indication switch inside chamber with audible alarm outside",
-        "Door access system (Numeric)"
+        "Precise and uniform temperature conditions throughout the chamber",
+        "Exceptional accuracy for stringent temperature control requirements",
+        "Engineered for high-demand laboratory and research environments",
+        "Reliable performance for critical experiments and processes"
     ],
     specifications: [
         { parameter: "Temperature Range", details: "10°C to 60°C" },
@@ -31,21 +25,21 @@ export const walkInBodIncubator: ProductDetail = {
         { model: "AP_WC_BO-50.0K_V**", capacity: "50000", interior: "4000 × 5000 × 2500", exterior: "4160 × 5160 × 2660", trays: "144", power: "Three Phase 415 V" }
     ],
     regularAttributes: [
-        "Full door of toughened glass with polysulphides for viewing samples without disturbing test conditions & ensuring human safety",
+        "Full door is of toughened glass with polysulphides to view the samples without disturbing the test conditions & human safety",
         "Trays and detachable racks with adjustable angles",
-        "7” Touch Screen HMI (Allen Bradley)",
-        "Master & standby refrigeration system",
-        "Split-type refrigeration system",
-        "Scanner: 8-point temperature sensor",
-        "Person trap / indication switch inside chamber with audible alarm outside",
-        "Door access system (Numeric)"
+        "7'' Touch Screen HMI (Allen Bradly)",
+        "Master & Stand By refrigeration System",
+        "Split type refrigeration system",
+        "Scanner : 8 pt. Temperature Sensor",
+        "Person trap/ indication switch inside chamber with audible alarm outside.",
+        "Door Access System (Numeric)"
     ],
     addOnsAttributes: [
-        "21 CFR Part 11 compliance",
+        "21 CFR part 11 compliance",
         "GSM alert system",
-        "Hooter system",
-        "Door access system (Biometric)",
-        "Extra trays"
+        "Hooter System",
+        "Door Access System (Biometric)",
+        "Extra Trays"
     ],
     image: "/products/StablilityChamber-Standalone/walk-in-bod-incubator.png"
 };

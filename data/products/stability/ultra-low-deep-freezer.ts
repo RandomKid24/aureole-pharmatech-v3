@@ -1,21 +1,22 @@
 import { ProductDetail } from '../types';
 
 export const ultraLowDeepFreezer: ProductDetail = {
-    description: "Advanced ultra-low temperature freezers designed for critical storage of biological samples, vaccines, and research materials at temperatures down to -86°C. These specialized freezers provide precise ultra-low temperature control essential for long-term preservation of sensitive biological materials and pharmaceutical applications.",
+    description: "Aureole Pharma Tech Ultra-low deep freezer (up to -80°C) offers a comprehensive range of cold storage and sample preparation solutions designed to safeguard a wide variety of sample types under a broad spectrum of storage conditions. Our ultra-low deep freezers are equipped with precise temperature monitoring capabilities, making them exceptionally well-suited for the safe storage of critical items such as vaccines, blood, plasma, reagents, and other temperature-sensitive materials.\n\nOur -80°C ultra-low temperature freezers (ULT) are engineered to protect your invaluable samples and can accommodate large sample volumes. We offer a variety of upright and chest freezers to cater to your specific needs, providing a perfect match that meets your requirements while helping you save on costs and energy consumption.",
     keyFeatures: [
-        "Ultra-low temperature operation (-40°C to -86°C)",
-        "Heavy-duty refrigeration system with high accuracy",
-        "Master & standby sensor for reliability",
-        "SS door with gasket for optimal sealing",
-        "Quick release filter for easy maintenance",
-        "One-hand operation handle for convenience",
-        "Vacuum release port for quick re-access to samples",
-        "Lockable cold air inner door with adjustable closing pressure"
+        "Ultra-low temperature operation (up to -80°C) for critical sample safeguarding",
+        "Precise temperature monitoring and control for vaccines, blood, and plasma",
+        "Available in both Upright and Chest configurations to suit laboratory space",
+        "Engineered for large sample volumes with high-density storage solutions",
+        "Energy-efficient design to reduce operational costs and environmental impact",
+        "Heavy-duty refrigeration system with high accuracy and uniformity",
+        "Vacuum release port for quick re-access to samples (standard on upright models)",
+        "Lockable cold air inner doors to minimize temperature loss during access"
     ],
     specifications: [
-        { parameter: "Temperature Range", details: "-40°C to -86°C" },
+        { parameter: "Temperature Range", details: "Down to -80°C" },
         { parameter: "Accuracy", details: "± 5°C" },
-        { parameter: "Uniformity", details: "± 5°C" }
+        { parameter: "Uniformity", details: "± 5°C" },
+        { parameter: "Configurations", details: "Upright and Chest" }
     ],
     models: [
         { model: "AP_SA_DF-3.4_V**", capacity: "340", interior: "488 × 607 × 1140", exterior: "854 × 1006 × 1907", trays: "3", power: "Single Phase 230 V" },
@@ -25,19 +26,19 @@ export const ultraLowDeepFreezer: ProductDetail = {
         { model: "AP_SA_DF-8.38_V**", capacity: "838", interior: "894 × 718 × 1310", exterior: "1160 × 1172 × 1994", trays: "3", power: "Single Phase 230 V" }
     ],
     regularAttributes: [
-        "Master & standby sensor",
-        "SS door with gasket",
-        "Heavy-duty refrigeration system",
-        "Quick release filter",
-        "One-hand operation handle",
+        "Master & stand By Sensor",
+        "Single SS Door sealed around the entire perimeter by silicon gasket",
+        "Heavy Duty refrigeration system",
         "Vacuum release port for quick re-access",
-        "Adjustable inner door closing pressure"
+        "Lockable cold air inner doors",
+        "One-hand operation handle"
     ],
     addOnsAttributes: [
-        "21 CFR Part 11 compliance",
-        "Mobile alert system",
-        "Hooter system",
-        "Extra trays"
+        "21 CFR part 11 compliance",
+        "GSM alert system",
+        "Hooter System",
+        "Password protected or Biometric door access system",
+        "Extra Trays"
     ],
     image: "/products/StablilityChamber-Standalone/ultra-low-deep-freezer.png"
 };

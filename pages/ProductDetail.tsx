@@ -72,10 +72,10 @@ const ProductGallery: React.FC<{ images: string[], name: string, captions?: stri
                             className={`aspect-square border-2 transition-all p-1 bg-white ${activeIndex === i ? 'border-aureole-cyan' : 'border-transparent hover:border-slate-200'
                                 }`}
                         >
-                            <LazyImage 
-                                src={img} 
-                                alt={`${name} thumb ${i + 1}`} 
-                                className="w-full h-full object-contain" 
+                            <LazyImage
+                                src={img}
+                                alt={`${name} thumb ${i + 1}`}
+                                className="w-full h-full object-contain"
                             />
                         </button>
                     ))}
@@ -162,8 +162,8 @@ const ProductDetail: React.FC = () => {
                                 <h2 className="text-[10px] font-black font-heading uppercase tracking-[0.5em] text-aureole-cyan">TECHNICAL SPECIFICATION</h2>
                             </div>
 
-                            <h1 className="text-4xl lg:text-[75px] 3xl:text-[90px] font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-none mb-10">
-                                {decodedName}
+                            <h1 className="text-4xl lg:text-[75px] 3xl:text-[90px] font-[950] font-heading text-aureole-slate uppercase tracking-tighter leading-none mb-10">
+                                {decodedName.split(' ').slice(0, -1).join(' ')} <span className="text-aureole-blue">{decodedName.split(' ').slice(-1)}</span>
                             </h1>
 
                             <div className="pt-8 border-t border-slate-50">
@@ -190,25 +190,25 @@ const ProductDetail: React.FC = () => {
             </section>
 
             {/* Technical Data & Features */}
-            {(product.specifications.length > 0 || product.keyFeatures.length > 0) && (
+            {(product.specifications.length > 0 || product.keyFeatures.length > 0 || (product.regularAttributes && product.regularAttributes.length > 0) || (product.addOnsAttributes && product.addOnsAttributes.length > 0)) && (
                 <section className="bg-aureole-soft border-b border-slate-100">
-                    <div className="grid lg:grid-cols-12 gap-0">
-                        {/* Left Panel: Specifications */}
+                    <div className="grid lg:grid-cols-2 gap-0">
+                        {/* Specifications */}
                         {product.specifications.length > 0 && (
-                            <div className={`${product.keyFeatures.length > 0 ? 'lg:col-span-7' : 'lg:col-span-12'} bg-white p-12 lg:p-20 border-r border-slate-200`}>
+                            <div className="bg-white p-12 lg:p-20 border-r border-b border-slate-200">
                                 <div className="flex items-center gap-4 mb-12">
-                                    <Settings className="text-aureole-blue" size={18} />
-                                    <h3 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-aureole-slate">Specifications</h3>
+                                    <Settings className="text-aureole-blue" size={20} />
+                                    <h3 className="text-[12px] font-black font-heading uppercase tracking-[0.4em] text-aureole-slate">Specifications</h3>
                                 </div>
 
-                                <div className="grid gap-px bg-slate-800 border border-slate-800 shadow-sm overflow-hidden rounded-sm">
+                                <div className="grid gap-px bg-slate-200 border border-slate-200 shadow-sm overflow-hidden rounded-sm">
                                     {product.specifications.map((spec, i) => (
                                         <div key={i} className="grid grid-cols-12 bg-white transition-colors">
-                                            <div className="col-span-12 sm:col-span-5 p-6 border-b sm:border-b-0 sm:border-r border-slate-800 bg-slate-50/30">
-                                                <span className="text-[10px] font-black text-aureole-slate uppercase tracking-widest">{spec.parameter}</span>
+                                            <div className="col-span-12 sm:col-span-5 p-6 border-b sm:border-b-0 sm:border-r border-slate-100 bg-slate-50/50">
+                                                <span className="text-[11px] font-black text-aureole-slate uppercase tracking-widest">{spec.parameter}</span>
                                             </div>
                                             <div className="col-span-12 sm:col-span-7 p-6">
-                                                <span className="text-[11px] text-slate-600 font-bold uppercase tracking-tight leading-relaxed">{spec.details}</span>
+                                                <span className="text-[13px] text-slate-600 font-bold uppercase tracking-tight leading-relaxed">{spec.details}</span>
                                             </div>
                                         </div>
                                     ))}
@@ -216,64 +216,56 @@ const ProductDetail: React.FC = () => {
                             </div>
                         )}
 
-                        {/* Right Panel: Key Features */}
-                        {(product.keyFeatures.length > 0 || (product.regularAttributes && product.regularAttributes.length > 0) || (product.addOnsAttributes && product.addOnsAttributes.length > 0)) && (
-                            <div className={`${product.specifications.length > 0 ? 'lg:col-span-5' : 'lg:col-span-12'} p-12 lg:p-20 flex flex-col justify-between bg-slate-50/50`}>
-                                <div>
-                                    {product.keyFeatures.length > 0 && (
-                                        <>
-                                            <div className="flex items-center gap-4 mb-12">
-                                                <Zap className="text-aureole-cyan" size={18} />
-                                                <h3 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-aureole-slate">Key Features</h3>
-                                            </div>
-                                            <div className="space-y-6 mb-20">
-                                                {product.keyFeatures.map((feature, i) => (
-                                                    <div key={i} className="flex items-start gap-4 group">
-                                                        <div className="w-1.5 h-1.5 rounded-full bg-aureole-cyan mt-2 group-hover:scale-150 transition-transform"></div>
-                                                        <span className="text-[12px] font-black text-aureole-slate uppercase tracking-tight">{feature}</span>
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </>
-                                    )}
+                        {/* Key Features */}
+                        {product.keyFeatures.length > 0 && (
+                            <div className="bg-slate-50/30 p-12 lg:p-20 border-b border-slate-200">
+                                <div className="flex items-center gap-4 mb-12">
+                                    <Zap className="text-aureole-cyan" size={20} />
+                                    <h3 className="text-[12px] font-black font-heading uppercase tracking-[0.4em] text-aureole-slate">Key Features</h3>
                                 </div>
+                                <div className="space-y-8">
+                                    {product.keyFeatures.map((feature, i) => (
+                                        <div key={i} className="flex items-start gap-5 group">
+                                            <div className="w-2 h-2 rounded-full bg-aureole-cyan mt-2 group-hover:scale-125 transition-transform flex-shrink-0"></div>
+                                            <span className="text-[14px] font-bold text-aureole-slate uppercase tracking-tight leading-snug">{feature}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
 
-                                {/* Hierarchical Attributes */}
-                                <div className="space-y-12">
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
-                                        {product.regularAttributes && product.regularAttributes.length > 0 && (
-                                            <div>
-                                                <div className="flex items-center gap-3 mb-6">
-                                                    <List className="text-aureole-blue" size={16} />
-                                                    <h4 className="text-[10px] font-black font-heading text-aureole-slate uppercase tracking-widest border-b border-aureole-blue/20 pb-2">Regular</h4>
-                                                </div>
-                                                <div className="space-y-4">
-                                                    {product.regularAttributes.map((attr, i) => (
-                                                        <div key={i} className="text-[9px] font-black text-slate-400 uppercase tracking-widest flex items-start gap-3">
-                                                            <div className="w-1 bg-slate-200 mt-1.5 flex-shrink-0"></div>
-                                                            <span className="leading-snug">{attr}</span>
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        )}
-                                        {product.addOnsAttributes && product.addOnsAttributes.length > 0 && (
-                                            <div>
-                                                <div className="flex items-center gap-3 mb-6">
-                                                    <PlusCircle className="text-aureole-cyan" size={16} />
-                                                    <h4 className="text-[10px] font-black font-heading text-aureole-slate uppercase tracking-widest border-b border-aureole-cyan/20 pb-2">Add-ons</h4>
-                                                </div>
-                                                <div className="space-y-4">
-                                                    {product.addOnsAttributes.map((attr, i) => (
-                                                        <div key={i} className="text-[9px] font-black text-slate-400 uppercase tracking-widest flex items-start gap-3">
-                                                            <div className="w-1 h-1 bg-slate-200 mt-1.5 flex-shrink-0"></div>
-                                                            <span className="leading-snug">{attr}</span>
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        )}
-                                    </div>
+                        {/* Regular Attributes */}
+                        {product.regularAttributes && product.regularAttributes.length > 0 && (
+                            <div className={`bg-white p-12 lg:p-20 border-r border-slate-200 ${!(product.addOnsAttributes && product.addOnsAttributes.length > 0) ? 'lg:col-span-2' : ''}`}>
+                                <div className="flex items-center gap-4 mb-12">
+                                    <List className="text-aureole-blue" size={20} />
+                                    <h3 className="text-[12px] font-black font-heading uppercase tracking-[0.4em] text-aureole-slate">Regular Attributes</h3>
+                                </div>
+                                <div className={`grid ${!(product.addOnsAttributes && product.addOnsAttributes.length > 0) ? 'lg:grid-cols-2' : 'grid-cols-1'} gap-x-12 gap-y-6`}>
+                                    {product.regularAttributes.map((attr, i) => (
+                                        <div key={i} className="text-[12px] font-bold text-slate-500 uppercase tracking-widest flex items-start gap-4 group">
+                                            <div className="w-1.5 h-1.5 bg-aureole-blue/30 mt-1.5 flex-shrink-0 group-hover:bg-aureole-blue transition-colors"></div>
+                                            <span className="leading-relaxed">{attr}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Add-ons Attributes */}
+                        {product.addOnsAttributes && product.addOnsAttributes.length > 0 && (
+                            <div className={`bg-slate-50/30 p-12 lg:p-20 ${!(product.regularAttributes && product.regularAttributes.length > 0) ? 'lg:col-span-2' : ''}`}>
+                                <div className="flex items-center gap-4 mb-12">
+                                    <PlusCircle className="text-aureole-cyan" size={20} />
+                                    <h3 className="text-[12px] font-black font-heading uppercase tracking-[0.4em] text-aureole-slate">Add-on Options</h3>
+                                </div>
+                                <div className={`grid ${!(product.regularAttributes && product.regularAttributes.length > 0) ? 'lg:grid-cols-2' : 'grid-cols-1'} gap-x-12 gap-y-6`}>
+                                    {product.addOnsAttributes.map((attr, i) => (
+                                        <div key={i} className="text-[12px] font-bold text-slate-500 uppercase tracking-widest flex items-start gap-4 group">
+                                            <div className="w-1.5 h-1.5 bg-aureole-cyan/30 mt-1.5 flex-shrink-0 group-hover:bg-aureole-cyan transition-colors"></div>
+                                            <span className="leading-relaxed">{attr}</span>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         )}
@@ -293,35 +285,43 @@ const ProductDetail: React.FC = () => {
                         <div className="overflow-x-auto border-[3px] border-aureole-slate shadow-2xl">
                             <table className="w-full text-left min-w-[800px]">
                                 <thead>
-                                    <tr className="bg-[#001529] text-white">
-                                        <th className="py-7 px-8 text-[11px] font-black uppercase tracking-[0.2em] border-r border-white/10">Model</th>
-                                        <th className="py-7 px-8 text-[11px] font-black uppercase tracking-[0.2em] border-r border-white/10">Capacity (L)</th>
-                                        <th className="py-7 px-8 text-[11px] font-black uppercase tracking-[0.2em] border-r border-white/10 text-center">Interior (W×D×H mm)</th>
-                                        <th className="py-7 px-8 text-[11px] font-black uppercase tracking-[0.2em] border-r border-white/10 text-center">Exterior (W×D×H mm)</th>
-                                        <th className="py-7 px-8 text-[11px] font-black uppercase tracking-[0.2em] border-r border-white/10 text-center">Trays</th>
-                                        <th className="py-7 px-8 text-[11px] font-black uppercase tracking-[0.2em] text-center">Power</th>
+                                    <tr className="bg-slate-50 text-aureole-slate border-b border-slate-200">
+                                        <th className="py-7 px-8 text-[12px] font-black uppercase tracking-[0.2em] border-r border-slate-200">Model</th>
+                                        <th className="py-7 px-8 text-[12px] font-black uppercase tracking-[0.2em] border-r border-slate-200">Capacity (L)</th>
+                                        <th className="py-7 px-8 text-[12px] font-black uppercase tracking-[0.2em] border-r border-slate-200 text-center">Interior (W×D×H mm)</th>
+                                        {product.models.some(m => m.exterior) && (
+                                            <th className="py-7 px-8 text-[12px] font-black uppercase tracking-[0.2em] border-r border-slate-200 text-center">Exterior (W×D×H mm)</th>
+                                        )}
+                                        {product.models.some(m => m.trays) && (
+                                            <th className="py-7 px-8 text-[12px] font-black uppercase tracking-[0.2em] border-r border-slate-200 text-center">Trays</th>
+                                        )}
+                                        <th className="py-7 px-8 text-[12px] font-black uppercase tracking-[0.2em] text-center">Power</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-slate-100 text-slate-600">
                                     {product.models.map((m, i) => (
                                         <tr key={i} className="transition-colors group">
-                                            <td className="py-6 px-8 text-[11px] font-[900] text-aureole-blue border-r border-slate-100 uppercase tracking-tight">{m.model}</td>
-                                            <td className="py-6 px-8 text-[11px] font-bold border-r border-slate-100 text-center">{m.capacity}</td>
-                                            <td className="py-6 px-8 text-[10px] font-bold border-r border-slate-100 text-center tracking-tight">{m.interior}</td>
-                                            <td className="py-6 px-8 text-[10px] font-bold border-r border-slate-100 text-center tracking-tight">{m.exterior}</td>
-                                            <td className="py-6 px-8 text-[11px] font-bold border-r border-slate-100 text-center">{m.trays}</td>
-                                            <td className="py-6 px-8 text-[10px] font-bold text-center uppercase tracking-tight">{m.power}</td>
+                                            <td className="py-6 px-8 text-[12px] font-[900] text-aureole-blue border-r border-slate-100 uppercase tracking-tight">{m.model}</td>
+                                            <td className="py-6 px-8 text-[12px] font-bold border-r border-slate-100 text-center">{m.capacity}</td>
+                                            <td className="py-6 px-8 text-[11px] font-bold border-r border-slate-100 text-center tracking-tight">{m.interior}</td>
+                                            {product.models.some(model => model.exterior) && (
+                                                <td className="py-6 px-8 text-[11px] font-bold border-r border-slate-100 text-center tracking-tight">{m.exterior || '-'}</td>
+                                            )}
+                                            {product.models.some(model => model.trays) && (
+                                                <td className="py-6 px-8 text-[12px] font-bold border-r border-slate-100 text-center">{m.trays || '-'}</td>
+                                            )}
+                                            <td className="py-6 px-8 text-[11px] font-bold text-center uppercase tracking-tight">{m.power}</td>
                                         </tr>
                                     ))}
                                 </tbody>
                             </table>
                         </div>
 
-                        <div className="mt-12 p-10 bg-slate-950 border-l-[6px] border-aureole-cyan shadow-xl">
-                            <p className="text-[11px] text-white/70 leading-relaxed font-bold uppercase tracking-widest">
+                        <div className="mt-12 p-10 bg-slate-50 border border-slate-100 border-l-[6px] border-aureole-cyan shadow-sm">
+                            <p className="text-[12px] text-aureole-slate leading-relaxed font-bold uppercase tracking-widest">
                                 <span className="text-aureole-cyan mr-4">REMARK:</span>
                                 Above are standard sizes. Customised sizes are available.
-                                <span className="block mt-2 text-[9px] text-white/40 italic">V** = Variant based upon construction & body.</span>
+                                <span className="block mt-2 text-[10px] text-slate-500 italic">V** = Variant based upon construction & body.</span>
                             </p>
                         </div>
                     </div>

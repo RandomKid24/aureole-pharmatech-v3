@@ -1,14 +1,15 @@
 import { ProductDetail } from '../types';
 
 export const pharmaRefrigerator: ProductDetail = {
-    description: "Advanced dual-zone chambers designed for pharmaceutical applications, providing precise temperature control in two separate zones—an upper deep freezer zone and a lower cold chamber zone. These chambers ensure optimal storage conditions for different types of pharmaceutical products requiring different temperature ranges.",
+    description: "The Aureole Pharma Tech Dual Zone Chamber has been specifically designed to cater to the heightened requirements of highly accelerated stress tests (HAST) for electrical and electronic components. This chamber facilitates rapid specimen transfer between its hot and cold zones, enabling swift and dramatic changes in product temperature. This capability is particularly valuable for conducting thermal shock tests, also known as Environment Stress Screen (ESS) tests. These tests subject components to extreme temperature variations, helping to assess their resilience and reliability under challenging environmental conditions.",
     keyFeatures: [
-        "Master & standby sensor for reliability",
-        "SS door with gasket for optimal sealing",
-        "Heavy-duty refrigeration system with high performance",
-        "Inner outer door with proof silicon for enhanced insulation",
-        "Dual-zone temperature control for different storage requirements",
-        "Compliance with pharmaceutical storage standards"
+        "Designed for Highly Accelerated Stress Tests (HAST)",
+        "Facilitates rapid specimen transfer between hot and cold zones",
+        "Enables swift and dramatic product temperature changes",
+        "Ideal for Thermal Shock and Environment Stress Screen (ESS) tests",
+        "Assess resilience and reliability under extreme temperature variations",
+        "Dual-zone configuration for versatile testing applications",
+        "Precise control and monitoring of temperature in both zones"
     ],
     specifications: [
         { parameter: "Upper Zone: Temp Range", details: "-5°C to -20°C" },
@@ -19,10 +20,10 @@ export const pharmaRefrigerator: ProductDetail = {
         { parameter: "Lower Zone: Uniformity", details: "± 2°C" }
     ],
     models: [
-        { model: "AP_DC_DF-1.0_CC-1.0_V**", capacity: "100 + 100", interior: "U: 640×350×500 | L: 640×350×600", exterior: "825 × 850 × 2055", trays: "1 + 1", power: "Single Phase 230 V" },
-        { model: "AP_DC_DF-2.0_CC-2.0_V**", capacity: "200 + 200", interior: "U: 700×575×500 | L: 700×475×600", exterior: "885 × 975 × 2055", trays: "2 + 2", power: "Single Phase 230 V" },
-        { model: "AP_DC_DF-1.0_CC-2.0_V**", capacity: "100 + 200", interior: "U: 700×350×450 | L: 700×475×600", exterior: "885 × 975 × 2010", trays: "1 + 2", power: "Single Phase 230 V" },
-        { model: "AP_DC_DF-2.0_CC-4.0_V**", capacity: "200 + 400", interior: "U: 800×500×500 | L: 800×600×850", exterior: "985 × 1100 × 2300", trays: "2 + 3", power: "Single Phase 230 V" }
+        { model: "AP_DC_DF-1.0_CC-1.0_V**", capacity: "100 (Upper) / 100 (Lower)", interior: "U: 640×350×500 | L: 640×350×600", exterior: "825 × 850 × 2055", trays: "1 (Upper) / 1 (Lower)", power: "Single Phase 230 V" },
+        { model: "AP_DC_DF-2.0_CC-2.0_V**", capacity: "200 (Upper) / 200 (Lower)", interior: "U: 700×575×500 | L: 700×475×600", exterior: "885 × 975 × 2055", trays: "2 (Upper) / 2 (Lower)", power: "Single Phase 230 V" },
+        { model: "AP_DC_DF-1.0_CC-2.0_V**", capacity: "100 (Upper) / 200 (Lower)", interior: "U: 700×350×450 | L: 700×475×600", exterior: "885 × 975 × 2010", trays: "1 (Upper) / 2 (Lower)", power: "Single Phase 230 V" },
+        { model: "AP_DC_DF-2.0_CC-4.0_V**", capacity: "200 (Upper) / 400 (Lower)", interior: "U: 800×500×500 | L: 800×600×850", exterior: "985 × 1100 × 2300", trays: "2 (Upper) / 3 (Lower)", power: "Single Phase 230 V" }
     ],
     regularAttributes: [
         "Master & standby sensor",

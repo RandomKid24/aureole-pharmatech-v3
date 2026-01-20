@@ -3,8 +3,8 @@ export interface ModelSpec {
     model: string;
     capacity: string;
     interior: string;
-    exterior: string;
-    trays: string;
+    exterior?: string;
+    trays?: string;
     power: string;
 }
 

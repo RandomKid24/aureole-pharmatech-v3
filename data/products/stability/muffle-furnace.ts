@@ -15,8 +15,8 @@ export const muffleFurnace: ProductDetail = {
         { parameter: "Accuracy", details: "± 5°C" }
     ],
     models: [
-        { model: "AP_SA_MF-0.6_V**", capacity: "6", interior: "150 × 300 × 150", exterior: "225 × 375 × 225", trays: "Not specified", power: "Single Phase 230 V" },
-        { model: "AP_SA_MF-0.12_V**", capacity: "12", interior: "200 × 300 × 200", exterior: "275 × 375 × 275", trays: "Not specified", power: "Single Phase 230 V" }
+        { model: "AP_SA_MF-0.6_V**", capacity: "6", interior: "150 × 300 × 150", power: "Single Phase 230 V" },
+        { model: "AP_SA_MF-0.12_V**", capacity: "12", interior: "200 × 300 × 200", power: "Single Phase 230 V" }
     ],
     regularAttributes: [
         "High temperature operation",

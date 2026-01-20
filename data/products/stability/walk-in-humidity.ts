@@ -1,25 +1,20 @@
 import { ProductDetail } from '../types';
 
 export const walkInHumidityChamber: ProductDetail = {
-    description: "Aureole PharmaTech’s walk-in humidity chambers are meticulously crafted to create controlled environments for studying and assessing the effects of environmental factors such as temperature and humidity. These chambers are widely used in microbiology, plant studies, tissue research, electronic component testing, and customized industrial and research applications. Designed for both standard and customized requirements, they are suitable for R&D laboratories, research facilities, and product testing environments where precise environmental control is essential.",
+    description: "Aureole Pharma Tech’s walk-in humidity chambers are meticulously crafted with the purpose of creating controlled environments for studying and assessing the impacts of different environmental factors such as humidity and temperature. These test chambers find applications in a wide range of fields, including microbiology, plant studies, tissue research, electronic component testing, and various customized industrial and research endeavors. Our humidity test chambers are utilized in R&D laboratories, research projects, and product testing facilities. They serve a multitude of purposes, including tissue culture, enzyme reaction studies, growth observation, fermentation analysis, and other specialized applications in laboratories.\n\nWe specialize in manufacturing both standard and customized humidity test cabinets, tailored to meet the unique and demanding requirements of individual scientists and specialized research projects. Aureole Pharma Tech’s walk-in humidity test chambers are versatile and reliable tools for controlling environmental conditions and conducting a wide range of scientific studies and experiments. Their adherence to quality standards, customization options, and cost-effectiveness make them a preferred choice for researchers and scientists across different fields and industries.",
     keyFeatures: [
-        "Full door made of toughened glass",
-        "Racks with trays",
-        "Person trap alarm for operator safety",
-        "Door access system (Numeric)",
-        "Low water level indication",
-        "Master & standby refrigeration / humidity system",
-        "Split-type refrigeration system",
-        "Scanner: 8-point temperature & humidity sensor",
-        "7” Touch Screen HMI"
+        "Ample Testing Space: These chambers offer a spacious environment for testing, making them suitable for assessing large-sized products and samples.",
+        "Rust-Proof and Grease-Resistant: Our humidity test chambers are engineered to withstand the effects of humidity and moisture, ensuring they remain corrosion-resistant and grease-proof even under challenging conditions.",
+        "Compliance with International Standards: These chambers adhere to international safety and quality standards and are ISO certified, demonstrating their commitment to quality and reliability.",
+        "Customization: We offer a wide range of sizes and configurations, allowing for both standard and customized models to accommodate the diverse needs of scientific research and testing.",
+        "Vibration-Free and Quiet Operation: These chambers are designed for smooth and noise-free operation, creating a conducive environment for experiments and studies.",
+        "Economical Pricing: We provide these high-quality humidity test chambers at competitive prices to accommodate various budget constraints."
     ],
     specifications: [
         { parameter: "Temperature Range", details: "20°C to 60°C" },
-        { parameter: "Humidity Range", details: "40% RH to 95% RH" },
-        { parameter: "Temperature Accuracy", details: "± 0.2°C" },
-        { parameter: "Humidity Accuracy", details: "± 2.0% RH" },
-        { parameter: "Temperature Uniformity", details: "± 1.0°C" },
-        { parameter: "Humidity Uniformity", details: "± 3.0% RH" },
+        { parameter: "Humidity Range", details: "40% to 85% RH" },
+        { parameter: "Accuracy", details: "± 0.2°C / ± 2.0% RH" },
+        { parameter: "Uniformity", details: "± 1.0°C / ± 3.0% RH" },
         { parameter: "Test Suitable for", details: "25°C & 60% RH, 30°C & 65% RH, 40°C & 75% RH, 30°C & 75% RH" },
         { parameter: "Also available with low conditions", details: "25°C & 40% RH, 40°C & 25% RH, 30°C & 35% RH" }
     ],
@@ -35,15 +30,16 @@ export const walkInHumidityChamber: ProductDetail = {
         { model: "AP_WC_HC-50.0K_V**", capacity: "50000", interior: "4000 × 5000 × 2500", exterior: "4160 × 5160 × 2660", trays: "144", power: "Three Phase 415 V" }
     ],
     regularAttributes: [
-        "Full door of toughened glass",
-        "Racks with trays",
-        "Person trap alarm",
-        "Door access system (Numeric)",
+        "Full door is of toughened glass with polysulphides to view the samples without disturbing the test conditions & human safety",
+        "Trays and detachable racks with adjustable angles",
+        "Owned manufactured SS Reservoir and Steam Kettle provided in Humidification system to provide optimum humidity",
+        "High quality imported make combo sensor for temperature & humidity",
         "Low water indication",
-        "Master & standby refrigeration / humidity system",
-        "Split-type refrigeration system",
-        "Scanner: 8-point temperature & humidity sensor",
-        "7” Touch Screen HMI"
+        "Master & Stand By Refrigeration/Humidity System",
+        "Split type refrigeration system",
+        "Scanner : 8 pt. Temperature & Humidity Sensor",
+        "Door Access System (Numeric)",
+        "Person trap/ indication switch inside chamber with audible alarm outside."
     ],
     addOnsAttributes: [
         "21 CFR Part 11 compliance",

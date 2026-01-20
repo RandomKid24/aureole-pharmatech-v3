@@ -1,16 +1,11 @@
 import { ProductDetail } from '../types';
 
 export const walkInColdChamber: ProductDetail = {
-    description: "Large-scale walk-in cold chambers designed for bulk storage and industrial applications that require precise temperature control within the cold range. These chambers are ideal for pharmaceutical, laboratory, and industrial environments where stable and uniform low-temperature conditions are essential for product storage, testing, and research activities.",
+    description: "Aureole Pharma Tech’s Walk-in Cold chambers are purpose-built for the meticulous temperature control required in cold storage of biological samples, serving various industries including biotechnology, food processing, pharmaceuticals, and agrochemical manufacturing. These units are constructed using Polyurethane Foam (PUF) panels and are manufactured in accordance with Good Manufacturing Practices (GMP) standards. They are equipped with a refrigeration system and can optionally include a standby refrigeration system to ensure uninterrupted operation.\n\nOur Walk-in Cold chambers offer a reliable and environmentally responsible way to preserve the quality and integrity of biological samples over extended periods. Their adherence to temperature control and distribution, along with eco-friendly refrigeration systems, makes them valuable assets for organizations in various industries that require precise cold storage solutions.",
     keyFeatures: [
-        "Viewing window with toughened glass",
-        "Scanner: 8-point temperature sensor",
-        "Door access system (Numeric)",
-        "Master & standby refrigeration system",
-        "Split-type refrigeration system",
-        "Racks with trays",
-        "Person trap alarm for operator safety",
-        "7” Touch Screen HMI"
+        "Precise Temperature Control: These units are designed to maintain a precise and consistent temperature over extended periods, ensuring the safe and stable storage of sensitive biological samples.",
+        "Uniform Temperature: They provide a complete solution for achieving uniform temperature distribution throughout the chamber. This is critical for preventing temperature variations that can compromise the integrity of stored samples.",
+        "Eco-Friendly: Our units feature a CFC-free refrigeration system, aligning with eco-friendly practices and sustainability goals."
     ],
     specifications: [
         { parameter: "Temperature Range", details: "2°C to 8°C" },
@@ -29,21 +24,21 @@ export const walkInColdChamber: ProductDetail = {
         { model: "AP_WC_CC-50.0K_V**", capacity: "50000", interior: "4000 × 5000 × 2500", exterior: "4160 × 5160 × 2660", trays: "144", power: "Three Phase 415 V" }
     ],
     regularAttributes: [
-        "Viewing window with toughened glass",
-        "Scanner: 8-point temperature sensor",
-        "Door access system (Numeric)",
-        "Master & standby refrigeration system",
-        "Split-type refrigeration system",
-        "Racks with trays",
-        "Person trap alarm",
-        "7” Touch Screen HMI"
+        "Door with viewing window is of toughened glass with polysulphides to view the samples without disturbing the test conditions",
+        "Trays and detachable racks with adjustable angles",
+        "7'' Touch Screen HMI (Allen Bradly)",
+        "Master & Stand By refrigeration System",
+        "Split type refrigeration system",
+        "Scanner : 8 pt. Temperature Sensor",
+        "Person trap/ indication switch inside chamber with audible alarm outside.",
+        "Door Access System (Numeric)"
     ],
     addOnsAttributes: [
-        "21 CFR Part 11 compliance",
-        "Mobile alert system",
-        "Hooter system",
-        "Door access system (Biometric)",
-        "Extra trays"
+        "21 CFR part 11 compliance",
+        "GSM alert system",
+        "Hooter System",
+        "Door Access System (Numeric or Biometric)",
+        "Extra Trays"
     ],
     image: "/products/StablilityChamber-Standalone/walk-in-cold-chamber.png"
 };
