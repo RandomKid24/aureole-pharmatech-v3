@@ -59,36 +59,60 @@ const Software: React.FC = () => {
     const architectureImg = "/software/architecture.png";
 
     return (
-        <div className="pt-24 lg:pt-32 pb-20 bg-white">
-            {/* Hero Section */}
-            <section className="relative overflow-hidden border-b border-slate-100 bg-white py-24 lg:py-40">
+        <div className="pt-24 min-h-screen bg-white">
+            {/* Hero Section - Standardized with Product Pages */}
+            <section className="relative py-16 sm:py-32 overflow-hidden border-b border-slate-100 bg-white">
                 <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none hidden lg:block">
-                    <span className="text-[180px] lg:text-[250px] font-black font-heading text-aureole-slate tracking-tighter leading-none uppercase">SOFTWARE</span>
+                    <span className="text-[60px] md:text-[100px] lg:text-[150px] font-black font-heading text-[#001529] tracking-tighter leading-none uppercase">SIS-APP</span>
                 </div>
 
-                <div className="container mx-auto px-6 lg:px-16 relative z-10 text-center lg:text-left">
+                <div className="container mx-auto px-6 sm:px-12 lg:px-24 relative z-10 text-center lg:text-left">
                     <div className="max-w-5xl mx-auto lg:mx-0">
-                        <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
-                            <span className="w-12 h-[2px] bg-aureole-blue"></span>
-                            <h1 className="text-[11px] font-black font-heading uppercase tracking-[0.5em] text-aureole-blue">SOFTWARE SOLUTIONS</h1>
+                        <div className="flex items-center justify-center lg:justify-start gap-4 mb-8 sm:mb-10">
+                            <span className="w-8 sm:w-12 h-[2px] bg-aureole-blue"></span>
+                            <h2 className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.5em] text-aureole-blue">ADVANCED COMPLIANCE</h2>
                         </div>
+                        <h1 className="text-4xl sm:text-7xl lg:text-[100px] font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-[0.9] mb-8 sm:mb-12">
+                            INTRODUCING <br /> <span className="text-aureole-cyan uppercase tracking-normal">SIS-APP.</span>
+                        </h1>
 
-                        <h2 className="text-4xl lg:text-[85px] font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-[0.95] mb-12">
-                            SOFTWARE <br />
-                            <span className="text-aureole-cyan uppercase tracking-normal">Solutions.</span>
-                        </h2>
-
-                        <div className="max-w-3xl border-l-[3px] border-aureole-blue/20 bg-slate-50/50 p-10 mx-auto lg:mx-0">
-                            <p className="text-lg lg:text-xl text-slate-700 font-medium leading-relaxed mb-8">
-                                In today’s regulated pharmaceutical and laboratory environment, reliable software is as critical as precision equipment. Aureole PharmaTech delivers intelligent, compliant, and user-friendly software solutions designed to enhance monitoring, control, data integrity, and operational efficiency.
-                            </p>
-                            <p className="text-[15px] text-slate-500 font-medium leading-relaxed tracking-tight">
-                                Aureole PharmaTech software solutions are developed to meet global regulatory expectations while ensuring ease of use, accuracy, and long-term reliability.
-                            </p>
+                        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start pt-4">
+                            <div className="space-y-6">
+                                <p className="text-lg lg:text-xl text-slate-700 font-bold leading-tight uppercase tracking-tight">
+                                    Secure and Integrated Solutions for <span className="text-aureole-cyan">Applications, Products, and Processes.</span>
+                                </p>
+                                <p className="text-slate-500 text-[15px] font-medium tracking-tight leading-relaxed">
+                                    In the fast-paced landscape of today's business world, the need for secure and seamlessly integrated solutions has reached unprecedented levels. SIS-APP delivers the utmost protection and efficiency.
+                                </p>
+                            </div>
+                            <div className="space-y-6 lg:pt-1">
+                                <div className="inline-flex items-center gap-3 bg-slate-50 border border-slate-100 px-5 py-3 rounded-px">
+                                    <ShieldCheck className="w-5 h-5 text-aureole-cyan" />
+                                    <span className="text-[11px] font-black uppercase tracking-[0.2em] text-[#001529]">21-CFR Part 11 Compliant</span>
+                                </div>
+                                <p className="text-slate-500 text-[15px] font-medium tracking-tight leading-relaxed italic border-l-2 border-slate-200 pl-6">
+                                    "Managing sensitive data across various applications while guaranteeing robust security and compliance with defined procedures."
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
+
+            {/* General software info moved here */}
+            <section className="py-20 bg-slate-50 border-b border-slate-100">
+                <div className="container mx-auto px-6 lg:px-16">
+                    <div className="max-w-4xl">
+                        <p className="text-lg lg:text-xl text-slate-600 font-medium leading-relaxed mb-6">
+                            In today’s regulated pharmaceutical and laboratory environment, reliable software is as critical as precision equipment. Aureole PharmaTech delivers intelligent, compliant, and user-friendly software solutions designed to enhance monitoring, control, data integrity, and operational efficiency.
+                        </p>
+                        <p className="text-[15px] text-slate-400 font-black uppercase tracking-[0.3em] leading-relaxed">
+                            DEVELOPED TO MEET GLOBAL REGULATORY EXPECTATIONS
+                        </p>
+                    </div>
+                </div>
+            </section>
+
 
             {/* Regulatory Compliance & Data Integrity */}
             <section className="py-24 border-b border-slate-100 bg-aureole-soft">
@@ -174,31 +198,48 @@ const Software: React.FC = () => {
                 </div>
             </section>
 
-            {/* FAQs */}
-            <section className="py-24 border-t border-slate-100 bg-aureole-soft">
+            {/* FAQs - Unique Direct-Read Layout */}
+            <section className="py-24 border-t border-slate-100 bg-slate-50">
                 <div className="container mx-auto px-6 lg:px-16">
-                    <div className="max-w-4xl mx-auto">
-                        <h3 className="text-4xl font-[950] font-heading uppercase tracking-tighter text-[#001529] mb-16 text-center leading-none">FAQS.</h3>
-                        <div className="space-y-4">
-                            {FAQ_DATA.map((faq, idx) => (
-                                <div key={idx} className="bg-white border border-slate-100">
-                                    <button
-                                        onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                                        className="w-full flex items-center justify-between p-8 text-left hover:bg-slate-50 transition-colors"
-                                    >
-                                        <span className="text-[11px] font-black uppercase tracking-widest text-[#001529]">{faq.question}</span>
-                                        {openFaq === idx ? <Minus className="w-4 h-4 text-aureole-cyan" /> : <Plus className="w-4 h-4 text-aureole-blue" />}
-                                    </button>
-                                    <div className={`transition-all duration-500 overflow-hidden ${openFaq === idx ? 'max-h-[500px]' : 'max-h-0'}`}>
-                                        <div className="p-8 pt-0 border-t border-slate-50">
-                                            <p className="text-[15px] font-medium text-slate-500 tracking-tight leading-relaxed">
-                                                {faq.answer}
-                                            </p>
+                    <div className="max-w-4xl mb-20">
+                        <div className="flex items-center gap-4 mb-6">
+                            <span className="w-12 h-[2px] bg-aureole-blue"></span>
+                            <h2 className="text-[11px] font-black uppercase tracking-[0.5em] text-aureole-blue">KNOWLEDGE BASE</h2>
+                        </div>
+                        <h2 className="text-4xl lg:text-5xl font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-none">
+                            FREQUENTLY ASKED <span className="text-aureole-cyan uppercase tracking-normal">Questions.</span>
+                        </h2>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+                        {FAQ_DATA.map((faq, idx) => (
+                            <div key={idx} className="bg-white p-10 border border-slate-100 shadow-sm hover:shadow-md transition-shadow group relative overflow-hidden">
+                                {/* Large faint background number for uniqueness */}
+                                <div className="absolute -top-4 -right-2 text-8xl font-black text-slate-50 opacity-0 group-hover:opacity-100 transition-opacity select-none pointer-events-none">
+                                    {idx + 1}
+                                </div>
+
+                                <div className="relative z-10 space-y-6">
+                                    <div className="flex items-start gap-4">
+                                        <div className="w-8 h-8 rounded-full bg-aureole-blue/5 flex-shrink-0 flex items-center justify-center text-aureole-blue font-black text-[10px]">
+                                            Q
                                         </div>
+                                        <h3 className="text-[13px] font-black uppercase tracking-wider text-[#001529] leading-snug">
+                                            {faq.question}
+                                        </h3>
+                                    </div>
+
+                                    <div className="flex items-start gap-4">
+                                        <div className="w-8 h-8 rounded-full bg-aureole-cyan/5 flex-shrink-0 flex items-center justify-center text-aureole-cyan font-black text-[10px]">
+                                            A
+                                        </div>
+                                        <p className="text-[15px] font-medium text-slate-500 tracking-tight leading-relaxed">
+                                            {faq.answer}
+                                        </p>
                                     </div>
                                 </div>
-                            ))}
-                        </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
