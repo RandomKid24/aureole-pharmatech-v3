@@ -18,7 +18,6 @@ import { ultrasonicPrime } from './tabletop/ultrasonic-prime';
 import { ultrasonicPrimeChilling } from './tabletop/ultrasonic-prime-chilling';
 import { ultrasonicPrimeAdvance } from './tabletop/ultrasonic-prime-advance';
 import { ultrasonicPrimeShaking } from './tabletop/ultrasonic-prime-shaking';
-import { ultrasonicIndustrial } from './tabletop/ultrasonic-industrial';
 import { constantWaterBath } from './tabletop/constant-water-bath';
 import { circulatingWaterBath } from './tabletop/circulating-water-bath';
 import { steamBath } from './tabletop/steam-bath';
@@ -59,7 +58,6 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     "Prime Series with Chilling": ultrasonicPrimeChilling,
     "Prime Series with Advance Controlling": ultrasonicPrimeAdvance,
     "Prime Series with Heating & Shaking": ultrasonicPrimeShaking,
-    "Industrial Series": ultrasonicIndustrial,
     "Constant": constantWaterBath,
     "Circulating": circulatingWaterBath,
     "Steam Bath": steamBath,

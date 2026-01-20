@@ -23,6 +23,13 @@ export interface ProductDetail {
     image?: string;
     images?: string[];
     imageCaptions?: string[];
+    keyFeaturesHeading?: string;
+    regularAttributesHeading?: string;
+    variantTable?: {
+        headers: string[];
+        rows: string[][];
+        remark?: string;
+    };
 }
 
 export interface SubType {

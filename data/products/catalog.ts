@@ -47,8 +47,7 @@ export const PRODUCT_CATALOG: Category[] = [
                     "Prime Series",
                     "Prime Series with Chilling",
                     "Prime Series with Advance Controlling",
-                    "Prime Series with Heating & Shaking",
-                    "Industrial Series"
+                    "Prime Series with Heating & Shaking"
                 ]
             },
             {
