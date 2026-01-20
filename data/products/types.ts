@@ -22,6 +22,7 @@ export interface TableRow {
 
 export interface ComplexTable {
     rows: TableRow[];
+    remark?: string;
 }
 
 export interface TechnicalSpec {

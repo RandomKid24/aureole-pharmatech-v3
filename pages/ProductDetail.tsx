@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { PRODUCT_DETAILS } from '../data/products';
@@ -135,7 +134,7 @@ const ProductDetail: React.FC = () => {
         return (
             <div className="pt-40 min-h-screen bg-white container mx-auto px-6 lg:px-24">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h1 className="text-4xl font-[950] text-[#001529] uppercase tracking-tighter mb-8 uppercase">Specification Pending.</h1>
+                    <h1 className="text-4xl font-[950] text-[#001529] uppercase tracking-tighter mb-8">Specification Pending.</h1>
                     <Link to="/products" className="inline-flex items-center gap-4 px-10 py-5 bg-[#001529] text-white text-[10px] font-black uppercase tracking-widest hover:bg-aureole-blue transition-all">
                         <ArrowLeft size={16} /> Back to Catalog
                     </Link>
@@ -397,31 +396,49 @@ const ProductDetail: React.FC = () => {
                                 <tbody className="divide-y divide-slate-100 text-slate-600">
                                     {product.complexTable.rows.map((row, i) => (
                                         <tr key={i} className="transition-colors group">
-                                            {row.cells.map((cell, j) => {
-                                                const isHeader = cell.isHeader;
-                                                const Tag = isHeader ? 'th' : 'td';
-
-                                                return (
-                                                    <Tag
+                                            {row.cells.map((cell, j) => (
+                                                cell.isHeader ? (
+                                                    <th
                                                         key={j}
                                                         colSpan={cell.colSpan || 1}
                                                         rowSpan={cell.rowSpan || 1}
                                                         className={`
                                                             py-6 px-6 text-[11px] uppercase tracking-tight border border-slate-200
-                                                            ${isHeader ? 'bg-slate-50 font-black text-aureole-slate text-center' : 'font-bold'}
-                                                            ${cell.align === 'center' ? 'text-center' : cell.align === 'right' ? 'text-right' : 'text-left'}
-                                                            ${!isHeader && j === 0 ? 'text-aureole-blue bg-slate-50/30' : ''}
+                                                            bg-slate-50 font-black text-aureole-slate text-center
                                                         `}
                                                     >
                                                         {cell.content}
-                                                    </Tag>
-                                                );
-                                            })}
+                                                    </th>
+                                                ) : (
+                                                    <td
+                                                        key={j}
+                                                        colSpan={cell.colSpan || 1}
+                                                        rowSpan={cell.rowSpan || 1}
+                                                        className={`
+                                                            py-6 px-6 text-[11px] uppercase tracking-tight border border-slate-200
+                                                            font-bold
+                                                            ${cell.align === 'center' ? 'text-center' : cell.align === 'right' ? 'text-right' : 'text-left'}
+                                                            ${j === 0 ? 'text-aureole-blue bg-slate-50/30' : ''}
+                                                        `}
+                                                    >
+                                                        {cell.content}
+                                                    </td>
+                                                )
+                                            ))}
                                         </tr>
                                     ))}
                                 </tbody>
                             </table>
                         </div>
+
+                        {product.complexTable.remark && (
+                            <div className="mt-12 p-10 bg-slate-50 border border-slate-100 border-l-[6px] border-aureole-cyan shadow-sm">
+                                <p className="text-[12px] text-aureole-slate leading-relaxed font-bold uppercase tracking-widest">
+                                    <span className="text-aureole-cyan mr-4">REMARK:</span>
+                                    {product.complexTable.remark}
+                                </p>
+                            </div>
+                        )}
                     </div>
                 </section>
             )}
