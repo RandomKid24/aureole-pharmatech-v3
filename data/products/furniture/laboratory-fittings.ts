@@ -1,7 +1,8 @@
 import { ProductDetail } from '../types';
 
 export const laboratoryFittings: ProductDetail = {
-    description: "Comprehensive range of laboratory fittings including water and gas taps, Bunsen burners, electrical sockets, and pegboards.",
+    description: "Comprehensive range of laboratory fittings designed for functionality and safety in modern research environments.",
+    keyFeaturesHeading: "Features",
     keyFeatures: [
         "Water & Gas Taps",
         "Gas Burner",
@@ -12,5 +13,5 @@ export const laboratoryFittings: ProductDetail = {
     models: [],
     regularAttributes: [],
     addOnsAttributes: [],
-    image: "PLACEHOLDER"
+    image: "/products/Furniture/fittings.png"
 };

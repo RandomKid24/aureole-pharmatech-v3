@@ -1,28 +1,16 @@
 import { ProductDetail } from '../types';
 
 export const laboratoryWorktops: ProductDetail = {
-    description: "Made of 16mm thick laboratory grade Compact Laminate Boards (Max Resistance). The panels are made from approved and tested raw materials, compressed under high pressure, resulting in a unique, homogenous panel without joints. Fully enclosed and therefore resistant against the penetration of moisture. The surface is protected with a dual cured urethane acrylic coating which makes it unaffected by solvents and chemicals in extreme working conditions of the laboratory. Easy to clean and disinfect.",
+    description: "Made of 16mm thick laboratory grade Compact Laminate Boards (Max Resistance). The panels consist namely of approved and tested raw materials, compressed under high pressure, emerges such a unique, homogenous panel without joints. Fully enclosed and therefore resistant against the penetration of moisture. The surface, protected with a dual cured urethane acrylic coating has proven itself to be unaffected by solvents and chemicals in extreme working conditions ofthe laboratory. Easy to clean and disinfect.",
+    keyFeaturesHeading: "Varieties",
     keyFeatures: [
         "Chemical Resistance Worktops",
         "Granite",
-        "Epoxy Resin Worktops",
-        "16mm thick laboratory grade Compact Laminate Boards",
-        "High pressure compressed construction",
-        "Moisture resistant",
-        "Dual cured urethane acrylic coating",
-        "Easy to clean and disinfect"
+        "Epoxy Resin Worktops"
     ],
-    specifications: [
-        { parameter: "Material", details: "16mm thick laboratory grade Compact Laminate Boards (Max Resistance)" },
-        { parameter: "Construction", details: "Approved and tested raw materials, compressed under high pressure" },
-        { parameter: "Panel Type", details: "Unique, homogenous panel without joints" },
-        { parameter: "Moisture Resistance", details: "Fully enclosed and resistant against moisture penetration" },
-        { parameter: "Surface Protection", details: "Dual cured urethane acrylic coating" },
-        { parameter: "Chemical Resistance", details: "Unaffected by solvents and chemicals in extreme working conditions" },
-        { parameter: "Varieties", details: "Chemical Resistance Worktops, Granite, Epoxy Resin Worktops" }
-    ],
+    specifications: [],
     models: [],
     regularAttributes: [],
     addOnsAttributes: [],
-    image: "PLACEHOLDER"
+    image: "/products/Furniture/worktops.png"
 };
