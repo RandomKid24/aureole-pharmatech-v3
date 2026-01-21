@@ -5,34 +5,23 @@ import LazyImage from './LazyImage';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center bg-white pt-32 pb-16 sm:pt-52 lg:pt-60">
+    <section className="relative min-h-screen flex items-center bg-white pt-32 pb-16 sm:pt-52 lg:pt-60 overflow-hidden">
       <div className="absolute inset-0 z-0 opacity-[0.03] bg-[radial-gradient(#0079ac_1px,transparent_1px)] [background-size:40px_40px]"></div>
-      {/* Large Logo Watermark on Right Side */}
-      <div className="absolute -right-48 top-1/2 -translate-y-1/2 opacity-[0.05] pointer-events-none select-none hidden lg:block">
-        <LazyImage
-          src="/aureole-logo.png"
-          alt=""
-          className="h-[150vh] w-auto"
-        />
-      </div>
+
+      {/* Massive Washed Out Logo - Faint and bleeding off-screen */}
+      <div
+        className="absolute -right-64 top-0 w-full h-full opacity-[0.06] pointer-events-none select-none z-0"
+        style={{
+          backgroundImage: 'url(/aureole-logo.png)',
+          backgroundSize: '150vh',
+          backgroundPosition: 'center right',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-24 relative z-10">
         <div className="max-w-7xl">
-          {/* Lightened Validation Tags */}
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-4 mb-12 animate-in fade-in slide-in-from-left-4 duration-500">
-            <div className="flex items-center gap-3 bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm">
-              <ShieldCheck className="w-3.5 h-3.5 text-aureole-blue" />
-              <span className="text-[10px] font-black tracking-[0.2em] text-slate-500 uppercase">ISO 9001</span>
-            </div>
-            <div className="flex items-center gap-3 bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm">
-              <Award className="w-3.5 h-3.5 text-aureole-blue" />
-              <span className="text-[10px] font-black tracking-[0.2em] text-slate-500 uppercase">GMP COMPLIANT</span>
-            </div>
-            <div className="flex items-center gap-3 bg-blue-50/30 border border-blue-100/50 px-4 py-2 rounded-full shadow-sm">
-              <CheckCircle2 className="w-3.5 h-3.5 text-aureole-blue" />
-              <span className="text-[10px] font-bold tracking-[0.2em] text-aureole-blue uppercase">ESTD. 1996</span>
-            </div>
-          </div>
+          {/* Validation Tags Removed for cleaner hero as requested previously */}
 
           <div className="flex flex-col lg:flex-row lg:items-center gap-12 lg:gap-24">
             <div className="flex-1">
