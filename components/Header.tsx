@@ -11,6 +11,7 @@ const Header: React.FC = () => {
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const [mobileExpandedCat, setMobileExpandedCat] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string>(PRODUCT_CATALOG[0]?.id || '');
 
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -177,58 +178,79 @@ const Header: React.FC = () => {
                         </div>
                       )}
 
-                      {/* Mega Menu for 'Products' */}
+                      {/* Technical Ribbon Dropdown - Ultra Shallow & Horizontal */}
                       {link.name === 'Products' && (
                         <div
-                          className={`fixed left-0 w-full bg-white/95 backdrop-blur-xl border-t border-b border-r border-slate-100 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] transition-all duration-500 origin-top z-40 ${productsDropdownOpen ? 'opacity-100 translate-y-0 scale-y-100' : 'opacity-0 -translate-y-4 scale-y-0 pointer-events-none'}`}
-                          style={{ top: isScrolled ? '64px' : '96px' }}
+                          className={`absolute left-1/2 -translate-x-1/2 w-[780px] bg-white border border-slate-200 shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] transition-all duration-300 origin-top z-50 overflow-hidden ${productsDropdownOpen ? 'opacity-100 translate-y-2 scale-100' : 'opacity-0 translate-y-4 scale-95 pointer-events-none'}`}
+                          style={{ top: '100%' }}
                           onMouseEnter={() => handleMouseEnter('products')}
                           onMouseLeave={handleMouseLeave}
                         >
-                          <div className="container mx-auto px-16 py-12">
-                            <div className="grid grid-cols-3 gap-8 xl:gap-12">
-                              {PRODUCT_CATALOG.map((cat) => (
-                                <div key={cat.id} className="space-y-6">
-                                  {/* Category Header */}
-                                  <Link
-                                    to={cat.id === 'stability' ? '/products/stability-chambers' : cat.id === 'tabletop' ? '/products/table-top-instruments' : '/products/laboratory-furniture'}
-                                    className="flex items-center gap-3 group/cat mb-6 bg-slate-50 p-4 border border-slate-100/50 hover:bg-white hover:border-slate-200 transition-all"
-                                  >
-                                    <div className="p-2 bg-white text-aureole-blue border border-slate-100 group-hover/cat:text-white group-hover/cat:bg-aureole-cyan transition-colors">
-                                      {cat.id === 'stability' ? <Thermometer size={16} /> : cat.id === 'tabletop' ? <Activity size={16} /> : <Box size={16} />}
-                                    </div>
-                                    <h3 className="text-lg font-black uppercase tracking-tighter text-aureole-slate group-hover/cat:text-aureole-cyan transition-colors">
-                                      {cat.title}
-                                    </h3>
-                                  </Link>
-
-                                  {/* Products Grid */}
-                                  <div className="grid gap-y-2 gap-x-8 max-h-[40vh] overflow-y-auto pr-2 custom-scrollbar">
-                                    {cat.subTypes.map((sub) => (
-                                      <div key={sub.id} className="mb-4 break-inside-avoid">
-                                        {(cat.subTypes.length > 1 || sub.name !== cat.title) && (
-                                          <h4 className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3 pl-2 border-l-2 border-aureole-cyan/30">
-                                            {sub.name}
-                                          </h4>
-                                        )}
-                                        <div className="flex flex-col gap-1">
-                                          {sub.products.map((pName) => (
-                                            <Link
-                                              key={pName}
-                                              to={`/products/${slugify(pName)}`}
-                                              className="text-[10px] font-black text-slate-500 hover:text-aureole-blue hover:pl-2 transition-all uppercase tracking-wide py-1 block w-full truncate"
-                                              title={pName}
-                                            >
-                                              {pName}
-                                            </Link>
-                                          ))}
-                                        </div>
-                                      </div>
-                                    ))}
+                          {/* Horizontal Category Selector */}
+                          <div className="flex border-b border-slate-100 bg-slate-50/80">
+                            {PRODUCT_CATALOG.map((cat) => {
+                              const catUrl = cat.id === 'stability' ? '/products/stability-chambers' : cat.id === 'tabletop' ? '/products/table-top-instruments' : '/products/laboratory-furniture';
+                              return (
+                                <Link
+                                  key={cat.id}
+                                  to={catUrl}
+                                  onMouseEnter={() => setActiveCategory(cat.id)}
+                                  onClick={() => setProductsDropdownOpen(false)}
+                                  className={`flex-1 flex items-center justify-center gap-3 py-4 transition-all relative group ${activeCategory === cat.id ? 'bg-white' : 'hover:bg-white/50'}`}
+                                >
+                                  <div className={`transition-colors ${activeCategory === cat.id ? 'text-aureole-cyan' : 'text-slate-300 group-hover:text-slate-400'}`}>
+                                    {cat.id === 'stability' ? <Thermometer size={14} /> : cat.id === 'tabletop' ? <Activity size={14} /> : <Box size={14} />}
                                   </div>
+                                  <span className={`text-[10px] font-black uppercase tracking-[0.2em] transition-colors ${activeCategory === cat.id ? 'text-aureole-slate' : 'text-slate-400 group-hover:text-slate-500'}`}>
+                                    {cat.title}
+                                  </span>
+                                  {activeCategory === cat.id && (
+                                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-aureole-cyan" />
+                                  )}
+                                </Link>
+                              );
+                            })}
+                          </div>
+
+                          {/* Horizontal Content Area */}
+                          <div className="p-8 h-[250px] relative">
+                            {PRODUCT_CATALOG.map((cat) => (
+                              <div
+                                key={cat.id}
+                                className={`absolute inset-0 p-8 transition-all duration-300 ${activeCategory === cat.id ? 'opacity-100 translate-y-0 visible' : 'opacity-0 translate-y-2 invisible'}`}
+                              >
+                                <div className="grid grid-cols-3 gap-x-10 gap-y-3">
+                                  {cat.subTypes.map((sub) => (
+                                    <React.Fragment key={sub.id}>
+                                      {sub.products.map((pName) => (
+                                        <Link
+                                          key={pName}
+                                          to={`/products/${slugify(pName)}`}
+                                          className="text-[10px] font-bold text-slate-500 hover:text-aureole-blue transition-all uppercase tracking-wide flex items-center gap-2 group/item truncate"
+                                          title={pName}
+                                          onClick={() => setProductsDropdownOpen(false)}
+                                        >
+                                          <div className="w-1 h-1 rounded-full bg-slate-200 group-hover/item:bg-aureole-cyan transition-colors flex-shrink-0" />
+                                          <span className="truncate">{pName}</span>
+                                        </Link>
+                                      ))}
+                                    </React.Fragment>
+                                  ))}
                                 </div>
-                              ))}
+                              </div>
+                            ))}
+                          </div>
+
+                          {/* Ultra-Slim Footer Bar */}
+                          <div className="bg-slate-50 border-t border-slate-100 px-8 py-3 flex justify-between items-center text-[9px] font-black uppercase tracking-widest text-slate-400">
+                            <div className="flex items-center gap-4">
+                              <span>Industrial Grade Systems</span>
+                              <div className="w-1 h-1 rounded-full bg-slate-300" />
+                              <span>ISO Certified</span>
                             </div>
+                            <Link to="/products" className="text-aureole-cyan hover:gap-3 transition-all flex items-center gap-2">
+                              Explore All <ArrowRight size={10} />
+                            </Link>
                           </div>
                         </div>
                       )}
