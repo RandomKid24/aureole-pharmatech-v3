@@ -62,7 +62,7 @@ const ExecutiveHierarchy: React.FC = () => {
                 {/* Spotlight MD */}
                 <div className="grid lg:grid-cols-12 gap-16 items-center mb-32 border-b border-slate-100 pb-32">
                     <div className="lg:col-span-4">
-                        <div className="aspect-[3/4] transition-all duration-1000 border-b-[15px] border-[#001529] shadow-2xl overflow-hidden bg-slate-50">
+                        <div className="aspect-[3/4] transition-all duration-1000 shadow-2xl overflow-hidden bg-slate-50">
                             <img
                                 src={coreTeam[0].img}
                                 alt={coreTeam[0].name}

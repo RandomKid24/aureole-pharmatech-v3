@@ -12,7 +12,7 @@ const LeadershipVision: React.FC = () => {
             <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
                 <div className="grid lg:grid-cols-12 gap-16 items-start">
                     <div className="lg:col-span-5 relative group">
-                        <div className="aspect-[3/4] overflow-hidden transition-all duration-1000 border-b-[20px] border-[#001529] shadow-2xl bg-slate-50">
+                        <div className="aspect-[3/4] overflow-hidden transition-all duration-1000 shadow-2xl bg-slate-50">
                             <img
                                 src="/about/managing-director.jpg"
                                 alt="Dr. Kiran Badgujar"

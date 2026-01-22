@@ -10,7 +10,7 @@ const ManagingDirectorProfile: React.FC = () => {
                {/* Executive Profile */}
                <div className="lg:col-span-12 xl:col-span-4 relative mb-12 xl:mb-0">
                   <div className="max-w-[420px] mx-auto xl:mx-0">
-                     <div className="aspect-[3/4] transition-all duration-1000 overflow-hidden border-b-[12px] border-[#001529] bg-slate-50 relative">
+                     <div className="aspect-[3/4] transition-all duration-1000 overflow-hidden bg-slate-50 relative">
                         <img
                            src="/about/managing-director.jpg"
                            alt="Dr. Kiran Badgujar"
