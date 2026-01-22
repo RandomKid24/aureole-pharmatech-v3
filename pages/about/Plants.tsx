@@ -5,19 +5,12 @@ import LazyImage from '@/components/LazyImage';
 import PlantsHero from './Plants/sections/PlantsHero';
 import FacilityUnits from './Plants/sections/FacilityUnits';
 import PlantGallery from './Plants/sections/PlantGallery';
-import CapabilityIcons from './Plants/sections/CapabilityIcons';
+
 
 const galleryImages = [
     "/plants/DJI_20240723121709_0011_D.JPG",
     "/plants/DJI_20240723124450_0018_D_2.jpg",
-    "/plants/mack auraa plant 1.jpg",
-    "/plants/mack auraa plant 2.jpg",
-    "/plants/process photo.jpg",
-    "/plants/MAC_9223.jpg",
-    "/plants/DJI_20240723121716_0012_D.JPG",
-    "/plants/DJI_20240723124454_0019_D.JPG",
-    "/plants/0568918a-e2ce-4c49-b5ab-cb662007df56~1.jpg",
-    "/plants/Pharnma plant 2_2.jpg"
+    "/plants/IMG_8943.jpg"
 ];
 
 const Plants: React.FC = () => {
@@ -59,7 +52,7 @@ const Plants: React.FC = () => {
             <PlantsHero />
             <FacilityUnits onImageClick={openByUrl} />
             <PlantGallery onImageClick={setLightboxIndex} images={galleryImages} />
-            <CapabilityIcons />
+
 
             {/* Lightbox */}
             {lightboxIndex !== null && (

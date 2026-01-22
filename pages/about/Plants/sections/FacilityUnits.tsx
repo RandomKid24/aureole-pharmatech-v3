@@ -14,7 +14,7 @@ const FacilityUnits: React.FC<FacilityUnitsProps> = ({ onImageClick }) => {
             title: "Main Manufacturing Facility",
             location: "Malegaon MIDC, Sinnar, Nashik, Maharashtra",
             desc: "Our primary manufacturing and assembly unit dedicated to high-precision pharmaceutical instrumentation and laboratory equipment. This facility is the core hub for stability chamber production and quality assurance.",
-            image: "/plants/New Company.jpg",
+            image: "/plants/IMG_8943.jpg",
             features: ["Pharma Equipment Assembly", "ISO 9001:2015 Hub", "Quality Control Terminal"]
         },
         {
@@ -22,7 +22,7 @@ const FacilityUnits: React.FC<FacilityUnitsProps> = ({ onImageClick }) => {
             title: "Advanced Fabrication Wing",
             location: "Sinnar Industrial Zone, Maharashtra",
             desc: "Focused on heavy-duty technical fabrication and industrial hardware components. This unit supports our process equipment division with specialized engineering and assembly capabilities.",
-            image: "/plants/Pharnma plant 2_2.jpg",
+            image: "/plants/DJI_20240723124450_0018_D_2.jpg",
             features: ["Industrial Hardware Fabrication", "Precision Engineering", "Logistics & Distribution"]
         }
     ];
