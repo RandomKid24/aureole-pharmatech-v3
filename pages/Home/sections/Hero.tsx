@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { ArrowDown, ShieldCheck, Award, CheckCircle2 } from 'lucide-react';
-import LazyImage from './LazyImage';
+import LazyImage from '@/components/LazyImage';
 
 const Hero: React.FC = () => {
   return (

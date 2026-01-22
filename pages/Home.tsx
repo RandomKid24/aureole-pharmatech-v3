@@ -1,12 +1,12 @@
 
 import React, { useEffect } from 'react';
-import Hero from '../components/Hero';
-import About from '../components/About';
-import ManagingDirectorProfile from '../components/ManagingDirectorProfile';
-import PrecisionEngineeredSystems from '../components/PrecisionEngineeredSystems';
-import IndustriesServed from '../components/IndustriesServed';
-import GlobalValidation from '../components/GlobalValidation';
-import OurUnitsContact from '../components/OurUnitsContact';
+import Hero from './Home/sections/Hero';
+import About from './Home/sections/About';
+import ManagingDirectorProfile from './Home/sections/ManagingDirectorProfile';
+import PrecisionEngineeredSystems from './Home/sections/PrecisionEngineeredSystems';
+import IndustriesServed from './Home/sections/IndustriesServed';
+import GlobalValidation from './Home/sections/GlobalValidation';
+import OurUnitsContact from './Home/sections/OurUnitsContact';
 import ScrollToTop from '../components/ScrollToTop';
 
 const Home: React.FC = () => {

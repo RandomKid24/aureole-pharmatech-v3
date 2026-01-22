@@ -82,3 +82,15 @@ export const CLIENT_LOGOS: ClientLogo[] = [
   { id: 'torque', name: 'TORQUE', logo: '/logos/torque.png' },
   { id: 'unimark', name: 'Unimark Remedies Limited', logo: '/logos/unimark.png' }
 ];
+
+const placeholderIds = [
+  '1587854692152-cbe660dbbb88', '1532187875605-1838d73706d4', '1579154273105-08197771746f',
+  '1581093199185-ce4763e0ad6a', '1563013544-824ae1b704d3', '1581093806997-124204d9ad9d',
+  '1512428559087-560fa5ceab42', '1560179707-f14e90ef3623', '1551288049-bebda4e38f71',
+  '1554469384-e58fac16e23a'
+];
+
+export const CLIENTS = CLIENT_LOGOS.map((client, i) => ({
+  name: client.name,
+  logo: client.logo || `https://images.unsplash.com/photo-${placeholderIds[i % placeholderIds.length]}?auto=format&fit=crop&q=80&w=400`
+}));

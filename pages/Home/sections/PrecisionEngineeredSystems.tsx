@@ -1,9 +1,9 @@
 
 import React from 'react';
-import { PRODUCTS } from '../constants';
+import { PRODUCTS } from '@/constants';
 import { ArrowUpRight, Activity, ShieldCheck, FlaskConical, Settings, Cpu, Gauge } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import LazyImage from './LazyImage';
+import LazyImage from '@/components/LazyImage';
 
 const PrecisionEngineeredSystems: React.FC = () => {
   const navigate = useNavigate();

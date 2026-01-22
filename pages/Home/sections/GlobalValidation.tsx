@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { CLIENTS } from '../constants';
-import LazyImage from './LazyImage';
+import { CLIENTS } from '@/constants';
+import LazyImage from '@/components/LazyImage';
 
 const GlobalValidation: React.FC = () => {
   // Splitting the massive list into 3 rows for high-density impact

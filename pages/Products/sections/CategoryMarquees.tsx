@@ -1,0 +1,116 @@
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { slugify } from '@/utils/urlUtils';
+import { PRODUCT_CATALOG, PRODUCT_DETAILS } from '@/data/products';
+
+const ProductMarquee = ({ pNames, animationClass }: { pNames: string[], animationClass: string }) => {
+    const displayProducts = [...pNames, ...pNames, ...pNames];
+
+    return (
+        <div className="flex overflow-hidden select-none py-10 bg-white border-y border-slate-200 group relative">
+            <div className="absolute inset-y-0 left-0 w-32 sm:w-64 bg-gradient-to-r from-[#f8fafc] via-[#f8fafc]/80 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute inset-y-0 right-0 w-32 sm:w-64 bg-gradient-to-l from-[#f8fafc] via-[#f8fafc]/80 to-transparent z-10 pointer-events-none"></div>
+
+            <div className={`flex items-center gap-6 whitespace-nowrap ${animationClass} group-hover:[animation-play-state:paused]`}>
+                {displayProducts.map((pName, idx) => {
+                    const productData = PRODUCT_DETAILS[pName];
+                    const productImage = productData?.image || (productData?.images && productData.images[0]);
+
+                    return (
+                        <Link
+                            key={idx}
+                            to={`/products/${slugify(pName)}`}
+                            className="flex items-center gap-6 p-6 bg-white border border-slate-200 hover:border-aureole-cyan hover:shadow-xl transition-all duration-300 w-[280px] sm:w-[400px] flex-shrink-0 group/card"
+                        >
+                            <div className="w-20 h-20 sm:w-28 sm:h-28 flex-shrink-0 bg-white rounded-sm overflow-hidden p-2 border border-slate-100 group-hover/card:border-aureole-cyan/30 group-hover/card:scale-105 transition-all duration-300">
+                                <img
+                                    src={productImage}
+                                    alt={pName}
+                                    className="w-full h-full object-contain mix-blend-multiply"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div className="flex flex-col flex-grow min-w-0">
+                                <span className="text-[12px] sm:text-[14px] font-black tracking-[0.05em] text-slate-400 group-hover/card:text-aureole-blue uppercase transition-colors whitespace-nowrap overflow-hidden text-ellipsis">
+                                    {pName}
+                                </span>
+                                <div className="mt-4 flex items-center gap-2 opacity-100 transition-opacity">
+                                    <div className="w-1 h-1 bg-aureole-cyan rounded-full"></div>
+                                    <span className="text-[10px] font-bold text-aureole-blue">View Technical Sheet</span>
+                                </div>
+                            </div>
+                        </Link>
+                    );
+                })}
+            </div>
+        </div>
+    );
+};
+
+const CategoryMarquees: React.FC = () => {
+    return (
+        <section className="py-12 bg-[#f8fafc] space-y-16 relative">
+            {PRODUCT_CATALOG.map((category, catIdx) => {
+                const productsWithImages = category.subTypes
+                    .flatMap(sub => sub.products)
+                    .filter(pName => {
+                        const data = PRODUCT_DETAILS[pName];
+                        return data?.image || (data?.images && data.images.length > 0);
+                    });
+
+                const mainLink = `/products/${category.id === 'stability' ? 'stability-chambers' : category.id === 'tabletop' ? 'table-top-instruments' : 'laboratory-furniture'}`;
+
+                if (productsWithImages.length === 0) return null;
+
+                const animationClass = catIdx % 2 === 0 ? 'animate-marquee' : 'animate-marquee-reverse';
+
+                return (
+                    <div key={category.id} className="relative group/section">
+                        <div className="container mx-auto px-6 lg:px-24 relative z-10">
+                            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-8 gap-6">
+                                <div className="max-w-3xl">
+                                    <h3 className="text-4xl lg:text-7xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter leading-none mb-6">
+                                        {category.title.split(' ').slice(0, -1).join(' ')} <br />
+                                        <span className="text-aureole-blue">{category.title.split(' ').pop()}</span>
+                                    </h3>
+                                    <p className="text-slate-500 font-medium text-[14px] sm:text-[15px] tracking-tight max-w-2xl leading-relaxed">
+                                        {category.description}
+                                    </p>
+                                </div>
+
+                                <Link
+                                    to={mainLink}
+                                    className="group relative inline-flex items-center gap-8 px-12 py-5 bg-aureole-blue text-white overflow-hidden transition-all duration-500 shadow-2xl hover:shadow-aureole-cyan/30"
+                                >
+                                    <div className="absolute inset-0 w-0 bg-aureole-cyan transition-all duration-500 ease-out group-hover:w-full"></div>
+                                    <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite] pointer-events-none"></div>
+
+                                    <div className="relative z-10 flex items-center gap-4">
+                                        <span className="text-[14px] font-black uppercase tracking-[0.3em] group-hover:tracking-[0.45em] transition-all duration-500">
+                                            VIEW ALL
+                                        </span>
+                                        <div className="overflow-hidden w-6 h-6 flex items-center justify-center relative">
+                                            <ArrowRight size={20} className="absolute group-hover:translate-x-8 transition-all duration-500" />
+                                            <ArrowRight size={20} className="-translate-x-8 group-hover:translate-x-0 transition-all duration-500 delay-100" />
+                                        </div>
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
+
+                        <div className="relative py-8 bg-slate-50/50 border-y border-slate-100">
+                            <ProductMarquee
+                                pNames={productsWithImages}
+                                animationClass={animationClass}
+                            />
+                        </div>
+                    </div>
+                );
+            })}
+        </section>
+    );
+};
+
+export default CategoryMarquees;

@@ -1,7 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
-import { Calendar, MapPin, Image as ImageIcon, Users, Award, ArrowRight, X, ChevronLeft, ChevronRight, Play } from 'lucide-react';
-import LazyImage from '../components/LazyImage';
+import EventsHero from './Events/sections/EventsHero';
+import ExhibitionsGrid from './Events/sections/ExhibitionsGrid';
+import CompanyEventsGrid from './Events/sections/CompanyEventsGrid';
+import EventsLightbox from './Events/sections/EventsLightbox';
 
 interface EventMedia {
     title: string;
@@ -100,11 +102,7 @@ const COMPANY_EVENTS: EventMedia[] = [
     }
 ];
 
-// Helper to get all images for a specific folder path
-// In a real production app, this would come from an API or a manifest file.
-// For now, we'll simulate the "Gallery" view for a few selected events that have many images.
 const GET_FOLDER_GALLERY = (folderPath: string) => {
-    // This is a mapping of some folders to their contents based on our recent list_dir calls
     const GALLERIES: Record<string, string[]> = {
         "/events/exhibitions/CPHI PMEC (NOV 2024)": [
             "cphi-pmec1.jpg", "cphi-pmec2.jpg", "cphi-pmec3.jpg", "cphi-pmec4.jpg", "cphi-pmec5.jpg",
@@ -126,7 +124,6 @@ const GET_FOLDER_GALLERY = (folderPath: string) => {
             "WhatsApp-Image-2025-08-20-at-1.00.50-PM.jpeg"
         ]
     };
-
     return GALLERIES[folderPath] || [];
 };
 
@@ -161,211 +158,20 @@ const Events: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32 pb-20 bg-white">
-            {/* Hero Section */}
-            <section className="relative overflow-hidden border-b border-slate-100 bg-white py-24 lg:py-40">
-                <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none hidden lg:block">
-                    <span className="text-[180px] lg:text-[250px] font-black font-heading text-aureole-slate tracking-tighter leading-none uppercase">EVENTS</span>
-                </div>
+            <EventsHero />
+            <ExhibitionsGrid exhibitions={EXHIBITIONS} onEventClick={setSelectedEvent} />
+            <CompanyEventsGrid companyEvents={COMPANY_EVENTS} onEventClick={setSelectedEvent} />
 
-                <div className="container mx-auto px-6 lg:px-16 relative z-10 text-center lg:text-left">
-                    <div className="max-w-5xl mx-auto lg:mx-0">
-                        <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
-                            <span className="w-12 h-[2px] bg-aureole-blue"></span>
-                            <h1 className="text-[11px] font-black font-heading uppercase tracking-[0.5em] text-aureole-blue">EVENTS & EXHIBITIONS Gallery</h1>
-                        </div>
-
-                        <h2 className="text-4xl lg:text-[85px] font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-[0.95] mb-12">
-                            CORPORATE <br />
-                            <span className="text-aureole-cyan uppercase tracking-normal">Moments.</span>
-                        </h2>
-
-                        <div className="max-w-3xl border-l-[3px] border-aureole-blue/20 bg-slate-50/50 p-10">
-                            <p className="text-lg lg:text-xl text-slate-700 font-medium leading-relaxed mb-8">
-                                Journey through our past events and exhibitions. Click on any event to explore the full gallery of images and videos.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Past Exhibitions */}
-            <section className="py-24 border-b border-slate-100 bg-aureole-soft">
-                <div className="container mx-auto px-6 lg:px-16">
-                    <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
-                        <div>
-                            <div className="flex items-center gap-4 mb-4">
-                                <Award className="w-6 h-6 text-aureole-blue" />
-                                <h3 className="text-[11px] font-black uppercase tracking-[0.3em] text-aureole-blue">INDUSTRY PRESENCE</h3>
-                            </div>
-                            <h2 className="text-4xl lg:text-5xl font-black font-heading uppercase tracking-tighter text-[#001529]">PAST EXHIBITIONS</h2>
-                        </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                        {EXHIBITIONS.map((exh, idx) => (
-                            <div key={idx} className="group cursor-pointer" onClick={() => setSelectedEvent(exh)}>
-                                <div className="relative aspect-[16/9] overflow-hidden bg-slate-100 mb-8">
-                                    <div className="absolute inset-0 bg-aureole-slate/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-                                    <LazyImage
-                                        src={exh.thumbnail}
-                                        alt={exh.title}
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    />
-                                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20">
-                                        <div className="bg-white/90 backdrop-blur px-6 py-3 border border-slate-100 shadow-2xl">
-                                            <span className="text-[10px] font-black text-[#001529] uppercase tracking-widest">VIEW ALL PHOTOS</span>
-                                        </div>
-                                    </div>
-                                    <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/60 to-transparent z-20">
-                                        <div className="flex items-center gap-4 text-white">
-                                            <Calendar size={14} className="text-aureole-cyan" />
-                                            <span className="text-[10px] font-black tracking-widest uppercase">{exh.date}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="space-y-4">
-                                    <div className="flex items-center gap-3">
-                                        <MapPin size={14} className="text-aureole-blue" />
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-aureole-blue">{exh.location}</span>
-                                    </div>
-                                    <h3 className="text-xl font-black uppercase tracking-tighter text-[#001529] group-hover:text-aureole-cyan transition-colors">{exh.title}</h3>
-                                    <p className="text-[15px] font-medium text-slate-500 tracking-widest leading-relaxed h-20 overflow-hidden text-ellipsis">
-                                        {exh.description}
-                                    </p>
-                                    <div className="pt-4">
-                                        <span className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-[#001529] group-hover:gap-4 transition-all">
-                                            EXPLORE GALLERY <ArrowRight size={14} />
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Company Events */}
-            <section className="py-24 bg-white">
-                <div className="container mx-auto px-6 lg:px-16">
-                    <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
-                        <div>
-                            <div className="flex items-center gap-4 mb-4">
-                                <Users className="w-6 h-6 text-aureole-cyan" />
-                                <h3 className="text-[11px] font-black uppercase tracking-[0.3em] text-aureole-cyan">INTERNAL CULTURE</h3>
-                            </div>
-                            <h2 className="text-4xl lg:text-5xl font-black font-heading uppercase tracking-tighter text-[#001529]">COMPANY EVENTS</h2>
-                        </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {COMPANY_EVENTS.map((event, idx) => (
-                            <div key={idx} className="bg-white border border-slate-100 hover:border-aureole-cyan transition-all group cursor-pointer" onClick={() => setSelectedEvent(event)}>
-                                <div className="aspect-[4/3] relative overflow-hidden">
-                                    <LazyImage
-                                        src={event.thumbnail}
-                                        alt={event.title}
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    />
-                                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                        <div className="bg-white px-4 py-2 text-[9px] font-black uppercase tracking-widest text-[#001529]">VIEW GALLERY</div>
-                                    </div>
-                                    <div className="absolute top-4 left-4 bg-white/95 backdrop-blur px-3 py-1 border border-slate-100">
-                                        <span className="text-[9px] font-black uppercase tracking-widest text-[#001529]">{event.date}</span>
-                                    </div>
-                                </div>
-                                <div className="p-8">
-                                    <h3 className="text-lg font-black uppercase tracking-tighter text-[#001529] mb-4 group-hover:text-aureole-blue transition-colors">{event.title}</h3>
-                                    <p className="text-[15px] font-medium text-slate-500 tracking-widest leading-relaxed mb-6 line-clamp-2">
-                                        {event.description}
-                                    </p>
-                                    <div className="flex items-center gap-2 text-[9px] font-black uppercase tracking-widest text-aureole-blue">
-                                        <MapPin size={12} /> {event.location}
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Fullscreen Lightbox / Gallery */}
             {selectedEvent && lightboxIndex !== null && (
-                <div className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center p-6 lg:p-12">
-                    {/* Header */}
-                    <div className="absolute top-0 left-0 w-full p-8 flex justify-between items-start z-20">
-                        <div className="max-w-2xl">
-                            <h2 className="text-2xl lg:text-4xl font-black text-white uppercase tracking-tighter mb-2">{selectedEvent.title}</h2>
-                            <div className="flex items-center gap-6 text-slate-400 text-[10px] font-black uppercase tracking-widest">
-                                <span className="flex items-center gap-2"><Calendar size={12} /> {selectedEvent.date}</span>
-                                <span className="flex items-center gap-2"><MapPin size={12} /> {selectedEvent.location}</span>
-                                <span className="bg-white/10 px-2 py-0.5 text-white">{lightboxIndex + 1} / {galleryItems.length}</span>
-                            </div>
-                        </div>
-                        <button
-                            onClick={() => setSelectedEvent(null)}
-                            className="p-4 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors"
-                        >
-                            <X size={24} />
-                        </button>
-                    </div>
-
-                    {/* Media Container */}
-                    <div className="relative w-full h-full flex items-center justify-center pt-20">
-                        <button
-                            onClick={handlePrev}
-                            className="absolute left-0 p-4 bg-white/5 hover:bg-white/10 text-white transition-all z-10"
-                        >
-                            <ChevronLeft size={48} />
-                        </button>
-
-                        <div className="relative max-w-5xl max-h-[70vh] w-full flex items-center justify-center group overflow-hidden">
-                            {galleryItems[lightboxIndex]?.endsWith('.mp4') ? (
-                                <video
-                                    src={`${selectedEvent.folderPath}/${galleryItems[lightboxIndex]}`}
-                                    className="max-w-full max-h-full"
-                                    controls
-                                    autoPlay
-                                />
-                            ) : (
-                                <LazyImage
-                                    src={`${selectedEvent.folderPath}/${galleryItems[lightboxIndex]}`}
-                                    alt="Gallery item"
-                                    className="max-w-full max-h-full object-contain shadow-2xl animate-in fade-in zoom-in duration-500"
-                                />
-                            )}
-                        </div>
-
-                        <button
-                            onClick={handleNext}
-                            className="absolute right-0 p-4 bg-white/5 hover:bg-white/10 text-white transition-all z-10"
-                        >
-                            <ChevronRight size={48} />
-                        </button>
-                    </div>
-
-                    {/* Thumbnails Strip */}
-                    <div className="absolute bottom-8 left-0 w-full px-8 flex justify-center gap-4 overflow-x-auto pb-4 custom-scrollbar">
-                        {galleryItems.map((item, idx) => (
-                            <button
-                                key={idx}
-                                onClick={() => setLightboxIndex(idx)}
-                                className={`relative flex-shrink-0 w-20 h-20 border-2 transition-all ${lightboxIndex === idx ? 'border-aureole-cyan scale-110 shadow-lg z-10' : 'border-transparent opacity-50 hover:opacity-100'}`}
-                            >
-                                {item.endsWith('.mp4') ? (
-                                    <div className="w-full h-full bg-slate-800 flex items-center justify-center">
-                                        <Play size={20} className="text-white fill-white" />
-                                    </div>
-                                ) : (
-                                    <LazyImage
-                                        src={`${selectedEvent.folderPath}/${item}`}
-                                        className="w-full h-full object-cover"
-                                        alt={`Thumbnail ${idx}`}
-                                    />
-                                )}
-                            </button>
-                        ))}
-                    </div>
-                </div>
+                <EventsLightbox
+                    selectedEvent={selectedEvent}
+                    galleryItems={galleryItems}
+                    lightboxIndex={lightboxIndex}
+                    onClose={() => setSelectedEvent(null)}
+                    onNext={handleNext}
+                    onPrev={handlePrev}
+                    onThumbClick={setLightboxIndex}
+                />
             )}
         </div>
     );

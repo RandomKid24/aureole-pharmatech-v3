@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { AUREOLE_VALUES } from '../constants';
+import { AUREOLE_VALUES } from '@/constants';
 import { Microscope } from 'lucide-react';
-import LazyImage from './LazyImage';
+import LazyImage from '@/components/LazyImage';
 
 /**
  * AboutSection: Redesigned for a high-density, compact 7-letter brand mnemonic grid.

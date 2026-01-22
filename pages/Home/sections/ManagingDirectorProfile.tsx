@@ -12,7 +12,7 @@ const ManagingDirectorProfile: React.FC = () => {
                   <div className="max-w-[420px] mx-auto xl:mx-0">
                      <div className="aspect-[3/4] transition-all duration-1000 overflow-hidden border-b-[12px] border-[#001529] bg-slate-50 relative">
                         <img
-                           src="/about/md_profile.jpg"
+                           src="/about/managing-director.jpg"
                            alt="Dr. Kiran Badgujar"
                            className="w-full h-full object-cover object-top"
                         />
