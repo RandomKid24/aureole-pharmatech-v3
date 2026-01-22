@@ -120,7 +120,7 @@ const PrecisionEngineeredSystems: React.FC = () => {
                     onClick={() => navigate(`/products/${product.id}`)}
                   >
                     <div className="flex flex-col">
-                      <span className="text-[10px] font-black text-aureole-blue uppercase tracking-widest group-hover/btn:text-aureole-cyan transition-colors">
+                      <span className="text-[11px] font-bold text-aureole-blue group-hover/btn:text-aureole-cyan transition-colors">
                         Technical Sheet
                       </span>
                       <div className="w-0 h-[1px] bg-aureole-blue transition-all group-hover/btn:w-full"></div>

@@ -42,7 +42,7 @@ const Products: React.FC = () => {
                                     </span>
                                     <div className="mt-4 flex items-center gap-2 opacity-100 transition-opacity">
                                         <div className="w-1 h-1 bg-aureole-cyan rounded-full"></div>
-                                        <span className="text-[8px] font-black uppercase tracking-widest text-aureole-blue">View Technical Sheet</span>
+                                        <span className="text-[10px] font-bold text-aureole-blue">View Technical Sheet</span>
                                     </div>
                                 </div>
                             </Link>

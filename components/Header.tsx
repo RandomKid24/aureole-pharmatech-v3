@@ -144,7 +144,7 @@ const Header: React.FC = () => {
                 <div key={link.name} className="relative group/link-container">
                   {link.name === 'Products' || link.name === 'About' ? (
                     <div
-                      className={`flex items-center gap-1.5 cursor-pointer text-[10px] font-extrabold uppercase tracking-[0.25em] transition-colors py-4 ${isActive ? 'text-aureole-cyan' : 'text-aureole-slate hover:text-aureole-cyan'
+                      className={`flex items-center gap-1.5 cursor-pointer text-[10px] font-extrabold uppercase tracking-[0.25em] transition-colors py-4 leading-none ${isActive ? 'text-aureole-cyan' : 'text-aureole-slate hover:text-aureole-cyan'
                         }`}
                       onMouseEnter={() => handleMouseEnter(link.name === 'About' ? 'about' : 'products')}
                       onMouseLeave={handleMouseLeave}
@@ -264,11 +264,11 @@ const Header: React.FC = () => {
                           handleNavClick(link.href);
                         }
                       }}
-                      className={`text-[10px] font-extrabold uppercase tracking-[0.25em] transition-colors relative group/link ${isActive ? 'text-aureole-cyan' : 'text-aureole-slate hover:text-aureole-cyan'
+                      className={`text-[10px] font-extrabold uppercase tracking-[0.25em] transition-colors relative group/link py-4 flex items-center leading-none ${isActive ? 'text-aureole-cyan' : 'text-aureole-slate hover:text-aureole-cyan'
                         }`}
                     >
                       {link.name}
-                      <span className={`absolute -bottom-1 left-0 h-[2px] bg-aureole-cyan transition-all ${isActive ? 'w-full' : 'w-0 group-hover/link:w-full'
+                      <span className={`absolute bottom-0 left-0 h-[2px] bg-aureole-cyan transition-all ${isActive ? 'w-full' : 'w-0 group-hover/link:w-full'
                         }`}></span>
                     </Link>
                   )}
