@@ -3,9 +3,9 @@ import React from 'react';
 
 const TeamHero: React.FC = () => {
     return (
-        <section className="relative py-24 sm:py-32 overflow-hidden border-b border-slate-100">
-            <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none">
-                <span className="text-[180px] lg:text-[250px] font-black font-heading text-[#001529] tracking-tighter leading-none uppercase">TEAM</span>
+        <section className="relative py-24 sm:py-32 overflow-hidden border-b border-slate-100 group">
+            <div className="absolute top-10 right-10 opacity-[0.02] group-hover:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none">
+                <span className="text-[180px] lg:text-[250px] font-black font-heading text-[#001529] group-hover:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">TEAM</span>
             </div>
 
             <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">

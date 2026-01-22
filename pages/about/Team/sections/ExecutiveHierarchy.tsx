@@ -45,9 +45,9 @@ const ExecutiveHierarchy: React.FC = () => {
     ];
 
     return (
-        <section className="py-24 lg:py-40 relative overflow-hidden bg-aureole-soft">
-            <div className="absolute top-10 right-10 opacity-[0.03] pointer-events-none select-none">
-                <span className="text-[150px] font-black font-heading text-[#001529] tracking-tighter leading-none uppercase">CORE</span>
+        <section className="py-24 lg:py-40 relative overflow-hidden bg-aureole-soft group">
+            <div className="absolute top-10 right-10 opacity-[0.03] group-hover:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none">
+                <span className="text-[150px] font-black font-heading text-[#001529] group-hover:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">CORE</span>
             </div>
 
             <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">

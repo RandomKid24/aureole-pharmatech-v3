@@ -3,9 +3,9 @@ import React from 'react';
 
 const CertHero: React.FC = () => {
     return (
-        <section className="relative py-20 lg:py-28 overflow-hidden border-b border-slate-100 bg-white">
-            <div className="absolute top-1/2 -translate-y-1/2 right-10 opacity-[0.03] pointer-events-none select-none">
-                <span className="text-[120px] lg:text-[150px] font-black font-heading text-aureole-slate tracking-tighter leading-none uppercase">VALIDATED</span>
+        <section className="relative py-20 lg:py-28 overflow-hidden border-b border-slate-100 bg-white group">
+            <div className="absolute top-10 right-10 opacity-[0.03] group-hover:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none">
+                <span className="text-[180px] lg:text-[250px] font-black font-heading text-aureole-slate group-hover:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">VALIDATED</span>
             </div>
 
             <div className="container mx-auto px-6 sm:px-8 lg:px-24 relative z-10">

@@ -52,9 +52,9 @@ const Ventures: React.FC = () => {
     ];
 
     return (
-        <section className="py-24 lg:py-40 bg-white relative overflow-hidden">
-            <div className="absolute top-10 right-10 opacity-[0.03] pointer-events-none select-none">
-                <span className="text-[150px] font-black font-heading text-[#001529] tracking-tighter leading-none uppercase">VENTURE</span>
+        <section className="py-24 lg:py-40 bg-white relative overflow-hidden group/section">
+            <div className="absolute top-10 right-10 opacity-[0.03] group-hover/section:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none">
+                <span className="text-[150px] font-black font-heading text-[#001529] group-hover/section:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">VENTURE</span>
             </div>
 
             <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">

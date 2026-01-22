@@ -4,9 +4,9 @@ import { ShieldCheck } from 'lucide-react';
 
 const SoftwareHero: React.FC = () => {
     return (
-        <section className="relative py-16 sm:py-32 overflow-hidden border-b border-slate-100 bg-white">
-            <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none hidden lg:block">
-                <span className="text-[60px] md:text-[100px] lg:text-[150px] font-black font-heading text-[#001529] tracking-tighter leading-none uppercase italic">SIS-APP</span>
+        <section className="relative py-16 sm:py-32 overflow-hidden border-b border-slate-100 bg-white group">
+            <div className="absolute top-10 right-10 opacity-[0.02] group-hover:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none hidden lg:block">
+                <span className="text-[180px] lg:text-[250px] font-black font-heading text-[#001529] group-hover:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">SIS-APP</span>
             </div>
 
             <div className="container mx-auto px-6 sm:px-12 lg:px-24 relative z-10 text-center lg:text-left">

@@ -3,9 +3,9 @@ import React from 'react';
 
 const ServiceHero: React.FC = () => {
     return (
-        <section className="relative overflow-hidden border-b border-slate-100 bg-white py-24 lg:py-40">
-            <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none hidden lg:block">
-                <span className="text-[180px] lg:text-[250px] font-black text-aureole-slate tracking-tighter leading-none uppercase italic">SERVICE</span>
+        <section className="relative overflow-hidden border-b border-slate-100 bg-white py-24 lg:py-40 group">
+            <div className="absolute top-10 right-10 opacity-[0.02] group-hover:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none hidden lg:block">
+                <span className="text-[180px] lg:text-[250px] font-black text-aureole-slate group-hover:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">SERVICE</span>
             </div>
 
             <div className="container mx-auto px-6 lg:px-16 relative z-10 text-center lg:text-left">

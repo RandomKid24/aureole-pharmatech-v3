@@ -3,11 +3,11 @@ import React from 'react';
 
 const ProductsHero: React.FC = () => {
     return (
-        <section className="relative py-16 sm:py-20 overflow-hidden border-b border-slate-100 bg-white">
+        <section className="relative py-16 sm:py-20 overflow-hidden border-b border-slate-100 bg-white group">
             <div className="absolute inset-0 z-0 opacity-[0.03] bg-[radial-gradient(#0079ac_1px,transparent_1px)] [background-size:40px_40px]"></div>
 
-            <div className="absolute top-20 right-20 opacity-[0.02] pointer-events-none select-none hidden lg:block">
-                <span className="text-[150px] font-black font-heading text-[#001529] tracking-tighter leading-none uppercase italic">AUREOLE</span>
+            <div className="absolute top-10 right-10 opacity-[0.02] group-hover:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none hidden lg:block">
+                <span className="text-[180px] lg:text-[250px] font-black font-heading text-[#001529] group-hover:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">AUREOLE</span>
             </div>
 
             <div className="container mx-auto px-6 sm:px-12 lg:px-24 relative z-10 text-center lg:text-left">

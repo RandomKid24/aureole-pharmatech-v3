@@ -11,19 +11,27 @@ const FacilityUnits: React.FC<FacilityUnitsProps> = ({ onImageClick }) => {
     const facilities = [
         {
             unit: "Unit 01",
-            title: "Main Manufacturing Facility",
+            title: "Standalone Chamber Manufacturing Hub",
             location: "Malegaon MIDC, Sinnar, Nashik, Maharashtra",
-            desc: "Our primary manufacturing and assembly unit dedicated to high-precision pharmaceutical instrumentation and laboratory equipment. This facility is the core hub for stability chamber production and quality assurance.",
+            desc: "Our primary production facility dedicated to high-precision standalone stability chambers. This unit serves as the core hub for engineering environmental testing systems that meet global regulatory standards.",
             image: "/plants/IMG_8943.jpg",
-            features: ["Pharma Equipment Assembly", "ISO 9001:2015 Hub", "Quality Control Terminal"]
+            features: []
         },
         {
             unit: "Unit 02",
-            title: "Advanced Fabrication Wing",
+            title: "Corporate HQ & Walk-in Chamber Wing",
             location: "Sinnar Industrial Zone, Maharashtra",
-            desc: "Focused on heavy-duty technical fabrication and industrial hardware components. This unit supports our process equipment division with specialized engineering and assembly capabilities.",
+            desc: "The corporate headquarters and specialized engineering wing for large-scale walk-in environmental chambers. This unit integrates executive operations with advanced technical fabrication and assembly.",
             image: "/plants/DJI_20240723124450_0018_D_2.jpg",
-            features: ["Industrial Hardware Fabrication", "Precision Engineering", "Logistics & Distribution"]
+            features: []
+        },
+        {
+            unit: "Unit 03",
+            title: "Table-Top Instruments & Lab Systems",
+            location: "Nashik Industrial Area, Maharashtra",
+            desc: "A dedicated manufacturing facility focused on precision table-top instruments and laboratory furniture systems. This unit ensures excellence in compact analytical and storage solutions.",
+            image: "/plants/Pharnma plant 2_2.jpg",
+            features: []
         }
     ];
 
@@ -67,14 +75,7 @@ const FacilityUnits: React.FC<FacilityUnitsProps> = ({ onImageClick }) => {
                                     {facility.desc}
                                 </p>
 
-                                {/* Feature Tags */}
-                                <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                                    {facility.features.map((feat, i) => (
-                                        <span key={i} className="px-5 py-2.5 bg-slate-50 border border-slate-100 text-[10px] font-black text-slate-500 uppercase tracking-widest rounded-sm">
-                                            {feat}
-                                        </span>
-                                    ))}
-                                </div>
+
                             </div>
                         </div>
                     ))}

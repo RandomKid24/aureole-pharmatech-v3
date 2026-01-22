@@ -4,9 +4,9 @@ import { Award } from 'lucide-react';
 
 const LeadershipVision: React.FC = () => {
     return (
-        <section className="relative py-24 sm:py-32 overflow-hidden border-b border-slate-100 bg-white">
-            <div className="absolute top-10 right-10 opacity-[0.03] pointer-events-none select-none">
-                <span className="text-[180px] lg:text-[250px] font-black font-heading text-[#001529] tracking-tighter leading-none uppercase">GROUP</span>
+        <section className="relative py-24 sm:py-32 overflow-hidden border-b border-slate-100 bg-white group">
+            <div className="absolute top-10 right-10 opacity-[0.03] group-hover:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none">
+                <span className="text-[180px] lg:text-[250px] font-black font-heading text-[#001529] group-hover:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">GROUP</span>
             </div>
 
             <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
@@ -55,16 +55,16 @@ const LeadershipVision: React.FC = () => {
                                 </p>
                             </div>
 
-                            <div className="grid grid-cols-2 gap-px bg-slate-100 border border-slate-100 mt-12">
-                                <div className="bg-white p-8 group hover:bg-aureole-blue transition-all duration-500">
-                                    <Award className="text-aureole-cyan mb-4 group-hover:text-white" size={32} />
-                                    <p className="text-[10px] font-black uppercase tracking-widest text-[#001529] group-hover:text-white">India 500 CEO</p>
-                                    <p className="text-[8px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white/60">Recognition 2022</p>
+                            <div className="grid grid-cols-2 gap-4 mt-12">
+                                <div className="bg-slate-50/50 border border-slate-100 p-8 rounded-sm">
+                                    <Award className="text-aureole-cyan mb-4" size={32} />
+                                    <p className="text-[10px] font-black uppercase tracking-widest text-slate-900">India 500 CEO</p>
+                                    <p className="text-[8px] font-black uppercase tracking-widest text-slate-500">Recognition 2022</p>
                                 </div>
-                                <div className="bg-white p-8 group hover:bg-aureole-blue transition-all duration-500">
-                                    <Award className="text-aureole-cyan mb-4 group-hover:text-white" size={32} />
-                                    <p className="text-[10px] font-black uppercase tracking-widest text-[#001529] group-hover:text-white">Maharashtra Udyojakta</p>
-                                    <p className="text-[8px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white/60">Impact Award 2025</p>
+                                <div className="bg-slate-50/50 border border-slate-100 p-8 rounded-sm">
+                                    <Award className="text-aureole-cyan mb-4" size={32} />
+                                    <p className="text-[10px] font-black uppercase tracking-widest text-slate-900">Maharashtra Udyojakta</p>
+                                    <p className="text-[8px] font-black uppercase tracking-widest text-slate-500">Impact Award 2025</p>
                                 </div>
                             </div>
                         </div>

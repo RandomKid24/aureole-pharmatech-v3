@@ -18,9 +18,9 @@ const PrecisionEngineeredSystems: React.FC = () => {
   ];
 
   return (
-    <section id="products" className="py-16 sm:py-20 bg-aureole-soft relative overflow-hidden border-b border-slate-100">
-      <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none hidden sm:block">
-        <span className="text-[150px] font-black text-[#001529] tracking-tighter leading-none uppercase italic">Precision</span>
+    <section id="products" className="py-16 sm:py-20 bg-aureole-soft relative overflow-hidden border-b border-slate-100 group/section">
+      <div className="absolute top-10 right-10 opacity-[0.02] group-hover/section:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none hidden sm:block">
+        <span className="text-[150px] font-black text-[#001529] group-hover/section:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">Precision</span>
       </div>
 
       <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10 mb-16 sm:mb-24">
