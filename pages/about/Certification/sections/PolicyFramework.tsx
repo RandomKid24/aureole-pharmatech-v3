@@ -15,14 +15,14 @@ const PolicyFramework: React.FC = () => {
     return (
         <section className="py-20 bg-white">
             <div className="container mx-auto px-6 lg:px-24">
-                <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
+                <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
                     {/* Standards Column */}
                     <div>
                         <div className="flex items-center gap-4 mb-8">
                             <span className="w-12 h-[1px] bg-aureole-blue"></span>
-                            <h3 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-aureole-blue">TECHNICAL FRAMEWORK</h3>
+                            <h3 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-aureole-blue">TECHNICAL STANDARDS</h3>
                         </div>
-                        <h2 className="text-4xl lg:text-5xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter mb-8 italic">REFERENCED STANDARDS</h2>
+                        <h2 className="text-4xl lg:text-5xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter mb-8">REFERENCED STANDARDS</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             {referencedStandards.map((std, i) => (
                                 <div key={i} className="p-4 bg-slate-50 border border-slate-100 rounded-sm hover:border-aureole-cyan transition-colors">
@@ -39,7 +39,7 @@ const PolicyFramework: React.FC = () => {
                             <span className="w-12 h-[1px] bg-slate-200"></span>
                             <h3 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-slate-400">QUALITY COMMITMENT</h3>
                         </div>
-                        <h2 className="text-4xl lg:text-5xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter mb-8 italic">QUALITY POLICY</h2>
+                        <h2 className="text-4xl lg:text-5xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter mb-8">QUALITY POLICY</h2>
                         <p className="text-[14px] font-medium text-slate-500 leading-relaxed mb-8 text-justify">
                             Committed to total customer satisfaction. Our focus remains on continuous improvement and 100% accuracy across all manufacturing processes.
                         </p>
