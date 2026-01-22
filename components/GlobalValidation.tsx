@@ -55,8 +55,8 @@ const GlobalValidation: React.FC = () => {
       </div>
 
       <div className="relative py-10 bg-slate-50/50 border-y border-slate-100">
-        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 left-0 w-32 sm:w-64 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 right-0 w-32 sm:w-64 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
         <div className="flex flex-col">
           <MarqueeRow items={row1} animationClass="animate-marquee" />
           <MarqueeRow items={row2} animationClass="animate-marquee-reverse" />

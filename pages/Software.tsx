@@ -18,11 +18,8 @@ import {
     History,
     HardDrive,
     Eye,
-    Settings,
-    Cpu,
-    Maximize2
+    Settings
 } from 'lucide-react';
-import Lightbox from '../components/Lightbox';
 import LazyImage from '../components/LazyImage';
 
 const FAQ_DATA = [
@@ -54,7 +51,6 @@ const FAQ_DATA = [
 
 const Software: React.FC = () => {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
-    const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
     const architectureImg = "/software/architecture.png";
 
@@ -63,7 +59,7 @@ const Software: React.FC = () => {
             {/* Hero Section - Standardized with Product Pages */}
             <section className="relative py-16 sm:py-32 overflow-hidden border-b border-slate-100 bg-white">
                 <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none hidden lg:block">
-                    <span className="text-[60px] md:text-[100px] lg:text-[150px] font-black font-heading text-[#001529] tracking-tighter leading-none uppercase">SIS-APP</span>
+                    <span className="text-[60px] md:text-[100px] lg:text-[150px] font-black font-heading text-[#001529] tracking-tighter leading-none uppercase italic">SIS-APP</span>
                 </div>
 
                 <div className="container mx-auto px-6 sm:px-12 lg:px-24 relative z-10 text-center lg:text-left">
@@ -128,7 +124,7 @@ const Software: React.FC = () => {
                             </p>
                         </div>
 
-                        <div className="bg-slate-50 p-10 border border-slate-100">
+                        <div className="bg-white p-10 border border-slate-100 shadow-xl">
                             <h4 className="text-[11px] font-black uppercase tracking-[0.3em] text-aureole-blue mb-8">KEY COMPLIANCE FEATURES INCLUDE:</h4>
                             <div className="space-y-6">
                                 {[
@@ -179,8 +175,7 @@ const Software: React.FC = () => {
                         </div>
 
                         <div
-                            className="relative group overflow-hidden border border-slate-100 bg-white p-6 shadow-2xl transition-all duration-700 aspect-square flex items-center justify-center cursor-zoom-in"
-                            onClick={() => setIsLightboxOpen(true)}
+                            className="relative group overflow-hidden border border-slate-100 bg-white p-6 shadow-2xl transition-all duration-700 aspect-square flex items-center justify-center"
                         >
                             <LazyImage
                                 src={architectureImg}
@@ -188,11 +183,6 @@ const Software: React.FC = () => {
                                 className="w-full h-auto transition-all duration-1000 object-contain p-4"
                             />
                             <div className="absolute inset-0 bg-aureole-slate/5 pointer-events-none transition-opacity"></div>
-                            <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <div className="bg-white p-3 shadow-xl">
-                                    <Maximize2 size={24} className="text-aureole-blue" />
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -243,16 +233,6 @@ const Software: React.FC = () => {
                     </div>
                 </div>
             </section>
-
-            <Lightbox
-                images={[architectureImg]}
-                currentIndex={0}
-                isOpen={isLightboxOpen}
-                onClose={() => setIsLightboxOpen(false)}
-                onNext={() => { }}
-                onPrev={() => { }}
-                title="Software Architecture Ecosystem"
-            />
         </div>
     );
 };

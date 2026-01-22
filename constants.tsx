@@ -74,19 +74,11 @@ const IconEnthusiastic = ({ size = 20 }) => (
 export const PRODUCTS = [
   {
     id: 'humidity-chamber-stability-chamber',
-    name: 'STABILITY CHAMBER',
+    name: 'HUMIDITY CHAMBER',
     category: 'STABILITY',
     image: '/products/StablilityChamber-Standalone/humidity-chamber.png',
     description: 'Precise environmental control for long-term stability studies and ICH compliance.',
     specs: { 'Range': '20°C to 60°C', 'Humidity': '40% to 95% RH' }
-  },
-  {
-    id: 'walk-in-humidity-chamber',
-    name: 'WALK-IN CHAMBER',
-    category: 'WALK-IN',
-    image: '/products/StablilityChamber-Standalone/walk-in-humidity-chamber.png',
-    description: 'Large-scale environmental rooms with modular design and uniform airflow.',
-    specs: { 'Range': '20°C to 60°C', 'Control': '7" Touch HMI' }
   },
   {
     id: 'deep-freezer-upto-20c-upto-40c',
@@ -95,6 +87,86 @@ export const PRODUCTS = [
     image: '/products/StablilityChamber-Standalone/deep-freezer.png',
     description: 'High-performance ultra-low cooling for critical sample preservation.',
     specs: { 'Range': '-25°C to -40°C', 'Control': 'Microprocessor' }
+  },
+  {
+    id: 'bod-incubator',
+    name: 'BOD INCUBATOR',
+    category: 'STABILITY',
+    image: '/products/StablilityChamber-Standalone/BODINCUBATOR.png',
+    description: 'Reliable incubation for biochemical oxygen demand testing.',
+    specs: { 'Range': '5°C to 60°C', 'Stability': '± 0.5°C' }
+  },
+  {
+    id: 'ultra-low-deep-freezer-80c',
+    name: 'ULTRA LOW FREEZER',
+    category: 'STABILITY',
+    image: '/products/StablilityChamber-Standalone/ultra-low-deep-freezer.png',
+    description: 'Ultra-low temperature storage for sensitive biological samples.',
+    specs: { 'Range': 'Upto -80°C', 'Control': 'PLC Based' }
+  },
+  {
+    id: 'hot-air-oven',
+    name: 'HOT AIR OVEN',
+    category: 'STABILITY',
+    image: '/products/StablilityChamber-Standalone/hot-air-oven.png',
+    description: 'Uniform heating and drying for laboratory and industrial applications.',
+    specs: { 'Range': 'Ambient +5°C to 250°C', 'Control': 'Microprocessor' }
+  },
+  {
+    id: 'walk-in-humidity-chamber',
+    name: 'WALK-IN HUMIDITY',
+    category: 'WALK-IN',
+    image: '/products/StablilityChamber-Standalone/walk-in-humidity-chamber.png',
+    description: 'Large-scale environmental rooms with modular design and uniform airflow.',
+    specs: { 'Range': '20°C to 60°C', 'Control': '7" Touch HMI' }
+  },
+  {
+    id: 'walk-in-deep-freezer',
+    name: 'WALK-IN FREEZER',
+    category: 'WALK-IN',
+    image: '/products/StablilityChamber-Standalone/walk-in-deep-freezer.png',
+    description: 'Walk-in cold storage solutions for large quantities.',
+    specs: { 'Range': 'Upto -20°C', 'Control': 'PLC Based' }
+  },
+  {
+    id: 'cold-chamber',
+    name: 'COLD CHAMBER',
+    category: 'STABILITY',
+    image: '/products/StablilityChamber-Standalone/cold-chamber.png',
+    description: 'Controlled cold storage for pharmaceutical and clinical samples.',
+    specs: { 'Range': '2°C to 8°C', 'Control': 'Microprocessor' }
+  },
+  {
+    id: 'walk-in-cold-chamber',
+    name: 'WALK-IN COLD',
+    category: 'WALK-IN',
+    image: '/products/StablilityChamber-Standalone/walk-in-cold-chamber.png',
+    description: 'Walk-in cold rooms for high-capacity temperature-controlled storage.',
+    specs: { 'Range': '2°C to 8°C', 'Control': 'PLC Based' }
+  },
+  {
+    id: 'eco-series',
+    name: 'ECO SERIES',
+    category: 'ULTRASONIC',
+    image: '/products/TableTop/eco-series.png',
+    description: 'Efficient ultrasonic cleaning solutions for laboratory use.',
+    specs: { 'Cleaning': 'Ultrasonic', 'Control': 'Analog/Digital' }
+  },
+  {
+    id: 'prime-series',
+    name: 'PRIME SERIES',
+    category: 'ULTRASONIC',
+    image: '/products/TableTop/prime-series.png',
+    description: 'Premium ultrasonic baths for advanced cleaning requirements.',
+    specs: { 'Cleaning': 'Ultrasonic', 'Control': 'Digital HMI' }
+  },
+  {
+    id: 'prime-series-with-advance-controlling',
+    name: 'PRIME ADVANCE',
+    category: 'ULTRASONIC',
+    image: '/products/TableTop/prime-series-advance-controlling.png',
+    description: 'High-end ultrasonic system with advanced PLC control.',
+    specs: { 'Control': 'PLC Based', 'Display': 'Touch Screen' }
   }
 ];
 

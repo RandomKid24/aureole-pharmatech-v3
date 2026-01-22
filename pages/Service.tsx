@@ -14,10 +14,8 @@ import {
     Wrench,
     Layers,
     Microscope,
-    Activity,
-    Maximize2
+    Activity
 } from 'lucide-react';
-import Lightbox from '../components/Lightbox';
 import LazyImage from '../components/LazyImage';
 
 const FAQ_DATA = [
@@ -56,7 +54,6 @@ const SERVICE_CENTERS = [
 
 const Service: React.FC = () => {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
-    const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
     const serviceImage = "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200";
 
@@ -65,7 +62,7 @@ const Service: React.FC = () => {
             {/* Hero Section */}
             <section className="relative overflow-hidden border-b border-slate-100 bg-white py-24 lg:py-40">
                 <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none hidden lg:block">
-                    <span className="text-[180px] lg:text-[250px] font-black text-aureole-slate tracking-tighter leading-none uppercase">SERVICE</span>
+                    <span className="text-[180px] lg:text-[250px] font-black text-aureole-slate tracking-tighter leading-none uppercase italic">SERVICE</span>
                 </div>
 
                 <div className="container mx-auto px-6 lg:px-16 relative z-10 text-center lg:text-left">
@@ -126,20 +123,14 @@ const Service: React.FC = () => {
                 <div className="container mx-auto px-6 lg:px-16">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                         <div
-                            className="relative overflow-hidden border border-slate-100 shadow-2xl group transition-all duration-700 aspect-video lg:aspect-square cursor-zoom-in"
-                            onClick={() => setIsLightboxOpen(true)}
+                            className="relative overflow-hidden border border-slate-100 shadow-2xl group transition-all duration-700 aspect-video lg:aspect-square flex items-center justify-center p-6"
                         >
                             <LazyImage
                                 src={serviceImage}
                                 alt="MANUFACTURING"
-                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000"
+                                className="w-full h-full object-contain"
                             />
                             <div className="absolute inset-0 bg-aureole-slate/10 group-hover:bg-transparent transition-colors"></div>
-                            <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <div className="bg-white p-3 shadow-xl">
-                                    <Maximize2 size={24} className="text-aureole-blue" />
-                                </div>
-                            </div>
                         </div>
                         <div className="space-y-16">
                             <div>
@@ -209,16 +200,6 @@ const Service: React.FC = () => {
                     </div>
                 </div>
             </section>
-
-            <Lightbox
-                images={[serviceImage]}
-                currentIndex={0}
-                isOpen={isLightboxOpen}
-                onClose={() => setIsLightboxOpen(false)}
-                onNext={() => { }}
-                onPrev={() => { }}
-                title="Aureole Manufacturing Excellence"
-            />
         </div>
     );
 };

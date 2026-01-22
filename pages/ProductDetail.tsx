@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { PRODUCT_DETAILS } from '../data/products';
 import { findValuesBySlug } from '../utils/urlUtils';
-import { ArrowLeft, CheckCircle2, Zap, Settings, Box, List, PlusCircle, ChevronLeft, ChevronRight, X, Maximize2, ShieldCheck, Cpu, Layers, Database } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Zap, Settings, Box, List, PlusCircle, ChevronLeft, ChevronRight, X, ShieldCheck, Cpu, Layers, Database } from 'lucide-react';
 import LazyImage from '../components/LazyImage';
 import ProductImage from '../components/ProductImage';
 
 const ProductGallery: React.FC<{ images: string[], name: string, captions?: string[] }> = ({ images, name, captions }) => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
     // Handle placeholder images
     if (!images || images.length === 0 || images[0] === 'PLACEHOLDER') {
@@ -23,19 +22,13 @@ const ProductGallery: React.FC<{ images: string[], name: string, captions?: stri
 
     return (
         <div className="space-y-4">
-            <div className="relative aspect-square overflow-hidden bg-white border border-slate-100 group/hero cursor-zoom-in" onClick={() => setIsLightboxOpen(true)}>
+            <div className="relative aspect-square overflow-hidden bg-white border border-slate-100 group/hero">
                 <div className="w-full h-full p-4">
                     <LazyImage
                         src={images[activeIndex]}
                         alt={`${name} - ${activeIndex + 1}`}
                         className="w-full h-full object-contain transition-transform duration-500"
                     />
-                </div>
-
-                <div className="absolute top-4 right-4 opacity-0 group-hover/hero:opacity-100 transition-opacity z-20">
-                    <div className="bg-white/90 backdrop-blur p-2 shadow-xl border border-slate-100">
-                        <Maximize2 size={16} className="text-aureole-blue" />
-                    </div>
                 </div>
 
                 {images.length > 1 && (
@@ -80,43 +73,6 @@ const ProductGallery: React.FC<{ images: string[], name: string, captions?: stri
                             />
                         </button>
                     ))}
-                </div>
-            )}
-
-            {/* Lightbox Overlay */}
-            {isLightboxOpen && (
-                <div className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center p-6 lg:p-12" onClick={() => setIsLightboxOpen(false)}>
-                    <button className="absolute top-8 right-8 text-white hover:text-aureole-cyan transition-colors z-[110]">
-                        <X size={32} />
-                    </button>
-
-                    <div className="relative w-full h-full flex items-center justify-center">
-                        <button
-                            onClick={(e) => { e.stopPropagation(); setActiveIndex((prev) => (prev > 0 ? prev - 1 : images.length - 1)); }}
-                            className="absolute left-0 p-4 bg-white/5 hover:bg-white/10 text-white transition-all z-10"
-                        >
-                            <ChevronLeft size={48} />
-                        </button>
-
-                        <LazyImage
-                            src={images[activeIndex]}
-                            className="max-w-full max-h-[80vh] object-contain shadow-2xl animate-in zoom-in duration-500 p-4 bg-white"
-                            alt={name}
-                        />
-
-                        <button
-                            onClick={(e) => { e.stopPropagation(); setActiveIndex((prev) => (prev < images.length - 1 ? prev + 1 : 0)); }}
-                            className="absolute right-0 p-4 bg-white/5 hover:bg-white/10 text-white transition-all z-10"
-                        >
-                            <ChevronRight size={48} />
-                        </button>
-                    </div>
-
-                    <div className="absolute bottom-8 left-0 w-full text-center">
-                        <span className="text-white font-black uppercase tracking-widest text-[10px]">
-                            {name} — Image {activeIndex + 1} / {images.length}
-                        </span>
-                    </div>
                 </div>
             )}
         </div>
@@ -288,33 +244,50 @@ const ProductDetail: React.FC = () => {
                         <div className={`grid ${product.specifications.length > 0 ? 'lg:grid-cols-12 gap-12' : 'grid-cols-1 max-w-5xl mx-auto'}`}>
                             {/* Left Col: Core Technical Data (Only if exists) */}
                             {product.specifications.length > 0 && (
-                                <div className="lg:col-span-5 space-y-12">
-                                    <div>
-                                        <div className="flex items-center gap-3 mb-6">
-                                            <div className="p-2 bg-slate-50 border border-slate-200 text-aureole-blue">
-                                                <Settings size={14} />
+                                <div className="lg:col-span-12 mb-12">
+                                    <div className="relative group">
+                                        {/* Blue Ribbon Header */}
+                                        <div className="bg-aureole-blue text-white py-6 px-10 flex items-center justify-between shadow-lg relative z-10 overflow-hidden">
+                                            <div className="flex items-center gap-4">
+                                                <div className="p-3 bg-white/10 backdrop-blur-md rounded-full">
+                                                    <Settings size={20} className="text-white" />
+                                                </div>
+                                                <div>
+                                                    <h3 className="text-[14px] font-black uppercase tracking-[0.4em] leading-none mb-1">Technical Specification Sheet</h3>
+                                                    <p className="text-[10px] text-white/60 font-medium uppercase tracking-[0.2em]">{decodedName}</p>
+                                                </div>
                                             </div>
-                                            <h3 className="text-[10px] font-black font-heading uppercase tracking-[0.3em] text-aureole-slate">Technical Specifications</h3>
+                                            <div className="hidden sm:flex flex-col items-end opacity-40">
+                                                <span className="text-[9px] font-black uppercase tracking-[0.5em]">PRECISION SERIES</span>
+                                                <span className="text-[9px] font-black uppercase tracking-[0.5em]">GEN-III SYSTEMS</span>
+                                            </div>
+                                            {/* Ribbon fold effect decoration */}
+                                            <div className="absolute right-0 top-0 w-24 h-24 bg-white/5 rotate-45 translate-x-12 -translate-y-12"></div>
                                         </div>
 
-                                        <div className="grid gap-px bg-slate-300 border border-slate-300 shadow-xl overflow-hidden">
-                                            {product.specifications.map((spec, i) => (
-                                                <div key={i} className="grid grid-cols-2 bg-white group hover:bg-slate-50 transition-colors">
-                                                    <div className="p-4 border-r border-slate-300 bg-slate-50/50">
-                                                        <span className="text-[9px] font-black text-aureole-slate uppercase tracking-widest">{spec.parameter}</span>
+                                        <div className="bg-white border-x border-b border-slate-200 shadow-2xl relative z-0">
+                                            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-0">
+                                                {product.specifications.map((spec, i) => (
+                                                    <div key={i} className="group/item border-r border-b border-slate-100 hover:bg-slate-50 transition-all duration-300">
+                                                        <div className="p-8">
+                                                            <div className="flex items-center gap-2 mb-4">
+                                                                <div className="w-1 h-4 bg-aureole-cyan opacity-0 group-hover/item:opacity-100 transition-opacity"></div>
+                                                                <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none">{spec.parameter}</span>
+                                                            </div>
+                                                            <span className="text-[12px] text-aureole-slate font-[900] uppercase tracking-tight leading-relaxed block group-hover:text-aureole-blue transition-colors">
+                                                                {spec.details}
+                                                            </span>
+                                                        </div>
                                                     </div>
-                                                    <div className="p-4">
-                                                        <span className="text-[11px] text-aureole-blue font-black uppercase tracking-tight">{spec.details}</span>
-                                                    </div>
-                                                </div>
-                                            ))}
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             )}
 
-                            {/* Right Col/Full Width: Features & Options Tabs */}
-                            <div className={product.specifications.length > 0 ? 'lg:col-span-7' : 'w-full'}>
+                            {/* Features & Options Tabs Below if Specifications exist, or side-by-side if they don't */}
+                            <div className={product.specifications.length > 0 ? 'lg:col-span-12' : 'w-full'}>
                                 <ProductTabs product={product} />
                             </div>
                         </div>

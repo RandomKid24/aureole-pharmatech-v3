@@ -14,8 +14,8 @@ const Products: React.FC = () => {
 
         return (
             <div className="flex overflow-hidden select-none py-10 bg-white border-y border-slate-200 group relative">
-                <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#f8fafc] to-transparent z-10 pointer-events-none"></div>
-                <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#f8fafc] to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute inset-y-0 left-0 w-32 sm:w-64 bg-gradient-to-r from-[#f8fafc] via-[#f8fafc]/80 to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute inset-y-0 right-0 w-32 sm:w-64 bg-gradient-to-l from-[#f8fafc] via-[#f8fafc]/80 to-transparent z-10 pointer-events-none"></div>
 
                 <div className={`flex items-center gap-6 whitespace-nowrap ${animationClass} group-hover:[animation-play-state:paused]`}>
                     {displayProducts.map((pName, idx) => {
@@ -26,7 +26,7 @@ const Products: React.FC = () => {
                             <Link
                                 key={idx}
                                 to={`/products/${slugify(pName)}`}
-                                className="flex items-center gap-6 p-6 bg-white border border-slate-200 hover:border-aureole-cyan hover:shadow-xl transition-all duration-300 w-[400px] sm:w-[500px] flex-shrink-0 group/card"
+                                className="flex items-center gap-6 p-6 bg-white border border-slate-200 hover:border-aureole-cyan hover:shadow-xl transition-all duration-300 w-[280px] sm:w-[400px] flex-shrink-0 group/card"
                             >
                                 <div className="w-20 h-20 sm:w-28 sm:h-28 flex-shrink-0 bg-white rounded-sm overflow-hidden p-2 border border-slate-100 group-hover/card:border-aureole-cyan/30 group-hover/card:scale-105 transition-all duration-300">
                                     <img
@@ -40,9 +40,9 @@ const Products: React.FC = () => {
                                     <span className="text-[12px] sm:text-[14px] font-black tracking-[0.05em] text-slate-400 group-hover/card:text-aureole-blue uppercase transition-colors whitespace-nowrap overflow-hidden text-ellipsis">
                                         {pName}
                                     </span>
-                                    <div className="mt-4 flex items-center gap-2 opacity-40 group-hover/card:opacity-100 transition-opacity">
+                                    <div className="mt-4 flex items-center gap-2 opacity-100 transition-opacity">
                                         <div className="w-1 h-1 bg-aureole-cyan rounded-full"></div>
-                                        <span className="text-[8px] font-black uppercase tracking-widest text-slate-400">View Technical Sheet</span>
+                                        <span className="text-[8px] font-black uppercase tracking-widest text-aureole-blue">View Technical Sheet</span>
                                     </div>
                                 </div>
                             </Link>
