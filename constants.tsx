@@ -176,7 +176,7 @@ export const PRODUCTS = [
 export const AUREOLE_VALUES = [
   { letter: 'A', title: 'Adherence', icon: <IconAdherence />, desc: 'Strict compliance with USFDA and ICH regulatory frameworks.' },
   { letter: 'U', title: 'Ubiquitous', icon: <IconUbiquitous />, desc: 'Support network across all major global pharmaceutical hubs.' },
-  { letter: 'R', title: 'Recognition', icon: <IconRecognition />, desc: 'Certified engineering excellence in thermodynamic research.' },
+  { letter: 'R', title: 'Recognition', icon: <IconRecognition />, desc: 'Recognized by 100+ brands.' },
   { letter: 'E', title: 'Expertise', icon: <IconExpertise />, desc: 'Deep technical focus in controlled environmental logic.' },
   { letter: 'O', title: 'Optimal', icon: <IconOptimal />, desc: 'Energy-efficient designs maximizing resource utilization.' },
   { letter: 'L', title: 'Longevity', icon: <IconLongevity />, desc: 'Industrial machinery built for long-term operational cycles.' },
