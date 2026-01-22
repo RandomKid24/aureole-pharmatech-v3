@@ -87,13 +87,15 @@ const Overview: React.FC = () => {
                         </div>
 
                         <div className="lg:col-span-7">
-                            <div className="flex items-center gap-4 mb-8">
-                                <span className="w-12 h-[1px] bg-slate-200"></span>
-                                <h2 className="text-[10px] font-black font-heading uppercase tracking-[0.5em] text-slate-400">DIRECTOR'S DESK</h2>
+                            <div className="flex flex-col mb-12">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <span className="w-12 h-[1px] bg-slate-200"></span>
+                                    <h2 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-slate-400">LEADERSHIP VISION</h2>
+                                </div>
+                                <h3 className="text-4xl lg:text-6xl font-[950] font-heading text-[#001529] uppercase tracking-[0.02em] leading-[0.95]">
+                                    Directing <span className="text-aureole-blue">Excellence.</span>
+                                </h3>
                             </div>
-                            <h3 className="text-4xl lg:text-6xl 3xl:text-7xl font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-[0.85] mb-10">
-                                Excellence is not <br /> an act, but a <span className="text-aureole-blue uppercase tracking-normal">Habit.</span>
-                            </h3>
 
                             <div className="space-y-8 text-slate-600">
                                 <p className="text-xl font-medium text-[#001529] leading-tight tracking-tight border-l-2 border-aureole-cyan pl-6">
@@ -129,6 +131,17 @@ const Overview: React.FC = () => {
             {/* Philosophy Grid - Elegant Corporate Design */}
             <section className="py-24 sm:py-32 bg-slate-50/50 relative overflow-hidden">
                 <div className="container mx-auto px-4 sm:px-8 lg:px-16">
+                    <div className="flex flex-col items-center text-center mb-20">
+                        <div className="flex items-center gap-4 mb-4">
+                            <span className="w-12 h-[1px] bg-aureole-cyan opacity-30"></span>
+                            <h2 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-aureole-cyan">CORPORATE PHILOSOPHY</h2>
+                            <span className="w-12 h-[1px] bg-aureole-cyan opacity-30"></span>
+                        </div>
+                        <h3 className="text-4xl lg:text-5xl font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-none">
+                            Our Core <span className="text-aureole-blue">Ethos.</span>
+                        </h3>
+                    </div>
+
                     <div className="grid lg:grid-cols-3 gap-16 lg:gap-12">
                         {[
                             { title: "Our Vision", desc: "To be at the forefront of the pharmaceutical industry, redefining excellence through innovation, quality, and sustainability.", icon: <Eye size={32} /> },
@@ -175,9 +188,14 @@ const Overview: React.FC = () => {
                 </div>
 
                 <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
-                    <div className="flex items-center gap-4 mb-20">
-                        <span className="w-12 h-[2px] bg-aureole-blue"></span>
-                        <h2 className="text-[10px] font-black font-heading uppercase tracking-[0.5em] text-aureole-blue">OPERATIONAL ENTITIES</h2>
+                    <div className="flex flex-col mb-20">
+                        <div className="flex items-center gap-4 mb-4">
+                            <span className="w-12 h-[1px] bg-aureole-cyan"></span>
+                            <h2 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-aureole-cyan">GROUP ECOSYSTEM</h2>
+                        </div>
+                        <h3 className="text-4xl lg:text-5xl font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-none">
+                            Our <span className="text-aureole-blue">Ventures.</span>
+                        </h3>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 border-t border-l border-slate-100 bg-slate-100">
