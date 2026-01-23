@@ -1,12 +1,76 @@
 
-import React from 'react';
+import React, { useRef, useEffect, useState, useMemo } from 'react';
 import { PRODUCTS } from '@/constants';
-import { ArrowUpRight, Activity, ShieldCheck, FlaskConical, Settings, Cpu, Gauge } from 'lucide-react';
+import { ArrowUpRight, Activity, ShieldCheck, FlaskConical, Settings, Cpu, Gauge, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import LazyImage from '@/components/LazyImage';
 
 const PrecisionEngineeredSystems: React.FC = () => {
   const navigate = useNavigate();
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Interleave products: Chamber, Oven, Chamber, Other, etc.
+  const interleavedProducts = useMemo(() => {
+    const order = [
+      'humidity-chamber-stability-chamber',
+      'hot-air-oven',
+      'walk-in-humidity-chamber',
+      'bod-incubator',
+      'cold-chamber',
+      'deep-freezer-upto-20c-upto-40c',
+      'walk-in-cold-chamber',
+      'ultra-low-deep-freezer-80c',
+      'walk-in-deep-freezer',
+      'eco-series',
+      'prime-series',
+      'prime-series-with-advance-controlling'
+    ];
+
+    return order
+      .map(id => PRODUCTS.find(p => p.id === id))
+      .filter((p): p is typeof PRODUCTS[0] => !!p);
+  }, []);
+
+  const duplicatedProducts = [...interleavedProducts, ...interleavedProducts];
+
+  useEffect(() => {
+    let animationId: number;
+    const el = scrollRef.current;
+    if (!el) return;
+
+    const step = () => {
+      if (!isPaused) {
+        el.scrollLeft += 1.2; // Balanced speed
+        if (el.scrollLeft >= el.scrollWidth / 2) {
+          el.scrollLeft = 0;
+        }
+      }
+      animationId = requestAnimationFrame(step);
+    };
+
+    animationId = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(animationId);
+  }, [isPaused]);
+
+  const pauseTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleManualScroll = (direction: 'left' | 'right') => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    // Briefly pause auto-scroll to let user interact
+    setIsPaused(true);
+    if (pauseTimeoutRef.current) clearTimeout(pauseTimeoutRef.current);
+    pauseTimeoutRef.current = setTimeout(() => setIsPaused(false), 5000);
+
+    const scrollAmount = window.innerWidth < 640 ? 280 : 420;
+    // We add behavior: 'smooth' only for manual clicks
+    el.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth'
+    });
+  };
 
   const stats = [
     { label: 'Guidelines', icon: <Activity className="w-5 h-5" />, value: 'ICH Q1A / Q1B' },
@@ -67,15 +131,37 @@ const PrecisionEngineeredSystems: React.FC = () => {
         </div>
       </div>
 
-      {/* Marquee moved OUTSIDE container for full-width effect */}
       <div className="relative border-y border-slate-100 bg-white group/marquee overflow-hidden">
+        {/* Navigation Arrows */}
+        <div className="absolute inset-y-0 left-0 flex items-center z-20 pointer-events-none sm:pl-4">
+          <button
+            onClick={() => handleManualScroll('left')}
+            className="p-3 bg-white/90 backdrop-blur-sm border border-slate-200 shadow-lg text-aureole-blue hover:bg-aureole-blue hover:text-white transition-all pointer-events-auto opacity-0 group-hover/marquee:opacity-100 -translate-x-4 group-hover/marquee:translate-x-0"
+          >
+            <ChevronLeft size={24} />
+          </button>
+        </div>
+        <div className="absolute inset-y-0 right-0 flex items-center z-20 pointer-events-none sm:pr-4">
+          <button
+            onClick={() => handleManualScroll('right')}
+            className="p-3 bg-white/90 backdrop-blur-sm border border-slate-200 shadow-lg text-aureole-blue hover:bg-aureole-blue hover:text-white transition-all pointer-events-auto opacity-0 group-hover/marquee:opacity-100 translate-x-4 group-hover/marquee:translate-x-0"
+          >
+            <ChevronRight size={24} />
+          </button>
+        </div>
+
         {/* Subtle fade edges */}
         <div className="absolute inset-y-0 left-0 w-32 sm:w-64 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
         <div className="absolute inset-y-0 right-0 w-32 sm:w-64 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
 
-        <div className="flex select-none">
-          <div className="flex items-stretch whitespace-nowrap animate-marquee py-4 hover:[animation-play-state:paused]">
-            {[...PRODUCTS, ...PRODUCTS].map((product, idx) => (
+        <div
+          ref={scrollRef}
+          className="flex select-none overflow-x-hidden whitespace-nowrap"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <div className="flex items-stretch py-4">
+            {duplicatedProducts.map((product, idx) => (
               <div
                 key={`${product.id}-${idx}`}
                 className="flex flex-col bg-white p-6 sm:p-10 border-r border-slate-100 transition-all duration-300 w-[280px] sm:w-[420px] flex-shrink-0 group/card relative"
