@@ -17,7 +17,7 @@ const Ventures: React.FC = () => {
         {
             year: "2012",
             name: "Adityam Foundation",
-            sub: "Philanthropy & Social",
+            sub: "",
             desc: "A compassionate NGO initiative dedicated to social welfare, education, and healthcare across rural Maharashtra, embodying the group's commitment to community impact.",
             url: "https://adityamfoundation.org/",
             logo: "/ventures-logos/adityam-foundation-logo.png"
@@ -25,7 +25,7 @@ const Ventures: React.FC = () => {
         {
             year: "2012",
             name: "Mack Auraa Healthcare",
-            sub: "Veterinary Sciences",
+            sub: "",
             desc: "An advanced healthcare entity specializing in veterinary products, enhancing livestock wellness and agricultural productivity through precision medicine.",
             url: "https://mackauraahealthcare.com/",
             logo: "/ventures-logos/mack-auraa-logo.png"
@@ -33,7 +33,7 @@ const Ventures: React.FC = () => {
         {
             year: "2019",
             name: "Aureole Process Equipment",
-            sub: "Industrial Hardware",
+            sub: "",
             desc: "Engineering excellence in heavy-duty pharmaceutical process systems, including autoclaves, distillation plants, and high-capacity industrial equipment.",
             url: "https://aureoleproequip.com/",
             logo: "/ventures-logos/aureole-process-logo.png"
@@ -41,7 +41,7 @@ const Ventures: React.FC = () => {
         {
             year: "2021",
             name: "Aureole Pharma",
-            sub: "Flagship Precision",
+            sub: "",
             desc: "The current flagship brand driving global innovation in environmental testing. Specializing in high-precision stability chambers and advanced laboratory instrumentation.",
             logo: "/aureole-logo.png",
             isCurrent: true
@@ -49,7 +49,7 @@ const Ventures: React.FC = () => {
         {
             year: "2024",
             name: "Swapnkiran Resort",
-            sub: "Agro-Tourism & Wellness",
+            sub: "",
             desc: "A premium eco-friendly resort near Trimbakeshwar, offering a sustainable escape that integrates nature, hospitality, and regenerative farming.",
             url: "https://swapnkiranagrofarm.com/",
             logo: "/ventures-logos/swapnkiran-resort-logo.png"
@@ -59,7 +59,7 @@ const Ventures: React.FC = () => {
     return (
         <section className="py-24 lg:py-40 bg-white relative overflow-hidden group/section">
             {/* Standard Watermark - matching design system */}
-            <div className="absolute top-10 right-10 opacity-[0.03] group-hover/section:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none italic">
+            <div className="absolute top-10 right-10 opacity-[0.03] group-hover/section:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none">
                 <span className="text-[150px] font-black font-heading text-[#001529] group-hover/section:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">VENTURE</span>
             </div>
 
@@ -104,9 +104,11 @@ const Ventures: React.FC = () => {
                                 <h4 className="text-lg font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-tight mb-2 transition-colors">
                                     {v.name}
                                 </h4>
-                                <p className={`text-[10px] font-black uppercase tracking-widest mb-6 ${v.isLegacy ? 'text-slate-400' : 'text-aureole-cyan'}`}>
-                                    {v.sub} {v.isCurrent && <span className="inline-block w-1 h-1 bg-aureole-blue rounded-full ml-1 animate-pulse"></span>}
-                                </p>
+                                {(v.sub || v.isCurrent) && (
+                                    <p className={`text-[10px] font-black uppercase tracking-widest mb-6 ${v.isLegacy ? 'text-slate-400' : 'text-aureole-cyan'}`}>
+                                        {v.sub} {v.isCurrent && <span className="inline-block w-1 h-1 bg-aureole-blue rounded-full ml-1 animate-pulse"></span>}
+                                    </p>
+                                )}
                                 <p className="text-[12px] text-slate-500 font-medium tracking-wider leading-relaxed text-left">
                                     {v.desc}
                                 </p>
@@ -131,7 +133,7 @@ const Ventures: React.FC = () => {
                                     ) : (
                                         <div className="w-full flex items-center justify-between opacity-50">
                                             <span className="text-[10px] font-black uppercase tracking-widest text-[#001529]">
-                                                Current Entity
+                                                CURRENT VENTURE
                                             </span>
                                             <div className="p-2 bg-slate-50">
                                                 <Building2 size={14} className="text-slate-300" />
