@@ -34,15 +34,12 @@ const ManagingDirectorProfile: React.FC = () => {
                      "We engineer <span className="text-aureole-blue">trust</span> through thermal precision."
                   </h3>
                   <p className="text-lg text-slate-600 font-medium leading-relaxed mb-8">
-                     "Our journey over the last three decades has been defined by a relentless pursuit of engineering excellence. At Aureole, we ensure that the pharmaceutical industry's most sensitive products are tested and stored under absolute environmental equilibrium."
+                     Over the past three decades, Aureole PharmaTech has been driven by a relentless pursuit of engineering excellence. We design and deliver solutions that ensure the pharmaceutical industry’s most sensitive products are tested and stored under absolute environmental equilibrium—where precision, reliability, and control are non-negotiable.
                   </p>
 
                   <div className="space-y-4 text-slate-600 text-lg font-medium leading-relaxed mb-10">
                      <p>
-                        At Aureole PharmaTech, we believe in the power of inspiration. Our name, "Aureole", draws inspiration from the radiant halo or aura often associated with revered figures in spirituality. This symbolism holds a profound significance for us as our core values are inspired by it.
-                     </p>
-                     <p>
-                        "Aureole" represents our unwavering commitment to excellence and distinction. Just as the halo symbolizes the sacred and divine, our name embodies a commitment to upholding the highest standards of quality, integrity, and innovation in the pharmaceutical industry.
+                        The name Aureole is inspired by the radiant halo or aura associated with revered figures in spirituality—a symbol of purity, distinction, and higher purpose. This symbolism reflects our core values and our unwavering commitment to the highest standards of quality, integrity, and innovation. Just as an aureole signifies excellence beyond the ordinary, our work is defined by precision, trust, and engineering mastery.
                      </p>
                   </div>
                   <div className="flex flex-wrap gap-6">

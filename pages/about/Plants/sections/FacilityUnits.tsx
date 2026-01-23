@@ -42,16 +42,13 @@ const FacilityUnits: React.FC<FacilityUnitsProps> = ({ onImageClick }) => {
                     {facilities.map((facility, idx) => (
                         <div key={idx} className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-16 lg:gap-24 items-center`}>
                             {/* Image Column */}
-                            <div className="w-full lg:w-1/2 relative group cursor-pointer" onClick={() => onImageClick(facility.image)}>
+                            <div className="w-full lg:w-1/2 relative group">
                                 <div className="relative overflow-hidden aspect-[4/3] shadow-2xl shadow-slate-200 border border-slate-100">
                                     <LazyImage
                                         src={facility.image}
                                         alt={facility.title}
-                                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000"
+                                        className="w-full h-full object-cover transform transition-transform duration-1000"
                                     />
-                                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                        <div className="bg-white px-6 py-3 text-[10px] font-black uppercase tracking-widest text-[#001529]">ENLARGE VIEW</div>
-                                    </div>
                                 </div>
                                 <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-aureole-blue hidden lg:flex items-center justify-center">
                                     <span className="text-white font-[950] text-xl italic tracking-tighter">{facility.unit}</span>
