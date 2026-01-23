@@ -4,14 +4,14 @@ import { Award } from 'lucide-react';
 
 const LeadershipVision: React.FC = () => {
     return (
-        <section className="relative py-24 sm:py-32 overflow-hidden border-b border-slate-100 bg-white group">
+        <section className="relative py-16 sm:py-24 overflow-hidden border-b border-slate-100 bg-white group">
             <div className="absolute top-10 right-10 opacity-[0.03] group-hover:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none">
                 <span className="text-[180px] lg:text-[250px] font-black font-heading text-[#001529] group-hover:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">GROUP</span>
             </div>
 
             <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
                 <div className="grid lg:grid-cols-12 gap-16 items-start">
-                    <div className="lg:col-span-5 relative group">
+                    <div className="lg:col-span-4 relative group">
                         <div className="aspect-[3/4] overflow-hidden transition-all duration-1000 shadow-2xl bg-slate-50">
                             <img
                                 src="/about/managing-director.jpg"
@@ -31,7 +31,7 @@ const LeadershipVision: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="lg:col-span-7">
+                    <div className="lg:col-span-8">
                         <div className="flex flex-col mb-12">
                             <div className="flex items-center gap-4 mb-4">
                                 <span className="w-12 h-[1px] bg-slate-200"></span>
