@@ -11,7 +11,7 @@ const Ventures: React.FC = () => {
             sub: "THE FOUNDATION (LEGACY)",
             desc: "The initial engineering milestone that sparked a revolution in stability chamber technology. This foundational period laid the technical groundwork before transitioning to the specialized Aureole brand.",
             url: "http://mackpharmatech.com/",
-            logo: null,
+            logo: "/ventures-logos/mack-pharmatech.png",
             isLegacy: true
         },
         {
@@ -76,18 +76,18 @@ const Ventures: React.FC = () => {
                         <div key={idx} className={`bg-white p-10 group transition-all duration-700 flex flex-col border-r border-b border-slate-100 relative overflow-hidden ${v.isLegacy ? 'border-dashed border-slate-300 bg-slate-50/30' : 'hover:shadow-2xl hover:shadow-slate-200'}`}>
                             {/* Logo Slot */}
                             <div className="h-24 w-full mb-10 flex items-center justify-center p-4 bg-slate-50/50 group-hover:bg-white transition-all duration-500 rounded-sm border border-slate-50 group-hover:border-aureole-cyan/20">
-                                {v.isLegacy ? (
-                                    <div className="flex items-center justify-center">
-                                        <span className="text-[14px] font-[1000] text-slate-300 group-hover:text-aureole-blue tracking-tighter uppercase transition-colors leading-none">
-                                            {v.name}
-                                        </span>
-                                    </div>
-                                ) : v.logo ? (
+                                {v.logo ? (
                                     <img
                                         src={v.logo}
                                         alt={`${v.name} logo`}
                                         className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
                                     />
+                                ) : v.isLegacy ? (
+                                    <div className="flex items-center justify-center">
+                                        <span className="text-[14px] font-[1000] text-slate-300 group-hover:text-aureole-blue tracking-tighter uppercase transition-colors leading-none">
+                                            {v.name}
+                                        </span>
+                                    </div>
                                 ) : (
                                     <Building2 size={32} className="text-slate-200" />
                                 )}

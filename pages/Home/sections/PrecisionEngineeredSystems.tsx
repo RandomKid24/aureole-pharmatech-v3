@@ -13,18 +13,15 @@ const PrecisionEngineeredSystems: React.FC = () => {
   // Interleave products: Chamber, Oven, Chamber, Other, etc.
   const interleavedProducts = useMemo(() => {
     const order = [
+      'walk-in-bod-incubator',
       'humidity-chamber-stability-chamber',
-      'hot-air-oven',
-      'walk-in-humidity-chamber',
-      'bod-incubator',
-      'cold-chamber',
-      'deep-freezer-upto-20c-upto-40c',
-      'walk-in-cold-chamber',
       'ultra-low-deep-freezer-80c',
-      'walk-in-deep-freezer',
+      'muffle-furnace',
       'eco-series',
-      'prime-series',
-      'prime-series-with-advance-controlling'
+      'steam-bath',
+      'constant-water-bath',
+      'oil-bath',
+      'air-sampler-basic-model'
     ];
 
     return order

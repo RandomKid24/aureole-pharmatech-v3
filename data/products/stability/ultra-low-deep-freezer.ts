@@ -24,7 +24,7 @@ export const ultraLowDeepFreezer: ProductDetail = {
         "Password protected or Biometric door access system",
         "Extra Trays"
     ],
-    image: "/products/StablilityChamber-Standalone/ultra-low-deep-freezer.png",
+    image: "/products/StablilityChamber-Standalone/ultra-ultra-deep-freezer.jpeg",
     complexTable: {
         rows: [
             {

@@ -70,6 +70,14 @@ export const IconEnthusiastic = ({ size = 20 }) => (
 
 export const PRODUCTS = [
     {
+        id: 'walk-in-bod-incubator',
+        name: 'WALK IN BOD INCUBATOR',
+        category: 'WALK-IN',
+        image: '/products/StablilityChamber-Standalone/walk-in-bod-incubator.png',
+        description: 'Premium walk-in Incubators for precise and uniform temperature conditions inside the chamber.',
+        specs: { 'Range': '10°C to 60°C', 'Accuracy': '± 0.2°C' }
+    },
+    {
         id: 'humidity-chamber-stability-chamber',
         name: 'HUMIDITY CHAMBER',
         category: 'STABILITY',
@@ -78,92 +86,60 @@ export const PRODUCTS = [
         specs: { 'Range': '20°C to 60°C', 'Humidity': '40% to 95% RH' }
     },
     {
-        id: 'deep-freezer-upto-20c-upto-40c',
-        name: 'DEEP FREEZER',
-        category: 'STABILITY',
-        image: '/products/StablilityChamber-Standalone/deep-freezer.png',
-        description: 'High-performance ultra-low cooling for critical sample preservation.',
-        specs: { 'Range': '-25°C to -40°C', 'Control': 'Microprocessor' }
-    },
-    {
-        id: 'bod-incubator',
-        name: 'BOD INCUBATOR',
-        category: 'STABILITY',
-        image: '/products/StablilityChamber-Standalone/BODINCUBATOR.png',
-        description: 'Reliable incubation for biochemical oxygen demand testing.',
-        specs: { 'Range': '5°C to 60°C', 'Stability': '± 0.5°C' }
-    },
-    {
         id: 'ultra-low-deep-freezer-80c',
         name: 'ULTRA LOW FREEZER',
         category: 'STABILITY',
-        image: '/products/StablilityChamber-Standalone/ultra-low-deep-freezer.png',
-        description: 'Ultra-low temperature storage for sensitive biological samples.',
+        image: '/products/StablilityChamber-Standalone/ultra-ultra-deep-freezer.jpeg',
+        description: 'Ultra-low temperature storage for sensitive biological samples and vaccines.',
         specs: { 'Range': 'Upto -80°C', 'Control': 'PLC Based' }
     },
     {
-        id: 'hot-air-oven',
-        name: 'HOT AIR OVEN',
+        id: 'muffle-furnace',
+        name: 'MUFFLE FURNACE',
         category: 'STABILITY',
-        image: '/products/StablilityChamber-Standalone/hot-air-oven.png',
-        description: 'Uniform heating and drying for laboratory and industrial applications.',
-        specs: { 'Range': 'Ambient +5°C to 250°C', 'Control': 'Microprocessor' }
-    },
-    {
-        id: 'walk-in-humidity-chamber',
-        name: 'WALK-IN HUMIDITY',
-        category: 'WALK-IN',
-        image: '/products/StablilityChamber-Standalone/walk-in-humidity-chamber.png',
-        description: 'Large-scale environmental rooms with modular design and uniform airflow.',
-        specs: { 'Range': '20°C to 60°C', 'Control': '7" Touch HMI' }
-    },
-    {
-        id: 'walk-in-deep-freezer',
-        name: 'WALK-IN FREEZER',
-        category: 'WALK-IN',
-        image: '/products/StablilityChamber-Standalone/walk-in-deep-freezer.png',
-        description: 'Walk-in cold storage solutions for large quantities.',
-        specs: { 'Range': 'Upto -20°C', 'Control': 'PLC Based' }
-    },
-    {
-        id: 'cold-chamber',
-        name: 'COLD CHAMBER',
-        category: 'STABILITY',
-        image: '/products/StablilityChamber-Standalone/cold-chamber.png',
-        description: 'Controlled cold storage for pharmaceutical and clinical samples.',
-        specs: { 'Range': '2°C to 8°C', 'Control': 'Microprocessor' }
-    },
-    {
-        id: 'walk-in-cold-chamber',
-        name: 'WALK-IN COLD',
-        category: 'WALK-IN',
-        image: '/products/StablilityChamber-Standalone/walk-in-cold-chamber.png',
-        description: 'Walk-in cold rooms for high-capacity temperature-controlled storage.',
-        specs: { 'Range': '2°C to 8°C', 'Control': 'PLC Based' }
+        image: '/products/StablilityChamber-Standalone/muffle-furnace.png',
+        description: 'Designed for high-temperature applications up to 1150°C with precise heat treatment.',
+        specs: { 'Range': 'Upto 1150°C', 'Accuracy': '± 5°C' }
     },
     {
         id: 'eco-series',
         name: 'ECO SERIES',
         category: 'ULTRASONIC',
         image: '/products/TableTop/eco-series.png',
-        description: 'Efficient ultrasonic cleaning solutions for laboratory use.',
+        description: 'Efficient ultrasonic cleaning solutions for laboratory and healthcare use.',
         specs: { 'Cleaning': 'Ultrasonic', 'Control': 'Analog/Digital' }
     },
     {
-        id: 'prime-series',
-        name: 'PRIME SERIES',
-        category: 'ULTRASONIC',
-        image: '/products/TableTop/prime-series.png',
-        description: 'Premium ultrasonic baths for advanced cleaning requirements.',
-        specs: { 'Cleaning': 'Ultrasonic', 'Control': 'Digital HMI' }
+        id: 'steam-bath',
+        name: 'STEAM BATH',
+        category: 'WATER BATHS',
+        image: '/products/TableTop/steam-bath.png',
+        description: 'Advanced version water bath maintaining 100°C for microbiology and production.',
+        specs: { 'Range': 'Amb + 5 to 100°C', 'Accuracy': '± 2°C' }
     },
     {
-        id: 'prime-series-with-advance-controlling',
-        name: 'PRIME ADVANCE',
-        category: 'ULTRASONIC',
-        image: '/products/TableTop/prime-series-advance-controlling.png',
-        description: 'High-end ultrasonic system with advanced PLC control.',
-        specs: { 'Control': 'PLC Based', 'Display': 'Touch Screen' }
+        id: 'constant-water-bath',
+        name: 'CONSTANT WATER BATH',
+        category: 'WATER BATHS',
+        image: '/products/TableTop/constant-water-bath.png',
+        description: 'Heated water testing cabinet for biological labs and sensitive specimen incubation.',
+        specs: { 'Range': 'Amb + 5 to 99.9°C', 'Accuracy': '± 0.5°C' }
+    },
+    {
+        id: 'oil-bath',
+        name: 'OIL BATH',
+        category: 'WATER BATHS',
+        image: '/products/TableTop/oil-bath.png',
+        description: 'Stable high-temperature immersion for chemical laboratories up to 250°C.',
+        specs: { 'Range': '50°C to 250°C', 'Accuracy': '± 2°C' }
+    },
+    {
+        id: 'air-sampler-basic-model',
+        name: 'AIR SAMPLER BASIC 4',
+        category: 'AIR SAMPLER',
+        image: '/products/AirSampler/air-sampler-basic-4.png',
+        description: 'Advanced air sampling system for environmental monitoring and QC applications.',
+        specs: { 'Flow Rate': '25-200 L/min', 'Volume': '25-2000 L' }
     }
 ];
 
