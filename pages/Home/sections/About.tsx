@@ -64,11 +64,11 @@ const About: React.FC = () => {
                   {React.cloneElement(val.icon as React.ReactElement<any>, { size: 24 })}
                 </div>
 
-                <h5 className="text-[11px] font-black text-aureole-slate uppercase tracking-[0.15em] mb-3 group-hover:text-aureole-cyan transition-colors relative z-10">
+                <h5 className="text-[11px] font-black text-aureole-slate uppercase tracking-[0.15em] mb-2 group-hover:text-aureole-cyan transition-colors relative z-10">
                   {val.title}
                 </h5>
 
-                <p className="text-slate-400 font-medium text-[11px] leading-relaxed tracking-wide group-hover:text-slate-600 transition-colors mt-auto relative z-10">
+                <p className="text-slate-400 font-medium text-[11px] leading-relaxed tracking-wide group-hover:text-slate-600 transition-colors relative z-10">
                   {val.desc}
                 </p>
               </div>

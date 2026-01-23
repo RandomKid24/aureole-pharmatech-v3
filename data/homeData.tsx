@@ -6,64 +6,66 @@ import { Microscope, Activity, FlaskConical, Thermometer, Gauge, Cpu, Zap, Shiel
  * Custom Technical SVG Icons for Brand Values
  */
 export const IconAdherence = ({ size = 20 }) => (
-    <svg width= { size } height = { size } viewBox = "0 0 24 24" fill = "none" stroke = "currentColor" strokeWidth = "1.5" strokeLinecap = "round" strokeLinejoin = "round" >
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            <path d="M8 11h8" strokeDasharray = "2 2" />
-                <circle cx="12" cy = "11" r = "3" />
-                    </svg>
+        <path d="m9 12 2 2 4-4" />
+    </svg>
 );
 
 export const IconUbiquitous = ({ size = 20 }) => (
-    <svg width= { size } height = { size } viewBox = "0 0 24 24" fill = "none" stroke = "currentColor" strokeWidth = "1.5" strokeLinecap = "round" strokeLinejoin = "round" >
-        <circle cx="12" cy = "12" r = "10" strokeOpacity = "0.2" />
-            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                <circle cx="12" cy = "12" r = "2" fill = "currentColor" />
-                    </svg>
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <line x1="2" y1="12" x2="22" y2="12" />
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+    </svg>
 );
 
 export const IconRecognition = ({ size = 20 }) => (
-    <svg width= { size } height = { size } viewBox = "0 0 24 24" fill = "none" stroke = "currentColor" strokeWidth = "1.5" strokeLinecap = "round" strokeLinejoin = "round" >
-        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
-            <path d="M4 22h16" />
-                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
-                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
-                        <circle cx="12" cy = "10" r = "5" />
-                            </svg>
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="8" r="6" />
+        <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+    </svg>
 );
 
 export const IconExpertise = ({ size = 20 }) => (
-    <svg width= { size } height = { size } viewBox = "0 0 24 24" fill = "none" stroke = "currentColor" strokeWidth = "1.5" strokeLinecap = "round" strokeLinejoin = "round" >
-        <path d="m12 2 10 5-10 5-10-5z" />
-            <path d="m2 17 10 5 10-5" />
-                <path d="m2 12 10 5 10-5" />
-                    <path d="M12 2v10" strokeOpacity = "0.3" />
-                        </svg>
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="4" y="4" width="16" height="16" rx="2" />
+        <rect x="9" y="9" width="6" height="6" />
+        <line x1="9" y1="1" x2="9" y2="4" />
+        <line x1="15" y1="1" x2="15" y2="4" />
+        <line x1="9" y1="20" x2="9" y2="23" />
+        <line x1="15" y1="20" x2="15" y2="23" />
+        <line x1="20" y1="9" x2="23" y2="9" />
+        <line x1="20" y1="15" x2="23" y2="15" />
+        <line x1="1" y1="9" x2="4" y2="9" />
+        <line x1="1" y1="15" x2="4" y2="15" />
+    </svg>
 );
 
 export const IconOptimal = ({ size = 20 }) => (
-    <svg width= { size } height = { size } viewBox = "0 0 24 24" fill = "none" stroke = "currentColor" strokeWidth = "1.5" strokeLinecap = "round" strokeLinejoin = "round" >
-        <path d="M3 12a9 9 0 0 1 18 0" />
-            <path d="M12 12V7" />
-                <circle cx="12" cy = "12" r = "1" fill = "currentColor" />
-                    <path d="M19.4 15a9 9 0 0 1-14.8 0" strokeOpacity = "0.2" />
-                        <path d="M12 2v2M20 12h2M2 12h2" />
-                            </svg>
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2v4" />
+        <path d="m16.2 7.8 2.9-2.9" />
+        <path d="M18 12h4" />
+        <path d="m16.2 16.2 2.9 2.9" />
+        <path d="M12 18v4" />
+        <path d="m4.9 19.1 2.9-2.9" />
+        <path d="M2 12h4" />
+        <path d="m4.9 4.9 2.9 2.9" />
+    </svg>
 );
 
 export const IconLongevity = ({ size = 20 }) => (
-    <svg width= { size } height = { size } viewBox = "0 0 24 24" fill = "none" stroke = "currentColor" strokeWidth = "1.5" strokeLinecap = "round" strokeLinejoin = "round" >
-        <path d="M22 12c0 6-4.39 10-10 10S2 18 2 12s4.39-10 10-10 10 4.39 10 10z" strokeOpacity = "0.2" />
-            <path d="M12 6v6l4 2" />
-                <path d="M16.24 7.76a6 6 0 1 0 0 8.48" />
-                    </svg>
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="12 6 12 12 16 14" />
+    </svg>
 );
 
 export const IconEnthusiastic = ({ size = 20 }) => (
-    <svg width= { size } height = { size } viewBox = "0 0 24 24" fill = "none" stroke = "currentColor" strokeWidth = "1.5" strokeLinecap = "round" strokeLinejoin = "round" >
-        <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
-            <path d="M13 2 9 7" strokeOpacity = "0.3" />
-                <path d="M11 22 15 17" strokeOpacity = "0.3" />
-                    </svg>
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+    </svg>
 );
 
 export const PRODUCTS = [
