@@ -56,8 +56,8 @@ const Footer: React.FC = () => {
                   <ul className="space-y-5">
                      {[
                         { name: 'Home', href: '/' },
-                        { name: 'Overview', href: '/about/overview' },
-                        { name: 'Aureole Team', href: '/about/team' },
+                        { name: 'Overview', href: '/about' },
+                        { name: 'Aureole Team', href: '/about' },
                         { name: 'Products', href: '/#products' },
                         { name: 'Service', href: '/service' },
                         { name: 'Software', href: '/software' },

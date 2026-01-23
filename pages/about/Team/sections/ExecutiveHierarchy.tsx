@@ -59,47 +59,6 @@ const ExecutiveHierarchy: React.FC = () => {
                     className="mb-24"
                 />
 
-                {/* Spotlight MD */}
-                <div className="grid lg:grid-cols-12 gap-16 items-center mb-32 border-b border-slate-100 pb-32">
-                    <div className="lg:col-span-4">
-                        <div className="aspect-[3/4] transition-all duration-1000 shadow-2xl overflow-hidden bg-slate-50">
-                            <img
-                                src={coreTeam[0].img}
-                                alt={coreTeam[0].name}
-                                className="w-full h-full object-cover object-top"
-                                onError={(e) => {
-                                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800";
-                                }}
-                            />
-                        </div>
-                        <div className="mt-8">
-                            <h4 className="text-3xl font-[950] text-[#001529] uppercase tracking-tighter mb-2">{coreTeam[0].name}</h4>
-                            <div className="flex items-center gap-4">
-                                <div className="h-[1px] w-12 bg-aureole-blue"></div>
-                                <span className="text-[10px] font-black uppercase tracking-[0.4em] text-aureole-blue">FOUNDER & DIRECTOR</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="lg:col-span-8">
-                        <div className="relative mb-10">
-                            <span className="text-8xl text-slate-100 font-questrial absolute -top-12 -left-4 select-none italic opacity-50">"</span>
-                            <p className="text-2xl lg:text-4xl font-[950] text-[#001529] tracking-tighter leading-[0.9] relative z-10 border-l-4 border-aureole-cyan pl-10">
-                                "{coreTeam[0].quote}"
-                            </p>
-                        </div>
-                        <p className="text-slate-500 text-[15px] font-medium tracking-widest leading-relaxed max-w-2xl text-justify mb-12">
-                            Our latest endeavor, Aureole Pharma, marks the commencement of a journey characterized by a fresh vision and state-of-the-art technology, undertaken alongside my trusted team. I consistently hold the conviction that individuals constitute the invaluable cornerstone of any organization.
-                        </p>
-                        <div className="flex gap-6">
-                            <button className="bg-aureole-blue text-white p-5 hover:bg-aureole-cyan transition-colors border border-aureole-blue">
-                                <Linkedin size={20} />
-                            </button>
-                            <button className="px-10 py-5 bg-white border border-slate-200 text-[#001529] text-[10px] font-black uppercase tracking-[0.3em] flex items-center gap-4 hover:border-aureole-blue transition-all group">
-                                Virtual Card <IdCard size={18} className="group-hover:text-aureole-blue" />
-                            </button>
-                        </div>
-                    </div>
-                </div>
 
                 {/* Hierarchical Leadership Tree */}
                 <div className="relative py-20 pb-0 shadow-[0_0_100px_rgba(0,0,0,0.02)]">

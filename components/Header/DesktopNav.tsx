@@ -35,13 +35,17 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
                     <div key={link.name} className="relative group/link-container">
                         {link.name === 'Products' || link.name === 'About' ? (
                             <div
-                                className={`flex items-center gap-1.5 cursor-pointer text-[10px] font-extrabold uppercase tracking-[0.25em] transition-colors py-4 leading-none ${isActive ? 'text-aureole-cyan' : 'text-aureole-slate hover:text-aureole-cyan'
-                                    }`}
+                                className={`relative flex items-center gap-1.5 cursor-pointer text-[10px] font-extrabold uppercase tracking-[0.25em] transition-colors py-4 leading-none ${isActive ? 'text-aureole-cyan' : 'text-aureole-slate hover:text-aureole-cyan'}`}
                                 onMouseEnter={() => handleMouseEnter(link.name === 'About' ? 'about' : 'products')}
                                 onMouseLeave={handleMouseLeave}
                             >
-                                <Link to={link.href || '#'} className="hover:text-aureole-cyan transition-colors">{link.name}</Link>
-                                <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${(link.name === 'About' ? aboutDropdownOpen : productsDropdownOpen) ? 'rotate-180' : ''}`} />
+                                <Link
+                                    to={link.href}
+                                    className="flex items-center gap-1.5 hover:text-aureole-cyan transition-colors"
+                                >
+                                    {link.name}
+                                    <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${(link.name === 'About' ? aboutDropdownOpen : productsDropdownOpen) ? 'rotate-180' : ''}`} />
+                                </Link>
 
                                 {link.name === 'About' && (
                                     <div
