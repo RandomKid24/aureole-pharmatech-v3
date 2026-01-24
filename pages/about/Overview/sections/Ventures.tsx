@@ -94,10 +94,10 @@ const Ventures: React.FC = () => {
                             </div>
 
                             <div className="mb-6">
-                                <span className={`text-3xl font-[950] font-heading ${v.isLegacy ? 'text-slate-200' : 'text-slate-100'} group-hover:text-aureole-blue/10 transition-all duration-700 block mb-1 leading-none`}>
+                                <span className={`text-3xl font-[950] font-heading ${v.isLegacy ? 'text-slate-300' : 'text-slate-400'} group-hover:text-aureole-blue transition-all duration-500 block mb-1 leading-none group-hover:scale-105 origin-left`}>
                                     {v.year}
                                 </span>
-                                <div className="w-8 h-[2px] bg-aureole-cyan opacity-40"></div>
+                                <div className="w-8 h-[2px] bg-aureole-cyan opacity-40 group-hover:w-16 group-hover:opacity-100 transition-all duration-500"></div>
                             </div>
 
                             <div className="flex-grow flex flex-col">
