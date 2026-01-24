@@ -3,7 +3,10 @@ import { MapPin, ArrowRight, ChevronDown, Activity } from 'lucide-react';
 
 const OurUnitsContact: React.FC = () => {
   return (
-    <section id="contact" className="py-12 lg:py-16 bg-white relative overflow-hidden">
+    <section id="contact" className="py-12 lg:py-16 bg-white relative overflow-hidden group/section">
+      <div className="absolute top-10 right-10 opacity-[0.02] group-hover/section:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none hidden lg:block">
+        <span className="text-[150px] font-black text-aureole-slate group-hover/section:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">CONTACT</span>
+      </div>
       <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-start">
 

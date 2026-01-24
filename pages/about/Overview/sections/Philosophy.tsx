@@ -11,7 +11,10 @@ const Philosophy: React.FC = () => {
     ];
 
     return (
-        <section className="py-24 sm:py-32 bg-slate-50/50 relative overflow-hidden">
+        <section className="py-24 sm:py-32 bg-slate-50/50 relative overflow-hidden group/section">
+            <div className="absolute top-10 right-10 opacity-[0.02] group-hover/section:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none hidden lg:block">
+                <span className="text-[150px] font-black text-aureole-slate group-hover/section:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">ETHOS</span>
+            </div>
             <div className="container mx-auto px-4 sm:px-8 lg:px-16">
                 <SectionHeading
                     label="CORPORATE PHILOSOPHY"

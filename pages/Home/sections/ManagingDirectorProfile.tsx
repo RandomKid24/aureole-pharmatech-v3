@@ -4,7 +4,10 @@ import { Quote, Linkedin, FileText, Target, Compass, ArrowRight } from 'lucide-r
 
 const ManagingDirectorProfile: React.FC = () => {
    return (
-      <section id="leadership" className="py-20 bg-white relative overflow-hidden">
+      <section id="leadership" className="py-20 bg-white relative overflow-hidden group/section">
+         <div className="absolute top-10 right-10 opacity-[0.02] group-hover/section:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none hidden lg:block">
+            <span className="text-[150px] font-black text-aureole-slate group-hover/section:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">DIRECTOR</span>
+         </div>
          <div className="container mx-auto px-4 sm:px-8 lg:px-16">
             <div className="grid lg:grid-cols-12 gap-16 items-center">
                {/* Executive Profile */}

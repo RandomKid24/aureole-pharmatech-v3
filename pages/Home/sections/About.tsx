@@ -10,7 +10,10 @@ import LazyImage from '@/components/LazyImage';
  */
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-16 lg:py-20 bg-aureole-soft relative overflow-hidden border-y border-slate-100">
+    <section id="about" className="py-16 lg:py-20 bg-aureole-soft relative overflow-hidden border-y border-slate-100 group/section">
+      <div className="absolute top-10 right-10 opacity-[0.02] group-hover/section:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none hidden lg:block">
+        <span className="text-[150px] font-black text-aureole-slate group-hover/section:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">ABOUT</span>
+      </div>
       <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
 
         {/* Brand Header */}

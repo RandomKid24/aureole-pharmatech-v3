@@ -5,7 +5,7 @@ const CareersHero: React.FC = () => {
     return (
         <section className="relative py-20 lg:py-32 overflow-hidden border-b border-slate-100 bg-white group">
             <div className="absolute top-10 right-10 opacity-[0.02] group-hover:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none hidden lg:block">
-                <span className="text-[180px] lg:text-[250px] font-black font-heading text-aureole-slate group-hover:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">JOIN CAREERS</span>
+                <span className="text-[150px] font-black text-aureole-slate group-hover:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">CAREERS</span>
             </div>
 
             <div className="container mx-auto px-6 lg:px-24 relative z-10">
