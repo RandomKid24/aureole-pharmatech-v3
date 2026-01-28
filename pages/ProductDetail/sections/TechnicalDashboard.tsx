@@ -1,6 +1,8 @@
-
 import React from 'react';
-import { Settings } from 'lucide-react';
+import {
+    Settings, Thermometer, Droplets, Target, Layers,
+    Maximize, Zap, Gauge, FileCheck
+} from 'lucide-react';
 import ProductTabs from '@/components/ui/ProductTabs';
 
 interface TechnicalDashboardProps {
@@ -9,6 +11,19 @@ interface TechnicalDashboardProps {
 }
 
 const TechnicalDashboard: React.FC<TechnicalDashboardProps> = ({ product, decodedName }) => {
+    const getSpecIcon = (parameter: string) => {
+        const p = parameter.toLowerCase();
+        if (p.includes('temp')) return <Thermometer size={14} />;
+        if (p.includes('humid')) return <Droplets size={14} />;
+        if (p.includes('accuracy') || p.includes('resolu')) return <Target size={14} />;
+        if (p.includes('uniform')) return <Layers size={14} />;
+        if (p.includes('volume') || p.includes('capacity') || p.includes('size')) return <Maximize size={14} />;
+        if (p.includes('power') || p.includes('voltage') || p.includes('supply')) return <Zap size={14} />;
+        if (p.includes('control') || p.includes('sensor')) return <Gauge size={14} />;
+        if (p.includes('complian') || p.includes('standard')) return <FileCheck size={14} />;
+        return <Settings size={14} />;
+    };
+
     const hasAnySpecs = product.specifications.length > 0 ||
         product.keyFeatures.length > 0 ||
         (product.regularAttributes && product.regularAttributes.length > 0) ||
@@ -49,8 +64,10 @@ const TechnicalDashboard: React.FC<TechnicalDashboardProps> = ({ product, decode
                                         {product.specifications.map((spec: any, i: number) => (
                                             <div key={i} className="group/item border-r border-b border-slate-100 hover:bg-slate-50 transition-all duration-300">
                                                 <div className="p-8">
-                                                    <div className="flex items-center gap-2 mb-4">
-                                                        <div className="w-1 h-4 bg-aureole-cyan opacity-0 group-hover/item:opacity-100 transition-opacity"></div>
+                                                    <div className="flex items-center gap-3 mb-4">
+                                                        <div className="text-aureole-cyan opacity-40 group-hover/item:opacity-100 transition-all group-hover/item:scale-110">
+                                                            {getSpecIcon(spec.parameter)}
+                                                        </div>
                                                         <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none">{spec.parameter}</span>
                                                     </div>
                                                     <span className="text-[12px] text-aureole-slate font-[900] uppercase tracking-tight leading-relaxed block group-hover:text-aureole-blue transition-colors">

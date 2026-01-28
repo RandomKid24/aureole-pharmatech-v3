@@ -1,12 +1,49 @@
 
 import React, { useState, useEffect } from 'react';
-import { ShieldCheck, Database, Layers, CheckCircle2, Cpu, PlusCircle } from 'lucide-react';
+import {
+    ShieldCheck, Database, Layers, CheckCircle2, Cpu, PlusCircle,
+    Network, Monitor, AlertTriangle, Lock, Key, Activity,
+    Smartphone, Fingerprint, Box, Lightbulb, Wind, Droplets,
+    Columns, Move, FileCheck, Smartphone as Phone, Bell,
+    HeartPulse, Microscope, FlaskConical, Dna, Settings
+} from 'lucide-react';
 
 interface ProductTabsProps {
     product: any;
 }
 
 const ProductTabs: React.FC<ProductTabsProps> = ({ product }) => {
+    const getIconForItem = (text: string, defaultIcon: React.ReactNode) => {
+        const lowerText = text.toLowerCase();
+        if (lowerText.includes('plc') || lowerText.includes('control') || lowerText.includes('processor')) return <Cpu size={14} className="text-aureole-blue" />;
+        if (lowerText.includes('ethernet') || lowerText.includes('communication') || lowerText.includes('internet')) return <Network size={14} className="text-aureole-cyan" />;
+        if (lowerText.includes('database') || lowerText.includes('log') || lowerText.includes('audit')) return <Database size={14} className="text-aureole-blue" />;
+        if (lowerText.includes('touch screen') || lowerText.includes('hmi') || lowerText.includes('display')) return <Monitor size={14} className="text-aureole-cyan" />;
+        if (lowerText.includes('safety') || lowerText.includes('protect') || lowerText.includes('undershoot') || lowerText.includes('overshoot')) return <ShieldCheck size={14} className="text-red-500" />;
+        if (lowerText.includes('alarm') || lowerText.includes('alert') || lowerText.includes('hooter')) return <Bell size={14} className="text-amber-500" />;
+        if (lowerText.includes('password') || lowerText.includes('lock')) return <Lock size={14} className="text-slate-700" />;
+        if (lowerText.includes('biometric') || lowerText.includes('fingerprint')) return <Fingerprint size={14} className="text-aureole-blue" />;
+        if (lowerText.includes('sensor') || lowerText.includes('monitoring') || lowerText.includes('actual status')) return <Activity size={14} className="text-aureole-cyan" />;
+        if (lowerText.includes('gsm') || lowerText.includes('mobile') || lowerText.includes('phone')) return <Phone size={14} className="text-aureole-blue" />;
+        if (lowerText.includes('lighting') || lowerText.includes('fluorescent') || lowerText.includes('viewing')) return <Lightbulb size={14} className="text-amber-400" />;
+        if (lowerText.includes('air circulation') || lowerText.includes('fan') || lowerText.includes('airflow')) return <Wind size={14} className="text-slate-400" />;
+        if (lowerText.includes('water') || lowerText.includes('steam') || lowerText.includes('humid')) return <Droplets size={14} className="text-blue-400" />;
+        if (lowerText.includes('tray') || lowerText.includes('shelf') || lowerText.includes('perforated')) return <Columns size={14} className="text-slate-500" />;
+        if (lowerText.includes('wheel') || lowerText.includes('castor') || lowerText.includes('mobility')) return <Move size={14} className="text-slate-500" />;
+        if (lowerText.includes('21 cfr') || lowerText.includes('compliance') || lowerText.includes('standard')) return <FileCheck size={14} className="text-green-600" />;
+        if (lowerText.includes('door') || lowerText.includes('ss') || lowerText.includes('construction')) return <Box size={14} className="text-slate-600" />;
+
+        // Industry Specific Icons
+        if (lowerText.includes('healthcare') || lowerText.includes('hospital') || lowerText.includes('surgeon')) return <HeartPulse size={14} className="text-red-500" />;
+        if (lowerText.includes('pharma')) return <Microscope size={14} className="text-aureole-blue" />;
+        if (lowerText.includes('institute') || lowerText.includes('lab') || lowerText.includes('research')) return <FlaskConical size={14} className="text-aureole-cyan" />;
+        if (lowerText.includes('mechanical') || lowerText.includes('factory') || lowerText.includes('production')) return <Settings size={14} className="text-slate-500" />;
+        if (lowerText.includes('jewelry') || lowerText.includes('jewel')) return <Dna size={14} className="text-amber-500" />; // Dna looks a bit like a chain/detail
+        if (lowerText.includes('food')) return <Droplets size={14} className="text-blue-400" />;
+
+        return defaultIcon;
+    };
+
     const tabs = [
         { id: 'features', label: product.keyFeaturesHeading || "Key Features", icon: <ShieldCheck size={14} />, data: product.keyFeatures, itemIcon: <CheckCircle2 size={12} className="text-aureole-cyan" /> },
         { id: 'attributes', label: product.regularAttributesHeading || "Regular Attributes", icon: <Database size={14} />, data: product.regularAttributes, itemIcon: <Cpu size={12} className="text-aureole-blue" /> },
@@ -52,7 +89,7 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product }) => {
                             {tab.data.map((item: string, i: number) => (
                                 <div key={i} className="flex items-start gap-4 group">
                                     <div className="flex-shrink-0 mt-0.5 transition-transform group-hover:scale-110">
-                                        {tab.itemIcon}
+                                        {getIconForItem(item, tab.itemIcon)}
                                     </div>
                                     <span className="text-[11px] font-bold text-aureole-slate uppercase tracking-tight leading-relaxed group-hover:text-aureole-blue transition-colors">
                                         {item}

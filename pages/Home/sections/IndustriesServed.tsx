@@ -1,6 +1,11 @@
 
 import React from 'react';
-import { Microscope, Activity, FlaskConical, ArrowRight, Binary, Gauge, ShieldCheck } from 'lucide-react';
+import {
+  Microscope, Activity, FlaskConical, ArrowRight, Binary, Gauge,
+  ShieldCheck, CheckCircle2, FlaskConical as Chem, ThermometerSnowflake,
+  Settings, Zap, ShieldAlert, LayoutGrid, Box, ClipboardCheck,
+  Dna, HeartPulse, Droplets, Flame
+} from 'lucide-react';
 
 const SECTORS_DATA = [
   {
@@ -46,6 +51,21 @@ const SECTORS_DATA = [
 ];
 
 const IndustriesServed: React.FC = () => {
+  const getCapabilityIcon = (text: string) => {
+    const lower = text.toLowerCase();
+    if (lower.includes('stability')) return <ShieldCheck size={10} />;
+    if (lower.includes('gmp') || lower.includes('compliance')) return <ClipboardCheck size={10} />;
+    if (lower.includes('cold') || lower.includes('chain')) return <ThermometerSnowflake size={10} />;
+    if (lower.includes('clean') || lower.includes('room')) return <LayoutGrid size={10} />;
+    if (lower.includes('storage') || lower.includes('rugged')) return <Box size={10} />;
+    if (lower.includes('steriliz')) return <Zap size={10} />;
+    if (lower.includes('safety') || lower.includes('stress')) return <ShieldAlert size={10} />;
+    if (lower.includes('reaction') || lower.includes('volatile')) return <Flame size={10} />;
+    if (lower.includes('testing') || lower.includes('control')) return <Settings size={10} />;
+    if (lower.includes('bod') || lower.includes('incubat')) return <Droplets size={10} />;
+    return <CheckCircle2 size={10} />;
+  };
+
   return (
     <section id="industries" className="py-16 lg:py-20 bg-white relative overflow-hidden group/section">
       <div className="absolute top-10 right-10 opacity-[0.02] group-hover/section:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none hidden lg:block">
@@ -101,7 +121,8 @@ const IndustriesServed: React.FC = () => {
                 <div className="mt-auto space-y-4">
                   <div className="flex flex-wrap gap-2">
                     {sector.capabilities.map((cap, i) => (
-                      <span key={i} className="text-[8px] font-black text-slate-400 bg-slate-50 border border-slate-100 px-2 py-1 uppercase tracking-wider rounded-sm">
+                      <span key={i} className="flex items-center gap-1.5 text-[8px] font-black text-slate-400 bg-slate-50 border border-slate-100 px-2.5 py-1.5 uppercase tracking-wider rounded-sm transition-colors group-hover:text-aureole-blue group-hover:border-aureole-cyan/20">
+                        <span className="opacity-60">{getCapabilityIcon(cap)}</span>
                         {cap}
                       </span>
                     ))}

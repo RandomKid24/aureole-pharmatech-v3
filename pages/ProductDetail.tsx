@@ -7,6 +7,7 @@ import { ArrowLeft } from 'lucide-react';
 import ProductHero from './ProductDetail/sections/ProductHero';
 import TechnicalDashboard from './ProductDetail/sections/TechnicalDashboard';
 import ProductTables from './ProductDetail/sections/ProductTables';
+import ProductEnquiry from './ProductDetail/sections/ProductEnquiry';
 
 const ProductDetail: React.FC = () => {
     const { productName } = useParams<{ productName: string }>();
@@ -35,6 +36,7 @@ const ProductDetail: React.FC = () => {
             <ProductHero product={product} decodedName={decodedName} />
             <TechnicalDashboard product={product} decodedName={decodedName} />
             <ProductTables product={product} />
+            <ProductEnquiry />
         </div>
     );
 };
