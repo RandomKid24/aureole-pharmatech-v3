@@ -63,7 +63,10 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
                                                 <Link
                                                     to={cat.id === 'stability' ? '/products/stability-chambers' : cat.id === 'tabletop' ? '/products/table-top-instruments' : '/products/laboratory-furniture'}
                                                     className="block text-[10px] font-bold uppercase tracking-widest text-aureole-blue mb-4 hover:text-aureole-cyan"
-                                                    onClick={onClose}
+                                                    onClick={() => {
+                                                        onClose();
+                                                        window.scrollTo(0, 0);
+                                                    }}
                                                 >
                                                     View All Overview <ArrowRight size={10} className="inline ml-1" />
                                                 </Link>
