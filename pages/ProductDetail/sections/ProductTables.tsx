@@ -15,29 +15,29 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product }) => {
                     <div className="container mx-auto px-6 lg:px-24">
                         <div className="flex items-center gap-4 mb-16">
                             <Box className="text-aureole-blue" size={18} />
-                            <h3 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-aureole-slate">Models & Dimensions</h3>
+                            <h3 className="text-[13px] font-bold text-slate-900">Models & Dimensions</h3>
                         </div>
 
                         <div className="overflow-x-auto border border-slate-200 shadow-md">
                             <table className="w-full text-left min-w-[800px]">
                                 <thead>
                                     <tr className="bg-slate-50 text-aureole-slate border-b border-slate-300">
-                                        <th className="py-5 px-8 text-[11px] font-bold text-slate-700 uppercase tracking-widest border-r border-slate-200">Model</th>
-                                        <th className="py-5 px-8 text-[11px] font-bold text-slate-700 uppercase tracking-widest border-r border-slate-200 text-center">Capacity (L)</th>
-                                        <th className="py-5 px-8 text-[11px] font-bold text-slate-700 uppercase tracking-widest border-r border-slate-200 text-center">Interior (W×D×H mm)</th>
+                                        <th className="py-5 px-8 text-[11px] font-bold text-slate-700 border-r border-slate-200">Model</th>
+                                        <th className="py-5 px-8 text-[11px] font-bold text-slate-700 border-r border-slate-200 text-center">Capacity (L)</th>
+                                        <th className="py-5 px-8 text-[11px] font-bold text-slate-700 border-r border-slate-200 text-center">Interior (W×D×H mm)</th>
                                         {product.models.some((m: any) => m.exterior) && (
-                                            <th className="py-5 px-8 text-[11px] font-bold text-slate-700 uppercase tracking-widest border-r border-slate-200 text-center">Exterior (W×D×H mm)</th>
+                                            <th className="py-5 px-8 text-[11px] font-bold text-slate-700 border-r border-slate-200 text-center">Exterior (W×D×H mm)</th>
                                         )}
                                         {product.models.some((m: any) => m.trays) && (
-                                            <th className="py-5 px-8 text-[11px] font-bold text-slate-700 uppercase tracking-widest border-r border-slate-200 text-center">Trays</th>
+                                            <th className="py-5 px-8 text-[11px] font-bold text-slate-700 border-r border-slate-200 text-center">Trays</th>
                                         )}
-                                        <th className="py-5 px-8 text-[11px] font-bold text-slate-700 uppercase tracking-widest text-center">Power</th>
+                                        <th className="py-5 px-8 text-[11px] font-bold text-slate-700 text-center">Power</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-slate-300 text-slate-600">
                                     {product.models.map((m: any, i: number) => (
                                         <tr key={i}>
-                                            <td className="py-4 px-8 text-[11px] font-bold text-aureole-blue border-r border-slate-200 uppercase tracking-tight">{m.model}</td>
+                                            <td className="py-4 px-8 text-[11px] font-bold text-aureole-blue border-r border-slate-200">{m.model}</td>
                                             <td className="py-4 px-8 text-[11px] font-bold border-r border-slate-200 text-center text-slate-900">{m.capacity}</td>
                                             <td className="py-4 px-8 text-[11px] font-bold border-r border-slate-200 text-center tracking-tight text-slate-900">{m.interior}</td>
                                             {product.models.some((model: any) => model.exterior) && (
@@ -46,7 +46,7 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product }) => {
                                             {product.models.some((model: any) => model.trays) && (
                                                 <td className="py-4 px-8 text-[11px] font-bold border-r border-slate-200 text-center text-slate-900">{m.trays || '-'}</td>
                                             )}
-                                            <td className="py-4 px-8 text-[11px] font-bold text-center uppercase tracking-tight text-slate-900">{m.power}</td>
+                                            <td className="py-4 px-8 text-[11px] font-bold text-center text-slate-900">{m.power}</td>
                                         </tr>
                                     ))}
                                 </tbody>
@@ -70,7 +70,7 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product }) => {
                     <div className="container mx-auto px-6 lg:px-24">
                         <div className="flex items-center gap-4 mb-16">
                             <Box className="text-aureole-blue" size={18} />
-                            <h3 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-aureole-slate">Technical Specifications & Models</h3>
+                            <h3 className="text-[13px] font-bold text-slate-900">Technical Specifications & Models</h3>
                         </div>
 
                         <div className="overflow-x-auto border border-slate-200 shadow-md">
@@ -78,7 +78,7 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product }) => {
                                 <thead>
                                     <tr className="bg-slate-50 text-aureole-slate border-b border-slate-300">
                                         {product.variantTable.headers.map((header: string, i: number) => (
-                                            <th key={i} className={`py-5 px-8 text-[11px] font-bold text-slate-700 uppercase tracking-widest ${i < product.variantTable!.headers.length - 1 ? 'border-r border-slate-200' : ''} ${i === 0 ? '' : 'text-center'}`}>
+                                            <th key={i} className={`py-5 px-8 text-[11px] font-bold text-slate-700 ${i < product.variantTable!.headers.length - 1 ? 'border-r border-slate-200' : ''} ${i === 0 ? '' : 'text-center'}`}>
                                                 {header}
                                             </th>
                                         ))}
@@ -97,7 +97,7 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product }) => {
                                                     <td
                                                         key={j}
                                                         colSpan={colSpan}
-                                                        className={`py-4 px-8 text-[11px] ${j === 0 ? 'font-bold text-aureole-blue bg-slate-50/50' : 'font-bold text-slate-900 text-center'} ${!isLastCell ? 'border-r border-slate-200' : ''} uppercase tracking-tight`}
+                                                        className={`py-4 px-8 text-[11px] ${j === 0 ? 'font-bold text-aureole-blue bg-slate-50/50' : 'font-bold text-slate-900 text-center'} ${!isLastCell ? 'border-r border-slate-200' : ''}`}
                                                     >
                                                         {cell}
                                                     </td>
@@ -125,7 +125,7 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product }) => {
                     <div className="container mx-auto px-6 lg:px-24">
                         <div className="flex items-center gap-4 mb-16">
                             <Box className="text-aureole-blue" size={18} />
-                            <h3 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-aureole-slate">Technical Specifications & Models</h3>
+                            <h3 className="text-[13px] font-bold text-slate-900">Technical Specifications & Models</h3>
                         </div>
 
                         <div className="overflow-x-auto border border-slate-200 shadow-md">
@@ -157,7 +157,7 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product }) => {
                                                         colSpan={cell.colSpan || 1}
                                                         rowSpan={cell.rowSpan || 1}
                                                         className={`
-                                                        py-4 px-6 text-[11px] uppercase tracking-tight border border-slate-200
+                                                        py-4 px-6 text-[11px] tracking-tight border border-slate-200
                                                         font-bold text-slate-900
                                                         ${cell.align === 'center' ? 'text-center' : cell.align === 'right' ? 'text-right' : 'text-left'}
                                                         ${j === 0 ? 'text-aureole-blue bg-slate-50/30 font-bold' : ''}

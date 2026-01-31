@@ -46,12 +46,12 @@ const TechnicalDashboard: React.FC<TechnicalDashboardProps> = ({ product, decode
                                             <Settings size={18} className="text-aureole-blue" />
                                         </div>
                                         <div>
-                                            <h3 className="text-[12px] font-bold text-aureole-slate uppercase tracking-[0.3em] leading-none mb-1">Technical Specification Sheet</h3>
-                                            <p className="text-[9px] text-slate-500 font-medium uppercase tracking-[0.1em]">{decodedName}</p>
+                                            <h3 className="text-[13px] font-bold text-slate-900 leading-none mb-1.5">Technical Specification Sheet</h3>
+                                            <p className="text-[11px] text-slate-500 font-medium tracking-tight">{decodedName}</p>
                                         </div>
                                     </div>
                                     <div className="hidden sm:flex flex-col items-end opacity-20">
-                                        <span className="text-[8px] font-bold text-slate-900 uppercase tracking-[0.4em]">PRECISION SERIES</span>
+                                        <span className="text-[10px] font-bold text-slate-400">Precision Series</span>
                                     </div>
                                 </div>
 
@@ -64,9 +64,9 @@ const TechnicalDashboard: React.FC<TechnicalDashboardProps> = ({ product, decode
                                                         <div className="text-aureole-cyan opacity-40">
                                                             {getSpecIcon(spec.parameter)}
                                                         </div>
-                                                        <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest leading-none">{spec.parameter}</span>
+                                                        <span className="text-[10px] font-bold text-slate-500 leading-none">{spec.parameter}</span>
                                                     </div>
-                                                    <span className="text-[11px] text-slate-900 font-bold uppercase tracking-tight leading-relaxed block">
+                                                    <span className="text-[12px] text-slate-900 font-bold leading-relaxed block">
                                                         {spec.details}
                                                     </span>
                                                 </div>
