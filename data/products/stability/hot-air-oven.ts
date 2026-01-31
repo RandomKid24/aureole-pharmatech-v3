@@ -22,91 +22,70 @@ export const hotAirOven: ProductDetail = {
         rows: [
             {
                 cells: [
-                    { content: "Models", rowSpan: 2, isHeader: true },
-                    { content: "Capacity In Liters", rowSpan: 2, isHeader: true },
-                    { content: "Interior Dimension in MM", colSpan: 3, isHeader: true },
-                    { content: "Exterior Dimension in MM", colSpan: 3, isHeader: true },
-                    { content: "No of Trays", rowSpan: 2, isHeader: true },
-                    { content: "Power Supply", rowSpan: 2, isHeader: true }
+                    { content: "Model", rowSpan: 2, isHeader: true },
+                    { content: "Capacity\n(In Liters)", rowSpan: 2, isHeader: true },
+                    { content: "Tray", colSpan: 2, isHeader: true },
+                    { content: "Inner Dimension\n(W x D x H) mm", rowSpan: 2, isHeader: true },
+                    { content: "Outer Dimension\n(W x D x H) mm", rowSpan: 2, isHeader: true }
                 ]
             },
             {
                 cells: [
-                    { content: "Width", isHeader: true },
-                    { content: "Depth", isHeader: true },
-                    { content: "Height", isHeader: true },
-                    { content: "Width", isHeader: true },
-                    { content: "Depth", isHeader: true },
-                    { content: "Height", isHeader: true }
+                    { content: "Quantity", isHeader: true },
+                    { content: "Dimension", isHeader: true }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_HO2-1.0_V**" },
                     { content: "100", align: 'center' },
-                    { content: "450", align: 'center' },
-                    { content: "450", align: 'center' },
-                    { content: "500", align: 'center' },
-                    { content: "650", align: 'center' },
-                    { content: "850", align: 'center' },
-                    { content: "1050", align: 'center' },
                     { content: "2", align: 'center' },
-                    { content: "Single Phase 230 V", rowSpan: 5, align: 'center' }
+                    { content: "-", align: 'center' },
+                    { content: "450 x 450 x 500", align: 'center' },
+                    { content: "650 x 850 x 1050", align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_HO2-1.5_V**" },
                     { content: "150", align: 'center' },
-                    { content: "500", align: 'center' },
-                    { content: "500", align: 'center' },
-                    { content: "600", align: 'center' },
-                    { content: "700", align: 'center' },
-                    { content: "1020", align: 'center' },
-                    { content: "1050", align: 'center' },
-                    { content: "2", align: 'center' }
+                    { content: "2", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "500 x 500 x 600", align: 'center' },
+                    { content: "700 x 1020 x 1050", align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_HO2-2.0_V**" },
                     { content: "200", align: 'center' },
-                    { content: "600", align: 'center' },
-                    { content: "500", align: 'center' },
-                    { content: "675", align: 'center' },
-                    { content: "860", align: 'center' },
-                    { content: "1020", align: 'center' },
-                    { content: "1225", align: 'center' },
-                    { content: "2", align: 'center' }
+                    { content: "2", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "600 x 500 x 675", align: 'center' },
+                    { content: "860 x 1020 x 1225", align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_HO2-2.5_V**" },
                     { content: "250", align: 'center' },
-                    { content: "600", align: 'center' },
-                    { content: "600", align: 'center' },
-                    { content: "700", align: 'center' },
-                    { content: "860", align: 'center' },
-                    { content: "1120", align: 'center' },
-                    { content: "1250", align: 'center' },
-                    { content: "3", align: 'center' }
+                    { content: "3", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "600 x 600 x 700", align: 'center' },
+                    { content: "860 x 1120 x 1250", align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_HO2-3.0_V**" },
                     { content: "300", align: 'center' },
-                    { content: "600", align: 'center' },
-                    { content: "600", align: 'center' },
-                    { content: "850", align: 'center' },
-                    { content: "860", align: 'center' },
-                    { content: "1120", align: 'center' },
-                    { content: "1400", align: 'center' },
-                    { content: "4", align: 'center' }
+                    { content: "4", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "600 x 600 x 850", align: 'center' },
+                    { content: "860 x 1120 x 1400", align: 'center' }
                 ]
             }
         ],
-        remark: "Above are standard sizes and we can offer other (customised) sizes also V** = variant based upon construction & body"
+        remark: "• Power Supply: Single Phase 230 V. Above are standard sizes and we can offer other (customised) sizes also V** = variant based upon construction & body."
     }
 };

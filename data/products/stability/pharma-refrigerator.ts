@@ -32,113 +32,91 @@ export const pharmaRefrigerator: ProductDetail = {
             {
                 cells: [
                     { content: "Model", rowSpan: 2, isHeader: true },
-                    { content: "Capacity In Liters", rowSpan: 2, isHeader: true },
-                    { content: "Interior Dimension in MM", colSpan: 3, isHeader: true },
-                    { content: "Exterior Dimension in MM", colSpan: 3, isHeader: true },
-                    { content: "No of Trays", rowSpan: 2, isHeader: true },
-                    { content: "Power Supply", rowSpan: 2, isHeader: true }
+                    { content: "Capacity\n(In Liters)", rowSpan: 2, isHeader: true },
+                    { content: "Tray", colSpan: 2, isHeader: true },
+                    { content: "Inner Dimension\n(W x D x H) mm", rowSpan: 2, isHeader: true },
+                    { content: "Outer Dimension\n(W x D x H) mm", rowSpan: 2, isHeader: true }
                 ]
             },
             {
                 cells: [
-                    { content: "Width", isHeader: true },
-                    { content: "Depth", isHeader: true },
-                    { content: "Height", isHeader: true },
-                    { content: "Width", isHeader: true },
-                    { content: "Depth", isHeader: true },
-                    { content: "Height", isHeader: true }
+                    { content: "Quantity", isHeader: true },
+                    { content: "Dimension", isHeader: true }
                 ]
             },
             {
                 cells: [
                     { content: "AP_DC_DF-1.0_CC-1.0_V**", rowSpan: 2 },
                     { content: "Upper 100", align: 'center' },
-                    { content: "640", align: 'center' },
-                    { content: "350", align: 'center' },
-                    { content: "500", align: 'center' },
-                    { content: "825", rowSpan: 2, align: 'center' },
-                    { content: "850", rowSpan: 2, align: 'center' },
-                    { content: "2055", rowSpan: 2, align: 'center' },
                     { content: "1", align: 'center' },
-                    { content: "Single Phase 230 V", rowSpan: 8, align: 'center' }
+                    { content: "-", align: 'center' },
+                    { content: "640 x 350 x 500", align: 'center' },
+                    { content: "825 x 850 x 2055", rowSpan: 2, align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "Lower 100", align: 'center' },
-                    { content: "640", align: 'center' },
-                    { content: "350", align: 'center' },
-                    { content: "600", align: 'center' },
-                    { content: "1", align: 'center' }
+                    { content: "1", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "640 x 350 x 600", align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "AP_DC_DF-2.0_CC-2.0_V**", rowSpan: 2 },
                     { content: "Upper 200", align: 'center' },
-                    { content: "700", align: 'center' },
-                    { content: "575", align: 'center' },
-                    { content: "500", align: 'center' },
-                    { content: "885", rowSpan: 2, align: 'center' },
-                    { content: "975", rowSpan: 2, align: 'center' },
-                    { content: "2055", rowSpan: 2, align: 'center' },
-                    { content: "2", align: 'center' }
+                    { content: "2", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "700 x 575 x 500", align: 'center' },
+                    { content: "885 x 975 x 2055", rowSpan: 2, align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "Lower 200", align: 'center' },
-                    { content: "700", align: 'center' },
-                    { content: "475", align: 'center' },
-                    { content: "600", align: 'center' },
-                    { content: "2", align: 'center' }
+                    { content: "2", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "700 x 475 x 600", align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "AP_DC_DF-1.0_CC-2.0_V**", rowSpan: 2 },
                     { content: "Upper 100", align: 'center' },
-                    { content: "700", align: 'center' },
-                    { content: "350", align: 'center' },
-                    { content: "450", align: 'center' },
-                    { content: "885", rowSpan: 2, align: 'center' },
-                    { content: "975", rowSpan: 2, align: 'center' },
-                    { content: "2010", rowSpan: 2, align: 'center' },
-                    { content: "1", align: 'center' }
+                    { content: "1", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "700 x 350 x 450", align: 'center' },
+                    { content: "885 x 975 x 2010", rowSpan: 2, align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "Lower 200", align: 'center' },
-                    { content: "700", align: 'center' },
-                    { content: "475", align: 'center' },
-                    { content: "600", align: 'center' },
-                    { content: "2", align: 'center' }
+                    { content: "2", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "700 x 475 x 600", align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "AP_DC_DF-2.0_CC-4.0_V**", rowSpan: 2 },
                     { content: "Upper 200", align: 'center' },
-                    { content: "800", align: 'center' },
-                    { content: "500", align: 'center' },
-                    { content: "500", align: 'center' },
-                    { content: "985", rowSpan: 2, align: 'center' },
-                    { content: "1100", rowSpan: 2, align: 'center' },
-                    { content: "2300", rowSpan: 2, align: 'center' },
-                    { content: "2", align: 'center' }
+                    { content: "2", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "800 x 500 x 500", align: 'center' },
+                    { content: "985 x 1100 x 2300", rowSpan: 2, align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "Lower 400", align: 'center' },
-                    { content: "800", align: 'center' },
-                    { content: "600", align: 'center' },
-                    { content: "850", align: 'center' },
-                    { content: "3", align: 'center' }
+                    { content: "3", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "800 x 600 x 850", align: 'center' }
                 ]
             }
         ],
-        remark: "Above are standard sizes and we can offer other (customised) sizes also V** = variant based upon construction & body"
+        remark: "• Power Supply: Single Phase 230 V. Above are standard sizes and we can offer other (customised) sizes also V** = variant based upon construction & body."
     }
 };

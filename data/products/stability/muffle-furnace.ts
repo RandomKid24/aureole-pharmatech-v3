@@ -15,39 +15,40 @@ export const muffleFurnace: ProductDetail = {
         rows: [
             {
                 cells: [
-                    { content: "Models", rowSpan: 2, isHeader: true },
-                    { content: "Capacity In Liters", rowSpan: 2, isHeader: true },
-                    { content: "Interior Dimension in MM", colSpan: 3, isHeader: true },
-                    { content: "Power Supply", rowSpan: 2, isHeader: true }
+                    { content: "Model", rowSpan: 2, isHeader: true },
+                    { content: "Capacity\n(In Liters)", rowSpan: 2, isHeader: true },
+                    { content: "Tray", colSpan: 2, isHeader: true },
+                    { content: "Inner Dimension\n(W x D x H) mm", rowSpan: 2, isHeader: true },
+                    { content: "Outer Dimension\n(W x D x H) mm", rowSpan: 2, isHeader: true }
                 ]
             },
             {
                 cells: [
-                    { content: "Width", isHeader: true },
-                    { content: "Depth", isHeader: true },
-                    { content: "Height", isHeader: true }
+                    { content: "Quantity", isHeader: true },
+                    { content: "Dimension", isHeader: true }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_MF-0.6_V**" },
                     { content: "6", align: 'center' },
-                    { content: "150", align: 'center' },
-                    { content: "300", align: 'center' },
-                    { content: "150", align: 'center' },
-                    { content: "Single Phase 230 V", rowSpan: 2, align: 'center' }
+                    { content: "-", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "150 x 300 x 150", align: 'center' },
+                    { content: "-", align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_MF-0.12_V**" },
                     { content: "12", align: 'center' },
-                    { content: "200", align: 'center' },
-                    { content: "300", align: 'center' },
-                    { content: "200", align: 'center' }
+                    { content: "-", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "200 x 300 x 200", align: 'center' },
+                    { content: "-", align: 'center' }
                 ]
             }
         ],
-        remark: "Above are standard sizes and we can offer other (customised) sizes also V** = variant based upon construction & body"
+        remark: "• Power Supply: Single Phase 230 V. Above are standard sizes and we can offer other (customised) sizes also V** = variant based upon construction & body."
     }
 };

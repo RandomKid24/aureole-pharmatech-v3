@@ -140,11 +140,16 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product }) => {
                                                         colSpan={cell.colSpan || 1}
                                                         rowSpan={cell.rowSpan || 1}
                                                         className={`
-                                                            py-6 px-6 text-[11px] uppercase tracking-tight border border-slate-300
-                                                            bg-slate-50 font-black text-aureole-slate text-center
-                                                        `}
+                                                        py-6 px-6 text-[11px] tracking-tight border border-slate-300
+                                                        bg-slate-50 font-black text-aureole-slate text-center
+                                                    `}
                                                     >
-                                                        {cell.content}
+                                                        {cell.content.split('\n').map((line: string, k: number) => (
+                                                            <React.Fragment key={k}>
+                                                                {line}
+                                                                {k < cell.content.split('\n').length - 1 && <br />}
+                                                            </React.Fragment>
+                                                        ))}
                                                     </th>
                                                 ) : (
                                                     <td
@@ -152,11 +157,11 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product }) => {
                                                         colSpan={cell.colSpan || 1}
                                                         rowSpan={cell.rowSpan || 1}
                                                         className={`
-                                                            py-6 px-6 text-[11px] uppercase tracking-tight border border-slate-300
-                                                            font-bold
-                                                            ${cell.align === 'center' ? 'text-center' : cell.align === 'right' ? 'text-right' : 'text-left'}
-                                                            ${j === 0 ? 'text-aureole-blue bg-slate-50/30' : ''}
-                                                        `}
+                                                        py-6 px-6 text-[11px] uppercase tracking-tight border border-slate-300
+                                                        font-bold
+                                                        ${cell.align === 'center' ? 'text-center' : cell.align === 'right' ? 'text-right' : 'text-left'}
+                                                        ${j === 0 ? 'text-aureole-blue bg-slate-50/30' : ''}
+                                                    `}
                                                     >
                                                         {cell.content}
                                                     </td>

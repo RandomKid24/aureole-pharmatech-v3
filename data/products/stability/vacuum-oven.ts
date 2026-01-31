@@ -26,35 +26,50 @@ export const vacuumOven: ProductDetail = {
         rows: [
             {
                 cells: [
-                    { content: "Models", isHeader: true },
-                    { content: "Capacity in Ltrs", isHeader: true },
-                    { content: "Size: In Inches", isHeader: true },
-                    { content: "Power Supply", isHeader: true }
+                    { content: "Model", rowSpan: 2, isHeader: true },
+                    { content: "Capacity\n(In Liters)", rowSpan: 2, isHeader: true },
+                    { content: "Tray", colSpan: 2, isHeader: true },
+                    { content: "Inner Dimension\n(W x D x H) mm", rowSpan: 2, isHeader: true },
+                    { content: "Outer Dimension\n(W x D x H) mm", rowSpan: 2, isHeader: true }
+                ]
+            },
+            {
+                cells: [
+                    { content: "Quantity", isHeader: true },
+                    { content: "Dimension", isHeader: true }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_VO-0.15_V**" },
                     { content: "15", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "-", align: 'center' },
                     { content: "22.5 Dia. × 30 Depth", align: 'center' },
-                    { content: "Single Phase 230 V", rowSpan: 3, align: 'center' }
+                    { content: "-", align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_VO-0.21_V**" },
                     { content: "21", align: 'center' },
-                    { content: "30 Dia. × 30 Depth", align: 'center' }
+                    { content: "-", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "30 Dia. × 30 Depth", align: 'center' },
+                    { content: "-", align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_VO-0.27_V**" },
                     { content: "27", align: 'center' },
-                    { content: "30 Dia. × 38 Depth", align: 'center' }
+                    { content: "-", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "30 Dia. × 38 Depth", align: 'center' },
+                    { content: "-", align: 'center' }
                 ]
             }
         ],
-        remark: "Above are standard sizes and we can offer other (customised) sizes also V** = variant based upon construction & body"
+        remark: "• Power Supply: Single Phase 230 V. Above are standard sizes and we can offer other (customised) sizes also V** = variant based upon construction & body."
     }
 };

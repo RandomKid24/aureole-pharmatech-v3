@@ -30,90 +30,69 @@ export const ultraLowDeepFreezer: ProductDetail = {
             {
                 cells: [
                     { content: "Model", rowSpan: 2, isHeader: true },
-                    { content: "Capacity In Liters", rowSpan: 2, isHeader: true },
-                    { content: "Interior Dimension in MM", colSpan: 3, isHeader: true },
-                    { content: "Exterior Dimension in MM", colSpan: 3, isHeader: true },
-                    { content: "Trays", rowSpan: 2, isHeader: true },
-                    { content: "Power Supply", rowSpan: 2, isHeader: true }
+                    { content: "Capacity\n(In Liters)", rowSpan: 2, isHeader: true },
+                    { content: "Tray", colSpan: 2, isHeader: true },
+                    { content: "Inner Dimension\n(W x D x H) mm", rowSpan: 2, isHeader: true },
+                    { content: "Outer Dimension\n(W x D x H) mm", rowSpan: 2, isHeader: true }
                 ]
             },
             {
                 cells: [
-                    { content: "Width", isHeader: true },
-                    { content: "Depth", isHeader: true },
-                    { content: "Height", isHeader: true },
-                    { content: "Width", isHeader: true },
-                    { content: "Depth", isHeader: true },
-                    { content: "Height", isHeader: true }
+                    { content: "Quantity", isHeader: true },
+                    { content: "Dimension", isHeader: true }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_DF-3.4_V**" },
                     { content: "340", align: 'center' },
-                    { content: "488", align: 'center' },
-                    { content: "607", align: 'center' },
-                    { content: "1140", align: 'center' },
-                    { content: "854", align: 'center' },
-                    { content: "1006", align: 'center' },
-                    { content: "1907", align: 'center' },
                     { content: "3", align: 'center' },
-                    { content: "Single Phase 230 V", rowSpan: 5, align: 'center' }
+                    { content: "-", align: 'center' },
+                    { content: "488 x 607 x 1140", align: 'center' },
+                    { content: "854 x 1006 x 1907", align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_DF-4.08_V**" },
                     { content: "408", align: 'center' },
-                    { content: "606", align: 'center' },
-                    { content: "575", align: 'center' },
-                    { content: "1180", align: 'center' },
-                    { content: "872", align: 'center' },
-                    { content: "1028", align: 'center' },
-                    { content: "1945", align: 'center' },
-                    { content: "3", align: 'center' }
+                    { content: "3", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "606 x 575 x 1180", align: 'center' },
+                    { content: "872 x 1028 x 1945", align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_DF-5.88_V**" },
                     { content: "588", align: 'center' },
-                    { content: "606", align: 'center' },
-                    { content: "738", align: 'center' },
-                    { content: "1310", align: 'center' },
-                    { content: "872", align: 'center' },
-                    { content: "1192", align: 'center' },
-                    { content: "1994", align: 'center' },
-                    { content: "3", align: 'center' }
+                    { content: "3", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "606 x 738 x 1310", align: 'center' },
+                    { content: "872 x 1192 x 1994", align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_DF-7.28_V**" },
                     { content: "728", align: 'center' },
-                    { content: "963", align: 'center' },
-                    { content: "571", align: 'center' },
-                    { content: "1350", align: 'center' },
-                    { content: "1229", align: 'center' },
-                    { content: "1012", align: 'center' },
-                    { content: "1994", align: 'center' },
-                    { content: "3", align: 'center' }
+                    { content: "3", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "963 x 571 x 1350", align: 'center' },
+                    { content: "1229 x 1012 x 1994", align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_DF-8.38_V**" },
                     { content: "838", align: 'center' },
-                    { content: "894", align: 'center' },
-                    { content: "718", align: 'center' },
-                    { content: "1310", align: 'center' },
-                    { content: "1160", align: 'center' },
-                    { content: "1172", align: 'center' },
-                    { content: "1994", align: 'center' },
-                    { content: "3", align: 'center' }
+                    { content: "3", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "894 x 718 x 1310", align: 'center' },
+                    { content: "1160 x 1172 x 1994", align: 'center' }
                 ]
             }
         ],
-        remark: "Above are standard sizes and we can offer other (customised) sizes also V** = variant based upon construction & body"
+        remark: "• Power Supply: Single Phase 230 V. Above are standard sizes and we can offer other (customised) sizes also V** = variant based upon construction & body."
     }
 };
