@@ -10,6 +10,9 @@ import ProductTables from './ProductDetail/sections/ProductTables';
 import VariantSections from './ProductDetail/sections/VariantSections';
 import ProductEnquiry from './ProductDetail/sections/ProductEnquiry';
 
+import CategoryHero from '../components/ui/CategoryHero';
+import SSAccessoriesGrid from './ProductDetail/sections/SSAccessoriesGrid';
+
 const ProductDetail: React.FC = () => {
     const { productName } = useParams<{ productName: string }>();
     const { product, originalName } = findValuesBySlug(productName || '', PRODUCT_DETAILS);
@@ -28,6 +31,22 @@ const ProductDetail: React.FC = () => {
                         <ArrowLeft size={16} /> Back to Catalog
                     </Link>
                 </div>
+            </div>
+        );
+    }
+
+    if (decodedName === "Stainless Steel Items & Accessories") {
+        return (
+            <div className="pt-24 min-h-screen bg-white">
+                <CategoryHero
+                    title="STAINLESS"
+                    subtitle="Accessories"
+                    description={product.description}
+                    watermark="ACCESSORIES"
+                    showAccent={false}
+                />
+                <SSAccessoriesGrid product={product} />
+                <ProductEnquiry />
             </div>
         );
     }

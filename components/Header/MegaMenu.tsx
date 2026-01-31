@@ -64,7 +64,16 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
                                 {cat.subTypes.map((sub) => (
                                     <React.Fragment key={sub.id}>
                                         {sub.products.map((pName) => {
-                                            const linkTarget = cat.id === 'furniture' ? `/products/laboratory-furniture#${slugify(pName)}` : `/products/${slugify(pName)}`;
+                                            // Custom logic for furniture category links
+                                            let linkTarget = `/products/${slugify(pName)}`;
+                                            if (cat.id === 'furniture') {
+                                                if (pName === 'Laboratory Furniture') {
+                                                    linkTarget = '/products/laboratory-furniture';
+                                                } else {
+                                                    linkTarget = `/products/${slugify(pName)}`;
+                                                }
+                                            }
+
                                             return (
                                                 <Link
                                                     key={pName}

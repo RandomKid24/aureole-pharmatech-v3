@@ -1,62 +1,62 @@
+import React, { useEffect, useState } from 'react';
+import { ProductDetail } from '@/data/products/types';
 
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { PRODUCT_DETAILS } from '@/data/products';
-import { FURNITURE_GALLERY_LIST } from '@/data/products/furniture/lab-furniture-data';
-import { slugify } from '@/utils/urlUtils';
+interface SSAccessoriesGridProps {
+    product: ProductDetail;
+}
 
-const FurnitureProductsGrid: React.FC = () => {
+const SSAccessoriesGrid: React.FC<SSAccessoriesGridProps> = ({ product }) => {
+    // If no specific images array is present, we can't render the grid
+    if (!product.images || !product.imageCaptions) return null;
+
     useEffect(() => {
         const hash = window.location.hash;
         if (hash) {
             const element = document.getElementById(hash.substring(1));
-            // Special handling for the main 'laboratory-furniture' ID to scroll to top/grid
-            if (hash === '#laboratory-furniture') {
-                // scroll to the section itself
-            }
             if (element) {
                 setTimeout(() => {
                     element.scrollIntoView({ behavior: 'smooth' });
                 }, 100);
             }
         }
-    }, []);
+    }, [product]);
 
     return (
-        <section id="laboratory-furniture" className="py-24 bg-white relative overflow-hidden">
+        <section className="py-24 bg-white relative overflow-hidden">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 right-0 w-1/3 h-full bg-slate-50/50 -skew-x-12 translate-x-1/2 pointer-events-none" />
 
             <div className="container mx-auto px-6 lg:px-24 relative">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    {FURNITURE_GALLERY_LIST.map((pName, idx) => {
-                        const product = PRODUCT_DETAILS[pName];
-                        if (!product) return null;
+                    {product.images.map((imgSrc, idx) => {
+                        const caption = product.imageCaptions?.[idx] || `Item ${idx + 1}`;
+                        // Create a safe slug for linking/id
+                        const itemId = `item-${idx + 1}`;
 
                         return (
                             <div
-                                key={pName}
-                                id={slugify(pName)}
+                                key={idx}
+                                id={itemId}
                                 className="group block scroll-mt-32"
                             >
                                 <div className="space-y-6">
                                     <div className="relative aspect-[4/3] bg-slate-50/50 overflow-hidden transition-all duration-500 border border-slate-100 p-8 flex items-center justify-center rounded-sm">
                                         <img
-                                            src={product.image}
-                                            alt={pName}
+                                            src={imgSrc}
+                                            alt={caption}
                                             className="max-h-full max-w-full object-contain filter z-10 transition-transform duration-700 hover:scale-105"
                                             onError={(e) => {
-                                                (e.target as HTMLImageElement).src = 'https://placehold.co/800x600/f8fafc/001529?text=' + encodeURIComponent(pName);
+                                                (e.target as HTMLImageElement).src = 'https://placehold.co/800x600/f8fafc/001529?text=' + encodeURIComponent(caption);
                                             }}
                                         />
                                         <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1.5 text-[9px] font-black uppercase tracking-widest text-[#001529] border border-slate-100 shadow-sm z-20">
-                                            MODEL 0{idx + 1}
+                                            ITEM 0{idx + 1}
                                         </div>
                                     </div>
 
                                     <div className="space-y-2 px-2">
                                         <h3 className="text-xl font-[950] text-aureole-slate uppercase tracking-tighter leading-tight">
-                                            {pName}
+                                            {caption}
                                         </h3>
                                     </div>
                                 </div>
@@ -69,4 +69,4 @@ const FurnitureProductsGrid: React.FC = () => {
     );
 };
 
-export default FurnitureProductsGrid;
+export default SSAccessoriesGrid;

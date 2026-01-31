@@ -60,11 +60,6 @@ export const PRODUCT_CATALOG: Category[] = [
                 id: "air-sampler",
                 name: "Air Sampler",
                 products: ["Air Sampler"]
-            },
-            {
-                id: "ss-accessories",
-                name: "Stainless Steel Items & Accessories",
-                products: ["Stainless Steel Items & Accessories"]
             }
         ]
     },
@@ -75,17 +70,10 @@ export const PRODUCT_CATALOG: Category[] = [
         subTypes: [
             {
                 id: "furniture-list",
-                name: "Laboratory Furniture",
+                name: "Furniture & Accessories",
                 products: [
-                    "C-Frame System",
-                    "H-Frame System",
-                    "Plinth & Pedestal System",
-                    "Laboratory Worktops",
-                    "Fume Cupboards",
-                    "Laboratory Fittings",
-                    "Hardware",
-                    "Storage Cabinets",
-                    "Lab Accessories"
+                    "Laboratory Furniture",
+                    "Stainless Steel Items & Accessories"
                 ]
             }
         ]

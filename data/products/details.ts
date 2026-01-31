@@ -19,16 +19,15 @@ import { steamBath } from './tabletop/steam-bath';
 import { oilBath } from './tabletop/oil-bath';
 import { dryBath } from './tabletop/dry-bath';
 import { airSampler } from './tabletop/air-sampler';
-import { ssAccessories } from './tabletop/ss-accessories';
-import { cFrameSystem } from './furniture/c-frame-system';
-import { hFrameSystem } from './furniture/h-frame-system';
-import { plinthPedestalSystem } from './furniture/plinth-pedestal-system';
-import { laboratoryWorktops } from './furniture/laboratory-worktops';
-import { fumeCupboards } from './furniture/fume-cupboards';
-import { laboratoryFittings } from './furniture/laboratory-fittings';
-import { hardware } from './furniture/hardware';
-import { storageCabinets } from './furniture/storage-cabinets';
-import { labAccessories } from './furniture/lab-accessories';
+import {
+    wallSideBench,
+    islandBench,
+    fumeHood,
+    storageCabinets,
+    laboratoryFittings,
+    labAccessories,
+    ssAccessories
+} from './furniture/lab-furniture-data';
 
 export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     "Humidity Chamber": humidityStabilityChamber,
@@ -52,13 +51,16 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     "Dry Bath": dryBath,
     "Air Sampler": airSampler,
     "Stainless Steel Items & Accessories": ssAccessories,
-    "C-Frame System": cFrameSystem,
-    "H-Frame System": hFrameSystem,
-    "Plinth & Pedestal System": plinthPedestalSystem,
-    "Laboratory Worktops": laboratoryWorktops,
-    "Fume Cupboards": fumeCupboards,
-    "Laboratory Fittings": laboratoryFittings,
-    "Hardware": hardware,
+    "Wall Side Bench": wallSideBench,
+    "Island Bench": islandBench,
+    "Corner Bench": wallSideBench,
+    "Anti Vibration Table": wallSideBench,
+    "Fume Hood": fumeHood,
+    "Spot Extractor": fumeHood,
+    "Overhead Cabinet": storageCabinets,
+    "Tall Storage Cabinet": storageCabinets,
     "Storage Cabinets": storageCabinets,
+    "Laboratory Sinks": labAccessories,
+    "Laboratory Fittings": laboratoryFittings,
     "Lab Accessories": labAccessories,
 };
