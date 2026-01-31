@@ -12,10 +12,12 @@ interface CategoryHeroProps {
 
 const CategoryHero: React.FC<CategoryHeroProps> = ({ title, subtitle, description, watermark, image, showAccent = true }) => {
     return (
-        <section className="relative py-16 lg:py-28 overflow-hidden border-b border-slate-100 bg-white">
-            {/* Watermark */}
-            <div className="absolute top-1/2 right-10 -translate-y-1/2 opacity-[0.015] pointer-events-none select-none">
-                <span className="text-[80px] md:text-[120px] lg:text-[180px] font-black font-heading text-[#001529] tracking-tighter leading-none uppercase">{watermark}</span>
+        <section className="relative py-16 lg:py-28 overflow-hidden border-b border-slate-100 bg-white group">
+            <div className="absolute inset-0 z-0 opacity-[0.03] bg-[radial-gradient(#0079ac_1px,transparent_1px)] [background-size:40px_40px]"></div>
+
+            {/* Watermark - Matches ProductsHero Style */}
+            <div className="absolute top-10 right-10 opacity-[0.02] group-hover:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none hidden lg:block">
+                <span className="text-[150px] font-black text-aureole-slate group-hover:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">{watermark}</span>
             </div>
 
             {/* Imprinted Effect Sketch in Background - Integrated yet compact */}
