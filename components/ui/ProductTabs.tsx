@@ -72,7 +72,7 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product }) => {
                         <div className={`transition-colors ${activeTab === tab.id ? 'text-aureole-cyan' : 'text-slate-400'}`}>
                             {tab.icon}
                         </div>
-                        <span className={`text-[10px] font-black uppercase tracking-[0.2em] transition-colors ${activeTab === tab.id ? 'text-aureole-slate' : 'text-slate-400'}`}>
+                        <span className={`text-[12px] font-bold tracking-wider transition-colors ${activeTab === tab.id ? 'text-aureole-slate' : 'text-slate-400'}`}>
                             {tab.label}
                         </span>
                         {activeTab === tab.id && (
@@ -88,10 +88,10 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product }) => {
                         <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
                             {tab.data.map((item: string, i: number) => (
                                 <div key={i} className="flex items-start gap-4">
-                                    <div className="flex-shrink-0 mt-0.5">
-                                        {getIconForItem(item, tab.itemIcon)}
+                                    <div className="flex-shrink-0 mt-2">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-aureole-cyan" />
                                     </div>
-                                    <span className="text-[11px] font-bold text-aureole-slate uppercase tracking-tight leading-relaxed">
+                                    <span className="text-[13px] font-bold text-aureole-slate tracking-tight leading-relaxed">
                                         {item}
                                     </span>
                                 </div>

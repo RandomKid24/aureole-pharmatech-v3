@@ -7,6 +7,7 @@ import { ArrowLeft } from 'lucide-react';
 import ProductHero from './ProductDetail/sections/ProductHero';
 import TechnicalDashboard from './ProductDetail/sections/TechnicalDashboard';
 import ProductTables from './ProductDetail/sections/ProductTables';
+import VariantSections from './ProductDetail/sections/VariantSections';
 import ProductEnquiry from './ProductDetail/sections/ProductEnquiry';
 
 const ProductDetail: React.FC = () => {
@@ -36,6 +37,7 @@ const ProductDetail: React.FC = () => {
             <ProductHero product={product} decodedName={decodedName} />
             <TechnicalDashboard product={product} decodedName={decodedName} />
             <ProductTables product={product} />
+            <VariantSections product={product} />
             <ProductEnquiry />
         </div>
     );

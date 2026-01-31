@@ -10,6 +10,7 @@ export interface ModelSpec {
 
 export interface TableCell {
     content: string;
+    image?: string;
     colSpan?: number;
     rowSpan?: number;
     isHeader?: boolean;
@@ -39,6 +40,7 @@ export interface ProductDetail {
     addOnsAttributes: string[];
     image?: string;
     images?: string[];
+    hideHeroImage?: boolean;
     imageCaptions?: string[];
     keyFeaturesHeading?: string;
     regularAttributesHeading?: string;
@@ -48,6 +50,24 @@ export interface ProductDetail {
         remark?: string;
     };
     complexTable?: ComplexTable;
+    variants?: Array<{
+        name: string;
+        description: string;
+        image: string;
+        isLogo?: boolean;
+        features?: string[];
+        specifications?: TechnicalSpec[];
+        table?: ComplexTable;
+        variantTable?: {
+            headers: string[];
+            rows: string[][];
+            remark?: string;
+        };
+    }>;
+    complianceBadge?: {
+        text: string;
+        image: string;
+    };
 }
 
 export interface SubType {

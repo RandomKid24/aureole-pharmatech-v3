@@ -43,30 +43,23 @@ export const PRODUCT_CATALOG: Category[] = [
                 id: "ultrasonic",
                 name: "Ultrasonic Baths",
                 products: [
-                    "Eco Series",
-                    "Prime Series",
-                    "Prime Series with Chilling",
-                    "Prime Series with Advance Controlling",
-                    "Prime Series with Heating & Shaking"
+                    "Ultrasonic Bath"
                 ]
             },
             {
                 id: "waterbaths",
                 name: "Water Baths",
                 products: [
-                    "Constant",
-                    "Circulating",
+                    "Water Bath",
                     "Steam Bath",
                     "Oil Bath",
-                    "Dry Bath",
-                    "Chilled Circulating Bath",
-                    "Refrigerated Circular Bath"
+                    "Dry Bath"
                 ]
             },
             {
                 id: "air-sampler",
                 name: "Air Sampler",
-                products: ["Basic Model", "21 CFR Model"]
+                products: ["Air Sampler"]
             },
             {
                 id: "ss-accessories",

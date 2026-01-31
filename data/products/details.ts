@@ -13,20 +13,12 @@ import { walkInHumidityChamber } from './stability/walk-in-humidity';
 import { walkInColdChamber } from './stability/walk-in-cold';
 import { walkInBodIncubator } from './stability/walk-in-bod';
 import { walkInDeepFreezer } from './stability/walk-in-deep-freezer';
-import { ultrasonicEco } from './tabletop/ultrasonic-eco';
-import { ultrasonicPrime } from './tabletop/ultrasonic-prime';
-import { ultrasonicPrimeChilling } from './tabletop/ultrasonic-prime-chilling';
-import { ultrasonicPrimeAdvance } from './tabletop/ultrasonic-prime-advance';
-import { ultrasonicPrimeShaking } from './tabletop/ultrasonic-prime-shaking';
-import { constantWaterBath } from './tabletop/constant-water-bath';
-import { circulatingWaterBath } from './tabletop/circulating-water-bath';
+import { ultrasonicBath } from './tabletop/ultrasonic-bath';
+import { waterBath } from './tabletop/water-bath';
 import { steamBath } from './tabletop/steam-bath';
 import { oilBath } from './tabletop/oil-bath';
 import { dryBath } from './tabletop/dry-bath';
-import { chilledCirculatingBath } from './tabletop/chilled-circulating-bath';
-import { refrigeratedCircularBath } from './tabletop/refrigerated-circular-bath';
-import { airSamplerBasic } from './tabletop/air-sampler-basic';
-import { airSampler21CFR } from './tabletop/air-sampler-21cfr';
+import { airSampler } from './tabletop/air-sampler';
 import { ssAccessories } from './tabletop/ss-accessories';
 import { cFrameSystem } from './furniture/c-frame-system';
 import { hFrameSystem } from './furniture/h-frame-system';
@@ -53,20 +45,12 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     "Walk In Cold Chamber": walkInColdChamber,
     "Walk In BOD Incubator": walkInBodIncubator,
     "Walk In Deep Freezer": walkInDeepFreezer,
-    "Eco Series": ultrasonicEco,
-    "Prime Series": ultrasonicPrime,
-    "Prime Series with Chilling": ultrasonicPrimeChilling,
-    "Prime Series with Advance Controlling": ultrasonicPrimeAdvance,
-    "Prime Series with Heating & Shaking": ultrasonicPrimeShaking,
-    "Constant": constantWaterBath,
-    "Circulating": circulatingWaterBath,
+    "Ultrasonic Bath": ultrasonicBath,
+    "Water Bath": waterBath,
     "Steam Bath": steamBath,
     "Oil Bath": oilBath,
     "Dry Bath": dryBath,
-    "Chilled Circulating Bath": chilledCirculatingBath,
-    "Refrigerated Circular Bath": refrigeratedCircularBath,
-    "Basic Model": airSamplerBasic,
-    "21 CFR Model": airSampler21CFR,
+    "Air Sampler": airSampler,
     "Stainless Steel Items & Accessories": ssAccessories,
     "C-Frame System": cFrameSystem,
     "H-Frame System": hFrameSystem,
