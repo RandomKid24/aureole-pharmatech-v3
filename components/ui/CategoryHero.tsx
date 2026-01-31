@@ -16,17 +16,18 @@ const CategoryHero: React.FC<CategoryHeroProps> = ({ title, subtitle, descriptio
             <div className="absolute inset-0 z-0 opacity-[0.03] bg-[radial-gradient(#0079ac_1px,transparent_1px)] [background-size:40px_40px]"></div>
 
             {/* Watermark - Matches ProductsHero Style */}
-            <div className="absolute top-10 right-10 opacity-[0.02] group-hover:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none hidden lg:block">
-                <span className="text-[150px] font-black text-aureole-slate group-hover:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">{watermark}</span>
+            {/* Watermark - Adjusted for full visibility */}
+            <div className="absolute top-1/2 -translate-y-1/2 right-0 opacity-[0.02] group-hover:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none hidden lg:block overflow-visible w-full text-right pr-10">
+                <span className="text-[10vw] font-black text-aureole-slate group-hover:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000 whitespace-nowrap">{watermark}</span>
             </div>
 
             {/* Imprinted Effect Sketch in Background - Integrated yet compact */}
             {image && (
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2/3 h-full opacity-[0.8] pointer-events-none select-none z-0 overflow-hidden hidden lg:block">
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-[90%] opacity-[0.8] pointer-events-none select-none z-0 overflow-visible hidden lg:block">
                     <img
                         src={image}
                         alt=""
-                        className="w-full h-full object-contain object-right scale-[1.7] transform translate-x-4"
+                        className="w-full h-full object-contain object-center scale-100"
                     />
                 </div>
             )}
@@ -41,7 +42,7 @@ const CategoryHero: React.FC<CategoryHeroProps> = ({ title, subtitle, descriptio
                     )}
 
                     {/* Balanced Prominent Title */}
-                    <h1 className="text-4xl sm:text-6xl lg:text-[85px] font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-[0.9] mb-6 sm:mb-10">
+                    <h1 className="text-3xl sm:text-5xl lg:text-[72px] font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-[0.9] mb-6 sm:mb-10">
                         {title} <br /> <span className="uppercase tracking-normal">{subtitle}.</span>
                     </h1>
 
