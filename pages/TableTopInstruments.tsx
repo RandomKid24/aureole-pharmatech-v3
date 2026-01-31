@@ -19,12 +19,16 @@ const TableTopInstruments: React.FC = () => {
             <CategoryHero
                 title="TABLE TOP"
                 subtitle="Instruments"
-                description={tabletopCategory.description}
-                watermark="TABLE TOP"
+                watermark="INSTRUMENTS"
+                image="/assets/sketches/table-top-sketch.png"
+                showAccent={false}
             />
             <KeyDetailsAccordion
                 navItems={TABLETOP_NAV_ITEMS}
                 sections={TABLETOP_SECTIONS}
+                accentLabel="System Performance"
+                title="W.W.W"
+                accentTitle="Insights"
             />
             <CategoryProductList subTypes={tabletopCategory.subTypes} />
         </div>

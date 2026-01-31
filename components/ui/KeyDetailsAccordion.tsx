@@ -22,70 +22,90 @@ interface KeyDetailsAccordionProps {
 const KeyDetailsAccordion: React.FC<KeyDetailsAccordionProps> = ({
     navItems,
     sections,
-    accentLabel = "TECHNICAL ADVANTAGES",
-    title = "KEY",
-    accentTitle = "Highlights"
+    title = "Quick",
+    accentTitle = "Overview"
 }) => {
     const [activeSection, setActiveSection] = useState(0);
 
     return (
-        <section className="py-20 bg-white border-y border-slate-100 overflow-hidden">
+        <section className="py-20 bg-white border-y border-slate-100">
             <div className="container mx-auto px-6 lg:px-24">
-                {/* Header matching CategoryProductList Style */}
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-16">
-                    <div className="max-w-4xl">
-                        <div className="flex items-center gap-4 mb-6">
-                            <span className="w-12 h-[2px] bg-aureole-blue"></span>
-                            <h2 className="text-[12px] font-black uppercase tracking-[0.4em] text-aureole-blue">{accentLabel}</h2>
-                        </div>
-                        <h2 className="text-5xl lg:text-7xl font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-none">
-                            {title} <span className="text-aureole-cyan">{accentTitle}.</span>
-                        </h2>
-                    </div>
+                {/* Header */}
+                <div className="max-w-4xl mb-12 text-center lg:text-left">
+                    <h2 className="text-3xl lg:text-4xl font-extrabold font-heading text-[#001529] tracking-tight leading-none">
+                        {title} <span className="text-aureole-cyan font-bold">{accentTitle}.</span>
+                    </h2>
+                </div>
 
-                    {/* Compact Category Selector */}
-                    <div className="flex bg-slate-50 p-1 rounded-sm border border-slate-100 self-start lg:mb-2">
+                <div className="flex flex-col lg:flex-row items-stretch gap-6 lg:gap-8">
+                    {/* Navigation - Large Vertical Sidebar, matching info box height */}
+                    <div className="lg:w-2/5 flex flex-col gap-4">
                         {navItems.map((item, idx) => (
                             <button
                                 key={idx}
                                 onClick={() => setActiveSection(idx)}
-                                className={`px-6 py-2.5 rounded-sm transition-all duration-300 flex items-center gap-2.5 ${activeSection === idx
-                                    ? 'bg-white shadow-[0_2px_10px_rgba(0,0,0,0.05)] text-aureole-blue ring-1 ring-slate-100'
-                                    : 'text-slate-400 hover:text-slate-600'
+                                className={`group flex-1 flex flex-col justify-center p-8 text-left border-l-[6px] transition-all duration-300 min-h-[120px] ${activeSection === idx
+                                    ? 'bg-slate-50 border-aureole-cyan shadow-sm'
+                                    : 'bg-transparent border-transparent grayscale opacity-50 hover:opacity-100 hover:grayscale-0 hover:bg-slate-50/50'
                                     }`}
                             >
-                                <div className={`transition-colors duration-300 ${activeSection === idx ? 'text-aureole-cyan' : 'text-slate-300'}`}>
-                                    {React.cloneElement(item.icon as React.ReactElement, { size: 14 })}
+                                <div className="flex items-center gap-6">
+                                    <div className={`w-16 h-16 rounded-sm flex items-center justify-center transition-all duration-300 ${activeSection === idx ? 'bg-white shadow-sm text-aureole-blue scale-110' : 'bg-slate-50 text-slate-400'}`}>
+                                        {React.cloneElement(item.icon as React.ReactElement, { size: 28 })}
+                                    </div>
+                                    <div>
+                                        <h4 className={`text-3xl font-[1000] uppercase tracking-tighter leading-none mb-1.5 transition-colors ${activeSection === idx ? 'text-[#001529]' : 'text-slate-500'}`}>
+                                            {item.title}
+                                        </h4>
+                                        <p className={`text-[11px] font-black uppercase tracking-[0.2em] transition-colors ${activeSection === idx ? 'text-aureole-cyan' : 'text-slate-400'}`}>
+                                            {item.subtitle}
+                                        </p>
+                                    </div>
                                 </div>
-                                <span className="text-[10px] font-black uppercase tracking-widest">{item.title}</span>
                             </button>
                         ))}
                     </div>
-                </div>
 
-                {/* Dense Grid - Compressed Layout */}
-                <div key={activeSection} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 animate-in fade-in slide-in-from-bottom-2 duration-500">
-                    {sections[activeSection].items.map((item, i) => (
-                        <div key={i} className="group p-5 bg-white border border-slate-50 hover:bg-slate-50 transition-all duration-300 flex items-start gap-4">
-                            <div className="w-6 h-6 flex-shrink-0 bg-slate-100/50 rounded-sm flex items-center justify-center text-[10px] font-black text-slate-400 group-hover:bg-aureole-cyan/10 group-hover:text-aureole-cyan transition-colors">
-                                {i + 1}
+                    {/* Unified Content Sheet - Compact Height */}
+                    <div className="lg:w-3/5">
+                        <div key={activeSection} className="h-full bg-slate-50 border border-slate-100 p-8 lg:p-12 shadow-sm relative overflow-hidden animate-in fade-in duration-500 min-h-[400px]">
+                            {/* Technical watermark background */}
+                            <div className="absolute top-4 right-4 text-[90px] font-black text-slate-200/40 select-none pointer-events-none uppercase tracking-tighter italic opacity-40">
+                                {navItems[activeSection].title}
                             </div>
-                            <p className="text-[14px] font-bold text-[#001529]/80 tracking-tight leading-snug group-hover:text-aureole-blue transition-colors">
-                                {item}
-                            </p>
-                        </div>
-                    ))}
-                </div>
 
-                {/* Status Indicator */}
-                <div className="mt-10 pt-6 border-t border-slate-50 flex items-center justify-between opacity-30">
-                    <div className="flex items-center gap-4">
-                        <div className="flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 rounded-full bg-aureole-cyan" />
-                            <span className="text-[8px] font-black text-slate-500 uppercase tracking-widest leading-none">Aureole Information Matrix // {navItems[activeSection].title}</span>
+                            <div className="relative z-10 h-full flex flex-col">
+                                <div className="flex items-center gap-5 mb-8 border-b border-slate-200/60 pb-6">
+                                    <div className="w-12 h-12 bg-white flex items-center justify-center text-aureole-blue shadow-sm border border-slate-100">
+                                        {React.cloneElement(navItems[activeSection].icon as React.ReactElement, { size: 22 })}
+                                    </div>
+                                    <div>
+                                        <h3 className="text-2xl font-[1000] text-[#001529] uppercase tracking-tight">{navItems[activeSection].title}</h3>
+                                    </div>
+                                </div>
+
+                                <div className="grid grid-cols-1 gap-y-4 overflow-hidden">
+                                    {/* Limit points to make it more compact */}
+                                    {sections[activeSection].items.slice(0, 8).map((item, i) => (
+                                        <div key={i} className="flex items-start gap-4 group">
+                                            <div className="mt-1.5 w-1.5 h-1.5 rounded-full border-2 border-aureole-cyan flex-shrink-0 group-hover:bg-aureole-cyan transition-all" />
+                                            <p className="text-[15px] font-bold text-slate-600 leading-snug group-hover:text-[#001529] transition-colors tracking-tight">
+                                                {item}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <div className="mt-auto pt-8 border-t border-slate-200/60 flex justify-between items-center opacity-30">
+                                    <div className="flex items-center gap-2">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-aureole-cyan" />
+                                        <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest leading-none">Aureole Insights</span>
+                                    </div>
+                                    <span className="text-[9px] font-black text-slate-300 uppercase tracking-[0.3em]">REF-2026</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <span className="text-[8px] font-black text-slate-300 uppercase tracking-[0.3em]">TS-REF-B26</span>
                 </div>
             </div>
         </section>

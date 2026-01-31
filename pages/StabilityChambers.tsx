@@ -17,14 +17,18 @@ const StabilityChambers: React.FC = () => {
     return (
         <div className="pt-24 min-h-screen bg-white">
             <CategoryHero
-                title="STABILITY TESTING"
-                subtitle="Equipments"
-                description={stabilityCategory.description}
-                watermark="TESTING"
+                title="precision ENVIRONMENTAL"
+                subtitle={<span className="text-aureole-blue">CONTROL</span>}
+                watermark="STABILITY"
+                image="/assets/sketches/stablitiy-chamber-hero-sketech.png"
+                showAccent={false}
             />
             <KeyDetailsAccordion
                 navItems={STABILITY_NAV_ITEMS}
                 sections={STABILITY_SECTIONS}
+                accentLabel="Operational Matrix"
+                title="W.W.W"
+                accentTitle="Insights"
             />
             <CategoryProductList subTypes={stabilityCategory.subTypes} />
         </div>
