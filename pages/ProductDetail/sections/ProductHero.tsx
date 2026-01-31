@@ -127,7 +127,7 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
                                     </div>
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
-                                        {product.specifications.map((spec: any, i: number) => (
+                                        {product.specifications.filter((spec: any) => spec.parameter !== 'Power Supply').map((spec: any, i: number) => (
                                             <div key={i} className="flex gap-4 group">
                                                 <div className="flex-shrink-0 mt-1 text-aureole-blue">
                                                     {React.cloneElement(getSpecIcon(spec.parameter) as React.ReactElement, { size: 18 })}
