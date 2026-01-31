@@ -87,11 +87,11 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product }) => {
                     <div key={tab.id} className={`${activeTab === tab.id ? 'block animate-in fade-in duration-500' : 'hidden'}`}>
                         <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
                             {tab.data.map((item: string, i: number) => (
-                                <div key={i} className="flex items-start gap-4 group">
-                                    <div className="flex-shrink-0 mt-0.5 transition-transform group-hover:scale-110">
+                                <div key={i} className="flex items-start gap-4">
+                                    <div className="flex-shrink-0 mt-0.5">
                                         {getIconForItem(item, tab.itemIcon)}
                                     </div>
-                                    <span className="text-[11px] font-bold text-aureole-slate uppercase tracking-tight leading-relaxed group-hover:text-aureole-blue transition-colors">
+                                    <span className="text-[11px] font-bold text-aureole-slate uppercase tracking-tight leading-relaxed">
                                         {item}
                                     </span>
                                 </div>
