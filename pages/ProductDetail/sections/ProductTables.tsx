@@ -11,9 +11,9 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product }) => {
         <>
             {/* Models and Dimensions Table */}
             {product.models && product.models.length > 0 && (
-                <section className="py-16 bg-white">
+                <section className="py-8 bg-white">
                     <div className="container mx-auto px-6 lg:px-24">
-                        <div className="flex items-center gap-4 mb-16">
+                        <div className="flex items-center gap-4 mb-8">
                             <Box className="text-aureole-blue" size={18} />
                             <h3 className="text-[13px] font-bold text-slate-900">Models & Dimensions</h3>
                         </div>
@@ -66,9 +66,9 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product }) => {
 
             {/* Custom Variant Table */}
             {product.variantTable && (
-                <section className="py-16 bg-white">
+                <section className="py-8 bg-white">
                     <div className="container mx-auto px-6 lg:px-24">
-                        <div className="flex items-center gap-4 mb-16">
+                        <div className="flex items-center gap-4 mb-8">
                             <Box className="text-aureole-blue" size={18} />
                             <h3 className="text-[13px] font-bold text-slate-900">Technical Specifications & Models</h3>
                         </div>
@@ -121,9 +121,9 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product }) => {
 
             {/* Complex Multi-level Table */}
             {product.complexTable && (
-                <section className="py-16 bg-white">
+                <section className="py-8 bg-white">
                     <div className="container mx-auto px-6 lg:px-24">
-                        <div className="flex items-center gap-4 mb-16">
+                        <div className="flex items-center gap-4 mb-8">
                             <Box className="text-aureole-blue" size={18} />
                             <h3 className="text-[13px] font-bold text-slate-900">Technical Specifications & Models</h3>
                         </div>

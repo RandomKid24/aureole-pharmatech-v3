@@ -39,7 +39,7 @@ import { storageCabinets } from './furniture/storage-cabinets';
 import { labAccessories } from './furniture/lab-accessories';
 
 export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
-    "Humidity Chamber / Stability Chamber": humidityStabilityChamber,
+    "Humidity Chamber": humidityStabilityChamber,
     "BOD Incubator": bodIncubator,
     "Cold Chamber": coldChamber,
     "Deep Freezer (upto -20°C / upto -40°C)": deepFreezer,

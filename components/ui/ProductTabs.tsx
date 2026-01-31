@@ -48,7 +48,7 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product }) => {
         { id: 'features', label: product.keyFeaturesHeading || "Key Features", icon: <ShieldCheck size={14} />, data: product.keyFeatures, itemIcon: <CheckCircle2 size={12} className="text-aureole-cyan" /> },
         { id: 'attributes', label: product.regularAttributesHeading || "Regular Attributes", icon: <Database size={14} />, data: product.regularAttributes, itemIcon: <Cpu size={12} className="text-aureole-blue" /> },
         { id: 'addons', label: "Add-on Options", icon: <Layers size={14} />, data: product.addOnsAttributes, itemIcon: <PlusCircle size={12} className="text-aureole-cyan" /> }
-    ].filter(t => t.data && t.data.length > 0);
+    ].filter(t => t.data && t.data.length > 0 && t.label !== "Industries we serve");
 
     const [activeTab, setActiveTab] = useState(tabs[0]?.id);
 
