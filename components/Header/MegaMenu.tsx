@@ -65,18 +65,21 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
                         <div className="grid grid-cols-3 gap-x-10 gap-y-3">
                             {cat.subTypes.map((sub) => (
                                 <React.Fragment key={sub.id}>
-                                    {sub.products.map((pName) => (
-                                        <Link
-                                            key={pName}
-                                            to={`/products/${slugify(pName)}`}
-                                            className="text-[10px] font-bold text-slate-500 hover:text-aureole-blue transition-all uppercase tracking-wide flex items-center gap-2 group/item truncate"
-                                            title={pName}
-                                            onClick={onClose}
-                                        >
-                                            <div className="w-1 h-1 rounded-full bg-slate-200 group-hover/item:bg-aureole-cyan transition-colors flex-shrink-0" />
-                                            <span className="truncate">{pName}</span>
-                                        </Link>
-                                    ))}
+                                    {sub.products.map((pName) => {
+                                        const linkTarget = cat.id === 'furniture' ? `/products/laboratory-furniture#${slugify(pName)}` : `/products/${slugify(pName)}`;
+                                        return (
+                                            <Link
+                                                key={pName}
+                                                to={linkTarget}
+                                                className="text-[10px] font-bold text-slate-500 hover:text-aureole-blue transition-all uppercase tracking-wide flex items-center gap-2 group/item truncate"
+                                                title={pName}
+                                                onClick={onClose}
+                                            >
+                                                <div className="w-1 h-1 rounded-full bg-slate-200 group-hover/item:bg-aureole-cyan transition-colors flex-shrink-0" />
+                                                <span className="truncate">{pName}</span>
+                                            </Link>
+                                        );
+                                    })}
                                 </React.Fragment>
                             ))}
                         </div>

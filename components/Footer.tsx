@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
                <div>
                   <h4 className="text-[11px] font-black uppercase tracking-[0.3em] mb-10 text-aureole-blue">Key Products</h4>
                   <ul className="space-y-5">
-                     {['Walk-in Chambers', 'Air Samplers', 'Stability Chambers', 'Photostability', 'Cold Storage'].map(item => (
+                     {['Walk-in Chambers', 'Air Samplers', 'Stability Testing Equipments', 'Photostability', 'Cold Storage'].map(item => (
                         <li key={item}>
                            <a href="#" className="text-slate-400 font-bold tracking-[0.15em] text-[10px] hover:text-white transition-colors flex items-center gap-3 group">
                               <span className="w-1.5 h-[1px] bg-slate-700 group-hover:w-4 group-hover:bg-aureole-cyan transition-all"></span> {item}
@@ -131,10 +131,6 @@ const Footer: React.FC = () => {
                      <div className="flex items-center gap-2 opacity-40">
                         <Shield className="w-3 h-3 text-aureole-blue" />
                         <span className="text-[8px] font-black uppercase tracking-widest">ISO 9001:2015</span>
-                     </div>
-                     <div className="flex items-center gap-2 opacity-40">
-                        <Globe className="w-3 h-3 text-aureole-blue" />
-                        <span className="text-[8px] font-black uppercase tracking-widest">Validated Unit</span>
                      </div>
                   </div>
                </div>

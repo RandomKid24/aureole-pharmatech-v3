@@ -3,7 +3,7 @@ import { Category } from './types';
 export const PRODUCT_CATALOG: Category[] = [
     {
         id: "stability",
-        title: "STABILITY CHAMBERS",
+        title: "STABILITY TESTING EQUIPMENTS",
         description: "Precision-engineered environmental control systems for accurate temperature and humidity monitoring.",
         subTypes: [
             {

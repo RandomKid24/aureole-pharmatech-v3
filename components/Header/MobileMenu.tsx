@@ -74,16 +74,19 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
                                                                 <h5 className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-2">{sub.name}</h5>
                                                             )}
                                                             <div className="flex flex-col gap-2 pl-2">
-                                                                {sub.products.map(pName => (
-                                                                    <Link
-                                                                        key={pName}
-                                                                        to={`/products/${slugify(pName)}`}
-                                                                        className="text-[11px] font-black text-slate-600 hover:text-aureole-cyan uppercase tracking-wide truncate"
-                                                                        onClick={onClose}
-                                                                    >
-                                                                        {pName}
-                                                                    </Link>
-                                                                ))}
+                                                                {sub.products.map(pName => {
+                                                                    const linkTarget = cat.id === 'furniture' ? `/products/laboratory-furniture#${slugify(pName)}` : `/products/${slugify(pName)}`;
+                                                                    return (
+                                                                        <Link
+                                                                            key={pName}
+                                                                            to={linkTarget}
+                                                                            className="text-[11px] font-black text-slate-600 hover:text-aureole-cyan uppercase tracking-wide truncate"
+                                                                            onClick={onClose}
+                                                                        >
+                                                                            {pName}
+                                                                        </Link>
+                                                                    );
+                                                                })}
                                                             </div>
                                                         </div>
                                                     ))}

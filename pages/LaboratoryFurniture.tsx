@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { PRODUCT_CATALOG } from '../data/products';
 import CategoryHero from '../components/ui/CategoryHero';
-import CategoryProductList from '../components/ui/CategoryProductList';
+import FurnitureProductsGrid from './LaboratoryFurniture/sections/FurnitureProductsGrid';
 
 const LaboratoryFurniture: React.FC = () => {
     useEffect(() => {
@@ -21,7 +21,7 @@ const LaboratoryFurniture: React.FC = () => {
                 description={furnitureCategory.description}
                 watermark="FURNITURE"
             />
-            <CategoryProductList subTypes={furnitureCategory.subTypes} />
+            <FurnitureProductsGrid />
         </div>
     );
 };

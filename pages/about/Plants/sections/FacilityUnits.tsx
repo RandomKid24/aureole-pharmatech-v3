@@ -13,7 +13,7 @@ const FacilityUnits: React.FC<FacilityUnitsProps> = ({ onImageClick }) => {
             unit: "Unit 01",
             title: "Standalone Chamber Manufacturing Hub",
             location: "Malegaon MIDC, Sinnar, Nashik, Maharashtra",
-            desc: "Our primary production facility dedicated to high-precision standalone stability chambers. This unit serves as the core hub for engineering environmental testing systems that meet global regulatory standards.",
+            desc: "Our primary production facility dedicated to high-precision standalone stability testing equipments. This unit serves as the core hub for engineering environmental testing systems that meet global regulatory standards.",
             image: "/plants/IMG_8943.jpg",
             features: []
         },

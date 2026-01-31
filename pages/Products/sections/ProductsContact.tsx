@@ -23,7 +23,7 @@ const ProductsContact: React.FC = () => {
 
                     <div className="lg:col-span-5 space-y-12">
                         <p className="text-slate-500 text-lg font-medium leading-relaxed max-w-lg">
-                            Whether you need a custom-built walk-in stability chamber or a fleet of laboratory instruments, our clinical engineering team provides end-to-step consultation.
+                            Whether you need a custom-built walk-in stability testing equipment or a fleet of laboratory instruments, our clinical engineering team provides end-to-step consultation.
                         </p>
 
                         <div className="space-y-6">

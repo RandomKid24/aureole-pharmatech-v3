@@ -9,7 +9,7 @@ const Ventures: React.FC = () => {
             year: "1999",
             name: "Mack Pharmatech",
             sub: "THE FOUNDATION (LEGACY)",
-            desc: "The initial engineering milestone that sparked a revolution in stability chamber technology. This foundational period laid the technical groundwork before transitioning to the specialized Aureole brand.",
+            desc: "The initial engineering milestone that sparked a revolution in stability testing equipment technology. This foundational period laid the technical groundwork before transitioning to the specialized Aureole brand.",
             url: "http://mackpharmatech.com/",
             logo: "/ventures-logos/mack-pharmatech.png",
             isLegacy: true
@@ -42,7 +42,7 @@ const Ventures: React.FC = () => {
             year: "2021",
             name: "Aureole Pharma",
             sub: "",
-            desc: "The current flagship brand driving global innovation in environmental testing. Specializing in high-precision stability chambers and advanced laboratory instrumentation.",
+            desc: "The current flagship brand driving global innovation in environmental testing. Specializing in high-precision stability testing equipments and advanced laboratory instrumentation.",
             logo: "/aureole-logo.png",
             isCurrent: true
         },

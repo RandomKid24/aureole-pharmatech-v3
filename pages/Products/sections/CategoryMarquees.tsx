@@ -18,10 +18,14 @@ const ProductMarquee = ({ pNames, animationClass }: { pNames: string[], animatio
                     const productData = PRODUCT_DETAILS[pName];
                     const productImage = productData?.image || (productData?.images && productData.images[0]);
 
+                    // Find if this product belongs to furniture category
+                    const isFurniture = PRODUCT_CATALOG.find(cat => cat.id === 'furniture')?.subTypes.some(sub => sub.products.includes(pName));
+                    const linkTarget = isFurniture ? `/products/laboratory-furniture#${slugify(pName)}` : `/products/${slugify(pName)}`;
+
                     return (
                         <Link
                             key={idx}
-                            to={`/products/${slugify(pName)}`}
+                            to={linkTarget}
                             className="flex items-center gap-6 p-6 bg-white border border-slate-200 hover:border-aureole-cyan hover:shadow-xl transition-all duration-300 w-[280px] sm:w-[400px] flex-shrink-0 group/card"
                         >
                             <div className="w-20 h-20 sm:w-28 sm:h-28 flex-shrink-0 bg-white rounded-sm overflow-hidden p-2 border border-slate-100 group-hover/card:border-aureole-cyan/30 group-hover/card:scale-105 transition-all duration-300">
@@ -38,7 +42,9 @@ const ProductMarquee = ({ pNames, animationClass }: { pNames: string[], animatio
                                 </span>
                                 <div className="mt-4 flex items-center gap-2 opacity-100 transition-opacity">
                                     <div className="w-1 h-1 bg-aureole-cyan rounded-full"></div>
-                                    <span className="text-[10px] font-bold text-aureole-blue">View Technical Sheet</span>
+                                    <span className="text-[10px] font-bold text-aureole-blue">
+                                        {isFurniture ? 'View Details' : 'View Technical Sheet'}
+                                    </span>
                                 </div>
                             </div>
                         </Link>

@@ -64,7 +64,7 @@ const OurUnitsContact: React.FC = () => {
                   <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest block mb-1">Product</label>
                   <select className="w-full bg-transparent border-b-2 border-slate-300 py-2 text-[11px] font-black uppercase tracking-widest text-[#001529] appearance-none focus:outline-none focus:border-aureole-cyan transition-all cursor-pointer">
                     <option>SELECT CATEGORY</option>
-                    <option>STABILITY CHAMBERS</option>
+                    <option>STABILITY TESTING EQUIPMENTS</option>
                     <option>PHOTOSTABILITY</option>
                     <option>COLD ROOMS</option>
                   </select>

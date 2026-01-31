@@ -17,10 +17,10 @@ const StabilityChambers: React.FC = () => {
     return (
         <div className="pt-24 min-h-screen bg-white">
             <CategoryHero
-                title="STABILITY"
-                subtitle="Chambers"
+                title="STABILITY TESTING"
+                subtitle="Equipments"
                 description={stabilityCategory.description}
-                watermark="CHAMBERS"
+                watermark="TESTING"
             />
             <KeyDetailsAccordion
                 navItems={STABILITY_NAV_ITEMS}
