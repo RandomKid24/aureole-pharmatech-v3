@@ -4,6 +4,7 @@ import SoftwareHero from './Software/sections/SoftwareHero';
 import GeneralSoftwareInfo from './Software/sections/GeneralSoftwareInfo';
 import ComplianceFeatures from './Software/sections/ComplianceFeatures';
 import MonitoringControl from './Software/sections/MonitoringControl';
+import DataReporting from './Software/sections/DataReporting';
 import SoftwareFaq from './Software/sections/SoftwareFaq';
 
 const Software: React.FC = () => {
@@ -17,7 +18,7 @@ const Software: React.FC = () => {
             <GeneralSoftwareInfo />
             <ComplianceFeatures />
             <MonitoringControl />
-            <SoftwareFaq />
+            <DataReporting />
         </div>
     );
 };

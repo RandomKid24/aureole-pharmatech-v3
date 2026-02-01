@@ -14,23 +14,27 @@ const MonitoringControl: React.FC = () => {
                         <div>
                             <div className="flex items-center gap-4 mb-6">
                                 <Monitor className="w-8 h-8 text-aureole-cyan" />
-                                <h3 className="text-3xl lg:text-5xl font-black font-heading uppercase tracking-tighter text-[#001529] leading-[0.9]">ADVANCED MONITORING <br /> & CONTROL</h3>
+                                <h3 className="text-3xl lg:text-5xl font-black font-heading tracking-tighter text-[#001529] leading-[0.9]">Advanced Monitoring <br /> & Control</h3>
                             </div>
                             <p className="text-[15px] font-medium text-slate-500 tracking-tight leading-relaxed text-left">
-                                The software enables precise monitoring and control of critical parameters such as temperature, humidity, pressure, and alarms. Real-time data visualization and automated alerts help ensure consistent environmental conditions and rapid response to deviations.
+                                The software enables precise monitoring and control with a live equipment status dashboard featuring scrolling notifications. It supports multiple equipment configurations, real-time display of connected/disconnected chambers, and provides settable SMS & email alerts for immediate deviation response.
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8">
                             {[
-                                { text: "STABILITY STUDIES", icon: <Activity className="w-4 h-4" /> },
-                                { text: "QUALITY CONTROL PROCESSES", icon: <ShieldCheck className="w-4 h-4" /> },
-                                { text: "LABORATORY AND CLEANROOM MONITORING", icon: <Eye className="w-4 h-4" /> },
-                                { text: "EQUIPMENT PERFORMANCE TRACKING", icon: <Settings className="w-4 h-4" /> }
+                                { text: "Multi-Chamber Configuration", icon: <Activity className="w-4 h-4" /> },
+                                { text: "Door Open/Close Control", icon: <Settings className="w-4 h-4" /> },
+                                { text: "Secure PID Parameter Access", icon: <ShieldCheck className="w-4 h-4" /> },
+                                { text: "RTC Synchronization (Auto/Manual)", icon: <Activity className="w-4 h-4" /> },
+                                { text: "Individual Sensor Alarm Logging", icon: <Eye className="w-4 h-4" /> },
+                                { text: "Bulk Alarm Acknowledgment", icon: <ShieldCheck className="w-4 h-4" /> },
+                                { text: "SMS & Email Alerts", icon: <Activity className="w-4 h-4" /> },
+                                { text: "Real-Time PLC Integration", icon: <Settings className="w-4 h-4" /> }
                             ].map((item, idx) => (
                                 <div key={idx} className="flex items-center gap-3 p-4 bg-white border border-slate-100">
                                     <div className="text-aureole-blue">{item.icon}</div>
-                                    <span className="text-[12px] font-black uppercase tracking-wide text-[#001529]">{item.text}</span>
+                                    <span className="text-[12px] font-black tracking-wide text-[#001529]">{item.text}</span>
                                 </div>
                             ))}
                         </div>
