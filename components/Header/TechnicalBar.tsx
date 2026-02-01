@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Phone, Mail, Linkedin, Facebook, Twitter } from 'lucide-react';
+import { Phone, Mail, Linkedin, Instagram } from 'lucide-react';
 
 interface TechnicalBarProps {
     isScrolled: boolean;
@@ -21,9 +21,12 @@ const TechnicalBar: React.FC<TechnicalBarProps> = ({ isScrolled }) => {
                 </div>
                 <div className="flex items-center gap-8">
                     <div className="flex gap-4">
-                        <a href="#" className="hover:text-aureole-cyan transition-colors"><Linkedin className="w-3.5 h-3.5" /></a>
-                        <a href="#" className="hover:text-aureole-cyan transition-colors"><Facebook className="w-3.5 h-3.5" /></a>
-                        <a href="#" className="hover:text-aureole-cyan transition-colors"><Twitter className="w-3.5 h-3.5" /></a>
+                        <a href="https://www.linkedin.com/company/aureole-pharmatech/" target="_blank" rel="noopener noreferrer" className="hover:text-aureole-cyan transition-colors">
+                            <Linkedin className="w-3.5 h-3.5" />
+                        </a>
+                        <a href="https://www.instagram.com/aureole_pharmatech" target="_blank" rel="noopener noreferrer" className="hover:text-aureole-cyan transition-colors">
+                            <Instagram className="w-3.5 h-3.5" />
+                        </a>
                     </div>
                 </div>
             </div>

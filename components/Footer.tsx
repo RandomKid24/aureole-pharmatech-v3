@@ -43,9 +43,12 @@ const Footer: React.FC = () => {
                      Precision engineering leaders in environmental stabilization and thermal control solutions for global pharmaceutical manufacturing.
                   </p>
                   <div className="flex gap-3">
-                     {[Linkedin, Twitter, Facebook, Instagram].map((Icon, idx) => (
-                        <a key={idx} href="#" className="w-12 h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center hover:bg-aureole-cyan hover:border-aureole-cyan transition-all">
-                           <Icon className="w-4 h-4" />
+                     {[
+                        { Icon: Linkedin, href: "https://www.linkedin.com/company/aureole-pharmatech/" },
+                        { Icon: Instagram, href: "https://www.instagram.com/aureole_pharmatech" }
+                     ].map((social, idx) => (
+                        <a key={idx} href={social.href} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center hover:bg-aureole-cyan hover:border-aureole-cyan transition-all">
+                           <social.Icon className="w-4 h-4" />
                         </a>
                      ))}
                   </div>

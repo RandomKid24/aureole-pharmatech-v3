@@ -1,6 +1,6 @@
 
 import React, { useState, useRef } from 'react';
-import { Linkedin, IdCard, Users2, ShieldCheck, Cpu, Globe, ChevronDown, Plus } from 'lucide-react';
+import { Linkedin, IdCard, Users2, ShieldCheck, Cpu, Globe, ChevronDown, Plus, Instagram } from 'lucide-react';
 
 const TeamArchitecture: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -10,27 +10,32 @@ const TeamArchitecture: React.FC = () => {
         {
             name: "Bipin Badgujar",
             role: "Chief Executive Officer",
-            img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800"
+            img: "/about/bipin-badgujar.jpg",
+            linkedin: "https://www.linkedin.com/in/bipin-a-badgujar-5a8b5b16/"
         },
         {
             name: "Jitendra Tajanpure",
             role: "VP Finance & Accounts",
-            img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800"
+            img: "/about/jitendra-tajanpure.jpeg",
+            linkedin: "https://www.linkedin.com/in/jitendra-tajanpure-6a0937296/"
         },
         {
             name: "Harshal Ghoge",
             role: "VP - Marketing & Projects",
-            img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=800"
+            img: "/about/harshal-ghoge.jpg",
+            linkedin: "https://www.linkedin.com/in/harshal-ghoge-553a4735/"
         },
         {
             name: "Sandeep Kale",
             role: "VP - Strategy & Biz Dev",
-            img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=800"
+            img: "/about/sandeep-kale.jpg",
+            linkedin: "#"
         },
         {
             name: "Shubham Badgujar",
             role: "Manager - IBD",
-            img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=800"
+            img: "/about/shubham-badgujar.jpg",
+            linkedin: "https://www.linkedin.com/in/shubham-badgujar-0025b7169/"
         }
     ];
 
@@ -150,13 +155,17 @@ const TeamArchitecture: React.FC = () => {
                                 <div className="relative z-10 flex justify-center">
                                     <div className="group relative bg-white border border-slate-200 p-6 sm:p-8 w-full max-w-xl flex flex-col sm:flex-row gap-8 hover:border-aureole-blue transition-all duration-500 overflow-hidden shadow-xl shadow-slate-200/50">
                                         <div className="absolute top-0 right-0 flex">
-                                            <a href="#" className="w-12 h-12 flex items-center justify-center bg-slate-50 border-b border-l border-slate-200 hover:bg-aureole-blue text-[#001529] hover:text-white transition-all">
+                                            <a href={coreTeam[0].linkedin} target="_blank" rel="noopener noreferrer" className="w-12 h-12 flex items-center justify-center bg-slate-50 border-b border-l border-slate-200 hover:bg-aureole-blue text-[#001529] hover:text-white transition-all">
                                                 <Linkedin size={18} />
                                             </a>
                                         </div>
 
-                                        <div className="w-full sm:w-1/3 aspect-[3/4] overflow-hidden border border-slate-100 shadow-inner">
-                                            <img src={coreTeam[0].img} alt={coreTeam[0].name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+                                        <div className="w-full sm:w-[240px] aspect-[4/5] overflow-hidden border border-slate-100 shadow-inner bg-slate-50">
+                                            <img
+                                                src={coreTeam[0].img}
+                                                alt={coreTeam[0].name}
+                                                className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                                            />
                                         </div>
                                         <div className="w-full sm:w-2/3 flex flex-col pt-2">
                                             <div className="flex items-center gap-3 mb-4">
@@ -180,10 +189,14 @@ const TeamArchitecture: React.FC = () => {
                                                 {/* Connecting Stub */}
                                                 <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-px h-10 bg-slate-200 hidden lg:block"></div>
 
-                                                <div className="aspect-square mb-6 overflow-hidden border border-slate-100 shadow-sm relative group/img">
-                                                    <img src={member.img} alt={member.name} className="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700" />
+                                                <div className="aspect-[4/5] mb-6 overflow-hidden border border-slate-100 shadow-sm relative group/img bg-slate-50">
+                                                    <img
+                                                        src={member.img}
+                                                        alt={member.name}
+                                                        className="w-full h-full object-cover object-top grayscale group-hover/img:grayscale-0 transition-all duration-700 hover:scale-105"
+                                                    />
                                                     <div className="absolute inset-0 bg-aureole-blue/10 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center gap-4">
-                                                        <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-aureole-blue hover:bg-aureole-blue hover:text-white transition-all shadow-md">
+                                                        <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-aureole-blue hover:bg-aureole-blue hover:text-white transition-all shadow-md">
                                                             <Linkedin size={16} />
                                                         </a>
                                                         <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-aureole-cyan hover:bg-aureole-cyan hover:text-white transition-all shadow-md">

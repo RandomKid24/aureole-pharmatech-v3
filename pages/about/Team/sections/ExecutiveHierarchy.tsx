@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Linkedin, IdCard } from 'lucide-react';
+import { Linkedin, IdCard, Instagram } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
 
 const ExecutiveHierarchy: React.FC = () => {
@@ -10,37 +10,43 @@ const ExecutiveHierarchy: React.FC = () => {
             role: "Founder & Director",
             company: "Aureole Pharma Pvt. Ltd.",
             quote: "Individuals constitute the invaluable cornerstone of any organization. It is through their contributions that we establish processes, vision, and foster collaborations.",
-            img: "/about/managing-director.jpg"
+            img: "/about/managing-director.jpg",
+            linkedin: "https://www.linkedin.com/in/dr-kiran-badgujar-385a3367/"
         },
         {
             name: "Bipin Badgujar",
             role: "Chief Executive Officer",
             company: "Aureole Pharma Pvt. Ltd.",
-            img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800"
+            img: "/about/bipin-badgujar.jpg",
+            linkedin: "https://www.linkedin.com/in/bipin-a-badgujar-5a8b5b16/"
         },
         {
             name: "Jitendra Tajanpure",
             role: "VP Finance & Accounts",
             company: "Aureole Pharma Pvt. Ltd.",
-            img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800"
+            img: "/about/jitendra-tajanpure.jpeg",
+            linkedin: "https://www.linkedin.com/in/jitendra-tajanpure-6a0937296/"
         },
         {
             name: "Harshal Ghoge",
             role: "VP - Marketing & Projects",
             company: "Aureole Pharma Pvt. Ltd.",
-            img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=800"
+            img: "/about/harshal-ghoge.jpg",
+            linkedin: "https://www.linkedin.com/in/harshal-ghoge-553a4735/"
         },
         {
             name: "Sandeep Kale",
             role: "VP - Strategy & Biz Dev",
             company: "Aureole Pharma Pvt. Ltd.",
-            img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=800"
+            img: "/about/sandeep-kale.jpg",
+            linkedin: "#"
         },
         {
             name: "Shubham Badgujar",
             role: "Manager - IBD",
             company: "Aureole Pharma Pvt. Ltd.",
-            img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=800"
+            img: "/about/shubham-badgujar.jpg",
+            linkedin: "https://www.linkedin.com/in/shubham-badgujar-0025b7169/"
         }
     ];
 
@@ -70,7 +76,7 @@ const ExecutiveHierarchy: React.FC = () => {
                             {coreTeam.slice(1, 2).map((member, idx) => (
                                 <div key={idx} className="group relative bg-white border border-slate-200 p-10 w-full max-w-2xl flex gap-12 hover:border-aureole-blue transition-all duration-500 overflow-hidden">
                                     <div className="absolute top-0 right-0 flex">
-                                        <a href="#" className="w-16 h-16 flex items-center justify-center bg-slate-50 border-b border-l border-slate-200 hover:bg-aureole-blue text-[#001529] hover:text-white transition-all group/link">
+                                        <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="w-16 h-16 flex items-center justify-center bg-slate-50 border-b border-l border-slate-200 hover:bg-aureole-blue text-[#001529] hover:text-white transition-all group/link">
                                             <Linkedin size={24} />
                                         </a>
                                         <a href="#" className="w-16 h-16 flex items-center justify-center bg-aureole-cyan/10 border-b border-l border-aureole-cyan/20 hover:bg-aureole-cyan text-aureole-cyan hover:text-[#001529] transition-all group/card">
@@ -78,8 +84,12 @@ const ExecutiveHierarchy: React.FC = () => {
                                         </a>
                                     </div>
 
-                                    <div className="w-1/3 aspect-[3/4] overflow-hidden transition-all duration-700 border border-slate-100">
-                                        <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
+                                    <div className="w-[260px] aspect-[4/5] overflow-hidden transition-all duration-700 border border-slate-100 bg-slate-50">
+                                        <img
+                                            src={member.img}
+                                            alt={member.name}
+                                            className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
+                                        />
                                     </div>
                                     <div className="w-2/3 flex flex-col pt-6">
                                         <div className="flex items-center gap-3 mb-6">
@@ -101,14 +111,18 @@ const ExecutiveHierarchy: React.FC = () => {
                                     <div key={idx} className="group bg-white flex flex-col transition-all duration-500 hover:bg-slate-50/50 relative z-10">
                                         <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-px h-10 bg-slate-100 hidden lg:block"></div>
                                         <div className="p-10 flex-grow">
-                                            <div className="aspect-[4/5] mb-10 overflow-hidden transition-all duration-700 border border-slate-100">
-                                                <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
+                                            <div className="aspect-[4/5] mb-10 overflow-hidden transition-all duration-700 border border-slate-100 bg-slate-50">
+                                                <img
+                                                    src={member.img}
+                                                    alt={member.name}
+                                                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
+                                                />
                                             </div>
                                             <h4 className="text-2xl font-[950] text-[#001529] uppercase tracking-tighter leading-none mb-3">{member.name}</h4>
                                             <p className="text-[10px] font-black text-aureole-cyan uppercase tracking-widest mb-6 leading-tight min-h-[40px] opacity-80">{member.role}</p>
                                         </div>
                                         <div className="flex border-t border-slate-100 bg-white">
-                                            <a href="#" className="flex-1 py-5 flex items-center justify-center border-r border-slate-100 hover:bg-aureole-blue hover:text-white transition-all text-[#001529] group/link">
+                                            <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="flex-1 py-5 flex items-center justify-center border-r border-slate-100 hover:bg-aureole-blue hover:text-white transition-all text-[#001529] group/link">
                                                 <Linkedin size={20} />
                                             </a>
                                             <a href="#" className="flex-1 py-5 flex items-center justify-center hover:bg-aureole-cyan hover:text-[#001529] transition-all text-aureole-cyan group/card">
