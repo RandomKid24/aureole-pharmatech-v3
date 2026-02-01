@@ -128,3 +128,54 @@ export const TABLETOP_SECTIONS: CategoryDetailSection[] = [
         ]
     }
 ];
+
+export const FURNITURE_NAV_ITEMS: NavItem[] = [
+    { title: "When", subtitle: "Applications", icon: React.createElement(Clock, { size: 18 }) },
+    { title: "Why", subtitle: "Features & Benefits", icon: React.createElement(Target, { size: 18 }) },
+    { title: "Where", subtitle: "Industries Served", icon: React.createElement(Layers, { size: 18 }) }
+];
+
+export const FURNITURE_SECTIONS: CategoryDetailSection[] = [
+    {
+        items: [
+            "Setting up new research, analytical, or quality control laboratories",
+            "Upgrading existing lab facilities for better ergonomics and space utilization",
+            "Expanding production facilities in pharmaceutical and chemical industries",
+            "Designing modular workspaces for high-throughput testing environments",
+            "When installing specialized containment systems like fume hoods",
+            "For specialized storage solutions requiring chemical resistance",
+            "During the implementation of lean lab management and organized workspaces",
+            "When requiring durable, anti-vibration surfaces for sensitive instruments",
+            "In environments requiring stringent sterile conditions and easy maintenance",
+            "For collaborative research spaces that need flexible island bench configurations"
+        ]
+    },
+    {
+        items: [
+            "Modular & Scalable Design – allows for future lab expansions and reconfiguration",
+            "Superior Durability – heavy-duty construction for long-term industrial use",
+            "Ergonomic Excellence – designed to reduce user fatigue and improve productivity",
+            "Advanced Chemical Resistance – high-grade worktops resistant to acids and solvents",
+            "Integrated Service Management – built-in provisions for gas, water, and power",
+            "Compliance with SEFA and ASHRAE standards for laboratory safety",
+            "Space Optimization – smart storage solutions to maximize overhead and floor space",
+            "Easy Maintenance – seamless surfaces designed for effective cleaning and sterilization",
+            "Customizable Aesthetics – professional color schemes to match corporate identity",
+            "Enhanced Safety Features – rounded edges, safety locks, and fire-resistant materials"
+        ]
+    },
+    {
+        items: [
+            "Pharmaceutical Research & Development – formulating the next generation of drugs",
+            "Quality Control Laboratories – ensuring batch consistency and safety",
+            "Chemical & Agrochemical Industries – testing and synthesis environments",
+            "Healthcare & Diagnostic Centers – sterile processing and sample analysis",
+            "Academic & Forensic Sciences – providing reliable infrastructure for research",
+            "Food & Beverage Industry – testing shelf life and microbial safety",
+            "Environmental Testing Labs – analyzing water, soil, and air quality",
+            "Biotechnology & Life Sciences – specialized cleanroom furniture solutions",
+            "Cosmetic & Personal Care – product testing and formulation labs",
+            "Industrial Manufacturing – integrated lab spaces within production plants"
+        ]
+    }
+];

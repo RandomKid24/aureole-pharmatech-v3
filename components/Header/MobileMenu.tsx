@@ -78,7 +78,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
                                                             )}
                                                             <div className="flex flex-col gap-2 pl-2">
                                                                 {sub.products.map(pName => {
-                                                                    const linkTarget = cat.id === 'furniture' ? `/products/laboratory-furniture#${slugify(pName)}` : `/products/${slugify(pName)}`;
+                                                                    const linkTarget = `/products/${slugify(pName)}`;
                                                                     return (
                                                                         <Link
                                                                             key={pName}

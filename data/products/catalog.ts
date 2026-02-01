@@ -72,7 +72,7 @@ export const PRODUCT_CATALOG: Category[] = [
                 id: "furniture-list",
                 name: "Furniture & Accessories",
                 products: [
-                    "Laboratory Furniture",
+                    "Modular Laboratory Furniture",
                     "Stainless Steel Items & Accessories"
                 ]
             }

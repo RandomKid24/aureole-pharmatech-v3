@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
+import MegaMenu from './MegaMenu';
 
 interface DesktopNavProps {
     navLinks: any[];
@@ -13,14 +14,13 @@ interface DesktopNavProps {
     MegaMenu: React.ReactNode;
 }
 
-const DesktopNav: React.FC<DesktopNavProps> = ({
+const DesktopNav: React.FC<Omit<DesktopNavProps, 'MegaMenu'>> = ({
     navLinks,
     aboutDropdownOpen,
     productsDropdownOpen,
     handleMouseEnter,
     handleMouseLeave,
-    handleNavClick,
-    MegaMenu
+    handleNavClick
 }) => {
     const location = useLocation();
 
@@ -72,7 +72,14 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
                                     </div>
                                 )}
 
-                                {link.name === 'Products' && MegaMenu}
+                                {link.name === 'Products' && (
+                                    <MegaMenu
+                                        isOpen={productsDropdownOpen}
+                                        onClose={() => handleMouseEnter('products')} // Close on click
+                                        onMouseEnter={() => handleMouseEnter('products')}
+                                        onMouseLeave={handleMouseLeave}
+                                    />
+                                )}
                             </div>
                         ) : (
                             <Link

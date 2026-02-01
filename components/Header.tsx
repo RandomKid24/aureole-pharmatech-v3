@@ -3,10 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, ShieldCheck, Building2, Users } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import TechnicalBar from './Header/TechnicalBar';
-import MegaMenu from './Header/MegaMenu';
 import MobileMenu from './Header/MobileMenu';
 import DesktopNav from './Header/DesktopNav';
-import { PRODUCT_CATALOG } from '@/data/products';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,7 +12,6 @@ const Header: React.FC = () => {
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const [mobileExpandedCat, setMobileExpandedCat] = useState<string | null>(null);
-  const [activeCategory, setActiveCategory] = useState<string>(PRODUCT_CATALOG[0]?.id || '');
 
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const location = useLocation();
@@ -116,16 +113,6 @@ const Header: React.FC = () => {
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
             handleNavClick={handleNavClick}
-            MegaMenu={
-              <MegaMenu
-                isOpen={productsDropdownOpen}
-                activeCategory={activeCategory}
-                setActiveCategory={setActiveCategory}
-                onClose={() => setProductsDropdownOpen(false)}
-                onMouseEnter={() => handleMouseEnter('products')}
-                onMouseLeave={handleMouseLeave}
-              />
-            }
           />
 
           <button className="lg:hidden p-2 text-aureole-slate" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>

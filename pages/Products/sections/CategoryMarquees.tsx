@@ -19,8 +19,7 @@ const ProductMarquee = ({ pNames, animationClass }: { pNames: string[], animatio
                     const productImage = productData?.image || (productData?.images && productData.images[0]);
 
                     // Find if this product belongs to furniture category
-                    const isFurniture = PRODUCT_CATALOG.find(cat => cat.id === 'furniture')?.subTypes.some(sub => sub.products.includes(pName));
-                    const linkTarget = isFurniture ? `/products/laboratory-furniture#${slugify(pName)}` : `/products/${slugify(pName)}`;
+                    const linkTarget = `/products/${slugify(pName)}`;
 
                     return (
                         <Link
@@ -43,7 +42,7 @@ const ProductMarquee = ({ pNames, animationClass }: { pNames: string[], animatio
                                 <div className="mt-4 flex items-center gap-2 opacity-100 transition-opacity">
                                     <div className="w-1 h-1 bg-aureole-cyan rounded-full"></div>
                                     <span className="text-[10px] font-bold text-aureole-blue">
-                                        {isFurniture ? 'View Details' : 'View Technical Sheet'}
+                                        View Technical Sheet
                                     </span>
                                 </div>
                             </div>

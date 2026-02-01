@@ -26,7 +26,8 @@ import {
     storageCabinets,
     laboratoryFittings,
     labAccessories,
-    ssAccessories
+    ssAccessories,
+    laboratoryFurniture
 } from './furniture/lab-furniture-data';
 
 export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
@@ -50,6 +51,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     "Oil Bath": oilBath,
     "Dry Bath": dryBath,
     "Air Sampler": airSampler,
+    "Modular Laboratory Furniture": laboratoryFurniture,
     "Stainless Steel Items & Accessories": ssAccessories,
     "Wall Side Bench": wallSideBench,
     "Island Bench": islandBench,

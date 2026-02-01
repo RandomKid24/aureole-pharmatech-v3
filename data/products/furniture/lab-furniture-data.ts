@@ -1,5 +1,38 @@
 import { ProductDetail } from '../types';
 
+export const laboratoryFurniture: ProductDetail = {
+    description: "Aureole Pharma Tech’s modular laboratory furniture systems are engineered to create a safe, efficient, and ergonomic environment for modern scientific research. Our comprehensive range includes specialized workbenches, fume hoods, and storage solutions designed to meet the rigorous demands of pharmaceutical, chemical, and biological laboratories. Each component is crafted using high-performance materials that ensure long-term durability and resistance to harsh laboratory conditions.",
+    image: "/products/Furniture/island-bench.png",
+    images: [
+        "/products/Furniture/wall-side-bench.png",
+        "/products/Furniture/island-bench.png",
+        "/products/Furniture/storage-cabinets.png",
+        "/products/Furniture/wall-side-bench.png",
+        "/products/Furniture/fume-hood.png",
+        "/products/Furniture/fittings.png",
+        "/products/Furniture/fittings.png",
+        "/products/Furniture/storage-cabinets.png",
+        "/products/accessories/test-tube-racks-wire-mesh.png"
+    ],
+    imageCaptions: [
+        "C-Frame System",
+        "H-Frame System",
+        "Plinth & Pedestal Systems",
+        "Laboratory Worktops",
+        "Fume Cupboards",
+        "Laboratory Fittings",
+        "Hardware",
+        "Storage Cabinets",
+        "Lab Accessories"
+    ],
+    keyFeatures: [],
+    specifications: [],
+    models: [],
+    regularAttributes: [],
+    addOnsAttributes: []
+};
+
+
 export const wallSideBench: ProductDetail = {
     description: "Heavy-duty wall-mounted laboratory benches designed for maximum stability and workspace efficiency.",
     keyFeatures: ["Modular Design", "Chemical Resistant", "Ergonomic Height", "Sturdy Framework"],

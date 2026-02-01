@@ -1,32 +1,8 @@
 import { ProductDetail } from '../types';
 
 export const humidityStabilityChamber: ProductDetail = {
-    description: "Humidity chambers play a crucial role in a wide array of industries, including electronics, military and defense, pharmaceuticals, transportation, medical devices, shipping, and communications, among others. These chambers are versatile tools that enable companies to conduct various types of testing to ensure the quality and reliability of their products.\n\nAureole Pharma Tech has earned its reputation as a leading manufacturer of humidity chambers by meticulously optimizing every aspect of its chambers. Their temperature and humidity models are designed to provide high-performance and precise control, ensuring that companies can rely on these chambers for their testing needs.\n\nAureole Pharma Tech understands the critical role that testing plays in the success of businesses. They recognize that their chambers must match the same level of care, research, and innovation that companies invest in their products.\n\nOur Humidity chambers are essential tools in industries where environmental conditions significantly affect product performance. Companies rely on our humidity chambers for accurate and controlled testing, and Aureole Pharma Tech stands out as a trusted manufacturer that delivers the precision and reliability needed for successful product development and quality assurance.\n\n**Software: SIS-APP**\nSecure and Integrated Solutions for Applications, Products, and Processes. In the fast-paced landscape of today’s business world, the need for secure and seamlessly integrated solutions for applications, products, and processes has reached unprecedented levels. Our software, SIS-APP will manage sensitive data across various applications, products, and organizational processes, guaranteeing robust security and compliance with defined procedures. Rockwell Automation is our consulting and implementation partner for PLC and software solutions.",
-    keyFeaturesHeading: "PLC Features",
-    keyFeatures: [
-        "PLC Based Control System Make - Allen Bradley",
-        "PC Communication Via Ethernet",
-        "PLC based : Controlling, Safety, Atomization, Communication & Database",
-        "Online monitoring on Graphical LED Touch Screen Display Make - Allen Bradley",
-        "Changing Set value of Master controller from HMI with password protection with auto log off",
-        "PLC Based Scanner System",
-        "PLC Based Safety Control System to Protect the Chambers from Overshoot and Undershoot of Temperature and Humidity",
-        "Auto Changeover of Master Sensor In Case of Failure",
-        "Auto Switch Over of Refrigeration System in Case of Failure",
-        "Auto Change Over of Steam Generator in Case of Failure",
-        "Alarm for Low Water Level with Reset System to Protect Steam Generator System",
-        "Password Protected Door Opening with Reason Master",
-        "Password Protected Chamber On / Off",
-        "Password Protected Set Value Change",
-        "Password Protected Settable Print Frequency For Master & Scanner",
-        "Password Protected Restore Factory Setting",
-        "Snooze Hooter System",
-        "Event Logger Facility",
-        "Actual Status Monitoring of Major Utilities (Sensor, Ref System, Steam Generation)",
-        "GSM Alarm System (Mobile Alert)",
-        "Hooter System",
-        "Biometric system"
-    ],
+    description: "Humidity chambers play a crucial role in a wide array of industries, including electronics, military and defense, pharmaceuticals, transportation, medical devices, shipping, and communications, among others. These chambers are versatile tools that enable companies to conduct various types of testing to ensure the quality and reliability of their products.\n\nAureole Pharma Tech has earned its reputation as a leading manufacturer of humidity chambers by meticulously optimizing every aspect of its chambers. Their temperature and humidity models are designed to provide high-performance and precise control, ensuring that companies can rely on these chambers for their testing needs.\n\nAureole Pharma Tech understands the critical role that testing plays in the success of businesses. They recognize that their chambers must match the same level of care, research, and innovation that companies invest in their products.\n\nOur Humidity chambers are essential tools in industries where environmental conditions significantly affect product performance. Companies rely on our humidity chambers for accurate and controlled testing, and Aureole Pharma Tech stands out as a trusted manufacturer that delivers the precision and reliability needed for successful product development and quality assurance.",
+    keyFeatures: [],
     specifications: [
         { parameter: "Temperature Range", details: "20°C to 60°C" },
         { parameter: "Humidity Range", details: "40% to 85% RH" },

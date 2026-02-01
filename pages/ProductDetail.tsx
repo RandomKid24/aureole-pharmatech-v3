@@ -35,14 +35,14 @@ const ProductDetail: React.FC = () => {
         );
     }
 
-    if (decodedName === "Stainless Steel Items & Accessories") {
+    if (decodedName === "Stainless Steel Items & Accessories" || decodedName === "Modular Laboratory Furniture") {
         return (
             <div className="pt-24 min-h-screen bg-white">
                 <CategoryHero
-                    title="STAINLESS"
-                    subtitle="Accessories"
+                    title={decodedName === "Modular Laboratory Furniture" ? "LABORATORY" : "STAINLESS"}
+                    subtitle={decodedName === "Modular Laboratory Furniture" ? "FURNITURE" : "Accessories"}
                     description={product.description}
-                    watermark="ACCESSORIES"
+                    watermark={decodedName === "Modular Laboratory Furniture" ? "FURNITURE" : "ACCESSORIES"}
                     showAccent={false}
                 />
                 <SSAccessoriesGrid product={product} />
