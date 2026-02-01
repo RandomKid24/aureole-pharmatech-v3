@@ -15,20 +15,20 @@ export const walkInColdChamber: ProductDetail = {
     ],
     models: [],
     regularAttributes: [
-        "Door with viewing window is of toughened glass with polysulphides to view the samples without disturbing the test conditions",
-        "Trays and detachable racks with adjustable angles.",
-        "7'' Touch Screen HMI (Allen Bradly)",
-        "Master & Stand By refrigeration System",
+        "Viewing window with toughened glass",
+        "Scanner : 8 pt. temperature sensor",
+        "Door Access System (Numeric)",
+        "Master & stand by refrigeration system",
         "Split type refrigeration system",
-        "Scanner : 8 pt. Temperature Sensor",
-        "Person trap/ indication switch inside chamber with audible alarm outside.",
-        "Door Access System (Numeric)"
+        "Racks with trays",
+        "Person trap alarm",
+        "7\" Touch Screen HMI"
     ],
     addOnsAttributes: [
-        "21 CFR part 11 compliance",
-        "GSM alert system",
+        "21 CFR part 11 Compliance",
+        "Mobile Alert System",
         "Hooter System",
-        "Door Access System (Numeric or Biometric)",
+        "Door Access System (Biometric)",
         "Extra Trays"
     ],
     image: "/products/StablilityChamber-Standalone/walk-in-cold-chamber.png",

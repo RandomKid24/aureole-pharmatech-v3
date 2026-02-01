@@ -15,18 +15,18 @@ export const walkInDeepFreezer: ProductDetail = {
     ],
     models: [],
     regularAttributes: [
-        "Full door is of toughened glass with polysulphides to view the samples without disturbing the test conditions",
-        "Trays and detachable racks with adjustable angles",
-        "7'' Touch Screen HMI (Allen Bradly)",
-        "Master & Stand By refrigeration System",
+        "Master & stand by sensor",
+        "Heavy Duty refrigeration system",
+        "Door Access System (Numeric)",
+        "Master & stand by refrigeration system",
         "Split type refrigeration system",
-        "Scanner : 8 pt. Temperature Sensor",
-        "Person trap/ indication switch inside chamber with audible alarm outside.",
-        "Door Access System (Numeric)"
+        "Racks with trays",
+        "Person trap alarm",
+        "7\" Touch Screen HMI"
     ],
     addOnsAttributes: [
-        "21 CFR part 11 compliance",
-        "GSM alert system",
+        "21 CFR part 11 Compliance",
+        "Mobile Alert System",
         "Hooter System",
         "Door Access System (Biometric)",
         "Extra Trays"

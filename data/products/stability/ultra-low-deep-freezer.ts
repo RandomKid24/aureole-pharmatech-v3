@@ -10,18 +10,14 @@ export const ultraLowDeepFreezer: ProductDetail = {
     ],
     models: [],
     regularAttributes: [
-        "Master & stand By Sensor",
-        "Single SS Door sealed around the entire perimeter by silicon gasket.",
-        "Heavy Duty refrigeration system",
-        "Vacuum release port for quick re-access",
-        "Lockable cold air inner doors",
-        "One-hand operation handle"
+        "Master & stand by sensor",
+        "SS Door with gasket",
+        "Heavy Duty refrigeration system"
     ],
     addOnsAttributes: [
-        "21 CFR part 11 compliance",
-        "GSM alert system",
+        "21 CFR part 11 Compliance",
+        "Mobile Alert System",
         "Hooter System",
-        "Password protected or Biometric door access system",
         "Extra Trays"
     ],
     image: "/products/StablilityChamber-Standalone/ultra-ultra-deep-freezer.jpeg",

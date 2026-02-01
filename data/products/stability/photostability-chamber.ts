@@ -12,19 +12,19 @@ export const photostabilityChamber: ProductDetail = {
     regularAttributes: [
         "Inner Mirror finish & outer Matt finish",
         "UV lights get switched off automatically once the door is opened",
-        "You can test the samples on Fluorescent light or U .V lights separately as well as simultaneously.",
-        "Uniform light distribution & high intensity levels allow quick response for forced degradation testing and confirmatory studies.",
-        "Lights automatically shut off after a specified exposure level or time duration.",
-        "Two doors - Full view inner glass door & Outer SS door, and leakage proof silicon rubber gasket",
-        "Master & stand By Sensor"
+        "Test the sample on Fluorescent light or U. V. lights",
+        "Uniform light distribution",
+        "Lights automatically shut off after specific exposure level",
+        "Master & stand by sensor",
+        "Two Door - Full view inner glass door & outer SS door & leakage proof silicon rubber gasket"
     ],
     addOnsAttributes: [
-        "21 CFR part 11 compliance",
+        "21 CFR part 11 Compliance",
         "UV Meter",
         "LUX Meter",
-        "GSM Alert System",
+        "Mobile Alert System",
         "Hooter System",
-        "Door Access System (Numeric or Biometric)",
+        "Door Access System (Numeric/Biometric)",
         "Extra Trays"
     ],
     image: "/products/StablilityChamber-Standalone/photostability-chamber.png",

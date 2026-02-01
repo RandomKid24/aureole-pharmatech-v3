@@ -37,24 +37,18 @@ export const humidityStabilityChamber: ProductDetail = {
     ],
     models: [],
     regularAttributes: [
-        "Two doors - Full view inner glass door & Outer SS door with viewing window, and leakage proof silicon rubber gasket",
-        "Owned manufactured SS reservoir and steam kettle provided in humidification system to provide optimum humidity",
+        "Inner outer door with proof silicon",
+        "Water & steam Tank.",
         "Low water indication",
-        "Master & stand by sensor",
-        "Insulation: Eco friendly Poly Urethane insulation provides maximum thermal protection & rigidity",
-        "Air Circulation: High efficiency air circulation system with horizontal airflow for even gradient",
-        "Interior Lighting: High intensity, low voltage fluorescent lights for hassle-free viewing",
-        "Chamber Port: 60 mm diameter port with silicon cork for validation probes",
-        "Tray: Heavy duty SS perforated tray with laser cutting for efficient circulation",
-        "Castor Wheels: For easy mobility during installation or cleaning"
+        "Master & stand by sensor"
     ],
     addOnsAttributes: [
-        "21 CFR part 11 compliance (Log data, Event data, Audit Trail, E-Records & E-signatures)",
-        "Stand by refrigeration & steam generation system",
+        "21 CFR part 11 Compliance",
+        "Standby Refrigeration & Steam Generation System",
         "Scanner : 4 pt. temperature & humidity sensor",
-        "GSM alert system (SMS Mobile Alert System for notifications on mobiles)",
+        "Mobile Alert System",
         "Hooter System",
-        "Door Access System (Numeric or Biometric)",
+        "Door Access System (Numeric/Biometric)",
         "Extra Trays"
     ],
     image: "/products/StablilityChamber-Standalone/humidity-chamber.png",

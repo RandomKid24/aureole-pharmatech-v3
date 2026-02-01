@@ -21,18 +21,23 @@ export const walkInHumidityChamber: ProductDetail = {
     ],
     models: [],
     regularAttributes: [
-        "Full door is of toughened glass with polysulphides to view the samples without disturbing the test conditions & human safety",
-        "Trays and detachable racks with adjustable angles",
-        "Owned manufactured SS Reservoir and Steam Kettle provided in Humidification system to provide optimum humidity",
-        "High quality imported make combo sensor for temperature & humidity",
-        "Low water indication",
-        "Master & Stand By Refrigeration/Humidity System",
-        "Split type refrigeration system",
-        "Scanner : 8 pt. Temperature & Humidity Sensor",
+        "Full Door is of toughened glass",
+        "Racks with trays",
+        "Person trap alarm",
         "Door Access System (Numeric)",
-        "Person trap/ indication switch inside chamber with audible alarm outside."
+        "Low water indication",
+        "Master & stand by refrigeration/ humidity system",
+        "Split type refrigeration system",
+        "Scanner : 8 pt. temperature & humidity sensor",
+        "7\" Touch Screen HMI"
     ],
-    addOnsAttributes: [],
+    addOnsAttributes: [
+        "21 CFR part 11 Compliance",
+        "Mobile Alert System",
+        "Hooter System",
+        "Door Access System (Biometric)",
+        "Extra Trays"
+    ],
     image: "/products/StablilityChamber-Standalone/walk-in-humidity-chamber.png",
     complexTable: {
         rows: [

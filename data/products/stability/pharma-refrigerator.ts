@@ -13,18 +13,18 @@ export const pharmaRefrigerator: ProductDetail = {
     ],
     models: [],
     regularAttributes: [
-        "Master & standby sensor",
-        "SS door with gasket",
-        "Heavy-duty refrigeration system",
+        "Master & stand by sensor",
+        "SS Door with gasket",
+        "Heavy Duty refrigeration system",
         "Inner outer door with proof silicon"
     ],
     addOnsAttributes: [
-        "21 CFR Part 11 compliance",
-        "Mobile alert system",
-        "Hooter system",
-        "Extra trays",
-        "Scanner: 4-point temperature sensor",
-        "Door access system (Numeric / Biometric)"
+        "21 CFR part 11 Compliance",
+        "Mobile Alert System",
+        "Hooter System",
+        "Extra Trays",
+        "Scanner : 4 pt. temperature sensor",
+        "Door Access System (Numeric/Biometric)"
     ],
     image: "/products/StablilityChamber-Standalone/pharma-refrigerator-dual-zone-chamber.png",
     complexTable: {

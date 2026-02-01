@@ -10,15 +10,14 @@ export const deepFreezer: ProductDetail = {
     ],
     models: [],
     regularAttributes: [
-        "Master & stand By Sensor",
-        "Single SS Door sealed around the entire perimeter by silicon gasket.",
+        "Master & stand by sensor",
+        "SS Door with gasket",
         "Heavy Duty refrigeration system"
     ],
     addOnsAttributes: [
-        "21 CFR part 11 compliance",
-        "GSM alert system",
+        "21 CFR part 11 Compliance",
+        "Mobile Alert System",
         "Hooter System",
-        "Password protected or Biometric door access system",
         "Extra Trays"
     ],
     image: "/products/StablilityChamber-Standalone/deep-freezer.png",
