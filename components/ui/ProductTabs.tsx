@@ -10,43 +10,49 @@ import {
 
 interface ProductTabsProps {
     product: any;
+    productName?: string;
 }
 
-const ProductTabs: React.FC<ProductTabsProps> = ({ product }) => {
-    const getIconForItem = (text: string, defaultIcon: React.ReactNode) => {
+const ProductTabs: React.FC<ProductTabsProps> = ({ product, productName }) => {
+    const isTableTop = [
+        "Ultrasonic Bath", "Water Bath", "Steam Bath",
+        "Oil Bath", "Dry Bath", "Air Sampler"
+    ].includes(productName || "");
+
+    const getIconForItem = (text: string, defaultIcon: React.ReactNode, iconSize: number = 32) => {
         const lowerText = text.toLowerCase();
 
         // Fallback to Lucide Icons
-        if (lowerText.includes('plc') || lowerText.includes('control') || lowerText.includes('processor')) return <Cpu size={32} />;
-        if (lowerText.includes('ethernet') || lowerText.includes('communication') || lowerText.includes('internet')) return <Network size={32} />;
-        if (lowerText.includes('database') || lowerText.includes('log') || lowerText.includes('audit')) return <Database size={32} />;
-        if (lowerText.includes('touch screen') || lowerText.includes('hmi') || lowerText.includes('display')) return <Monitor size={32} />;
-        if (lowerText.includes('safety') || lowerText.includes('protect') || lowerText.includes('undershoot') || lowerText.includes('overshoot')) return <ShieldCheck size={32} />;
-        if (lowerText.includes('alarm') || lowerText.includes('alert') || lowerText.includes('hooter')) return <Bell size={32} />;
-        if (lowerText.includes('password') || lowerText.includes('lock')) return <Lock size={32} />;
-        if (lowerText.includes('biometric') || lowerText.includes('fingerprint') || lowerText.includes('access')) return <Fingerprint size={32} />;
-        if (lowerText.includes('sensor') || lowerText.includes('monitoring') || lowerText.includes('actual status')) return <Activity size={32} />;
-        if (lowerText.includes('gsm') || lowerText.includes('mobile') || lowerText.includes('phone')) return <Phone size={32} />;
-        if (lowerText.includes('lighting') || lowerText.includes('fluorescent') || lowerText.includes('viewing')) return <Lightbulb size={32} />;
-        if (lowerText.includes('air circulation') || lowerText.includes('fan') || lowerText.includes('airflow')) return <Wind size={32} />;
-        if (lowerText.includes('water') || lowerText.includes('steam') || lowerText.includes('humid')) return <Droplets size={32} />;
-        if (lowerText.includes('tray') || lowerText.includes('shelf') || lowerText.includes('perforated')) return <Columns size={32} />;
-        if (lowerText.includes('wheel') || lowerText.includes('castor') || lowerText.includes('mobility')) return <Move size={32} />;
-        if (lowerText.includes('21 cfr') || lowerText.includes('compliance') || lowerText.includes('standard')) return <FileCheck size={32} />;
-        if (lowerText.includes('door') || lowerText.includes('ss') || lowerText.includes('construction')) return <Box size={32} />;
-        if (lowerText.includes('refrigeration') || lowerText.includes('cooling') || lowerText.includes('chilling')) return <Snowflake size={32} />;
-        if (lowerText.includes('extra tray')) return <Layers size={32} />;
-        if (lowerText.includes('tank')) return <Droplets size={32} />;
-        if (lowerText.includes('scanner')) return <Activity size={32} />;
-        if (lowerText.includes('hooter')) return <Bell size={32} />;
+        if (lowerText.includes('plc') || lowerText.includes('control') || lowerText.includes('processor')) return <Cpu size={iconSize} />;
+        if (lowerText.includes('ethernet') || lowerText.includes('communication') || lowerText.includes('internet')) return <Network size={iconSize} />;
+        if (lowerText.includes('database') || lowerText.includes('log') || lowerText.includes('audit')) return <Database size={iconSize} />;
+        if (lowerText.includes('touch screen') || lowerText.includes('hmi') || lowerText.includes('display')) return <Monitor size={iconSize} />;
+        if (lowerText.includes('safety') || lowerText.includes('protect') || lowerText.includes('undershoot') || lowerText.includes('overshoot')) return <ShieldCheck size={iconSize} />;
+        if (lowerText.includes('alarm') || lowerText.includes('alert') || lowerText.includes('hooter')) return <Bell size={iconSize} />;
+        if (lowerText.includes('password') || lowerText.includes('lock')) return <Lock size={iconSize} />;
+        if (lowerText.includes('biometric') || lowerText.includes('fingerprint') || lowerText.includes('access')) return <Fingerprint size={iconSize} />;
+        if (lowerText.includes('sensor') || lowerText.includes('monitoring') || lowerText.includes('actual status')) return <Activity size={iconSize} />;
+        if (lowerText.includes('gsm') || lowerText.includes('mobile') || lowerText.includes('phone')) return <Phone size={iconSize} />;
+        if (lowerText.includes('lighting') || lowerText.includes('fluorescent') || lowerText.includes('viewing')) return <Lightbulb size={iconSize} />;
+        if (lowerText.includes('air circulation') || lowerText.includes('fan') || lowerText.includes('airflow')) return <Wind size={iconSize} />;
+        if (lowerText.includes('water') || lowerText.includes('steam') || lowerText.includes('humid')) return <Droplets size={iconSize} />;
+        if (lowerText.includes('tray') || lowerText.includes('shelf') || lowerText.includes('perforated')) return <Columns size={iconSize} />;
+        if (lowerText.includes('wheel') || lowerText.includes('castor') || lowerText.includes('mobility')) return <Move size={iconSize} />;
+        if (lowerText.includes('21 cfr') || lowerText.includes('compliance') || lowerText.includes('standard')) return <FileCheck size={iconSize} />;
+        if (lowerText.includes('door') || lowerText.includes('ss') || lowerText.includes('construction')) return <Box size={iconSize} />;
+        if (lowerText.includes('refrigeration') || lowerText.includes('cooling') || lowerText.includes('chilling')) return <Snowflake size={iconSize} />;
+        if (lowerText.includes('extra tray')) return <Layers size={iconSize} />;
+        if (lowerText.includes('tank')) return <Droplets size={iconSize} />;
+        if (lowerText.includes('scanner')) return <Activity size={iconSize} />;
+        if (lowerText.includes('hooter')) return <Bell size={iconSize} />;
 
         // Industry Specific Icons
-        if (lowerText.includes('healthcare') || lowerText.includes('hospital') || lowerText.includes('surgeon')) return <HeartPulse size={32} />;
-        if (lowerText.includes('pharma')) return <Microscope size={32} />;
-        if (lowerText.includes('institute') || lowerText.includes('lab') || lowerText.includes('research')) return <FlaskConical size={32} />;
-        if (lowerText.includes('mechanical') || lowerText.includes('factory') || lowerText.includes('production')) return <Settings size={32} />;
-        if (lowerText.includes('jewelry') || lowerText.includes('jewel')) return <Dna size={32} />;
-        if (lowerText.includes('food')) return <Droplets size={32} />;
+        if (lowerText.includes('healthcare') || lowerText.includes('hospital') || lowerText.includes('surgeon')) return <HeartPulse size={iconSize} />;
+        if (lowerText.includes('pharma')) return <Microscope size={iconSize} />;
+        if (lowerText.includes('institute') || lowerText.includes('lab') || lowerText.includes('research')) return <FlaskConical size={iconSize} />;
+        if (lowerText.includes('mechanical') || lowerText.includes('factory') || lowerText.includes('production')) return <Settings size={iconSize} />;
+        if (lowerText.includes('jewelry') || lowerText.includes('jewel')) return <Dna size={iconSize} />;
+        if (lowerText.includes('food')) return <Droplets size={iconSize} />;
 
         return defaultIcon;
     };
@@ -92,8 +98,23 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product }) => {
             <div className="p-8">
                 {tabs.map((tab) => (
                     <div key={tab.id} className={`${activeTab === tab.id ? 'block animate-in fade-in duration-500' : 'hidden'}`}>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                        <div className={`grid gap-6 ${isTableTop ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4' : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'}`}>
                             {tab.data.map((item: string, i: number) => {
+                                // Special Compact Layout for Table Top Products
+                                if (isTableTop) {
+                                    return (
+                                        <div key={i} className="flex items-center gap-4 p-4 rounded-lg border border-slate-100 bg-slate-50/30 hover:bg-white hover:border-aureole-cyan/30 hover:shadow-sm transition-all group">
+                                            <div className="text-aureole-blue shrink-0 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all">
+                                                {getIconForItem(item, tab.itemIcon, 20)}
+                                            </div>
+                                            <span className="text-[12px] font-bold text-slate-600 leading-tight group-hover:text-aureole-slate transition-colors">
+                                                {item}
+                                            </span>
+                                        </div>
+                                    );
+                                }
+
+                                // Standard Layout for other products (with Custom Images)
                                 const customImg = (text: string) => {
                                     const lowerText = text.toLowerCase();
                                     const iconMapping: Record<string, string> = {
@@ -139,7 +160,6 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product }) => {
                                         'racks': 'extra-trays.png'
                                     };
 
-                                    // Check longer matches first for accuracy
                                     const sortedKeys = Object.keys(iconMapping).sort((a, b) => b.length - a.length);
                                     for (const key of sortedKeys) {
                                         if (lowerText.includes(key)) return iconMapping[key];
@@ -165,7 +185,7 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product }) => {
                                     <div key={i} className="group flex flex-col items-center text-center transition-all duration-300">
                                         <div className="w-28 h-28 sm:w-32 sm:h-32 lg:w-40 lg:h-40 border border-slate-200 rounded-xl flex items-center justify-center mb-3 bg-slate-50/50 group-hover:bg-white group-hover:border-aureole-cyan group-hover:shadow-md transition-all">
                                             <div className="text-aureole-blue group-hover:scale-110 transition-transform duration-300">
-                                                {getIconForItem(item, tab.itemIcon)}
+                                                {getIconForItem(item, tab.itemIcon, 32)}
                                             </div>
                                         </div>
                                         <span className="text-[10px] sm:text-[11px] uppercase font-bold text-slate-500 tracking-tighter leading-tight max-w-[140px] px-2 group-hover:text-aureole-slate transition-colors">

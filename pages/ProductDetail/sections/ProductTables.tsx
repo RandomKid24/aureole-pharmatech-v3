@@ -8,10 +8,19 @@ import {
 
 interface ProductTablesProps {
     product: any;
+    productName?: string;
 }
 
-const ProductTables: React.FC<ProductTablesProps> = ({ product }) => {
+const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) => {
     const getRowIcon = (parameter: string) => {
+        // Table Top specific check - use generic icon
+        const isTableTop = [
+            "Ultrasonic Bath", "Water Bath", "Steam Bath",
+            "Oil Bath", "Dry Bath", "Air Sampler"
+        ].includes(productName || "");
+
+        if (isTableTop) return <Settings size={14} />;
+
         const p = parameter.toLowerCase();
         if (p.includes('temp')) return <Thermometer size={14} />;
         if (p.includes('humid')) return <Droplets size={14} />;

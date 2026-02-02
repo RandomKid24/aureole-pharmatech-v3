@@ -55,7 +55,7 @@ const ProductDetail: React.FC = () => {
         <div className="pt-24 min-h-screen bg-white selection:bg-aureole-blue selection:text-white">
             <ProductHero product={product} decodedName={decodedName} />
             <TechnicalDashboard product={product} decodedName={decodedName} />
-            <ProductTables product={product} />
+            <ProductTables product={product} productName={decodedName} />
             <VariantSections product={product} />
             <ProductEnquiry />
         </div>
