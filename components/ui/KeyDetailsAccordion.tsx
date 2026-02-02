@@ -32,7 +32,7 @@ const KeyDetailsAccordion: React.FC<KeyDetailsAccordionProps> = ({
             <div className="container mx-auto px-6 lg:px-24">
                 {/* Header */}
                 <div className="max-w-4xl mb-12 text-center lg:text-left">
-                    <h2 className="text-3xl lg:text-4xl font-extrabold font-heading text-[#001529] tracking-tight leading-none">
+                    <h2 className="text-4xl lg:text-5xl font-black font-heading text-[#001529] tracking-tight leading-none">
                         {title} <span className="text-aureole-cyan font-bold">{accentTitle}.</span>
                     </h2>
                 </div>
@@ -54,10 +54,10 @@ const KeyDetailsAccordion: React.FC<KeyDetailsAccordionProps> = ({
                                         {React.cloneElement(item.icon as React.ReactElement, { size: 28 })}
                                     </div>
                                     <div>
-                                        <h4 className={`text-3xl font-[1000] uppercase tracking-tighter leading-none mb-1.5 transition-colors ${activeSection === idx ? 'text-[#001529]' : 'text-slate-500'}`}>
+                                        <h4 className={`text-2xl lg:text-3xl font-black uppercase tracking-tighter leading-none mb-1.5 transition-colors ${activeSection === idx ? 'text-[#001529]' : 'text-slate-500'}`}>
                                             {item.title}
                                         </h4>
-                                        <p className={`text-[11px] font-black uppercase tracking-[0.2em] transition-colors ${activeSection === idx ? 'text-aureole-cyan' : 'text-slate-400'}`}>
+                                        <p className={`text-xs font-black uppercase tracking-widest transition-colors ${activeSection === idx ? 'text-aureole-cyan' : 'text-slate-400'}`}>
                                             {item.subtitle}
                                         </p>
                                     </div>
@@ -69,10 +69,7 @@ const KeyDetailsAccordion: React.FC<KeyDetailsAccordionProps> = ({
                     {/* Unified Content Sheet - Compact Height */}
                     <div className="lg:w-3/5">
                         <div key={activeSection} className="h-full bg-slate-50 border border-slate-100 p-8 lg:p-12 shadow-sm relative overflow-hidden animate-in fade-in duration-500 min-h-[400px]">
-                            {/* Technical watermark background */}
-                            <div className="absolute top-4 right-4 text-[90px] font-black text-slate-200/40 select-none pointer-events-none uppercase tracking-tighter italic opacity-40">
-                                {navItems[activeSection].title}
-                            </div>
+
 
                             <div className="relative z-10 h-full flex flex-col">
                                 <div className="flex items-center gap-5 mb-8 border-b border-slate-200/60 pb-6">
@@ -80,7 +77,7 @@ const KeyDetailsAccordion: React.FC<KeyDetailsAccordionProps> = ({
                                         {React.cloneElement(navItems[activeSection].icon as React.ReactElement, { size: 22 })}
                                     </div>
                                     <div>
-                                        <h3 className="text-2xl font-[1000] text-[#001529] uppercase tracking-tight">{navItems[activeSection].title}</h3>
+                                        <h3 className="text-2xl lg:text-3xl font-black text-[#001529] uppercase tracking-tight">{navItems[activeSection].title}</h3>
                                     </div>
                                 </div>
 
@@ -89,7 +86,7 @@ const KeyDetailsAccordion: React.FC<KeyDetailsAccordionProps> = ({
                                     {sections[activeSection].items.slice(0, 8).map((item, i) => (
                                         <div key={i} className="flex items-start gap-4 group">
                                             <div className="mt-1.5 w-1.5 h-1.5 rounded-full border-2 border-aureole-cyan flex-shrink-0 group-hover:bg-aureole-cyan transition-all" />
-                                            <p className="text-[15px] font-bold text-slate-600 leading-snug group-hover:text-[#001529] transition-colors tracking-tight">
+                                            <p className="text-base font-bold text-slate-600 leading-snug group-hover:text-[#001529] transition-colors tracking-tight">
                                                 {item}
                                             </p>
                                         </div>
@@ -99,9 +96,9 @@ const KeyDetailsAccordion: React.FC<KeyDetailsAccordionProps> = ({
                                 <div className="mt-auto pt-8 border-t border-slate-200/60 flex justify-between items-center opacity-30">
                                     <div className="flex items-center gap-2">
                                         <div className="w-1.5 h-1.5 rounded-full bg-aureole-cyan" />
-                                        <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest leading-none">Aureole Insights</span>
+                                        <span className="text-xs font-black text-slate-400 uppercase tracking-widest leading-none">Aureole Insights</span>
                                     </div>
-                                    <span className="text-[9px] font-black text-slate-300 uppercase tracking-[0.3em]">REF-2026</span>
+                                    <span className="text-xs font-black text-slate-300 uppercase tracking-widest">REF-2026</span>
                                 </div>
                             </div>
                         </div>

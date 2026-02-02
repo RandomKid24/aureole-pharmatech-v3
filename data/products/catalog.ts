@@ -40,26 +40,16 @@ export const PRODUCT_CATALOG: Category[] = [
         description: "Compact, high-precision laboratory instruments designed for bench-top space optimization.",
         subTypes: [
             {
-                id: "ultrasonic",
-                name: "Ultrasonic Baths",
+                id: "all-instruments",
+                name: "Standard Instruments",
                 products: [
-                    "Ultrasonic Bath"
-                ]
-            },
-            {
-                id: "waterbaths",
-                name: "Water Baths",
-                products: [
+                    "Ultrasonic Bath",
                     "Water Bath",
                     "Steam Bath",
                     "Oil Bath",
-                    "Dry Bath"
+                    "Dry Bath",
+                    "Air Sampler"
                 ]
-            },
-            {
-                id: "air-sampler",
-                name: "Air Sampler",
-                products: ["Air Sampler"]
             }
         ]
     },

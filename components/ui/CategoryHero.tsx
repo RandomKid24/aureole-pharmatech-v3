@@ -15,19 +15,16 @@ const CategoryHero: React.FC<CategoryHeroProps> = ({ title, subtitle, descriptio
         <section className="relative py-16 lg:py-28 overflow-hidden border-b border-slate-100 bg-white group">
             <div className="absolute inset-0 z-0 opacity-[0.03] bg-[radial-gradient(#0079ac_1px,transparent_1px)] [background-size:40px_40px]"></div>
 
-            {/* Watermark - Matches ProductsHero Style */}
-            {/* Watermark - Adjusted for full visibility */}
-            <div className="absolute top-1/2 -translate-y-1/2 right-0 opacity-[0.02] group-hover:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none hidden lg:block overflow-visible w-full text-right pr-10">
-                <span className="text-[10vw] font-black text-aureole-slate group-hover:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000 whitespace-nowrap">{watermark}</span>
-            </div>
+
+
 
             {/* Imprinted Effect Sketch in Background - Integrated yet compact */}
             {image && (
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-[90%] opacity-[0.8] pointer-events-none select-none z-0 overflow-visible hidden lg:block">
+                <div className="absolute -right-5 top-1/2 -translate-y-1/2 w-[60%] h-[120%] opacity-[0.8] pointer-events-none select-none z-0 overflow-visible hidden lg:block">
                     <img
                         src={image}
                         alt=""
-                        className="w-full h-full object-contain object-center scale-100"
+                        className="w-full h-full object-contain object-center scale-110"
                     />
                 </div>
             )}

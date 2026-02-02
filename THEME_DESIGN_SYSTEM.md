@@ -23,25 +23,33 @@ We use a high-density, brutalist typographic approach with consistent font weigh
 - **Secondary Sans**: `Inter` (sans-serif) - Used for headings
 - **Tertiary Sans**: `Questrial` (sans-serif) - Available for special use cases
 - **Font Weights**:
-  - `font-[950]` or `font-black`: Used for main headings and display text.
-  - `font-bold`: Used for labels, buttons, and emphasis text.
-  - `font-medium`: Used for body text, descriptions, and regular content.
+  - `font-black`: Used for headings and strong emphasis.
+  - `font-bold`: Used for labels, subheadings, and interactive links.
+  - `font-medium`: Used for body text and descriptions.
+
+### 5-Level Type Scale
+We enforce a strict 5-size type scale to ensure consistency:
+
+1. **Display** (`text-7xl` | 72px): Hero sections, massive impact text.
+2. **Title** (`text-5xl` | 48px): Page titles, major section headers.
+3. **Heading** (`text-3xl` | 30px): Sub-sections, feature headers.
+4. **Subtitle** (`text-xl` | 20px): Card titles, prominent labels.
+5. **Body** (`text-base` | 16px): Paragraphs, list items, general content.
+
+*Utility Size: `text-xs` (12px) for tiny metadata tags only.*
 
 ### Heading Styles
 - **Main Heading**: Uppercase, tracking-tighter, leading-none/tight, using Inter font family.
-- **Section Labels**: 10px - 11px, font-black, uppercase, tracking-[0.4em] to [0.5em].
+- **Section Labels**: `text-xs`, font-black, uppercase, tracking-widest.
 
 ### Body Text Styles
 - **Primary Body Text**: Use `font-medium` (400-500 weight) with Manrope font family.
 - **Secondary Text**: Use `font-medium` for descriptions and supporting content.
-- **Avoid**: `font-normal` and `font-bold` for body text to maintain consistency.
+- **Avoid**: arbitrary pixel values (e.g., `text-[13px]`, `text-[60px]`). Stick to the scale.
 
 ## 3. UI Elements & Layout
 
-### Section Watermarks (Washed-Out Text)
-Watermarks are placed in the top-right or absolute background of sections.
-- **Style**: `text-[150px]` or larger, `font-black`, `text-aureole-slate`, `uppercase`, `italic`, `tracking-tighter`, `opacity-[0.02]`.
-- **Note**: Always follow the italicized look for an "Industrial Speed" aesthetic.
+
 
 ### Cards & Grids
 - **Design Strategy**: Utilize a "Spatial Corner Layout" to avoid text clutter.

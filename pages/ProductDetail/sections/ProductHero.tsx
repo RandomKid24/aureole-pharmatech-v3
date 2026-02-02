@@ -74,26 +74,26 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
                         <nav className="flex items-center gap-4 mb-6 flex-wrap">
                             <Link to="/" className="flex items-center gap-2.5 text-slate-400 hover:text-aureole-blue transition-all group">
                                 <Home size={16} className="group-hover:scale-110 transition-transform" />
-                                <span className="text-[13px] font-bold tracking-wider">Home</span>
+                                <span className="text-xs font-bold tracking-wider">Home</span>
                             </Link>
 
                             <ChevronRight size={14} className="text-slate-300" />
 
-                            <Link to="/products" className="text-slate-400 hover:text-aureole-blue transition-all text-[13px] font-bold tracking-wider">
+                            <Link to="/products" className="text-slate-400 hover:text-aureole-blue transition-all text-xs font-bold tracking-wider">
                                 Products
                             </Link>
 
                             {hierarchy && (
                                 <>
                                     <ChevronRight size={14} className="text-slate-300" />
-                                    <Link to={hierarchy.path} className="text-slate-400 hover:text-aureole-blue transition-all text-[13px] font-bold tracking-wider line-clamp-1 capitalize">
+                                    <Link to={hierarchy.path} className="text-slate-400 hover:text-aureole-blue transition-all text-xs font-bold tracking-wider line-clamp-1 capitalize">
                                         {hierarchy.category.toLowerCase()}
                                     </Link>
 
                                     {!isRedundantSubtype && (
                                         <>
                                             <ChevronRight size={14} className="text-slate-300" />
-                                            <span className="text-aureole-blue text-[13px] font-black tracking-wider line-clamp-1">
+                                            <span className="text-aureole-blue text-xs font-black tracking-wider line-clamp-1">
                                                 {hierarchy.subType}
                                             </span>
                                         </>
@@ -102,7 +102,7 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
                             )}
 
                             <ChevronRight size={14} className="text-slate-300" />
-                            <span className="text-aureole-slate text-[13px] font-black tracking-wider line-clamp-1">
+                            <span className="text-aureole-slate text-xs font-black tracking-wider line-clamp-1">
                                 {decodedName}
                             </span>
                         </nav>
@@ -111,10 +111,10 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
                     <div className={product.hideHeroImage ? "lg:col-span-12" : "lg:col-span-7"}>
                         <div className="flex items-center gap-4 mb-4">
                             <span className="w-8 h-[2px] bg-aureole-cyan"></span>
-                            <h2 className="text-[12px] font-black font-heading tracking-[0.2em] text-aureole-cyan">Product Overview</h2>
+                            <h2 className="text-xs font-black font-heading tracking-widest text-aureole-cyan">Product Overview</h2>
                         </div>
 
-                        <h1 className="text-3xl lg:text-[60px] 3xl:text-[75px] font-[950] font-heading text-aureole-slate tracking-tighter leading-none mb-10">
+                        <h1 className="text-4xl lg:text-7xl font-black font-heading text-aureole-slate tracking-tighter leading-none mb-10">
                             {decodedName.split(' ').slice(0, -1).join(' ')} <span className="text-aureole-blue">{decodedName.split(' ').slice(-1)}</span>
                         </h1>
 
@@ -123,7 +123,7 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
                                 <div className="space-y-10">
                                     <div className="flex items-center gap-3">
                                         <Settings size={20} className="text-aureole-blue" />
-                                        <h3 className="text-[18px] font-[950] tracking-tight text-slate-900 leading-none">Technical Specification</h3>
+                                        <h3 className="text-xl font-black tracking-tight text-slate-900 leading-none">Technical Specification</h3>
                                     </div>
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
@@ -133,8 +133,8 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
                                                     {React.cloneElement(getSpecIcon(spec.parameter) as React.ReactElement, { size: 18 })}
                                                 </div>
                                                 <div className="flex flex-col gap-1">
-                                                    <span className="text-[10px] font-bold text-slate-400 tracking-wider uppercase">{spec.parameter}</span>
-                                                    <span className="text-[15px] text-slate-900 font-bold leading-snug tracking-tight">
+                                                    <span className="text-xs font-bold text-slate-400 tracking-wider uppercase">{spec.parameter}</span>
+                                                    <span className="text-base text-slate-900 font-bold leading-snug tracking-tight">
                                                         {spec.details}
                                                     </span>
                                                 </div>
