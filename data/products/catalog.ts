@@ -3,7 +3,7 @@ import { Category } from './types';
 export const PRODUCT_CATALOG: Category[] = [
     {
         id: "stability",
-        title: "STABILITY TESTING EQUIPMENTS",
+        title: "Stability Testing Equipments",
         description: "Precision-engineered environmental control systems for accurate temperature and humidity monitoring.",
         subTypes: [
             {
@@ -36,7 +36,7 @@ export const PRODUCT_CATALOG: Category[] = [
     },
     {
         id: "tabletop",
-        title: "TABLE TOP INSTRUMENTS",
+        title: "Table Top Instruments",
         description: "Compact, high-precision laboratory instruments designed for bench-top space optimization.",
         subTypes: [
             {
@@ -55,7 +55,7 @@ export const PRODUCT_CATALOG: Category[] = [
     },
     {
         id: "furniture",
-        title: "LABORATORY FURNITURE",
+        title: "Laboratory Furniture",
         description: "Modular furniture systems and storage solutions designed for ergonomics and durability.",
         subTypes: [
             {

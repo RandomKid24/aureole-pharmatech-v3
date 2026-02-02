@@ -1,6 +1,7 @@
 
 export const slugify = (text: string): string => {
     if (!text) return '';
+    if (text === "Modular Laboratory Furniture") return "lab-furniture";
     return text
         .toLowerCase()
         .replace(/&/g, 'and')

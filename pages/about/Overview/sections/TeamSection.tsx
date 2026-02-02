@@ -14,9 +14,7 @@ const TeamSection: React.FC = () => {
                     <div className="absolute inset-0 bg-slate-50/50 translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out"></div>
 
                     {/* Watermark */}
-                    <div className="absolute top-10 right-10 opacity-[0.02] group-hover:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none hidden lg:block">
-                        <span className="text-[150px] font-black text-aureole-slate group-hover:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">PEOPLE</span>
-                    </div>
+                    {/* Watermark */}
 
                     <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10 text-center">
                         <div className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-slate-200 mb-8 group-hover:border-aureole-blue group-hover:scale-110 transition-all duration-500 bg-white shadow-xl shadow-slate-200/50">

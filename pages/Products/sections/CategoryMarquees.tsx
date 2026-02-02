@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import { slugify } from '@/utils/urlUtils';
 import { PRODUCT_CATALOG, PRODUCT_DETAILS } from '@/data/products';
 
-const ProductMarquee = ({ pNames, animationClass }: { pNames: string[], animationClass: string }) => {
+const ProductMarquee = ({ pNames, animationClass, duration }: { pNames: string[], animationClass: string, duration: string }) => {
     const displayProducts = [...pNames, ...pNames, ...pNames];
 
     return (
@@ -13,7 +13,10 @@ const ProductMarquee = ({ pNames, animationClass }: { pNames: string[], animatio
             <div className="absolute inset-y-0 left-0 w-32 sm:w-64 bg-gradient-to-r from-[#f8fafc] via-[#f8fafc]/80 to-transparent z-10 pointer-events-none"></div>
             <div className="absolute inset-y-0 right-0 w-32 sm:w-64 bg-gradient-to-l from-[#f8fafc] via-[#f8fafc]/80 to-transparent z-10 pointer-events-none"></div>
 
-            <div className={`flex items-center gap-6 whitespace-nowrap ${animationClass} group-hover:[animation-play-state:paused]`}>
+            <div
+                className={`flex items-center gap-6 whitespace-nowrap ${animationClass} group-hover:[animation-play-state:paused]`}
+                style={{ animationDuration: duration }}
+            >
                 {displayProducts.map((pName, idx) => {
                     const productData = PRODUCT_DETAILS[pName];
                     const productImage = productData?.image || (productData?.images && productData.images[0]);
@@ -70,13 +73,16 @@ const CategoryMarquees: React.FC = () => {
                 if (productsWithImages.length === 0) return null;
 
                 const animationClass = catIdx % 2 === 0 ? 'animate-marquee' : 'animate-marquee-reverse';
+                // Calculate duration based on item count to maintain consistent speed
+                // Approx 12s per item ensures visual consistency across different list lengths
+                const duration = `${Math.max(productsWithImages.length * 12, 20)}s`;
 
                 return (
                     <div key={category.id} className="relative group/section">
                         <div className="container mx-auto px-6 lg:px-24 relative z-10">
                             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-8 gap-6">
                                 <div className="max-w-3xl">
-                                    <h3 className="text-4xl lg:text-7xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter leading-none mb-6">
+                                    <h3 className="text-4xl lg:text-7xl font-[950] font-heading text-aureole-slate tracking-tighter leading-none mb-6">
                                         {category.title.split(' ').slice(0, -1).join(' ')} <br />
                                         <span className="text-aureole-blue">{category.title.split(' ').pop()}</span>
                                     </h3>
@@ -109,6 +115,7 @@ const CategoryMarquees: React.FC = () => {
                             <ProductMarquee
                                 pNames={productsWithImages}
                                 animationClass={animationClass}
+                                duration={duration}
                             />
                         </div>
                     </div>

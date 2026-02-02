@@ -59,9 +59,7 @@ const Ventures: React.FC = () => {
     return (
         <section className="py-24 lg:py-40 bg-white relative overflow-hidden group/section">
             {/* Standard Watermark - matching design system */}
-            <div className="absolute top-10 right-10 opacity-[0.02] group-hover/section:opacity-[0.08] transition-all duration-1000 pointer-events-none select-none hidden lg:block">
-                <span className="text-[150px] font-black text-aureole-slate group-hover/section:text-aureole-cyan tracking-tighter leading-none uppercase transition-colors duration-1000">VENTURE</span>
-            </div>
+            {/* Standard Watermark - matching design system */}
 
             <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
                 <SectionHeading
@@ -104,9 +102,9 @@ const Ventures: React.FC = () => {
                                 <h4 className="text-lg font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-tight mb-2 transition-colors">
                                     {v.name}
                                 </h4>
-                                {(v.sub || v.isCurrent) && (
+                                {v.sub && (
                                     <p className={`text-[10px] font-black uppercase tracking-widest mb-6 ${v.isLegacy ? 'text-slate-400' : 'text-aureole-cyan'}`}>
-                                        {v.sub} {v.isCurrent && <span className="inline-block w-1 h-1 bg-aureole-blue rounded-full ml-1 animate-pulse"></span>}
+                                        {v.sub}
                                     </p>
                                 )}
                                 <p className="text-[12px] text-slate-500 font-medium tracking-wider leading-relaxed text-left">
