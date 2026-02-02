@@ -10,12 +10,12 @@ const CertHero: React.FC = () => {
                 <div className="max-w-4xl">
                     <div className="flex items-center gap-4 mb-6">
                         <span className="w-12 h-[1px] bg-aureole-blue"></span>
-                        <h2 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-aureole-blue">CERTIFICATION & COMPLIANCE</h2>
+                        <h2 className="text-[11px] font-black font-heading tracking-[0.4em] text-aureole-blue">CERTIFICATION & COMPLIANCE</h2>
                     </div>
                     <h1 className="text-5xl lg:text-7xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter leading-[0.95] mb-8">
                         QUALITY <br /> <span className="text-aureole-cyan uppercase tracking-normal">Assured.</span>
                     </h1>
-                    <p className="text-slate-500 text-[13px] font-medium tracking-tight leading-relaxed max-w-sm">
+                    <p className="text-slate-500 text-lg lg:text-xl font-medium tracking-tight leading-relaxed max-w-xl">
                         Authentication and regulatory compliance frameworks governing our precision engineering protocols.
                     </p>
                 </div>

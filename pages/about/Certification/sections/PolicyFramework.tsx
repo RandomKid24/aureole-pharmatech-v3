@@ -20,14 +20,14 @@ const PolicyFramework: React.FC = () => {
                     <div>
                         <div className="flex items-center gap-4 mb-8">
                             <span className="w-12 h-[1px] bg-aureole-blue"></span>
-                            <h3 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-aureole-blue">TECHNICAL STANDARDS</h3>
+                            <h3 className="text-[11px] font-black font-heading tracking-[0.4em] text-aureole-blue">TECHNICAL STANDARDS</h3>
                         </div>
-                        <h2 className="text-4xl lg:text-5xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter mb-8">REFERENCED STANDARDS</h2>
+                        <h2 className="text-4xl lg:text-5xl font-[950] font-heading text-aureole-slate tracking-tighter mb-8">REFERENCED STANDARDS</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             {referencedStandards.map((std, i) => (
                                 <div key={i} className="p-4 bg-slate-50 border border-slate-100 rounded-sm hover:border-aureole-cyan transition-colors">
-                                    <p className="text-[10px] font-black text-aureole-slate uppercase mb-1">{std.split(' (')[0]}</p>
-                                    <p className="text-[8px] font-bold text-slate-400 uppercase tracking-widest line-clamp-1">{std.split(' (')[1]?.replace(')', '') || 'Framework'}</p>
+                                    <p className="text-[10px] font-black text-aureole-slate mb-1">{std.split(' (')[0]}</p>
+                                    <p className="text-[8px] font-bold text-slate-400 tracking-widest line-clamp-1">{std.split(' (')[1]?.replace(')', '') || 'Framework'}</p>
                                 </div>
                             ))}
                         </div>
@@ -37,9 +37,9 @@ const PolicyFramework: React.FC = () => {
                     <div>
                         <div className="flex items-center gap-4 mb-8">
                             <span className="w-12 h-[1px] bg-slate-200"></span>
-                            <h3 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-slate-400">QUALITY COMMITMENT</h3>
+                            <h3 className="text-[11px] font-black font-heading tracking-[0.4em] text-slate-400">QUALITY COMMITMENT</h3>
                         </div>
-                        <h2 className="text-4xl lg:text-5xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter mb-8">QUALITY POLICY</h2>
+                        <h2 className="text-4xl lg:text-5xl font-[950] font-heading text-aureole-slate tracking-tighter mb-8">QUALITY POLICY</h2>
                         <p className="text-[14px] font-medium text-slate-500 leading-relaxed mb-8 text-justify">
                             Committed to total customer satisfaction. Our focus remains on continuous improvement and 100% accuracy across all manufacturing processes.
                         </p>
@@ -47,11 +47,11 @@ const PolicyFramework: React.FC = () => {
                             {["Customer Sat", "Modern Tech", "Accuracy", "Improvement"].map((item, i) => (
                                 <div key={i} className="bg-white p-6 flex flex-col items-center text-center">
                                     <CheckCircle2 size={16} className={i % 2 === 0 ? "text-aureole-cyan mb-2" : "text-aureole-blue mb-2"} />
-                                    <span className="text-[9px] font-black text-aureole-slate uppercase tracking-widest">{item}</span>
+                                    <span className="text-[9px] font-black text-aureole-slate tracking-widest">{item}</span>
                                 </div>
                             ))}
                         </div>
-                        <a href="/compliance/Quality Policy.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-aureole-blue text-[10px] font-black uppercase tracking-widest hover:text-aureole-cyan transition-all">
+                        <a href="/compliance/Quality Policy.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-aureole-blue text-[10px] font-black tracking-widest hover:text-aureole-cyan transition-all">
                             <Download size={14} /> Get Full Policy PDF
                         </a>
                     </div>

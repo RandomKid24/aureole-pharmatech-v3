@@ -6,18 +6,18 @@ const OurUnitsContact: React.FC = () => {
     <section id="contact" className="py-12 lg:py-16 bg-white relative overflow-hidden group/section">
 
       <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-start">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-24">
 
-          <div className="lg:col-span-12 xl:col-span-5">
+          <div className="lg:col-span-12 xl:col-span-5 flex flex-col h-full">
             <div className="flex items-center gap-4 mb-8">
               <span className="w-12 h-[2px] bg-aureole-blue"></span>
               <h2 className="text-[12px] font-black uppercase tracking-[0.4em] text-aureole-blue">LOCATION</h2>
             </div>
             <h3 className="text-5xl sm:text-7xl lg:text-8xl font-black text-[#001529] leading-[0.85] tracking-tighter uppercase mb-12">
-              OUR <br /> <span className="text-aureole-blue">UNITS.</span>
+              OUR <br /> <span className="text-aureole-blue">UNIT</span>
             </h3>
 
-            <div className="w-full h-[400px] sm:h-[500px] rounded-sm overflow-hidden border border-slate-100 shadow-2xl transition-all duration-700">
+            <div className="w-full flex-1 min-h-[400px] sm:min-h-[500px] rounded-sm overflow-hidden border border-slate-100 shadow-2xl transition-all duration-700">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.939773140443!2d73.975841775226!3d19.884764881493496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddbbc51726bf65%3A0x1346993e205c4667!2sAureole%20Pharma-Tech%20(Mfg.of%20Stability%20Chambers%20%2C%20autoclave%20and%20table%20top%20equipments)!5e0!3m2!1sen!2sin!4v1767930922662!5m2!1sen!2sin"
                 width="100%"
