@@ -118,46 +118,56 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product, productName }) => {
                                 const customImg = (text: string) => {
                                     const lowerText = text.toLowerCase();
                                     const iconMapping: Record<string, string> = {
-                                        '21 cfr': '21-cfr-part-11-compliance.jpeg',
-                                        'compliance': '21-cfr-part-11-compliance.jpeg',
-                                        'mobile alert': 'mobile-alert-system.jpeg',
-                                        'door access': 'door-access-system.jpeg',
-                                        'touch screen': 'touch-screen-display.jpeg',
-                                        'hmi': 'touch-screen-display.jpeg',
-                                        'ethernet': 'ethernet-communication.jpeg',
-                                        'refrigeration system': 'standby-refrigeration-system.jpeg',
-                                        'humidity system': 'standby-humidity-system.jpeg',
-                                        'alarm system': 'alarm-system.jpeg',
-                                        'graphical analysis': 'graphical-analysis.jpeg',
-                                        'real time analysis': 'real-time-analysis.jpeg',
-                                        'audit support': 'audit-support.jpeg',
-                                        'documentation': 'documentation.jpeg',
-                                        'multi browser': 'multi-browser-support.jpeg',
-                                        'connectivity': 'unlimited-equipment-connectivity.jpeg',
-                                        'password encryption': 'password-encryption.jpeg',
-                                        'safety': 'safety.jpeg',
-                                        'hooter': 'hooter.png',
-                                        'scanner': 'scanner.png',
-                                        'extra tray': 'extra-trays.png',
-                                        'trays': 'extra-trays.png',
-                                        'water tank': 'water-tank.png',
-                                        'steam tank': 'water-tank.png',
-                                        'tank': 'water-tank.png',
-                                        'inner outer door': 'inner-door.png',
-                                        'door': 'inner-door.png',
-                                        'master & standby sensor': 'master-sensor.png',
-                                        'stand by sensor': 'master-sensor.png',
-                                        'sensor': 'master-sensor.png',
-                                        'low water': 'low-water.png',
-                                        'ss door': 'inner-door.png',
-                                        'two door': 'inner-door.png',
-                                        'full door': 'inner-door.png',
-                                        'viewing window': 'inner-door.png',
-                                        'heavy duty refrigeration': 'standby-refrigeration-system.jpeg',
-                                        'uv light': 'safety.jpeg',
-                                        'person trap': 'alarm-system.jpeg',
-                                        'split type': 'standby-refrigeration-system.jpeg',
-                                        'racks': 'extra-trays.png'
+                                        '21 cfr': '21 CFR part 11 Compliance.png',
+                                        'compliance': '21 CFR part 11 Compliance.png',
+                                        'mobile alert': 'Mobile Alert System.png',
+                                        'door access': 'Door Access System.png',
+                                        'biometric': 'Door Access System (Numeric_Biometric).png',
+                                        'touch screen': 'Touch Screen Display.png',
+                                        'hmi': '7 inch Touch Screen HMI.png',
+                                        'ethernet': 'Ethernet Communication.png',
+                                        'refrigeration system': 'Heavy Duty refrigeration system.png',
+                                        'refrigeration': 'Heavy Duty refrigeration system.png',
+                                        'humidity system': 'Standby Humidity System.png',
+                                        'alarm system': 'Alarm System.png',
+                                        'graphical analysis': 'Graphical Analysis.png',
+                                        'real time analysis': 'Real Time Analysis.png',
+                                        'audit support': 'Audit Support.png',
+                                        'documentation': 'Documentation.png',
+                                        'multi browser': 'Multi Browser Support.png',
+                                        'connectivity': 'Unlimited Equipment Connectivity.png',
+                                        'password encryption': 'Password Encryption.png',
+                                        'safety': 'Sefety.png',
+                                        'hooter': 'Hooter System.png',
+                                        'scanner': 'Scanner 8 pt. temperature & humidity sensor.png',
+                                        'extra tray': 'Extra Trays.png',
+                                        'trays': 'Racks with trays.png',
+                                        'water tank': 'Water & steam tank.png',
+                                        'steam tank': 'Water & steam tank.png',
+                                        'tank': 'Water & steam tank.png',
+                                        'inner outer door': 'Inner outer door with proof silicon.png',
+                                        'door': 'Inner outer door with proof silicon.png',
+                                        'master & standby sensor': 'Master & stand by sensor.png',
+                                        'stand by sensor': 'Master & stand by sensor.png',
+                                        'sensor': 'Master & stand by sensor.png',
+                                        'low water': 'Low water indication.png',
+                                        'ss door': 'SS Door with gasket.png',
+                                        'two door': 'Two Door - Full view inner glass door & outer SS door & leakage proof silicon rubber gasket.png',
+                                        'full door': 'Full Door is of toughened glass.png',
+                                        'viewing window': 'Viewing window with toughened glass.png',
+                                        'heavy duty': 'Heavy Duty refrigeration system.png',
+                                        'uv light': 'UV lights get switched off automatically once the door is opened.png',
+                                        'person trap': 'Person trap alarm.png',
+                                        'split type': 'Split type refrigeration system.png',
+                                        'racks': 'Racks with trays.png',
+                                        'insulation': 'Insulation of 60 mm.png',
+                                        'lux meter': 'LUX Meter.png',
+                                        'printing': 'Printing facility.png',
+                                        'vacuum gauge': 'Vacuum Gauge (for Vacuum Oven).png',
+                                        'vacuum pump': 'Vacuum Pump (for Vacuum Oven).png',
+                                        'mirror finish': 'Inner Mirror finish & outer Matt finish.png',
+                                        'uniform light': 'Uniform light distribution.png',
+                                        'high temperature': 'High temperature cut-off Settable thermostat.png',
                                     };
 
                                     const sortedKeys = Object.keys(iconMapping).sort((a, b) => b.length - a.length);
@@ -171,12 +181,17 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product, productName }) => {
 
                                 if (imgName) {
                                     return (
-                                        <div key={i} className="group flex flex-col items-center justify-center transition-all duration-300 hover:scale-105">
-                                            <img
-                                                src={`/products/attributes-icons/${imgName}`}
-                                                alt={item}
-                                                className="w-28 h-28 sm:w-32 sm:h-32 lg:w-40 lg:h-40 object-contain"
-                                            />
+                                        <div key={i} className="group flex flex-col items-center text-center transition-all duration-300">
+                                            <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 flex items-center justify-center mb-3 transition-transform duration-300 group-hover:scale-105">
+                                                <img
+                                                    src={`/products/attributes-icons/${imgName}`}
+                                                    alt={item}
+                                                    className="w-full h-full object-contain drop-shadow-sm"
+                                                />
+                                            </div>
+                                            <span className="text-[10px] sm:text-[11px] uppercase font-bold text-slate-600 tracking-tight leading-tight max-w-[140px] px-2 group-hover:text-aureole-blue transition-colors">
+                                                {item}
+                                            </span>
                                         </div>
                                     );
                                 }
