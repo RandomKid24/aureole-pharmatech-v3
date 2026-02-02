@@ -193,7 +193,7 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product }) => {
                                                                 />
                                                             </div>
                                                         )}
-                                                        <div className="uppercase tracking-widest">
+                                                        <div className="tracking-widest">
                                                             {cell.content}
                                                         </div>
                                                     </th>
