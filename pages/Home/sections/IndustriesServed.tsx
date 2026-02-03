@@ -22,7 +22,7 @@ const SECTORS_DATA = [
     icon: <Activity className="w-8 h-8" />,
     image: '/industries/hospital.png',
     desc: 'Sterilization and temperature-controlled machinery for surgical environments and pharmacy storage.',
-    capabilities: ['Sterilization', 'Clean Rooms', 'Sample Storage']
+    capabilities: ['Sterilization', 'Critical Care', 'Sample Storage']
   },
   {
     id: '03',

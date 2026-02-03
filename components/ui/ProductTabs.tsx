@@ -5,7 +5,7 @@ import {
     Network, Monitor, AlertTriangle, Lock, Key, Activity,
     Smartphone, Fingerprint, Box, Lightbulb, Wind, Droplets,
     Columns, Move, FileCheck, Smartphone as Phone, Bell,
-    HeartPulse, Microscope, FlaskConical, Dna, Settings, Snowflake, Gauge
+    HeartPulse, Microscope, FlaskConical, Dna, Settings, Snowflake, Gauge, Clock, Maximize
 } from 'lucide-react';
 
 interface ProductTabsProps {
@@ -19,8 +19,41 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product, productName }) => {
         "Oil Bath", "Dry Bath", "Air Sampler"
     ].includes(productName || "");
 
+    const isCleanroom = [
+        "Static Pass Box", "Dynamic Pass Box", "Laminar Air Flow",
+        "Sampling / Dispensing Booth", "Biosafety Cabinet"
+    ].includes(productName || "");
+
     const getIconForItem = (text: string, defaultIcon: React.ReactNode, iconSize: number = 32) => {
         const lowerText = text.toLowerCase();
+
+        // Cleanroom Equipment Specific Icons
+        if (lowerText.includes('hepa') || lowerText.includes('ulpa') || lowerText.includes('filtration') || lowerText.includes('filter')) return <Wind size={iconSize} />;
+        if (lowerText.includes('laminar') || lowerText.includes('airflow') || lowerText.includes('downflow')) return <Wind size={iconSize} />;
+        if (lowerText.includes('iso 5') || lowerText.includes('iso 7') || lowerText.includes('class 100')) return <ShieldCheck size={iconSize} />;
+        if (lowerText.includes('gmp') || lowerText.includes('who') || lowerText.includes('usfda')) return <FileCheck size={iconSize} />;
+        if (lowerText.includes('ss304') || lowerText.includes('ss316') || lowerText.includes('stainless steel')) return <Box size={iconSize} />;
+        if (lowerText.includes('interlock') || lowerText.includes('door')) return <Lock size={iconSize} />;
+        if (lowerText.includes('uv') || lowerText.includes('sterilization')) return <Lightbulb size={iconSize} />;
+        if (lowerText.includes('magnehelic') || lowerText.includes('pressure')) return <Gauge size={iconSize} />;
+        if (lowerText.includes('velocity') || lowerText.includes('uniform')) return <Activity size={iconSize} />;
+        if (lowerText.includes('containment') || lowerText.includes('protection')) return <ShieldCheck size={iconSize} />;
+        if (lowerText.includes('anti-static') || lowerText.includes('work surface')) return <Box size={iconSize} />;
+        if (lowerText.includes('ergonomic') || lowerText.includes('operator')) return <Activity size={iconSize} />;
+        if (lowerText.includes('exhaust') || lowerText.includes('ducting')) return <Wind size={iconSize} />;
+        if (lowerText.includes('validation') || lowerText.includes('dq/iq/oq')) return <FileCheck size={iconSize} />;
+        if (lowerText.includes('data logging') || lowerText.includes('monitoring')) return <Database size={iconSize} />;
+        if (lowerText.includes('remote') || lowerText.includes('connectivity')) return <Network size={iconSize} />;
+        if (lowerText.includes('digital') || lowerText.includes('display') || lowerText.includes('control panel')) return <Monitor size={iconSize} />;
+        if (lowerText.includes('electromagnetic')) return <Cpu size={iconSize} />;
+        if (lowerText.includes('blower') || lowerText.includes('fan')) return <Wind size={iconSize} />;
+        if (lowerText.includes('led') || lowerText.includes('lighting')) return <Lightbulb size={iconSize} />;
+        if (lowerText.includes('glass') || lowerText.includes('sash')) return <Box size={iconSize} />;
+        if (lowerText.includes('alarm') || lowerText.includes('alert')) return <Bell size={iconSize} />;
+        if (lowerText.includes('timer') || lowerText.includes('programmable')) return <Clock size={iconSize} />;
+        if (lowerText.includes('nsf') || lowerText.includes('en standard')) return <FileCheck size={iconSize} />;
+        if (lowerText.includes('biosafety') || lowerText.includes('biological')) return <ShieldCheck size={iconSize} />;
+        if (lowerText.includes('custom size') || lowerText.includes('custom dimension')) return <Maximize size={iconSize} />;
 
         // Fallback to Lucide Icons
         if (lowerText.includes('plc') || lowerText.includes('control') || lowerText.includes('processor')) return <Cpu size={iconSize} />;
@@ -98,10 +131,10 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product, productName }) => {
             <div className="p-8">
                 {tabs.map((tab) => (
                     <div key={tab.id} className={`${activeTab === tab.id ? 'block animate-in fade-in duration-500' : 'hidden'}`}>
-                        <div className={`grid gap-6 ${isTableTop ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4' : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'}`}>
+                        <div className={`grid gap-6 ${(isTableTop || isCleanroom) ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4' : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'}`}>
                             {tab.data.map((item: string, i: number) => {
-                                // Special Compact Layout for Table Top Products
-                                if (isTableTop) {
+                                // Special Compact Layout for Table Top & Cleanroom Products
+                                if (isTableTop || isCleanroom) {
                                     return (
                                         <div key={i} className="flex items-center gap-4 p-4 rounded-lg border border-slate-100 bg-slate-50/30 hover:bg-white hover:border-aureole-cyan/30 hover:shadow-sm transition-all group">
                                             <div className="text-aureole-blue shrink-0 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all">

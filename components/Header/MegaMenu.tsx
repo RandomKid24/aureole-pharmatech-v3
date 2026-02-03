@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FlaskConical, Microscope, Hammer, ArrowRight } from 'lucide-react';
+import { FlaskConical, Microscope, Hammer, Shield, ArrowRight } from 'lucide-react';
 
 interface MegaMenuProps {
     isOpen: boolean;

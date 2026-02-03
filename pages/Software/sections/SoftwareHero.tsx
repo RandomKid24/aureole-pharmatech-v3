@@ -1,41 +1,40 @@
 
 import React from 'react';
-import { ShieldCheck } from 'lucide-react';
 
 const SoftwareHero: React.FC = () => {
     return (
-        <section className="relative py-16 sm:py-32 overflow-hidden border-b border-slate-100 bg-white group">
+        <section className="relative min-h-[50vh] flex items-center bg-white pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden border-b border-slate-200">
+            <div className="absolute inset-0 z-0 opacity-[0.03] bg-[radial-gradient(#0079ac_1px,transparent_1px)] [background-size:40px_40px]"></div>
 
-
-            <div className="container mx-auto px-6 sm:px-12 lg:px-24 relative z-10 text-center lg:text-left">
-                <div className="max-w-5xl mx-auto lg:mx-0">
-                    <div className="flex items-center justify-center lg:justify-start gap-4 mb-8 sm:mb-10">
-                        <span className="w-8 sm:w-12 h-[2px] bg-aureole-blue"></span>
-                        <h2 className="text-xs font-black tracking-widest text-aureole-blue">Advanced Compliance</h2>
+            <div className="container mx-auto px-6 sm:px-12 lg:px-24 relative z-10">
+                <div className="max-w-5xl">
+                    {/* 21 CFR Badge - Unique Design */}
+                    <div className="inline-flex items-center gap-3 mb-8 group">
+                        <div className="relative">
+                            <div className="absolute inset-0 bg-aureole-blue/20 blur-xl"></div>
+                            <div className="relative px-6 py-2 bg-gradient-to-r from-aureole-blue to-aureole-cyan">
+                                <p className="text-xs font-black font-heading text-white tracking-[0.3em]">
+                                    21 CFR PART 11
+                                </p>
+                            </div>
+                        </div>
+                        <span className="text-xs font-bold font-sans text-slate-500 tracking-wider">Compliant</span>
                     </div>
-                    <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black font-heading text-[#001529] tracking-tighter leading-none mb-8 sm:mb-12">
-                        Introducing <br /> <span className="text-aureole-cyan tracking-normal">SIS-APP.</span>
+
+                    {/* Title - Display Size */}
+                    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black font-heading text-aureole-slate tracking-tighter leading-none mb-6">
+                        SIS-<span className="text-aureole-cyan">APP</span>
                     </h1>
 
-                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start pt-4">
-                        <div className="space-y-6">
-                            <p className="text-lg lg:text-xl text-slate-700 font-bold leading-tight tracking-tight">
-                                Secure and Integrated Solutions for <span className="text-aureole-cyan">Applications, Products, and Processes.</span>
-                            </p>
-                            <p className="text-base font-medium text-slate-500 tracking-tight leading-relaxed">
-                                In the fast-paced landscape of today's business world, the need for secure and seamlessly integrated solutions has reached unprecedented levels. SIS-APP delivers the utmost protection and efficiency.
-                            </p>
-                        </div>
-                        <div className="space-y-6 lg:pt-1">
-                            <div className="inline-flex items-center gap-3 bg-slate-50 border border-slate-100 px-5 py-3 rounded-px">
-                                <ShieldCheck className="w-5 h-5 text-aureole-cyan" />
-                                <span className="text-xs font-black tracking-widest text-[#001529]">21-CFR Part 11 Compliant</span>
-                            </div>
-                            <p className="text-base font-medium text-slate-500 tracking-tight leading-relaxed italic border-l-2 border-slate-200 pl-6">
-                                "Managing sensitive data across various applications while guaranteeing robust security and compliance with defined procedures."
-                            </p>
-                        </div>
-                    </div>
+                    {/* Subtitle - Subtitle Size */}
+                    <p className="text-xl font-bold font-heading text-aureole-cyan mb-6 tracking-tight">
+                        Pharmaceutical Monitoring Software
+                    </p>
+
+                    {/* Description - Body Size */}
+                    <p className="text-base font-sans text-slate-500 font-medium leading-relaxed max-w-3xl">
+                        Advanced monitoring software for pharmaceutical stability chambers and specialized laboratory systems. Features secure e-records, e-signatures, comprehensive audit trails, and unlimited scalability.
+                    </p>
                 </div>
             </div>
         </section>

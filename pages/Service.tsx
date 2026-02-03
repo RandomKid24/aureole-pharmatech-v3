@@ -4,7 +4,6 @@ import ServiceHero from './Service/sections/ServiceHero';
 import ExcellenceGrid from './Service/sections/ExcellenceGrid';
 import PhilosophySection from './Service/sections/PhilosophySection';
 import ServiceCenters from './Service/sections/ServiceCenters';
-import FaqSection from './Service/sections/FaqSection';
 
 const Service: React.FC = () => {
     useEffect(() => {
@@ -17,7 +16,6 @@ const Service: React.FC = () => {
             <ExcellenceGrid />
             <PhilosophySection />
             <ServiceCenters />
-            <FaqSection />
         </div>
     );
 };

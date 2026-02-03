@@ -29,6 +29,11 @@ import {
     ssAccessories,
     laboratoryFurniture
 } from './furniture/lab-furniture-data';
+import { staticPassBox } from './cleanroom/static-pass-box';
+import { dynamicPassBox } from './cleanroom/dynamic-pass-box';
+import { laminarAirFlow } from './cleanroom/laminar-air-flow';
+import { samplingDispensingBooth } from './cleanroom/sampling-dispensing-booth';
+import { biosafetyCabinet } from './cleanroom/biosafety-cabinet';
 
 export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     "Humidity Chamber": humidityStabilityChamber,
@@ -65,4 +70,9 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     "Laboratory Sinks": labAccessories,
     "Laboratory Fittings": laboratoryFittings,
     "Lab Accessories": labAccessories,
+    "Static Pass Box": staticPassBox,
+    "Dynamic Pass Box": dynamicPassBox,
+    "Laminar Air Flow": laminarAirFlow,
+    "Sampling / Dispensing Booth": samplingDispensingBooth,
+    "Biosafety Cabinet": biosafetyCabinet,
 };

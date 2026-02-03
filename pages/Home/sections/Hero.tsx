@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
               </h1>
 
               <p className="text-lg lg:text-xl text-slate-500 font-medium leading-relaxed max-w-xl mb-14">
-                Advanced environmental machinery engineered for Pharmaceutical Stability and Cleanroom monitoring.
+                Advanced environmental machinery engineered for Pharmaceutical Stability and specialized laboratory instrumentation.
               </p>
 
 

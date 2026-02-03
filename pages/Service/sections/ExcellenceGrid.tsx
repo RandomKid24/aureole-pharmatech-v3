@@ -11,9 +11,11 @@ const ExcellenceGrid: React.FC = () => {
                     <div className="space-y-8">
                         <div className="flex items-center gap-4">
                             <ShieldCheck className="w-8 h-8 text-aureole-blue" />
-                            <h3 className="text-3xl lg:text-4xl font-black font-heading uppercase tracking-tighter text-[#001529] leading-none">QUALITY STANDARDS</h3>
+                            <h3 className="text-3xl lg:text-4xl font-black font-heading tracking-tighter text-aureole-slate leading-none">
+                                Quality <span className="text-aureole-blue">Standards</span>
+                            </h3>
                         </div>
-                        <p className="text-[15px] font-medium text-slate-500 tracking-tight leading-relaxed text-left">
+                        <p className="text-base font-sans font-medium text-slate-500 tracking-tight leading-relaxed text-left">
                             Quality is uncompromising at Aureole PharmaTech. The company maintains stringent regulatory compliance and holds multiple certifications that reflect international quality benchmarks. Internally enforced quality control processes ensure that every product dispatched is safe, effective, and reliable.
                         </p>
                     </div>
@@ -22,9 +24,11 @@ const ExcellenceGrid: React.FC = () => {
                     <div className="space-y-8">
                         <div className="flex items-center gap-4">
                             <Factory className="w-8 h-8 text-aureole-cyan" />
-                            <h3 className="text-3xl lg:text-4xl font-black font-heading uppercase tracking-tighter text-[#001529] leading-none">MANUFACTURING EXCELLENCE</h3>
+                            <h3 className="text-3xl lg:text-4xl font-black font-heading tracking-tighter text-aureole-slate leading-none">
+                                Manufacturing <span className="text-aureole-cyan">Excellence</span>
+                            </h3>
                         </div>
-                        <p className="text-[15px] font-medium text-slate-500 tracking-tight leading-relaxed text-left">
+                        <p className="text-base font-sans font-medium text-slate-500 tracking-tight leading-relaxed text-left">
                             Aureole PharmaTech leverages advanced manufacturing facilities equipped with state-of-the-art technology. Supported by a skilled workforce and continuous training programs, the manufacturing process ensures precision, consistency, and adherence to the highest quality standards.
                         </p>
                     </div>

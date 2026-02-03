@@ -179,3 +179,68 @@ export const FURNITURE_SECTIONS: CategoryDetailSection[] = [
         ]
     }
 ];
+
+export const CLEANROOM_NAV_ITEMS: NavItem[] = [
+    { title: "When", subtitle: "Applications", icon: React.createElement(Clock, { size: 18 }) },
+    { title: "Why", subtitle: "Features & Benefits", icon: React.createElement(Target, { size: 18 }) },
+    { title: "Where", subtitle: "Industries Served", icon: React.createElement(Layers, { size: 18 }) }
+];
+
+export const CLEANROOM_SECTIONS: CategoryDetailSection[] = [
+    {
+        items: [
+            "During material transfer between classified and non-classified areas in GMP facilities",
+            "When sterile product handling and aseptic processing is required",
+            "For contamination-free sampling, weighing, and dispensing of active pharmaceutical ingredients",
+            "During microbiology testing, sterility testing, and cell culture operations",
+            "When conducting cleanroom validation and environmental monitoring",
+            "For sterile compounding and pharmaceutical formulation in controlled environments",
+            "During quality control testing requiring ISO 5 (Class 100) cleanliness",
+            "When biological containment is needed for hazardous materials or pathogens",
+            "For garment and equipment transfer into sterile production areas",
+            "During photostability studies and light-sensitive product handling",
+            "When setting up or upgrading pharmaceutical manufacturing facilities",
+            "For research and development labs requiring contamination control",
+            "During regulatory inspections and GMP compliance audits",
+            "When implementing barrier technology for operator and product protection"
+        ]
+    },
+    {
+        items: [
+            "WHO-GMP, EU-GMP, and USFDA Compliant Design – meets global regulatory standards",
+            "ISO 14644 and ISO 5–8 Cleanroom Standards – validated cleanliness levels",
+            "Pharma-Grade Stainless Steel Construction – SS304/SS316 for corrosion resistance",
+            "HEPA/ULPA Filtration Systems – 99.995% efficiency for particle removal",
+            "Contamination-Control Airflow Design – laminar flow for sterile environments",
+            "Validation-Ready Documentation – DQ/IQ/OQ support for regulatory compliance",
+            "Mechanical & Electromagnetic Interlocks – prevents cross-contamination",
+            "UV Sterilization Systems – effective surface decontamination",
+            "Energy-Efficient Operation – low power consumption with high performance",
+            "Digital Monitoring & Control – real-time airflow and pressure monitoring",
+            "Seamless & Crevice-Free Finish – easy cleaning and sanitization",
+            "Customizable Configurations – tailored to specific facility requirements",
+            "Low Maintenance Design – self-diagnostic features and easy filter access",
+            "Ergonomic Operator Interface – designed for user comfort and safety",
+            "Triple Protection (BSC) – personnel, product, and environmental safety",
+            "Modular & Scalable Systems – adaptable for facility expansion"
+        ]
+    },
+    {
+        items: [
+            "Pharmaceutical Manufacturing – sterile production and aseptic processing",
+            "Biotechnology & Life Sciences – cell culture and biological research",
+            "Hospital & Healthcare Facilities – sterile compounding and preparation",
+            "Microbiology Laboratories – contamination testing and culture work",
+            "Medical Device Manufacturing – cleanroom assembly and packaging",
+            "Cosmetics & Personal Care – sterile formulation and quality control",
+            "Food & Beverage Industry – aseptic processing and packaging",
+            "Research & Development Labs – controlled environment testing",
+            "Quality Control Laboratories – analytical testing and sampling",
+            "Nutraceuticals & Supplements – GMP-compliant manufacturing",
+            "Veterinary Pharmaceuticals – sterile drug production",
+            "Academic & Training Institutes – cleanroom technology education",
+            "Contract Manufacturing Organizations (CMOs) – multi-product facilities",
+            "Regulatory Testing Labs – compliance and validation services"
+        ]
+    }
+];

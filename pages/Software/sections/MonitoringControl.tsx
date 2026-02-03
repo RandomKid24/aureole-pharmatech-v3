@@ -1,54 +1,83 @@
 
 import React from 'react';
-import { Monitor, Activity, ShieldCheck, Eye, Settings } from 'lucide-react';
+import { Monitor, Bell, Settings } from 'lucide-react';
 import LazyImage from '@/components/LazyImage';
 
 const MonitoringControl: React.FC = () => {
     const architectureImg = "/software/architecture.png";
 
     return (
-        <section className="py-24 bg-white">
-            <div className="container mx-auto px-6 lg:px-16">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                    <div className="space-y-12">
-                        <div>
-                            <div className="flex items-center gap-4 mb-6">
-                                <Monitor className="w-8 h-8 text-aureole-cyan" />
-                                <h3 className="text-3xl lg:text-5xl font-black font-heading tracking-tighter text-[#001529] leading-[0.9]">Advanced Monitoring <br /> & Control</h3>
-                            </div>
-                            <p className="text-[15px] font-medium text-slate-500 tracking-tight leading-relaxed text-left">
-                                The software enables precise monitoring and control with a live equipment status dashboard featuring scrolling notifications. It supports multiple equipment configurations, real-time display of connected/disconnected chambers, and provides settable SMS & email alerts for immediate deviation response.
-                            </p>
+        <section className="py-24 bg-white overflow-hidden">
+            <div className="container mx-auto px-6 sm:px-12 lg:px-24">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    {/* Left Column - Info */}
+                    <div className="max-w-xl">
+                        <div className="mb-6">
+                            <h2 className="text-5xl font-black font-heading tracking-tighter text-aureole-slate leading-none">
+                                Equipment & Chamber <span className="text-aureole-cyan">Management</span>
+                            </h2>
                         </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8">
-                            {[
-                                { text: "Multi-Chamber Configuration", icon: <Activity className="w-4 h-4" /> },
-                                { text: "Door Open/Close Control", icon: <Settings className="w-4 h-4" /> },
-                                { text: "Secure PID Parameter Access", icon: <ShieldCheck className="w-4 h-4" /> },
-                                { text: "RTC Synchronization (Auto/Manual)", icon: <Activity className="w-4 h-4" /> },
-                                { text: "Individual Sensor Alarm Logging", icon: <Eye className="w-4 h-4" /> },
-                                { text: "Bulk Alarm Acknowledgment", icon: <ShieldCheck className="w-4 h-4" /> },
-                                { text: "SMS & Email Alerts", icon: <Activity className="w-4 h-4" /> },
-                                { text: "Real-Time PLC Integration", icon: <Settings className="w-4 h-4" /> }
-                            ].map((item, idx) => (
-                                <div key={idx} className="flex items-center gap-3 p-4 bg-white border border-slate-100">
-                                    <div className="text-aureole-blue">{item.icon}</div>
-                                    <span className="text-[12px] font-black tracking-wide text-[#001529]">{item.text}</span>
+                        <p className="text-base font-sans text-slate-500 font-medium leading-relaxed mb-10">
+                            Real-time monitoring and intelligent control systems for pharmaceutical equipment, ensuring precise operation and immediate notification.
+                        </p>
+
+                        <div className="space-y-8">
+                            {/* Equipment Control */}
+                            <div>
+                                <div className="mb-4">
+                                    <h3 className="text-xs font-black font-heading text-aureole-cyan tracking-widest">
+                                        Equipment Control
+                                    </h3>
                                 </div>
-                            ))}
+                                <ul className="grid grid-cols-1 gap-x-6 gap-y-2">
+                                    {[
+                                        "Multi-chamber configuration",
+                                        "Live status dashboard",
+                                        "Door operation control",
+                                        "Secure PID access"
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-start gap-2 text-base font-sans text-slate-500 font-medium">
+                                            <span className="text-aureole-cyan">•</span>
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            {/* Alarms */}
+                            <div>
+                                <div className="mb-4">
+                                    <h3 className="text-xs font-black font-heading text-aureole-deep tracking-widest">
+                                        Alarm & Notifications
+                                    </h3>
+                                </div>
+                                <ul className="grid grid-cols-1 gap-x-6 gap-y-2">
+                                    {[
+                                        "Instant event recording",
+                                        "Secure acknowledgment",
+                                        "SMS & Email alerts",
+                                        "Live scrolling status"
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-start gap-2 text-base font-sans text-slate-500 font-medium">
+                                            <span className="text-aureole-cyan">•</span>
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
-                    <div
-                        className="relative group overflow-hidden border border-slate-100 bg-white p-6 shadow-2xl transition-all duration-700 aspect-square flex items-center justify-center"
-                    >
-                        <LazyImage
-                            src={architectureImg}
-                            alt="Software Architecture Diagram"
-                            className="w-full h-auto transition-all duration-1000 object-contain p-4"
-                        />
-                        <div className="absolute inset-0 bg-aureole-slate/5 pointer-events-none transition-opacity"></div>
+                    {/* Right Column - Image */}
+                    <div className="relative">
+                        <div className="bg-slate-50 p-6 border border-slate-200 shadow-sm">
+                            <LazyImage
+                                src={architectureImg}
+                                alt="Software Architecture Diagram"
+                                className="w-full h-auto object-contain"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

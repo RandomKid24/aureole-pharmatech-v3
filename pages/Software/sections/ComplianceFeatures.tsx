@@ -1,47 +1,127 @@
 
 import React from 'react';
-import { ShieldCheck, UserCheck, History, Lock, HardDrive } from 'lucide-react';
+import { ShieldCheck, UserCheck, Lock, FileCheck } from 'lucide-react';
 
 const ComplianceFeatures: React.FC = () => {
     return (
-        <section className="py-24 border-b border-slate-100 bg-aureole-soft">
-            <div className="container mx-auto px-6 lg:px-16">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-                    <div className="space-y-8">
-                        <div className="flex items-center gap-4">
-                            <ShieldCheck className="w-8 h-8 text-aureole-blue" />
-                            <h3 className="text-3xl lg:text-4xl font-black font-heading tracking-tighter text-[#001529] leading-none">Regulatory Compliance & Data Integrity</h3>
+        <section className="py-24 bg-slate-50">
+            <div className="container mx-auto px-6 sm:px-12 lg:px-24">
+                {/* Section Header */}
+                <div className="max-w-4xl mb-20">
+                    <h2 className="text-5xl font-black font-heading tracking-tighter text-aureole-slate leading-none mb-6">
+                        Regulatory Compliance & <span className="text-aureole-cyan">Data Integrity</span>
+                    </h2>
+                    <p className="text-xl font-sans text-slate-500 font-medium leading-relaxed">
+                        Complete 21 CFR Part 11 compliance with secure electronic records, signatures, and audit trails.
+                    </p>
+                </div>
+
+                {/* Main Content Grid */}
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                    {/* Electronic Signatures - Featured Card */}
+                    <div className="lg:col-span-2 bg-aureole-blue p-10 text-white">
+                        <div className="mb-6">
+                            <h3 className="text-xl font-black font-heading tracking-wide">
+                                Electronic Signatures
+                            </h3>
                         </div>
-                        <div className="space-y-4 text-[15px] font-medium text-slate-500 tracking-tight leading-relaxed text-left">
-                            <p>
-                                <strong>21 CFR Part 11 Compliant Software:</strong> Fully compliant with 21 CFR Part 11 requirements, ensuring secure electronic records and electronic signatures (E-records / E-sign).
-                            </p>
-                            <p>
-                                <strong>Electronic Signatures & Approval Controls:</strong> Features a 3-Level E-Signature workflow (Prepared / Checked / Approved) with mandatory reasons and remarks. Complete paperless operation with controlled approvals and traceability even after role changes.
-                            </p>
-                            <p>
-                                <strong>Audit Trails:</strong> Secure, computer-generated audit trails for every action (User, Equipment, Alarm, Event, SMS & Email) including Who, What, When, and Why (timestamped, non-editable).
-                            </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <ul className="space-y-3">
+                                {[
+                                    "3-Level E-Signature workflow",
+                                    "Prepared / Checked / Approved",
+                                    "Mandatory reason & remarks"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex items-start gap-3 text-base font-sans font-medium">
+                                        <span className="mt-1">•</span>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                            <ul className="space-y-3">
+                                {[
+                                    "Complete paperless operation",
+                                    "Traceable after role changes",
+                                    "Multi-level enforcement"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex items-start gap-3 text-base font-sans font-medium">
+                                        <span className="mt-1">•</span>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
 
-                    <div className="bg-white p-10 border border-slate-100 shadow-xl">
-                        <h4 className="text-[11px] font-black tracking-[0.3em] text-aureole-blue mb-8">User Management & Security</h4>
-                        <div className="space-y-4">
+                    {/* Audit Trails - Side Card */}
+                    <div className="bg-white p-8 border-l-4 border-aureole-cyan">
+                        <div className="mb-6">
+                            <h3 className="text-xs font-black font-heading text-aureole-cyan tracking-widest">
+                                Audit Trails
+                            </h3>
+                        </div>
+                        <ul className="space-y-3">
                             {[
-                                { text: "Unlimited User Creation & Groups", icon: <UserCheck className="w-4 h-4" /> },
-                                { text: "Role-Based Access Control", icon: <Lock className="w-4 h-4" /> },
-                                { text: "Alphanumeric Password Policy", icon: <ShieldCheck className="w-4 h-4" /> },
-                                { text: "Auto-Logout & Startup Lock", icon: <HardDrive className="w-4 h-4" /> },
-                                { text: "Built-In Biometric Integration", icon: <UserCheck className="w-4 h-4" /> },
-                                { text: "Lifetime License (No Forced Renewal)", icon: <History className="w-4 h-4" /> }
-                            ].map((item, idx) => (
-                                <div key={idx} className="flex items-center gap-4 group">
-                                    <div className="text-aureole-cyan transition-all group-hover:scale-110">{item.icon}</div>
-                                    <span className="text-[12px] font-black tracking-wide text-[#001529]">{item.text}</span>
+                                "Computer-generated for every action",
+                                "Tracks User, Equipment, Alarm, Event",
+                                "Timestamped and non-editable",
+                                "Who, What, When, Why"
+                            ].map((item, i) => (
+                                <li key={i} className="flex items-start gap-3 text-base font-sans font-medium text-slate-500">
+                                    <span className="text-aureole-cyan mt-1">•</span>
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+
+                {/* Bottom Grid - User Management & Approval Controls */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    {/* User Management */}
+                    <div className="bg-white p-8">
+                        <div className="mb-6 pb-4 border-b-2 border-aureole-blue/20">
+                            <h3 className="text-xl font-black font-heading text-aureole-slate tracking-tight">
+                                User Management & Security
+                            </h3>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            {[
+                                "Unlimited users & groups",
+                                "Role-based access control",
+                                "Password policy & expiry",
+                                "Auto-logout & locking",
+                                "Biometric integration",
+                                "Lifetime license key"
+                            ].map((item, i) => (
+                                <div key={i} className="flex items-start gap-2">
+                                    <span className="text-aureole-blue mt-1">•</span>
+                                    <span className="text-base font-sans text-slate-500 font-medium">{item}</span>
                                 </div>
                             ))}
                         </div>
+                    </div>
+
+                    {/* Approval Controls - Using Aureole Deep (dark blue) */}
+                    <div className="bg-aureole-deep p-8 text-white">
+                        <div className="mb-6">
+                            <h3 className="text-xl font-black font-heading tracking-wide">
+                                Approval Controls
+                            </h3>
+                        </div>
+                        <ul className="space-y-3">
+                            {[
+                                "Multi-level signature enforcement",
+                                "Mandatory remarks for alarms",
+                                "Secure configuration updates",
+                                "Complete approval workflow"
+                            ].map((item, i) => (
+                                <li key={i} className="flex items-start gap-3 text-base font-sans font-medium">
+                                    <span className="mt-1">•</span>
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
             </div>

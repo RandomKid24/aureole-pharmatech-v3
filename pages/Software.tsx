@@ -5,7 +5,6 @@ import GeneralSoftwareInfo from './Software/sections/GeneralSoftwareInfo';
 import ComplianceFeatures from './Software/sections/ComplianceFeatures';
 import MonitoringControl from './Software/sections/MonitoringControl';
 import DataReporting from './Software/sections/DataReporting';
-import SoftwareFaq from './Software/sections/SoftwareFaq';
 
 const Software: React.FC = () => {
     useEffect(() => {
