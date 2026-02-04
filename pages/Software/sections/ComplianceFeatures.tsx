@@ -19,9 +19,9 @@ const ComplianceFeatures: React.FC = () => {
                 {/* Main Content Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
                     {/* Electronic Signatures - Featured Card */}
-                    <div className="lg:col-span-2 bg-aureole-blue p-10 text-white">
+                    <div className="lg:col-span-2 bg-white p-10 border-t-4 border-aureole-blue shadow-sm">
                         <div className="mb-6">
-                            <h3 className="text-xl font-black font-heading tracking-wide">
+                            <h3 className="text-xl font-black font-heading tracking-wide text-aureole-slate">
                                 Electronic Signatures
                             </h3>
                         </div>
@@ -32,8 +32,8 @@ const ComplianceFeatures: React.FC = () => {
                                     "Prepared / Checked / Approved",
                                     "Mandatory reason & remarks"
                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 text-base font-sans font-medium">
-                                        <span className="mt-1">•</span>
+                                    <li key={i} className="flex items-start gap-3 text-base font-sans font-medium text-slate-600">
+                                        <span className="mt-1 text-aureole-blue">•</span>
                                         {item}
                                     </li>
                                 ))}
@@ -44,8 +44,8 @@ const ComplianceFeatures: React.FC = () => {
                                     "Traceable after role changes",
                                     "Multi-level enforcement"
                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 text-base font-sans font-medium">
-                                        <span className="mt-1">•</span>
+                                    <li key={i} className="flex items-start gap-3 text-base font-sans font-medium text-slate-600">
+                                        <span className="mt-1 text-aureole-blue">•</span>
                                         {item}
                                     </li>
                                 ))}
@@ -60,7 +60,7 @@ const ComplianceFeatures: React.FC = () => {
                                 Audit Trails
                             </h3>
                         </div>
-                        <ul className="space-y-3">
+                        <ul className="space-y-3 relative z-10">
                             {[
                                 "Computer-generated for every action",
                                 "Tracks User, Equipment, Alarm, Event",
@@ -102,22 +102,22 @@ const ComplianceFeatures: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* Approval Controls - Using Aureole Deep (dark blue) */}
-                    <div className="bg-aureole-deep p-8 text-white">
+                    {/* Approval Controls - Using Border instead of Fill */}
+                    <div className="bg-white p-8 border-b-4 border-aureole-deep shadow-sm">
                         <div className="mb-6">
-                            <h3 className="text-xl font-black font-heading tracking-wide">
+                            <h3 className="text-xl font-black font-heading tracking-wide text-aureole-slate">
                                 Approval Controls
                             </h3>
                         </div>
-                        <ul className="space-y-3">
+                        <ul className="space-y-3 relative z-10">
                             {[
                                 "Multi-level signature enforcement",
                                 "Mandatory remarks for alarms",
                                 "Secure configuration updates",
                                 "Complete approval workflow"
                             ].map((item, i) => (
-                                <li key={i} className="flex items-start gap-3 text-base font-sans font-medium">
-                                    <span className="mt-1">•</span>
+                                <li key={i} className="flex items-start gap-3 text-base font-sans font-medium text-slate-600">
+                                    <span className="mt-1 text-aureole-deep">•</span>
                                     {item}
                                 </li>
                             ))}

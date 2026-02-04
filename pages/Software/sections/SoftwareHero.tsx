@@ -4,10 +4,11 @@ import React from 'react';
 const SoftwareHero: React.FC = () => {
     return (
         <section className="relative min-h-[50vh] flex items-center bg-white pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden border-b border-slate-200">
+            {/* Grid Pattern Background */}
             <div className="absolute inset-0 z-0 opacity-[0.03] bg-[radial-gradient(#0079ac_1px,transparent_1px)] [background-size:40px_40px]"></div>
 
-            <div className="container mx-auto px-6 sm:px-12 lg:px-24 relative z-10">
-                <div className="max-w-5xl">
+            <div className="container mx-auto px-6 sm:px-12 lg:px-24 relative z-10 flex items-center justify-between">
+                <div className="max-w-4xl">
                     {/* 21 CFR Badge - Unique Design */}
                     <div className="inline-flex items-center gap-3 mb-8 group">
                         <div className="relative">
@@ -32,9 +33,18 @@ const SoftwareHero: React.FC = () => {
                     </p>
 
                     {/* Description - Body Size */}
-                    <p className="text-base font-sans text-slate-500 font-medium leading-relaxed max-w-3xl">
+                    <p className="text-base font-sans text-slate-500 font-medium leading-relaxed max-w-2xl">
                         Advanced monitoring software for pharmaceutical stability chambers and specialized laboratory systems. Features secure e-records, e-signatures, comprehensive audit trails, and unlimited scalability.
                     </p>
+                </div>
+
+                {/* Washed out Logo Decoration - Fully Visible */}
+                <div className="hidden lg:block relative z-0 opacity-[0.05] grayscale pointer-events-none select-none ml-12">
+                    <img
+                        src="/certification-logos/21CFRpart11.png"
+                        alt="21 CFR Part 11 Background"
+                        className="w-[550px] h-auto"
+                    />
                 </div>
             </div>
         </section>

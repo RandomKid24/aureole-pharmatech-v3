@@ -223,6 +223,34 @@
       transition-delay: 0.1s;
     }
 
+    @keyframes border-beam {
+      100% {
+        offset-distance: 100%;
+      }
+    }
+
+    .border-beam-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .border-beam {
+      pointer-events: none;
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+    }
+
+    .border-beam::after {
+      content: "";
+      position: absolute;
+      aspect-ratio: 1;
+      width: 150px;
+      background: linear-gradient(to right, transparent, #00a6d6, #0079ac, transparent);
+      offset-path: rect(0 100% 100% 0 round 0);
+      animation: border-beam 6s linear infinite;
+    }
+
     ::-webkit-scrollbar {
       width: 6px;
     }

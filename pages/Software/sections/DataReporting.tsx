@@ -40,14 +40,14 @@ const DataReporting: React.FC = () => {
                     {/* Block 2: Intelligence - Center Wide Block */}
                     <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                         {/* Sub-block: Dashboard */}
-                        <div className="bg-aureole-deep p-8 text-white relative group">
-                            <h3 className="text-xs font-black font-heading text-aureole-cyan tracking-widest mb-4">Intelligence</h3>
-                            <p className="text-xl font-black font-heading mb-6 leading-tight">Dashboard & Status Monitoring</p>
-                            <ul className="space-y-2 text-base font-sans text-slate-300 font-medium">
-                                <li>• E-signature status & counts</li>
-                                <li>• Live Input / Output display</li>
-                                <li>• 24-hour alarm summary</li>
-                                <li>• Scrolling notifications</li>
+                        <div className="bg-white p-8 border-t-4 border-aureole-deep shadow-sm relative group">
+                            <h3 className="text-xs font-black font-heading text-aureole-deep tracking-widest mb-4">Intelligence</h3>
+                            <p className="text-xl font-black font-heading mb-6 leading-tight text-aureole-slate">Dashboard & Status Monitoring</p>
+                            <ul className="space-y-2 text-base font-sans text-slate-500 font-medium">
+                                <li><span className="text-aureole-deep mr-2">•</span>E-signature status & counts</li>
+                                <li><span className="text-aureole-deep mr-2">•</span>Live Input / Output display</li>
+                                <li><span className="text-aureole-deep mr-2">•</span>24-hour alarm summary</li>
+                                <li><span className="text-aureole-deep mr-2">•</span>Scrolling notifications</li>
                             </ul>
                         </div>
 
@@ -73,10 +73,10 @@ const DataReporting: React.FC = () => {
                     {/* Block 3: Security & Scale - Right Block */}
                     <div className="lg:col-span-1 flex flex-col gap-4">
                         {/* Backup */}
-                        <div className="flex-1 bg-aureole-blue p-8 text-white">
-                            <Database className="w-6 h-6 mb-4" />
-                            <h4 className="text-xs font-black font-heading text-aureole-cyan tracking-widest mb-2">Security</h4>
-                            <p className="text-base font-sans font-medium opacity-90">Auto/Manual backup, restoration traceability, and compliance archival.</p>
+                        <div className="flex-1 bg-white p-8 border-l-4 border-aureole-blue shadow-sm">
+                            <Database className="w-6 h-6 mb-4 text-aureole-blue" />
+                            <h4 className="text-xs font-black font-heading text-aureole-blue tracking-widest mb-2">Security</h4>
+                            <p className="text-base font-sans font-medium text-slate-500">Auto/Manual backup, restoration traceability, and compliance archival.</p>
                         </div>
                         {/* Scalability */}
                         <div className="flex-1 bg-white p-8 border-r-4 border-aureole-blue shadow-sm">
