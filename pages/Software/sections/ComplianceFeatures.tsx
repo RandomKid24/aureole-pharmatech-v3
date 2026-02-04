@@ -19,7 +19,7 @@ const ComplianceFeatures: React.FC = () => {
                 {/* Main Content Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
                     {/* Electronic Signatures - Featured Card */}
-                    <div className="lg:col-span-2 bg-white p-10 border-t-4 border-aureole-blue shadow-sm">
+                    <div className="lg:col-span-2 bg-white p-8 border-t-4 border-aureole-blue shadow-sm">
                         <div className="mb-6">
                             <h3 className="text-xl font-black font-heading tracking-wide text-aureole-slate">
                                 Electronic Signatures
@@ -54,9 +54,9 @@ const ComplianceFeatures: React.FC = () => {
                     </div>
 
                     {/* Audit Trails - Side Card */}
-                    <div className="bg-white p-8 border-l-4 border-aureole-cyan">
+                    <div className="bg-white p-8 border-l-4 border-aureole-cyan shadow-sm">
                         <div className="mb-6">
-                            <h3 className="text-xs font-black font-heading text-aureole-cyan tracking-widest">
+                            <h3 className="text-xl font-black font-heading tracking-wide text-aureole-slate">
                                 Audit Trails
                             </h3>
                         </div>
@@ -67,7 +67,7 @@ const ComplianceFeatures: React.FC = () => {
                                 "Timestamped and non-editable",
                                 "Who, What, When, Why"
                             ].map((item, i) => (
-                                <li key={i} className="flex items-start gap-3 text-base font-sans font-medium text-slate-500">
+                                <li key={i} className="flex items-start gap-3 text-base font-sans font-medium text-slate-600">
                                     <span className="text-aureole-cyan mt-1">•</span>
                                     {item}
                                 </li>
@@ -79,9 +79,9 @@ const ComplianceFeatures: React.FC = () => {
                 {/* Bottom Grid - User Management & Approval Controls */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {/* User Management */}
-                    <div className="bg-white p-8">
-                        <div className="mb-6 pb-4 border-b-2 border-aureole-blue/20">
-                            <h3 className="text-xl font-black font-heading text-aureole-slate tracking-tight">
+                    <div className="bg-white p-8 border-b-4 border-aureole-deep shadow-sm">
+                        <div className="mb-6">
+                            <h3 className="text-xl font-black font-heading text-aureole-slate tracking-wide">
                                 User Management & Security
                             </h3>
                         </div>
@@ -96,14 +96,14 @@ const ComplianceFeatures: React.FC = () => {
                             ].map((item, i) => (
                                 <div key={i} className="flex items-start gap-2">
                                     <span className="text-aureole-blue mt-1">•</span>
-                                    <span className="text-base font-sans text-slate-500 font-medium">{item}</span>
+                                    <span className="text-base font-sans text-slate-600 font-medium">{item}</span>
                                 </div>
                             ))}
                         </div>
                     </div>
 
-                    {/* Approval Controls - Using Border instead of Fill */}
-                    <div className="bg-white p-8 border-b-4 border-aureole-deep shadow-sm">
+                    {/* Approval Controls */}
+                    <div className="bg-white p-8 border-r-4 border-aureole-blue shadow-sm">
                         <div className="mb-6">
                             <h3 className="text-xl font-black font-heading tracking-wide text-aureole-slate">
                                 Approval Controls

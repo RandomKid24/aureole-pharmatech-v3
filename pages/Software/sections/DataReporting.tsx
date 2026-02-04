@@ -22,15 +22,16 @@ const DataReporting: React.FC = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
                     {/* Block 1: Logging - Large Vertical Block */}
                     <div className="lg:col-span-1 bg-white p-8 border-t-4 border-aureole-blue shadow-sm">
-                        <h3 className="text-xs font-black font-heading text-aureole-cyan tracking-widest mb-6">Data Logging</h3>
-                        <ul className="space-y-4">
+                        <h3 className="text-xl font-black font-heading text-aureole-slate tracking-wide mb-6">Data Logging</h3>
+                        <ul className="space-y-3">
                             {[
                                 "Automated background logging",
                                 "Tabular & graphical reports",
                                 "MKT / MKRH yearly reports",
                                 "Real-time visualization"
                             ].map((item, i) => (
-                                <li key={i} className="text-base font-sans text-slate-600 font-medium leading-tight pb-3 border-b border-slate-100 last:border-0">
+                                <li key={i} className="flex items-start gap-3 text-base font-sans text-slate-600 font-medium">
+                                    <span className="mt-1 text-aureole-blue">•</span>
                                     {item}
                                 </li>
                             ))}
@@ -41,9 +42,8 @@ const DataReporting: React.FC = () => {
                     <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                         {/* Sub-block: Dashboard */}
                         <div className="bg-white p-8 border-t-4 border-aureole-deep shadow-sm relative group">
-                            <h3 className="text-xs font-black font-heading text-aureole-deep tracking-widest mb-4">Intelligence</h3>
-                            <p className="text-xl font-black font-heading mb-6 leading-tight text-aureole-slate">Dashboard & Status Monitoring</p>
-                            <ul className="space-y-2 text-base font-sans text-slate-500 font-medium">
+                            <h3 className="text-xl font-black font-heading text-aureole-slate tracking-wide mb-6">Dashboard & Status Monitoring</h3>
+                            <ul className="space-y-3 text-base font-sans text-slate-600 font-medium">
                                 <li><span className="text-aureole-deep mr-2">•</span>E-signature status & counts</li>
                                 <li><span className="text-aureole-deep mr-2">•</span>Live Input / Output display</li>
                                 <li><span className="text-aureole-deep mr-2">•</span>24-hour alarm summary</li>
@@ -52,17 +52,17 @@ const DataReporting: React.FC = () => {
                         </div>
 
                         {/* Sub-block: Monitoring */}
-                        <div className="bg-white p-8 border-b-4 border-aureole-cyan shadow-sm text-aureole-slate">
-                            <h3 className="text-xs font-black font-heading text-slate-400 tracking-widest mb-4">System Health</h3>
-                            <ul className="space-y-2">
+                        <div className="bg-white p-8 border-b-4 border-aureole-cyan shadow-sm">
+                            <h3 className="text-xl font-black font-heading text-aureole-slate tracking-wide mb-6">System Health</h3>
+                            <ul className="space-y-3">
                                 {[
                                     "Live chamber status",
                                     "User login tracking",
                                     "Alarm & event counts",
                                     "Equipment health"
                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 text-base font-sans font-medium">
-                                        <span className="mt-1">•</span>
+                                    <li key={i} className="flex items-start gap-3 text-base font-sans font-medium text-slate-600">
+                                        <span className="mt-1 text-aureole-cyan">•</span>
                                         {item}
                                     </li>
                                 ))}
@@ -75,14 +75,14 @@ const DataReporting: React.FC = () => {
                         {/* Backup */}
                         <div className="flex-1 bg-white p-8 border-l-4 border-aureole-blue shadow-sm">
                             <Database className="w-6 h-6 mb-4 text-aureole-blue" />
-                            <h4 className="text-xs font-black font-heading text-aureole-blue tracking-widest mb-2">Security</h4>
-                            <p className="text-base font-sans font-medium text-slate-500">Auto/Manual backup, restoration traceability, and compliance archival.</p>
+                            <h4 className="text-xl font-black font-heading text-aureole-slate tracking-wide mb-4">Security</h4>
+                            <p className="text-base font-sans font-medium text-slate-600">Auto/Manual backup, restoration traceability, and compliance archival.</p>
                         </div>
                         {/* Scalability */}
-                        <div className="flex-1 bg-white p-8 border-r-4 border-aureole-blue shadow-sm">
-                            <TrendingUp className="w-6 h-6 text-aureole-blue mb-4" />
-                            <h4 className="text-xs font-black font-heading text-aureole-cyan tracking-widest mb-2">Scalability</h4>
-                            <p className="text-base font-sans text-slate-500 font-medium">Multi-PLC integration & expandable architecture for future chambers.</p>
+                        <div className="flex-1 bg-white p-8 border-r-4 border-aureole-cyan shadow-sm">
+                            <TrendingUp className="w-6 h-6 text-aureole-cyan mb-4" />
+                            <h4 className="text-xl font-black font-heading text-aureole-slate tracking-wide mb-4">Scalability</h4>
+                            <p className="text-base font-sans text-slate-600 font-medium">Multi-PLC integration & expandable architecture for future chambers.</p>
                         </div>
                     </div>
                 </div>
