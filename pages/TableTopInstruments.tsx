@@ -18,7 +18,7 @@ const TableTopInstruments: React.FC = () => {
         <div className="pt-24 min-h-screen bg-white">
             <CategoryHero
                 title="TABLE TOP"
-                subtitle="Instruments"
+                subtitle={<span className="text-aureole-blue">Instruments</span>}
                 watermark="INSTRUMENTS"
                 image="/assets/sketches/table-top-sketch.png"
                 showAccent={false}

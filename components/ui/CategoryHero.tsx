@@ -15,13 +15,13 @@ const CategoryHero: React.FC<CategoryHeroProps> = ({ title, subtitle, descriptio
         <section className="relative min-h-[60vh] flex items-center bg-white pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden border-b border-slate-100">
             <div className="absolute inset-0 z-0 opacity-[0.03] bg-[radial-gradient(#0079ac_1px,transparent_1px)] [background-size:40px_40px]"></div>
 
-            {/* Background Image - Subtle and Centered */}
+            {/* Background Image - Moved to Right and Fully Opaque */}
             {image && (
-                <div className="absolute inset-0 flex items-center justify-center opacity-[0.08] pointer-events-none select-none z-0">
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 flex items-center justify-end pointer-events-none select-none z-0">
                     <img
                         src={image}
                         alt=""
-                        className="w-full max-w-6xl h-auto object-contain"
+                        className="w-full max-w-4xl h-auto object-contain opacity-100"
                     />
                 </div>
             )}
