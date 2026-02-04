@@ -9,7 +9,13 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 z-0 opacity-[0.03] bg-[radial-gradient(#0079ac_1px,transparent_1px)] [background-size:40px_40px]"></div>
 
       {/* Massive Washed Out Logo - Faint and bleeding off-screen */}
-
+      <div className="absolute top-[45%] -right-24 md:-right-48 -translate-y-1/2 w-[700px] md:w-[1000px] lg:w-[1200px] opacity-[0.05] pointer-events-none z-0 select-none">
+        <img
+          src="/aureole-logo.png"
+          alt=""
+          className="w-full h-auto grayscale brightness-0"
+        />
+      </div>
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-24 relative z-10">
         <div className="max-w-7xl">
