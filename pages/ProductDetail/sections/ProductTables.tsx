@@ -153,24 +153,6 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
             {product.complexTable && (
                 <section className="py-8 bg-white">
                     <div className="container mx-auto px-6 lg:px-24">
-                        {/* Compliance Badge for Air Sampler etc */}
-                        {product.complianceBadge && (
-                            <div className="mb-12 flex items-center justify-between gap-6 p-8 bg-slate-50 border-l-[6px] border-aureole-blue shadow-sm">
-                                <span
-                                    className="text-3xl font-[950] tracking-tighter text-[#001529] whitespace-pre-line leading-tight"
-                                    dangerouslySetInnerHTML={{
-                                        __html: product.complianceBadge.text
-                                            .replace(/Now!/g, '<span class="text-aureole-blue text-5xl">Now!</span>')
-                                            .replace(/21 CFR Part 11/g, '<span class="text-aureole-cyan">21 CFR Part 11</span>')
-                                    }}
-                                />
-                                <img
-                                    src={product.complianceBadge.image}
-                                    alt="Compliance Logo"
-                                    className="h-28 w-auto object-contain"
-                                />
-                            </div>
-                        )}
                         <div className="flex items-center gap-4 mb-8">
                             <Box className="text-aureole-blue" size={18} />
                             <h3 className="text-[13px] font-bold text-slate-900">Technical Specifications & Models</h3>

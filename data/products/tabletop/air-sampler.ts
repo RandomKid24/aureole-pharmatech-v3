@@ -113,6 +113,6 @@ export const airSampler: ProductDetail = {
     },
     complianceBadge: {
         text: "Now!\nalso available in 21 CFR Part 11 model",
-        image: "/certification-logos/21CFRpart11.png"
+        image: "/products/attributes-icons/21 CFR part 11 Compliance.png"
     }
 };

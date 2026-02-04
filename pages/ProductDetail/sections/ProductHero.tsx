@@ -109,14 +109,44 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
                     </div>
 
                     <div className={product.hideHeroImage ? "lg:col-span-12" : "lg:col-span-7"}>
-                        <div className="flex items-center gap-4 mb-4">
-                            <span className="w-8 h-[2px] bg-aureole-cyan"></span>
-                            <h2 className="text-xs font-black font-heading tracking-widest text-aureole-cyan">Product Overview</h2>
-                        </div>
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-8">
+                            <div className="flex flex-col gap-4">
+                                <div className="flex items-center gap-4">
+                                    <span className="w-8 h-[2px] bg-aureole-cyan"></span>
+                                    <h2 className="text-xs font-black font-heading tracking-widest text-aureole-cyan">Product Overview</h2>
+                                </div>
+                                <h1 className="text-4xl lg:text-7xl font-black font-heading text-aureole-slate tracking-tighter leading-none">
+                                    {decodedName.split(' ').slice(0, -1).join(' ')} <span className="text-aureole-blue">{decodedName.split(' ').slice(-1)}</span>
+                                </h1>
+                            </div>
 
-                        <h1 className="text-4xl lg:text-7xl font-black font-heading text-aureole-slate tracking-tighter leading-none mb-10">
-                            {decodedName.split(' ').slice(0, -1).join(' ')} <span className="text-aureole-blue">{decodedName.split(' ').slice(-1)}</span>
-                        </h1>
+                            {/* Linked Compliance Badge - Shown only if in add-ons */}
+                            {product.addOnsAttributes && product.addOnsAttributes.some((a: string) => a.toLowerCase().includes('21 cfr')) && (
+                                <Link
+                                    to="/software"
+                                    className="flex items-center gap-8 flex-shrink-0 pt-4 sm:pt-0 group transition-all duration-500 h-full"
+                                >
+                                    <div className="flex items-center justify-center relative">
+                                        {/* Pure Background Bloom - Non-distracting glow */}
+                                        <div className="absolute inset-x-[-20%] inset-y-[-20%] bg-aureole-cyan/0 group-hover:bg-aureole-cyan/10 blur-3xl rounded-full transition-all duration-700 select-none pointer-events-none" />
+
+                                        <img
+                                            src="/products/attributes-icons/21 CFR part 11 Compliance.png"
+                                            alt="21 CFR Part 11 Compliance"
+                                            className="w-24 h-24 object-contain group-hover:scale-105 group-hover:drop-shadow-[0_0_12px_rgba(0,186,219,0.3)] transition-all duration-500 relative z-10"
+                                        />
+                                    </div>
+                                    <div className="flex flex-col border-l-2 border-slate-200 pl-8 py-1 h-full justify-center group-hover:border-aureole-cyan/50 transition-colors duration-500">
+                                        <span className="text-xl sm:text-2xl font-[900] tracking-tighter text-aureole-slate group-hover:text-aureole-blue uppercase leading-none transition-colors duration-500">
+                                            21 CFR <span className="text-aureole-blue group-hover:text-aureole-cyan transition-colors duration-500">PART 11</span>
+                                        </span>
+                                        <span className="text-[10px] sm:text-[12px] font-black text-slate-400 group-hover:text-aureole-cyan/80 uppercase tracking-[0.3em] mt-2 block transition-colors duration-500">
+                                            Standard Compliance
+                                        </span>
+                                    </div>
+                                </Link>
+                            )}
+                        </div>
 
                         <div className={`pt-10 ${product.specifications && product.specifications.length > 0 ? 'border-t border-slate-100 mb-24' : ''}`}>
                             {product.specifications && product.specifications.length > 0 && (
