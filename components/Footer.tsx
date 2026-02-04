@@ -107,21 +107,32 @@ const Footer: React.FC = () => {
                   <div className="space-y-6 relative z-10">
                      <div className="flex gap-4">
                         <MapPin className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />
-                        <span className="text-slate-400 font-bold tracking-[0.15em] text-[10px] leading-relaxed">
+                        <a
+                           href="https://maps.google.com/?q=B-61, Dist, MIDC Area, Malegaon, Maharashtra 422113"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           className="text-slate-400 font-bold tracking-[0.15em] text-[10px] leading-relaxed hover:text-white transition-colors"
+                        >
                            B-61, Dist, MIDC Area, Malegaon, Maharashtra 422113.
-                        </span>
+                        </a>
                      </div>
                      <div className="flex gap-4">
                         <Mail className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />
-                        <span className="text-slate-400 font-bold tracking-[0.15em] text-[10px]">
+                        <a
+                           href="mailto:enquiry@aureolepharmatech.com"
+                           className="text-slate-400 font-bold tracking-[0.15em] text-[10px] hover:text-white transition-colors"
+                        >
                            enquiry@aureolepharmatech.com
-                        </span>
+                        </a>
                      </div>
                      <div className="flex gap-4">
                         <Phone className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />
-                        <span className="text-lg font-bold tracking-tighter text-white">
+                        <a
+                           href="tel:+918600522240"
+                           className="text-lg font-bold tracking-tighter text-white hover:text-aureole-cyan transition-colors"
+                        >
                            +91 86005 22240
-                        </span>
+                        </a>
                      </div>
                   </div>
                </div>

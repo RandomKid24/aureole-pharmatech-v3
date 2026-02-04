@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import CareersHero from './Careers/sections/CareersHero';
 import JobBoard from './Careers/sections/JobBoard';
-import JoinFamilyCTA from './Careers/sections/JoinFamilyCTA';
+
 
 const Listings = [
     {
@@ -108,7 +108,7 @@ const Careers: React.FC = () => {
         <div className="pt-24 min-h-screen bg-white">
             <CareersHero />
             <JobBoard listings={Listings} />
-            <JoinFamilyCTA />
+
         </div>
     );
 };
