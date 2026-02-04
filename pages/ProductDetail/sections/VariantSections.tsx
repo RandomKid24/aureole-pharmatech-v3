@@ -42,7 +42,7 @@ const VariantSections: React.FC<VariantSectionsProps> = ({ product }) => {
                                         <div className="grid grid-cols-2 gap-px bg-slate-200 border border-slate-200 mt-6 shadow-sm overflow-hidden rounded-sm">
                                             {variant.specifications.map((spec: any, sIdx: number) => (
                                                 <div key={sIdx} className="bg-white p-4 flex flex-col gap-1">
-                                                    <span className="text-[8px] font-black uppercase tracking-widest text-slate-400">{spec.parameter}</span>
+                                                    <span className="text-[8px] font-black tracking-widest text-slate-400">{spec.parameter}</span>
                                                     <span className="text-[10px] font-bold text-aureole-slate truncate">{spec.details}</span>
                                                 </div>
                                             ))}

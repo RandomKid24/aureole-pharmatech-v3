@@ -1,6 +1,8 @@
 import { ProductDetail } from './types';
 import { humidityStabilityChamber } from './stability/humidity-stability';
+import { stabilityChamber } from './stability/stability-chamber';
 import { bodIncubator } from './stability/bod-incubator';
+import { coolingIncubator } from './stability/cooling-incubator';
 import { coldChamber } from './stability/cold-chamber';
 import { deepFreezer } from './stability/deep-freezer';
 import { ultraLowDeepFreezer } from './stability/ultra-low-deep-freezer';
@@ -37,7 +39,9 @@ import { biosafetyCabinet } from './cleanroom/biosafety-cabinet';
 
 export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     "Humidity Chamber": humidityStabilityChamber,
+    "Stability Chamber": stabilityChamber,
     "BOD Incubator": bodIncubator,
+    "Cooling Incubator": coolingIncubator,
     "Cold Chamber": coldChamber,
     "Deep Freezer (upto -20°C / upto -40°C)": deepFreezer,
     "Ultra Low Deep Freezer (-80°C)": ultraLowDeepFreezer,

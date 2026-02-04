@@ -1,15 +1,13 @@
 import { ProductDetail } from '../types';
 
-export const humidityStabilityChamber: ProductDetail = {
-    description: "Humidity chambers play a crucial role in a wide array of industries, including electronics, military and defense, pharmaceuticals, transportation, medical devices, shipping, and communications, among others. These chambers are versatile tools that enable companies to conduct various types of testing to ensure the quality and reliability of their products.\n\nAureole Pharma Tech has earned its reputation as a leading manufacturer of humidity chambers by meticulously optimizing every aspect of its chambers. Their temperature and humidity models are designed to provide high-performance and precise control, ensuring that companies can rely on these chambers for their testing needs.\n\nAureole Pharma Tech understands the critical role that testing plays in the success of businesses. They recognize that their chambers must match the same level of care, research, and innovation that companies invest in their products.\n\nOur Humidity chambers are essential tools in industries where environmental conditions significantly affect product performance. Companies rely on our humidity chambers for accurate and controlled testing, and Aureole Pharma Tech stands out as a trusted manufacturer that delivers the precision and reliability needed for successful product development and quality assurance.",
+export const stabilityChamber: ProductDetail = {
+    description: "Aureole Pharma Tech Stability Chambers are specifically designed for long-term stability studies of pharmaceutical products and substances. These chambers provide a high degree of temperature and humidity control accuracy, ensuring compliance with ICH guidelines for stability testing. They are characterized by their superior uniformity and reliability for continuous 24/7 operation.",
     keyFeatures: [],
     specifications: [
         { parameter: "Temperature Range", details: "20°C to 60°C" },
         { parameter: "Humidity Range", details: "40% to 85% RH" },
         { parameter: "Accuracy", details: "± 0.2°C / ± 2.0% RH" },
-        { parameter: "Uniformity", details: "± 1.0°C / ± 3.0% RH" },
-        { parameter: "Test Suitable for", details: "25°C & 60% RH, 30°C & 65% RH, 40°C & 75% RH, 30°C & 75% RH" },
-        { parameter: "Also available with low conditions", details: "25°C & 40% RH, 40°C & 25% RH, 30°C & 35% RH" }
+        { parameter: "Uniformity", details: "± 1.0°C / ± 3.0% RH" }
     ],
     models: [],
     regularAttributes: [
@@ -27,7 +25,7 @@ export const humidityStabilityChamber: ProductDetail = {
         "Door Access System (Numeric/Biometric)",
         "Extra Trays"
     ],
-    image: "/products/StablilityChamber-Standalone/humidity-chamber.png",
+    image: "/products/StablilityChamber-Standalone/stability-chamber.png",
     complexTable: {
         rows: [
             {
@@ -47,42 +45,42 @@ export const humidityStabilityChamber: ProductDetail = {
             },
             {
                 cells: [
-                    { content: "AP_SA_HC-2.0_V**" },
+                    { content: "AP_SA_SC-1.0_V**" },
+                    { content: "100", align: 'center' },
+                    { content: "2", align: 'center' },
+                    { content: "550 x 550 x 30", align: 'center' },
+                    { content: "450 x 450 x 500", align: 'center' },
+                    { content: "575 x 1130 x 1160", align: 'center' }
+                ]
+            },
+            {
+                cells: [
+                    { content: "AP_SA_SC-2.0_V**" },
                     { content: "200", align: 'center' },
                     { content: "2", align: 'center' },
-                    { content: "570 x 450 x 30", align: 'center' },
+                    { content: "600 x 600 x 30", align: 'center' },
                     { content: "660 x 450 x 700", align: 'center' },
                     { content: "785 x 1130 x 1360", align: 'center' }
                 ]
             },
             {
                 cells: [
-                    { content: "AP_SA_HC-4.0_V**" },
+                    { content: "AP_SA_SC-4.0_V**" },
                     { content: "400", align: 'center' },
                     { content: "3", align: 'center' },
-                    { content: "610 x 650 x 30", align: 'center' },
+                    { content: "700 x 700 x 30", align: 'center' },
                     { content: "700 x 650 x 900", align: 'center' },
                     { content: "825 x 1330 x 1560", align: 'center' }
                 ]
             },
             {
                 cells: [
-                    { content: "AP_SA_HC-6.0_V**" },
+                    { content: "AP_SA_SC-6.0_V**" },
                     { content: "600", align: 'center' },
                     { content: "3", align: 'center' },
-                    { content: "660 x 750 x 30", align: 'center' },
+                    { content: "800 x 750 x 30", align: 'center' },
                     { content: "750 x 750 x 1075", align: 'center' },
                     { content: "875 x 1430 x 1735", align: 'center' }
-                ]
-            },
-            {
-                cells: [
-                    { content: "AP_SA_HC-8.0_V**" },
-                    { content: "800", align: 'center' },
-                    { content: "4", align: 'center' },
-                    { content: "660 x 750 x 30", align: 'center' },
-                    { content: "750 x 750 x 1425", align: 'center' },
-                    { content: "875 x 1480 x 2085", align: 'center' }
                 ]
             }
         ],

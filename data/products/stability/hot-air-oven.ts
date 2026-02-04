@@ -37,52 +37,42 @@ export const hotAirOven: ProductDetail = {
             },
             {
                 cells: [
-                    { content: "AP_SA_HO2-1.0_V**" },
-                    { content: "100", align: 'center' },
+                    { content: "AP_SA_HO2-0.96_V**" },
+                    { content: "96", align: 'center' },
                     { content: "2", align: 'center' },
-                    { content: "-", align: 'center' },
+                    { content: "450 x 450 x 45", align: 'center' },
                     { content: "450 x 450 x 500", align: 'center' },
                     { content: "650 x 850 x 1050", align: 'center' }
                 ]
             },
             {
                 cells: [
-                    { content: "AP_SA_HO2-1.5_V**" },
-                    { content: "150", align: 'center' },
+                    { content: "AP_SA_HO2-1.92_V**" },
+                    { content: "192", align: 'center' },
                     { content: "2", align: 'center' },
-                    { content: "-", align: 'center' },
-                    { content: "500 x 500 x 600", align: 'center' },
-                    { content: "700 x 1020 x 1050", align: 'center' }
-                ]
-            },
-            {
-                cells: [
-                    { content: "AP_SA_HO2-2.0_V**" },
-                    { content: "200", align: 'center' },
-                    { content: "2", align: 'center' },
-                    { content: "-", align: 'center' },
+                    { content: "600 x 600 x 45", align: 'center' },
                     { content: "600 x 500 x 675", align: 'center' },
                     { content: "860 x 1020 x 1225", align: 'center' }
                 ]
             },
             {
                 cells: [
-                    { content: "AP_SA_HO2-2.5_V**" },
-                    { content: "250", align: 'center' },
+                    { content: "AP_SA_HO2-2.88_V**" },
+                    { content: "288", align: 'center' },
                     { content: "3", align: 'center' },
-                    { content: "-", align: 'center' },
-                    { content: "600 x 600 x 700", align: 'center' },
-                    { content: "860 x 1120 x 1250", align: 'center' }
+                    { content: "600 x 800 x 60", align: 'center' },
+                    { content: "600 x 600 x 850", align: 'center' },
+                    { content: "860 x 1120 x 1400", align: 'center' }
                 ]
             },
             {
                 cells: [
-                    { content: "AP_SA_HO2-3.0_V**" },
-                    { content: "300", align: 'center' },
+                    { content: "AP_SA_HO2-4.32_V**" },
+                    { content: "432", align: 'center' },
                     { content: "4", align: 'center' },
-                    { content: "-", align: 'center' },
-                    { content: "600 x 600 x 850", align: 'center' },
-                    { content: "860 x 1120 x 1400", align: 'center' }
+                    { content: "800 x 900 x 60", align: 'center' },
+                    { content: "800 x 900 x 1000", align: 'center' },
+                    { content: "1060 x 1420 x 1550", align: 'center' }
                 ]
             }
         ],

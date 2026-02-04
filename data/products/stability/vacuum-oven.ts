@@ -44,8 +44,8 @@ export const vacuumOven: ProductDetail = {
                     { content: "AP_SA_VO-0.15_V**" },
                     { content: "15", align: 'center' },
                     { content: "-", align: 'center' },
-                    { content: "-", align: 'center' },
-                    { content: "22.5 Dia. × 30 Depth", align: 'center' },
+                    { content: "22.5 x 30 x 30", align: 'center' },
+                    { content: "22.5 x 30 x 30", align: 'center' },
                     { content: "-", align: 'center' }
                 ]
             },
@@ -54,8 +54,8 @@ export const vacuumOven: ProductDetail = {
                     { content: "AP_SA_VO-0.21_V**" },
                     { content: "21", align: 'center' },
                     { content: "-", align: 'center' },
-                    { content: "-", align: 'center' },
-                    { content: "30 Dia. × 30 Depth", align: 'center' },
+                    { content: "30 x 30 x 30", align: 'center' },
+                    { content: "30 x 30 x 30", align: 'center' },
                     { content: "-", align: 'center' }
                 ]
             },
@@ -64,8 +64,8 @@ export const vacuumOven: ProductDetail = {
                     { content: "AP_SA_VO-0.27_V**" },
                     { content: "27", align: 'center' },
                     { content: "-", align: 'center' },
-                    { content: "-", align: 'center' },
-                    { content: "30 Dia. × 38 Depth", align: 'center' },
+                    { content: "30 x 38 x 30", align: 'center' },
+                    { content: "30 x 38 x 30", align: 'center' },
                     { content: "-", align: 'center' }
                 ]
             }

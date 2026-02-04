@@ -222,7 +222,7 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product, productName }) => {
                                                     className="w-full h-full object-contain drop-shadow-sm"
                                                 />
                                             </div>
-                                            <span className="text-[10px] sm:text-[11px] uppercase font-bold text-slate-600 tracking-tight leading-tight max-w-[140px] px-2 group-hover:text-aureole-blue transition-colors">
+                                            <span className="text-[10px] sm:text-[11px] font-bold text-slate-600 tracking-tight leading-tight max-w-[140px] px-2 group-hover:text-aureole-blue transition-colors">
                                                 {item}
                                             </span>
                                         </div>
@@ -236,7 +236,7 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product, productName }) => {
                                                 {getIconForItem(item, tab.itemIcon, 32)}
                                             </div>
                                         </div>
-                                        <span className="text-[10px] sm:text-[11px] uppercase font-bold text-slate-500 tracking-tighter leading-tight max-w-[140px] px-2 group-hover:text-aureole-slate transition-colors">
+                                        <span className="text-[10px] sm:text-[11px] font-bold text-slate-500 tracking-tighter leading-tight max-w-[140px] px-2 group-hover:text-aureole-slate transition-colors">
                                             {item}
                                         </span>
                                     </div>

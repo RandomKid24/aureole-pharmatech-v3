@@ -30,21 +30,31 @@ export const muffleFurnace: ProductDetail = {
             },
             {
                 cells: [
-                    { content: "AP_SA_MF-0.6_V**" },
-                    { content: "6", align: 'center' },
+                    { content: "AP_SA_MF-2.0_V**" },
+                    { content: "2", align: 'center' },
                     { content: "-", align: 'center' },
-                    { content: "-", align: 'center' },
+                    { content: "100 x 100 x 100", align: 'center' },
                     { content: "150 x 300 x 150", align: 'center' },
                     { content: "-", align: 'center' }
                 ]
             },
             {
                 cells: [
-                    { content: "AP_SA_MF-0.12_V**" },
-                    { content: "12", align: 'center' },
+                    { content: "AP_SA_MF-5.0_V**" },
+                    { content: "5", align: 'center' },
                     { content: "-", align: 'center' },
-                    { content: "-", align: 'center' },
+                    { content: "150 x 150 x 150", align: 'center' },
                     { content: "200 x 300 x 200", align: 'center' },
+                    { content: "-", align: 'center' }
+                ]
+            },
+            {
+                cells: [
+                    { content: "AP_SA_MF-10.0_V**" },
+                    { content: "10", align: 'center' },
+                    { content: "-", align: 'center' },
+                    { content: "200 x 200 x 250", align: 'center' },
+                    { content: "250 x 350 x 300", align: 'center' },
                     { content: "-", align: 'center' }
                 ]
             }

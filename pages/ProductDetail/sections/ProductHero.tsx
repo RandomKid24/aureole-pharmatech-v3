@@ -133,7 +133,7 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
                                                     {React.cloneElement(getSpecIcon(spec.parameter) as React.ReactElement, { size: 18 })}
                                                 </div>
                                                 <div className="flex flex-col gap-1">
-                                                    <span className="text-xs font-bold text-slate-400 tracking-wider uppercase">{spec.parameter}</span>
+                                                    <span className="text-xs font-bold text-slate-400 tracking-wider transition-colors">{spec.parameter}</span>
                                                     <span className="text-base text-slate-900 font-bold leading-snug tracking-tight">
                                                         {spec.details}
                                                     </span>
