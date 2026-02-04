@@ -31,7 +31,7 @@ const InfrasArchitecture: React.FC = () => {
                 >
                     <div className="flex items-center gap-4">
                         <h2 className="text-4xl lg:text-5xl font-[950] font-heading text-[#001529] tracking-tight leading-none">
-                            Introducing <span className="bg-gradient-to-r from-[#0066CC] to-[#00D4AA] bg-clip-text text-transparent font-[950]">INFRAS</span>
+                            Introducing <span className="text-aureole-blue font-[950]">INFRAS</span>
                         </h2>
                         <div className="w-14 h-14 bg-white border border-slate-100 rounded-lg p-1 shadow-sm">
                             <img src="/infras/INFRAS.png" alt="INFRAS" className="w-full h-full object-contain" />

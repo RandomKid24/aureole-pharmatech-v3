@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import {
     ShieldCheck, Database, Layers, CheckCircle2, Cpu, PlusCircle,
     Network, Monitor, AlertTriangle, Lock, Key, Activity,
@@ -135,14 +136,29 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product, productName }) => {
                             {tab.data.map((item: string, i: number) => {
                                 // Special Compact Layout for Table Top & Cleanroom Products
                                 if (isTableTop || isCleanroom) {
-                                    return (
-                                        <div key={i} className="flex items-center gap-4 p-4 rounded-lg border border-slate-100 bg-slate-50/30 hover:bg-white hover:border-aureole-cyan/30 hover:shadow-sm transition-all group">
+                                    const is21CFR = item.toLowerCase().includes('21 cfr');
+                                    const content = (
+                                        <>
                                             <div className="text-aureole-blue shrink-0 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all">
                                                 {getIconForItem(item, tab.itemIcon, 20)}
                                             </div>
                                             <span className="text-[12px] font-bold text-slate-600 leading-tight group-hover:text-aureole-slate transition-colors">
                                                 {item}
                                             </span>
+                                        </>
+                                    );
+
+                                    if (is21CFR) {
+                                        return (
+                                            <Link key={i} to="/software" className="flex items-center gap-4 p-4 rounded-lg border border-slate-100 bg-slate-50/30 hover:bg-white hover:border-aureole-cyan/30 hover:shadow-sm transition-all group cursor-pointer">
+                                                {content}
+                                            </Link>
+                                        );
+                                    }
+
+                                    return (
+                                        <div key={i} className="flex items-center gap-4 p-4 rounded-lg border border-slate-100 bg-slate-50/30 hover:bg-white hover:border-aureole-cyan/30 hover:shadow-sm transition-all group">
+                                            {content}
                                         </div>
                                     );
                                 }
@@ -211,10 +227,11 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product, productName }) => {
                                 };
 
                                 const imgName = customImg(item);
+                                const is21CFR = item.toLowerCase().includes('21 cfr');
 
                                 if (imgName) {
-                                    return (
-                                        <div key={i} className="group flex flex-col items-center text-center transition-all duration-300">
+                                    const content = (
+                                        <>
                                             <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 flex items-center justify-center mb-3 transition-transform duration-300 group-hover:scale-105">
                                                 <img
                                                     src={`/products/attributes-icons/${imgName}`}
@@ -225,12 +242,30 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product, productName }) => {
                                             <span className="text-[10px] sm:text-[11px] font-bold text-slate-600 tracking-tight leading-tight max-w-[140px] px-2 group-hover:text-aureole-blue transition-colors">
                                                 {item}
                                             </span>
+                                        </>
+                                    );
+
+                                    if (is21CFR) {
+                                        return (
+                                            <Link
+                                                key={i}
+                                                to="/software"
+                                                className="group flex flex-col items-center text-center transition-all duration-300 cursor-pointer"
+                                            >
+                                                {content}
+                                            </Link>
+                                        );
+                                    }
+
+                                    return (
+                                        <div key={i} className="group flex flex-col items-center text-center transition-all duration-300">
+                                            {content}
                                         </div>
                                     );
                                 }
 
-                                return (
-                                    <div key={i} className="group flex flex-col items-center text-center transition-all duration-300">
+                                const fallbackContent = (
+                                    <>
                                         <div className="w-28 h-28 sm:w-32 sm:h-32 lg:w-40 lg:h-40 border border-slate-200 rounded-xl flex items-center justify-center mb-3 bg-slate-50/50 group-hover:bg-white group-hover:border-aureole-cyan group-hover:shadow-md transition-all">
                                             <div className="text-aureole-blue group-hover:scale-110 transition-transform duration-300">
                                                 {getIconForItem(item, tab.itemIcon, 32)}
@@ -239,6 +274,20 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product, productName }) => {
                                         <span className="text-[10px] sm:text-[11px] font-bold text-slate-500 tracking-tighter leading-tight max-w-[140px] px-2 group-hover:text-aureole-slate transition-colors">
                                             {item}
                                         </span>
+                                    </>
+                                );
+
+                                if (is21CFR) {
+                                    return (
+                                        <Link key={i} to="/software" className="group flex flex-col items-center text-center transition-all duration-300 cursor-pointer">
+                                            {fallbackContent}
+                                        </Link>
+                                    );
+                                }
+
+                                return (
+                                    <div key={i} className="group flex flex-col items-center text-center transition-all duration-300">
+                                        {fallbackContent}
                                     </div>
                                 );
                             })}
