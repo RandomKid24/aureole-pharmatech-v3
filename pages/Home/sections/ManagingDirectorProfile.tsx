@@ -44,10 +44,20 @@ const ManagingDirectorProfile: React.FC = () => {
                      </p>
                   </div>
                   <div className="flex flex-wrap gap-6">
-                     <button className="bg-[#001529] text-white px-8 py-4 text-[10px] font-black uppercase tracking-widest flex items-center gap-4 hover:bg-aureole-cyan transition-colors">
+                     <a
+                        href="https://youtu.be/ZC_m3WGb6uA?si=JFy3CCZlqBs9oclF"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[#001529] text-white px-8 py-4 text-[10px] font-black uppercase tracking-widest flex items-center gap-4 hover:bg-aureole-cyan transition-colors"
+                     >
                         Full Biography <FileText className="w-4 h-4" />
-                     </button>
-                     <a href="#" className="bg-aureole-cyan text-white px-8 py-4 text-[10px] font-black uppercase tracking-widest flex items-center gap-4">
+                     </a>
+                     <a
+                        href="https://in.linkedin.com/in/dr-kiran-badgujar-385a3367"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-aureole-cyan text-white px-8 py-4 text-[10px] font-black uppercase tracking-widest flex items-center gap-4"
+                     >
                         <Linkedin className="w-4 h-4" />
                         <span>Connect</span>
                      </a>

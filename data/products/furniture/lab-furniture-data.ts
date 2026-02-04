@@ -120,7 +120,7 @@ export const labAccessories: ProductDetail = {
     models: [],
     regularAttributes: [],
     addOnsAttributes: [],
-    image: "PLACEHOLDER"
+    image: "/products/Furniture/lab-accessories.png"
 };
 
 export const ssAccessories: ProductDetail = {

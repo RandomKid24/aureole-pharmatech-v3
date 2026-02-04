@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FlaskConical, Microscope, Hammer, Shield, ArrowRight } from 'lucide-react';
+import { FlaskConical, Microscope, Hammer, ArrowRight } from 'lucide-react';
 
 interface MegaMenuProps {
     isOpen: boolean;
@@ -21,66 +21,72 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
             id: 'stability',
             title: 'Stability Chambers',
             href: '/products/stability-chambers',
-            icon: <FlaskConical size={18} />,
-            color: 'text-aureole-blue',
-            bg: 'bg-aureole-blue/5'
+            icon: <FlaskConical size={16} strokeWidth={1} />,
         },
         {
             id: 'tabletop',
             title: 'Table Top Instruments',
             href: '/products/table-top-instruments',
-            icon: <Microscope size={18} />,
-            color: 'text-aureole-cyan',
-            bg: 'bg-aureole-cyan/5'
+            icon: <Microscope size={16} strokeWidth={1} />,
         },
         {
             id: 'furniture',
             title: 'Laboratory Furniture',
             href: '/products/laboratory-furniture',
-            icon: <Hammer size={18} />,
-            color: 'text-slate-500',
-            bg: 'bg-slate-100'
+            icon: <Hammer size={16} strokeWidth={1} />,
         }
     ];
 
     return (
         <div
-            className={`absolute left-0 w-[280px] bg-white shadow-2xl border border-slate-100 p-3 transition-all duration-300 origin-top z-50 rounded-xl overflow-hidden ${isOpen ? 'opacity-100 translate-y-2 visible' : 'opacity-0 translate-y-4 invisible pointer-events-none'}`}
+            className={`absolute left-0 w-60 bg-white border border-slate-200/60 transition-all duration-200 origin-top z-50 ${isOpen ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible pointer-events-none'}`}
             style={{ top: '100%' }}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
         >
-            <div className="flex flex-col gap-1.5">
-                <div className="px-3 py-2">
-                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Our Categories</span>
-                </div>
-                {categories.map((cat) => (
+            <div className="py-1.5">
+                {categories.map((cat, index) => (
                     <Link
                         key={cat.id}
                         to={cat.href}
                         onClick={onClose}
-                        className="group flex items-center gap-4 p-3.5 rounded-xl hover:bg-slate-50 transition-all border border-transparent hover:border-slate-100"
+                        className={`group flex items-center justify-between px-4 py-3 transition-all duration-200 hover:bg-slate-50/80 hover:pl-5 ${index !== categories.length - 1 ? 'border-b border-slate-100/50' : ''}`}
+                        style={{
+                            transitionDelay: isOpen ? `${index * 30}ms` : '0ms',
+                            transform: isOpen ? 'translateX(0)' : 'translateX(-8px)',
+                            opacity: isOpen ? 1 : 0
+                        }}
                     >
-                        <div className={`p-2.5 rounded-lg transition-all group-hover:scale-110 ${cat.bg} ${cat.color}`}>
-                            {cat.icon}
-                        </div>
-                        <div className="flex flex-col">
-                            <span className="text-[11px] font-black uppercase tracking-wider text-aureole-slate group-hover:text-aureole-cyan transition-colors">
+                        <div className="flex items-center gap-3">
+                            <div className="flex-shrink-0 text-slate-400 group-hover:text-aureole-blue transition-all duration-200 group-hover:scale-110">
+                                {cat.icon}
+                            </div>
+                            <span className="text-sm font-sans text-slate-600 group-hover:text-aureole-slate transition-colors duration-200">
                                 {cat.title}
                             </span>
                         </div>
+                        <ArrowRight
+                            size={14}
+                            strokeWidth={1.5}
+                            className="text-slate-300 opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5"
+                        />
                     </Link>
                 ))}
+            </div>
 
-                <div className="mt-2 pt-2 border-t border-slate-50">
-                    <Link
-                        to="/products"
-                        onClick={onClose}
-                        className="flex items-center justify-center gap-2 p-3 text-[9px] font-black uppercase tracking-widest text-aureole-cyan hover:bg-aureole-cyan hover:text-white rounded-lg transition-all"
-                    >
-                        View All Products <ArrowRight size={12} />
-                    </Link>
-                </div>
+            <div className="border-t border-slate-100/50 py-1.5">
+                <Link
+                    to="/products"
+                    onClick={onClose}
+                    className="group flex items-center justify-center gap-1.5 w-full py-2.5 text-xs font-sans text-slate-500 hover:text-aureole-blue transition-all duration-200"
+                >
+                    <span>View all products</span>
+                    <ArrowRight
+                        size={12}
+                        strokeWidth={1.5}
+                        className="transition-transform duration-200 group-hover:translate-x-1"
+                    />
+                </Link>
             </div>
         </div>
     );
