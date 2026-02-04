@@ -9,6 +9,7 @@ import TechnicalDashboard from './ProductDetail/sections/TechnicalDashboard';
 import ProductTables from './ProductDetail/sections/ProductTables';
 import VariantSections from './ProductDetail/sections/VariantSections';
 import ProductEnquiry from './ProductDetail/sections/ProductEnquiry';
+import InfrasArchitecture from '../components/sections/InfrasArchitecture';
 
 import CategoryHero from '../components/ui/CategoryHero';
 import SSAccessoriesGrid from './ProductDetail/sections/SSAccessoriesGrid';
@@ -51,10 +52,13 @@ const ProductDetail: React.FC = () => {
         );
     }
 
+    const showInfras = decodedName === "Humidity Chamber" || decodedName === "Walk In Humidity Chamber";
+
     return (
         <div className="pt-24 min-h-screen bg-white selection:bg-aureole-blue selection:text-white">
             <ProductHero product={product} decodedName={decodedName} />
             <TechnicalDashboard product={product} decodedName={decodedName} />
+            {showInfras && <InfrasArchitecture />}
             <ProductTables product={product} productName={decodedName} />
             <VariantSections product={product} />
             <ProductEnquiry />

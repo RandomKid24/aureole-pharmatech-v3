@@ -7,7 +7,7 @@ interface TechnicalDashboardProps {
 }
 
 const TechnicalDashboard: React.FC<TechnicalDashboardProps> = ({ product, decodedName }) => {
-    const hasAnyTabs = product.keyFeatures.length > 0 ||
+    const hasAnyTabs = (product.keyFeatures && product.keyFeatures.length > 0) ||
         (product.regularAttributes && product.regularAttributes.length > 0) ||
         (product.addOnsAttributes && product.addOnsAttributes.length > 0);
 

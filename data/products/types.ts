@@ -33,7 +33,7 @@ export interface TechnicalSpec {
 
 export interface ProductDetail {
     description: string;
-    keyFeatures: string[];
+    keyFeatures?: string[];
     specifications: TechnicalSpec[];
     models: ModelSpec[];
     regularAttributes: string[];
