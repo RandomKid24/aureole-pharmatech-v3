@@ -4,7 +4,7 @@ import { Quote, Linkedin, FileText, Target, Compass, ArrowRight } from 'lucide-r
 
 const ManagingDirectorProfile: React.FC = () => {
    return (
-      <section id="leadership" className="py-20 bg-white relative overflow-hidden group/section">
+      <section id="leadership" className="py-20 bg-transparent relative overflow-hidden group/section">
 
          <div className="container mx-auto px-4 sm:px-8 lg:px-16">
             <div className="grid lg:grid-cols-12 gap-16 items-center">

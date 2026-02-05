@@ -58,11 +58,11 @@ const TeamArchitecture: React.FC = () => {
     ];
 
     return (
-        <section className="relative bg-white overflow-hidden group/team">
+        <section className="relative bg-transparent group/team">
             {/* Minimalist Multi-state Gate */}
             <div
                 id="team-gate"
-                className={`transition-all duration-700 ease-in-out border-b border-slate-100 ${isOpen ? 'bg-slate-50' : 'bg-white hover:bg-slate-50'}`}
+                className={`transition-all duration-700 ease-in-out ${isOpen ? 'bg-transparent' : 'bg-transparent hover:bg-slate-50/10'}`}
             >
                 <div className="container mx-auto px-4 sm:px-8 lg:px-16">
                     <div
@@ -133,7 +133,7 @@ const TeamArchitecture: React.FC = () => {
                     }`}
             >
                 <div ref={contentRef} className="overflow-hidden">
-                    <div className="bg-aureole-soft py-8 lg:py-12">
+                    <div className="bg-transparent py-8 lg:py-12">
                         <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
                             <div className="text-center mb-24">
                                 <div className="flex items-center justify-center gap-4 mb-6">

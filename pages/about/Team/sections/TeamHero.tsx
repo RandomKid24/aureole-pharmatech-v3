@@ -3,7 +3,7 @@ import React from 'react';
 
 const TeamHero: React.FC = () => {
     return (
-        <section className="relative py-24 sm:py-32 overflow-hidden border-b border-slate-100 group">
+        <section className="relative py-24 sm:py-32 bg-transparent group">
 
 
             <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">

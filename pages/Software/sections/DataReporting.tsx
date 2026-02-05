@@ -4,9 +4,7 @@ import { Database, FileBarChart, Eye, BarChart3, TrendingUp } from 'lucide-react
 
 const DataReporting: React.FC = () => {
     return (
-        <section className="py-24 bg-slate-50 relative overflow-hidden">
-            {/* Background Decorative Element */}
-            <div className="absolute top-0 right-0 w-1/3 h-full bg-aureole-blue/5 -skew-x-12 translate-x-1/2"></div>
+        <section className="py-24 bg-transparent relative">
 
             <div className="container mx-auto px-6 sm:px-12 lg:px-24 relative z-10">
                 {/* Header */}

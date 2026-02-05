@@ -11,7 +11,7 @@ const Service: React.FC = () => {
     }, []);
 
     return (
-        <div className="pt-24 lg:pt-32 pb-20 bg-white">
+        <div className="pt-24 lg:pt-32 pb-20 bg-transparent">
             <ServiceHero />
             <ExcellenceGrid />
             <PhilosophySection />

@@ -79,7 +79,7 @@ const PrecisionEngineeredSystems: React.FC = () => {
   ];
 
   return (
-    <section id="products" className="py-16 sm:py-20 bg-aureole-soft relative overflow-hidden border-b border-slate-100 group/section">
+    <section id="products" className="py-16 sm:py-20 bg-transparent relative overflow-hidden group/section">
 
 
       <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10 mb-16 sm:mb-24">
@@ -126,7 +126,7 @@ const PrecisionEngineeredSystems: React.FC = () => {
         </div>
       </div>
 
-      <div className="relative border-y border-slate-100 bg-white group/marquee overflow-hidden">
+      <div className="relative bg-white group/marquee overflow-hidden">
         {/* Navigation Arrows */}
         <div className="absolute inset-y-0 left-0 flex items-center z-20 pointer-events-none sm:pl-4">
           <button

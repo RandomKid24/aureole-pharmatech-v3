@@ -11,7 +11,7 @@ const Overview: React.FC = () => {
     }, []);
 
     return (
-        <div className="pt-24 min-h-screen bg-white selection:bg-aureole-blue selection:text-white">
+        <div className="pt-24 min-h-screen bg-transparent selection:bg-aureole-blue selection:text-white">
             <LeadershipVision />
             <TeamArchitecture />
             <Philosophy />

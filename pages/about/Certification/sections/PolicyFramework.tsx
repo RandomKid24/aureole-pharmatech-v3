@@ -13,7 +13,7 @@ const PolicyFramework: React.FC = () => {
     ];
 
     return (
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-transparent">
             <div className="container mx-auto px-6 lg:px-24">
                 <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
                     {/* Standards Column */}
@@ -45,7 +45,7 @@ const PolicyFramework: React.FC = () => {
                         </p>
                         <div className="grid grid-cols-2 gap-px bg-slate-100 border border-slate-100 mb-8">
                             {["Customer Sat", "Modern Tech", "Accuracy", "Improvement"].map((item, i) => (
-                                <div key={i} className="bg-white p-6 flex flex-col items-center text-center">
+                                <div key={i} className="bg-transparent p-6 flex flex-col items-center text-center">
                                     <CheckCircle2 size={16} className={i % 2 === 0 ? "text-aureole-cyan mb-2" : "text-aureole-blue mb-2"} />
                                     <span className="text-[9px] font-black text-aureole-slate tracking-widest">{item}</span>
                                 </div>

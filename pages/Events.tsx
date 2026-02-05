@@ -157,7 +157,7 @@ const Events: React.FC = () => {
     };
 
     return (
-        <div className="pt-24 lg:pt-32 pb-20 bg-white">
+        <div className="pt-24 lg:pt-32 pb-20 bg-transparent">
             <EventsHero />
             <ExhibitionsGrid exhibitions={EXHIBITIONS} onEventClick={setSelectedEvent} />
             <CompanyEventsGrid companyEvents={COMPANY_EVENTS} onEventClick={setSelectedEvent} />

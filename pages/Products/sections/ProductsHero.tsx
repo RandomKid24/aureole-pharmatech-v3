@@ -3,7 +3,7 @@ import React from 'react';
 
 const ProductsHero: React.FC = () => {
     return (
-        <section className="relative py-16 sm:py-20 overflow-hidden border-b border-slate-100 bg-white group">
+        <section className="relative py-16 sm:py-20 bg-transparent group">
             <div className="absolute inset-0 z-0 opacity-[0.03] bg-[radial-gradient(#0079ac_1px,transparent_1px)] [background-size:40px_40px]"></div>
 
 

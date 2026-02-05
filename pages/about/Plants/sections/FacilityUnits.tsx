@@ -36,7 +36,7 @@ const FacilityUnits: React.FC<FacilityUnitsProps> = ({ onImageClick }) => {
     ];
 
     return (
-        <section className="py-24 lg:py-40 bg-aureole-soft relative">
+        <section className="py-24 lg:py-40 bg-transparent relative">
             <div className="container mx-auto px-6 sm:px-8 lg:px-16 text-center lg:text-left">
                 <div className="space-y-32 lg:space-y-48">
                     {facilities.map((facility, idx) => (

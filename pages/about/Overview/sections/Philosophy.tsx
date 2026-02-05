@@ -11,7 +11,7 @@ const Philosophy: React.FC = () => {
     ];
 
     return (
-        <section className="py-24 sm:py-32 bg-slate-50/50 relative overflow-hidden group/section">
+        <section className="py-24 sm:py-32 bg-transparent relative group/section">
 
             <div className="container mx-auto px-4 sm:px-8 lg:px-16">
                 <SectionHeading

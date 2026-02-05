@@ -3,7 +3,7 @@ import React from 'react';
 
 const CertHero: React.FC = () => {
     return (
-        <section className="relative py-20 lg:py-28 overflow-hidden border-b border-slate-100 bg-white group">
+        <section className="relative py-20 lg:py-28 bg-transparent group">
 
 
             <div className="container mx-auto px-6 sm:px-8 lg:px-24 relative z-10">

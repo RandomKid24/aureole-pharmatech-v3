@@ -15,7 +15,7 @@ const TableTopInstruments: React.FC = () => {
     if (!tabletopCategory) return null;
 
     return (
-        <div className="pt-24 min-h-screen bg-white">
+        <div className="pt-24 min-h-screen bg-transparent">
             <CategoryHero
                 title="TABLE TOP"
                 subtitle={<span className="text-aureole-blue">Instruments</span>}

@@ -12,7 +12,7 @@ interface CategoryHeroProps {
 
 const CategoryHero: React.FC<CategoryHeroProps> = ({ title, subtitle, description, watermark, image, showAccent = true }) => {
     return (
-        <section className="relative min-h-[60vh] flex items-center bg-white pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden border-b border-slate-100">
+        <section className="relative min-h-[60vh] flex items-center bg-transparent pt-32 pb-16 lg:pt-40 lg:pb-24">
             <div className="absolute inset-0 z-0 opacity-[0.03] bg-[radial-gradient(#0079ac_1px,transparent_1px)] [background-size:40px_40px]"></div>
 
             {/* Background Image - Moved to Right and Fully Opaque */}

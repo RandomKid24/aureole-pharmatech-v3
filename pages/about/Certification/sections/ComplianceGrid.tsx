@@ -22,9 +22,9 @@ const ComplianceGrid: React.FC = () => {
     ];
 
     return (
-        <section className="py-20 bg-slate-50/50 border-b border-slate-100">
+        <section className="py-20 bg-transparent">
             <div className="container mx-auto px-6 lg:px-24">
-                <div className="grid lg:grid-cols-2 gap-px bg-slate-200 border border-slate-200">
+                <div className="grid lg:grid-cols-2 gap-px bg-transparent">
                     {/* CE Certificate Column */}
                     <div className="bg-white p-10 lg:p-14 relative overflow-hidden group border-r border-slate-100">
                         <div className="flex justify-between items-start mb-10">

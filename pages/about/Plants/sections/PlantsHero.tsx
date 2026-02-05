@@ -4,7 +4,7 @@ import LazyImage from '@/components/LazyImage';
 
 const PlantsHero: React.FC = () => {
     return (
-        <section className="relative h-[70vh] flex items-center overflow-hidden bg-aureole-slate">
+        <section className="relative h-[70vh] flex items-center bg-transparent">
             <div className="absolute inset-0 z-0">
                 <LazyImage
                     src="/plants/DJI_20240723121709_0011_D.JPG"

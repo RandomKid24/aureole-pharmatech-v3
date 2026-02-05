@@ -20,7 +20,7 @@ interface CompanyEventsGridProps {
 
 const CompanyEventsGrid: React.FC<CompanyEventsGridProps> = ({ companyEvents, onEventClick }) => {
     return (
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-transparent">
             <div className="container mx-auto px-6 lg:px-16">
                 <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
                     <div>
@@ -34,7 +34,7 @@ const CompanyEventsGrid: React.FC<CompanyEventsGridProps> = ({ companyEvents, on
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {companyEvents.map((event, idx) => (
-                        <div key={idx} className="bg-white border border-slate-100 hover:border-aureole-cyan transition-all group cursor-pointer" onClick={() => onEventClick(event)}>
+                        <div key={idx} className="bg-white/40 backdrop-blur-sm border border-slate-100 hover:border-aureole-cyan transition-all group cursor-pointer" onClick={() => onEventClick(event)}>
                             <div className="aspect-[4/3] relative overflow-hidden">
                                 <LazyImage
                                     src={event.thumbnail}

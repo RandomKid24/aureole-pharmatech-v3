@@ -67,7 +67,7 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
     };
 
     return (
-        <section className="relative bg-white overflow-hidden">
+        <section className="relative bg-transparent">
             <div className="container mx-auto px-6 lg:px-24 pt-12 lg:pt-16 pb-0">
                 <div className="grid lg:grid-cols-12 gap-10 items-start">
                     <div className={product.hideHeroImage ? "lg:col-span-12" : "lg:col-span-7"}>

@@ -12,7 +12,7 @@ const Software: React.FC = () => {
     }, []);
 
     return (
-        <div className="pt-24 min-h-screen bg-white">
+        <div className="pt-24 min-h-screen bg-transparent">
             <SoftwareHero />
             <GeneralSoftwareInfo />
             <ComplianceFeatures />

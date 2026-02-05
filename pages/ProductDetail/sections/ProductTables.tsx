@@ -41,7 +41,7 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
         <>
             {/* Models and Dimensions Table */}
             {product.models && product.models.length > 0 && (
-                <section className="py-8 bg-white">
+                <section className="py-8 bg-transparent">
                     <div className="container mx-auto px-6 lg:px-24">
                         <div className="flex items-center gap-4 mb-8">
                             <Box className="text-aureole-blue" size={18} />
@@ -96,7 +96,7 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
 
             {/* Custom Variant Table */}
             {product.variantTable && (
-                <section className="py-8 bg-white">
+                <section className="py-8 bg-transparent">
                     <div className="container mx-auto px-6 lg:px-24">
                         <div className="flex items-center gap-4 mb-8">
                             <Box className="text-aureole-blue" size={18} />
@@ -151,7 +151,7 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
 
             {/* Complex Multi-level Table */}
             {product.complexTable && (
-                <section className="py-8 bg-white">
+                <section className="py-8 bg-transparent">
                     <div className="container mx-auto px-6 lg:px-24">
                         <div className="flex items-center gap-4 mb-8">
                             <Box className="text-aureole-blue" size={18} />

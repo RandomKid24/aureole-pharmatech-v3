@@ -4,7 +4,7 @@ import { Mail, Phone, ArrowRight } from 'lucide-react';
 
 const ProductsContact: React.FC = () => {
     return (
-        <section className="py-16 bg-white relative overflow-hidden border-t border-slate-200">
+        <section className="py-16 bg-transparent relative">
 
             <div className="container mx-auto px-6 lg:px-24 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">

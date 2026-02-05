@@ -51,7 +51,7 @@ const ExecutiveHierarchy: React.FC = () => {
     ];
 
     return (
-        <section className="py-24 lg:py-40 relative overflow-hidden bg-aureole-soft group">
+        <section className="py-24 lg:py-40 relative group">
 
 
             <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">

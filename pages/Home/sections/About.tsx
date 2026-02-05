@@ -10,7 +10,7 @@ import LazyImage from '@/components/LazyImage';
  */
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-16 lg:py-20 bg-aureole-soft relative overflow-hidden border-y border-slate-100 group/section">
+    <section id="about" className="py-16 lg:py-20 bg-transparent relative overflow-hidden group/section">
 
       <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
 

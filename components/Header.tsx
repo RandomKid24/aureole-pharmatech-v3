@@ -96,7 +96,7 @@ const Header: React.FC = () => {
     <header className="fixed w-full z-50 transition-all duration-500">
       <TechnicalBar isScrolled={isScrolled} />
 
-      <div className={`${isScrolled ? 'bg-white/95 shadow-xl py-2' : 'bg-white py-4'} transition-all duration-300 backdrop-blur-md border-b border-slate-100`}>
+      <div className={`${isScrolled ? 'bg-white/95 shadow-xl py-2' : 'bg-white py-4'} transition-all duration-300 backdrop-blur-md`}>
         <div className="container mx-auto px-6 lg:px-16 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-5 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <img

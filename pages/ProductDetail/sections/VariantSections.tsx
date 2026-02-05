@@ -9,7 +9,7 @@ const VariantSections: React.FC<VariantSectionsProps> = ({ product }) => {
     if (!product.variants || product.variants.length === 0) return null;
 
     return (
-        <section className="py-12 bg-white relative overflow-hidden">
+        <section className="py-12 bg-transparent relative">
             <div className="container mx-auto px-6 lg:px-24">
                 <div className="space-y-32">
                     {product.variants.map((variant: any, idx: number) => (

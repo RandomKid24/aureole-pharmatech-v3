@@ -10,7 +10,7 @@ const Certification: React.FC = () => {
     }, []);
 
     return (
-        <div className="pt-24 min-h-screen bg-white">
+        <div className="pt-24 min-h-screen bg-transparent">
             <CertHero />
             <ComplianceGrid />
             <PolicyFramework />

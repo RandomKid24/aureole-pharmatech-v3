@@ -4,7 +4,7 @@ import { Award } from 'lucide-react';
 
 const LeadershipVision: React.FC = () => {
     return (
-        <section className="relative py-16 sm:py-24 overflow-hidden border-b border-slate-100 bg-white group">
+        <section className="relative py-16 sm:py-24 bg-transparent group">
 
 
             <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">

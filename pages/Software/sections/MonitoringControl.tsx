@@ -7,7 +7,7 @@ const MonitoringControl: React.FC = () => {
     const architectureImg = "/software/architecture.png";
 
     return (
-        <section className="py-24 bg-white overflow-hidden">
+        <section className="py-24 bg-transparent">
             <div className="container mx-auto px-6 sm:px-12 lg:px-24">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     {/* Left Column - Info */}

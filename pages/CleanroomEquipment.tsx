@@ -15,7 +15,7 @@ const CleanroomEquipment: React.FC = () => {
     if (!cleanroomCategory) return null;
 
     return (
-        <div className="pt-24 min-h-screen bg-white">
+        <div className="pt-24 min-h-screen bg-transparent">
             <CategoryHero
                 title="CLEANROOM"
                 subtitle={<span className="text-aureole-blue">EQUIPMENT</span>}

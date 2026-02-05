@@ -34,7 +34,7 @@ const GlobalValidation: React.FC = () => {
   );
 
   return (
-    <section id="clients" className="py-16 sm:py-20 bg-aureole-soft relative overflow-hidden border-t border-slate-100 group/section">
+    <section id="clients" className="py-16 sm:py-20 bg-transparent relative overflow-hidden group/section">
 
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-20 relative z-10 mb-12">
@@ -52,7 +52,7 @@ const GlobalValidation: React.FC = () => {
         </div>
       </div>
 
-      <div className="relative py-10 bg-slate-50/50 border-y border-slate-100">
+      <div className="relative py-10 bg-slate-50/50">
         <div className="absolute inset-y-0 left-0 w-32 sm:w-64 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
         <div className="absolute inset-y-0 right-0 w-32 sm:w-64 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
         <div className="flex flex-col">

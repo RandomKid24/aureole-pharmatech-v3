@@ -4,7 +4,7 @@ import { ShieldCheck, Factory } from 'lucide-react';
 
 const ExcellenceGrid: React.FC = () => {
     return (
-        <section className="py-24 border-b border-slate-100 bg-aureole-soft">
+        <section className="py-24 bg-transparent">
             <div className="container mx-auto px-6 lg:px-16">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
                     {/* Quality Standards */}

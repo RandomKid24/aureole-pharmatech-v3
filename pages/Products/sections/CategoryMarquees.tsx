@@ -9,7 +9,7 @@ const ProductMarquee = ({ pNames, animationClass, duration }: { pNames: string[]
     const displayProducts = [...pNames, ...pNames, ...pNames];
 
     return (
-        <div className="flex overflow-hidden select-none py-10 bg-white border-y border-slate-200 group relative">
+        <div className="flex overflow-hidden select-none py-10 bg-transparent group relative">
             <div className="absolute inset-y-0 left-0 w-32 sm:w-64 bg-gradient-to-r from-[#f8fafc] via-[#f8fafc]/80 to-transparent z-10 pointer-events-none"></div>
             <div className="absolute inset-y-0 right-0 w-32 sm:w-64 bg-gradient-to-l from-[#f8fafc] via-[#f8fafc]/80 to-transparent z-10 pointer-events-none"></div>
 
@@ -59,7 +59,7 @@ const ProductMarquee = ({ pNames, animationClass, duration }: { pNames: string[]
 
 const CategoryMarquees: React.FC = () => {
     return (
-        <section className="py-12 bg-[#f8fafc] space-y-16 relative">
+        <section className="py-12 bg-transparent space-y-16 relative">
             {PRODUCT_CATALOG.map((category, catIdx) => {
                 const productsWithImages = category.subTypes
                     .flatMap(sub => sub.products)
@@ -111,7 +111,7 @@ const CategoryMarquees: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="relative py-8 bg-slate-50/50 border-y border-slate-100">
+                        <div className="relative py-8 bg-transparent">
                             <ProductMarquee
                                 pNames={productsWithImages}
                                 animationClass={animationClass}

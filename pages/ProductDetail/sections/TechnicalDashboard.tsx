@@ -14,7 +14,7 @@ const TechnicalDashboard: React.FC<TechnicalDashboardProps> = ({ product, decode
     if (!hasAnyTabs) return null;
 
     return (
-        <section className="bg-white">
+        <section className="bg-transparent">
             <div className="container mx-auto px-6 lg:px-24 py-4">
                 <div className="max-w-7xl mx-auto">
                     <ProductTabs product={product} productName={decodedName} />

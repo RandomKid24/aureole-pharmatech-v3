@@ -5,11 +5,13 @@ import LazyImage from '@/components/LazyImage';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center bg-white pt-32 pb-16 sm:pt-52 lg:pt-60 overflow-hidden">
-      <div className="absolute inset-0 z-0 opacity-[0.03] bg-[radial-gradient(#0079ac_1px,transparent_1px)] [background-size:40px_40px]"></div>
+    <section className="relative min-h-[95vh] flex items-center bg-transparent pt-32 pb-16 sm:pt-40 lg:pt-48 z-10">
+      {/* Background Grid Removed to lead with wavebg.png */}
 
-      {/* Massive Washed Out Logo - Faint and bleeding off-screen */}
-      <div className="absolute top-[45%] -right-24 md:-right-48 -translate-y-1/2 w-[700px] md:w-[1000px] lg:w-[1200px] opacity-[0.05] pointer-events-none z-0 select-none">
+      {/* Massive Washed Out Logo - Static, on top of background */}
+      <div
+        className="absolute top-[45%] -right-24 md:-right-48 w-[700px] md:w-[1000px] lg:w-[1200px] opacity-[0.05] pointer-events-none z-10 select-none -translate-y-1/2"
+      >
         <img
           src="/aureole-logo.png"
           alt=""
@@ -17,7 +19,7 @@ const Hero: React.FC = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 sm:px-8 lg:px-24 relative z-10">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-24 relative z-20">
         <div className="max-w-7xl">
           {/* Validation Tags Removed for cleaner hero as requested previously */}
 

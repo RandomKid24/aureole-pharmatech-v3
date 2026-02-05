@@ -3,9 +3,7 @@ import React from 'react';
 
 const SoftwareHero: React.FC = () => {
     return (
-        <section className="relative min-h-[50vh] flex items-center bg-white pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden border-b border-slate-200">
-            {/* Grid Pattern Background */}
-            <div className="absolute inset-0 z-0 opacity-[0.03] bg-[radial-gradient(#0079ac_1px,transparent_1px)] [background-size:40px_40px]"></div>
+        <section className="relative min-h-[50vh] flex items-center bg-transparent pt-32 pb-16 lg:pt-40 lg:pb-20">
 
             <div className="container mx-auto px-6 sm:px-12 lg:px-24 relative z-10 flex items-center justify-between">
                 <div className="max-w-4xl">

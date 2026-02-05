@@ -3,7 +3,7 @@ import React from 'react';
 const PhilosophySection: React.FC = () => {
 
     return (
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-transparent">
             <div className="container mx-auto px-6 lg:px-16">
                 <div className="max-w-4xl mx-auto space-y-20">
                     <div>

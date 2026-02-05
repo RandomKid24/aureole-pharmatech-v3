@@ -3,7 +3,7 @@ import React from 'react';
 
 const ServiceHero: React.FC = () => {
     return (
-        <section className="relative overflow-hidden border-b border-slate-100 bg-white py-24 lg:py-40 group">
+        <section className="relative bg-transparent py-24 lg:py-40 group">
 
 
             <div className="container mx-auto px-6 lg:px-16 relative z-10 text-center lg:text-left">

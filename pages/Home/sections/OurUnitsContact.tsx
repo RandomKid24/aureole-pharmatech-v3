@@ -3,7 +3,7 @@ import { MapPin, ArrowRight, ChevronDown, Activity } from 'lucide-react';
 
 const OurUnitsContact: React.FC = () => {
   return (
-    <section id="contact" className="py-12 lg:py-16 bg-white relative overflow-hidden group/section">
+    <section id="contact" className="py-12 lg:py-16 bg-transparent relative overflow-hidden group/section">
 
       <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-24">
@@ -30,7 +30,7 @@ const OurUnitsContact: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-12 xl:col-span-7 bg-[#F8FAFC] shadow-2xl rounded-3xl sm:rounded-[50px] p-6 sm:p-10 lg:p-14 border border-slate-200 relative overflow-hidden">
+          <div className="lg:col-span-12 xl:col-span-7 bg-white/40 backdrop-blur-md shadow-xl rounded-3xl sm:rounded-[50px] p-6 sm:p-10 lg:p-14 border border-white/20 relative overflow-hidden">
             <div className="relative z-10">
               <div className="flex flex-col sm:flex-row gap-8 sm:gap-20 mb-10 border-b border-slate-200 pb-10">
                 <div>

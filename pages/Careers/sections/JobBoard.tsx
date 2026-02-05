@@ -26,7 +26,7 @@ const JobBoard: React.FC<JobBoardProps> = ({ listings }) => {
     };
 
     return (
-        <section className="py-24 bg-aureole-soft">
+        <section className="py-24 bg-transparent">
             <div className="container mx-auto px-6 lg:px-24">
                 <div className="flex flex-col gap-10">
                     {/* Table Header */}

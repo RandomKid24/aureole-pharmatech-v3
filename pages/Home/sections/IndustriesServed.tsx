@@ -67,7 +67,7 @@ const IndustriesServed: React.FC = () => {
   };
 
   return (
-    <section id="industries" className="py-16 lg:py-20 bg-white relative overflow-hidden group/section">
+    <section id="industries" className="py-16 lg:py-20 bg-transparent relative overflow-hidden group/section">
 
       <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
 

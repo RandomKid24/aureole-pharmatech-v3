@@ -57,7 +57,7 @@ const Ventures: React.FC = () => {
     ];
 
     return (
-        <section className="py-24 lg:py-40 bg-white relative overflow-hidden group/section">
+        <section className="py-24 lg:py-40 bg-transparent relative group/section">
             {/* Standard Watermark - matching design system */}
             {/* Standard Watermark - matching design system */}
 
@@ -69,7 +69,7 @@ const Ventures: React.FC = () => {
                     className="mb-20"
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-slate-100 bg-slate-100">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-slate-100 bg-transparent">
                     {ventures.map((v, idx) => (
                         <div key={idx} className={`bg-white p-10 group transition-all duration-700 flex flex-col border-r border-b border-slate-100 relative overflow-hidden ${v.isLegacy ? 'border-dashed border-slate-300 bg-slate-50/30' : 'hover:shadow-2xl hover:shadow-slate-200'}`}>
                             {/* Logo Slot */}

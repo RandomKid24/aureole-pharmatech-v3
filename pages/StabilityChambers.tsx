@@ -15,7 +15,7 @@ const StabilityChambers: React.FC = () => {
     if (!stabilityCategory) return null;
 
     return (
-        <div className="pt-24 min-h-screen bg-white">
+        <div className="pt-24 min-h-screen bg-transparent">
             <CategoryHero
                 title="precision ENVIRONMENTAL"
                 subtitle={<span className="text-aureole-blue">CONTROL</span>}
