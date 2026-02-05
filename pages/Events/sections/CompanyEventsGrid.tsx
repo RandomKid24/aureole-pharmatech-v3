@@ -3,6 +3,9 @@ import React from 'react';
 import { Users, MapPin } from 'lucide-react';
 import LazyImage from '@/components/LazyImage';
 
+import { DotLottiePlayer } from '@dotlottie/react-player';
+import '@dotlottie/react-player/dist/index.css';
+
 interface EventMedia {
     title: string;
     date: string;
@@ -28,7 +31,17 @@ const CompanyEventsGrid: React.FC<CompanyEventsGridProps> = ({ companyEvents, on
                             <Users className="w-6 h-6 text-aureole-cyan" />
                             <h3 className="text-[11px] font-black uppercase tracking-[0.3em] text-aureole-cyan">INTERNAL CULTURE</h3>
                         </div>
-                        <h2 className="text-4xl lg:text-5xl font-black font-heading uppercase tracking-tighter text-[#001529]">COMPANY EVENTS</h2>
+                        <div className="flex items-center gap-6">
+                            <h2 className="text-4xl lg:text-5xl font-black font-heading uppercase tracking-tighter text-[#001529]">COMPANY EVENTS</h2>
+                            <div className="w-32 h-32">
+                                <DotLottiePlayer
+                                    src="/Fist Bump.lottie"
+                                    autoplay
+                                    loop
+                                    className="w-full h-full"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
 

@@ -3,8 +3,21 @@ import React from 'react';
 
 const EventsHero: React.FC = () => {
     return (
-        <section className="relative bg-transparent py-24 lg:py-40 group">
-
+        <section className="relative bg-transparent py-24 lg:py-40 group overflow-hidden">
+            {/* Background Image - Sketch / Overlay */}
+            <div
+                className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] md:w-[800px] lg:w-[1000px] flex items-center justify-end pointer-events-none select-none z-0 mix-blend-multiply translate-x-[10%]"
+                style={{
+                    maskImage: 'linear-gradient(to right, transparent, black 40%)',
+                    WebkitMaskImage: 'linear-gradient(to right, transparent, black 40%)'
+                }}
+            >
+                <img
+                    src="/Event-Sketech.png"
+                    alt=""
+                    className="w-full h-auto object-contain opacity-50"
+                />
+            </div>
 
             <div className="container mx-auto px-6 lg:px-16 relative z-10 text-center lg:text-left">
                 <div className="max-w-5xl mx-auto lg:mx-0">
