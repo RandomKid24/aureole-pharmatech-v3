@@ -19,7 +19,7 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
     const categories = [
         {
             id: 'stability',
-            title: 'Stability Chambers',
+            title: 'Stability Testing Equipments',
             href: '/products/stability-chambers',
             icon: <FlaskConical size={16} strokeWidth={1} />,
         },

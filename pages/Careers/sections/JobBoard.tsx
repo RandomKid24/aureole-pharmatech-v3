@@ -77,7 +77,7 @@ const JobBoard: React.FC<JobBoardProps> = ({ listings }) => {
                                         </div>
                                         <div className="flex items-center gap-4 text-aureole-blue font-black text-[10px] uppercase tracking-[0.2em] transition-all duration-300">
                                             <span className="opacity-70 group-hover:opacity-100">
-                                                {expandedJob === job.code ? 'CLOSE' : 'READ MORE'}
+                                                {expandedJob === job.code ? 'Close' : 'Read more'}
                                             </span>
                                             <div className={`p-2 rounded-full border transition-all duration-500 ${expandedJob === job.code ? 'bg-aureole-blue text-white border-aureole-blue rotate-180' : 'bg-slate-50 text-aureole-blue border-slate-100 group-hover:border-aureole-blue/30'}`}>
                                                 <ChevronDown size={14} className="transition-transform duration-500" />
@@ -123,16 +123,7 @@ const JobBoard: React.FC<JobBoardProps> = ({ listings }) => {
                                                         ))}
                                                     </ul>
 
-                                                    <div className="mt-12 p-10 bg-white border border-slate-100 shadow-2xl relative overflow-hidden">
-                                                        <div className="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-                                                        <h5 className="relative z-10 text-[10px] font-black text-slate-400 uppercase tracking-widest mb-6">Application Outreach</h5>
-                                                        <a
-                                                            href={`mailto:hr@aureolepharmatech.com?subject=Application for ${job.department} (${job.code})`}
-                                                            className="relative z-10 flex items-center justify-between group/btn bg-[#001529] text-white px-10 py-5 text-[11px] font-black uppercase tracking-[0.2em] transition-all duration-300 hover:bg-aureole-blue hover:shadow-xl hover:-translate-y-1"
-                                                        >
-                                                            Send Your Resume <Mail size={18} className="group-hover/btn:translate-x-2 transition-transform duration-500" />
-                                                        </a>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -140,6 +131,29 @@ const JobBoard: React.FC<JobBoardProps> = ({ listings }) => {
                                 </div>
                             </div>
                         ))}
+                    </div>
+
+                    {/* How to Apply Section */}
+                    <div className="mt-20 p-8 lg:p-12 bg-white/50 border border-slate-200 rounded-2xl relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-aureole-blue/5 rounded-full -translate-y-1/3 translate-x-1/3 blur-3xl"></div>
+                        <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+                            <div>
+                                <h3 className="text-2xl font-[950] text-[#001529] uppercase tracking-tighter mb-4">How to Apply</h3>
+                                <p className="text-slate-500 text-sm max-w-xl leading-relaxed">
+                                    Interested candidates can reach out to us directly through the following channels. Please mention the Job Code in your application.
+                                </p>
+                            </div>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 w-full lg:w-auto">
+                                <div className="flex flex-col gap-1">
+                                    <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Email</span>
+                                    <a href="mailto:careers@www.aureolepharmatech.com" className="text-sm font-bold text-aureole-blue hover:text-[#001529] transition-colors">careers@www.aureolepharmatech.com</a>
+                                </div>
+                                <div className="flex flex-col gap-1">
+                                    <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">HR Contact</span>
+                                    <a href="tel:+918600522230" className="text-sm font-bold text-aureole-blue hover:text-[#001529] transition-colors bg-trasnparent">+91 86005 22230</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

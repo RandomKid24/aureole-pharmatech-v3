@@ -46,32 +46,26 @@ const OurUnitsContact: React.FC = () => {
               <h4 className="text-3xl font-black text-[#001529] mb-3 uppercase tracking-tighter">CONTACT <span className="text-aureole-blue">US.</span></h4>
               <p className="text-slate-500 text-[10px] font-bold mb-10 tracking-widest">Request a technical consultation.</p>
 
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="relative group">
                     <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest block mb-1">Name</label>
-                    <input type="text" placeholder="FULL NAME" className="w-full bg-transparent border-b-2 border-slate-300 py-2 text-[11px] font-black uppercase tracking-widest text-[#001529] focus:outline-none focus:border-aureole-cyan transition-all" />
+                    <input type="text" placeholder="Full Name" className="w-full bg-transparent border-b-2 border-slate-300 py-2 text-[14px] font-bold text-[#001529] placeholder:text-slate-400 placeholder:text-[10px] placeholder:font-black placeholder:uppercase placeholder:tracking-widest focus:outline-none focus:border-aureole-cyan transition-all" />
                   </div>
                   <div className="relative group">
                     <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest block mb-1">Email</label>
-                    <input type="email" placeholder="OFFICIAL EMAIL" className="w-full bg-transparent border-b-2 border-slate-300 py-2 text-[11px] font-black uppercase tracking-widest text-[#001529] focus:outline-none focus:border-aureole-cyan transition-all" />
+                    <input type="email" placeholder="Official Email" className="w-full bg-transparent border-b-2 border-slate-300 py-2 text-[14px] font-bold text-[#001529] placeholder:text-slate-400 placeholder:text-[10px] placeholder:font-black placeholder:uppercase placeholder:tracking-widest focus:outline-none focus:border-aureole-cyan transition-all" />
                   </div>
                 </div>
 
                 <div className="relative">
                   <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest block mb-1">Product</label>
-                  <select className="w-full bg-transparent border-b-2 border-slate-300 py-2 text-[11px] font-black uppercase tracking-widest text-[#001529] appearance-none focus:outline-none focus:border-aureole-cyan transition-all cursor-pointer">
-                    <option>SELECT CATEGORY</option>
-                    <option>STABILITY TESTING EQUIPMENTS</option>
-                    <option>PHOTOSTABILITY</option>
-                    <option>COLD ROOMS</option>
-                  </select>
-                  <ChevronDown className="absolute right-0 bottom-2 w-4 h-4 text-slate-500 pointer-events-none" />
+                  <input type="text" placeholder="Product of Interest" className="w-full bg-transparent border-b-2 border-slate-300 py-2 text-[14px] font-bold text-[#001529] placeholder:text-slate-400 placeholder:text-[10px] placeholder:font-black placeholder:uppercase placeholder:tracking-widest focus:outline-none focus:border-aureole-cyan transition-all" />
                 </div>
 
                 <div className="relative">
                   <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest block mb-1">Message</label>
-                  <textarea rows={3} placeholder="DESCRIBE YOUR REQUIREMENTS..." className="w-full bg-transparent border-b-2 border-slate-300 py-2 text-[11px] font-black uppercase tracking-widest text-[#001529] focus:outline-none focus:border-aureole-cyan transition-all resize-none"></textarea>
+                  <textarea rows={3} placeholder="Describe your requirements..." className="w-full bg-transparent border-b-2 border-slate-300 py-2 text-[14px] font-bold text-[#001529] placeholder:text-slate-400 placeholder:text-[10px] placeholder:font-black placeholder:uppercase placeholder:tracking-widest focus:outline-none focus:border-aureole-cyan transition-all resize-none"></textarea>
                 </div>
 
                 <button className="flex items-center gap-6 group mt-6">
