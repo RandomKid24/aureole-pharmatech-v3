@@ -59,11 +59,10 @@ const Footer: React.FC = () => {
                   <ul className="space-y-5">
                      {[
                         { name: 'Home', href: '/' },
-                        { name: 'Overview', href: '/about' },
-                        { name: 'Aureole Team', href: '/about' },
-                        { name: 'Products', href: '/#products' },
-                        { name: 'Service', href: '/service' },
+                        { name: 'About', href: '/about' },
+                        { name: 'Products', href: '/products' },
                         { name: 'Software', href: '/software' },
+                        { name: 'Service', href: '/service' },
                         { name: 'Contact', href: '/#contact' }
                      ].map(item => (
                         <li key={item.name}>
@@ -92,11 +91,22 @@ const Footer: React.FC = () => {
                <div>
                   <h4 className="text-[11px] font-black uppercase tracking-[0.3em] mb-10 text-aureole-blue">Key Products</h4>
                   <ul className="space-y-5">
-                     {['Walk-in Chambers', 'Air Samplers', 'Stability Testing Equipments', 'Photostability', 'Cold Storage'].map(item => (
-                        <li key={item}>
-                           <a href="#" className="text-slate-400 font-bold tracking-[0.15em] text-[10px] hover:text-white transition-colors flex items-center gap-3 group">
-                              <span className="w-1.5 h-[1px] bg-slate-700 group-hover:w-4 group-hover:bg-aureole-cyan transition-all"></span> {item}
-                           </a>
+                     {[
+                        { name: 'Humidity Chamber', href: '/products/humidity-chamber' },
+                        { name: 'Walk-In Humidity Chamber', href: '/products/walk-in-humidity-chamber' },
+                        { name: 'Cold Room', href: '/products/walk-in-cold-chamber' },
+                        { name: 'Photostability Chamber', href: '/products/photostability-chamber' },
+                        { name: 'Ultra Low Deep Freezer (-80°C)', href: '/products/ultra-low-deep-freezer-80c' },
+                        { name: 'Ultrasonic Bath', href: '/products/ultrasonic-bath' }
+                     ].map(item => (
+                        <li key={item.name}>
+                           <Link
+                              to={item.href}
+                              className="text-slate-400 font-bold tracking-[0.15em] text-[10px] hover:text-white transition-colors flex items-center gap-3 group"
+                              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                           >
+                              <span className="w-1.5 h-[1px] bg-slate-700 group-hover:w-4 group-hover:bg-aureole-cyan transition-all"></span> {item.name}
+                           </Link>
                         </li>
                      ))}
                   </ul>

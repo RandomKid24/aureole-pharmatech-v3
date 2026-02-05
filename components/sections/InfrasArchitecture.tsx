@@ -22,7 +22,7 @@ const InfrasArchitecture: React.FC = () => {
     };
 
     return (
-        <section ref={sectionRef} className="relative bg-white overflow-hidden border-t border-slate-100">
+        <section ref={sectionRef} className="relative bg-white overflow-hidden border-t border-slate-100 my-16">
             {/* Trigger Section */}
             <div className="container mx-auto px-4 sm:px-8 lg:px-16 border-b border-slate-200">
                 <div

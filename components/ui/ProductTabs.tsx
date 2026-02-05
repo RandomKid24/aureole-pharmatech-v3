@@ -217,6 +217,9 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product, productName }) => {
                                         'mirror finish': 'Inner Mirror finish & outer Matt finish.png',
                                         'uniform light': 'Uniform light distribution.png',
                                         'high temperature': 'High temperature cut-off Settable thermostat.png',
+                                        'lights automatically shut off': 'Lights automatically shut off after specific exposure level.png',
+                                        'test the sample': 'Test the sample on Fluorescent light or U. V. lights.png',
+                                        'uv meter': 'UV Meter.png',
                                     };
 
                                     const sortedKeys = Object.keys(iconMapping).sort((a, b) => b.length - a.length);

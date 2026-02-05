@@ -2,12 +2,7 @@ import { ProductDetail } from '../types';
 
 export const walkInColdChamber: ProductDetail = {
     description: "Aureole Pharma Tech’s Walk-in Cold chambers are purpose-built for the meticulous temperature control required in cold storage of biological samples, serving various industries including biotechnology, food processing, pharmaceuticals, and agrochemical manufacturing. These units are constructed using Polyurethane Foam (PUF) panels and are manufactured in accordance with Good Manufacturing Practices (GMP) standards. They are equipped with a refrigeration system and can optionally include a standby refrigeration system to ensure uninterrupted operation.\n\nOur Walk-in Cold chambers offer a reliable and environmentally responsible way to preserve the quality and integrity of biological samples over extended periods. Their adherence to temperature control and distribution, along with eco-friendly refrigeration systems, makes them valuable assets for organizations in various industries that require precise cold storage solutions.",
-    keyFeaturesHeading: "Advantages",
-    keyFeatures: [
-        "Precise Temperature Control: These units are designed to maintain a precise and consistent temperature over extended periods, ensuring the safe and stable storage of sensitive biological samples.",
-        "Uniform Temperature: They provide a complete solution for achieving uniform temperature distribution throughout the chamber. This is critical for preventing temperature variations that can compromise the integrity of stored samples.",
-        "Eco-Friendly: Our units feature a CFC-free refrigeration system, aligning with eco-friendly practices and sustainability goals."
-    ],
+    keyFeatures: [],
     specifications: [
         { parameter: "Temperature Range", details: "2°C to 8°C" },
         { parameter: "Accuracy", details: "± 1°C" },
@@ -170,6 +165,5 @@ export const walkInColdChamber: ProductDetail = {
                 ]
             }
         ],
-        remark: "• Power Supply: Single Phase 230 V (up to 3000L), Three Phase 415 V (6000L and above). Above are standard sizes and we can offer other (customised) sizes also V** = variant based upon construction & body."
     }
 };
