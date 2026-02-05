@@ -28,7 +28,7 @@ const KeyDetailsAccordion: React.FC<KeyDetailsAccordionProps> = ({
     const [activeSection, setActiveSection] = useState(0);
 
     return (
-        <section className="py-20 bg-white border-y border-slate-100">
+        <section className="py-20 bg-transparent border-y border-slate-100">
             <div className="container mx-auto px-6 lg:px-24">
                 {/* Header */}
                 <div className="max-w-4xl mb-12 text-center lg:text-left">
@@ -45,12 +45,12 @@ const KeyDetailsAccordion: React.FC<KeyDetailsAccordionProps> = ({
                                 key={idx}
                                 onClick={() => setActiveSection(idx)}
                                 className={`group flex-1 flex flex-col justify-center p-8 text-left border-l-[6px] transition-all duration-300 min-h-[120px] ${activeSection === idx
-                                    ? 'bg-slate-50 border-aureole-cyan shadow-sm'
-                                    : 'bg-transparent border-transparent grayscale opacity-50 hover:opacity-100 hover:grayscale-0 hover:bg-slate-50/50'
+                                    ? 'bg-white/60 backdrop-blur-md border-aureole-cyan shadow-sm'
+                                    : 'bg-transparent border-transparent grayscale opacity-50 hover:opacity-100 hover:grayscale-0 hover:bg-white/30 hover:backdrop-blur-sm'
                                     }`}
                             >
                                 <div className="flex items-center gap-6">
-                                    <div className={`w-16 h-16 rounded-sm flex items-center justify-center transition-all duration-300 ${activeSection === idx ? 'bg-white shadow-sm text-aureole-blue scale-110' : 'bg-slate-50 text-slate-400'}`}>
+                                    <div className={`w-16 h-16 rounded-sm flex items-center justify-center transition-all duration-300 ${activeSection === idx ? 'bg-white shadow-sm text-aureole-blue scale-110' : 'bg-white/40 text-slate-400'}`}>
                                         {React.cloneElement(item.icon as React.ReactElement, { size: 28 })}
                                     </div>
                                     <div>
@@ -68,7 +68,7 @@ const KeyDetailsAccordion: React.FC<KeyDetailsAccordionProps> = ({
 
                     {/* Unified Content Sheet - Compact Height */}
                     <div className="lg:w-3/5">
-                        <div key={activeSection} className="h-full bg-slate-50 border border-slate-100 p-8 lg:p-12 shadow-sm relative overflow-hidden animate-in fade-in duration-500 min-h-[400px]">
+                        <div key={activeSection} className="h-full bg-white/60 backdrop-blur-md border border-white/50 p-8 lg:p-12 shadow-sm relative overflow-hidden animate-in fade-in duration-500 min-h-[400px]">
 
 
                             <div className="relative z-10 h-full flex flex-col">
@@ -98,7 +98,6 @@ const KeyDetailsAccordion: React.FC<KeyDetailsAccordionProps> = ({
                                         <div className="w-1.5 h-1.5 rounded-full bg-aureole-cyan" />
                                         <span className="text-xs font-black text-slate-400 uppercase tracking-widest leading-none">Aureole Insights</span>
                                     </div>
-                                    <span className="text-xs font-black text-slate-300 uppercase tracking-widest">REF-2026</span>
                                 </div>
                             </div>
                         </div>

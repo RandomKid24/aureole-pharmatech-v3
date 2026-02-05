@@ -13,7 +13,7 @@ interface CategoryProductListProps {
 
 const CategoryProductList: React.FC<CategoryProductListProps> = ({ subTypes }) => {
     return (
-        <section className="py-20 bg-white border-t border-slate-100">
+        <section className="py-20 bg-transparent border-t border-slate-100">
             <div className="container mx-auto px-6 lg:px-24">
                 <div className="max-w-4xl mb-16 text-center lg:text-left">
                     <h2 className="text-4xl lg:text-5xl font-black font-heading text-[#001529] tracking-tighter leading-none mb-4">
@@ -37,7 +37,7 @@ const CategoryProductList: React.FC<CategoryProductListProps> = ({ subTypes }) =
                                     <Link
                                         key={pIdx}
                                         to={`/products/${slugify(pName)}`}
-                                        className="group flex items-center justify-between py-5 border-b border-slate-100 transition-all duration-300 px-1"
+                                        className="group flex items-center justify-between py-5 border-b border-slate-200/60 transition-all duration-300 px-4 -mx-4 rounded-lg hover:bg-white/50 hover:backdrop-blur-sm hover:shadow-sm hover:border-transparent"
                                     >
                                         <div className="flex items-center gap-5">
                                             {/* Fixed Dot - No longer cut off */}
