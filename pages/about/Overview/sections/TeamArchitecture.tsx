@@ -58,7 +58,7 @@ const TeamArchitecture: React.FC = () => {
     ];
 
     return (
-        <section className="relative bg-transparent group/team">
+        <section className="relative bg-white group/team">
             {/* Minimalist Multi-state Gate */}
             <div
                 id="team-gate"
@@ -208,6 +208,35 @@ const TeamArchitecture: React.FC = () => {
 
                                                     <h5 className="text-xl font-[950] text-[#001529] uppercase tracking-tighter leading-none mb-2">{member.name}</h5>
                                                     <p className="text-[9px] font-black text-aureole-cyan uppercase tracking-widest opacity-80">{member.role}</p>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Level 3: Regional & Operational Leadership */}
+                                    <div className="relative pt-12">
+                                        {/* Connector from Level 2 */}
+                                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-12 bg-slate-200 hidden lg:block"></div>
+
+                                        {/* Horizontal Distribution Line */}
+                                        <div className="absolute top-12 left-12 right-12 h-px bg-slate-200 hidden lg:block"></div>
+
+                                        <div className="text-center mb-12 relative z-10 bg-white inline-block px-4 mx-auto left-0 right-0 lg:absolute lg:top-8 lg:-translate-y-1/2">
+                                            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 bg-white px-2">Regional & Operational Leadership</span>
+                                        </div>
+
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 relative z-10 pt-8 lg:pt-16">
+                                            {regionalTeams.map((member, idx) => (
+                                                <div key={idx} className="group bg-white border border-slate-100 p-6 hover:border-aureole-blue/30 hover:shadow-lg transition-all duration-500 relative flex flex-col items-center text-center">
+                                                    {/* Top Connector */}
+                                                    <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-px h-16 bg-slate-200 hidden lg:block"></div>
+
+                                                    <div className="w-16 h-16 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 text-slate-300 group-hover:text-aureole-blue group-hover:border-aureole-blue/20">
+                                                        <Users2 size={24} />
+                                                    </div>
+
+                                                    <h5 className="text-sm font-bold text-[#001529] uppercase tracking-tight mb-1">{member.name}</h5>
+                                                    <p className="text-[8px] font-bold text-slate-400 uppercase tracking-wider group-hover:text-aureole-cyan transition-colors">{member.role}</p>
                                                 </div>
                                             ))}
                                         </div>
