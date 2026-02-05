@@ -13,18 +13,24 @@ interface CategoryHeroProps {
 const CategoryHero: React.FC<CategoryHeroProps> = ({ title, subtitle, description, watermark, image, showAccent = true }) => {
     return (
         <section className="relative min-h-[60vh] flex items-center bg-transparent pt-32 pb-16 lg:pt-40 lg:pb-24">
-            <div className="absolute inset-0 z-0 opacity-[0.03] bg-[radial-gradient(#0079ac_1px,transparent_1px)] [background-size:40px_40px]"></div>
-
-            {/* Background Image - Moved to Right and Fully Opaque */}
+            {/* Background Image - Sketch / Overlay */}
             {image && (
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 flex items-center justify-end pointer-events-none select-none z-0">
+                <div
+                    className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] md:w-[800px] lg:w-[1000px] flex items-center justify-end pointer-events-none select-none z-0 mix-blend-multiply translate-x-[15%]"
+                    style={{
+                        maskImage: 'linear-gradient(to right, transparent, black 40%)',
+                        WebkitMaskImage: 'linear-gradient(to right, transparent, black 40%)'
+                    }}
+                >
                     <img
                         src={image}
                         alt=""
-                        className="w-full max-w-4xl h-auto object-contain opacity-100"
+                        className="w-full h-auto object-contain opacity-50"
                     />
                 </div>
             )}
+
+            <div className="absolute inset-0 z-0 opacity-[0.03] bg-[radial-gradient(#0079ac_1px,transparent_1px)] [background-size:40px_40px]"></div>
 
             <div className="container mx-auto px-6 sm:px-12 lg:px-24 relative z-10">
                 <div className="max-w-4xl">
