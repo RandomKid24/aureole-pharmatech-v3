@@ -17,21 +17,21 @@ interface EventMedia {
 
 const EXHIBITIONS: EventMedia[] = [
     {
+        title: "Analytica Lab Expo Mumbai 2025",
+        date: "2025",
+        location: "MUMBAI, INDIA",
+        description: "Presenting future-ready laboratory solutions at the premier trade fair for laboratory technology.",
+        thumbnail: "/events/exhibitions/Analytica Lab Expo Mumbai 2025/WhatsApp Image 2025-09-10 at 2.13.36 PM.jpeg",
+        folderPath: "/events/exhibitions/Analytica Lab Expo Mumbai 2025",
+        type: 'exhibition'
+    },
+    {
         title: "CPHI PMEC (NOV 2024)",
         date: "NOVEMBER 2024",
         location: "DELHI NCR, INDIA",
         description: "Showcasing our precision engineered systems and compliance-ready solutions at South Asia's largest pharma event.",
         thumbnail: "/events/exhibitions/CPHI PMEC (NOV 2024)/cphi-pmec1.jpg",
         folderPath: "/events/exhibitions/CPHI PMEC (NOV 2024)",
-        type: 'exhibition'
-    },
-    {
-        title: "Asia Pharma Expo 2024",
-        date: "FEBRUARY 2024",
-        location: "DHAKA, BANGLADESH",
-        description: "Engaging with the growing pharmaceutical manufacturing hub in Bangladesh with our latest laboratory technologies.",
-        thumbnail: "/events/exhibitions/Asia Pharma Expo 2024/WhatsApp Image 2025-09-10 at 2.47.02 PM.jpeg",
-        folderPath: "/events/exhibitions/Asia Pharma Expo 2024",
         type: 'exhibition'
     },
     {
@@ -44,21 +44,21 @@ const EXHIBITIONS: EventMedia[] = [
         type: 'exhibition'
     },
     {
+        title: "Asia Pharma Expo 2024",
+        date: "FEBRUARY 2024",
+        location: "DHAKA, BANGLADESH",
+        description: "Engaging with the growing pharmaceutical manufacturing hub in Bangladesh with our latest laboratory technologies.",
+        thumbnail: "/events/exhibitions/Asia Pharma Expo 2024/WhatsApp Image 2025-09-10 at 2.47.02 PM.jpeg",
+        folderPath: "/events/exhibitions/Asia Pharma Expo 2024",
+        type: 'exhibition'
+    },
+    {
         title: "7th NIGERIA PHARMA MANUFACTURERS EXPO 2024",
         date: "2024",
         location: "LAGOS, NIGERIA",
         description: "Expanding our footprint in the African market, showcasing global standard equipment for regional manufacturers.",
         thumbnail: "/events/exhibitions/7th NIGERIA PHARMA MANUFACTURERS EXPO 2024/IMG-20240904-WA0031.jpg",
         folderPath: "/events/exhibitions/7th NIGERIA PHARMA MANUFACTURERS EXPO 2024",
-        type: 'exhibition'
-    },
-    {
-        title: "Analytica Lab Expo Mumbai 2025",
-        date: "2025",
-        location: "MUMBAI, INDIA",
-        description: "Presenting future-ready laboratory solutions at the premier trade fair for laboratory technology.",
-        thumbnail: "/events/exhibitions/Analytica Lab Expo Mumbai 2025/WhatsApp Image 2025-09-10 at 2.13.36 PM.jpeg",
-        folderPath: "/events/exhibitions/Analytica Lab Expo Mumbai 2025",
         type: 'exhibition'
     },
     {
@@ -73,15 +73,6 @@ const EXHIBITIONS: EventMedia[] = [
 ];
 
 const COMPANY_EVENTS: EventMedia[] = [
-    {
-        title: "Manufacturing Unit Inauguration",
-        date: "OCTOBER 2023",
-        location: "MANUFACTURING FACILITY",
-        description: "The grand opening of our state-of-the-art manufacturing unit, marking a new chapter in our journey of precision engineering.",
-        thumbnail: "/events/company-events/Inauguration/MAC_0007_2-scaled.jpg",
-        folderPath: "/events/company-events/Inauguration",
-        type: 'company'
-    },
     {
         title: "Independence Day Celebration 2025",
         date: "AUGUST 15, 2025",
@@ -98,6 +89,15 @@ const COMPANY_EVENTS: EventMedia[] = [
         description: "Honoring the incredible women who drive innovation and excellence across all departments at Aureole PharmaTech.",
         thumbnail: "/events/company-events/Women's Day Celebration 2025/WhatsApp-Image-2025-08-20-at-1.00.30-PM.jpeg",
         folderPath: "/events/company-events/Women's Day Celebration 2025",
+        type: 'company'
+    },
+    {
+        title: "Manufacturing Unit Inauguration",
+        date: "OCTOBER 2023",
+        location: "MANUFACTURING FACILITY",
+        description: "The grand opening of our state-of-the-art manufacturing unit, marking a new chapter in our journey of precision engineering.",
+        thumbnail: "/events/company-events/Inauguration/MAC_0007_2-scaled.jpg",
+        folderPath: "/events/company-events/Inauguration",
         type: 'company'
     }
 ];
