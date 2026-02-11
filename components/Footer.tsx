@@ -156,6 +156,7 @@ const Footer: React.FC = () => {
                         <Shield className="w-3 h-3 text-aureole-blue" />
                         <span className="text-[8px] font-black uppercase tracking-widest">ISO 9001:2015</span>
                      </div>
+                     <a href="/sitemap.xml" target="_blank" className="text-[9px] font-black uppercase tracking-widest text-slate-500 hover:text-aureole-cyan transition-colors">Sitemap</a>
                   </div>
                </div>
                <button
