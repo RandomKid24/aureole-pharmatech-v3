@@ -16,7 +16,9 @@ import Service from './pages/Service';
 import Software from './pages/Software';
 import Events from './pages/Events';
 import Careers from './pages/Careers';
+import CityWiseProductPage from './pages/CityWiseProductPage';
 import { preloadCriticalImages } from './utils/imagePreloader';
+
 
 // Component to handle scroll to top on route change
 const ScrollToTopOnRouteChange: React.FC = () => {
@@ -54,7 +56,9 @@ const App: React.FC = () => {
           <Route path="/about/certification-compliance" element={<Certification />} />
           <Route path="/about/plants" element={<Plants />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/:cityProductSlug" element={<CityWiseProductPage />} />
         </Routes>
+
         <Footer />
       </div>
     </Router>
