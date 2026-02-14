@@ -1,6 +1,7 @@
-
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { PRODUCT_SEO_DATA } from '../data/seoMetadata';
 import { PRODUCT_DETAILS } from '../data/products';
 import { findValuesBySlug } from '../utils/urlUtils';
 import { ArrowLeft } from 'lucide-react';
@@ -19,11 +20,14 @@ import SSAccessoriesGrid from './ProductDetail/sections/SSAccessoriesGrid';
 const ProductDetail: React.FC = () => {
     const { productName } = useParams<{ productName: string }>();
     const { product, originalName } = findValuesBySlug(productName || '', PRODUCT_DETAILS);
-    const decodedName = originalName;
+    const decodedName = originalName || '';
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [decodedName]);
+
+    const seoData = PRODUCT_SEO_DATA[decodedName];
+
 
     if (!product) {
         return (
@@ -41,6 +45,11 @@ const ProductDetail: React.FC = () => {
     if (decodedName === "Stainless Steel Items & Accessories" || decodedName === "Modular Laboratory Furniture") {
         return (
             <div className="pt-24 min-h-screen bg-transparent">
+                <SEO 
+                    title={seoData?.title} 
+                    description={seoData?.description} 
+                    canonical={`https://www.aureolepharmatech.com/products/${productName}/`}
+                />
                 <CategoryHero
                     title={decodedName === "Modular Laboratory Furniture" ? "LABORATORY" : "STAINLESS"}
                     subtitle={decodedName === "Modular Laboratory Furniture" ? "FURNITURE" : "Accessories"}
@@ -58,6 +67,11 @@ const ProductDetail: React.FC = () => {
 
     return (
         <div className="pt-24 min-h-screen bg-transparent selection:bg-aureole-blue selection:text-white">
+            <SEO 
+                title={seoData?.title} 
+                description={seoData?.description} 
+                canonical={`https://www.aureolepharmatech.com/products/${productName}/`}
+            />
             <ProductHero product={product} decodedName={decodedName} />
             <TechnicalDashboard product={product} decodedName={decodedName} />
             {showInfras && <InfrasArchitecture />}

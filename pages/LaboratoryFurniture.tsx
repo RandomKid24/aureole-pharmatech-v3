@@ -1,5 +1,5 @@
-
 import React, { useEffect } from 'react';
+import SEO from '../components/SEO';
 import { PRODUCT_CATALOG, FURNITURE_NAV_ITEMS, FURNITURE_SECTIONS } from '../data/products';
 import CategoryHero from '../components/ui/CategoryHero';
 import KeyDetailsAccordion from '../components/ui/KeyDetailsAccordion';
@@ -16,6 +16,11 @@ const LaboratoryFurniture: React.FC = () => {
 
     return (
         <div className="pt-24 min-h-screen bg-transparent">
+            <SEO 
+                title="Laboratory Furniture Manufacturer and Supplier in India, Aureole Pharma Tech"
+                description="Aureole Pharma Tech Manufacturer and Supplier of Laboratory Furniture, Furniture & Accessories, Modular Laboratory Furniture, Stainless Steel Items & Accessories"
+                canonical="https://www.aureolepharmatech.com/products/laboratory-furniture/"
+            />
             <CategoryHero
                 title="LABORATORY"
                 subtitle={<span className="text-aureole-blue">FURNITURE</span>}

@@ -1,5 +1,5 @@
-
 import React, { useEffect } from 'react';
+import SEO from '../components/SEO';
 import { PRODUCT_CATALOG, STABILITY_NAV_ITEMS, STABILITY_SECTIONS } from '../data/products';
 import CategoryHero from '../components/ui/CategoryHero';
 import KeyDetailsAccordion from '../components/ui/KeyDetailsAccordion';
@@ -16,6 +16,11 @@ const StabilityChambers: React.FC = () => {
 
     return (
         <div className="pt-24 min-h-screen bg-transparent">
+            <SEO 
+                title="Stability Chamber Manufacturer and Supplier in India, Aureole Pharma Tech"
+                description="Aureole Pharma Tech Manufacturer and Supplier of Stability Chamber, Stand Alone Chambers, Walk In Chambers, Humidity Chamber, BOD Incubator, Cold Chamber, Walk In Humidity Chamber"
+                canonical="https://www.aureolepharmatech.com/products/stability-chambers/"
+            />
             <CategoryHero
                 title="precision ENVIRONMENTAL"
                 subtitle={<span className="text-aureole-blue">CONTROL</span>}

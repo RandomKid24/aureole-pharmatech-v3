@@ -1,5 +1,5 @@
-
 import React, { useEffect } from 'react';
+import SEO from '../components/SEO';
 import Hero from './Home/sections/Hero';
 import About from './Home/sections/About';
 import ManagingDirectorProfile from './Home/sections/ManagingDirectorProfile';
@@ -35,6 +35,11 @@ const Home: React.FC = () => {
 
     return (
         <main>
+            <SEO 
+                title="Stability Chamber, Pharmaceutical Equipment, Aureole Pharma Tech"
+                description="Aureole Pharma Tech Manufacturers, Suppliers of Stability Chamber, Walk in Chamber, Stand Alone Chamber, Ultrasonic Baths, Water Baths, Walk in Humidity Chamber from Nashik, Maharashtra, Best Quality In Pharmaceutical Equipment, Call: +91 86005 22240"
+                canonical="https://www.aureolepharmatech.com/"
+            />
             <Hero />
             <About />
             <ManagingDirectorProfile />

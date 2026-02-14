@@ -1,7 +1,7 @@
-
 import React, { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { PRODUCT_DETAILS } from '../../data/products';
+import SEO from '../../components/SEO';
 import { PRODUCTS, CITIES } from '../../data/cityWiseProducts';
 import ProductHero from '../ProductDetail/sections/ProductHero';
 import TechnicalDashboard from '../ProductDetail/sections/TechnicalDashboard';
@@ -41,14 +41,9 @@ const CityWiseProductPage: React.FC = () => {
     const product = PRODUCT_DETAILS[baseProductKey];
 
     useEffect(() => {
-        if (productName && cityName) {
-            document.title = `${productName} Manufacturers and Suppliers in ${cityName} | Aureole PharmaTech`;
-        }
-    }, [productName, cityName]);
-
-    useEffect(() => {
         window.scrollTo(0, 0);
     }, [cityProductSlug]);
+
 
     if (!product || !cityName) {
         return <Navigate to="/products" />;
@@ -58,6 +53,11 @@ const CityWiseProductPage: React.FC = () => {
 
     return (
         <div className="pt-24 min-h-screen bg-transparent selection:bg-aureole-blue selection:text-white">
+            <SEO 
+                title={`${productName} Manufacturers and Suppliers in ${cityName} | Aureole PharmaTech`}
+                description={`Aureole Pharma Tech Manufacturers, Suppliers of ${productName} in ${cityName}, Maharashtra. Best Quality & Price Pharmaceutical Equipment In India, Call: +91 86005 22240`}
+                canonical={`https://www.aureolepharmatech.com/${cityProductSlug}/`}
+            />
             {/* SEO specific content can be added here if needed, like a breadcrumb or custom title */}
             <div className="container mx-auto px-6 lg:px-24 mb-8">
                 <nav className="flex text-xs uppercase tracking-widest text-slate-400 gap-2 items-center">
