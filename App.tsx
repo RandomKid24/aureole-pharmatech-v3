@@ -16,7 +16,10 @@ import Service from './pages/Service';
 import Software from './pages/Software';
 import Events from './pages/Events';
 import Careers from './pages/Careers';
+import Contact from './pages/Contact';
+import AboutUs from './pages/AboutUs';
 import CityWiseProductPage from './pages/CityWiseProductPage';
+import { Navigate } from 'react-router-dom';
 import { preloadCriticalImages } from './utils/imagePreloader';
 
 
@@ -56,6 +59,21 @@ const App: React.FC = () => {
           <Route path="/about/certification-compliance" element={<Certification />} />
           <Route path="/about/plants" element={<Plants />} />
           <Route path="/careers" element={<Careers />} />
+
+          {/* Legacy SEO Redirects */}
+          <Route path="/contact-us" element={<Contact />} />
+          <Route path="/contact-us/" element={<Contact />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact/" element={<Contact />} />
+          
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/about-us/" element={<AboutUs />} />
+          
+          <Route path="/home" element={<Navigate to="/" replace />} />
+          <Route path="/home/" element={<Navigate to="/" replace />} />
+          <Route path="/home-2" element={<Navigate to="/" replace />} />
+          <Route path="/home-2/" element={<Navigate to="/" replace />} />
+
           <Route path="/:cityProductSlug" element={<CityWiseProductPage />} />
         </Routes>
 

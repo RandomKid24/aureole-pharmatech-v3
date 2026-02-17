@@ -46,7 +46,7 @@ const CityWiseProductPage: React.FC = () => {
 
 
     if (!product || !cityName) {
-        return <Navigate to="/products" />;
+        return <Navigate to="/" replace />;
     }
 
     const showInfras = productName === "Walk In Humidity Chamber";

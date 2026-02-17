@@ -30,6 +30,16 @@ const Home: React.FC = () => {
             observer.observe(sec);
         });
 
+        // Handle direct hash navigation on mount
+        if (window.location.hash === '#contact') {
+            setTimeout(() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 500); // Wait for animations/load
+        }
+
         return () => observer.disconnect();
     }, []);
 
