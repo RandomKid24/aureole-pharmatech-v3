@@ -146,7 +146,7 @@ const JobBoard: React.FC<JobBoardProps> = ({ listings }) => {
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 w-full lg:w-auto">
                                 <div className="flex flex-col gap-1">
                                     <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Email</span>
-                                    <a href="mailto:careers@www.aureolepharmatech.com" className="text-sm font-bold text-aureole-blue hover:text-[#001529] transition-colors">careers@www.aureolepharmatech.com</a>
+                                    <a href="mailto:careers@aureolepharmatech.com" className="text-sm font-bold text-aureole-blue hover:text-[#001529] transition-colors">careers@aureolepharmatech.com</a>
                                 </div>
                                 <div className="flex flex-col gap-1">
                                     <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">HR Contact</span>
