@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Linkedin, Twitter, Facebook, Instagram, MapPin, Mail, Phone, Globe, Shield } from 'lucide-react';
+import { Linkedin, Instagram, MapPin, Mail, Phone } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Footer: React.FC = () => {
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
    };
 
    return (
-      <footer className="bg-aureole-slate text-white pt-24 pb-16 relative overflow-hidden">
+      <footer className="bg-aureole-slate text-white pt-16 pb-12 relative overflow-hidden">
          {/* Visual Header - Branding Mask Effect */}
          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none">
             <h2 className="text-[31vw] font-bold tracking-tighter leading-none text-aureole-cyan opacity-[0.05]" style={{ fontFamily: '"Levenim MT", "Questrial", sans-serif' }}>
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
          </div>
 
          <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 mb-32">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
                <div className="space-y-10">
                   <Link to="/" onClick={handleScrollToTop}>
@@ -55,8 +55,8 @@ const Footer: React.FC = () => {
                </div>
 
                <div>
-                  <h4 className="text-[11px] font-black uppercase tracking-[0.3em] mb-10 text-aureole-blue">Quick Links</h4>
-                  <ul className="space-y-5">
+                  <h4 className="text-xs font-black uppercase tracking-[0.2em] mb-8 text-aureole-blue">Quick Links</h4>
+                  <ul className="space-y-3">
                      {[
                         { name: 'Home', href: '/' },
                         { name: 'About', href: '/about' },
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
                            {item.href.startsWith('/#') ? (
                               <Link
                                  to={item.href}
-                                 className="text-slate-400 font-bold tracking-[0.15em] text-[10px] hover:text-white transition-colors flex items-center gap-3 group"
+                                 className="text-slate-400 font-bold tracking-[0.1em] text-xs hover:text-white transition-colors flex items-center gap-3 group"
                                  onClick={() => handleHashScroll(item.href.substring(2))}
                               >
                                  <span className="w-1.5 h-[1px] bg-slate-700 group-hover:w-4 group-hover:bg-aureole-cyan transition-all"></span> {item.name}
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
                            ) : (
                               <Link
                                  to={item.href}
-                                 className="text-slate-400 font-bold tracking-[0.15em] text-[10px] hover:text-white transition-colors flex items-center gap-3 group"
+                                 className="text-slate-400 font-bold tracking-[0.1em] text-xs hover:text-white transition-colors flex items-center gap-3 group"
                                  onClick={item.href === '/' ? handleScrollToTop : undefined}
                               >
                                  <span className="w-1.5 h-[1px] bg-slate-700 group-hover:w-4 group-hover:bg-aureole-cyan transition-all"></span> {item.name}
@@ -89,8 +89,8 @@ const Footer: React.FC = () => {
                </div>
 
                <div>
-                  <h4 className="text-[11px] font-black uppercase tracking-[0.3em] mb-10 text-aureole-blue">Key Products</h4>
-                  <ul className="space-y-5">
+                  <h4 className="text-xs font-black uppercase tracking-[0.2em] mb-8 text-aureole-blue">Key Products</h4>
+                  <ul className="space-y-3">
                      {[
                         { name: 'Humidity Chamber', href: '/products/humidity-chamber' },
                         { name: 'Walk-In Humidity Chamber', href: '/products/walk-in-humidity-chamber' },
@@ -102,7 +102,7 @@ const Footer: React.FC = () => {
                         <li key={item.name}>
                            <Link
                               to={item.href}
-                              className="text-slate-400 font-bold tracking-[0.15em] text-[10px] hover:text-white transition-colors flex items-center gap-3 group"
+                              className="text-slate-400 font-bold tracking-[0.1em] text-xs hover:text-white transition-colors flex items-center gap-3 group"
                               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                            >
                               <span className="w-1.5 h-[1px] bg-slate-700 group-hover:w-4 group-hover:bg-aureole-cyan transition-all"></span> {item.name}
@@ -113,15 +113,15 @@ const Footer: React.FC = () => {
                </div>
 
                <div>
-                  <h4 className="text-[11px] font-black uppercase tracking-[0.3em] mb-10 text-aureole-blue">Headquarters</h4>
-                  <div className="space-y-6 relative z-10">
+                  <h4 className="text-xs font-black uppercase tracking-[0.2em] mb-8 text-aureole-blue">Headquarters</h4>
+                  <div className="space-y-4 relative z-10">
                      <div className="flex gap-4">
                         <MapPin className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />
                         <a
                            href="https://maps.google.com/?q=B-61, Dist, MIDC Area, Malegaon, Maharashtra 422113"
                            target="_blank"
                            rel="noopener noreferrer"
-                           className="text-slate-400 font-bold tracking-[0.15em] text-[10px] leading-relaxed hover:text-white transition-colors"
+                           className="text-slate-400 font-bold tracking-[0.1em] text-xs leading-relaxed hover:text-white transition-colors"
                         >
                            B-61, Dist, MIDC Area, Malegaon, Maharashtra 422113.
                         </a>
@@ -130,7 +130,7 @@ const Footer: React.FC = () => {
                         <Mail className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />
                         <a
                            href="mailto:enquiry@aureolepharmatech.com"
-                           className="text-slate-400 font-bold tracking-[0.15em] text-[10px] hover:text-white transition-colors"
+                           className="text-slate-400 font-bold tracking-[0.1em] text-xs hover:text-white transition-colors"
                         >
                            enquiry@aureolepharmatech.com
                         </a>
@@ -148,24 +148,6 @@ const Footer: React.FC = () => {
                </div>
             </div>
 
-            <div className="pt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-               <div className="flex items-center gap-8">
-                  <span className="text-[9px] font-black uppercase tracking-widest text-slate-500">© 2025 Aureole Pharmatech Pvt Ltd</span>
-                  <div className="hidden md:flex gap-8">
-                     <div className="flex items-center gap-2 opacity-40">
-                        <Shield className="w-3 h-3 text-aureole-blue" />
-                        <span className="text-[8px] font-black uppercase tracking-widest">ISO 9001:2015</span>
-                     </div>
-                     <a href="/sitemap.xml" target="_blank" className="text-[9px] font-black uppercase tracking-widest text-slate-500 hover:text-aureole-cyan transition-colors">Sitemap</a>
-                  </div>
-               </div>
-               <button
-                  onClick={handleScrollToTop}
-                  className="text-[9px] font-black uppercase tracking-[0.4em] text-aureole-cyan hover:text-white transition-all"
-               >
-                  Back to top
-               </button>
-            </div>
          </div>
       </footer>
    );
