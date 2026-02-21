@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import SEO from '../components/SEO';
 import ServiceHero from './Service/sections/ServiceHero';
-import ExcellenceGrid from './Service/sections/ExcellenceGrid';
-import PhilosophySection from './Service/sections/PhilosophySection';
-import ServiceCenters from './Service/sections/ServiceCenters';
+import CoreServices from './Service/sections/CoreServices';
+import WhyChooseUs from './Service/sections/WhyChooseUs';
+import ServiceCTA from './Service/sections/ServiceCTA';
 
 const Service: React.FC = () => {
     useEffect(() => {
@@ -13,14 +13,14 @@ const Service: React.FC = () => {
     return (
         <div className="pt-24 lg:pt-32 pb-20 bg-transparent">
             <SEO 
-                title="Aureole PharmaTech Comprehensive Support Services"
-                description="Aureole PharmaTech stands as a beacon of excellence in the pharmaceutical landscape, delivering high-quality equipment backed by a relentless focus on integrity, innovation, and responsive customer support."
+                title="Stability Chamber Services & Lifecycle Support | Aureole PharmaTech"
+                description="Expert technical services for Stability Chambers, Environmental Chambers, Cold Rooms, and GMP-critical equipment. Compliance focused and audit ready."
                 canonical="https://www.aureolepharmatech.com/service/"
             />
             <ServiceHero />
-            <ExcellenceGrid />
-            <PhilosophySection />
-            <ServiceCenters />
+            <CoreServices />
+            <WhyChooseUs />
+            <ServiceCTA />
         </div>
     );
 };
