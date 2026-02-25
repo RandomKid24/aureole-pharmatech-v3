@@ -143,6 +143,9 @@
     <loc>https://www.aureolepharmatech.com/vcards/sandip-kale/</loc>
   </url>
   <url>
+    <loc>https://www.aureolepharmatech.com/vcards/sanjay-bhosle/</loc>
+  </url>
+  <url>
     <loc>https://www.aureolepharmatech.com/vcards/shalaka-nargolkar/</loc>
   </url>
   <url>
