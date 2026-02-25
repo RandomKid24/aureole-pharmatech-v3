@@ -1,5 +1,16 @@
 {
+    "redirects": [
+        {
+            "source": "/vcards/:slug",
+            "destination": "/vcards/:slug/",
+            "permanent": true
+        }
+    ],
     "rewrites": [
+        {
+            "source": "/vcards/:path*/",
+            "destination": "/vcards-2026/:path*"
+        },
         {
             "source": "/vcards/:path*",
             "destination": "/vcards-2026/:path*"
