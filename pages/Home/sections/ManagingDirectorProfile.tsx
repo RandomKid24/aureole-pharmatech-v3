@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Quote, Linkedin, FileText, Target, Compass, ArrowRight } from 'lucide-react';
+import { Quote, Linkedin, FileText, Target, Compass, ArrowRight, IdCard } from 'lucide-react';
 
 const ManagingDirectorProfile: React.FC = () => {
    return (
@@ -56,10 +56,19 @@ const ManagingDirectorProfile: React.FC = () => {
                         href="https://in.linkedin.com/in/dr-kiran-badgujar-385a3367"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-aureole-cyan text-white px-8 py-4 text-[10px] font-black uppercase tracking-widest flex items-center gap-4"
+                        className="bg-aureole-cyan text-white px-8 py-4 text-[10px] font-black uppercase tracking-widest flex items-center gap-4 hover:bg-aureole-blue transition-colors"
                      >
                         <Linkedin className="w-4 h-4" />
                         <span>Connect</span>
+                     </a>
+                     <a
+                        href="/vcards/dr-kiran-badgujar"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hidden sm:flex bg-white border border-slate-200 text-[#001529] px-8 py-4 text-[10px] font-black uppercase tracking-widest items-center gap-4 hover:bg-slate-50 transition-colors"
+                     >
+                        <IdCard className="w-4 h-4" />
+                        <span>V-Card</span>
                      </a>
                   </div>
                </div>

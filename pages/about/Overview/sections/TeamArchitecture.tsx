@@ -11,39 +11,44 @@ const TeamArchitecture: React.FC = () => {
             name: "Bipin Badgujar",
             role: "Chief Executive Officer",
             img: "/about/bipin-badgujar.jpg",
-            linkedin: "https://www.linkedin.com/in/bipin-a-badgujar-5a8b5b16/"
+            linkedin: "https://www.linkedin.com/in/bipin-a-badgujar-5a8b5b16/",
+            vcard: "/vcards/bipin-badgujar"
         },
         {
             name: "Jitendra Tajanpure",
             role: "VP Finance & Accounts",
             img: "/about/jitendra-tajanpure.jpeg",
-            linkedin: "https://www.linkedin.com/in/jitendra-tajanpure-6a0937296/"
+            linkedin: "https://www.linkedin.com/in/jitendra-tajanpure-6a0937296/",
+            vcard: "/vcards/jitendra-tajanpure"
         },
         {
             name: "Harshal Ghoge",
             role: "VP - Marketing & Projects",
             img: "/about/harshal-ghoge.jpg",
-            linkedin: "https://www.linkedin.com/in/harshal-ghoge-553a4735/"
+            linkedin: "https://www.linkedin.com/in/harshal-ghoge-553a4735/",
+            vcard: "/vcards/harshal-ghoge"
         },
         {
             name: "Sandeep Kale",
             role: "VP - Strategy & Biz Dev",
             img: "/about/sandeep-kale.jpg",
-            linkedin: "#"
+            linkedin: "#",
+            vcard: "/vcards/sandip-kale"
         },
         {
             name: "Shubham Badgujar",
             role: "Manager - IBD",
             img: "/about/shubham-badgujar.jpg",
-            linkedin: "https://www.linkedin.com/in/shubham-badgujar-0025b7169/"
+            linkedin: "https://www.linkedin.com/in/shubham-badgujar-0025b7169/",
+            vcard: "/vcards/shubham-badgujar"
         }
     ];
 
     const regionalTeams = [
-        { name: "Mr Rohan Gujrathi", role: "Regional Sales Head - West (GJ)" },
-        { name: "Mr Vikrant Deshpande", role: "Regional Sales Head - North" },
-        { name: "Mr Dnyaneshwar Gaikwad", role: "Regional Sales Head - South" },
-        { name: "Mr. Yash Gujarathi", role: "Regional Sales Head - West (GJ)" }
+        { name: "Mr Rohan Gujrathi", role: "Regional Sales Head - West (GJ)", vcard: "/vcards/rohan-gujarathi" },
+        { name: "Mr Vikrant Deshpande", role: "Regional Sales Head - North", vcard: "/vcards/vikrant-deshpande" },
+        { name: "Mr Dnyaneshwar Gaikwad", role: "Regional Sales Head - South", vcard: "/vcards/dnyaneshwar-gaikwad" },
+        { name: "Mr. Yash Gujarathi", role: "Regional Sales Head - West (GJ)", vcard: "/vcards/yash-gujarathi" }
     ];
 
     return (
@@ -148,6 +153,9 @@ const TeamArchitecture: React.FC = () => {
                                                 <a href={coreTeam[0].linkedin} target="_blank" rel="noopener noreferrer" className="w-12 h-12 flex items-center justify-center bg-slate-50 border-b border-l border-slate-200 hover:bg-aureole-blue text-[#001529] hover:text-white transition-all">
                                                     <Linkedin size={18} />
                                                 </a>
+                                                <a href={coreTeam[0].vcard} target="_blank" rel="noopener noreferrer" className="w-12 h-12 flex items-center justify-center bg-slate-50 border-b border-l border-slate-200 hover:bg-aureole-cyan text-[#001529] hover:text-white transition-all">
+                                                    <IdCard size={18} />
+                                                </a>
                                             </div>
 
                                             <div className="w-full sm:w-[240px] aspect-[4/5] overflow-hidden border border-slate-100 shadow-inner bg-slate-50">
@@ -189,7 +197,7 @@ const TeamArchitecture: React.FC = () => {
                                                             <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-aureole-blue hover:bg-aureole-blue hover:text-white transition-all shadow-md">
                                                                 <Linkedin size={16} />
                                                             </a>
-                                                            <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-aureole-cyan hover:bg-aureole-cyan hover:text-white transition-all shadow-md">
+                                                            <a href={member.vcard} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-aureole-cyan hover:bg-aureole-cyan hover:text-white transition-all shadow-md">
                                                                 <IdCard size={16} />
                                                             </a>
                                                         </div>
@@ -220,9 +228,9 @@ const TeamArchitecture: React.FC = () => {
                                                     {/* Top Connector */}
                                                     <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-px h-16 bg-slate-200 hidden lg:block"></div>
 
-                                                    <div className="w-16 h-16 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 text-slate-300 group-hover:text-aureole-blue group-hover:border-aureole-blue/20">
-                                                        <Users2 size={24} />
-                                                    </div>
+                                                    <a href={member.vcard} target="_blank" rel="noopener noreferrer" className="w-16 h-16 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 text-slate-300 group-hover:text-aureole-blue group-hover:border-aureole-blue/20">
+                                                        <IdCard size={24} />
+                                                    </a>
 
                                                     <h5 className="text-sm font-bold text-[#001529] uppercase tracking-tight mb-1">{member.name}</h5>
                                                     <p className="text-[8px] font-bold text-slate-400 uppercase tracking-wider group-hover:text-aureole-cyan transition-colors">{member.role}</p>

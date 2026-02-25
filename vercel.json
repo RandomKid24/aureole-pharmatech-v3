@@ -1,6 +1,14 @@
 {
     "rewrites": [
         {
+            "source": "/vcards/:path*",
+            "destination": "/vcards-2026/:path*"
+        },
+        {
+            "source": "/envato/digi-vcard/CEO/:path*",
+            "destination": "/vcards-2026/aarti-avhad/:path*"
+        },
+        {
             "source": "/((?!.*\\.).*)",
             "destination": "/index.html"
         }
