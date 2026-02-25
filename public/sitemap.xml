@@ -1,6 +1,11 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ============================================================ -->
+  <!-- HOME & CORE PAGES                                            -->
+  <!-- ============================================================ -->
+
   <url>
     <loc>https://www.aureolepharmatech.com/</loc>
   </url>
@@ -37,6 +42,11 @@
   <url>
     <loc>https://www.aureolepharmatech.com/careers/</loc>
   </url>
+
+  <!-- ============================================================ -->
+  <!-- PRODUCT PAGES                                                -->
+  <!-- ============================================================ -->
+
   <url>
     <loc>https://www.aureolepharmatech.com/products/humidity-chamber/</loc>
   </url>
@@ -160,6 +170,11 @@
   <url>
     <loc>https://www.aureolepharmatech.com/products/biosafety-cabinet/</loc>
   </url>
+
+  <!-- ============================================================ -->
+  <!-- CITY-WISE LANDING PAGES                                      -->
+  <!-- ============================================================ -->
+
   <url>
     <loc>https://www.aureolepharmatech.com/walk-in-bod-incubator-manufacturers-and-suppliers-in-ahmedabad/</loc>
   </url>
@@ -424,6 +439,12 @@
   <url>
     <loc>https://www.aureolepharmatech.com/walk-in-humidity-chamber-manufacturers-and-suppliers-in-visakhapatnam/</loc>
   </url>
+
+  <!-- ============================================================ -->
+  <!-- V-CARDS (Digital Business Cards)                             -->
+  <!-- Total: 64 cards                                              -->
+  <!-- ============================================================ -->
+
   <url>
     <loc>https://www.aureolepharmatech.com/vcards/aarti-avhad/</loc>
   </url>
@@ -567,6 +588,9 @@
   </url>
   <url>
     <loc>https://www.aureolepharmatech.com/vcards/sandip-kale/</loc>
+  </url>
+  <url>
+    <loc>https://www.aureolepharmatech.com/vcards/sanjay-bhosle/</loc>
   </url>
   <url>
     <loc>https://www.aureolepharmatech.com/vcards/shalaka-nargolkar/</loc>
