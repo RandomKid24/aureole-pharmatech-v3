@@ -1,8 +1,11 @@
-﻿  <url>
+  <url>
     <loc>https://www.aureolepharmatech.com/vcards/aarti-avhad/</loc>
   </url>
   <url>
     <loc>https://www.aureolepharmatech.com/vcards/akant-thok/</loc>
+  </url>
+  <url>
+    <loc>https://www.aureolepharmatech.com/vcards/akshada-shinde/</loc>
   </url>
   <url>
     <loc>https://www.aureolepharmatech.com/vcards/akshay-dighe/</loc>
@@ -74,6 +77,9 @@
     <loc>https://www.aureolepharmatech.com/vcards/kiran-aher/</loc>
   </url>
   <url>
+    <loc>https://www.aureolepharmatech.com/vcards/komal-kate/</loc>
+  </url>
+  <url>
     <loc>https://www.aureolepharmatech.com/vcards/manohar-patade/</loc>
   </url>
   <url>
@@ -108,6 +114,9 @@
   </url>
   <url>
     <loc>https://www.aureolepharmatech.com/vcards/ramesh-mali/</loc>
+  </url>
+  <url>
+    <loc>https://www.aureolepharmatech.com/vcards/ramprasad-bairagi/</loc>
   </url>
   <url>
     <loc>https://www.aureolepharmatech.com/vcards/rohan-gujarathi/</loc>

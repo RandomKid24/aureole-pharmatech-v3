@@ -175,6 +175,7 @@ const PRODUCT_CITY_MAPPING = {
 const VCARDS = [
   "aarti-avhad",
   "akant-thok",
+  "akshada-shinde",
   "akshay-dighe",
   "altaf-shaikh",
   "anant-shantilal-baisane",
@@ -198,6 +199,7 @@ const VCARDS = [
   "jyoti-jamdar",
   "kaveri-dhamale",
   "kiran-aher",
+  "komal-kate",
   "manohar-patade",
   "maushmi-bankar",
   "mithesh-rai",
@@ -210,6 +212,7 @@ const VCARDS = [
   "pooja-kolse",
   "rahul-khairnar",
   "ramesh-mali",
+  "ramprasad-bairagi",
   "rohan-gujarathi",
   "rohan-shelke",
   "rohit-anil-badgujar",
