@@ -199,3 +199,6 @@
   <url>
     <loc>https://www.aureolepharmatech.com/vcards/yash-gujarathi/</loc>
   </url>
+  <url>
+    <loc>https://www.aureolepharmatech.com/vcards/vijay-mahajan/</loc>
+  </url>
