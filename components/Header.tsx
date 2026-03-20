@@ -36,6 +36,7 @@ const Header: React.FC = () => {
       name: 'About',
       href: '/about',
       dropdown: [
+        { name: 'About us', href: '/about', icon: <Users className="w-4 h-4" /> },
         { name: 'Plants', href: '/about/plants', icon: <Building2 className="w-4 h-4" /> },
         { name: 'Certification & Compliance', href: '/about/certification-compliance', icon: <ShieldCheck className="w-4 h-4" /> },
       ]
