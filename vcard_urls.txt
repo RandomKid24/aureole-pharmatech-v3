@@ -202,3 +202,12 @@
   <url>
     <loc>https://www.aureolepharmatech.com/vcards/vijay-mahajan/</loc>
   </url>
+  <url>
+    <loc>https://www.aureolepharmatech.com/vcards/ashwini-sangale/</loc>
+  </url>
+  <url>
+    <loc>https://www.aureolepharmatech.com/vcards/priyanka-mithe/</loc>
+  </url>
+  <url>
+    <loc>https://www.aureolepharmatech.com/vcards/tejal-shinde/</loc>
+  </url>

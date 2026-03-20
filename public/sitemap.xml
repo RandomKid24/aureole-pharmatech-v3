@@ -442,7 +442,7 @@
 
   <!-- ============================================================ -->
   <!-- V-CARDS (Digital Business Cards)                             -->
-  <!-- Total: 67 cards                                              -->
+  <!-- Total: 71 cards                                              -->
   <!-- ============================================================ -->
 
   <url>
@@ -645,6 +645,18 @@
   </url>
   <url>
     <loc>https://aureole-pharmatech-v3.vercel.app/vcards/yash-gujarathi/</loc>
+  </url>
+  <url>
+    <loc>https://aureole-pharmatech-v3.vercel.app/vcards/vijay-mahajan/</loc>
+  </url>
+  <url>
+    <loc>https://aureole-pharmatech-v3.vercel.app/vcards/ashwini-sangale/</loc>
+  </url>
+  <url>
+    <loc>https://aureole-pharmatech-v3.vercel.app/vcards/priyanka-mithe/</loc>
+  </url>
+  <url>
+    <loc>https://aureole-pharmatech-v3.vercel.app/vcards/tejal-shinde/</loc>
   </url>
 
 </urlset>
