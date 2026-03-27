@@ -1,7 +1,38 @@
 
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { CLIENTS } from '@/constants';
 import LazyImage from '@/components/LazyImage';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+const AnimatedCounter: React.FC<{ end: number; suffix?: string; duration?: number }> = ({ end, suffix = '', duration = 2 }) => {
+    const ref = useRef<HTMLSpanElement>(null);
+
+    useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+        const obj = { val: 0 };
+        const anim = gsap.to(obj, {
+            val: end,
+            duration,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: el,
+                start: 'top 85%',
+                once: true,
+            },
+            onUpdate: () => {
+                el.textContent = Math.round(obj.val) + suffix;
+            }
+        });
+        return () => { anim.kill(); };
+    }, [end, suffix, duration]);
+
+    return <span ref={ref}>0{suffix}</span>;
+};
+
 
 const GlobalValidation: React.FC = () => {
   // Splitting the massive list into 3 rows for high-density impact
@@ -47,8 +78,33 @@ const GlobalValidation: React.FC = () => {
             GLOBAL <br /> <span className="text-aureole-blue">VALIDATION.</span>
           </h3>
           <p className="text-slate-500 font-medium text-[14px] sm:text-[15px] tracking-tight max-w-2xl leading-relaxed">
-            A comprehensive network of {CLIENTS.length} verified pharmaceutical entities utilizing Aureole's precision engineering.
+            A comprehensive network of{' '}
+            <AnimatedCounter end={CLIENTS.length} />{' '}
+            verified pharmaceutical entities utilizing Aureole's precision engineering.
           </p>
+
+          {/* Animated Stats Row */}
+          <div className="flex flex-wrap gap-8 mt-10 pt-8 border-t border-slate-100">
+            <div>
+              <p className="text-3xl font-black text-aureole-slate tracking-tighter">
+                <AnimatedCounter end={15} suffix="+" />
+              </p>
+              <p className="text-[9px] font-black tracking-widest text-slate-400 uppercase mt-1">States Covered</p>
+            </div>
+            <div>
+              <p className="text-3xl font-black text-aureole-slate tracking-tighter">
+                <AnimatedCounter end={20} suffix="+" />
+              </p>
+              <p className="text-[9px] font-black tracking-widest text-slate-400 uppercase mt-1">Years Experience</p>
+            </div>
+            <div>
+              <p className="text-3xl font-black text-aureole-slate tracking-tighter">
+                <AnimatedCounter end={3} suffix=" Certs" />
+              </p>
+              <p className="text-[9px] font-black tracking-widest text-slate-400 uppercase mt-1">ISO / CE / ZED</p>
+            </div>
+          </div>
+
         </div>
       </div>
 

@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MapPin, ArrowRight, ChevronDown, Activity, CheckCircle2, AlertCircle, Loader2, Globe, Search } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const COUNTRY_CODES = [
   { code: '+91', label: 'India', flag: '🇮🇳' },
@@ -230,8 +231,8 @@ const OurUnitsContact: React.FC = () => {
                   )}
                   <div className="grid md:grid-cols-2 gap-x-12 gap-y-10">
                     <div className="relative group">
-                      <label className="text-[10px] font-black text-slate-400 tracking-[0.2em] block mb-2 transition-colors group-focus-within:text-aureole-blue">Full Name</label>
-                      <div className={`flex items-center h-11 relative border-b-2 ${errors.fullName ? 'border-red-400' : 'border-slate-200'} transition-all group-focus-within:border-aureole-cyan`}>
+                      <label className="text-[10px] font-black text-slate-400 tracking-[0.2em] block mb-2 transition-colors group-focus-within:text-aureole-blue uppercase">Full Name</label>
+                      <div className={`flex items-center h-11 relative border-b-2 ${errors.fullName ? 'border-red-400' : 'border-slate-100'} transition-all`}>
                         <input 
                           type="text" 
                           name="fullName"
@@ -240,12 +241,18 @@ const OurUnitsContact: React.FC = () => {
                           placeholder="John Doe" 
                           className="w-full bg-transparent py-2 text-[15px] font-bold text-[#001529] font-body placeholder:text-slate-300 placeholder:text-[10px] placeholder:font-black placeholder:tracking-widest focus:outline-none transition-all" 
                         />
+                        <motion.div 
+                          initial={{ scaleX: 0 }}
+                          whileFocus={{ scaleX: 1 }}
+                          transition={{ duration: 0.4, ease: "circOut" }}
+                          className="absolute bottom-[-2px] left-0 right-0 h-[2px] bg-aureole-cyan origin-center z-10"
+                        />
                       </div>
                       {errors.fullName && <div className="absolute top-full left-0 mt-1 text-red-500 text-[9px] font-black tracking-widest animate-in fade-in slide-in-from-top-1 duration-200">{errors.fullName}</div>}
                     </div>
                     <div className="relative group">
-                      <label className="text-[10px] font-black text-slate-400 tracking-[0.2em] block mb-2 transition-colors group-focus-within:text-aureole-blue">Your Organization</label>
-                      <div className={`flex items-center h-11 relative border-b-2 ${errors.companyName ? 'border-red-400' : 'border-slate-200'} transition-all group-focus-within:border-aureole-cyan`}>
+                      <label className="text-[10px] font-black text-slate-400 tracking-[0.2em] block mb-2 transition-colors group-focus-within:text-aureole-blue uppercase">Your Organization</label>
+                      <div className={`flex items-center h-11 relative border-b-2 ${errors.companyName ? 'border-red-400' : 'border-slate-100'} transition-all`}>
                         <input 
                           type="text" 
                           name="companyName"
@@ -254,6 +261,12 @@ const OurUnitsContact: React.FC = () => {
                           placeholder="Company Name" 
                           className="w-full bg-transparent py-2 text-[15px] font-bold text-[#001529] font-body placeholder:text-slate-300 placeholder:text-[10px] placeholder:font-black placeholder:tracking-widest focus:outline-none transition-all" 
                         />
+                        <motion.div 
+                          initial={{ scaleX: 0 }}
+                          whileFocus={{ scaleX: 1 }}
+                          transition={{ duration: 0.4, ease: "circOut" }}
+                          className="absolute bottom-[-2px] left-0 right-0 h-[2px] bg-aureole-cyan origin-center z-10"
+                        />
                       </div>
                       {errors.companyName && <div className="absolute top-full left-0 mt-1 text-red-500 text-[9px] font-black tracking-widest animate-in fade-in slide-in-from-top-1 duration-200">{errors.companyName}</div>}
                     </div>
@@ -261,8 +274,8 @@ const OurUnitsContact: React.FC = () => {
 
                   <div className="grid md:grid-cols-2 gap-x-12 gap-y-10">
                     <div className="relative group" ref={dropdownRef}>
-                      <label className="text-[10px] font-black text-slate-400 tracking-[0.2em] block mb-2 transition-colors group-focus-within:text-aureole-blue">Phone Number</label>
-                      <div className={`flex items-center h-11 gap-4 relative border-b-2 ${errors.phone ? 'border-red-400' : 'border-slate-200'} transition-all group-focus-within:border-aureole-cyan`}>
+                      <label className="text-[10px] font-black text-slate-400 tracking-[0.2em] block mb-2 transition-colors group-focus-within:text-aureole-blue uppercase">Phone Number</label>
+                      <div className={`flex items-center h-11 gap-4 relative border-b-2 ${errors.phone ? 'border-red-400' : 'border-slate-100'} transition-all`}>
                         {/* Custom Premium Country Chooser */}
                         <div className="relative shrink-0">
                           <button
@@ -275,31 +288,39 @@ const OurUnitsContact: React.FC = () => {
                             <ChevronDown className={`w-3 h-3 text-slate-400 transition-transform duration-500 ${isCountryDropdownOpen ? 'rotate-180' : ''}`} />
                           </button>
 
-                          {isCountryDropdownOpen && (
-                            <div className="absolute left-0 top-full mt-3 w-80 max-h-80 overflow-y-auto bg-white/98 backdrop-blur-2xl border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-2xl z-[100] py-3 animate-in fade-in slide-in-from-top-3 duration-500 scrollbar-thin scrollbar-thumb-slate-200">
-                              <div className="px-4 pb-2 mb-2 border-b border-slate-100 flex items-center gap-2">
-                                <Search size={12} className="text-slate-400" />
-                                <span className="text-[9px] font-black text-slate-400 tracking-widest">Select Country Code</span>
-                              </div>
-                              {COUNTRY_CODES.map((c, idx) => (
-                                <button
-                                  key={`${c.code}-${idx}`}
-                                  type="button"
-                                  onClick={() => {
-                                    setFormData(prev => ({ ...prev, countryCode: c.code }));
-                                    setIsCountryDropdownOpen(false);
-                                  }}
-                                  className={`w-full flex items-center justify-between px-5 py-3.5 hover:bg-slate-50 transition-all ${formData.countryCode === c.code ? 'bg-blue-50/50 text-aureole-blue' : 'text-[#001529]'}`}
-                                >
-                                  <div className="flex items-center gap-4">
-                                    <span className="text-2xl drop-shadow-sm">{c.flag}</span>
-                                    <span className="text-[14px] font-bold font-body">{c.label}</span>
-                                  </div>
-                                  <span className={`text-[12px] font-black font-body ${formData.countryCode === c.code ? 'text-aureole-blue' : 'text-slate-400'}`}>{c.code}</span>
-                                </button>
-                              ))}
-                            </div>
-                          )}
+                          <AnimatePresence>
+                            {isCountryDropdownOpen && (
+                              <motion.div 
+                                initial={{ opacity: 0, y: 15 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: 15 }}
+                                transition={{ duration: 0.3, ease: "easeOut" }}
+                                className="absolute left-0 top-full mt-3 w-80 max-h-80 overflow-y-auto bg-white/98 backdrop-blur-2xl border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-2xl z-[100] py-3 animate-in fade-in slide-in-from-top-3 duration-500 scrollbar-thin scrollbar-thumb-slate-200"
+                              >
+                                <div className="px-4 pb-2 mb-2 border-b border-slate-100 flex items-center gap-2">
+                                  <Search size={12} className="text-slate-400" />
+                                  <span className="text-[9px] font-black text-slate-400 tracking-widest">Select Country Code</span>
+                                </div>
+                                {COUNTRY_CODES.map((c, idx) => (
+                                  <button
+                                    key={`${c.code}-${idx}`}
+                                    type="button"
+                                    onClick={() => {
+                                      setFormData(prev => ({ ...prev, countryCode: c.code }));
+                                      setIsCountryDropdownOpen(false);
+                                    }}
+                                    className={`w-full flex items-center justify-between px-5 py-3.5 hover:bg-slate-50 transition-all ${formData.countryCode === c.code ? 'bg-blue-50/50 text-aureole-blue' : 'text-[#001529]'}`}
+                                  >
+                                    <div className="flex items-center gap-4">
+                                      <span className="text-2xl drop-shadow-sm">{c.flag}</span>
+                                      <span className="text-[14px] font-bold font-body">{c.label}</span>
+                                    </div>
+                                    <span className={`text-[12px] font-black font-body ${formData.countryCode === c.code ? 'text-aureole-blue' : 'text-slate-400'}`}>{c.code}</span>
+                                  </button>
+                                ))}
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
                         </div>
 
                         <input 
@@ -310,12 +331,18 @@ const OurUnitsContact: React.FC = () => {
                           placeholder="00000 00000" 
                           className="flex-1 bg-transparent py-2 text-[15px] font-bold text-[#001529] font-body placeholder:text-slate-300 placeholder:text-[10px] font-black tracking-widest focus:outline-none transition-all" 
                         />
+                        <motion.div 
+                          initial={{ scaleX: 0 }}
+                          whileFocus={{ scaleX: 1 }}
+                          transition={{ duration: 0.4, ease: "circOut" }}
+                          className="absolute bottom-[-2px] left-0 right-0 h-[2px] bg-aureole-cyan origin-center z-10"
+                        />
                       </div>
                       {errors.phone && <div className="absolute top-full left-0 mt-1 text-red-500 text-[9px] font-black tracking-widest animate-in fade-in slide-in-from-top-1 duration-200">{errors.phone}</div>}
                     </div>
                     <div className="relative group">
-                      <label className="text-[10px] font-black text-slate-400 tracking-[0.2em] block mb-2 transition-colors group-focus-within:text-aureole-blue">Official Email</label>
-                      <div className={`flex items-center h-11 relative border-b-2 ${errors.email ? 'border-red-400' : 'border-slate-200'} transition-all group-focus-within:border-aureole-cyan`}>
+                      <label className="text-[10px] font-black text-slate-400 tracking-[0.2em] block mb-2 transition-colors group-focus-within:text-aureole-blue uppercase">Official Email</label>
+                      <div className={`flex items-center h-11 relative border-b-2 ${errors.email ? 'border-red-400' : 'border-slate-100'} transition-all`}>
                         <input 
                           type="email" 
                           name="email"
@@ -324,14 +351,20 @@ const OurUnitsContact: React.FC = () => {
                           placeholder="john@company.com" 
                           className="w-full bg-transparent py-2 text-[15px] font-bold text-[#001529] font-body placeholder:text-slate-300 placeholder:text-[10px] placeholder:font-black placeholder:tracking-widest focus:outline-none transition-all" 
                         />
+                        <motion.div 
+                          initial={{ scaleX: 0 }}
+                          whileFocus={{ scaleX: 1 }}
+                          transition={{ duration: 0.4, ease: "circOut" }}
+                          className="absolute bottom-[-2px] left-0 right-0 h-[2px] bg-aureole-cyan origin-center z-10"
+                        />
                       </div>
                       {errors.email && <div className="absolute top-full left-0 mt-1 text-red-500 text-[9px] font-black tracking-widest animate-in fade-in slide-in-from-top-1 duration-200">{errors.email}</div>}
                     </div>
                   </div>
 
                   <div className="relative group">
-                    <label className="text-[10px] font-black text-slate-400 tracking-[0.2em] block mb-2 transition-colors group-focus-within:text-aureole-blue">Product of Interest</label>
-                  <div className={`flex items-center h-11 relative border-b-2 border-slate-200 transition-all group-focus-within:border-aureole-cyan`}>
+                    <label className="text-[10px] font-black text-slate-400 tracking-[0.2em] block mb-2 transition-colors group-focus-within:text-aureole-blue uppercase">Product of Interest</label>
+                  <div className={`flex items-center h-11 relative border-b-2 border-slate-100 transition-all`}>
                     <input 
                       type="text" 
                       name="product"
@@ -340,12 +373,18 @@ const OurUnitsContact: React.FC = () => {
                       placeholder="e.g. Stability Chamber v3" 
                       className="w-full bg-transparent py-2 text-[15px] font-bold text-[#001529] font-body placeholder:text-slate-300 placeholder:text-[10px] placeholder:font-black placeholder:tracking-widest focus:outline-none transition-all" 
                     />
+                    <motion.div 
+                      initial={{ scaleX: 0 }}
+                      whileFocus={{ scaleX: 1 }}
+                      transition={{ duration: 0.4, ease: "circOut" }}
+                      className="absolute bottom-[-2px] left-0 right-0 h-[2px] bg-aureole-cyan origin-center z-10"
+                    />
                   </div>
                   </div>
 
                   <div className="relative group">
-                    <label className="text-[10px] font-black text-slate-400 tracking-[0.2em] block mb-2 transition-colors group-focus-within:text-aureole-blue">Technical Requirements</label>
-                    <div className={`relative border-b-2 border-slate-200 transition-all group-focus-within:border-aureole-cyan`}>
+                    <label className="text-[10px] font-black text-slate-400 tracking-[0.2em] block mb-2 transition-colors group-focus-within:text-aureole-blue uppercase">Technical Requirements</label>
+                    <div className={`relative border-b-2 border-slate-100 transition-all`}>
                       <textarea 
                         rows={3} 
                         name="message"
@@ -354,19 +393,50 @@ const OurUnitsContact: React.FC = () => {
                         placeholder="Describe your specifications..." 
                         className="w-full bg-transparent py-2 text-[15px] font-bold text-[#001529] font-body placeholder:text-slate-300 placeholder:text-[10px] placeholder:font-black placeholder:tracking-widest focus:outline-none transition-all resize-none"
                       ></textarea>
+                      <motion.div 
+                        initial={{ scaleX: 0 }}
+                        whileFocus={{ scaleX: 1 }}
+                        transition={{ duration: 0.4, ease: "circOut" }}
+                        className="absolute bottom-[-2px] left-0 right-0 h-[2px] bg-aureole-cyan origin-center z-10"
+                      />
                     </div>
                   </div>
 
                   <button 
                     disabled={status === 'loading'}
-                    className="flex items-center gap-6 group mt-6 disabled:opacity-50"
+                    className="flex items-center gap-6 group mt-6 disabled:opacity-50 relative"
                   >
-                    <div className="w-16 h-16 bg-aureole-blue rounded-full flex items-center justify-center text-white transition-all group-hover:scale-110 shadow-xl shadow-blue-500/20">
-                      {status === 'loading' ? (
-                        <Loader2 className="w-6 h-6 animate-spin" />
-                      ) : (
-                        <ArrowRight className="w-6 h-6" />
-                      )}
+                    <div className="w-16 h-16 bg-aureole-blue rounded-full flex items-center justify-center text-white transition-all group-hover:scale-110 shadow-xl shadow-blue-500/20 relative">
+                      <AnimatePresence mode="wait">
+                        {status === 'loading' ? (
+                          <motion.div
+                            key="loading"
+                            initial={{ opacity: 0, rotate: -180 }}
+                            animate={{ opacity: 1, rotate: 0 }}
+                            exit={{ opacity: 0, rotate: 180 }}
+                          >
+                            <Loader2 className="w-6 h-6 animate-spin" />
+                          </motion.div>
+                        ) : (
+                          <motion.div
+                            key="idle"
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: 40 }}
+                            transition={{ duration: 0.3, ease: "backOut" }}
+                          >
+                            <ArrowRight className="w-6 h-6" />
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                      
+                      {/* Radial Pulse Effect */}
+                      <motion.div 
+                        initial={{ scale: 0.8, opacity: 0 }}
+                        whileHover={{ scale: 1.4, opacity: 0.15 }}
+                        transition={{ repeat: Infinity, duration: 2, ease: "easeOut" }}
+                        className="absolute inset-0 bg-aureole-blue rounded-full -z-10"
+                      />
                     </div>
                     <div className="text-left">
                       <div className="text-[9px] font-black text-slate-500 tracking-[0.2em] mb-1">

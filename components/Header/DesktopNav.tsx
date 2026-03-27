@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import MegaMenu from './MegaMenu';
 
 interface DesktopNavProps {
@@ -47,30 +48,36 @@ const DesktopNav: React.FC<Omit<DesktopNavProps, 'MegaMenu'>> = ({
                                     <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${(link.name === 'About' ? aboutDropdownOpen : productsDropdownOpen) ? 'rotate-180' : ''}`} />
                                 </Link>
 
-                                {link.name === 'About' && (
-                                    <div
-                                        className={`absolute top-full left-0 w-64 bg-white shadow-2xl border border-slate-100 p-4 transition-all duration-300 ${aboutDropdownOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}
-                                        onMouseEnter={() => handleMouseEnter('about')}
-                                        onMouseLeave={handleMouseLeave}
-                                    >
-                                        <div className="flex flex-col gap-1">
-                                            {link.dropdown?.map((item: any) => (
-                                                <Link
-                                                    key={item.name}
-                                                    to={item.href}
-                                                    className="flex items-center gap-3 p-3 hover:bg-slate-50 transition-colors group/item"
-                                                >
-                                                    <div className="text-slate-400 group-hover/item:text-aureole-blue transition-colors">
-                                                        {item.icon}
-                                                    </div>
-                                                    <span className="text-[9px] font-black uppercase tracking-widest text-aureole-slate group-hover/item:text-aureole-blue">
-                                                        {item.name}
-                                                    </span>
-                                                </Link>
-                                            ))}
-                                        </div>
-                                    </div>
-                                )}
+                                <AnimatePresence>
+                                    {link.name === 'About' && aboutDropdownOpen && (
+                                        <motion.div
+                                            initial={{ opacity: 0, y: 8 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: 8 }}
+                                            transition={{ duration: 0.2, ease: 'easeOut' }}
+                                            className="absolute top-full left-0 w-64 bg-white shadow-2xl border border-slate-100 p-4 origin-top"
+                                            onMouseEnter={() => handleMouseEnter('about')}
+                                            onMouseLeave={handleMouseLeave}
+                                        >
+                                            <div className="flex flex-col gap-1">
+                                                {link.dropdown?.map((item: any) => (
+                                                    <Link
+                                                        key={item.name}
+                                                        to={item.href}
+                                                        className="flex items-center gap-3 p-3 hover:bg-slate-50 transition-colors group/item"
+                                                    >
+                                                        <div className="text-slate-400 group-hover/item:text-aureole-blue transition-colors">
+                                                            {item.icon}
+                                                        </div>
+                                                        <span className="text-[9px] font-black uppercase tracking-widest text-aureole-slate group-hover/item:text-aureole-blue">
+                                                            {item.name}
+                                                        </span>
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
 
                                 {link.name === 'Products' && (
                                     <MegaMenu

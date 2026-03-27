@@ -1,11 +1,27 @@
 
-import React from 'react';
+import React, { useRef } from 'react';
 import { ArrowDown, ShieldCheck, Award, CheckCircle2 } from 'lucide-react';
 import LazyImage from '@/components/LazyImage';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const Hero: React.FC = () => {
+  const heroRef = useRef<HTMLElement>(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline({ defaults: { ease: 'power4.out', duration: 1.2 } });
+
+    gsap.set('.hero-line-inner', { y: '100%', opacity: 0 });
+    gsap.set('.hero-fade-in', { opacity: 0, y: 20 });
+    gsap.set('.hero-subtitle', { opacity: 0, x: -20 });
+
+    tl.to('.hero-subtitle', { opacity: 1, x: 0, duration: 0.8 }, 0.2);
+    tl.to('.hero-line-inner', { y: '0%', opacity: 1, stagger: 0.15 }, '-=0.4');
+    tl.to('.hero-fade-in', { opacity: 1, y: 0, stagger: 0.2 }, '-=0.8');
+  }, { scope: heroRef });
+
   return (
-    <section className="relative min-h-[95vh] flex items-center bg-transparent pt-32 pb-16 sm:pt-40 lg:pt-48 z-10">
+    <section ref={heroRef} className="relative min-h-[95vh] flex items-center bg-transparent pt-32 pb-16 sm:pt-40 lg:pt-48 z-10 overflow-hidden">
       {/* Background Grid Removed to lead with wavebg.png */}
 
       {/* Massive Washed Out Logo - Static, on top of background */}
@@ -25,18 +41,18 @@ const Hero: React.FC = () => {
 
           <div className="flex flex-col lg:flex-row lg:items-center gap-12 lg:gap-24">
             <div className="flex-1">
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-3 mb-4 hero-subtitle">
                 <span className="w-10 h-[2px] bg-aureole-blue"></span>
                 <span className="text-xs font-black uppercase tracking-widest text-aureole-blue">PHARMA ENGINEERING</span>
               </div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-none tracking-tighter text-aureole-slate uppercase mb-12">
-                PRECISION <br className="hidden md:block" />
-                TEMPERATURE & <br className="hidden md:block" />
-                HUMIDITY <span className="text-aureole-cyan">CONTROL.</span>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-none tracking-tighter text-aureole-slate uppercase mb-12 flex flex-col gap-1 md:gap-2">
+                <span className="overflow-hidden pb-1"><span className="block hero-line-inner">PRECISION</span></span>
+                <span className="overflow-hidden pb-1"><span className="block hero-line-inner">TEMPERATURE &</span></span>
+                <span className="overflow-hidden pb-1"><span className="block hero-line-inner">HUMIDITY <span className="text-aureole-cyan">CONTROL.</span></span></span>
               </h1>
 
-              <p className="text-lg lg:text-xl text-slate-500 font-medium leading-relaxed max-w-xl mb-14">
+              <p className="text-lg lg:text-xl text-slate-500 font-medium leading-relaxed max-w-xl mb-14 hero-fade-in">
                 Advanced environmental machinery engineered for Pharmaceutical Stability and specialized laboratory instrumentation.
               </p>
 
