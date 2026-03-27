@@ -29,17 +29,17 @@ const ComplianceGrid: React.FC = () => {
     ];
 
     return (
-        <section className="py-20 bg-transparent">
-            <div className="container mx-auto px-6 lg:px-12">
+        <section className="py-12 sm:py-20 bg-transparent">
+            <div className="container mx-auto px-5 sm:px-6 lg:px-12">
                 <div className="grid lg:grid-cols-3 gap-px bg-transparent">
                     {/* CE Certificate Column */}
-                    <div className="bg-white p-10 lg:p-14 relative overflow-hidden group border-r border-slate-100">
-                        <div className="flex justify-between items-start mb-10">
+                    <div className="bg-white p-6 sm:p-10 lg:p-14 relative overflow-hidden group border-b lg:border-b-0 lg:border-r border-slate-100">
+                        <div className="flex flex-col 2xl:flex-row justify-between items-start gap-6 2xl:gap-0 mb-8 sm:mb-10">
                             <div>
-                                <h3 className="text-[11px] font-black font-heading tracking-[0.3em] text-aureole-cyan mb-2 uppercase min-h-[34px]">TECHNICAL COMPLIANCE</h3>
-                                <h2 className="text-3xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter">CE CERTIFICATION</h2>
+                                <h3 className="text-[10px] sm:text-[11px] font-black font-heading tracking-[0.3em] text-aureole-cyan mb-2 uppercase min-h-0 sm:min-h-[34px]">TECHNICAL COMPLIANCE</h3>
+                                <h2 className="text-2xl sm:text-3xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter">CE CERTIFICATION</h2>
                             </div>
-                            <div className="w-32 h-32 flex items-center justify-center">
+                            <div className="w-24 h-24 sm:w-32 sm:h-32 flex-shrink-0 flex items-center justify-center">
                                 <img
                                     src="/certification-logos/cer logo.png"
                                     alt="CE Certification"
@@ -61,13 +61,13 @@ const ComplianceGrid: React.FC = () => {
                     </div>
 
                     {/* ISO Certificate Column */}
-                    <div className="bg-white p-10 lg:p-14 relative overflow-hidden group border-r border-slate-100">
-                        <div className="flex justify-between items-start mb-10">
+                    <div className="bg-white p-6 sm:p-10 lg:p-14 relative overflow-hidden group border-b lg:border-b-0 lg:border-r border-slate-100">
+                        <div className="flex flex-col 2xl:flex-row justify-between items-start gap-6 2xl:gap-0 mb-8 sm:mb-10">
                             <div>
-                                <h3 className="text-[11px] font-black font-heading tracking-[0.3em] text-aureole-blue mb-2 uppercase min-h-[34px]">QUALITY SYSTEM</h3>
-                                <h2 className="text-3xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter">ISO 9001:2015</h2>
+                                <h3 className="text-[10px] sm:text-[11px] font-black font-heading tracking-[0.3em] text-aureole-blue mb-2 uppercase min-h-0 sm:min-h-[34px]">QUALITY SYSTEM</h3>
+                                <h2 className="text-2xl sm:text-3xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter">ISO 9001:2015</h2>
                             </div>
-                            <div className="w-32 h-32 flex items-center justify-center">
+                            <div className="w-24 h-24 sm:w-32 sm:h-32 flex-shrink-0 flex items-center justify-center">
                                 <img
                                     src="/certification-logos/ISO certification logo.png"
                                     alt="ISO 9001:2015 Certification"
@@ -89,13 +89,13 @@ const ComplianceGrid: React.FC = () => {
                     </div>
 
                     {/* ZED Certificate Column */}
-                    <div className="bg-white p-10 lg:p-14 relative overflow-hidden group">
-                        <div className="flex justify-between items-start mb-10">
+                    <div className="bg-white p-6 sm:p-10 lg:p-14 relative overflow-hidden group">
+                        <div className="flex flex-col 2xl:flex-row justify-between items-start gap-6 2xl:gap-0 mb-8 sm:mb-10">
                             <div>
-                                <h3 className="text-[11px] font-black font-heading tracking-[0.3em] text-aureole-blue mb-2 uppercase min-h-[34px]">SUSTAINABLE MANUFACTURING</h3>
-                                <h2 className="text-3xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter">ZED GOLD</h2>
+                                <h3 className="text-[10px] sm:text-[11px] font-black font-heading tracking-[0.3em] text-aureole-blue mb-2 uppercase min-h-0 sm:min-h-[34px]">SUSTAINABLE MANUFACTURING</h3>
+                                <h2 className="text-2xl sm:text-3xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter">ZED GOLD</h2>
                             </div>
-                            <div className="w-32 h-32 flex items-center justify-center">
+                            <div className="w-24 h-24 sm:w-32 sm:h-32 flex-shrink-0 flex items-center justify-center">
                                 <img
                                     src="/certification-logos/zed gold certificate.png"
                                     alt="ZED Gold Certification"

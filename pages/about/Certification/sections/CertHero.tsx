@@ -3,7 +3,7 @@ import React from 'react';
 
 const CertHero: React.FC = () => {
     return (
-        <section className="relative py-20 lg:py-28 bg-transparent group">
+        <section className="relative py-16 sm:py-20 lg:py-28 bg-transparent group">
 
 
             <div className="container mx-auto px-6 sm:px-8 lg:px-24 relative z-10">
@@ -12,7 +12,7 @@ const CertHero: React.FC = () => {
                         <span className="w-12 h-[1px] bg-aureole-blue"></span>
                         <h2 className="text-[11px] font-black font-heading tracking-[0.4em] text-aureole-blue">CERTIFICATION & COMPLIANCE</h2>
                     </div>
-                    <h1 className="text-5xl lg:text-7xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter leading-[0.95] mb-8">
+                    <h1 className="text-4xl sm:text-5xl lg:text-7xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter leading-[0.95] mb-6 sm:mb-8">
                         QUALITY <br /> <span className="text-aureole-cyan uppercase tracking-normal">Assured.</span>
                     </h1>
                     <p className="text-slate-500 text-lg lg:text-xl font-medium tracking-tight leading-relaxed max-w-xl">
