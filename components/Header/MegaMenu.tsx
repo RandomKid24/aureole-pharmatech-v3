@@ -60,51 +60,45 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="absolute left-0 w-60 bg-white border border-slate-200/60 origin-top z-50 shadow-xl"
-                    style={{ top: '100%' }}
+                    className="absolute top-full left-1/2 -translate-x-1/2 w-[280px] pt-3 origin-top z-50"
                     onMouseEnter={onMouseEnter}
                     onMouseLeave={onMouseLeave}
                 >
-                    <div className="py-1.5">
-                        {categories.map((cat, index) => (
-                            <motion.div key={cat.id} variants={itemVariants}>
-                                <Link
-                                    to={cat.href}
-                                    onClick={onClose}
-                                    className={`group flex items-center justify-between px-4 py-3 transition-all duration-200 hover:bg-slate-50/80 hover:pl-5 ${index !== categories.length - 1 ? 'border-b border-slate-100/50' : ''}`}
-                                >
-                                    <div className="flex items-center gap-3">
-                                        <div className="flex-shrink-0 text-slate-400 group-hover:text-aureole-blue transition-all duration-200 group-hover:scale-110">
+                    <div className="bg-white border border-slate-200/60 shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-2xl overflow-hidden text-left">
+                        <div className="flex flex-col">
+                            {categories.map((cat, index) => (
+                                <motion.div key={cat.id} variants={itemVariants} className="bg-white">
+                                    <Link
+                                        to={cat.href}
+                                        onClick={onClose}
+                                        className={`group flex items-center gap-4 px-5 py-4 transition-all duration-300 hover:bg-slate-50 ${index !== categories.length - 1 ? 'border-b border-slate-50' : ''}`}
+                                    >
+                                        <div className="flex-shrink-0 text-slate-400 group-hover:text-aureole-blue transition-all duration-300 group-hover:scale-110">
                                             {cat.icon}
                                         </div>
-                                        <span className="text-sm font-sans text-slate-600 group-hover:text-aureole-slate transition-colors duration-200">
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-aureole-slate group-hover:text-aureole-blue transition-colors">
                                             {cat.title}
                                         </span>
-                                    </div>
-                                    <ArrowRight
-                                        size={14}
-                                        strokeWidth={1.5}
-                                        className="text-slate-300 opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5"
-                                    />
-                                </Link>
-                            </motion.div>
-                        ))}
-                    </div>
+                                    </Link>
+                                </motion.div>
+                            ))}
+                        </div>
 
-                    <motion.div variants={itemVariants} className="border-t border-slate-100/50 py-1.5">
-                        <Link
-                            to="/products"
-                            onClick={onClose}
-                            className="group flex items-center justify-center gap-1.5 w-full py-2.5 text-xs font-sans text-slate-500 hover:text-aureole-blue transition-all duration-200"
-                        >
-                            <span>View all products</span>
-                            <ArrowRight
-                                size={12}
-                                strokeWidth={1.5}
-                                className="transition-transform duration-200 group-hover:translate-x-1"
-                            />
-                        </Link>
-                    </motion.div>
+                        <motion.div variants={itemVariants} className="bg-slate-50 border-t border-slate-100">
+                            <Link
+                                to="/products"
+                                onClick={onClose}
+                                className="group flex items-center justify-center gap-2 w-full py-3 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-aureole-blue transition-all duration-300"
+                            >
+                                <span>View All</span>
+                                <ArrowRight
+                                    size={10}
+                                    strokeWidth={3}
+                                    className="transition-transform duration-300 group-hover:translate-x-1"
+                                />
+                            </Link>
+                        </motion.div>
+                    </div>
                 </motion.div>
             )}
         </AnimatePresence>

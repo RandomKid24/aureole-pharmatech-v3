@@ -94,16 +94,26 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed w-full z-50 transition-all duration-500">
-      <TechnicalBar isScrolled={isScrolled} />
+    <header className="fixed w-full z-50 transition-all duration-500 pointer-events-none">
+      <div className="pointer-events-auto">
+        <TechnicalBar isScrolled={isScrolled} />
+      </div>
 
-      <div className={`${isScrolled ? 'bg-white/95 shadow-xl py-2' : 'bg-white py-4'} transition-all duration-300 backdrop-blur-md`}>
-        <div className="container mx-auto px-6 lg:px-16 flex justify-between items-center">
+      <div className={`transition-all duration-500 ease-in-out pointer-events-auto
+        ${isScrolled 
+          ? 'px-4 lg:px-8 mt-4' 
+          : 'px-0 mt-0 lg:mt-0'
+        }`}>
+        <div className={`mx-auto transition-all duration-500 ease-in-out relative flex justify-between items-center bg-white/95 backdrop-blur-xl border
+          ${isScrolled 
+            ? 'max-w-6xl rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.15)] py-2 px-8 lg:px-12 border-slate-200/50' 
+            : 'max-w-full rounded-none shadow-md py-2.5 lg:py-3 px-6 lg:px-16 border-transparent'
+          }`}>
           <Link to="/" className="flex items-center gap-5 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <img
               src="/aureole-logo.png"
               alt="Aureole Pharma-Tech"
-              className={`${isScrolled ? 'h-12' : 'h-16'} w-auto transition-all duration-300 group-hover:scale-105`}
+              className={`${isScrolled ? 'h-9 lg:h-10' : 'h-11 lg:h-12'} w-auto transition-all duration-300 group-hover:scale-105`}
             />
           </Link>
 

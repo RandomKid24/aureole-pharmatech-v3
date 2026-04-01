@@ -36,7 +36,7 @@ const DesktopNav: React.FC<Omit<DesktopNavProps, 'MegaMenu'>> = ({
                     <div key={link.name} className="relative group/link-container">
                         {link.name === 'Products' || link.name === 'About' ? (
                             <div
-                                className={`relative flex items-center gap-1.5 cursor-pointer text-[10px] font-extrabold uppercase tracking-[0.25em] transition-colors py-4 leading-none ${isActive ? 'text-aureole-cyan' : 'text-aureole-slate hover:text-aureole-cyan'}`}
+                                className={`relative flex items-center gap-1.5 cursor-pointer text-[10px] font-extrabold uppercase tracking-[0.25em] transition-colors py-2 leading-none ${isActive ? 'text-aureole-cyan' : 'text-aureole-slate hover:text-aureole-cyan'}`}
                                 onMouseEnter={() => handleMouseEnter(link.name === 'About' ? 'about' : 'products')}
                                 onMouseLeave={handleMouseLeave}
                             >
@@ -55,25 +55,27 @@ const DesktopNav: React.FC<Omit<DesktopNavProps, 'MegaMenu'>> = ({
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: 8 }}
                                             transition={{ duration: 0.2, ease: 'easeOut' }}
-                                            className="absolute top-full left-0 w-64 bg-white shadow-2xl border border-slate-100 p-4 origin-top"
+                                            className="absolute top-full left-1/2 -translate-x-1/2 w-64 pt-3 origin-top z-50"
                                             onMouseEnter={() => handleMouseEnter('about')}
                                             onMouseLeave={handleMouseLeave}
                                         >
-                                            <div className="flex flex-col gap-1">
-                                                {link.dropdown?.map((item: any) => (
-                                                    <Link
-                                                        key={item.name}
-                                                        to={item.href}
-                                                        className="flex items-center gap-3 p-3 hover:bg-slate-50 transition-colors group/item"
-                                                    >
-                                                        <div className="text-slate-400 group-hover/item:text-aureole-blue transition-colors">
-                                                            {item.icon}
-                                                        </div>
-                                                        <span className="text-[9px] font-black uppercase tracking-widest text-aureole-slate group-hover/item:text-aureole-blue">
-                                                            {item.name}
-                                                        </span>
-                                                    </Link>
-                                                ))}
+                                            <div className="bg-white/95 backdrop-blur-md shadow-2xl border border-slate-100 p-4 rounded-2xl">
+                                                <div className="flex flex-col gap-1">
+                                                    {link.dropdown?.map((item: any) => (
+                                                        <Link
+                                                            key={item.name}
+                                                            to={item.href}
+                                                            className="flex items-center gap-3 p-3 hover:bg-slate-50 transition-colors group/item"
+                                                        >
+                                                            <div className="text-slate-400 group-hover/item:text-aureole-blue transition-colors">
+                                                                {item.icon}
+                                                            </div>
+                                                            <span className="text-[9px] font-black uppercase tracking-widest text-aureole-slate group-hover/item:text-aureole-blue">
+                                                                {item.name}
+                                                            </span>
+                                                        </Link>
+                                                    ))}
+                                                </div>
                                             </div>
                                         </motion.div>
                                     )}
@@ -97,7 +99,7 @@ const DesktopNav: React.FC<Omit<DesktopNavProps, 'MegaMenu'>> = ({
                                         handleNavClick(link.href);
                                     }
                                 }}
-                                className={`text-[10px] font-extrabold uppercase tracking-[0.25em] transition-colors relative group/link py-4 flex items-center leading-none ${isActive ? 'text-aureole-cyan' : 'text-aureole-slate hover:text-aureole-cyan'
+                                className={`text-[10px] font-extrabold uppercase tracking-[0.25em] transition-colors relative group/link py-2 flex items-center leading-none ${isActive ? 'text-aureole-cyan' : 'text-aureole-slate hover:text-aureole-cyan'
                                     }`}
                             >
                                 {link.name}

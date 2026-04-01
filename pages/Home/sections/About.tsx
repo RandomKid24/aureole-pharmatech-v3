@@ -54,10 +54,10 @@ const About: React.FC = () => {
             {AUREOLE_VALUES.map((val, idx) => (
               <div
                 key={idx}
-                className="group p-6 border border-slate-100 bg-white transition-all duration-300 hover:border-aureole-cyan hover:shadow-2xl hover:shadow-cyan-100 flex flex-col min-h-[220px] lg:min-h-[240px] relative overflow-hidden rounded-sm cursor-default"
+                className="group p-6 border border-slate-100 bg-white transition-all duration-500 hover:border-aureole-cyan/30 hover:shadow-[0_20px_40px_rgba(0,166,214,0.08)] flex flex-col min-h-[220px] lg:min-h-[240px] relative overflow-hidden rounded-sm cursor-default"
               >
                 {/* Background Letter - Highlighting in Cyan on Hover */}
-                <div className="text-8xl font-[950] font-heading text-slate-400 group-hover:text-aureole-cyan/40 transition-all duration-500 absolute -right-4 -top-4 select-none pointer-events-none group-hover:scale-125 group-hover:-rotate-12">
+                <div className="text-8xl font-[950] font-heading text-slate-100 group-hover:text-aureole-cyan/10 transition-all duration-700 absolute -right-4 -top-4 select-none pointer-events-none group-hover:-translate-y-2 group-hover:-rotate-6">
                   {val.letter}
                 </div>
 
@@ -69,9 +69,12 @@ const About: React.FC = () => {
                   {val.title}
                 </h5>
 
-                <p className="text-slate-400 font-medium text-[11px] leading-relaxed tracking-wide group-hover:text-slate-600 transition-colors relative z-10">
+                <p className="text-slate-400 font-medium text-[11px] leading-relaxed tracking-wide group-hover:text-slate-500 transition-colors relative z-10">
                   {val.desc}
                 </p>
+
+                {/* Bottom Highlight Line */}
+                <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-aureole-cyan transition-all duration-500 group-hover:w-full"></div>
               </div>
             ))}
           </div>
