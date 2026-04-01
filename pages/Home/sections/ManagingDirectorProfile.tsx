@@ -48,27 +48,38 @@ const ManagingDirectorProfile: React.FC = () => {
                         href="https://youtu.be/ZC_m3WGb6uA?si=JFy3CCZlqBs9oclF"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-[#001529] text-white px-8 py-4 text-[10px] font-black uppercase tracking-widest flex items-center gap-4 hover:bg-aureole-cyan transition-colors"
+                        className="group relative overflow-hidden bg-[#001529] text-white px-8 py-4 text-[10px] font-black uppercase tracking-widest flex items-center gap-4 hover:bg-aureole-cyan transition-all duration-300"
                      >
-                        Full Biography <FileText className="w-4 h-4" />
+                        <span className="relative z-10 flex items-center gap-4">
+                           Full Biography <FileText className="w-4 h-4" />
+                        </span>
+                        <div className="absolute inset-x-0 top-0 h-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] skew-x-[-25deg] transition-transform duration-700 group-hover:translate-x-[150%]" />
                      </a>
+                     
                      <a
                         href="https://in.linkedin.com/in/dr-kiran-badgujar-385a3367"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-aureole-cyan text-white px-8 py-4 text-[10px] font-black uppercase tracking-widest flex items-center gap-4 hover:bg-aureole-blue transition-colors"
+                        className="group relative overflow-hidden bg-aureole-cyan text-white px-8 py-4 text-[10px] font-black uppercase tracking-widest flex items-center gap-4 hover:bg-aureole-blue transition-all duration-300"
                      >
-                        <Linkedin className="w-4 h-4" />
-                        <span>Connect</span>
+                        <span className="relative z-10 flex items-center gap-4">
+                           <Linkedin className="w-4 h-4" />
+                           <span>Connect</span>
+                        </span>
+                        <div className="absolute inset-x-0 top-0 h-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] skew-x-[-25deg] transition-transform duration-700 group-hover:translate-x-[150%]" />
                      </a>
+
                      <a
                         href="/vcards/dr-kiran-badgujar"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hidden sm:flex bg-white border border-slate-200 text-[#001529] px-8 py-4 text-[10px] font-black uppercase tracking-widest items-center gap-4 hover:bg-slate-50 transition-colors"
+                        className="group hidden sm:flex relative overflow-hidden bg-white border border-slate-200 text-[#001529] px-8 py-4 text-[10px] font-black uppercase tracking-widest items-center gap-4 hover:bg-slate-50 transition-all duration-300"
                      >
-                        <IdCard className="w-4 h-4" />
-                        <span>V-Card</span>
+                        <span className="relative z-10 flex items-center gap-4">
+                           <IdCard className="w-4 h-4" />
+                           <span>V-Card</span>
+                        </span>
+                        <div className="absolute inset-x-0 top-0 h-full w-full bg-gradient-to-r from-transparent via-slate-400/10 to-transparent -translate-x-[150%] skew-x-[-25deg] transition-transform duration-700 group-hover:translate-x-[150%]" />
                      </a>
                   </div>
                </div>
