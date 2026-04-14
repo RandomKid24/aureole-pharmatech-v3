@@ -17,8 +17,8 @@ const StabilityChambers: React.FC = () => {
     return (
         <div className="pt-24 min-h-screen bg-transparent">
             <SEO 
-                title="Stability Chamber Manufacturer and Supplier in India, Aureole Pharma Tech"
-                description="Aureole Pharma Tech Manufacturer and Supplier of Stability Chamber, Stand Alone Chambers, Walk In Chambers, Humidity Chamber, BOD Incubator, Cold Chamber, Walk In Humidity Chamber"
+                title="Stability Testing Equipments Manufacturer and Supplier in India, Aureole Pharma Tech"
+                description="Aureole Pharma Tech Manufacturer and Supplier of Stand Alone Chambers, Walk In Chambers, Humidity Chamber, BOD Incubator, Cold Chamber, Walk In Humidity Chamber"
                 canonical="https://www.aureolepharmatech.com/products/stability-chambers/"
             />
             <CategoryHero

@@ -4,7 +4,7 @@ export const bodIncubator: ProductDetail = {
     description: "BOD Incubator, which stands for Bio-Oxygen Demand Incubator, serves the critical function of maintaining precise temperature control for various applications such as tissue culture growth tests, storage of bacterial cultures, and incubation processes that demand a high degree of temperature accuracy.\n\nAureole Pharma Tech BOD Incubators are renowned for their ability to provide exceptionally accurate and uniform temperature conditions within the chamber. Whether it’s nurturing delicate tissue cultures or ensuring the stable storage of bacterial cultures, these incubators offer the reliability and precision required for scientific and research purposes.",
     keyFeatures: [],
     specifications: [
-        { parameter: "Temperature Range", details: "20°C to 60°C" },
+        { parameter: "Temperature Range", details: "10°C to 60°C" },
         { parameter: "Accuracy", details: "± 0.2°C" },
         { parameter: "Uniformity", details: "± 1.0°C" },
         { parameter: "Power Supply", details: "Single Phase, 230V 50Hz" }

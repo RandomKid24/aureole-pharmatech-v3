@@ -11,9 +11,7 @@ export const PRODUCT_CATALOG: Category[] = [
                 name: "Stand Alone Chambers",
                 products: [
                     "Humidity Chamber",
-                    "Stability Chamber",
                     "BOD Incubator",
-                    "Cooling Incubator",
                     "Cold Chamber",
                     "Deep Freezer (upto -20°C / upto -40°C)",
                     "Ultra Low Deep Freezer (-80°C)",
