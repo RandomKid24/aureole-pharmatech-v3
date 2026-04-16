@@ -60,13 +60,7 @@ aureole-pharmatech-v3/
    npm install
    ```
 
-2. **Environment Configuration**
-   Create a `.env.local` file and add your Gemini API Key for AI features:
-   ```env
-   GEMINI_API_KEY=your_key_here
-   ```
-
-3. **Start Development**
+2. **Start Development**
    ```bash
    npm run dev
    ```
