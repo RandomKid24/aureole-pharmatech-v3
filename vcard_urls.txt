@@ -211,3 +211,6 @@
   <url>
     <loc>https://www.aureolepharmatech.com/vcards/tejal-shinde/</loc>
   </url>
+  <url>
+    <loc>https://www.aureolepharmatech.com/vcards/yogeeta-pawar/</loc>
+  </url>

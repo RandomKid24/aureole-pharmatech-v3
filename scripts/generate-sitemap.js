@@ -244,6 +244,7 @@ const VCARDS = [
   "ashwini-sangale",
   "priyanka-mithe",
   "tejal-shinde",
+  "yogeeta-pawar",
 ];
 
 let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';

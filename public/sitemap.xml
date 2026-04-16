@@ -442,7 +442,7 @@
 
   <!-- ============================================================ -->
   <!-- V-CARDS (Digital Business Cards)                             -->
-  <!-- Total: 71 cards                                              -->
+  <!-- Total: 72 cards                                              -->
   <!-- ============================================================ -->
 
   <url>
@@ -657,6 +657,9 @@
   </url>
   <url>
     <loc>https://aureole-pharmatech-v3.vercel.app/vcards/tejal-shinde/</loc>
+  </url>
+  <url>
+    <loc>https://aureole-pharmatech-v3.vercel.app/vcards/yogeeta-pawar/</loc>
   </url>
 
 </urlset>
