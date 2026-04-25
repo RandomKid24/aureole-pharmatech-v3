@@ -10,7 +10,7 @@ import TechnicalDashboard from './ProductDetail/sections/TechnicalDashboard';
 import ProductTables from './ProductDetail/sections/ProductTables';
 import VariantSections from './ProductDetail/sections/VariantSections';
 import ProductEnquiry from './ProductDetail/sections/ProductEnquiry';
-import InfrasArchitecture from '../components/sections/InfrasArchitecture';
+// import InfrasArchitecture from '../components/sections/InfrasArchitecture';
 import ServiceCentersGrid from '../components/sections/ServiceCentersGrid';
 
 import CategoryHero from '../components/ui/CategoryHero';
@@ -63,7 +63,7 @@ const ProductDetail: React.FC = () => {
         );
     }
 
-    const showInfras = decodedName === "Humidity Chamber" || decodedName === "Walk In Humidity Chamber";
+    // const showInfras = decodedName === "Humidity Chamber" || decodedName === "Walk In Humidity Chamber";
 
     return (
         <div className="pt-24 min-h-screen bg-transparent selection:bg-aureole-blue selection:text-white">
@@ -74,7 +74,7 @@ const ProductDetail: React.FC = () => {
             />
             <ProductHero product={product} decodedName={decodedName} />
             <TechnicalDashboard product={product} decodedName={decodedName} />
-            {showInfras && <InfrasArchitecture />}
+            {/* {showInfras && <InfrasArchitecture />} */}
             <ProductTables product={product} productName={decodedName} />
             <VariantSections product={product} />
             {(decodedName === "Walk In Humidity Chamber" || 
