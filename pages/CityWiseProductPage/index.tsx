@@ -8,7 +8,7 @@ import TechnicalDashboard from '../ProductDetail/sections/TechnicalDashboard';
 import ProductTables from '../ProductDetail/sections/ProductTables';
 import VariantSections from '../ProductDetail/sections/VariantSections';
 import ProductEnquiry from '../ProductDetail/sections/ProductEnquiry';
-// import InfrasArchitecture from '../../components/sections/InfrasArchitecture';
+import InfrasArchitecture from '../../components/sections/InfrasArchitecture';
 import ServiceCentersGrid from '../../components/sections/ServiceCentersGrid';
 import { MapPin } from 'lucide-react';
 
@@ -49,7 +49,7 @@ const CityWiseProductPage: React.FC = () => {
         return <Navigate to="/" replace />;
     }
 
-    // const showInfras = productName === "Walk In Humidity Chamber";
+    const showInfras = productName === "Walk In Humidity Chamber";
 
     return (
         <div className="pt-24 min-h-screen bg-transparent selection:bg-aureole-blue selection:text-white">
@@ -72,7 +72,7 @@ const CityWiseProductPage: React.FC = () => {
             <ProductHero product={product} decodedName={`${productName} in ${cityName}`} />
             
             <TechnicalDashboard product={product} decodedName={productName} />
-            {/* {showInfras && <InfrasArchitecture />} */}
+            {showInfras && <InfrasArchitecture />}
             
             {/* Service Centers Section */}
             <section className="py-20 bg-transparent border-t border-slate-200/50">

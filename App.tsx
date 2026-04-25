@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import CopyrightBar from './components/CopyrightBar';
 import Home from './pages/Home';
 import Overview from './pages/about/Overview';
 import Certification from './pages/about/Certification';
@@ -79,7 +78,6 @@ const App: React.FC = () => {
         </Routes>
 
         <Footer />
-        <CopyrightBar />
       </div>
     </Router>
   );

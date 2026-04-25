@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 const Footer: React.FC = () => {
    const location = useLocation();
+   const currentYear = new Date().getFullYear();
 
    const handleScrollToTop = () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -20,7 +21,7 @@ const Footer: React.FC = () => {
    };
 
    return (
-      <footer className="bg-aureole-slate text-white pt-16 pb-12 relative overflow-hidden">
+      <footer className="bg-aureole-slate text-white pt-16 relative overflow-hidden">
          {/* Visual Header - Branding Mask Effect */}
          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none">
             <h2 className="text-[31vw] font-bold tracking-tighter leading-none text-aureole-cyan opacity-[0.05]" style={{ fontFamily: '"Levenim MT", "Questrial", sans-serif' }}>
@@ -148,6 +149,24 @@ const Footer: React.FC = () => {
                </div>
             </div>
 
+            {/* Integrated Copyright Section */}
+            <div className="border-t border-white/5 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
+               <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2">
+                  <span>© {currentYear} <span className="text-slate-300">Aureole Pharmatech Pvt Ltd.</span></span>
+                  <span className="hidden md:inline opacity-20">|</span>
+                  <span>All Rights Reserved.</span>
+               </div>
+
+               <a 
+                  href="https://www.beforth.in/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-4 hover:text-white transition-all"
+               >
+                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 group-hover:text-slate-400">Forged by</span>
+                  <span className="font-bebas text-[1.5rem] uppercase leading-none text-transparent [-webkit-text-stroke:1px_#ffffff] hover:[-webkit-text-stroke:1px_#e8c14a] transition-all cursor-pointer tracking-[0.05em] pt-1">BEFORTH</span>
+               </a>
+            </div>
          </div>
       </footer>
    );
