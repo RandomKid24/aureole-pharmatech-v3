@@ -31,7 +31,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
                     animate={{ x: 0 }}
                     exit={{ x: '100%' }}
                     transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                    className="fixed inset-0 bg-white z-[60] p-6 flex flex-col"
+                    className="fixed inset-0 bg-white z-[60] p-6 flex flex-col pointer-events-auto"
                 >
                     <div className="flex justify-between items-center mb-8">
                         <div className="flex items-center gap-3">
