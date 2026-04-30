@@ -8,12 +8,13 @@ The application follows a strictly defined corporate blue palette. **Pure black 
 
 | Color Name | Hex Code | Utility Class | Usage |
 | :--- | :--- | :--- | :--- |
-| **Aureole Blue** | `#0079ac` | `text-aureole-blue` | Primary brand color, logo text, main accents. |
-| **Aureole Cyan** | `#00a6d6` | `text-aureole-cyan` | Highlight color, hover states, interactive nodes. |
-| **Aureole Deep** | `#003366` | `text-aureole-deep` | Deep blue for layering and visual depth. |
-| **Aureole Slate** | `#001529` | `text-aureole-slate` | **Primary Text Color**. The darkest shade used instead of black. |
-| **Slate 500** | `#64748b` | `text-slate-500` | Secondary description text. |
-| **Slate 100** | `#f1f5f9` | `bg-slate-100` | Subtle background dividers and borders. |
+| **Aureole Primary** | `#1D69B0` | `bg-aureole-primary` | Deep industrial blue. Used for dark backgrounds and footer. |
+| **Aureole Accent** | `#01C2FB` | `text-aureole-accent` | Vibrant cyan (Aureole Cyan). Used for highlights and active states. |
+| **Aureole Surface** | `#F0F7FD` | `bg-aureole-surface` | Subtle off-white/blue surface for clean section backgrounds. |
+| **Brand Gradient** | Gradient | `bg-brand-gradient` | Cyan to Blue (`#01C2FB` → `#1D69B0`) horizontal flow. |
+
+> [!TIP]
+> **High Contrast Standards**: When using `Aureole Primary` backgrounds, avoid standard slate colors. Use `text-blue-50` or `text-white` for maximum clarity.
 
 ## 2. Typography
 

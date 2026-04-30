@@ -21,10 +21,10 @@ const Footer: React.FC = () => {
    };
 
    return (
-      <footer className="bg-aureole-slate text-white pt-16 relative overflow-hidden">
+      <footer className="bg-aureole-primary text-white pt-16 relative overflow-hidden">
          {/* Visual Header - Branding Mask Effect */}
          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none">
-            <h2 className="text-[31vw] font-bold tracking-tighter leading-none text-aureole-cyan opacity-[0.05]" style={{ fontFamily: '"Levenim MT", "Questrial", sans-serif' }}>
+            <h2 className="text-[31vw] font-bold tracking-tighter leading-none text-aureole-accent opacity-[0.07]" style={{ fontFamily: '"Levenim MT", "Questrial", sans-serif' }}>
                aureole
             </h2>
          </div>
@@ -37,10 +37,10 @@ const Footer: React.FC = () => {
                      <img
                         src="/aureole-logo.png"
                         alt="Aureole Pharma-Tech"
-                        className="h-20 w-auto"
+                        className="h-24 w-auto brightness-[1.25] contrast-[1.1] saturate-[1.1]"
                      />
                   </Link>
-                  <p className="text-slate-400 text-sm font-medium leading-relaxed max-w-xs">
+                  <p className="text-blue-50/90 text-sm font-medium leading-relaxed max-w-xs">
                      Precision engineering leaders in environmental stabilization and thermal control solutions for global pharmaceutical manufacturing.
                   </p>
                   <div className="flex gap-3">
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                         { Icon: Linkedin, href: "https://www.linkedin.com/company/aureole-pharmatech/" },
                         { Icon: Instagram, href: "https://www.instagram.com/aureole_pharmatech" }
                      ].map((social, idx) => (
-                        <a key={idx} href={social.href} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center hover:bg-aureole-cyan hover:border-aureole-cyan transition-all">
+                        <a key={idx} href={social.href} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center hover:bg-aureole-accent hover:border-aureole-accent transition-all">
                            <social.Icon className="w-4 h-4" />
                         </a>
                      ))}
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
                </div>
 
                <div>
-                  <h4 className="text-xs font-black uppercase tracking-[0.2em] mb-8 text-aureole-blue">Quick Links</h4>
+                  <h4 className="text-xs font-black uppercase tracking-[0.2em] mb-8 text-aureole-accent">Quick Links</h4>
                   <ul className="space-y-3">
                      {[
                         { name: 'Home', href: '/' },
@@ -70,18 +70,18 @@ const Footer: React.FC = () => {
                            {item.href.startsWith('/#') ? (
                               <Link
                                  to={item.href}
-                                 className="text-slate-400 font-bold tracking-[0.1em] text-xs hover:text-white transition-colors flex items-center gap-3 group"
+                                 className="text-blue-50/80 font-bold tracking-[0.1em] text-xs hover:text-white transition-colors flex items-center gap-3 group"
                                  onClick={() => handleHashScroll(item.href.substring(2))}
                               >
-                                 <span className="w-1.5 h-[1px] bg-slate-700 group-hover:w-4 group-hover:bg-aureole-cyan transition-all"></span> {item.name}
+                               <span className="w-1.5 h-[1px] bg-white/10 group-hover:w-4 group-hover:bg-aureole-accent transition-all"></span> {item.name}
                               </Link>
                            ) : (
                               <Link
                                  to={item.href}
-                                 className="text-slate-400 font-bold tracking-[0.1em] text-xs hover:text-white transition-colors flex items-center gap-3 group"
+                                 className="text-blue-50/80 font-bold tracking-[0.1em] text-xs hover:text-white transition-colors flex items-center gap-3 group"
                                  onClick={item.href === '/' ? handleScrollToTop : undefined}
                               >
-                                 <span className="w-1.5 h-[1px] bg-slate-700 group-hover:w-4 group-hover:bg-aureole-cyan transition-all"></span> {item.name}
+                               <span className="w-1.5 h-[1px] bg-white/10 group-hover:w-4 group-hover:bg-aureole-accent transition-all"></span> {item.name}
                               </Link>
                            )}
                         </li>
@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
                </div>
 
                <div>
-                  <h4 className="text-xs font-black uppercase tracking-[0.2em] mb-8 text-aureole-blue">Key Products</h4>
+                  <h4 className="text-xs font-black uppercase tracking-[0.2em] mb-8 text-aureole-accent">Key Products</h4>
                   <ul className="space-y-3">
                      {[
                         { name: 'Humidity Chamber', href: '/products/humidity-chamber' },
@@ -103,10 +103,10 @@ const Footer: React.FC = () => {
                         <li key={item.name}>
                            <Link
                               to={item.href}
-                              className="text-slate-400 font-bold tracking-[0.1em] text-xs hover:text-white transition-colors flex items-center gap-3 group"
+                              className="text-blue-50/80 font-bold tracking-[0.1em] text-xs hover:text-white transition-colors flex items-center gap-3 group"
                               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                            >
-                              <span className="w-1.5 h-[1px] bg-slate-700 group-hover:w-4 group-hover:bg-aureole-cyan transition-all"></span> {item.name}
+                              <span className="w-1.5 h-[1px] bg-white/10 group-hover:w-4 group-hover:bg-aureole-accent transition-all"></span> {item.name}
                            </Link>
                         </li>
                      ))}
@@ -114,33 +114,33 @@ const Footer: React.FC = () => {
                </div>
 
                <div>
-                  <h4 className="text-xs font-black uppercase tracking-[0.2em] mb-8 text-aureole-blue">Headquarters</h4>
+                  <h4 className="text-xs font-black uppercase tracking-[0.2em] mb-8 text-aureole-accent">Headquarters</h4>
                   <div className="space-y-4 relative z-10">
                      <div className="flex gap-4">
-                        <MapPin className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />
+                        <MapPin className="w-4 h-4 text-blue-100/70 shrink-0 mt-0.5" />
                         <a
                            href="https://maps.google.com/?q=B-61, Dist, MIDC Area, Malegaon, Maharashtra 422113"
                            target="_blank"
                            rel="noopener noreferrer"
-                           className="text-slate-400 font-bold tracking-[0.1em] text-xs leading-relaxed hover:text-white transition-colors"
+                           className="text-blue-50/90 font-bold tracking-[0.1em] text-xs leading-relaxed hover:text-white transition-colors"
                         >
                            B-61, Dist, MIDC Area, Malegaon, Maharashtra 422113.
                         </a>
                      </div>
                      <div className="flex gap-4">
-                        <Mail className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />
+                        <Mail className="w-4 h-4 text-blue-100/70 shrink-0 mt-0.5" />
                         <a
                            href="mailto:enquiry@aureolepharmatech.com"
-                           className="text-slate-400 font-bold tracking-[0.1em] text-xs hover:text-white transition-colors"
+                           className="text-blue-50/90 font-bold tracking-[0.1em] text-xs hover:text-white transition-colors"
                         >
                            enquiry@aureolepharmatech.com
                         </a>
                      </div>
                      <div className="flex gap-4">
-                        <Phone className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />
+                        <Phone className="w-4 h-4 text-blue-100/70 shrink-0 mt-0.5" />
                         <a
                            href="tel:+918600522240"
-                           className="text-lg font-bold tracking-tighter text-white hover:text-aureole-cyan transition-colors"
+                           className="text-lg font-bold tracking-tighter text-white hover:text-aureole-accent transition-colors"
                         >
                            +91 86005 22240
                         </a>
@@ -151,8 +151,8 @@ const Footer: React.FC = () => {
 
             {/* Integrated Copyright Section */}
             <div className="border-t border-white/5 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
-               <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2">
-                  <span>© {currentYear} <span className="text-slate-300">Aureole Pharmatech Pvt Ltd.</span></span>
+               <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-100/60 flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2">
+                  <span>© {currentYear} <span className="text-white">Aureole Pharmatech Pvt Ltd.</span></span>
                   <span className="hidden md:inline opacity-20">|</span>
                   <span>All Rights Reserved.</span>
                </div>
@@ -163,7 +163,7 @@ const Footer: React.FC = () => {
                   rel="noopener noreferrer"
                   className="group flex items-center gap-4 hover:text-white transition-all"
                >
-                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 group-hover:text-slate-400">Forged by</span>
+                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-100/60 group-hover:text-blue-50/90">Forged by</span>
                   <span className="font-bebas text-[1.5rem] uppercase leading-none text-transparent [-webkit-text-stroke:1px_#ffffff] hover:[-webkit-text-stroke:1px_#e8c14a] transition-all cursor-pointer tracking-[0.05em] pt-1">BEFORTH</span>
                </a>
             </div>
