@@ -1,56 +1,48 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 
 interface SEOProps {
   title?: string;
   description?: string;
-  canonical?: string;
+  image?: string;
+  article?: boolean;
 }
 
-const SEO: React.FC<SEOProps> = ({ title, description, canonical }) => {
-  const location = useLocation();
+const SEO: React.FC<SEOProps> = ({ title, description, image, article }) => {
+  const { pathname } = useLocation();
+  
+  const siteUrl = "https://www.aureolepharmatech.com";
+  const defaultTitle = "Pharmaceutical Equipment, Stability Chamber, Aureole Pharma Tech";
+  const defaultDescription = "Aureole Pharma Tech Manufacturers, Suppliers of Stability Chamber, Walk in Chamber, Stand Alone Chamber, Ultrasonic Baths, Water Baths, Walk in Humidity Chamber from Nashik, Maharashtra, Best Quality In Pharmaceutical Equipment.";
+  const defaultImage = "/aureole-logo.png";
+  
+  const seo = {
+    title: title || defaultTitle,
+    description: description || defaultDescription,
+    image: `${siteUrl}${image || defaultImage}`,
+    url: `${siteUrl}${pathname}${pathname.endsWith('/') ? '' : '/'}`,
+  };
 
-  useEffect(() => {
-    // Update Title
-    if (title) {
-      document.title = title;
-      
-      // Update OG Title
-      const ogTitle = document.querySelector('meta[property="og:title"]');
-      if (ogTitle) ogTitle.setAttribute('content', title);
-    }
+  return (
+    <Helmet>
+      <title>{seo.title}</title>
+      <meta name="description" content={seo.description} />
+      <meta name="image" content={seo.image} />
+      <link rel="canonical" href={seo.url} />
 
-    // Update Description
-    if (description) {
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute('content', description);
-      }
+      {seo.url && <meta property="og:url" content={seo.url} />}
+      {(article ? true : null) && <meta property="og:type" content="article" />}
+      {seo.title && <meta property="og:title" content={seo.title} />}
+      {seo.description && <meta property="og:description" content={seo.description} />}
+      {seo.image && <meta property="og:image" content={seo.image} />}
 
-      // Update OG Description
-      const ogDescription = document.querySelector('meta[property="og:description"]');
-      if (ogDescription) ogDescription.setAttribute('content', description);
-    }
-
-    // Update Canonical
-    const existingCanonical = document.querySelector('link[rel="canonical"]');
-    if (existingCanonical) {
-      existingCanonical.setAttribute('href', canonical || `https://www.aureolepharmatech.com${location.pathname}`);
-    } else {
-      const link = document.createElement('link');
-      link.rel = 'canonical';
-      link.href = canonical || `https://www.aureolepharmatech.com${location.pathname}`;
-      document.head.appendChild(link);
-    }
-
-    // Update OG URL
-    const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) {
-      ogUrl.setAttribute('content', canonical || `https://www.aureolepharmatech.com${location.pathname}`);
-    }
-  }, [title, description, canonical, location]);
-
-  return null;
+      <meta name="twitter:card" content="summary_large_image" />
+      {seo.title && <meta name="twitter:title" content={seo.title} />}
+      {seo.description && <meta name="twitter:description" content={seo.description} />}
+      {seo.image && <meta name="twitter:image" content={seo.image} />}
+    </Helmet>
+  );
 };
 
 export default SEO;

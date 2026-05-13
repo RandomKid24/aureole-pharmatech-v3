@@ -1,11 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-const DOMAIN =
-  process.env.SITE_URL ||
-  (process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "https://aureole-pharmatech-v3.vercel.app");
+const DOMAIN = "https://www.aureolepharmatech.com";
 
 const MAIN_PAGES = [
   { path: "/", priority: "1.0" },
@@ -294,19 +290,7 @@ CITY_BASE_PRODUCTS.forEach((prod) => {
   });
 });
 
-// V-Cards
-xml +=
-  "\n  <!-- ============================================================ -->\n";
-xml +=
-  "  <!-- V-CARDS (Digital Business Cards)                             -->\n";
-xml += `  <!-- Total: ${VCARDS.length} cards                                              -->\n`;
-xml +=
-  "  <!-- ============================================================ -->\n\n";
-VCARDS.forEach((slug) => {
-  xml += `  <url>\n`;
-  xml += `    <loc>${DOMAIN}/vcards/${slug}/</loc>\n`;
-  xml += `  </url>\n`;
-});
+// V-Cards excluded from sitemap for SEO focus on product pages
 
 xml += "\n</urlset>";
 

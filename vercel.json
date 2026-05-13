@@ -1,27 +1,59 @@
 {
-    "redirects": [
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
         {
-            "source": "/vcards/:slug",
-            "destination": "/vcards/:slug/",
-            "permanent": true
+          "type": "host",
+          "value": "aureolepharmatech.com"
         }
-    ],
-    "rewrites": [
+      ],
+      "destination": "https://www.aureolepharmatech.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/products/stability-chamber/:path*",
+      "destination": "/products/stability-chambers/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/products/stability-chamber",
+      "destination": "/products/stability-chambers/",
+      "permanent": true
+    },
+    {
+      "source": "/vcards/:slug",
+      "destination": "/vcards/:slug/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/vcards/:path*",
+      "headers": [
         {
-            "source": "/vcards/:path*/",
-            "destination": "/vcards-2026/:path*"
-        },
-        {
-            "source": "/vcards/:path*",
-            "destination": "/vcards-2026/:path*"
-        },
-        {
-            "source": "/envato/digi-vcard/CEO/:path*",
-            "destination": "/vcards-2026/aarti-avhad/:path*"
-        },
-        {
-            "source": "/((?!.*\\.).*)",
-            "destination": "/index.html"
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
         }
-    ]
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/vcards/:path*/",
+      "destination": "/vcards-2026/:path*"
+    },
+    {
+      "source": "/vcards/:path*",
+      "destination": "/vcards-2026/:path*"
+    },
+    {
+      "source": "/envato/digi-vcard/CEO/:path*",
+      "destination": "/vcards-2026/aarti-avhad/:path*"
+    },
+    {
+      "source": "/((?!.*\\.).*)",
+      "destination": "/index.html"
+    }
+  ]
 }

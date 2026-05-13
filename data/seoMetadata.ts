@@ -1,23 +1,23 @@
 export const PRODUCT_SEO_DATA: Record<string, { title: string; description: string }> = {
     "Humidity Chamber": {
-        title: "Humidity Chamber Manufacturers in Nashik, Maharashtra, India",
-        description: "Aureole Pharma Tech Manufacturers, Suppliers of Humidity Chamber from Nashik, Maharashtra, Best Quality In Pharmaceutical Equipment, Call: +91 86005 22240"
+        title: "Humidity Chamber Manufacturer | Stability Testing Solutions - Aureole",
+        description: "Aureole Pharma Tech Manufacturers and Suppliers of Humidity Chambers. High-quality pharmaceutical equipment supplied pan-India. Call: +91 86005 22240"
     },
     "Stability Chamber": {
-        title: "Stability Chamber Manufacturer and Supplier in India, Aureole Pharma Tech",
-        description: "Aureole Pharma Tech Manufacturer and Supplier of Stability Chamber, Stand Alone Chambers, Walk In Chambers, Humidity Chamber, BOD Incubator, Cold Chamber, Walk In Humidity Chamber"
+        title: "ICH Compliant Stability Chambers | Pharmaceutical Grade Manufacturer – Aureole",
+        description: "Walk-in and reach-in stability chambers with 21 CFR Part 11 compliant software. Manufactured in Nashik, supplied across India. Request a quote."
     },
     "BOD Incubator": {
-        title: "BOD Incubator Manufacturer and Supplier in India, Aureole Pharma Tech",
-        description: "Aureole Pharma Tech Manufacturers, Suppliers of BOD Incubator in Nashik, Maharashtra, Best Quality & Price Pharmaceutical Equipment In India, Call: +91 86005 22240"
+        title: "BOD Incubator Manufacturer & Supplier in India | Aureole PharmaTech",
+        description: "High-precision BOD incubators for pharmaceutical and research labs. Energy-efficient, GMP-compliant. Pan-India delivery from Nashik."
     },
     "Cooling Incubator": {
         title: "Cooling Incubator Manufacturer and Supplier in India, Aureole Pharma Tech",
         description: "Aureole Pharma Tech Manufacturers, Suppliers of Cooling Incubator in Nashik, Maharashtra, Best Quality & Price Pharmaceutical Equipment In India, Call: +91 86005 22240"
     },
     "Cold Chamber": {
-        title: "Cold Chamber Manufacturer and Supplier in India, Aureole Pharma Tech",
-        description: "Aureole Pharma Tech Manufacturers, Suppliers of Cold Chamber in Nashik, Maharashtra, Best Quality & Price Pharmaceutical Equipment In India, Call: +91 86005 22240"
+        title: "Walk-in Cold Chamber Manufacturer | Temperature Range -40°C to +80°C – Aureole",
+        description: "Industrial walk-in cold chambers for pharma stability testing. Precise temperature control, energy-efficient compressors. Custom sizes available. Nashik manufacturer, pan-India supply."
     },
     "Deep Freezer (upto -20°C / upto -40°C)": {
         title: "Deep Freezer (-20°C/-40°C) Manufacturer and Supplier in India, Aureole Pharma Tech",
@@ -44,8 +44,8 @@ export const PRODUCT_SEO_DATA: Record<string, { title: string; description: stri
         description: "Aureole Pharma Tech Manufacturers, Suppliers of Vacuum Oven in Nashik, Maharashtra, Best Quality & Price Pharmaceutical Equipment In India, Call: +91 86005 22240"
     },
     "Muffle Furnace": {
-        title: "Muffle Furnace Manufacturer and Supplier in India, Aureole Pharma Tech",
-        description: "Aureole Pharma Tech Manufacturers, Suppliers of Muffle Furnace in Nashik, Maharashtra, Best Quality & Price Pharmaceutical Equipment In India, Call: +91 86005 22240"
+        title: "Muffle Furnace Manufacturer and Supplier in India | Aureole Pharma Tech",
+        description: "Aureole Pharma Tech Manufacturers of high-temperature Muffle Furnaces. Best quality pharmaceutical equipment supplied across India. Call: +91 86005 22240"
     },
     "Walk In Humidity Chamber": {
         title: "Walk In Humidity Chamber Manufacturer and Supplier in India, Aureole Pharma Tech",
