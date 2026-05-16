@@ -28,13 +28,6 @@ const ExecutiveHierarchy: React.FC = () => {
             linkedin: "https://www.linkedin.com/in/jitendra-tajanpure-6a0937296/"
         },
         {
-            name: "Harshal Ghoge",
-            role: "VP - Marketing & Projects",
-            company: "Aureole Pharma Pvt. Ltd.",
-            img: "/about/harshal-ghoge.jpg",
-            linkedin: "https://www.linkedin.com/in/harshal-ghoge-553a4735/"
-        },
-        {
             name: "Sandeep Kale",
             role: "VP - Strategy & Biz Dev",
             company: "Aureole Pharma Pvt. Ltd.",
@@ -101,10 +94,9 @@ const ExecutiveHierarchy: React.FC = () => {
                             ))}
                         </div>
 
-                        {/* Level 2: Functional Core */}
-                        <div className="relative">
-                            <div className="absolute top-0 left-12 right-12 h-px bg-slate-100 hidden lg:block"></div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-100 border border-slate-100">
+                        <div className="relative max-w-6xl mx-auto">
+                            <div className="absolute top-0 left-[16.6%] right-[16.6%] h-px bg-slate-100 hidden lg:block"></div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-100 border border-slate-100">
                                 {coreTeam.slice(2, 6).map((member, idx) => (
                                     <div key={idx} className="group bg-white flex flex-col transition-all duration-500 hover:bg-slate-50/50 relative z-10">
                                         <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-px h-10 bg-slate-100 hidden lg:block"></div>

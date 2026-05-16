@@ -22,13 +22,6 @@ const TeamArchitecture: React.FC = () => {
             vcard: "/vcards/jitendra-tajanpure"
         },
         {
-            name: "Harshal Ghoge",
-            role: "VP - Marketing & Projects",
-            img: "/about/harshal-ghoge.jpg",
-            linkedin: "https://www.linkedin.com/in/harshal-ghoge-553a4735/",
-            vcard: "/vcards/harshal-ghoge"
-        },
-        {
             name: "Sandeep Kale",
             role: "VP - Strategy & Biz Dev",
             img: "/about/sandeep-kale.jpg",
@@ -177,11 +170,11 @@ const TeamArchitecture: React.FC = () => {
                                     </div>
 
                                     {/* Level 2: Functional Core */}
-                                    <div className="relative">
+                                    <div className="relative max-w-6xl mx-auto">
                                         {/* Horizontal Connector Line */}
-                                        <div className="absolute top-0 left-12 right-12 h-px bg-slate-200 hidden lg:block"></div>
+                                        <div className="absolute top-0 left-[16.6%] right-[16.6%] h-px bg-slate-200 hidden lg:block"></div>
 
-                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-200 border border-slate-200">
+                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 border border-slate-200">
                                             {coreTeam.slice(1).map((member, idx) => (
                                                 <div key={idx} className="group bg-white flex flex-col transition-all duration-500 hover:bg-slate-50 relative z-10 p-8">
                                                     {/* Connecting Stub */}
