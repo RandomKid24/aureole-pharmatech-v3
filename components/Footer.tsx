@@ -119,12 +119,12 @@ const Footer: React.FC = () => {
                      <div className="flex gap-4">
                         <MapPin className="w-4 h-4 text-blue-100/70 shrink-0 mt-0.5" />
                         <a
-                           href="https://maps.google.com/?q=B-61, Dist, MIDC Area, Malegaon, Maharashtra 422113"
+                           href="https://maps.app.goo.gl/13F9dNfLBFyLYXC78"
                            target="_blank"
                            rel="noopener noreferrer"
                            className="text-blue-50/90 font-bold tracking-[0.1em] text-xs leading-relaxed hover:text-white transition-colors"
                         >
-                           B-61, Dist, MIDC Area, Malegaon, Maharashtra 422113.
+                           Shop No.6005 , 6th Floor , SSRF, beside City Center Mall Road, Lavate Nager, Parijat Nagar, Nasik, Nashik, Maharashtra 422002
                         </a>
                      </div>
                      <div className="flex gap-4">
