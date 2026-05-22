@@ -1,161 +1,125 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import SEO from '../components/SEO';
 import CareersHero from './Careers/sections/CareersHero';
-import JobBoard from './Careers/sections/JobBoard';
+import JobBoard, { JobListing } from './Careers/sections/JobBoard';
 
+interface RecruitmentApiJob {
+    id: number;
+    title?: string;
+    designation?: string;
+    description?: string;
+    requirements?: string;
+    skills_list?: string[];
+    skills_required?: string;
+    responsibilities?: string;
+    benefits?: string;
+    experience_level_display?: string;
+    min_experience?: number;
+    max_experience?: number;
+    department?: string;
+}
 
-const Listings = [
-    {
-        code: "PRD_OPS_JM",
-        status: "Open",
-        level: "Junior to Mid-Level",
-        experience: "0 to 5 years",
-        vacancies: "Open",
-        department: "Production / Operations",
-        requirementDetails: "MBA (Ops) / B.E or Diploma (Mech/Elec/Inst/Elec)",
-        description: [
-            "Hands-on experience in PRD, QC, and testing of pharma machinery/equipment (Stability Chambers, Lab Equipment)",
-            "Strong understanding of PRD processes: Bending, Cutting, Welding",
-            "Handle and manage shop floor production teams",
-            "Coordinate with PRD, Design, Marketing, Store, Purchase, QC, and Dispatch",
-            "Optimize production lead time and define processes",
-            "Track production status with daily reports, job cards, and machine-wise updates",
-            "Identify and report possible delays with reasons",
-            "Understand product lifecycle and production flow",
-            "Plan and execute production as per priority and dispatch schedules",
-            "Maintain proper documentation and process compliance"
-        ],
-        skills: [
-            "Proficiency in MS Excel, PowerPoint, and Word",
-            "Knowledge of electrical components (Contactor, Sensor, Timer, SSR, SMPS, MCB, Wiring) is a plus",
-            "Strong ethics, attitude, and adherence to company policies"
-        ]
-    },
-    {
-        code: "SM_SR_MGR",
-        status: "Open",
-        level: "Senior / Management Level",
-        experience: "9–10+ years",
-        vacancies: "Open",
-        department: "Sales & Marketing",
-        requirementDetails: "MBA (Mkt) + Tech Background (Elec/Inst/Elec/Mech/B.Pharm)",
-        description: [
-            "In-depth knowledge of pharma industry and equipment",
-            "Analyze market trends and develop sales strategies",
-            "Lead and manage teams (minimum 8–10 members)",
-            "Handle complete sales cycle: Enquiry → Order → Closure",
-            "Documentation: Quotations, Work Orders",
-            "Marketing campaigns, promotions, and exhibition planning",
-            "Experience with GeM portal",
-            "Field role with extensive travel"
-        ],
-        skills: [
-            "Excellent communication and presentation skills",
-            "Strong ethics and customer compliance"
-        ]
-    },
-    {
-        code: "SM_MID",
-        status: "Open",
-        level: "Mid-Level (Senior Executive / Assistant Manager)",
-        experience: "5+ years",
-        vacancies: "Open",
-        department: "Sales & Marketing",
-        requirementDetails: "MBA (Mkt) + Tech Background (Elec/Inst/Elec/Mech/B.Pharm)",
-        description: [
-            "End-to-end handling of enquiries and orders",
-            "Sales documentation and coordination",
-            "Field sales with mandatory travel",
-            "Support marketing activities and exhibitions",
-            "Understand technical specifications and applications"
-        ],
-        skills: [
-            "Strong communication and interpersonal skills"
-        ]
-    },
-    {
-        code: "SM_JR",
-        status: "Open",
-        level: "Junior Level (Executive / Senior Executive)",
-        experience: "0–2 years",
-        vacancies: "Open",
-        department: "Sales & Marketing",
-        requirementDetails: "MBA (Mkt) + Tech Background (Elec/Inst/Elec/Mech/B.Pharm)",
-        description: [
-            "Support complete sales cycle",
-            "Prepare quotations and documentation",
-            "Assist in exhibitions and promotional activities",
-            "Field sales and travel mandatory",
-            "Learn product specifications and applications"
-        ],
-        skills: [
-            "Strong communication and interpersonal skills"
-        ]
-    },
-    {
-        code: "SE_MID",
-        status: "Open",
-        level: "Mid-Level",
-        experience: "1–5 years",
-        vacancies: "Open",
-        department: "Service Engineer",
-        requirementDetails: "B.E / Diploma / B.Sc / ITI (Technical)",
-        description: [
-            "Installation, Service, AMC, Calibration, and Maintenance",
-            "End-to-end service support",
-            "Electrical, electronics, and refrigeration troubleshooting",
-            "Customer-facing role with remote support",
-            "Support QA/QC documentation",
-            "Field role with travel"
-        ],
-        skills: [
-            "Basic knowledge of PLC & HMI preferred"
-        ]
-    },
-    {
-        code: "SE_JR",
-        status: "Open",
-        level: "Junior-Level",
-        experience: "0–1 year",
-        vacancies: "Open",
-        department: "Service Engineer",
-        requirementDetails: "B.E / Diploma / B.Sc / ITI (Technical)",
-        description: [
-            "Assist in installation, service, and maintenance",
-            "Learn equipment functionality and applications",
-            "Customer support and documentation assistance",
-            "Willingness to travel and work on-site"
-        ],
-        skills: [
-            "Technical aptitude and willingness to learn"
-        ]
-    },
-    {
-        code: "QCT_JR_MID",
-        status: "Open",
-        level: "Junior & Mid-Level",
-        experience: "0–5 years",
-        vacancies: "Open",
-        department: "QCT – Quality Control & Testing",
-        requirementDetails: "B.E / Diploma (Elec/Inst/Elec/Mech)",
-        description: [
-            "QC and testing of pharma machinery (Stability Chambers, Lab Equipment)",
-            "Incoming, in-process, and final inspection",
-            "Electrical component testing and validation",
-            "Documentation and compliance awareness",
-            "Stage-wise QC across production cycle"
-        ],
-        skills: [
-            "Strong ethics and quality mindset"
-        ]
-    }
-];
+interface RecruitmentApiListResponse {
+    jobs: RecruitmentApiJob[];
+}
+
+const API_BASE = (import.meta.env.VITE_RECRUITMENT_API_BASE || 'https://hrms.aureolegroup.com').replace(/\/$/, '');
+
+const textToList = (value?: string) =>
+    (value || '')
+        .split(/\n|•|-/)
+        .map((item) => item.trim())
+        .filter(Boolean);
 
 const Careers: React.FC = () => {
+    const [listings, setListings] = useState<JobListing[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+
+    const jobsApiUrl = useMemo(() => `${API_BASE}/api/jobs/`, []);
+
     useEffect(() => {
         window.scrollTo(0, 0);
+
+        const fetchJobs = async () => {
+            setIsLoading(true);
+            setError(null);
+            try {
+                const response = await fetch(jobsApiUrl);
+                if (!response.ok) {
+                    throw new Error(`Failed to load jobs (${response.status})`);
+                }
+                const data = (await response.json()) as RecruitmentApiListResponse;
+                const normalized = (data.jobs || []).map((job) => {
+                    const minExp = typeof job.min_experience === 'number' ? job.min_experience : null;
+                    const maxExp = typeof job.max_experience === 'number' ? job.max_experience : null;
+                    const experience = minExp !== null && maxExp !== null
+                        ? `${minExp} to ${maxExp} years`
+                        : minExp !== null
+                            ? `${minExp}+ years`
+                            : 'As per role';
+
+                    return {
+                        id: job.id,
+                        code: `JOB_${job.id}`,
+                        status: 'Open',
+                        level: job.experience_level_display || 'Open',
+                        experience,
+                        vacancies: 'Open',
+                        department: job.title || job.designation || job.department || `Job ${job.id}`,
+                        requirementDetails: (job.requirements || '').slice(0, 160) || 'Refer full job details.',
+                        description: job.description ? [] : textToList(job.description).slice(0, 12),
+                        skills: (job.skills_list && job.skills_list.length)
+                            ? job.skills_list
+                            : job.skills_required
+                                ? job.skills_required.split(',').map((s) => s.trim()).filter(Boolean)
+                                : (job.requirements ? [] : textToList(job.requirements).slice(0, 8)),
+                        descriptionHtml: job.description || '',
+                        requirementsHtml: job.requirements || '',
+                        responsibilitiesHtml: job.responsibilities || '',
+                        benefitsHtml: job.benefits || ''
+                    } as JobListing;
+                });
+                setListings(normalized);
+            } catch (err) {
+                const message = err instanceof Error ? err.message : 'Failed to load jobs';
+                setError(message);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchJobs();
     }, []);
+
+    const handleApply = async (jobId: number, formData: FormData) => {
+        const educationEntries = formData.get('education_entries')?.toString().trim();
+        if (educationEntries) {
+            JSON.parse(educationEntries);
+        }
+
+        const certificationEntries = formData.get('certification_entries')?.toString().trim();
+        if (certificationEntries) {
+            JSON.parse(certificationEntries);
+        }
+
+        const response = await fetch(`${API_BASE}/api/jobs/${jobId}/apply/`, {
+            method: 'POST',
+            body: formData
+        });
+
+        const responseData = await response.json().catch(() => ({}));
+        if (!response.ok) {
+            const message =
+                responseData?.error ||
+                responseData?.detail ||
+                `Application failed (${response.status})`;
+            throw new Error(message);
+        }
+
+        return responseData?.message || 'Application submitted successfully.';
+    };
 
     return (
         <div className="pt-24 min-h-screen bg-transparent">
@@ -165,7 +129,12 @@ const Careers: React.FC = () => {
                 canonical="https://www.aureolepharmatech.com/careers/"
             />
             <CareersHero />
-            <JobBoard listings={Listings} />
+            <JobBoard
+                listings={listings}
+                onApply={handleApply}
+                isLoading={isLoading}
+                error={error}
+            />
 
         </div>
     );
