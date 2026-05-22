@@ -24,7 +24,7 @@ interface RecruitmentApiListResponse {
     jobs: RecruitmentApiJob[];
 }
 
-const API_BASE = (import.meta.env.VITE_RECRUITMENT_API_BASE || 'https://hrms.aureolegroup.com').replace(/\/$/, '');
+const API_BASE = (import.meta.env.VITE_RECRUITMENT_API_BASE || 'https://hrms.encryptedbar.com').replace(/\/$/, '');
 
 const textToList = (value?: string) =>
     (value || '')

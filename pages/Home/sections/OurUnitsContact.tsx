@@ -129,7 +129,7 @@ const OurUnitsContact: React.FC = () => {
     };
 
     try {
-      const response = await fetch("https://hrms.aureolegroup.com/api/forms/enquiry-form/submit/", {
+      const response = await fetch("https://hrms.encryptedbar.com/api/forms/enquiry-form/submit/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
