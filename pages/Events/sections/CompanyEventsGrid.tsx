@@ -61,16 +61,19 @@ const CompanyEventsGrid: React.FC<CompanyEventsGridProps> = ({ companyEvents, on
                                     />
                                 ) : (
                                     <>
-                                        <LazyImage
+                                        <img
                                             src={event.thumbnail}
                                             alt=""
-                                            className="absolute inset-0 w-full h-full object-cover blur-lg opacity-50 scale-110 pointer-events-none"
+                                            loading="lazy"
+                                            className="absolute inset-0 w-full h-full object-cover blur-xl opacity-40 scale-110 pointer-events-none"
                                         />
-                                        <LazyImage
-                                            src={event.thumbnail}
-                                            alt={event.title}
-                                            className="relative z-10 w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-md"
-                                        />
+                                        <div className="absolute inset-0 w-full h-full z-10">
+                                            <LazyImage
+                                                src={event.thumbnail}
+                                                alt={event.title}
+                                                className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-lg"
+                                            />
+                                        </div>
                                     </>
                                 )}
                                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20">
