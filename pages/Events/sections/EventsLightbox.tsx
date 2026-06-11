@@ -58,11 +58,11 @@ const EventsLightbox: React.FC<EventsLightboxProps> = ({
                     <ChevronLeft size={48} />
                 </button>
 
-                <div className="relative max-w-5xl max-h-[70vh] w-full flex items-center justify-center group overflow-hidden">
+                <div className="relative w-full h-[70vh] max-w-5xl flex items-center justify-center group overflow-hidden">
                     {galleryItems[lightboxIndex]?.endsWith('.mp4') ? (
                         <video
                             src={`${selectedEvent.folderPath}/${galleryItems[lightboxIndex]}`}
-                            className="max-w-full max-h-full"
+                            className="w-full h-full object-contain"
                             controls
                             autoPlay
                         />
@@ -70,7 +70,7 @@ const EventsLightbox: React.FC<EventsLightboxProps> = ({
                         <LazyImage
                             src={`${selectedEvent.folderPath}/${galleryItems[lightboxIndex]}`}
                             alt="Gallery item"
-                            className="max-w-full max-h-full object-contain shadow-2xl animate-in fade-in zoom-in duration-500"
+                            className="w-full h-full object-contain shadow-2xl animate-in fade-in zoom-in duration-500"
                         />
                     )}
                 </div>
