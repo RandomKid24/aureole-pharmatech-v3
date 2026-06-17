@@ -290,7 +290,12 @@ CITY_BASE_PRODUCTS.forEach((prod) => {
   });
 });
 
-// V-Cards excluded from sitemap for SEO focus on product pages
+// Append V-Cards from vcard_urls.txt if it exists
+const urlsPath = path.join(process.cwd(), "vcard_urls.txt");
+if (fs.existsSync(urlsPath)) {
+  const vcardUrls = fs.readFileSync(urlsPath, "utf8");
+  xml += "\n" + vcardUrls;
+}
 
 xml += "\n</urlset>";
 

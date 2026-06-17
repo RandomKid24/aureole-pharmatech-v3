@@ -80,6 +80,19 @@ folders.forEach(slug => {
         }
     }
 
+    // 2.5. Phone cleanup: strip spaces in the contact object for vcard download
+    const phoneRegex = /(phone:\s*")([^"]+)(")/g;
+    if (phoneRegex.test(html)) {
+        html = html.replace(phoneRegex, (match, p1, p2, p3) => {
+            const strippedPhone = p2.replace(/\s+/g, '');
+            if (p2 !== strippedPhone) {
+                console.log(`   - Stripping spaces from contact phone: ${p2} -> ${strippedPhone}`);
+                needsUpdate = true;
+            }
+            return p1 + strippedPhone + p3;
+        });
+    }
+
     // 3. Save modified HTML
     if (needsUpdate) {
         fs.writeFileSync(indexPath, html);
