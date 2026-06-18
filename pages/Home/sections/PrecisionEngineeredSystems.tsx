@@ -166,7 +166,7 @@ const PrecisionEngineeredSystems: React.FC = () => {
                 >
                   <LazyImage
                     src={product.image}
-                    alt={product.name}
+                    alt={`Aureole ${product.name} - Precision Pharmaceutical Equipment`}
                     className="w-full h-full object-contain transition-all duration-500 group-hover/card:scale-105"
                   />
                 </div>

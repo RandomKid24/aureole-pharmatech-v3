@@ -95,7 +95,7 @@ const IndustriesServed: React.FC = () => {
               <div className="relative h-64 overflow-hidden">
                 <img
                   src={sector.image}
-                  alt={sector.name}
+                  alt={`Aureole environmental machinery serving the ${sector.name} sector`}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-60"></div>

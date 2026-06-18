@@ -44,20 +44,24 @@ const SoftwareFaq: React.FC = () => {
 
                 <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
                     {FAQ_DATA.map((faq, idx) => (
-                        <div key={idx} className="bg-white p-10 border border-slate-100 shadow-sm hover:shadow-md transition-shadow group relative overflow-hidden">
+                        <details
+                            key={idx}
+                            open
+                            className="group bg-white p-10 border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 relative overflow-hidden block list-none [&::-webkit-details-marker]:hidden"
+                        >
                             <div className="absolute -top-4 -right-2 text-8xl font-black text-slate-50 opacity-0 group-hover:opacity-100 transition-opacity select-none pointer-events-none">
                                 {idx + 1}
                             </div>
 
                             <div className="relative z-10 space-y-6">
-                                <div className="flex items-start gap-4">
+                                <summary className="flex items-start gap-4 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden">
                                     <div className="w-8 h-8 rounded-full bg-aureole-blue/5 flex-shrink-0 flex items-center justify-center text-aureole-blue font-black text-[10px]">
                                         Q
                                     </div>
                                     <h3 className="text-[13px] font-black uppercase tracking-wider text-[#001529] leading-snug">
                                         {faq.question}
                                     </h3>
-                                </div>
+                                </summary>
 
                                 <div className="flex items-start gap-4">
                                     <div className="w-8 h-8 rounded-full bg-aureole-cyan/5 flex-shrink-0 flex items-center justify-center text-aureole-cyan font-black text-[10px]">
@@ -68,7 +72,7 @@ const SoftwareFaq: React.FC = () => {
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </details>
                     ))}
                 </div>
             </div>

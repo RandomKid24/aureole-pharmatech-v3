@@ -14,7 +14,7 @@ const ManagingDirectorProfile: React.FC = () => {
                      <div className="aspect-[3/4] transition-all duration-1000 overflow-hidden bg-slate-50 relative">
                         <img
                            src="/about/managing-director.jpg"
-                           alt="Dr. Kiran Badgujar"
+                           alt="Dr. Kiran Badgujar, Managing Director of Aureole PharmaTech"
                            className="w-full h-full object-cover object-top"
                         />
                      </div>
@@ -28,13 +28,16 @@ const ManagingDirectorProfile: React.FC = () => {
                   </div>
                </div>
 
-               {/* Narrative Block */}
-               <div className="lg:col-span-12 xl:col-span-8">
+               {/* Narrative Block with Schema Author Attribution */}
+               <div className="lg:col-span-12 xl:col-span-8" itemScope itemType="https://schema.org/Person">
+                  <meta itemProp="name" content="Dr. Kiran Badgujar" />
+                  <meta itemProp="jobTitle" content="Managing Director" />
+                  <meta itemProp="worksFor" content="Aureole PharmaTech" />
                   <Quote className="w-16 h-16 text-slate-100 mb-6" />
                   <h3 className="text-4xl lg:text-5xl font-black text-[#001529] uppercase tracking-tighter leading-[0.9] mb-8">
                      "We engineer <span className="text-aureole-blue">trust</span> through thermal precision."
                   </h3>
-                  <p className="text-lg text-slate-600 font-medium leading-relaxed mb-8">
+                  <p className="text-lg text-slate-600 font-medium leading-relaxed mb-8" itemProp="disambiguatingDescription">
                      Over the past three decades, Aureole PharmaTech has been driven by a relentless pursuit of engineering excellence. We design and deliver solutions that ensure the pharmaceutical industry’s most sensitive products are tested and stored under absolute environmental equilibrium—where precision, reliability, and control are non-negotiable.
                   </p>
 

@@ -30,12 +30,16 @@ const SEO: React.FC<SEOProps> = ({ title, description, image, article }) => {
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <link rel="canonical" href={seo.url} />
+      <link rel="alternate" hreflang="en" href="https://aureolepharmatech.com" />
+      <link rel="alternate" hreflang="x-default" href="https://aureolepharmatech.com" />
 
       {seo.url && <meta property="og:url" content={seo.url} />}
       {(article ? true : null) && <meta property="og:type" content="article" />}
       {seo.title && <meta property="og:title" content={seo.title} />}
       {seo.description && <meta property="og:description" content={seo.description} />}
       {seo.image && <meta property="og:image" content={seo.image} />}
+      <meta property="og:updated_time" content="2026-06-18T09:40:06+05:30" />
+      <meta property="article:modified_time" content="2026-06-18T09:40:06+05:30" />
 
       <meta name="twitter:card" content="summary_large_image" />
       {seo.title && <meta name="twitter:title" content={seo.title} />}

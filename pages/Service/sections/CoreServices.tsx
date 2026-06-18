@@ -97,18 +97,18 @@ const CoreServices: React.FC = () => {
                                 key={offering.id} 
                                 className="w-[320px] lg:w-full flex flex-col bg-white border-t-4 border-aureole-blue shadow-lg hover:shadow-xl transition-all duration-300 group"
                             >
-                                {/* Column Header */}
-                                <div className="p-8 border-b border-slate-100 bg-slate-50/30 group-hover:bg-white transition-colors h-[340px] flex flex-col shrink-0">
-                                    <div className="w-12 h-12 rounded-lg bg-white border border-slate-100 flex items-center justify-center mb-6 group-hover:border-aureole-cyan transition-all shrink-0">
-                                        <offering.icon className="w-6 h-6 text-aureole-blue group-hover:text-aureole-cyan transition-colors" />
-                                    </div>
-                                    <h3 className="text-xl font-black font-heading text-aureole-slate uppercase leading-tight tracking-tight mb-4 min-h-[5rem]">
-                                        {offering.title}
-                                    </h3>
-                                    <p className="text-xs font-sans font-medium text-slate-500 leading-relaxed">
-                                        {offering.description}
-                                    </p>
-                                </div>
+                                 {/* Column Header - Responsive min-height to prevent overlap when text wraps */}
+                                 <div className="p-8 border-b border-slate-100 bg-slate-50/30 group-hover:bg-white transition-colors min-h-[350px] flex flex-col shrink-0">
+                                     <div className="w-12 h-12 rounded-lg bg-white border border-slate-100 flex items-center justify-center mb-6 group-hover:border-aureole-cyan transition-all shrink-0">
+                                         <offering.icon className="w-6 h-6 text-aureole-blue group-hover:text-aureole-cyan transition-colors" />
+                                     </div>
+                                     <h3 className="text-base lg:text-lg font-black font-heading text-aureole-slate uppercase leading-tight tracking-tight mb-4 min-h-[5rem] shrink-0">
+                                         {offering.title}
+                                     </h3>
+                                     <p className="text-xs font-sans font-medium text-slate-500 leading-relaxed shrink-0">
+                                         {offering.description}
+                                     </p>
+                                 </div>
 
                                 {/* Column Body (Checklist) */}
                                 <div className="p-8 flex-grow">

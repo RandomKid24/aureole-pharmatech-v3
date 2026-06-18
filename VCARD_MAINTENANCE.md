@@ -29,6 +29,10 @@ To make the vCard discoverable and visible to search engines:
 3. Add the new folder name (slug) at the end of the array.
 
 ### Update `vcard_urls.txt`
+
+> [!IMPORTANT]
+> `vcard_urls.txt` in the root directory is a critical file used by your automation scripts to build sitemaps and register links. Do not delete it or move it to a backup directory.
+
 1. Open `vcard_urls.txt` in the root directory.
 2. Add a new `<url>` entry at the end of the file:
    ```xml

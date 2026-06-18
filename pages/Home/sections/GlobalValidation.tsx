@@ -30,7 +30,7 @@ const AnimatedCounter: React.FC<{ end: number; suffix?: string; duration?: numbe
         return () => { anim.kill(); };
     }, [end, suffix, duration]);
 
-    return <span ref={ref}>0{suffix}</span>;
+    return <span ref={ref}>{end}{suffix}</span>;
 };
 
 
@@ -51,7 +51,7 @@ const GlobalValidation: React.FC = () => {
             <div className="w-20 h-10 sm:w-32 sm:h-16 flex-shrink-0 bg-white rounded-sm overflow-hidden p-2 border border-slate-100 group-hover:border-aureole-cyan/30 group-hover:scale-105 transition-all duration-300">
               <LazyImage
                 src={client.logo}
-                alt={client.name}
+                alt={`Logo of ${client.name}, a pharmaceutical partner of Aureole PharmaTech`}
                 className="w-full h-full object-contain transition-opacity"
               />
             </div>

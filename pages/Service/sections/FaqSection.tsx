@@ -1,10 +1,8 @@
 
-import React, { useState } from 'react';
-import { Plus, Minus } from 'lucide-react';
+import React from 'react';
+import { Plus } from 'lucide-react';
 
 const FaqSection: React.FC = () => {
-    const [openFaq, setOpenFaq] = useState<number | null>(null);
-
     const FAQ_DATA = [
         {
             question: "What services does Aureole PharmaTech provide?",
@@ -41,22 +39,26 @@ const FaqSection: React.FC = () => {
                     </h3>
                     <div className="space-y-4">
                         {FAQ_DATA.map((faq, idx) => (
-                            <div key={idx} className="bg-white border border-slate-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                                <button
-                                    onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                                    className="w-full flex items-center justify-between p-7 text-left hover:bg-slate-50 transition-colors"
+                            <details
+                                key={idx}
+                                className="group bg-white border border-slate-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+                            >
+                                <summary
+                                    className="w-full flex items-center justify-between p-7 text-left hover:bg-slate-50 transition-colors cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden"
                                 >
-                                    <span className="text-base font-bold font-heading text-aureole-slate tracking-tight">{faq.question}</span>
-                                    {openFaq === idx ? <Minus className="w-5 h-5 text-aureole-cyan" /> : <Plus className="w-5 h-5 text-aureole-blue" />}
-                                </button>
-                                <div className={`transition-all duration-500 ease-in-out overflow-hidden ${openFaq === idx ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                                    <div className="p-7 pt-0 border-t border-slate-50">
-                                        <p className="text-base font-sans font-medium text-slate-500 tracking-tight leading-relaxed">
-                                            {faq.answer}
-                                        </p>
-                                    </div>
+                                    <span className="text-base font-bold font-heading text-aureole-slate tracking-tight pr-4">
+                                        {faq.question}
+                                    </span>
+                                    <span className="p-1 border border-slate-100 text-aureole-blue group-open:bg-aureole-cyan group-open:text-white group-open:border-aureole-cyan transition-all shrink-0">
+                                        <Plus className="w-4 h-4 transition-transform duration-300 group-open:rotate-45" />
+                                    </span>
+                                </summary>
+                                <div className="p-7 pt-0 border-t border-slate-50 bg-slate-50/20">
+                                    <p className="text-base font-sans font-medium text-slate-500 tracking-tight leading-relaxed">
+                                        {faq.answer}
+                                    </p>
                                 </div>
-                            </div>
+                            </details>
                         ))}
                     </div>
                 </div>

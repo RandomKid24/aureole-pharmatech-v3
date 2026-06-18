@@ -155,6 +155,8 @@ const Footer: React.FC = () => {
                   <span>© {currentYear} <span className="text-white">Aureole Pharmatech Pvt Ltd.</span></span>
                   <span className="hidden md:inline opacity-20">|</span>
                   <span>All Rights Reserved.</span>
+                  <span className="hidden md:inline opacity-20">|</span>
+                  <span>Last Updated: <time dateTime="2026-06-18" className="text-white">June 18, 2026</time></span>
                </div>
 
                <a 

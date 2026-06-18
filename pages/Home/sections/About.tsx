@@ -26,10 +26,10 @@ const About: React.FC = () => {
             </h3>
             <div className="p-8 border-l-[3px] border-aureole-blue/20 bg-white shadow-sm">
               <p className="text-lg lg:text-xl text-slate-700 font-bold leading-relaxed mb-6">
-                When you choose Aureole PharmaTech, you're choosing a partner dedicated to the pursuit of excellence.
+                When you choose Aureole PharmaTech, you're choosing a partner with 1,500+ successful installations across 15+ states and international markets.
               </p>
               <p className="text-[15px] text-slate-500 font-medium leading-relaxed tracking-tight">
-                Our name reflects our promise to deliver pharmaceutical technology and services that are nothing short of exceptional. With us, you'll find the brilliance of innovation and the radiance of excellence in every aspect of our work.
+                For over 28 years, we have delivered custom pharmaceutical technology and services to 70+ verified client entities. Our engineering adheres strictly to GxP compliance, ISO 9001:2015, CE, ZED Gold, and 21 CFR Part 11 electronic records regulations.
               </p>
             </div>
           </div>
@@ -39,7 +39,7 @@ const About: React.FC = () => {
             <div className="relative aspect-video lg:aspect-square overflow-hidden rounded-sm border border-slate-100 shadow-xl">
               <LazyImage
                 src="/about/office-hq-v2.jpg"
-                alt="Radiant Engineering"
+                alt="Aureole PharmaTech Nashik headquarters and office building"
                 className="w-full h-full object-cover transition-all duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-aureole-slate/40 to-transparent"></div>

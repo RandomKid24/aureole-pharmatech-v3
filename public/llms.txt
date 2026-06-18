@@ -1,0 +1,10 @@
+# aureolepharmatech.com
+> Aureole Pharma Tech is a premier pharmaceutical engineering manufacturer of stability chambers, cleanroom equipment, and laboratory furniture with 28+ years of precision standards.
+
+## Key pages
+- [About](https://www.aureolepharmatech.com/about)
+- [Products](https://www.aureolepharmatech.com/products)
+- [Service](https://www.aureolepharmatech.com/service)
+- [Software](https://www.aureolepharmatech.com/software)
+- [Careers](https://www.aureolepharmatech.com/careers)
+- [Contact](https://www.aureolepharmatech.com/#contact)

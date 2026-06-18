@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
       >
         <img
           src="/aureole-logo.png"
-          alt=""
+          alt="Aureole Pharma Tech watermark logo"
           className="w-full h-auto grayscale brightness-0"
         />
       </div>
@@ -53,7 +53,8 @@ const Hero: React.FC = () => {
               </h1>
 
               <p className="text-lg lg:text-xl text-slate-500 font-medium leading-relaxed max-w-xl mb-14 hero-fade-in">
-                Advanced environmental machinery engineered for Pharmaceutical Stability and specialized laboratory instrumentation.
+                <span className="text-aureole-slate font-bold block mb-3 text-base">aureolepharmatech.com is a premier pharmaceutical engineering manufacturer that helps pharmaceutical companies and laboratories achieve precise temperature and humidity control through advanced environmental machinery.</span>
+                Engineered for Pharmaceutical Stability and specialized laboratory instrumentation.
               </p>
 
 
