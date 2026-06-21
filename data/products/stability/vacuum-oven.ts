@@ -21,7 +21,7 @@ export const vacuumOven: ProductDetail = {
         "Printing facility",
         "Extra tray"
     ],
-    image: "/products/StablilityChamber-Standalone/vacuum-oven.png",
+    image: "/Aureole Product 3D/Table Top/New Vacuum Oven.png",
     complexTable: {
         rows: [
             {

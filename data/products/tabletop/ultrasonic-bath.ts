@@ -27,17 +27,17 @@ export const ultrasonicBath: ProductDetail = {
         "Industrial Drain Valve",
         "SS Lid & Basket"
     ],
-    image: "/products/TableTop/ultrasonic-prime.png",
+    image: "/Aureole Product 3D/Table Top/ultrasomic Cleaner M Series.png",
     complexTable: {
         rows: [
             {
                 cells: [
                     { content: "Parameter", isHeader: true },
-                    { content: "Eco Series", isHeader: true, image: "/products/TableTop/eco-series.png" },
-                    { content: "Prime Series", isHeader: true, image: "/products/TableTop/prime-series.png" },
-                    { content: "Advanced Control", isHeader: true, image: "/products/TableTop/prime-series-advance.png" },
-                    { content: "Heating & Shaking", isHeader: true, image: "/products/TableTop/prime-series-shaking.png" },
-                    { content: "Chiller Sonicator", isHeader: true, image: "/products/TableTop/prime-series-chilling.png" }
+                    { content: "Eco Series", isHeader: true, image: "/Aureole Product 3D/Table Top/ultrasomic Cleaner M Series.png" },
+                    { content: "Prime Series", isHeader: true, image: "/Aureole Product 3D/Table Top/ultrasomic Cleaner M Series.png" },
+                    { content: "Advanced Control", isHeader: true, image: "/Aureole Product 3D/Table Top/ultrasomic Cleaner M Series.png" },
+                    { content: "Heating & Shaking", isHeader: true, image: "/Aureole Product 3D/Table Top/Sonicator Shaker Final.png" },
+                    { content: "Chiller Sonicator", isHeader: true, image: "/Aureole Product 3D/Table Top/Chiller Sonicator Bath.png" }
                 ]
             },
             {

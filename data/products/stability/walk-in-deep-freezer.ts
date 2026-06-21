@@ -31,7 +31,13 @@ export const walkInDeepFreezer: ProductDetail = {
         "Door Access System (Biometric)",
         "Extra Trays"
     ],
-    image: "/products/StablilityChamber-Standalone/walk-in-deep-freezer.png",
+    image: "/Aureole Product 3D/Front Angle/Walk in Deep Freezerr Final Front.png",
+    images: [
+        "/Aureole Product 3D/Front Angle/Walk in Deep Freezerr Final Front.png",
+        "/Aureole Product 3D/Left Angle/Walk in Deep Freezerr Final Left.png",
+        "/Aureole Product 3D/Right Angle/Walk in Deep Freezerr Final Right.png"
+    ],
+    imageCaptions: ["Front View", "Left View", "Right View"],
     complexTable: {
         rows: [
             {

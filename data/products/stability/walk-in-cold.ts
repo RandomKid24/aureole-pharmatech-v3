@@ -26,7 +26,13 @@ export const walkInColdChamber: ProductDetail = {
         "Door Access System (Biometric)",
         "Extra Trays"
     ],
-    image: "/products/StablilityChamber-Standalone/walk-in-cold-chamber.png",
+    image: "/Aureole Product 3D/Front Angle/Walk in Cold Chamber Final 4 Front.png",
+    images: [
+        "/Aureole Product 3D/Front Angle/Walk in Cold Chamber Final 4 Front.png",
+        "/Aureole Product 3D/Left Angle/Walk in Cold Chamber Final 4 Left.png",
+        "/Aureole Product 3D/Right Angle/Walk in Cold Chamber Final Right.png"
+    ],
+    imageCaptions: ["Front View", "Left View", "Right View"],
     complexTable: {
         rows: [
             {

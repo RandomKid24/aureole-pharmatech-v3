@@ -25,7 +25,13 @@ export const stabilityChamber: ProductDetail = {
         "Door Access System (Numeric/Biometric)",
         "Extra Trays"
     ],
-    image: "/products/StablilityChamber-Standalone/stability-chamber.png",
+    image: "/Aureole Product 3D/Front Angle/Humidity Chamberr Front Angle.png",
+    images: [
+        "/Aureole Product 3D/Front Angle/Humidity Chamberr Front Angle.png",
+        "/Aureole Product 3D/Left Angle/Humidity Chamber Left Angle.png",
+        "/Aureole Product 3D/Right Angle/Humidity Chamberr Right Angle.png"
+    ],
+    imageCaptions: ["Front View", "Left View", "Right View"],
     complexTable: {
         rows: [
             {

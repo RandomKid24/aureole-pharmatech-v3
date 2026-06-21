@@ -25,14 +25,14 @@ export const waterBath: ProductDetail = {
         "Precision Ceramic Insulation",
         "Industrial Grade Drain Valve"
     ],
-    image: "/products/TableTop/constant-water-bath.png",
+    image: "/Aureole Product 3D/Table Top/Water Bath Final.png",
     complexTable: {
         rows: [
             {
                 cells: [
                     { content: "Feature", isHeader: true },
-                    { content: "Constant Water Bath", isHeader: true, image: "/products/TableTop/constant-water-bath.png" },
-                    { content: "Circulating Water Bath", isHeader: true, image: "/products/TableTop/circulating-water-bath.png" }
+                    { content: "Constant Water Bath", isHeader: true, image: "/Aureole Product 3D/Table Top/Water Bath Final.png" },
+                    { content: "Circulating Water Bath", isHeader: true, image: "/Aureole Product 3D/Table Top/Chiller Circulator Bath.png" }
                 ]
             },
             {

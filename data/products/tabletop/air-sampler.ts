@@ -2,7 +2,7 @@ import { ProductDetail } from '../types';
 
 export const airSampler: ProductDetail = {
     description: "Aureole Pharma Tech Air Samplers provide high-performance microbial monitoring for critical environments. Built on a unified industrial-grade hardware platform, they are available in both Basic and 21 CFR Part 11 compliant versions to meet diverse regulatory needs. Both models share the same high-precision sampling engine while offering different levels of data governance.",
-    image: "/products/AirSampler/air-sampler-basic-3.png",
+    image: "/Aureole Product 3D/Table Top/Air Sampaler.png",
     keyFeaturesHeading: "",
     keyFeatures: [],
     specifications: [

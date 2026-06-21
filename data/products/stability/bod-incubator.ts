@@ -23,7 +23,13 @@ export const bodIncubator: ProductDetail = {
         "Door Access System (Numeric/Biometric)",
         "Extra Trays"
     ],
-    image: "/products/StablilityChamber-Standalone/BODINCUBATOR.png",
+    image: "/Aureole Product 3D/Front Angle/BOD Chamber Front.png",
+    images: [
+        "/Aureole Product 3D/Front Angle/BOD Chamber Front.png",
+        "/Aureole Product 3D/Left Angle/BOD Chamber Side Left.png",
+        "/Aureole Product 3D/Right Angle/BOD Chamber Side Right.png"
+    ],
+    imageCaptions: ["Front View", "Left View", "Right View"],
     complexTable: {
         rows: [
             {
