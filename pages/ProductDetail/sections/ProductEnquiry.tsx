@@ -186,8 +186,8 @@ const ProductEnquiry: React.FC = () => {
                                 </div>
                                 <div>
                                     <p className="text-slate-400 text-[10px] font-black tracking-widest mb-0.5">Email Us</p>
-                                    <a href="mailto:info@aureolepharmatech.com" className="text-slate-900 text-[13px] font-bold tracking-wide hover:text-aureole-blue transition-colors">
-                                        info@aureolepharmatech.com
+                                    <a href="mailto:enquiry@aureolepharmatech.com" className="text-slate-900 text-[13px] font-bold tracking-wide hover:text-aureole-blue transition-colors">
+                                        enquiry@aureolepharmatech.com
                                     </a>
                                 </div>
                             </div>
@@ -197,8 +197,8 @@ const ProductEnquiry: React.FC = () => {
                                 </div>
                                 <div>
                                     <p className="text-slate-400 text-[10px] font-black tracking-widest mb-0.5">Call Us</p>
-                                    <a href="tel:+912532381234" className="text-slate-900 text-[13px] font-bold tracking-wide hover:text-aureole-blue transition-colors">
-                                        +91 253 2381234
+                                    <a href="tel:+918600522240" className="text-slate-900 text-[13px] font-bold tracking-wide hover:text-aureole-blue transition-colors">
+                                        +91 86005 22240
                                     </a>
                                 </div>
                             </div>
