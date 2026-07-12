@@ -10,7 +10,9 @@ Aureole Pharma Tech is a premier pharmaceutical engineering manufacturer special
 - **Established Experience**: 28+ years of precision standards in pharmaceutical engineering.
 - **Managing Director**: Dr. Kiran Badgujar
 - **Mission**: To engineer trust through thermal and environmental precision, ensuring sensitive pharmaceutical products are tested and stored under absolute environmental equilibrium.
-- **Headquarters Address**: Shop No.6005, 6th Floor, SSRF, beside City Center Mall Road, Lavate Nagar, Parijat Nagar, Nashik, Maharashtra, 422002, India.
+- **Office Locations**:
+  - **Thane Head Office**: Unit No - 103, 1st Floor, Centura Square, Wagale Industrial Estate, Thane.
+  - **Nashik Corporate Office**: Office No. 6004, Satyanarayan Mall, Near City Centre Mall, Lawate Nagar, Nashik.
 - **Support Contact**: Phone: +91 86005 22240 | Email: enquiry@aureolepharmatech.com
 
 ### Core Brand Values (A.U.R.E.O.L.E)

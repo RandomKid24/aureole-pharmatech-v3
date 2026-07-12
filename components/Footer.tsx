@@ -114,36 +114,65 @@ const Footer: React.FC = () => {
                </div>
 
                <div>
-                  <h4 className="text-xs font-black uppercase tracking-[0.2em] mb-8 text-aureole-accent">Headquarters</h4>
-                  <div className="space-y-4 relative z-10">
-                     <div className="flex gap-4">
-                        <MapPin className="w-4 h-4 text-blue-100/70 shrink-0 mt-0.5" />
-                        <a
-                           href="https://maps.app.goo.gl/13F9dNfLBFyLYXC78"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           className="text-blue-50/90 font-bold tracking-[0.1em] text-xs leading-relaxed hover:text-white transition-colors"
-                        >
-                           Shop No.6005 , 6th Floor , SSRF, beside City Center Mall Road, Lavate Nager, Parijat Nagar, Nasik, Nashik, Maharashtra 422002
-                        </a>
+                  <h4 className="text-xs font-black uppercase tracking-[0.2em] mb-8 text-aureole-accent">Corporate Offices</h4>
+                  <div className="space-y-6 relative z-10 text-blue-50/90 font-bold tracking-[0.1em] text-xs leading-relaxed">
+                     
+                     {/* Thane Head Office */}
+                     <div className="space-y-1.5">
+                        <div className="text-[10px] font-black uppercase tracking-widest text-white flex items-center gap-2">
+                           <span className="w-1.5 h-1.5 rounded-full bg-aureole-accent"></span> Thane Head Office
+                        </div>
+                        <div className="flex gap-3">
+                           <MapPin className="w-4 h-4 text-blue-100/70 shrink-0 mt-0.5" />
+                           <a
+                              href="https://maps.google.com/?q=Unit+No+-+103,+1st+Floor,+Centura+Square,+Wagale+Industrial+Estate,+Thane"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:text-white transition-colors"
+                           >
+                              Unit No - 103, 1st Floor, Centura Square, Wagale Industrial Estate, Thane.
+                           </a>
+                        </div>
                      </div>
-                     <div className="flex gap-4">
-                        <Mail className="w-4 h-4 text-blue-100/70 shrink-0 mt-0.5" />
-                        <a
-                           href="mailto:enquiry@aureolepharmatech.com"
-                           className="text-blue-50/90 font-bold tracking-[0.1em] text-xs hover:text-white transition-colors"
-                        >
-                           enquiry@aureolepharmatech.com
-                        </a>
+
+                     {/* Nashik Corporate Office */}
+                     <div className="space-y-1.5">
+                        <div className="text-[10px] font-black uppercase tracking-widest text-white flex items-center gap-2">
+                           <span className="w-1.5 h-1.5 rounded-full bg-aureole-accent"></span> Nashik Corporate Office
+                        </div>
+                        <div className="flex gap-3">
+                           <MapPin className="w-4 h-4 text-blue-100/70 shrink-0 mt-0.5" />
+                           <a
+                              href="https://maps.google.com/?q=Office+No.+6004,+Satyanarayan+Mall,+Near+City+Centre+Mall,+Lawate+Nagar,+Nashik"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:text-white transition-colors"
+                           >
+                              Office No. 6004, Satyanarayan Mall, Near City Centre Mall, Lawate Nagar, Nashik.
+                           </a>
+                        </div>
                      </div>
-                     <div className="flex gap-4">
-                        <Phone className="w-4 h-4 text-blue-100/70 shrink-0 mt-0.5" />
-                        <a
-                           href="tel:+918600522240"
-                           className="text-lg font-bold tracking-tighter text-white hover:text-aureole-accent transition-colors"
-                        >
-                           +91 86005 22240
-                        </a>
+
+                     {/* Email and Phone */}
+                     <div className="pt-4 border-t border-white/5 space-y-3">
+                        <div className="flex gap-3">
+                           <Mail className="w-4 h-4 text-blue-100/70 shrink-0 mt-0.5" />
+                           <a
+                              href="mailto:enquiry@aureolepharmatech.com"
+                              className="hover:text-white transition-colors"
+                           >
+                              enquiry@aureolepharmatech.com
+                           </a>
+                        </div>
+                        <div className="flex gap-3">
+                           <Phone className="w-4 h-4 text-blue-100/70 shrink-0 mt-0.5" />
+                           <a
+                              href="tel:+918600522240"
+                              className="text-lg font-bold tracking-tighter text-white hover:text-aureole-accent transition-colors"
+                           >
+                              +91 86005 22240
+                           </a>
+                        </div>
                      </div>
                   </div>
                </div>
@@ -155,19 +184,7 @@ const Footer: React.FC = () => {
                   <span>© {currentYear} <span className="text-white">Aureole Pharmatech Pvt Ltd.</span></span>
                   <span className="hidden md:inline opacity-20">|</span>
                   <span>All Rights Reserved.</span>
-                  <span className="hidden md:inline opacity-20">|</span>
-                  <span>Last Updated: <time dateTime="2026-06-18" className="text-white">June 18, 2026</time></span>
                </div>
-
-               <a 
-                  href="https://www.beforth.in/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-4 hover:text-white transition-all"
-               >
-                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-100/60 group-hover:text-blue-50/90">Forged by</span>
-                  <span className="font-bebas text-[1.5rem] uppercase leading-none text-transparent [-webkit-text-stroke:1px_#ffffff] hover:[-webkit-text-stroke:1px_#e8c14a] transition-all cursor-pointer tracking-[0.05em] pt-1">BEFORTH</span>
-               </a>
             </div>
          </div>
       </footer>

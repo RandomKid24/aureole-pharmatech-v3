@@ -14,16 +14,6 @@ const CopyrightBar: React.FC = () => {
                         <span className="hidden sm:inline opacity-20">|</span>
                         <span>All Rights Reserved.</span>
                     </p>
-                    
-                    <a 
-                        href="https://www.beforth.in/" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="group flex items-center gap-3 hover:text-white transition-all h-8"
-                    >
-                        <span className="text-slate-500 group-hover:text-slate-400">Forged by</span>
-                        <span className="font-bebas text-[1.2rem] uppercase leading-none text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.6)] hover:[-webkit-text-stroke:1px_#e8c14a] transition-all cursor-pointer tracking-[0.05em] pt-0.5">BEFORTH</span>
-                    </a>
                 </div>
             </div>
         </div>
