@@ -6,7 +6,6 @@ import ManagingDirectorProfile from './Home/sections/ManagingDirectorProfile';
 import PrecisionEngineeredSystems from './Home/sections/PrecisionEngineeredSystems';
 import IndustriesServed from './Home/sections/IndustriesServed';
 import GlobalValidation from './Home/sections/GlobalValidation';
-import HomeFaq from './Home/sections/HomeFaq';
 import OurUnitsContact from './Home/sections/OurUnitsContact';
 import ScrollToTop from '../components/ScrollToTop';
 
@@ -57,7 +56,6 @@ const Home: React.FC = () => {
             <PrecisionEngineeredSystems />
             <IndustriesServed />
             <GlobalValidation />
-            <HomeFaq />
             <OurUnitsContact />
             <ScrollToTop />
         </main>
