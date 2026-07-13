@@ -39,7 +39,6 @@ const TeamArchitecture: React.FC = () => {
 
     const regionalTeams = [
         { name: "Mr Rohan Gujrathi", role: "Regional Sales Head - West (GJ)", vcard: "/vcards/rohan-gujarathi" },
-        { name: "Mr Vikrant Deshpande", role: "Regional Sales Head - North", vcard: "/vcards/vikrant-deshpande" },
         { name: "Mr Dnyaneshwar Gaikwad", role: "Regional Sales Head - South", vcard: "/vcards/dnyaneshwar-gaikwad" },
         { name: "Mr. Yash Gujarathi", role: "Regional Sales Head - West (GJ)", vcard: "/vcards/yash-gujarathi" }
     ];
@@ -204,18 +203,18 @@ const TeamArchitecture: React.FC = () => {
                                     </div>
 
                                     {/* Level 3: Regional & Operational Leadership */}
-                                    <div className="relative pt-12">
+                                    <div className="relative max-w-6xl mx-auto pt-12">
                                         {/* Connector from Level 2 */}
                                         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-12 bg-slate-200 hidden lg:block"></div>
 
                                         {/* Horizontal Distribution Line */}
-                                        <div className="absolute top-12 left-12 right-12 h-px bg-slate-200 hidden lg:block"></div>
+                                        <div className="absolute top-12 left-[calc(16.67%-8px)] right-[calc(16.67%-8px)] h-px bg-slate-200 hidden lg:block"></div>
 
                                         <div className="text-center mb-12 relative z-10 bg-white inline-block px-4 mx-auto left-0 right-0 lg:absolute lg:top-8 lg:-translate-y-1/2">
                                             <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 bg-white px-2">Regional & Operational Leadership</span>
                                         </div>
 
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10 pt-8 lg:pt-16">
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10 pt-8 lg:pt-16">
                                             {regionalTeams.map((member, idx) => (
                                                 <div key={idx} className="group bg-white border border-slate-100 p-6 hover:border-aureole-blue/30 hover:shadow-lg transition-all duration-500 relative flex flex-col items-center text-center">
                                                     {/* Top Connector */}

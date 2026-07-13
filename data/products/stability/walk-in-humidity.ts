@@ -20,7 +20,7 @@ export const walkInHumidityChamber: ProductDetail = {
         "Master & stand by refrigeration/ humidity system",
         "Split type refrigeration system",
         "Scanner : 8 pt. temperature & humidity sensor",
-        "7\" Touch Screen HMI"
+        "Touch Screen HMI"
     ],
     addOnsAttributes: [
         "21 CFR part 11 Compliance",

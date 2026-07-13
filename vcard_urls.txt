@@ -155,6 +155,9 @@
     <loc>https://www.aureolepharmatech.com/vcards/sanjay-bhosle/</loc>
   </url>
   <url>
+    <loc>https://www.aureolepharmatech.com/vcards/sanket-jagtap/</loc>
+  </url>
+  <url>
     <loc>https://www.aureolepharmatech.com/vcards/shalaka-nargolkar/</loc>
   </url>
   <url>
@@ -189,9 +192,6 @@
   </url>
   <url>
     <loc>https://www.aureolepharmatech.com/vcards/vikas-patole/</loc>
-  </url>
-  <url>
-    <loc>https://www.aureolepharmatech.com/vcards/vikrant-deshpande/</loc>
   </url>
   <url>
     <loc>https://www.aureolepharmatech.com/vcards/vikrant-shewale/</loc>
