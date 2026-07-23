@@ -4,7 +4,7 @@ export const hotAirOven: ProductDetail = {
     description: "Aureole Pharma Tech hot air oven offers a controlled heating environment that is ideal for processes such as curing, drying, and conducting high-temperature tests. It delivers exceptional accuracy and superior quality in maintaining the required temperature conditions for these applications.",
     keyFeatures: [],
     specifications: [
-        { parameter: "Temperature Range", details: "20°C to 60°C" },
+        { parameter: "Temperature Range", details: "10°C above ambient to 250°C" },
         { parameter: "Accuracy", details: "± 1°C" },
         { parameter: "Uniformity", details: "± 5°C" }
     ],

@@ -21,8 +21,7 @@ export const walkInDeepFreezer: ProductDetail = {
         "Master & stand by refrigeration system",
         "Split type refrigeration system",
         "Racks with trays",
-        "Person trap alarm",
-        "7\" Touch Screen HMI"
+        "Person trap alarm"
     ],
     addOnsAttributes: [
         "21 CFR part 11 Compliance",

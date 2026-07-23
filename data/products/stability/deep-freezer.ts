@@ -11,8 +11,7 @@ export const deepFreezer: ProductDetail = {
     models: [],
     regularAttributes: [
         "Master & stand by sensor",
-        "SS Door with gasket",
-        "Heavy Duty refrigeration system"
+        "SS Door with gasket"
     ],
     addOnsAttributes: [
         "21 CFR part 11 Compliance",

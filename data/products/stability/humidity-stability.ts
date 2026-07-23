@@ -5,8 +5,8 @@ export const humidityStabilityChamber: ProductDetail = {
     keyFeatures: [],
     specifications: [
         { parameter: "Temperature Range", details: "20°C to 60°C" },
-        { parameter: "Humidity Range", details: "40% to 85% RH" },
-        { parameter: "Accuracy", details: "± 0.2°C / ± 2.0% RH" },
+        { parameter: "Humidity Range", details: "40% to 95% RH" },
+        { parameter: "Accuracy", details: "± 0.3°C / ± 2.0% RH" },
         { parameter: "Uniformity", details: "± 1.0°C / ± 3.0% RH" },
         { parameter: "Test Suitable for", details: "25°C & 60% RH, 30°C & 65% RH, 40°C & 75% RH, 30°C & 75% RH" },
         { parameter: "Also available with low conditions", details: "25°C & 40% RH, 40°C & 25% RH, 30°C & 35% RH" }
@@ -39,59 +39,94 @@ export const humidityStabilityChamber: ProductDetail = {
             {
                 cells: [
                     { content: "Model", rowSpan: 2, isHeader: true },
-                    { content: "Capacity\n(In Liters)", rowSpan: 2, isHeader: true },
-                    { content: "Tray", colSpan: 2, isHeader: true },
-                    { content: "Inner Dimension\n(W x D x H) mm", rowSpan: 2, isHeader: true },
-                    { content: "Outer Dimension\n(W x D x H) mm", rowSpan: 2, isHeader: true }
+                    { content: "Capacity\nIn Liters", rowSpan: 2, isHeader: true },
+                    { content: "Interior Dimension in MM", colSpan: 3, isHeader: true },
+                    { content: "Exterior Dimension in MM", colSpan: 3, isHeader: true },
+                    { content: "No of Trays", rowSpan: 2, isHeader: true },
+                    { content: "Power Supply", rowSpan: 2, isHeader: true }
                 ]
             },
             {
                 cells: [
-                    { content: "Quantity", isHeader: true },
-                    { content: "Dimension", isHeader: true }
+                    { content: "Width", isHeader: true },
+                    { content: "Depth", isHeader: true },
+                    { content: "Height", isHeader: true },
+                    { content: "Width", isHeader: true },
+                    { content: "Depth", isHeader: true },
+                    { content: "Height", isHeader: true }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_HC-2.0_V**" },
                     { content: "200", align: 'center' },
+                    { content: "660", align: 'center' },
+                    { content: "450", align: 'center' },
+                    { content: "700", align: 'center' },
+                    { content: "785", align: 'center' },
+                    { content: "780", align: 'center' },
+                    { content: "1350", align: 'center' },
                     { content: "2", align: 'center' },
-                    { content: "570 x 450 x 30", align: 'center' },
-                    { content: "660 x 450 x 700", align: 'center' },
-                    { content: "785 x 1130 x 1360", align: 'center' }
+                    { content: "Single Phase 230 V", align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_HC-4.0_V**" },
                     { content: "400", align: 'center' },
+                    { content: "700", align: 'center' },
+                    { content: "650", align: 'center' },
+                    { content: "900", align: 'center' },
+                    { content: "825", align: 'center' },
+                    { content: "985", align: 'center' },
+                    { content: "1725", align: 'center' },
                     { content: "3", align: 'center' },
-                    { content: "610 x 650 x 30", align: 'center' },
-                    { content: "700 x 650 x 900", align: 'center' },
-                    { content: "825 x 1330 x 1560", align: 'center' }
+                    { content: "Single Phase 230 V", align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_HC-6.0_V**" },
                     { content: "600", align: 'center' },
+                    { content: "750", align: 'center' },
+                    { content: "750", align: 'center' },
+                    { content: "1075", align: 'center' },
+                    { content: "875", align: 'center' },
+                    { content: "1085", align: 'center' },
+                    { content: "2075", align: 'center' },
                     { content: "3", align: 'center' },
-                    { content: "660 x 750 x 30", align: 'center' },
-                    { content: "750 x 750 x 1075", align: 'center' },
-                    { content: "875 x 1430 x 1735", align: 'center' }
+                    { content: "Single Phase 230 V", align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_HC-8.0_V**" },
                     { content: "800", align: 'center' },
+                    { content: "750", align: 'center' },
+                    { content: "750", align: 'center' },
+                    { content: "1425", align: 'center' },
+                    { content: "875", align: 'center' },
+                    { content: "1085", align: 'center' },
+                    { content: "2075", align: 'center' },
                     { content: "4", align: 'center' },
-                    { content: "660 x 750 x 30", align: 'center' },
-                    { content: "750 x 750 x 1425", align: 'center' },
-                    { content: "875 x 1480 x 2085", align: 'center' }
+                    { content: "Single Phase 230 V", align: 'center' }
+                ]
+            },
+            {
+                cells: [
+                    { content: "AP_SA_HC-1.0K_V**" },
+                    { content: "1000", align: 'center' },
+                    { content: "850", align: 'center' },
+                    { content: "750", align: 'center' },
+                    { content: "1575", align: 'center' },
+                    { content: "975", align: 'center' },
+                    { content: "1085", align: 'center' },
+                    { content: "2225", align: 'center' },
+                    { content: "4", align: 'center' },
+                    { content: "Single Phase 230 V", align: 'center' }
                 ]
             }
         ],
-        remark: "• Power Supply: Single Phase 230 V. Above are standard sizes and we can offer other (customised) sizes also V** = variant based upon construction & body."
+        remark: "Above are standard sizes and we can offer other (customised) sizes also V** = variant based upon construction of body"
     }
 };

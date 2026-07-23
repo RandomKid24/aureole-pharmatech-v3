@@ -5,8 +5,8 @@ export const photostabilityChamber: ProductDetail = {
     keyFeatures: [],
     specifications: [
         { parameter: "Temperature Range", details: "20°C to 50°C" },
-        { parameter: "Accuracy", details: "± 0.2°C" },
-        { parameter: "Uniformity", details: "± 1°C" }
+        { parameter: "Accuracy", details: "± 0.5°C" },
+        { parameter: "Uniformity", details: "± 2.0°C" }
     ],
     models: [],
     regularAttributes: [

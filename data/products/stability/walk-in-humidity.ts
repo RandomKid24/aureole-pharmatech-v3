@@ -4,8 +4,8 @@ export const walkInHumidityChamber: ProductDetail = {
     description: "Aureole Pharma Tech's walk-in humidity chambers are meticulously crafted with the purpose of creating controlled environments for studying and assessing the impacts of different environmental factors such as humidity and temperature. These test chambers find applications in a wide range of fields, including microbiology, plant studies, tissue research, electronic component testing, and various customized industrial and research endeavors. Our humidity test chambers are utilized in R&D laboratories, research projects, and product testing facilities. They serve a multitude of purposes, including tissue culture, enzyme reaction studies, growth observation, fermentation analysis, and other specialized applications in laboratories.\n\nWe specialize in manufacturing both standard and customized humidity test cabinets, tailored to meet the unique and demanding requirements of individual scientists and specialized research projects. Aureole Pharma Tech's walk-in humidity test chambers are versatile and reliable tools for controlling environmental conditions and conducting a wide range of scientific studies and experiments. Their adherence to quality standards, customization options, and cost-effectiveness make them a preferred choice for researchers and scientists across different fields and industries.",
     specifications: [
         { parameter: "Temperature Range", details: "20°C to 60°C" },
-        { parameter: "Humidity Range", details: "40% to 85% RH" },
-        { parameter: "Accuracy", details: "± 0.2°C / ± 2.0% RH" },
+        { parameter: "Humidity Range", details: "40%RH to 95% RH" },
+        { parameter: "Accuracy", details: "± 0.3°C / ± 2.0% RH" },
         { parameter: "Uniformity", details: "± 1.0°C / ± 3.0% RH" },
         { parameter: "Test Suitable for", details: "25°C & 60% RH, 30°C & 65% RH, 40°C & 75% RH, 30°C & 75% RH" },
         { parameter: "Also available with low conditions", details: "25°C & 40% RH, 40°C & 25% RH, 30°C & 35% RH" }
@@ -19,8 +19,7 @@ export const walkInHumidityChamber: ProductDetail = {
         "Low water indication",
         "Master & stand by refrigeration/ humidity system",
         "Split type refrigeration system",
-        "Scanner : 8 pt. temperature & humidity sensor",
-        "Touch Screen HMI"
+        "Scanner : 8 pt. temperature & humidity sensor"
     ],
     addOnsAttributes: [
         "21 CFR part 11 Compliance",
@@ -107,7 +106,7 @@ export const walkInHumidityChamber: ProductDetail = {
                 cells: [
                     { content: "AP_WC_HC-20.0K_V**" },
                     { content: "20000", align: 'center' },
-                    { content: "56", align: 'center' },
+                    { content: "60", align: 'center' },
                     { content: "-", align: 'center' },
                     { content: "2000 x 4000 x 2500", align: 'center' },
                     { content: "2160 x 4160 x 2660", align: 'center' }
@@ -117,7 +116,7 @@ export const walkInHumidityChamber: ProductDetail = {
                 cells: [
                     { content: "AP_WC_HC-30.0K_V**" },
                     { content: "30000", align: 'center' },
-                    { content: "98", align: 'center' },
+                    { content: "84", align: 'center' },
                     { content: "-", align: 'center' },
                     { content: "2500 x 4800 x 2500", align: 'center' },
                     { content: "2660 x 4960 x 2660", align: 'center' }
@@ -127,7 +126,7 @@ export const walkInHumidityChamber: ProductDetail = {
                 cells: [
                     { content: "AP_WC_HC-40.0K_V**" },
                     { content: "40000", align: 'center' },
-                    { content: "98", align: 'center' },
+                    { content: "108", align: 'center' },
                     { content: "-", align: 'center' },
                     { content: "4000 x 4000 x 2500", align: 'center' },
                     { content: "4160 x 4160 x 2600", align: 'center' }
@@ -137,7 +136,7 @@ export const walkInHumidityChamber: ProductDetail = {
                 cells: [
                     { content: "AP_WC_HC-50.0K_V**" },
                     { content: "50000", align: 'center' },
-                    { content: "154", align: 'center' },
+                    { content: "144", align: 'center' },
                     { content: "-", align: 'center' },
                     { content: "4000 x 5000 x 2500", align: 'center' },
                     { content: "4160 x 5160 x 2660", align: 'center' }

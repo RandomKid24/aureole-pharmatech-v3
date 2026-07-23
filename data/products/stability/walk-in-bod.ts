@@ -16,7 +16,6 @@ export const walkInBodIncubator: ProductDetail = {
         "Master & stand by refrigeration system",
         "Split type refrigeration system",
         "Person trap alarm",
-        "7\" Touch Screen HMI",
         "Racks with trays"
     ],
     addOnsAttributes: [

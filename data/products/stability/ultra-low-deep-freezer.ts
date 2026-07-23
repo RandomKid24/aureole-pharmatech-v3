@@ -5,14 +5,13 @@ export const ultraLowDeepFreezer: ProductDetail = {
     keyFeatures: [],
     specifications: [
         { parameter: "Temperature Range", details: "Up to -80°C" },
-        { parameter: "Accuracy", details: "± 3°C" },
-        { parameter: "Uniformity", details: "± 5°C" }
+        { parameter: "Accuracy", details: "± 0.5°C" },
+        { parameter: "Uniformity", details: "± 10°C" }
     ],
     models: [],
     regularAttributes: [
         "Master & stand by sensor",
-        "SS Door with gasket",
-        "Heavy Duty refrigeration system"
+        "SS Door with gasket"
     ],
     addOnsAttributes: [
         "21 CFR part 11 Compliance",

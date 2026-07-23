@@ -7,7 +7,7 @@ export const airSampler: ProductDetail = {
     keyFeatures: [],
     specifications: [
         { parameter: "Display", details: "4.3\" TFT LCD (272 x 480) Touch" },
-        { parameter: "Flow Rate", details: "Available in 25, 50, 100, 200 LPM" },
+        { parameter: "Flow Rate", details: "100 & 180 LPM" },
         { parameter: "Weight", details: "2.7 kg" },
         { parameter: "Communication", details: "Wi-Fi Guided Transfer" },
         { parameter: "Battery Life", details: "10 Hours Active Sampling (LiFePO4)" }
@@ -39,49 +39,49 @@ export const airSampler: ProductDetail = {
             {
                 cells: [
                     { content: "Location" },
-                    { content: "1000 locations" }
+                    { content: "10000 locations" }
                 ]
             },
             {
                 cells: [
                     { content: "Sample Recipes" },
-                    { content: "1000 recipes" }
+                    { content: "10000 recipes" }
                 ]
             },
             {
                 cells: [
                     { content: "Sampling Delay" },
-                    { content: "0 to 300 seconds" }
+                    { content: "0 to 1800 seconds" }
                 ]
             },
             {
                 cells: [
                     { content: "Delay Between Runs" },
-                    { content: "0 to 600 seconds" }
+                    { content: "0 to 1800 seconds" }
                 ]
             },
             {
                 cells: [
                     { content: "Group Configurations" },
-                    { content: "100 groups" }
+                    { content: "1000 groups" }
                 ]
             },
             {
                 cells: [
                     { content: "Users Configurations" },
-                    { content: "1000 users" }
+                    { content: "5000 users" }
                 ]
             },
             {
                 cells: [
                     { content: "Remarks Configurations" },
-                    { content: "1000 marks" }
+                    { content: "10000 remarks" }
                 ]
             },
             {
                 cells: [
                     { content: "Sample Data Records" },
-                    { content: "100000 to 500000 records" }
+                    { content: "100000 records" }
                 ]
             },
             {

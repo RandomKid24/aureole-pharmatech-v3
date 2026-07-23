@@ -5,8 +5,8 @@ export const stabilityChamber: ProductDetail = {
     keyFeatures: [],
     specifications: [
         { parameter: "Temperature Range", details: "20°C to 60°C" },
-        { parameter: "Humidity Range", details: "40% to 85% RH" },
-        { parameter: "Accuracy", details: "± 0.2°C / ± 2.0% RH" },
+        { parameter: "Humidity Range", details: "40% to 95% RH" },
+        { parameter: "Accuracy", details: "± 0.3°C / ± 2.0% RH" },
         { parameter: "Uniformity", details: "± 1.0°C / ± 3.0% RH" }
     ],
     models: [],
