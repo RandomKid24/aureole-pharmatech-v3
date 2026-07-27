@@ -19,7 +19,7 @@ export const PRODUCT_CATALOG: Category[] = [
                     "Pharma Refrigerator / Dual Zone Chamber",
                     "Hot Air Oven",
                     "Vacuum Oven",
-                    "Muffle Furnace"
+                    "Muffle Furnance"
                 ]
             },
             {

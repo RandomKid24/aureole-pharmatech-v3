@@ -50,7 +50,7 @@ Aureole Pharma Tech is a premier pharmaceutical engineering manufacturer special
 - **Ultra Low Deep Freezer**: Ultra-low temperature storage for biological samples and vaccines.
   - *Temperature Range*: Up to -80°C
   - *Control System*: PLC Based
-- **Muffle Furnace**: Designed for high-temperature material testing.
+- **Muffle Furnance**: Designed for high-temperature material testing.
   - *Temperature Range*: Up to 1150°C
   - *Control Accuracy*: ± 5°C
 

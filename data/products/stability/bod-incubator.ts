@@ -5,8 +5,8 @@ export const bodIncubator: ProductDetail = {
     keyFeatures: [],
     specifications: [
         { parameter: "Temperature Range", details: "10°C to 60°C" },
-        { parameter: "Accuracy", details: "± 0.2°C" },
-        { parameter: "Uniformity", details: "± 1.0°C" },
+        { parameter: "Accuracy", details: "± 0.5°C" },
+        { parameter: "Uniformity", details: "± 2.5°C" },
         { parameter: "Power Supply", details: "Single Phase, 230V 50Hz" }
     ],
     models: [],

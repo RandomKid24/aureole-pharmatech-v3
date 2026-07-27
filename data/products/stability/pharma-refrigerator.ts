@@ -14,7 +14,7 @@ export const pharmaRefrigerator: ProductDetail = {
     models: [],
     regularAttributes: [
         "Master & stand by sensor",
-        "SS Door with gasket",
+        "SS Door with gasket for Cold Chamber",
         "Heavy Duty refrigeration system",
         "Inner outer door with proof silicon"
     ],

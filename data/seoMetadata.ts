@@ -43,9 +43,9 @@ export const PRODUCT_SEO_DATA: Record<string, { title: string; description: stri
         title: "Vacuum Oven Manufacturer and Supplier in India, Aureole Pharma Tech",
         description: "Aureole Pharma Tech Manufacturers, Suppliers of Vacuum Oven in Nashik, Maharashtra, Best Quality & Price Pharmaceutical Equipment In India, Call: +91 86005 22240"
     },
-    "Muffle Furnace": {
-        title: "Muffle Furnace Manufacturer and Supplier in India | Aureole Pharma Tech",
-        description: "Aureole Pharma Tech Manufacturers of high-temperature Muffle Furnaces. Best quality pharmaceutical equipment supplied across India. Call: +91 86005 22240"
+    "Muffle Furnance": {
+        title: "Muffle Furnance Manufacturer and Supplier in India | Aureole Pharma Tech",
+        description: "Aureole Pharma Tech Manufacturers of high-temperature Muffle Furnances. Best quality pharmaceutical equipment supplied across India. Call: +91 86005 22240"
     },
     "Walk In Humidity Chamber": {
         title: "Walk In Humidity Chamber Manufacturer and Supplier in India, Aureole Pharma Tech",

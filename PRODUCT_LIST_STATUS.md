@@ -28,7 +28,7 @@ This document tracks which products are currently live on the **Aureole Pharma T
 | ✅ | Pharma Refrigerator / Dual Zone Chamber | Live |
 | ✅ | Hot Air Oven | Live |
 | ✅ | Vacuum Oven | Live |
-| ✅ | Muffle Furnace | Live |
+| ✅ | Muffle Furnance | Live |
 | ✅ | Walk In Humidity Chamber | Live (Walk-in) |
 | ✅ | Walk In Cold Chamber | Live (Walk-in) |
 | ✅ | Walk In BOD Incubator | Live (Walk-in) |
