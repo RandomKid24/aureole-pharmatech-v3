@@ -71,43 +71,55 @@ aureole-pharmatech-v3/
    npm run sitemap
    ```
 
+## ⚡ Quick Commands & Scripts
+
+| Command | Action | When to Use |
+| :--- | :--- | :--- |
+| `npm run dev` | Starts local development server | While working on features locally |
+| `npm run build` | Builds production bundle | Validating build before deployment |
+| `npm run optimize` | **Compresses images & updates code** | Whenever you add new `.png` / `.jpg` images |
+| `npm run sitemap` | Regenerates `sitemap.xml` | Whenever you add new V-Cards or pages |
+
+---
+
 ## 🔧 Maintenance & Automation
 
-### 🖼️ Image Optimization Guide
-Whenever you add new heavy PNG or JPG images to the `public/` folder, run the automated optimization script to convert them to lightweight WebP files and update all code references automatically:
+### 🖼️ How to Optimize New Images (`npm run optimize`)
 
-```bash
-npm run optimize
-```
-*or directly:*
-```bash
-python3 scripts/optimize-images.py
-```
+Whenever you add new heavy `.png` or `.jpg` images to your project:
 
-**What this script does:**
-1. Scans `public/` for raw `.png`, `.jpg`, and `.jpeg` images.
-2. Converts them into optimized `.webp` images (and scales oversized 4K images down to 1600px width).
-3. Automatically updates all image path references across your React components, data files, and HTML files.
-4. Deletes original uncompressed image files to keep the repository lightweight.
+1. Place your new images into the `public/` directory (or subfolders).
+2. Run the optimization command:
+   ```bash
+   npm run optimize
+   ```
+   *(or directly `python3 scripts/optimize-images.py`)*
+
+#### What the script automatically does for you:
+- **Converts to `.webp`**: Converts `.png`, `.jpg`, and `.jpeg` images to ultra-light WebP format.
+- **Auto-Resizes 4K Images**: Scales oversized high-res renders down to max 1600px width for web.
+- **Updates Source Code**: Automatically updates all image path references across React components (`.tsx`), TS data files (`.ts`), HTML, and CSS files.
+- **Removes Uncompressed Originals**: Deletes old heavy images so your repository stays lightweight.
 
 ---
 
 ### ❓ Why do I see ~80 pending changes in Git?
-When you optimize images or add new V-Cards, Git tracks:
-1. **New WebP Images**: Super-lightweight `.webp` files generated in `public/`.
-2. **Deleted Uncompressed Files**: Old `.png`, `.jpg`, and unused `.gif` files removed from `public/`.
-3. **Updated Code References**: Data files (`data/homeData.tsx`, `data/products/`, etc.) and component files updated to point to `.webp`.
 
-To save these optimizations to your repository and deploy to Vercel, run:
+When you run image optimizations or add new V-Cards, Git tracks:
+1. **New `.webp` Images**: WebP images generated in `public/`.
+2. **Deleted Raw Files**: Uncompressed `.png`, `.jpg`, and unused `.gif` files removed from `public/`.
+3. **Updated Code References**: Data files (`data/homeData.tsx`, `data/products/`, etc.) updated to point to `.webp`.
+
+To save these changes and deploy to Vercel, run:
 ```bash
 git add .
-git commit -m "Optimize assets to WebP and update vcard sitemap"
+git commit -m "Optimize assets to WebP and update vcards"
 git push
 ```
 
 ---
 
-- **Adding V-Cards**: Please refer to the [VCARD_MAINTENANCE.md](VCARD_MAINTENANCE.md) for the standardized workflow.
+- **Adding V-Cards**: Please refer to [VCARD_MAINTENANCE.md](VCARD_MAINTENANCE.md) for the standardized workflow.
 - **Product Updates**: Catalog status is tracked in [PRODUCT_LIST_STATUS.md](PRODUCT_LIST_STATUS.md).
 
 ---
