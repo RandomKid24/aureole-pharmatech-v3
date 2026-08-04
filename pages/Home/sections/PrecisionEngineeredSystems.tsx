@@ -16,7 +16,7 @@ const PrecisionEngineeredSystems: React.FC = () => {
       'walk-in-bod-incubator',
       'humidity-chamber-stability-chamber',
       'ultra-low-deep-freezer-80c',
-      'muffle-furnace',
+      'muffle-furnance',
       'eco-series',
       'steam-bath',
       'constant-water-bath',

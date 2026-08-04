@@ -39,39 +39,52 @@ export const photostabilityChamber: ProductDetail = {
             {
                 cells: [
                     { content: "Model", rowSpan: 2, isHeader: true },
-                    { content: "Capacity\n(In Liters)", rowSpan: 2, isHeader: true },
-                    { content: "Tray", colSpan: 2, isHeader: true },
-                    { content: "Inner Dimension\n(W x D x H) mm", rowSpan: 2, isHeader: true },
-                    { content: "Outer Dimension\n(W x D x H) mm", rowSpan: 2, isHeader: true }
+                    { content: "Capacity\nIn Liters", rowSpan: 2, isHeader: true },
+                    { content: "Interior Dimension in MM", colSpan: 3, isHeader: true },
+                    { content: "Exterior Dimension in MM", colSpan: 3, isHeader: true },
+                    { content: "No of Trays", rowSpan: 2, isHeader: true },
+                    { content: "Power Supply", rowSpan: 2, isHeader: true }
                 ]
             },
             {
                 cells: [
-                    { content: "Quantity", isHeader: true },
-                    { content: "Dimension", isHeader: true }
+                    { content: "Width", isHeader: true },
+                    { content: "Depth", isHeader: true },
+                    { content: "Height", isHeader: true },
+                    { content: "Width", isHeader: true },
+                    { content: "Depth", isHeader: true },
+                    { content: "Height", isHeader: true }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_PH-2.0_V**" },
                     { content: "200", align: 'center' },
+                    { content: "800", align: 'center' },
+                    { content: "500", align: 'center' },
+                    { content: "600", align: 'center' },
+                    { content: "925", align: 'center' },
+                    { content: "850", align: 'center' },
+                    { content: "1300", align: 'center' },
                     { content: "1", align: 'center' },
-                    { content: "-", align: 'center' },
-                    { content: "800 x 500 x 600", align: 'center' },
-                    { content: "960 x 960 x 1320", align: 'center' }
+                    { content: "Single Phase 230 V", align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "AP_SA_PH-4.0_V**" },
                     { content: "400", align: 'center' },
+                    { content: "800", align: 'center' },
+                    { content: "700", align: 'center' },
+                    { content: "700", align: 'center' },
+                    { content: "925", align: 'center' },
+                    { content: "1050", align: 'center' },
+                    { content: "1400", align: 'center' },
                     { content: "2", align: 'center' },
-                    { content: "-", align: 'center' },
-                    { content: "800 x 700 x 700", align: 'center' },
-                    { content: "760 x 1160 x 1420", align: 'center' }
+                    { content: "Single Phase 230 V", align: 'center' }
                 ]
             }
         ],
-        remark: "• Power Supply: Single Phase 230 V. Above are standard sizes and we can offer other (customised) sizes also V** = variant based upon construction & body."
+        remark: "• Above are standard sizes and we can offer other (customised) sizes also V** = variant based upon construction & body."
     }
 };

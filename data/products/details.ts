@@ -49,7 +49,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     "Pharma Refrigerator / Dual Zone Chamber": pharmaRefrigerator,
     "Hot Air Oven": hotAirOven,
     "Vacuum Oven": vacuumOven,
-    "Muffle Furnace": muffleFurnace,
+    "Muffle Furnance": muffleFurnace,
     "Walk In Humidity Chamber": walkInHumidityChamber,
     "Walk In Cold Chamber": walkInColdChamber,
     "Walk In BOD Incubator": walkInBodIncubator,

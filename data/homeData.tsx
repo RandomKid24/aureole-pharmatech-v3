@@ -94,8 +94,8 @@ export const PRODUCTS = [
         specs: { 'Range': 'Upto -80°C', 'Control': 'PLC Based' }
     },
     {
-        id: 'muffle-furnace',
-        name: 'MUFFLE FURNACE',
+        id: 'muffle-furnance',
+        name: 'MUFFLE FURNANCE',
         category: 'STABILITY',
         image: '/products/StablilityChamber-Standalone/muffle-furnace.webp',
         description: 'Designed for high-temperature applications up to 1150°C with precise heat treatment.',

@@ -30,7 +30,7 @@ const PRODUCTS = [
   "pharma-refrigerator-dual-zone-chamber",
   "hot-air-oven",
   "vacuum-oven",
-  "muffle-furnace",
+  "muffle-furnance",
   "walk-in-humidity-chamber",
   "walk-in-cold-chamber",
   "walk-in-bod-incubator",

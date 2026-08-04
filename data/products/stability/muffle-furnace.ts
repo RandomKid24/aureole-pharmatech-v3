@@ -1,7 +1,7 @@
 import { ProductDetail } from '../types';
 
 export const muffleFurnace: ProductDetail = {
-    description: "Aureole Pharma Tech Muffle Furnace is designed for high-temperature applications, providing a controlled environment for processes requiring precise heat treatment up to 1150°C.",
+    description: "Aureole Pharma Tech Muffle Furnance is designed for high-temperature applications, providing a controlled environment for processes requiring precise heat treatment up to 1150°C.",
     keyFeatures: [],
     specifications: [
         { parameter: "Temperature Range", details: "1150 °C" },
