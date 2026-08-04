@@ -44,7 +44,7 @@ const industries = [
 
 const IndustriesServed: React.FC = () => {
     return (
-        <section className="py-24 bg-white border-b border-slate-100 bg-[url('/wavebg.png')] bg-cover bg-fixed">
+        <section className="py-24 bg-white border-b border-slate-100 bg-[url('/wavebg.webp')] bg-cover bg-fixed">
             <div className="container mx-auto px-6 sm:px-12 lg:px-24">
                 <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8 text-left">
                     <div className="max-w-2xl">

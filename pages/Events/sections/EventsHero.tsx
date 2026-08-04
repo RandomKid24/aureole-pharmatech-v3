@@ -13,7 +13,7 @@ const EventsHero: React.FC = () => {
                 }}
             >
                 <img
-                    src="/Event-Sketech.png"
+                    src="/Event-Sketech.webp"
                     alt=""
                     className="w-full h-auto object-contain opacity-50"
                 />

@@ -77,7 +77,7 @@ const offerings = [
 
 const CoreServices: React.FC = () => {
     return (
-        <section className="py-24 bg-white border-y border-slate-100 min-h-screen bg-[url('/wavebg.png')] bg-cover bg-fixed">
+        <section className="py-24 bg-white border-y border-slate-100 min-h-screen bg-[url('/wavebg.webp')] bg-cover bg-fixed">
             <div className="container mx-auto px-6 sm:px-12 lg:px-16">
                 <div className="mb-20">
                     <div className="flex items-center gap-4 mb-6">

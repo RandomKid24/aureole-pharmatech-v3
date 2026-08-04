@@ -12,7 +12,7 @@ export const steamBath: ProductDetail = {
     models: [],
     regularAttributes: [],
     addOnsAttributes: [],
-    image: "/Aureole Product 3D/Table Top/Steam Bath Final.png",
+    image: "/Aureole Product 3D/Table Top/Steam Bath Final.webp",
     variantTable: {
         headers: ["Model", "Unit", "AP_TT_SB_45", "AP_TT_SB_65", "AP_TT_SB_85"],
         rows: [

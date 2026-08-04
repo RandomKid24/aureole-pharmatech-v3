@@ -11,7 +11,7 @@ const Ventures: React.FC = () => {
             sub: "THE FOUNDATION (LEGACY)",
             desc: "The initial engineering milestone that sparked a revolution in stability testing equipment technology. This foundational period laid the technical groundwork before transitioning to the specialized Aureole brand.",
             url: "http://mackpharmatech.com/",
-            logo: "/ventures-logos/mack-pharmatech.png",
+            logo: "/ventures-logos/mack-pharmatech.webp",
             isLegacy: true
         },
         {
@@ -20,7 +20,7 @@ const Ventures: React.FC = () => {
             sub: "",
             desc: "A compassionate NGO initiative dedicated to social welfare, education, and healthcare across rural Maharashtra, embodying the group's commitment to community impact.",
             url: "https://adityamfoundation.org/",
-            logo: "/ventures-logos/adityam-foundation-logo.png"
+            logo: "/ventures-logos/adityam-foundation-logo.webp"
         },
         {
             year: "2012",
@@ -28,7 +28,7 @@ const Ventures: React.FC = () => {
             sub: "",
             desc: "An advanced healthcare entity specializing in veterinary products, enhancing livestock wellness and agricultural productivity through precision medicine.",
             url: "https://mackauraahealthcare.com/",
-            logo: "/ventures-logos/mack-auraa-logo.png"
+            logo: "/ventures-logos/mack-auraa-logo.webp"
         },
         {
             year: "2019",
@@ -36,14 +36,14 @@ const Ventures: React.FC = () => {
             sub: "",
             desc: "Engineering excellence in heavy-duty pharmaceutical process systems, including autoclaves, distillation plants, and high-capacity industrial equipment.",
             url: "https://aureoleproequip.com/",
-            logo: "/ventures-logos/aureole-process-logo.png"
+            logo: "/ventures-logos/aureole-process-logo.webp"
         },
         {
             year: "2021",
             name: "Aureole Pharma",
             sub: "",
             desc: "The current flagship brand driving global innovation in environmental testing. Specializing in high-precision stability testing equipments and advanced laboratory instrumentation.",
-            logo: "/aureole-logo.png",
+            logo: "/aureole-logo.webp",
             isCurrent: true
         },
         {
@@ -52,7 +52,7 @@ const Ventures: React.FC = () => {
             sub: "",
             desc: "A premium eco-friendly resort near Trimbakeshwar, offering a sustainable escape that integrates nature, hospitality, and regenerative farming.",
             url: "https://swapnkiranagrofarm.com/",
-            logo: "/ventures-logos/swapnkiran-resort-logo.png"
+            logo: "/ventures-logos/swapnkiran-resort-logo.webp"
         }
     ];
 

@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
                <div className="space-y-10">
                   <Link to="/" onClick={handleScrollToTop}>
                      <img
-                        src="/aureole-logo.png"
+                        src="/aureole-logo.webp"
                         alt="Aureole Pharma-Tech"
                         className="h-24 w-auto brightness-[1.25] contrast-[1.1] saturate-[1.1]"
                      />

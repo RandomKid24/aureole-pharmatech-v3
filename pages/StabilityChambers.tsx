@@ -24,7 +24,7 @@ const StabilityChambers: React.FC = () => {
                 title="precision ENVIRONMENTAL"
                 subtitle={<span className="text-aureole-blue">CONTROL</span>}
                 watermark="STABILITY"
-                image="/assets/sketches/stablitiy-chamber-hero-sketech.png"
+                image="/assets/sketches/stablitiy-chamber-hero-sketech.webp"
                 showAccent={false}
             />
             <KeyDetailsAccordion

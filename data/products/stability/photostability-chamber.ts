@@ -27,11 +27,11 @@ export const photostabilityChamber: ProductDetail = {
         "Door Access System (Numeric/Biometric)",
         "Extra Trays"
     ],
-    image: "/Aureole Product 3D/Front Angle/Photostability Chamber Front Angle.png",
+    image: "/Aureole Product 3D/Front Angle/Photostability Chamber Front Angle.webp",
     images: [
-        "/Aureole Product 3D/Front Angle/Photostability Chamber Front Angle.png",
-        "/Aureole Product 3D/Left Angle/Photostability Chamber Left Angle.png",
-        "/Aureole Product 3D/Right Angle/Photostability Chamber Right Angle.png"
+        "/Aureole Product 3D/Front Angle/Photostability Chamber Front Angle.webp",
+        "/Aureole Product 3D/Left Angle/Photostability Chamber Left Angle.webp",
+        "/Aureole Product 3D/Right Angle/Photostability Chamber Right Angle.webp"
     ],
     imageCaptions: ["Front View", "Left View", "Right View"],
     complexTable: {

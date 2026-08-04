@@ -23,11 +23,11 @@ export const coldChamber: ProductDetail = {
         "Door Access System (Numeric/Biometric)",
         "Extra Trays"
     ],
-    image: "/Aureole Product 3D/Front Angle/Cold Chamber Front.png",
+    image: "/Aureole Product 3D/Front Angle/Cold Chamber Front.webp",
     images: [
-        "/Aureole Product 3D/Front Angle/Cold Chamber Front.png",
-        "/Aureole Product 3D/Left Angle/Cold Chamber Left.png",
-        "/Aureole Product 3D/Right Angle/Cold Chamber Right.png"
+        "/Aureole Product 3D/Front Angle/Cold Chamber Front.webp",
+        "/Aureole Product 3D/Left Angle/Cold Chamber Left.webp",
+        "/Aureole Product 3D/Right Angle/Cold Chamber Right.webp"
     ],
     imageCaptions: ["Front View", "Left View", "Right View"],
     complexTable: {

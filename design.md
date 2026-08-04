@@ -71,7 +71,7 @@ We enforce a strict 5-size type scale to maintain consistent hierarchy across al
 ## 4. UI Textures & Visual Effects
 
 ### Background Details
-* **Wave Asset**: `background-image: url("/wavebg.png")` - Fixed position background image scales dynamically using `background-size: cover`.
+* **Wave Asset**: `background-image: url("/wavebg.webp")` - Fixed position background image scales dynamically using `background-size: cover`.
 * **Grain Filter**: An overlay grain/noise effect applied globally on body load (`.grain::before`) with `opacity: 0.02` to reduce digital flatness.
 
 ### Borders & Radius Tokens

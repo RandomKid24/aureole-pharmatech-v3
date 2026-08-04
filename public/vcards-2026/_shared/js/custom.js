@@ -16,8 +16,8 @@ $(window).on("load", function() {
 
 /*------------------------------------- Scanner Img Download -------------------------------------*/
 function downloadImage() {
-  const imagePath = 'assets/images/main-img/scanner-img.png';
-  const fileName = 'scanner-img.png';
+  const imagePath = 'assets/images/main-img/scanner-img.webp';
+  const fileName = 'scanner-img.webp';
   const link = document.createElement('a');
   link.href = imagePath;
   link.download = fileName;
@@ -27,7 +27,7 @@ function downloadImage() {
 }
 /*------------------------------------- Share Scanner Img -------------------------------------*/
 function shareImage() {
-  const imageUrl = window.location.origin + '/envato/digi-vcard/CEO/assets/images/main-img/scanner-img.png';
+  const imageUrl = window.location.origin + '/envato/digi-vcard/CEO/assets/images/main-img/scanner-img.webp';
   const title = 'Share Scanner Image';
   const text = 'Check out this image!';
   if (navigator.share) {

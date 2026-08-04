@@ -38,7 +38,7 @@ const About: React.FC = () => {
             <div className="absolute -inset-10 bg-aureole-blue/5 rounded-full scale-75 group-hover:scale-100 transition-transform duration-500 opacity-20 blur-3xl"></div>
             <div className="relative aspect-video lg:aspect-square overflow-hidden rounded-sm border border-slate-100 shadow-xl">
               <LazyImage
-                src="/about/office-hq-v2.jpg"
+                src="/about/office-hq-v2.webp"
                 alt="Aureole PharmaTech Nashik headquarters and office building"
                 className="w-full h-full object-cover transition-all duration-500"
               />

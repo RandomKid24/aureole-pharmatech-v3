@@ -15,7 +15,7 @@ const SEO: React.FC<SEOProps> = ({ title, description, image, article }) => {
   const siteUrl = "https://www.aureolepharmatech.com";
   const defaultTitle = "Pharmaceutical Equipment, Stability Chamber, Aureole Pharma Tech";
   const defaultDescription = "Aureole Pharma Tech Manufacturers, Suppliers of Stability Chamber, Walk in Chamber, Stand Alone Chamber, Ultrasonic Baths, Water Baths, Walk in Humidity Chamber from Nashik, Maharashtra, Best Quality In Pharmaceutical Equipment.";
-  const defaultImage = "/aureole-logo.png";
+  const defaultImage = "/aureole-logo.webp";
   
   const seo = {
     title: title || defaultTitle,

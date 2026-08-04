@@ -13,5 +13,5 @@ export const hFrameSystem: ProductDetail = {
     models: [],
     regularAttributes: [],
     addOnsAttributes: [],
-    image: "/products/Furniture/h-frame.png"
+    image: "/products/Furniture/h-frame.webp"
 };

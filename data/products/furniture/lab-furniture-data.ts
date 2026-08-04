@@ -2,17 +2,17 @@ import { ProductDetail } from '../types';
 
 export const laboratoryFurniture: ProductDetail = {
     description: "Aureole Pharma Tech’s modular laboratory furniture systems are engineered to create a safe, efficient, and ergonomic environment for modern scientific research. Our comprehensive range includes specialized workbenches, fume hoods, and storage solutions designed to meet the rigorous demands of pharmaceutical, chemical, and biological laboratories. Each component is crafted using high-performance materials that ensure long-term durability and resistance to harsh laboratory conditions.",
-    image: "/products/Furniture/island-bench.png",
+    image: "/products/Furniture/island-bench.webp",
     images: [
-        "/products/Furniture/c-frame-system.png",
-        "/products/Furniture/h-frame-system.png",
-        "/products/Furniture/plinth-pedestal-system.png",
-        "/products/Furniture/lab-worktops.png",
-        "/products/Furniture/fume-cupboards.png",
-        "/products/Furniture/lab-fittings.png",
-        "/products/Furniture/hardware.png",
-        "/products/Furniture/storage-cabinets.png",
-        "/products/Furniture/lab-accessories.png"
+        "/products/Furniture/c-frame-system.webp",
+        "/products/Furniture/h-frame-system.webp",
+        "/products/Furniture/plinth-pedestal-system.webp",
+        "/products/Furniture/lab-worktops.webp",
+        "/products/Furniture/fume-cupboards.webp",
+        "/products/Furniture/lab-fittings.webp",
+        "/products/Furniture/hardware.webp",
+        "/products/Furniture/storage-cabinets.webp",
+        "/products/Furniture/lab-accessories.webp"
     ],
     imageCaptions: [
         "C-Frame System",
@@ -40,7 +40,7 @@ export const wallSideBench: ProductDetail = {
     models: [],
     regularAttributes: [],
     addOnsAttributes: [],
-    image: "/products/Furniture/wall-side-bench.png",
+    image: "/products/Furniture/wall-side-bench.webp",
     keyFeaturesHeading: "Features"
 };
 
@@ -51,7 +51,7 @@ export const islandBench: ProductDetail = {
     models: [],
     regularAttributes: [],
     addOnsAttributes: [],
-    image: "/products/Furniture/island-bench.png",
+    image: "/products/Furniture/island-bench.webp",
     keyFeaturesHeading: "Features"
 };
 
@@ -62,7 +62,7 @@ export const fumeHood: ProductDetail = {
     models: [],
     regularAttributes: [],
     addOnsAttributes: [],
-    image: "/products/Furniture/fume-hood.png",
+    image: "/products/Furniture/fume-hood.webp",
     keyFeaturesHeading: "Features"
 };
 
@@ -81,7 +81,7 @@ export const storageCabinets: ProductDetail = {
     models: [],
     regularAttributes: [],
     addOnsAttributes: [],
-    image: "/products/Furniture/storage-cabinets.png"
+    image: "/products/Furniture/storage-cabinets.webp"
 };
 
 export const laboratoryFittings: ProductDetail = {
@@ -97,7 +97,7 @@ export const laboratoryFittings: ProductDetail = {
     models: [],
     regularAttributes: [],
     addOnsAttributes: [],
-    image: "/products/Furniture/fittings.png"
+    image: "/products/Furniture/fittings.webp"
 };
 
 export const labAccessories: ProductDetail = {
@@ -120,7 +120,7 @@ export const labAccessories: ProductDetail = {
     models: [],
     regularAttributes: [],
     addOnsAttributes: [],
-    image: "/products/Furniture/lab-accessories.png"
+    image: "/products/Furniture/lab-accessories.webp"
 };
 
 export const ssAccessories: ProductDetail = {
@@ -130,18 +130,18 @@ export const ssAccessories: ProductDetail = {
     models: [],
     regularAttributes: [],
     addOnsAttributes: [],
-    image: "/products/accessories/test-tube-racks-wire-mesh.png",
+    image: "/products/accessories/test-tube-racks-wire-mesh.webp",
     images: [
-        "/products/accessories/test-tube-racks-sheet.png",
-        "/products/accessories/test-tube-racks-wire-mesh.png",
-        "/products/accessories/weight-rings.png",
-        "/products/accessories/exposing-stands.png",
-        "/products/accessories/swab-plates-box.png",
-        "/products/accessories/swab-plates-plate.png",
-        "/products/accessories/swab-plates-perforated.png",
-        "/products/accessories/lid-stands-tray.png",
-        "/products/accessories/lid-stands-blocks.png",
-        "/products/accessories/lid-stands-mesh-rack.png"
+        "/products/accessories/test-tube-racks-sheet.webp",
+        "/products/accessories/test-tube-racks-wire-mesh.webp",
+        "/products/accessories/weight-rings.webp",
+        "/products/accessories/exposing-stands.webp",
+        "/products/accessories/swab-plates-box.webp",
+        "/products/accessories/swab-plates-plate.webp",
+        "/products/accessories/swab-plates-perforated.webp",
+        "/products/accessories/lid-stands-tray.webp",
+        "/products/accessories/lid-stands-blocks.webp",
+        "/products/accessories/lid-stands-mesh-rack.webp"
     ],
     imageCaptions: [
         "Test Tube Racks - Sheet",

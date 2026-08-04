@@ -14,7 +14,7 @@ const FacilityUnits: React.FC<FacilityUnitsProps> = ({ onImageClick }) => {
             title: "Standalone Chamber Manufacturing Hub",
             location: "Malegaon MIDC, Sinnar, Nashik, Maharashtra",
             desc: "Our primary production facility dedicated to high-precision standalone stability testing equipments. This unit serves as the core hub for engineering environmental testing systems that meet global regulatory standards.",
-            image: "/plants/IMG_8943.jpg",
+            image: "/plants/IMG_8943.webp",
             features: []
         },
         {
@@ -22,7 +22,7 @@ const FacilityUnits: React.FC<FacilityUnitsProps> = ({ onImageClick }) => {
             title: "Corporate HQ & Walk-in Chamber Wing",
             location: "Sinnar Industrial Zone, Maharashtra",
             desc: "The corporate headquarters and specialized engineering wing for large-scale walk-in environmental chambers. This unit integrates executive operations with advanced technical fabrication and assembly.",
-            image: "/plants/DJI_20240723124450_0018_D_2.jpg",
+            image: "/plants/DJI_20240723124450_0018_D_2.webp",
             features: []
         },
         {

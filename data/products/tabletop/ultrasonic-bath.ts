@@ -27,17 +27,17 @@ export const ultrasonicBath: ProductDetail = {
         "Industrial Drain Valve",
         "SS Lid & Basket"
     ],
-    image: "/Aureole Product 3D/Table Top/ultrasomic Cleaner M Series.png",
+    image: "/Aureole Product 3D/Table Top/ultrasomic Cleaner M Series.webp",
     complexTable: {
         rows: [
             {
                 cells: [
                     { content: "Parameter", isHeader: true },
-                    { content: "Eco Series", isHeader: true, image: "/Aureole Product 3D/Table Top/ultrasomic Cleaner M Series.png" },
-                    { content: "Prime Series", isHeader: true, image: "/Aureole Product 3D/Table Top/ultrasomic Cleaner M Series.png" },
-                    { content: "Advanced Control", isHeader: true, image: "/Aureole Product 3D/Table Top/ultrasomic Cleaner M Series.png" },
-                    { content: "Heating & Shaking", isHeader: true, image: "/Aureole Product 3D/Table Top/Sonicator Shaker Final.png" },
-                    { content: "Chiller Sonicator", isHeader: true, image: "/Aureole Product 3D/Table Top/Chiller Sonicator Bath.png" }
+                    { content: "Eco Series", isHeader: true, image: "/Aureole Product 3D/Table Top/ultrasomic Cleaner M Series.webp" },
+                    { content: "Prime Series", isHeader: true, image: "/Aureole Product 3D/Table Top/ultrasomic Cleaner M Series.webp" },
+                    { content: "Advanced Control", isHeader: true, image: "/Aureole Product 3D/Table Top/ultrasomic Cleaner M Series.webp" },
+                    { content: "Heating & Shaking", isHeader: true, image: "/Aureole Product 3D/Table Top/Sonicator Shaker Final.webp" },
+                    { content: "Chiller Sonicator", isHeader: true, image: "/Aureole Product 3D/Table Top/Chiller Sonicator Bath.webp" }
                 ]
             },
             {

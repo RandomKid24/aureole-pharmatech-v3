@@ -12,7 +12,7 @@ const LeadershipVision: React.FC = () => {
                     <div className="lg:col-span-4 relative group">
                         <div className="aspect-[3/4] overflow-hidden transition-all duration-1000 shadow-2xl bg-slate-50">
                             <img
-                                src="/about/managing-director.jpg"
+                                src="/about/managing-director.webp"
                                 alt="Dr. Kiran Badgujar"
                                 className="w-full h-full object-cover object-top"
                                 onError={(e) => {

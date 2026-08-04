@@ -10,28 +10,28 @@ const TeamArchitecture: React.FC = () => {
         {
             name: "Bipin Badgujar",
             role: "Chief Executive Officer",
-            img: "/about/bipin-badgujar.jpg",
+            img: "/about/bipin-badgujar.webp",
             linkedin: "https://www.linkedin.com/in/bipin-a-badgujar-5a8b5b16/",
             vcard: "/vcards/bipin-badgujar"
         },
         {
             name: "Jitendra Tajanpure",
             role: "VP Finance & Accounts",
-            img: "/about/jitendra-tajanpure.jpeg",
+            img: "/about/jitendra-tajanpure.webp",
             linkedin: "https://www.linkedin.com/in/jitendra-tajanpure-6a0937296/",
             vcard: "/vcards/jitendra-tajanpure"
         },
         {
             name: "Sandeep Kale",
             role: "VP - Strategy & Biz Dev",
-            img: "/about/sandeep-kale.jpg",
+            img: "/about/sandeep-kale.webp",
             linkedin: "#",
             vcard: "/vcards/sandip-kale"
         },
         {
             name: "Shubham Badgujar",
             role: "Manager - IBD",
-            img: "/about/shubham-badgujar.jpg",
+            img: "/about/shubham-badgujar.webp",
             linkedin: "https://www.linkedin.com/in/shubham-badgujar-0025b7169/",
             vcard: "/vcards/shubham-badgujar"
         }

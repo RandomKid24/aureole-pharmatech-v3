@@ -3,7 +3,7 @@ import { DotLottiePlayer } from '@dotlottie/react-player';
 
 const ServiceHero: React.FC = () => {
     return (
-        <section className="relative bg-transparent py-24 lg:py-40 group bg-[url('/wavebg.png')] bg-cover bg-fixed overflow-hidden">
+        <section className="relative bg-transparent py-24 lg:py-40 group bg-[url('/wavebg.webp')] bg-cover bg-fixed overflow-hidden">
             <div className="container mx-auto px-6 lg:px-16 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
                     <div className="max-w-5xl mx-auto lg:mx-0 text-center lg:text-left order-2 lg:order-1">

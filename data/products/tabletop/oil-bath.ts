@@ -13,7 +13,7 @@ export const oilBath: ProductDetail = {
     models: [],
     regularAttributes: [],
     addOnsAttributes: [],
-    image: "/Aureole Product 3D/Table Top/Oil Bath Final.png",
+    image: "/Aureole Product 3D/Table Top/Oil Bath Final.webp",
     variantTable: {
         headers: ["Model", "Unit", "AP_TT_OB_45", "AP_TT_SB_65", "AP_TT_SB_85"],
         rows: [

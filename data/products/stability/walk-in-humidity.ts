@@ -28,11 +28,11 @@ export const walkInHumidityChamber: ProductDetail = {
         "Door Access System (Biometric)",
         "Extra Trays"
     ],
-    image: "/Aureole Product 3D/Front Angle/Walk in Humidity Chamber Final Front.png",
+    image: "/Aureole Product 3D/Front Angle/Walk in Humidity Chamber Final Front.webp",
     images: [
-        "/Aureole Product 3D/Front Angle/Walk in Humidity Chamber Final Front.png",
-        "/Aureole Product 3D/Left Angle/Walk in Humidity Chamber Final Left Angle 2.png",
-        "/Aureole Product 3D/Right Angle/Walk in Humidity Chamber Final Right.png"
+        "/Aureole Product 3D/Front Angle/Walk in Humidity Chamber Final Front.webp",
+        "/Aureole Product 3D/Left Angle/Walk in Humidity Chamber Final Left Angle 2.webp",
+        "/Aureole Product 3D/Right Angle/Walk in Humidity Chamber Final Right.webp"
     ],
     imageCaptions: ["Front View", "Left View", "Right View"],
     complexTable: {

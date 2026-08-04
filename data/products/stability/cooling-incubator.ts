@@ -23,11 +23,11 @@ export const coolingIncubator: ProductDetail = {
         "Door Access System (Numeric/Biometric)",
         "Extra Trays"
     ],
-    image: "/Aureole Product 3D/Front Angle/New Bacteriological Incubator Front.png",
+    image: "/Aureole Product 3D/Front Angle/New Bacteriological Incubator Front.webp",
     images: [
-        "/Aureole Product 3D/Front Angle/New Bacteriological Incubator Front.png",
-        "/Aureole Product 3D/Left Angle/New Bacteriological Incubator Left.png",
-        "/Aureole Product 3D/Right Angle/New Bacteriological Incubator Right.png"
+        "/Aureole Product 3D/Front Angle/New Bacteriological Incubator Front.webp",
+        "/Aureole Product 3D/Left Angle/New Bacteriological Incubator Left.webp",
+        "/Aureole Product 3D/Right Angle/New Bacteriological Incubator Right.webp"
     ],
     imageCaptions: ["Front View", "Left View", "Right View"],
     complexTable: {

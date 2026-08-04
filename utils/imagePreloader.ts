@@ -35,9 +35,9 @@ export const preloadImages = async (sources: string[], options: PreloadOptions =
 // Preload critical images for better performance
 export const preloadCriticalImages = () => {
   const criticalImages = [
-    '/aureole-logo.png',
-    '/about/office-hq-v2.jpg',
-    '/plants/DJI_20240723121709_0011_D.JPG'
+    '/aureole-logo.webp',
+    '/about/office-hq-v2.webp',
+    '/plants/DJI_20240723121709_0011_D.webp'
   ];
   
   preloadImages(criticalImages, { priority: 'high' });

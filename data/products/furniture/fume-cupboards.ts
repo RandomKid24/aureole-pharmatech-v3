@@ -20,5 +20,5 @@ export const fumeCupboards: ProductDetail = {
     models: [],
     regularAttributes: [],
     addOnsAttributes: [],
-    image: "/products/Furniture/fume-cupboard.png"
+    image: "/products/Furniture/fume-cupboard.webp"
 };

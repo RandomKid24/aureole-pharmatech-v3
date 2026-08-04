@@ -4,7 +4,7 @@ import { Monitor, Bell, Settings } from 'lucide-react';
 import LazyImage from '@/components/LazyImage';
 
 const MonitoringControl: React.FC = () => {
-    const architectureImg = "/software/architecture.png";
+    const architectureImg = "/software/architecture.webp";
 
     return (
         <section className="py-24 bg-transparent">

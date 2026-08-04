@@ -13,5 +13,5 @@ export const plinthPedestalSystem: ProductDetail = {
     models: [],
     regularAttributes: [],
     addOnsAttributes: [],
-    image: "/products/Furniture/plinth-pedestal.png"
+    image: "/products/Furniture/plinth-pedestal.webp"
 };

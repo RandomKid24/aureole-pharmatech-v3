@@ -12,7 +12,7 @@ const SECTORS_DATA = [
     id: '01',
     name: 'Pharmaceutical',
     icon: <Microscope className="w-8 h-8" />,
-    image: '/industries/pharmaceutical.png',
+    image: '/industries/pharmaceutical.webp',
     desc: 'Precision stability testing and environmental storage for life-saving drug formulations and vaccines.',
     capabilities: ['Stability Testing', 'GMP Compliance', 'Cold Chain']
   },
@@ -20,7 +20,7 @@ const SECTORS_DATA = [
     id: '02',
     name: 'Hospital',
     icon: <Activity className="w-8 h-8" />,
-    image: '/industries/hospital.png',
+    image: '/industries/hospital.webp',
     desc: 'Sterilization and temperature-controlled machinery for surgical environments and pharmacy storage.',
     capabilities: ['Sterilization', 'Critical Care', 'Sample Storage']
   },
@@ -28,7 +28,7 @@ const SECTORS_DATA = [
     id: '03',
     name: 'Chemical',
     icon: <FlaskConical className="w-8 h-8" />,
-    image: '/industries/chemical.png',
+    image: '/industries/chemical.webp',
     desc: 'Precision thermal control and stabilization for sensitive chemical synthesis and volatile compound storage.',
     capabilities: ['Reaction Control', 'Volatile Storage', 'Safety Compliance']
   },
@@ -36,7 +36,7 @@ const SECTORS_DATA = [
     id: '04',
     name: 'Oil Industry',
     icon: <Gauge className="w-8 h-8" />,
-    image: '/industries/oil_gas.png',
+    image: '/industries/oil_gas.webp',
     desc: 'Ruggedized environmental chambers designed for downstream testing and petrochemical sample preservation.',
     capabilities: ['Downstream Testing', 'Rugged Chambers', 'Heat Stress']
   },
@@ -44,7 +44,7 @@ const SECTORS_DATA = [
     id: '05',
     name: 'Food Industry',
     icon: <ShieldCheck className="w-8 h-8" />,
-    image: '/industries/food_v3.png',
+    image: '/industries/food_v3.webp',
     desc: 'Incubation and environmental chambers (BOD) for food safety testing and quality assurance.',
     capabilities: ['Safety Testing', 'Quality Control', 'BOD Incubation']
   }

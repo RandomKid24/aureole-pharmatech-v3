@@ -13,7 +13,7 @@ export const dryBath: ProductDetail = {
     models: [],
     regularAttributes: [],
     addOnsAttributes: [],
-    image: "/products/TableTop/dry-bath.png",
+    image: "/products/TableTop/dry-bath.webp",
     variantTable: {
         headers: ["Model", "AP_TT_DB_400"],
         rows: [

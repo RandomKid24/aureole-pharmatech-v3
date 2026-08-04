@@ -31,7 +31,7 @@ const InfrasArchitecture: React.FC = () => {
                 >
                     <div className="flex items-center gap-5">
                         <div className="w-12 h-12 bg-white border border-slate-100 rounded-xl p-1.5 shadow-sm">
-                            <img src="/infras/RHS.png" alt="RHS" className="w-full h-full object-contain" />
+                            <img src="/infras/RHS.webp" alt="RHS" className="w-full h-full object-contain" />
                         </div>
                         <div>
                             <h2 className="text-2xl lg:text-3xl font-black font-heading text-aureole-slate tracking-tighter leading-none mb-1 uppercase">
@@ -65,7 +65,7 @@ const InfrasArchitecture: React.FC = () => {
                                     <div className="lg:col-span-4 space-y-6">
                                         <div className="flex items-center gap-4 mb-2">
                                             <div className="w-16 h-16 bg-white border border-slate-100 rounded-xl p-2 shadow-sm shrink-0">
-                                                <img src="/infras/RHS.png" alt="RHS" className="w-full h-full object-contain" />
+                                                <img src="/infras/RHS.webp" alt="RHS" className="w-full h-full object-contain" />
                                             </div>
                                             <div>
                                                 <h3 className="text-2xl font-black text-aureole-slate uppercase tracking-tighter leading-none mb-1 font-heading">RHS</h3>

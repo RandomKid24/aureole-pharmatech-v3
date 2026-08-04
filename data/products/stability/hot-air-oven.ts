@@ -17,11 +17,11 @@ export const hotAirOven: ProductDetail = {
         "Hooter System",
         "Extra tray"
     ],
-    image: "/Aureole Product 3D/Front Angle/New Hot Air Oven Final 3 Front.png",
+    image: "/Aureole Product 3D/Front Angle/New Hot Air Oven Final 3 Front.webp",
     images: [
-        "/Aureole Product 3D/Front Angle/New Hot Air Oven Final 3 Front.png",
-        "/Aureole Product 3D/Left Angle/New Hot Air Oven Final 3 Left.png",
-        "/Aureole Product 3D/Right Angle/New Hot Air Oven Final 3 Right.png"
+        "/Aureole Product 3D/Front Angle/New Hot Air Oven Final 3 Front.webp",
+        "/Aureole Product 3D/Left Angle/New Hot Air Oven Final 3 Left.webp",
+        "/Aureole Product 3D/Right Angle/New Hot Air Oven Final 3 Right.webp"
     ],
     imageCaptions: ["Front View", "Left View", "Right View"],
     complexTable: {

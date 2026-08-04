@@ -12,5 +12,5 @@ export const laboratoryWorktops: ProductDetail = {
     models: [],
     regularAttributes: [],
     addOnsAttributes: [],
-    image: "/products/Furniture/worktops.png"
+    image: "/products/Furniture/worktops.webp"
 };

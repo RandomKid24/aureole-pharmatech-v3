@@ -25,11 +25,11 @@ export const walkInBodIncubator: ProductDetail = {
         "Door Access System (Biometric)",
         "Extra Trays"
     ],
-    image: "/Aureole Product 3D/Front Angle/Walk in BOD Chamber Final Front.png",
+    image: "/Aureole Product 3D/Front Angle/Walk in BOD Chamber Final Front.webp",
     images: [
-        "/Aureole Product 3D/Front Angle/Walk in BOD Chamber Final Front.png",
-        "/Aureole Product 3D/Left Angle/Walk in BOD Chamber Final Left.png",
-        "/Aureole Product 3D/Right Angle/Walk in BOD Chamber Final Right.png"
+        "/Aureole Product 3D/Front Angle/Walk in BOD Chamber Final Front.webp",
+        "/Aureole Product 3D/Left Angle/Walk in BOD Chamber Final Left.webp",
+        "/Aureole Product 3D/Right Angle/Walk in BOD Chamber Final Right.webp"
     ],
     imageCaptions: ["Front View", "Left View", "Right View"],
     complexTable: {

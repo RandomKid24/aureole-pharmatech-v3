@@ -22,14 +22,14 @@ const Hero: React.FC = () => {
 
   return (
     <section ref={heroRef} className="relative min-h-[95vh] flex items-center bg-transparent pt-32 pb-16 sm:pt-40 lg:pt-48 z-10 overflow-hidden">
-      {/* Background Grid Removed to lead with wavebg.png */}
+      {/* Background Grid Removed to lead with wavebg.webp */}
 
       {/* Massive Washed Out Logo - Static, on top of background */}
       <div
         className="absolute top-[45%] -right-24 md:-right-48 w-[700px] md:w-[1000px] lg:w-[1200px] opacity-[0.05] pointer-events-none z-10 select-none -translate-y-1/2"
       >
         <img
-          src="/aureole-logo.png"
+          src="/aureole-logo.webp"
           alt="Aureole Pharma Tech watermark logo"
           className="w-full h-auto grayscale brightness-0"
         />

@@ -39,7 +39,7 @@ const SoftwareHero: React.FC = () => {
                 {/* Washed out Logo Decoration - Fully Visible */}
                 <div className="hidden lg:block relative z-0 opacity-[0.05] grayscale pointer-events-none select-none ml-12">
                     <img
-                        src="/certification-logos/21CFRpart11.png"
+                        src="/certification-logos/21CFRpart11.webp"
                         alt="21 CFR Part 11 Background"
                         className="w-[550px] h-auto"
                     />

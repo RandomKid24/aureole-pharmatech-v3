@@ -14,7 +14,7 @@ const reasons = [
 
 const WhyChooseUs: React.FC = () => {
     return (
-        <section className="py-24 bg-white border-b border-slate-100 bg-[url('/wavebg.png')] bg-cover bg-fixed">
+        <section className="py-24 bg-white border-b border-slate-100 bg-[url('/wavebg.webp')] bg-cover bg-fixed">
             <div className="container mx-auto px-6 sm:px-12 lg:px-24">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                     <div>

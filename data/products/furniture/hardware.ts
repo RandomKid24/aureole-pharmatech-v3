@@ -16,5 +16,5 @@ export const hardware: ProductDetail = {
     models: [],
     regularAttributes: [],
     addOnsAttributes: [],
-    image: "/products/Furniture/hardware.png"
+    image: "/products/Furniture/hardware.webp"
 };

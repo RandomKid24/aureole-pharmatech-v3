@@ -26,11 +26,11 @@ export const pharmaRefrigerator: ProductDetail = {
         "Scanner : 4 pt. temperature sensor",
         "Door Access System (Numeric/Biometric)"
     ],
-    image: "/Aureole Product 3D/Front Angle/Dual Zone Chamber Front.png",
+    image: "/Aureole Product 3D/Front Angle/Dual Zone Chamber Front.webp",
     images: [
-        "/Aureole Product 3D/Front Angle/Dual Zone Chamber Front.png",
-        "/Aureole Product 3D/Left Angle/Dual Zone Chamber Left.png",
-        "/Aureole Product 3D/Right Angle/Dual Zone Chamber Right.png"
+        "/Aureole Product 3D/Front Angle/Dual Zone Chamber Front.webp",
+        "/Aureole Product 3D/Left Angle/Dual Zone Chamber Left.webp",
+        "/Aureole Product 3D/Right Angle/Dual Zone Chamber Right.webp"
     ],
     imageCaptions: ["Front View", "Left View", "Right View"],
     complexTable: {

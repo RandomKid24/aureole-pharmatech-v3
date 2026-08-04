@@ -73,7 +73,7 @@ export const PRODUCTS = [
         id: 'walk-in-bod-incubator',
         name: 'WALK IN BOD INCUBATOR',
         category: 'WALK-IN',
-        image: '/Aureole Product 3D/Front Angle/Walk in BOD Chamber Final Front.png',
+        image: '/Aureole Product 3D/Front Angle/Walk in BOD Chamber Final Front.webp',
         description: 'Premium walk-in Incubators for precise and uniform temperature conditions inside the chamber.',
         specs: { 'Range': '10°C to 60°C', 'Accuracy': '± 0.2°C' }
     },
@@ -81,7 +81,7 @@ export const PRODUCTS = [
         id: 'humidity-chamber-stability-chamber',
         name: 'HUMIDITY CHAMBER',
         category: 'STABILITY',
-        image: '/Aureole Product 3D/Front Angle/Humidity Chamberr Front Angle.png',
+        image: '/Aureole Product 3D/Front Angle/Humidity Chamberr Front Angle.webp',
         description: 'Precise environmental control for long-term stability studies and ICH compliance.',
         specs: { 'Range': '20°C to 60°C', 'Humidity': '40% to 95% RH' }
     },
@@ -89,7 +89,7 @@ export const PRODUCTS = [
         id: 'ultra-low-deep-freezer-80c',
         name: 'ULTRA LOW FREEZER',
         category: 'STABILITY',
-        image: '/Aureole Product 3D/Front Angle/New Deep Freezer Ultra Low Final Front.png',
+        image: '/Aureole Product 3D/Front Angle/New Deep Freezer Ultra Low Final Front.webp',
         description: 'Ultra-low temperature storage for sensitive biological samples and vaccines.',
         specs: { 'Range': 'Upto -80°C', 'Control': 'PLC Based' }
     },
@@ -97,7 +97,7 @@ export const PRODUCTS = [
         id: 'muffle-furnace',
         name: 'MUFFLE FURNACE',
         category: 'STABILITY',
-        image: '/products/StablilityChamber-Standalone/muffle-furnace.png',
+        image: '/products/StablilityChamber-Standalone/muffle-furnace.webp',
         description: 'Designed for high-temperature applications up to 1150°C with precise heat treatment.',
         specs: { 'Range': 'Upto 1150°C', 'Accuracy': '± 5°C' }
     },
@@ -105,7 +105,7 @@ export const PRODUCTS = [
         id: 'eco-series',
         name: 'ECO SERIES',
         category: 'ULTRASONIC',
-        image: '/Aureole Product 3D/Table Top/ultrasomic Cleaner M Series.png',
+        image: '/Aureole Product 3D/Table Top/ultrasomic Cleaner M Series.webp',
         description: 'Efficient ultrasonic cleaning solutions for laboratory and healthcare use.',
         specs: { 'Cleaning': 'Ultrasonic', 'Control': 'Analog/Digital' }
     },
@@ -113,7 +113,7 @@ export const PRODUCTS = [
         id: 'steam-bath',
         name: 'STEAM BATH',
         category: 'WATER BATHS',
-        image: '/Aureole Product 3D/Table Top/Steam Bath Final.png',
+        image: '/Aureole Product 3D/Table Top/Steam Bath Final.webp',
         description: 'Advanced version water bath maintaining 100°C for microbiology and production.',
         specs: { 'Range': 'Amb + 5 to 100°C', 'Accuracy': '± 2°C' }
     },
@@ -121,7 +121,7 @@ export const PRODUCTS = [
         id: 'constant-water-bath',
         name: 'CONSTANT WATER BATH',
         category: 'WATER BATHS',
-        image: '/Aureole Product 3D/Table Top/Water Bath Final.png',
+        image: '/Aureole Product 3D/Table Top/Water Bath Final.webp',
         description: 'Heated water testing cabinet for biological labs and sensitive specimen incubation.',
         specs: { 'Range': 'Amb + 5 to 99.9°C', 'Accuracy': '± 0.5°C' }
     },
@@ -129,7 +129,7 @@ export const PRODUCTS = [
         id: 'oil-bath',
         name: 'OIL BATH',
         category: 'WATER BATHS',
-        image: '/Aureole Product 3D/Table Top/Oil Bath Final.png',
+        image: '/Aureole Product 3D/Table Top/Oil Bath Final.webp',
         description: 'Stable high-temperature immersion for chemical laboratories up to 250°C.',
         specs: { 'Range': '50°C to 250°C', 'Accuracy': '± 2°C' }
     },
@@ -137,7 +137,7 @@ export const PRODUCTS = [
         id: 'air-sampler-basic-model',
         name: 'AIR SAMPLER BASIC 4',
         category: 'AIR SAMPLER',
-        image: '/Aureole Product 3D/Table Top/Air Sampaler.png',
+        image: '/Aureole Product 3D/Table Top/Air Sampaler.webp',
         description: 'Advanced air sampling system for environmental monitoring and QC applications.',
         specs: { 'Flow Rate': '25-200 L/min', 'Volume': '25-2000 L' }
     }

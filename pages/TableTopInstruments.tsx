@@ -25,7 +25,7 @@ const TableTopInstruments: React.FC = () => {
                 title="TABLE TOP"
                 subtitle={<span className="text-aureole-blue">Instruments</span>}
                 watermark="INSTRUMENTS"
-                image="/assets/sketches/table-top-sketch.png"
+                image="/assets/sketches/table-top-sketch.webp"
                 showAccent={false}
             />
             <KeyDetailsAccordion

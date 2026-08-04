@@ -36,7 +36,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
                     <div className="flex justify-between items-center mb-8">
                         <div className="flex items-center gap-3">
                             <img
-                                src="/aureole-logo.png"
+                                src="/aureole-logo.webp"
                                 alt="Aureole Pharma-Tech"
                                 className="h-10 w-auto"
                             />

@@ -20,7 +20,7 @@ const CleanroomEquipment: React.FC = () => {
                 title="CLEANROOM"
                 subtitle={<span className="text-aureole-blue">EQUIPMENT</span>}
                 watermark="STERILITY"
-                image="/assets/sketches/cleanroom-sketch.png"
+                image="/assets/sketches/cleanroom-sketch.webp"
                 showAccent={false}
             />
             <KeyDetailsAccordion

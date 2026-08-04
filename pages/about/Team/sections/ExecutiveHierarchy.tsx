@@ -10,35 +10,35 @@ const ExecutiveHierarchy: React.FC = () => {
             role: "Founder & Director",
             company: "Aureole Pharma Pvt. Ltd.",
             quote: "Individuals constitute the invaluable cornerstone of any organization. It is through their contributions that we establish processes, vision, and foster collaborations.",
-            img: "/about/managing-director.jpg",
+            img: "/about/managing-director.webp",
             linkedin: "https://www.linkedin.com/in/dr-kiran-badgujar-385a3367/"
         },
         {
             name: "Bipin Badgujar",
             role: "Chief Executive Officer",
             company: "Aureole Pharma Pvt. Ltd.",
-            img: "/about/bipin-badgujar.jpg",
+            img: "/about/bipin-badgujar.webp",
             linkedin: "https://www.linkedin.com/in/bipin-a-badgujar-5a8b5b16/"
         },
         {
             name: "Jitendra Tajanpure",
             role: "VP Finance & Accounts",
             company: "Aureole Pharma Pvt. Ltd.",
-            img: "/about/jitendra-tajanpure.jpeg",
+            img: "/about/jitendra-tajanpure.webp",
             linkedin: "https://www.linkedin.com/in/jitendra-tajanpure-6a0937296/"
         },
         {
             name: "Sandeep Kale",
             role: "VP - Strategy & Biz Dev",
             company: "Aureole Pharma Pvt. Ltd.",
-            img: "/about/sandeep-kale.jpg",
+            img: "/about/sandeep-kale.webp",
             linkedin: "#"
         },
         {
             name: "Shubham Badgujar",
             role: "Manager - IBD",
             company: "Aureole Pharma Pvt. Ltd.",
-            img: "/about/shubham-badgujar.jpg",
+            img: "/about/shubham-badgujar.webp",
             linkedin: "https://www.linkedin.com/in/shubham-badgujar-0025b7169/"
         }
     ];

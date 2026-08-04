@@ -14,5 +14,5 @@ export const cFrameSystem: ProductDetail = {
     models: [],
     regularAttributes: [],
     addOnsAttributes: [],
-    image: "/products/Furniture/c-frame.png"
+    image: "/products/Furniture/c-frame.webp"
 };

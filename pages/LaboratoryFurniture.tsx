@@ -26,7 +26,7 @@ const LaboratoryFurniture: React.FC = () => {
                 subtitle={<span className="text-aureole-blue">FURNITURE</span>}
                 description={furnitureCategory.description}
                 watermark="FURNITURE"
-                image="/assets/sketches/lab-furniture-sketch.png"
+                image="/assets/sketches/lab-furniture-sketch.webp"
                 showAccent={false}
             />
 

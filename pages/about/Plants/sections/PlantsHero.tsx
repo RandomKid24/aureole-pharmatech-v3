@@ -7,7 +7,7 @@ const PlantsHero: React.FC = () => {
         <section className="relative h-[70vh] flex items-center bg-transparent">
             <div className="absolute inset-0 z-0">
                 <LazyImage
-                    src="/plants/DJI_20240723121709_0011_D.JPG"
+                    src="/plants/DJI_20240723121709_0011_D.webp"
                     alt="Aureole Manufacturing Aerial View"
                     className="w-full h-full object-cover opacity-50 shadow-inner"
                 />

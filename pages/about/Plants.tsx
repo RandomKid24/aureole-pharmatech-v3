@@ -4,9 +4,9 @@ import PlantsHero from './Plants/sections/PlantsHero';
 import FacilityUnits from './Plants/sections/FacilityUnits';
 // ... galleryImages ...
 const galleryImages = [
-    "/plants/DJI_20240723121709_0011_D.JPG",
-    "/plants/DJI_20240723124450_0018_D_2.jpg",
-    "/plants/IMG_8943.jpg",
+    "/plants/DJI_20240723121709_0011_D.webp",
+    "/plants/DJI_20240723124450_0018_D_2.webp",
+    "/plants/IMG_8943.webp",
     "/plants/Pharnma plant 2_2.jpg"
 ];
 

@@ -111,7 +111,7 @@ const Header: React.FC = () => {
           }`}>
           <Link to="/" className="flex items-center gap-5 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <img
-              src="/aureole-logo.png"
+              src="/aureole-logo.webp"
               alt="Aureole Pharma-Tech"
               className={`${isScrolled ? 'h-9 lg:h-10' : 'h-11 lg:h-12'} w-auto transition-all duration-300 group-hover:scale-105`}
             />

@@ -4,7 +4,7 @@ import { Phone, Mail, Globe } from 'lucide-react';
 
 const ServiceCTA: React.FC = () => {
     return (
-        <section className="py-16 bg-white border-t border-slate-100 bg-[url('/wavebg.png')] bg-cover bg-fixed">
+        <section className="py-16 bg-white border-t border-slate-100 bg-[url('/wavebg.webp')] bg-cover bg-fixed">
             <div className="container mx-auto px-6 sm:px-12 lg:px-24">
                 <div className="max-w-5xl mx-auto text-center">
                     <h2 className="text-3xl lg:text-5xl font-black font-heading tracking-tighter text-aureole-blue uppercase mb-12 leading-[0.85]">

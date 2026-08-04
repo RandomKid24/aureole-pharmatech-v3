@@ -19,11 +19,11 @@ export const deepFreezer: ProductDetail = {
         "Hooter System",
         "Extra Trays"
     ],
-    image: "/Aureole Product 3D/Front Angle/New Deep Freezer Ultra Low Final Front.png",
+    image: "/Aureole Product 3D/Front Angle/New Deep Freezer Ultra Low Final Front.webp",
     images: [
-        "/Aureole Product 3D/Front Angle/New Deep Freezer Ultra Low Final Front.png",
-        "/Aureole Product 3D/Left Angle/New Deep Freezer Ultra Low Final Left.png",
-        "/Aureole Product 3D/Right Angle/New Deep Freezer Ultra Low Final Right.png"
+        "/Aureole Product 3D/Front Angle/New Deep Freezer Ultra Low Final Front.webp",
+        "/Aureole Product 3D/Left Angle/New Deep Freezer Ultra Low Final Left.webp",
+        "/Aureole Product 3D/Right Angle/New Deep Freezer Ultra Low Final Right.webp"
     ],
     imageCaptions: ["Front View", "Left View", "Right View"],
     complexTable: {

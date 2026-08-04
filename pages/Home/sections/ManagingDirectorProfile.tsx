@@ -13,7 +13,7 @@ const ManagingDirectorProfile: React.FC = () => {
                   <div className="max-w-[420px] mx-auto xl:mx-0">
                      <div className="aspect-[3/4] transition-all duration-1000 overflow-hidden bg-slate-50 relative">
                         <img
-                           src="/about/managing-director.jpg"
+                           src="/about/managing-director.webp"
                            alt="Dr. Kiran Badgujar, Managing Director of Aureole PharmaTech"
                            className="w-full h-full object-cover object-top"
                         />
