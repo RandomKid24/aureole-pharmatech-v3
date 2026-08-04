@@ -71,9 +71,41 @@ aureole-pharmatech-v3/
    npm run sitemap
    ```
 
+## 🔧 Maintenance & Automation
+
+### 🖼️ Image Optimization Guide
+Whenever you add new heavy PNG or JPG images to the `public/` folder, run the automated optimization script to convert them to lightweight WebP files and update all code references automatically:
+
+```bash
+npm run optimize
+```
+*or directly:*
+```bash
+python3 scripts/optimize-images.py
+```
+
+**What this script does:**
+1. Scans `public/` for raw `.png`, `.jpg`, and `.jpeg` images.
+2. Converts them into optimized `.webp` images (and scales oversized 4K images down to 1600px width).
+3. Automatically updates all image path references across your React components, data files, and HTML files.
+4. Deletes original uncompressed image files to keep the repository lightweight.
+
 ---
 
-## 🔧 Maintenance
+### ❓ Why do I see ~80 pending changes in Git?
+When you optimize images or add new V-Cards, Git tracks:
+1. **New WebP Images**: Super-lightweight `.webp` files generated in `public/`.
+2. **Deleted Uncompressed Files**: Old `.png`, `.jpg`, and unused `.gif` files removed from `public/`.
+3. **Updated Code References**: Data files (`data/homeData.tsx`, `data/products/`, etc.) and component files updated to point to `.webp`.
+
+To save these optimizations to your repository and deploy to Vercel, run:
+```bash
+git add .
+git commit -m "Optimize assets to WebP and update vcard sitemap"
+git push
+```
+
+---
 
 - **Adding V-Cards**: Please refer to the [VCARD_MAINTENANCE.md](VCARD_MAINTENANCE.md) for the standardized workflow.
 - **Product Updates**: Catalog status is tracked in [PRODUCT_LIST_STATUS.md](PRODUCT_LIST_STATUS.md).
