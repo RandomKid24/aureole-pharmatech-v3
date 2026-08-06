@@ -274,7 +274,7 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product, productName }) => {
                                         <>
                                             <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 flex items-center justify-center mb-3 transition-transform duration-300 group-hover:scale-105">
                                                 <img
-                                                    src={`/products/attributes-icons/${imgName}`}
+                                                    src={`/products/attributes-icons/${imgName.replace(/\.png$/i, '.webp')}`}
                                                     alt={item}
                                                     className="w-full h-full object-contain drop-shadow-sm"
                                                 />

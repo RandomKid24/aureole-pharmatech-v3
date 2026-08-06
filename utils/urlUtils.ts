@@ -8,6 +8,7 @@ export const slugify = (text: string): string => {
         .replace(/\//g, '-')   // Replace slashes with dashes
         .replace(/[()]/g, '')  // Remove parentheses
         .replace(/\./g, '-')   // Replace dots with dashes
+        .replace(/°/g, '')     // Remove degree symbol (the following C already forms the "c")
         .replace(/\s+/g, '-')  // Replace spaces with dashes
         .replace(/--+/g, '-')  // Collapse multiple dashes
         .replace(/^-+|-+$/g, ''); // Trim start/end dashes

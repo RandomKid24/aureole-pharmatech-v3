@@ -78,7 +78,7 @@ export const PRODUCTS = [
         specs: { 'Range': '10°C to 60°C', 'Accuracy': '± 0.2°C' }
     },
     {
-        id: 'humidity-chamber-stability-chamber',
+        id: 'humidity-chamber',
         name: 'HUMIDITY CHAMBER',
         category: 'STABILITY',
         image: '/Aureole Product 3D/Front Angle/Humidity Chamberr Front Angle.webp',
@@ -102,7 +102,7 @@ export const PRODUCTS = [
         specs: { 'Range': 'Upto 1150°C', 'Accuracy': '± 5°C' }
     },
     {
-        id: 'eco-series',
+        id: 'ultrasonic-bath',
         name: 'ECO SERIES',
         category: 'ULTRASONIC',
         image: '/Aureole Product 3D/Table Top/ultrasomic Cleaner M Series.webp',
@@ -118,7 +118,7 @@ export const PRODUCTS = [
         specs: { 'Range': 'Amb + 5 to 100°C', 'Accuracy': '± 2°C' }
     },
     {
-        id: 'constant-water-bath',
+        id: 'water-bath',
         name: 'CONSTANT WATER BATH',
         category: 'WATER BATHS',
         image: '/Aureole Product 3D/Table Top/Water Bath Final.webp',
@@ -134,7 +134,7 @@ export const PRODUCTS = [
         specs: { 'Range': '50°C to 250°C', 'Accuracy': '± 2°C' }
     },
     {
-        id: 'air-sampler-basic-model',
+        id: 'air-sampler',
         name: 'AIR SAMPLER BASIC 4',
         category: 'AIR SAMPLER',
         image: '/Aureole Product 3D/Table Top/Air Sampaler.webp',
