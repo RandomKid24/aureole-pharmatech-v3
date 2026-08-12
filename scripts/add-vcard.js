@@ -55,7 +55,7 @@ let html = fs.readFileSync(path.join(templateDir, 'index.html'), 'utf8');
 // Update Titles and Meta Tags
 html = html.replace(/<title>.*?<\/title>/, `<title>${name} | Aureole Pharma Tech Pvt. Ltd.</title>`);
 html = html.replace(/property="og:title" content=".*?"/g, `property="og:title" content="${name} | Digital V-Card | AUREOLE PHARMA PVT. LTD."`);
-html = html.replace(/property="og:image" content="https:\/\/aureolepharmatech\.com\/vcards\/.*?\/og-image\.jpg"/g, `property="og:image" content="https://aureolepharmatech.com/vcards/${slug}/og-image.jpg"`);
+html = html.replace(/property="og:image" content="https:\/\/aureolepharmatech\.com\/vcards\/.*?\/og-image\.jpg"/g, `property="og:image" content="https://aureolepharmatech.com/vcards/${slug}/og-image.webp"`);
 html = html.replace(/property="og:site_name" content=".*?"/g, `property="og:site_name" content="${name}, Digital V-Card"`);
 html = html.replace(/property="og:description" content=".*?"/g, `property="og:description" content="${name} | Digital V-Card | AUREOLE PHARMA PVT. LTD."`);
 

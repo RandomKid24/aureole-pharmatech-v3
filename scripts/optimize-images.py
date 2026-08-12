@@ -46,17 +46,34 @@ for img_path in target_images:
     cmd = f'cwebp -resize 1600 0 -q {q} "{img_path}" -o "{webp_path}"'
     
     res = subprocess.run(cmd, shell=True, capture_output=True, text=True)
-    if res.returncode == 0 and os.path.exists(webp_path):
+    converted_ok = res.returncode == 0 and os.path.exists(webp_path)
+    
+    # Fallback to Pillow if cwebp is not installed / available
+    if not converted_ok:
+        try:
+            from PIL import Image
+            im = Image.open(img_path)
+            im.save(webp_path, "WEBP", quality=int(q))
+            converted_ok = os.path.exists(webp_path)
+        except Exception as e:
+            print(f"Failed to convert {img_path} with Pillow: {e}")
+
+    if converted_ok:
         orig_sz = os.path.getsize(img_path)
         new_sz = os.path.getsize(webp_path)
         
-        rel_img = os.path.relpath(img_path, PUBLIC_DIR)
-        rel_webp = os.path.relpath(webp_path, PUBLIC_DIR)
+        rel_img = os.path.relpath(img_path, PUBLIC_DIR).replace("\\", "/")
+        rel_webp = os.path.relpath(webp_path, PUBLIC_DIR).replace("\\", "/")
         
         print(f"Converted: {rel_img} ({orig_sz/1024:.1f}KB -> {new_sz/1024:.1f}KB)")
         
+        # Also store original filename (e.g. logo.png -> logo.webp or profile.png -> profile.webp)
+        filename_old = os.path.basename(img_path)
+        filename_new = os.path.basename(webp_path)
+
         replacements[rel_img] = rel_webp
         replacements["/" + rel_img] = "/" + rel_webp
+        replacements[filename_old] = filename_new
         
         # Remove original uncompressed file
         try:

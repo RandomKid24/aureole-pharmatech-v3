@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "sitemap": "node scripts/generate-sitemap.js",
-    "optimize": "python3 scripts/optimize-images.py"
+    "optimize": "python scripts/optimize-images.py"
   },
   "dependencies": {
     "@dotlottie/react-player": "^1.6.19",

@@ -73,7 +73,7 @@ ul{
 
 
 #education-main {
-	background-image: url(../images/background.jpeg);
+	background-image: url(../images/background.webp);
 	background-repeat: no-repeat;
 	background-size: contain;
 }
@@ -1060,7 +1060,7 @@ blockquote::before {
 	padding: 16px;
 }
 .testimonial-grid:after {
-	content: url(../images/main-img/testimonial-shape.png);
+	content: url(../images/main-img/testimonial-shape.webp);
 	filter: brightness(0) saturate(100%) invert(49%) sepia(92%) saturate(425%) hue-rotate(147deg) brightness(96%) contrast(86%);
 	position: absolute;
 	top: -30px;
