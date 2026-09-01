@@ -221,3 +221,6 @@
     <loc>https://www.aureolepharmatech.com/vcards/vishwanath-ghuge/</loc>
   </url>
 
+  <url>
+    <loc>https://www.aureolepharmatech.com/vcards/pritam-gujarathi/</loc>
+  </url>
