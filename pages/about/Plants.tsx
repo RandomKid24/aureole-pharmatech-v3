@@ -7,7 +7,7 @@ const galleryImages = [
     "/plants/DJI_20240723121709_0011_D.webp",
     "/plants/DJI_20240723124450_0018_D_2.webp",
     "/plants/IMG_8943.webp",
-    "/plants/Pharnma plant 2_2.jpg"
+    "/plants/Pharnma plant 2_2.webp"
 ];
 
 const Plants: React.FC = () => {

@@ -30,7 +30,7 @@ const FacilityUnits: React.FC<FacilityUnitsProps> = ({ onImageClick }) => {
             title: "Table-Top Instruments & Lab Systems",
             location: "Nashik Industrial Area, Maharashtra",
             desc: "A dedicated manufacturing facility focused on precision table-top instruments and laboratory furniture systems. This unit ensures excellence in compact analytical and storage solutions.",
-            image: "/plants/Pharnma plant 2_2.jpg",
+            image: "/plants/Pharnma plant 2_2.webp",
             features: []
         }
     ];

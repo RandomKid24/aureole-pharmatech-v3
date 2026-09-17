@@ -97,7 +97,7 @@ const ComplianceGrid: React.FC = () => {
                             </div>
                             <div className="w-24 h-24 sm:w-32 sm:h-32 flex-shrink-0 flex items-center justify-center">
                                 <img
-                                    src="/certification-logos/zed gold certificate.png"
+                                    src="/certification-logos/zed gold certificate.webp"
                                     alt="ZED Gold Certification"
                                     className="max-w-full max-h-full object-contain"
                                 />

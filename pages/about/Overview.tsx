@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import SEO from '../../components/SEO';
 import LeadershipVision from './Overview/sections/LeadershipVision';
-import TeamArchitecture from './Overview/sections/TeamArchitecture';
 import Philosophy from './Overview/sections/Philosophy';
 import Ventures from './Overview/sections/Ventures';
 
@@ -18,7 +17,6 @@ const Overview: React.FC = () => {
                 canonical="https://www.aureolepharmatech.com/about/"
             />
             <LeadershipVision />
-            <TeamArchitecture />
             <Philosophy />
             <Ventures />
         </div>
