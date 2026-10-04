@@ -39,8 +39,7 @@ const TeamArchitecture: React.FC = () => {
 
     const regionalTeams = [
         { name: "Mr Rohan Gujrathi", role: "Regional Sales Head - West (GJ)", vcard: "/vcards/rohan-gujarathi" },
-        { name: "Mr Dnyaneshwar Gaikwad", role: "Regional Sales Head - South", vcard: "/vcards/dnyaneshwar-gaikwad" },
-        { name: "Mr. Yash Gujarathi", role: "Regional Sales Head - West (GJ)", vcard: "/vcards/yash-gujarathi" }
+        { name: "Mr Dnyaneshwar Gaikwad", role: "Regional Sales Head - South", vcard: "/vcards/dnyaneshwar-gaikwad" }
     ];
 
     return (

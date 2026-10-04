@@ -91,6 +91,11 @@ folders.forEach(slug => {
         console.log(`  - Deleting redundant local JS folder...`);
         removeDir(localJs);
     }
+    const localWebfonts = path.join(folderPath, 'assets/webfonts');
+    if (fs.existsSync(localWebfonts)) {
+        console.log(`  - Deleting redundant local webfonts folder...`);
+        removeDir(localWebfonts);
+    }
 
     // 6. Update vcard_urls.txt if missing
     if (!urlsContent.includes(`/vcards/${slug}/`)) {
