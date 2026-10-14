@@ -26,4 +26,5 @@ Client-side React 19 SPA (Vite, React Router 7, no SSR framework) deployed on Ve
 - **vCards** are standalone HTML under `public/vcards-2026/`, served at `/vcards/<slug>/` via rewrites, sent `X-Robots-Tag: noindex`, yet listed in the sitemap from `vcard_urls.txt`.
 - **Third-party runtime pieces:** GA4 tag and a chat widget in `index.html`; enquiry forms POST to an external HRMS API (`hrms.encryptedbar.com`); careers pages call a separate jobs API. Analytics events go through `utils/track.ts`.
 - `public/content.md` and `public/llms.txt` are crawler-facing fact sheets that must mirror the UI/product data (the UI wins on conflicts).
+- `BUSINESS_FACTS.md` is the sourced fact register (identity, contacts, certificates, services, product specs); check it before writing any claim, and add facts there with a source.
 - Content rule: 21 CFR Part 11 is described as "supports requirements", never "compliant"; don't invent specs, certifications or ratings.

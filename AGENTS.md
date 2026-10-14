@@ -161,6 +161,6 @@ Whenever new assets/images (`.png`, `.jpg`, `.jpeg`, etc.) are added to `public/
 ### 💡 General Agent Guidelines:
 - **Avoid Direct DOM Manipulation**: In React components, use state/refs or GSAP / Framer Motion hooks.
 - **Maintain Metadata & SEO**: Update OpenGraph tags and structured data whenever adding products or routes.
-- **Preserve Documentation**: Keep `VCARD_MAINTENANCE.md`, `PRODUCT_LIST_STATUS.md`, `public/content.md`, `public/llms.txt`, and sitemap registries in sync with changes.
+- **Preserve Documentation**: Keep `VCARD_MAINTENANCE.md`, `PRODUCT_LIST_STATUS.md`, `public/content.md`, `public/llms.txt`, `BUSINESS_FACTS.md` (fact register with sources; check it before publishing any claim), and sitemap registries in sync with changes.
 
 
