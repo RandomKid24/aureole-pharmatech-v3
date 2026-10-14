@@ -1,29 +1,32 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import Overview from './pages/about/Overview';
-import Certification from './pages/about/Certification';
-import Plants from './pages/about/Plants';
-import Products from './pages/Products';
-import ProductDetail from './pages/ProductDetail';
-import StabilityChambers from './pages/StabilityChambers';
-import TableTopInstruments from './pages/TableTopInstruments';
-import LaboratoryFurniture from './pages/LaboratoryFurniture';
-import Service from './pages/Service';
-import Software from './pages/Software';
-import Events from './pages/Events';
-import Careers from './pages/Careers';
-import Privacy from './pages/Privacy';
 import NotFound from './pages/NotFound';
 import Contact from './pages/Contact';
 import AboutUs from './pages/AboutUs';
-import CityWiseProductPage from './pages/CityWiseProductPage';
 import { Navigate } from 'react-router-dom';
+import PageLoader from './components/PageLoader';
 import { preloadCriticalImages } from './utils/imagePreloader';
 
+
+// Route-level code splitting: Home stays in the main bundle; every other page loads on demand.
+const Overview = lazy(() => import('./pages/about/Overview'));
+const Certification = lazy(() => import('./pages/about/Certification'));
+const Plants = lazy(() => import('./pages/about/Plants'));
+const Products = lazy(() => import('./pages/Products'));
+const ProductDetail = lazy(() => import('./pages/ProductDetail'));
+const StabilityChambers = lazy(() => import('./pages/StabilityChambers'));
+const TableTopInstruments = lazy(() => import('./pages/TableTopInstruments'));
+const LaboratoryFurniture = lazy(() => import('./pages/LaboratoryFurniture'));
+const Service = lazy(() => import('./pages/Service'));
+const Software = lazy(() => import('./pages/Software'));
+const Events = lazy(() => import('./pages/Events'));
+const Careers = lazy(() => import('./pages/Careers'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const CityWiseProductPage = lazy(() => import('./pages/CityWiseProductPage'));
 
 // Component to handle scroll to top on route change
 const ScrollToTopOnRouteChange: React.FC = () => {
@@ -47,6 +50,7 @@ const App: React.FC = () => {
       <ScrollToTopOnRouteChange />
       <div className="relative selection:bg-blue-100 selection:text-blue-900">
         <Header />
+        <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/service" element={<Service />} />
@@ -80,6 +84,7 @@ const App: React.FC = () => {
           <Route path="/:cityProductSlug" element={<CityWiseProductPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </Suspense>
 
         <Footer />
       </div>

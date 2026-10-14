@@ -1,40 +1,39 @@
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { CLIENTS } from '@/constants';
-import LazyImage from '@/components/LazyImage';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import { animate, useInView } from 'framer-motion';
 
 const AnimatedCounter: React.FC<{ end: number; suffix?: string; duration?: number }> = ({ end, suffix = '', duration = 2 }) => {
     const ref = useRef<HTMLSpanElement>(null);
+    const inView = useInView(ref, { once: true, margin: '0px 0px -15% 0px' }); // ~ GSAP "top 85%"
 
     useEffect(() => {
         const el = ref.current;
-        if (!el) return;
-        const obj = { val: 0 };
-        const anim = gsap.to(obj, {
-            val: end,
+        if (!inView || !el) return;
+        const controls = animate(0, end, {
             duration,
-            ease: 'power2.out',
-            scrollTrigger: {
-                trigger: el,
-                start: 'top 85%',
-                once: true,
-            },
-            onUpdate: () => {
-                el.textContent = Math.round(obj.val) + suffix;
-            }
+            ease: 'easeOut',
+            onUpdate: (v) => { el.textContent = Math.round(v) + suffix; },
         });
-        return () => { anim.kill(); };
-    }, [end, suffix, duration]);
+        return () => controls.stop();
+    }, [inView, end, suffix, duration]);
 
     return <span ref={ref}>{end}{suffix}</span>;
 };
 
 
 const GlobalValidation: React.FC = () => {
+  // Start fetching every logo once the section is ~800px away, so the sideways-scrolling rows never show blank logos.
+  const sectionRef = useRef<HTMLElement>(null);
+  const [near, setNear] = useState(false);
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setNear(true); io.disconnect(); } }, { rootMargin: '800px' });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
   // Splitting the massive list into 3 rows for high-density impact
   const count = CLIENTS.length;
   const split = Math.ceil(count / 3);
@@ -49,10 +48,13 @@ const GlobalValidation: React.FC = () => {
         {[...items, ...items].map((client, idx) => (
           <div key={idx} className="flex items-center gap-6 sm:gap-10 group transition-all duration-300 w-[240px] sm:w-[450px] flex-shrink-0">
             <div className="w-20 h-10 sm:w-32 sm:h-16 flex-shrink-0 bg-white rounded-sm overflow-hidden p-2 border border-slate-100 group-hover:border-aureole-cyan/30 group-hover:scale-105 transition-all duration-300">
-              <LazyImage
-                src={client.logo}
+              <img
+                src={near ? client.logo : undefined}
                 alt={`Logo of ${client.name}, a pharmaceutical partner of Aureole PharmaTech`}
-                className="w-full h-full object-contain transition-opacity"
+                width={128}
+                height={64}
+                decoding="async"
+                className="w-full h-full object-contain"
               />
             </div>
             <span className="text-[10px] sm:text-xs font-black tracking-[0.15em] text-slate-300 group-hover:text-aureole-cyan uppercase transition-colors whitespace-nowrap overflow-hidden text-ellipsis">
@@ -65,7 +67,7 @@ const GlobalValidation: React.FC = () => {
   );
 
   return (
-    <section id="clients" className="py-16 sm:py-20 bg-transparent relative overflow-hidden group/section">
+    <section ref={sectionRef} id="clients" className="py-16 sm:py-20 bg-transparent relative overflow-hidden group/section">
 
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-20 relative z-10 mb-12">

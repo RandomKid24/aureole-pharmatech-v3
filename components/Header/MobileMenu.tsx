@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { X, ChevronDown, ArrowRight } from 'lucide-react';
-import { PRODUCT_CATALOG } from '@/data/products';
+import { PRODUCT_CATALOG } from '@/data/products/catalog';
 import { slugify } from '@/utils/urlUtils';
 import { motion, AnimatePresence } from 'framer-motion';
 
