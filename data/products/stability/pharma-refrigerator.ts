@@ -19,7 +19,7 @@ export const pharmaRefrigerator: ProductDetail = {
         "Inner outer door with proof silicon"
     ],
     addOnsAttributes: [
-        "21 CFR part 11 Compliance",
+        "21 CFR Part 11 Support",
         "Mobile Alert System",
         "Hooter System",
         "Extra Trays",

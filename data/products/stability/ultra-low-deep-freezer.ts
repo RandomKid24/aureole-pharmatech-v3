@@ -14,7 +14,7 @@ export const ultraLowDeepFreezer: ProductDetail = {
         "SS Door with gasket"
     ],
     addOnsAttributes: [
-        "21 CFR part 11 Compliance",
+        "21 CFR Part 11 Support",
         "Mobile Alert System",
         "Hooter System",
         "Extra Trays"

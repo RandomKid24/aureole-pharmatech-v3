@@ -19,7 +19,7 @@ export const walkInBodIncubator: ProductDetail = {
         "Racks with trays"
     ],
     addOnsAttributes: [
-        "21 CFR part 11 Compliance",
+        "21 CFR Part 11 Support",
         "Mobile Alert System",
         "Hooter System",
         "Door Access System (Biometric)",

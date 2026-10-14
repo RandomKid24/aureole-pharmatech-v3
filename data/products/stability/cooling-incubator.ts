@@ -15,7 +15,7 @@ export const coolingIncubator: ProductDetail = {
         "Master & stand by sensor"
     ],
     addOnsAttributes: [
-        "21 CFR part 11 Compliance",
+        "21 CFR Part 11 Support",
         "Standby Refrigeration System (for BOD Only)",
         "Scanner : 4 pt. temperature sensor",
         "Mobile Alert System",

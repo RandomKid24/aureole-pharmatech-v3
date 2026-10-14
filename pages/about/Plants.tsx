@@ -17,11 +17,7 @@ const Plants: React.FC = () => {
 
     return (
         <div className="pt-24 min-h-screen bg-transparent">
-            <SEO 
-                title="Pharmaceutical Laboratory Equipment, 3 Plant in Malegaon MIDC, Sinnar, Nashik, Maharashtra"
-                description="Standalone Chamber Manufacturing Hub, Corporate HQ & Walk-in Chamber Wing, Table-Top Instruments & Lab Systems, Our manufacturing facilities are equipped with precision engineering systems to ensure global compliance and quality standards for pharmaceutical laboratory equipment."
-                canonical="https://www.aureolepharmatech.com/about/plants/"
-            />
+            <SEO />
             <PlantsHero />
             <FacilityUnits onImageClick={() => { }} />
         </div>

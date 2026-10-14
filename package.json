@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && vite build --ssr scripts/prerender.entry.ts --outDir .prerender && node .prerender/prerender.entry.js",
     "preview": "vite preview",
     "sitemap": "node scripts/generate-sitemap.js",
     "optimize": "python3 scripts/optimize-images.py"

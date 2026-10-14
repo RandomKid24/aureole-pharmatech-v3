@@ -37,7 +37,7 @@ const offerings = [
     title: "3. SOFTWARE & DATA INTEGRITY SOLUTIONS",
     description: "Secure and compliant monitoring systems for regulated facilities.",
     items: [
-      "21 CFR Part 11–aligned software support",
+      "Software support for 21 CFR Part 11 requirements",
       "Audit trail & data integrity management",
       "Backup, restoration & system requalification",
       "Remote monitoring & diagnostics",

@@ -11,11 +11,7 @@ const Certification: React.FC = () => {
 
     return (
         <div className="pt-24 min-h-screen bg-transparent">
-            <SEO 
-                title="CE Certification, ISO 9001:2015, Quality Assured"
-                description="Authentication and regulatory compliance frameworks governing our precision engineering protocols., Committed to total customer satisfaction. Our focus remains on continuous improvement and 100% accuracy across all manufacturing processes."
-                canonical="https://www.aureolepharmatech.com/about/certification-compliance/"
-            />
+            <SEO />
             <CertHero />
             <ComplianceGrid />
             <PolicyFramework />

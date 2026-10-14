@@ -123,11 +123,7 @@ const Careers: React.FC = () => {
 
     return (
         <div className="pt-24 min-h-screen bg-transparent">
-            <SEO 
-                title="Careers at Aureole Pharma Tech Nashik, Maharashtra, India"
-                description="Join Aureole Pharma Tech in Nashik and be part of a dynamic team driving innovation in the pharmaceutical industry. We offer rewarding career opportunities, professional growth, and a collaborative work environment for individuals passionate about quality, research, and excellence."
-                canonical="https://www.aureolepharmatech.com/careers/"
-            />
+            <SEO />
             <CareersHero />
             <JobBoard
                 listings={listings}

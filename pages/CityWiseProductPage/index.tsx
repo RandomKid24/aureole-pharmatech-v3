@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { PRODUCT_DETAILS } from '../../data/products';
 import SEO from '../../components/SEO';
+import NotFound from '../NotFound';
+import { productLd, SITE_URL } from '../../data/pageSeo';
+import { CITY_REGION } from '../../data/cityWiseProducts';
 import { PRODUCTS, CITIES } from '../../data/cityWiseProducts';
 import ProductHero from '../ProductDetail/sections/ProductHero';
 import TechnicalDashboard from '../ProductDetail/sections/TechnicalDashboard';
@@ -46,7 +49,7 @@ const CityWiseProductPage: React.FC = () => {
 
 
     if (!product || !cityName) {
-        return <Navigate to="/" replace />;
+        return <NotFound />;
     }
 
     const showInfras = productName === "Walk In Humidity Chamber";
@@ -55,8 +58,9 @@ const CityWiseProductPage: React.FC = () => {
         <div className="pt-24 min-h-screen bg-transparent selection:bg-aureole-blue selection:text-white">
             <SEO 
                 title={`${productName} Manufacturers and Suppliers in ${cityName} | Aureole PharmaTech`}
-                description={`Aureole Pharma Tech Manufacturers, Suppliers of ${productName} in ${cityName}, Maharashtra. Best Quality & Price Pharmaceutical Equipment In India, Call: +91 86005 22240`}
-                canonical={`https://www.aureolepharmatech.com/${cityProductSlug}/`}
+                description={`Aureole Pharma Tech Manufacturers, Suppliers of ${productName} in ${cityName}${CITY_REGION[cityName] ? `, ${CITY_REGION[cityName]}` : ''}. Best Quality & Price Pharmaceutical Equipment In India, Call: +91 86005 22240`}
+                canonical={`${SITE_URL}/${cityProductSlug}/`}
+                jsonLd={[productLd(`${productName} in ${cityName}`, product.description, `${SITE_URL}/${cityProductSlug}/`, product.images || (product.image ? [product.image] : []))]}
             />
             {/* SEO specific content can be added here if needed, like a breadcrumb or custom title */}
             <div className="container mx-auto px-6 lg:px-24 mb-8">

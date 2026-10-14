@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import SEO from '../components/SEO';
+import DirectAnswers from '../components/DirectAnswers';
 import { PRODUCT_CATALOG, STABILITY_NAV_ITEMS, STABILITY_SECTIONS } from '../data/products';
 import CategoryHero from '../components/ui/CategoryHero';
 import KeyDetailsAccordion from '../components/ui/KeyDetailsAccordion';
@@ -16,10 +17,7 @@ const StabilityChambers: React.FC = () => {
 
     return (
         <div className="pt-24 min-h-screen bg-transparent">
-            <SEO 
-                title="ICH Compliant Stability Chambers | Pharmaceutical Grade Manufacturer – Aureole"
-                description="Walk-in and reach-in stability chambers with 21 CFR Part 11 compliant software. Manufactured in Nashik, supplied across India. Request a quote."
-            />
+            <SEO />
             <CategoryHero
                 title="precision ENVIRONMENTAL"
                 subtitle={<span className="text-aureole-blue">CONTROL</span>}
@@ -35,6 +33,7 @@ const StabilityChambers: React.FC = () => {
                 accentTitle="Insights"
             />
             <CategoryProductList subTypes={stabilityCategory.subTypes} />
+            <DirectAnswers />
         </div>
     );
 };

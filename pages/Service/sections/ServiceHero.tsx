@@ -22,7 +22,7 @@ const ServiceHero: React.FC = () => {
                                 <span className="text-aureole-blue">Optimizing Reliability.</span>
                             </h3>
                             <p className="text-base lg:text-lg text-slate-500 font-sans font-medium leading-relaxed max-w-2xl">
-                                We provide comprehensive technical ecosystems for Stability Chambers, Environmental Rooms, and Cold-Chain equipment. Aureole Pharmatech ensures your mission-critical systems remain audit-ready and operationally superior—strictly aligned with global cGMP, USFDA, EU-GMP, and 21 CFR Part 11 standards.
+                                We provide comprehensive technical ecosystems for Stability Chambers, Environmental Rooms, and Cold-Chain equipment. Aureole Pharmatech ensures your mission-critical systems remain audit-ready and operationally superior—aligned with global cGMP, USFDA, and EU-GMP expectations, with software support for 21 CFR Part 11 requirements.
                             </p>
                         </div>
                     </div>

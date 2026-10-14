@@ -42,6 +42,9 @@
   <url>
     <loc>https://www.aureolepharmatech.com/careers/</loc>
   </url>
+  <url>
+    <loc>https://www.aureolepharmatech.com/privacy-policy/</loc>
+  </url>
 
   <!-- ============================================================ -->
   <!-- PRODUCT PAGES                                                -->
@@ -51,13 +54,7 @@
     <loc>https://www.aureolepharmatech.com/products/humidity-chamber/</loc>
   </url>
   <url>
-    <loc>https://www.aureolepharmatech.com/products/stability-chamber/</loc>
-  </url>
-  <url>
     <loc>https://www.aureolepharmatech.com/products/bod-incubator/</loc>
-  </url>
-  <url>
-    <loc>https://www.aureolepharmatech.com/products/cooling-incubator/</loc>
   </url>
   <url>
     <loc>https://www.aureolepharmatech.com/products/cold-chamber/</loc>
@@ -118,57 +115,6 @@
   </url>
   <url>
     <loc>https://www.aureolepharmatech.com/products/stainless-steel-items-and-accessories/</loc>
-  </url>
-  <url>
-    <loc>https://www.aureolepharmatech.com/products/wall-side-bench/</loc>
-  </url>
-  <url>
-    <loc>https://www.aureolepharmatech.com/products/island-bench/</loc>
-  </url>
-  <url>
-    <loc>https://www.aureolepharmatech.com/products/corner-bench/</loc>
-  </url>
-  <url>
-    <loc>https://www.aureolepharmatech.com/products/anti-vibration-table/</loc>
-  </url>
-  <url>
-    <loc>https://www.aureolepharmatech.com/products/fume-hood/</loc>
-  </url>
-  <url>
-    <loc>https://www.aureolepharmatech.com/products/spot-extractor/</loc>
-  </url>
-  <url>
-    <loc>https://www.aureolepharmatech.com/products/overhead-cabinet/</loc>
-  </url>
-  <url>
-    <loc>https://www.aureolepharmatech.com/products/tall-storage-cabinet/</loc>
-  </url>
-  <url>
-    <loc>https://www.aureolepharmatech.com/products/storage-cabinets/</loc>
-  </url>
-  <url>
-    <loc>https://www.aureolepharmatech.com/products/laboratory-sinks/</loc>
-  </url>
-  <url>
-    <loc>https://www.aureolepharmatech.com/products/laboratory-fittings/</loc>
-  </url>
-  <url>
-    <loc>https://www.aureolepharmatech.com/products/lab-accessories/</loc>
-  </url>
-  <url>
-    <loc>https://www.aureolepharmatech.com/products/static-pass-box/</loc>
-  </url>
-  <url>
-    <loc>https://www.aureolepharmatech.com/products/dynamic-pass-box/</loc>
-  </url>
-  <url>
-    <loc>https://www.aureolepharmatech.com/products/laminar-air-flow/</loc>
-  </url>
-  <url>
-    <loc>https://www.aureolepharmatech.com/products/sampling-dispensing-booth/</loc>
-  </url>
-  <url>
-    <loc>https://www.aureolepharmatech.com/products/biosafety-cabinet/</loc>
   </url>
 
   <!-- ============================================================ -->

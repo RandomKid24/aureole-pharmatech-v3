@@ -16,9 +16,10 @@ const MAIN_PAGES = [
   { path: "/about/certification-compliance", priority: "0.6" },
   { path: "/about/plants", priority: "0.6" },
   { path: "/careers", priority: "0.6" },
+  { path: "/privacy-policy", priority: "0.3" },
 ];
 
-const PRODUCTS = [
+const ALL_PRODUCT_SLUGS = [
   "humidity-chamber",
   "stability-chamber",
   "bod-incubator",
@@ -61,6 +62,20 @@ const PRODUCTS = [
   "sampling-dispensing-booth",
   "biosafety-cabinet",
 ];
+
+// Only products listed in data/products/catalog.ts get a sitemap entry; removed products drop out automatically.
+// Same rules as slugify() in utils/urlUtils.ts.
+const slugify = (t) =>
+  (t === "Modular Laboratory Furniture" ? "lab-furniture" : t)
+    .toLowerCase().replace(/&/g, "and").replace(/\//g, "-").replace(/[()]/g, "").replace(/\./g, "-")
+    .replace(/°/g, "").replace(/\s+/g, "-").replace(/--+/g, "-").replace(/^-+|-+$/g, "");
+const catalogSrc = fs.readFileSync(path.join(process.cwd(), "data/products/catalog.ts"), "utf8");
+const LISTED_SLUGS = new Set(
+  [...catalogSrc.matchAll(/products:\s*\[([^\]]*)\]/g)].flatMap((m) => [...m[1].matchAll(/"([^"]+)"/g)].map((x) => slugify(x[1])))
+);
+const missing = [...LISTED_SLUGS].filter((x) => !ALL_PRODUCT_SLUGS.includes(x));
+if (missing.length) console.warn("WARNING: catalog products without a slug in ALL_PRODUCT_SLUGS:", missing);
+const PRODUCTS = ALL_PRODUCT_SLUGS.filter((x) => LISTED_SLUGS.has(x));
 
 const CITY_BASE_PRODUCTS = [
   { name: "Walk In BOD Incubator", slugPart: "walk-in-bod-incubator" },

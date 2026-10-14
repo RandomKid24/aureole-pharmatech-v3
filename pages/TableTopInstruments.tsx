@@ -16,11 +16,7 @@ const TableTopInstruments: React.FC = () => {
 
     return (
         <div className="pt-24 min-h-screen bg-transparent">
-            <SEO 
-                title="Table Top Instruments Manufacturer and Supplier in India, Aureole Pharma Tech"
-                description="Aureole Pharma Tech Manufacturer and Supplier of Table Top Instruments, Standard Instruments, Ultrasonic Bath, Water Bath, Steam Bath, Oil Bath, Dry Bath, Air Sampler"
-                canonical="https://www.aureolepharmatech.com/products/table-top-instruments/"
-            />
+            <SEO />
             <CategoryHero
                 title="TABLE TOP"
                 subtitle={<span className="text-aureole-blue">Instruments</span>}

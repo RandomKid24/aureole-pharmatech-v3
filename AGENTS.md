@@ -23,8 +23,10 @@ Welcome to the **Aureole Pharma Tech V3** codebase. This document serves as the 
 ```text
 aureole-pharmatech-v3/
 ├── data/                      # Structured product data, specifications, home/about content
+│   ├── pageSeo.ts             # Page titles/descriptions + breadcrumb/Product JSON-LD helpers (single source)
+│   ├── directAnswers.ts       # Question-led answers shown on key pages and prerendered HTML
 │   └── products/              # Subfolder categorized product definitions (.ts)
-├── components/                # Reusable UI components (Navbar, Footer, Modals, SEO)
+├── components/                # Reusable UI components (Navbar, Footer, Modals, SEO, DirectAnswers)
 ├── pages/                     # Routed page views (Home, About, Products, Service, etc.)
 │   ├── Home/                  # Modular landing sections
 │   ├── about/                 # Corporate profile, team, plants, compliance
@@ -36,6 +38,7 @@ aureole-pharmatech-v3/
 │   └── sitemap.xsl            # XSL stylesheet for formatted browser sitemap preview
 ├── scripts/                   # Automation scripts (Sitemaps, V-Cards, Image optimization)
 │   ├── optimize-images.py     # Converts JPG/PNG to WebP and updates code references
+│   ├── prerender.entry.ts     # Build step: writes dist/<route>/index.html for all 141 routes
 │   ├── generate-sitemap.js    # Compiles core pages, products, cities, and vcards to sitemap.xml
 │   ├── fix-all-vcards.js      # Refactors vCards to use _shared assets and fixes metadata
 │   └── add-vcard.js           # CLI tool to scaffold new employee digital business cards
@@ -51,7 +54,7 @@ aureole-pharmatech-v3/
 | Command | Action | Description |
 | :--- | :--- | :--- |
 | `npm run dev` | Start dev server | Launches Vite at `http://localhost:3000` |
-| `npm run build` | Production build | Compiles TSX into `dist/` |
+| `npm run build` | Production build | Compiles TSX into `dist/`, then prerenders static HTML (head tags, JSON-LD, crawlable body) for every route via `scripts/prerender.entry.ts` |
 | `npm run sitemap` | Regenerate sitemap | Runs `scripts/generate-sitemap.js` $\rightarrow$ `public/sitemap.xml` |
 | `npm run optimize` | Optimize images | Runs `python3 scripts/optimize-images.py` to convert assets to WebP |
 
@@ -136,6 +139,19 @@ Whenever new assets/images (`.png`, `.jpg`, `.jpeg`, etc.) are added to `public/
 
 ---
 
+### 🔎 SEO Workflow (Titles, Schema, Prerender):
+1. **Page metadata lives in `data/pageSeo.ts`** (core pages) and `data/seoMetadata.ts` (products). Pages render `<SEO />` with no props; never hard-code titles in page files. New route → add it to `PAGE_SEO` and `scripts/generate-sitemap.js`.
+2. **Use the `www` host** (`https://www.aureolepharmatech.com`) everywhere; Vercel redirects the bare domain.
+3. **Prerender**: `npm run build` writes static HTML per route. Prerendered head tags carry `data-rh` and are removed in `index.tsx` before React mounts, so don't add duplicate head tags in `index.html` for per-page data.
+4. **Facts**: UI/product data (`data/`, page components) is the source of truth. `public/content.md` and `public/llms.txt` must mirror it; update them whenever specs, services or stats change. Never invent specs, prices, ratings or certifications.
+5. **Direct answers**: add question/answer pairs to `data/directAnswers.ts` only from facts already shown in the UI.
+6. **Removed products**: the product list in `data/products/catalog.ts` decides what is live. Products not listed are left out of the sitemap/prerender and set to `noindex`; keep `PRODUCT_LIST_STATUS.md` in sync. **Redirect rules** live in `vercel.json`; redirected URLs must not be in the sitemap or internal links. (`/products/stability-chamber/` with trailing slash is a live page; only the no-slash form redirects.)
+7. **Not-found pages**: unknown routes render `pages/NotFound.tsx` with `noindex` (use `<SEO noindex />` for any thin/error view).
+8. **Tracking**: use `utils/track.ts` (GA4 `gtag`). Existing events: `generate_lead` (3 enquiry forms), `click_phone`, `click_email`.
+9. **Privacy policy** is `pages/Privacy.tsx` (`/privacy-policy`); update it if forms, analytics or third-party widgets change.
+
+---
+
 ### 💬 Communication, Explanations & Asking Questions:
 1. **Explain Every Action Simply**: Whenever doing anything, clearly and simply explain what is happening (e.g., *what is being created, updated, modified, or removed*) so the user always has full visibility.
 2. **Never Act Blindly — Ask Questions**: If requirements are unclear, ambiguous, or involve important design/content decisions, do NOT make blind assumptions. Always ask the user questions first to clarify what they need before proceeding.
@@ -145,6 +161,6 @@ Whenever new assets/images (`.png`, `.jpg`, `.jpeg`, etc.) are added to `public/
 ### 💡 General Agent Guidelines:
 - **Avoid Direct DOM Manipulation**: In React components, use state/refs or GSAP / Framer Motion hooks.
 - **Maintain Metadata & SEO**: Update OpenGraph tags and structured data whenever adding products or routes.
-- **Preserve Documentation**: Keep `VCARD_MAINTENANCE.md`, `PRODUCT_LIST_STATUS.md`, and sitemap registries in sync with changes.
+- **Preserve Documentation**: Keep `VCARD_MAINTENANCE.md`, `PRODUCT_LIST_STATUS.md`, `public/content.md`, `public/llms.txt`, and sitemap registries in sync with changes.
 
 

@@ -41,7 +41,7 @@ export const biosafetyCabinet: ProductDetail = {
         "Validation documentation (DQ/IQ/OQ)",
         "Service port for equipment",
         "Gas/vacuum connections",
-        "21 CFR Part 11 compliance"
+        "21 CFR Part 11 Support"
     ],
     hideHeroImage: true
 };

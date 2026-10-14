@@ -37,11 +37,7 @@ const Events: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32 pb-20 bg-transparent">
-            <SEO 
-                title="Events & Exhibitions Gallery from Aureole PharmaTech"
-                description="Corporate Moments, Journey through our past events and exhibitions. Click on any event to explore the full gallery of images and videos."
-                canonical="https://www.aureolepharmatech.com/events/"
-            />
+            <SEO />
             <EventsHero />
             <ExhibitionsGrid exhibitions={EXHIBITIONS} onEventClick={setSelectedEvent} />
             <CompanyEventsGrid companyEvents={COMPANY_EVENTS} onEventClick={setSelectedEvent} />

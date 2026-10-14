@@ -12,7 +12,7 @@ const ComplianceFeatures: React.FC = () => {
                         Regulatory Compliance & <span className="text-aureole-cyan">Data Integrity</span>
                     </h2>
                     <p className="text-xl font-sans text-slate-500 font-medium leading-relaxed">
-                        Complete 21 CFR Part 11 compliance with secure electronic records, signatures, and audit trails.
+                        Supports 21 CFR Part 11 requirements with secure electronic records, electronic signatures, and audit trails.
                     </p>
                 </div>
 

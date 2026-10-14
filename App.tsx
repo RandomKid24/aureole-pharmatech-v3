@@ -16,6 +16,8 @@ import Service from './pages/Service';
 import Software from './pages/Software';
 import Events from './pages/Events';
 import Careers from './pages/Careers';
+import Privacy from './pages/Privacy';
+import NotFound from './pages/NotFound';
 import Contact from './pages/Contact';
 import AboutUs from './pages/AboutUs';
 import CityWiseProductPage from './pages/CityWiseProductPage';
@@ -74,7 +76,9 @@ const App: React.FC = () => {
           <Route path="/home-2" element={<Navigate to="/" replace />} />
           <Route path="/home-2/" element={<Navigate to="/" replace />} />
 
+          <Route path="/privacy-policy" element={<Privacy />} />
           <Route path="/:cityProductSlug" element={<CityWiseProductPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
 
         <Footer />

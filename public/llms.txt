@@ -1,10 +1,21 @@
-# aureolepharmatech.com
-> Aureole Pharma Tech is a premier pharmaceutical engineering manufacturer of stability chambers, cleanroom equipment, and laboratory furniture with 28+ years of precision standards.
+# Aureole Pharma Tech
+> Pharmaceutical engineering manufacturer in Nashik, Maharashtra, India. Makes stability chambers, walk-in chambers, incubators, freezers, ovens, table-top instruments, cleanroom equipment and modular laboratory furniture, with monitoring software and service support.
 
-## Key pages
-- [About](https://www.aureolepharmatech.com/about)
-- [Products](https://www.aureolepharmatech.com/products)
-- [Service](https://www.aureolepharmatech.com/service)
-- [Software](https://www.aureolepharmatech.com/software)
-- [Careers](https://www.aureolepharmatech.com/careers)
-- [Contact](https://www.aureolepharmatech.com/#contact)
+Contact: enquiry@aureolepharmatech.com | +91 86005 22240
+Offices: Nashik (Office No. 6004, Satyanarayan Mall, Lawate Nagar) and Thane (Unit 103, Centura Square, Wagale Industrial Estate).
+Managing Director: Dr. Kiran Badgujar.
+Fuller factual overview: https://www.aureolepharmatech.com/content.md
+
+## Products
+- [Stability chambers and walk-in chambers](https://www.aureolepharmatech.com/products/stability-chambers/)
+- [Table top instruments](https://www.aureolepharmatech.com/products/table-top-instruments/)
+- [Laboratory furniture](https://www.aureolepharmatech.com/products/laboratory-furniture/)
+- [Full catalogue](https://www.aureolepharmatech.com/products/)
+
+## Company
+- [About](https://www.aureolepharmatech.com/about/)
+- [Certifications](https://www.aureolepharmatech.com/about/certification-compliance/)
+- [Plants](https://www.aureolepharmatech.com/about/plants/)
+- [Service](https://www.aureolepharmatech.com/service/)
+- [Software](https://www.aureolepharmatech.com/software/)
+- [Careers](https://www.aureolepharmatech.com/careers/)

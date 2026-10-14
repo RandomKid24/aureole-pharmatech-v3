@@ -19,7 +19,7 @@ export const photostabilityChamber: ProductDetail = {
         "Two Door - Full view inner glass door & outer SS door & leakage proof silicon rubber gasket"
     ],
     addOnsAttributes: [
-        "21 CFR part 11 Compliance",
+        "21 CFR Part 11 Support",
         "UV Meter",
         "LUX Meter",
         "Mobile Alert System",

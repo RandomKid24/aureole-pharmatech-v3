@@ -17,7 +17,7 @@ export const stabilityChamber: ProductDetail = {
         "Master & stand by sensor"
     ],
     addOnsAttributes: [
-        "21 CFR part 11 Compliance",
+        "21 CFR Part 11 Support",
         "Standby Refrigeration & Steam Generation System",
         "Scanner : 4 pt. temperature & humidity sensor",
         "Mobile Alert System",

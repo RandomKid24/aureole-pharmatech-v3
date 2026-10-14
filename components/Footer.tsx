@@ -184,6 +184,8 @@ const Footer: React.FC = () => {
                   <span>© {currentYear} <span className="text-white">Aureole Pharmatech Pvt Ltd.</span></span>
                   <span className="hidden md:inline opacity-20">|</span>
                   <span>All Rights Reserved.</span>
+                  <span className="hidden md:inline opacity-20">|</span>
+                  <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
                </div>
             </div>
          </div>

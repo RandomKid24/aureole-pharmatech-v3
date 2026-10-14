@@ -69,3 +69,8 @@ export const PRODUCT_CATALOG: Category[] = [
         ]
     }
 ];
+
+/** Products shown in category listings. Anything else is "removed": kept out of the sitemap, prerender and index. */
+export const LISTED_PRODUCT_NAMES = new Set(
+    PRODUCT_CATALOG.flatMap((c) => c.subTypes.flatMap((s) => s.products))
+);

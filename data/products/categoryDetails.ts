@@ -48,7 +48,7 @@ export const STABILITY_SECTIONS: CategoryDetailSection[] = [
             "Fully Compliant with ICH, WHO, GMP, MHRA and FDA standards",
             "High Reliability & Low Maintenance – designed for 24x7 operation",
             "User-Friendly Interface with advanced HMI/PLC control system",
-            "Data Integrity & 21 CFR Part 11 Compliance",
+            "Data Integrity & 21 CFR Part 11 Support",
             "Safety Features – Alarms for temperature/humidity deviations",
             "Remote Monitoring, Graphing & Data Logging Options",
             "Low Maintenance with Self-Diagnostic Features",

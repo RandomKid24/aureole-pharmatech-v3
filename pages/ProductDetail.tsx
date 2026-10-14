@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import { productLd, SITE_URL } from '../data/pageSeo';
 import { PRODUCT_SEO_DATA } from '../data/seoMetadata';
-import { PRODUCT_DETAILS } from '../data/products';
+import { PRODUCT_DETAILS, LISTED_PRODUCT_NAMES } from '../data/products';
 import { findValuesBySlug } from '../utils/urlUtils';
 import { ArrowLeft } from 'lucide-react';
 import ProductHero from './ProductDetail/sections/ProductHero';
@@ -27,11 +28,13 @@ const ProductDetail: React.FC = () => {
     }, [decodedName]);
 
     const seoData = PRODUCT_SEO_DATA[decodedName];
+    const removed = !LISTED_PRODUCT_NAMES.has(decodedName);
 
 
     if (!product) {
         return (
             <div className="pt-40 min-h-screen bg-transparent container mx-auto px-6 lg:px-24">
+                <SEO title="Product not found | Aureole Pharma Tech" description="This product page could not be found." noindex />
                 <div className="max-w-4xl mx-auto text-center">
                     <h1 className="text-4xl font-[950] text-[#001529] uppercase tracking-tighter mb-8">Specification Pending.</h1>
                     <Link to="/products" className="inline-flex items-center gap-4 px-10 py-5 bg-[#001529] text-white text-[10px] font-black uppercase tracking-widest hover:bg-aureole-blue transition-all">
@@ -48,7 +51,9 @@ const ProductDetail: React.FC = () => {
                 <SEO 
                     title={seoData?.title} 
                     description={seoData?.description} 
-                    canonical={`https://www.aureolepharmatech.com/products/${productName}/`}
+                    noindex={removed}
+                canonical={`${SITE_URL}/products/${productName}/`}
+                    jsonLd={[productLd(decodedName, seoData?.description || product.description, `${SITE_URL}/products/${productName}/`, product.images || (product.image ? [product.image] : []))]}
                 />
                 <CategoryHero
                     title={decodedName === "Modular Laboratory Furniture" ? "LABORATORY" : "STAINLESS"}
@@ -70,7 +75,9 @@ const ProductDetail: React.FC = () => {
             <SEO 
                 title={seoData?.title} 
                 description={seoData?.description} 
-                canonical={`https://www.aureolepharmatech.com/products/${productName}/`}
+                noindex={removed}
+                canonical={`${SITE_URL}/products/${productName}/`}
+                    jsonLd={[productLd(decodedName, seoData?.description || product.description, `${SITE_URL}/products/${productName}/`, product.images || (product.image ? [product.image] : []))]}
             />
             <ProductHero product={product} decodedName={decodedName} />
             <TechnicalDashboard product={product} decodedName={decodedName} />

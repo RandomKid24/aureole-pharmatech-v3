@@ -24,7 +24,7 @@ export const walkInDeepFreezer: ProductDetail = {
         "Person trap alarm"
     ],
     addOnsAttributes: [
-        "21 CFR part 11 Compliance",
+        "21 CFR Part 11 Support",
         "Mobile Alert System",
         "Hooter System",
         "Door Access System (Biometric)",

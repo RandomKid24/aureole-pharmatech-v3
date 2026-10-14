@@ -5,7 +5,7 @@ export const PRODUCT_SEO_DATA: Record<string, { title: string; description: stri
     },
     "Stability Chamber": {
         title: "ICH Compliant Stability Chambers | Pharmaceutical Grade Manufacturer – Aureole",
-        description: "Walk-in and reach-in stability chambers with 21 CFR Part 11 compliant software. Manufactured in Nashik, supplied across India. Request a quote."
+        description: "Walk-in and reach-in stability chambers with software that supports 21 CFR Part 11 requirements. Manufactured in Nashik, supplied across India. Request a quote."
     },
     "BOD Incubator": {
         title: "BOD Incubator Manufacturer & Supplier in India | Aureole PharmaTech",

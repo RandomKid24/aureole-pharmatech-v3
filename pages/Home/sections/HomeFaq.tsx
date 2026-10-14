@@ -9,7 +9,7 @@ const HomeFaq: React.FC = () => {
     },
     {
       question: "What compliance standards does Aureole PharmaTech equipment meet?",
-      answer: "Our systems are engineered to meet strict international standards, including USFDA and ICH guidelines, ISO 9001:2015 quality management, CE certifications, ZED Gold rating, and 21 CFR Part 11 electronic records regulations."
+      answer: "Our systems are engineered to meet strict international standards, including USFDA and ICH guidelines, ISO 9001:2015 quality management, CE certifications, ZED Gold rating, with software that supports 21 CFR Part 11 electronic records requirements."
     },
     {
       question: "What temperature and humidity ranges do your stability chambers support?",
@@ -21,7 +21,7 @@ const HomeFaq: React.FC = () => {
     },
     {
       question: "How does your equipment support data integrity and audit compliance?",
-      answer: "Aureole's control systems feature industrial PLC and SCADA integration, enabling compliant data logging, secure access controls, electronic signatures, audit trails, and automated email/SMS deviation alerts in compliance with 21 CFR Part 11."
+      answer: "Aureole's control systems feature industrial PLC and SCADA integration, enabling data logging, secure access controls, electronic signatures, audit trails, and automated email/SMS deviation alerts that support 21 CFR Part 11 requirements."
     }
   ];
 

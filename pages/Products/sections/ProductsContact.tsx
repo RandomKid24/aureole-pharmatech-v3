@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { track } from '../../../utils/track';
 import { Mail, Phone, ArrowRight, CheckCircle2, AlertCircle, Loader2, ChevronDown, Search } from 'lucide-react';
 
 const COUNTRY_CODES = [
@@ -136,6 +137,7 @@ const ProductsContact: React.FC = () => {
 
             if (response.ok) {
                 setStatus('success');
+                track('generate_lead', { form: 'products_page' });
                 setFormData({
                     fullName: '',
                     companyName: '',

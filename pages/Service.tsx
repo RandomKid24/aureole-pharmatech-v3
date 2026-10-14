@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import SEO from '../components/SEO';
+import DirectAnswers from '../components/DirectAnswers';
 import ServiceHero from './Service/sections/ServiceHero';
 import CoreServices from './Service/sections/CoreServices';
 import WhyChooseUs from './Service/sections/WhyChooseUs';
@@ -12,14 +13,11 @@ const Service: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32 pb-20 bg-transparent">
-            <SEO 
-                title="Stability Chamber Services & Lifecycle Support | Aureole PharmaTech"
-                description="Expert technical services for Stability Chambers, Environmental Chambers, Cold Rooms, and GMP-critical equipment. Compliance focused and audit ready."
-                canonical="https://www.aureolepharmatech.com/service/"
-            />
+            <SEO />
             <ServiceHero />
             <CoreServices />
             <WhyChooseUs />
+            <DirectAnswers />
             <ServiceCTA />
         </div>
     );

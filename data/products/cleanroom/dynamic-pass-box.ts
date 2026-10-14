@@ -41,7 +41,7 @@ export const dynamicPassBox: ProductDetail = {
         "Remote monitoring capability",
         "Validation documentation (DQ/IQ/OQ)",
         "Custom sizes available",
-        "21 CFR Part 11 compliance"
+        "21 CFR Part 11 Support"
     ],
     hideHeroImage: true
 };

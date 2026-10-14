@@ -16,11 +16,7 @@ const LaboratoryFurniture: React.FC = () => {
 
     return (
         <div className="pt-24 min-h-screen bg-transparent">
-            <SEO 
-                title="Laboratory Furniture Manufacturer and Supplier in India, Aureole Pharma Tech"
-                description="Aureole Pharma Tech Manufacturer and Supplier of Laboratory Furniture, Furniture & Accessories, Modular Laboratory Furniture, Stainless Steel Items & Accessories"
-                canonical="https://www.aureolepharmatech.com/products/laboratory-furniture/"
-            />
+            <SEO />
             <CategoryHero
                 title="LABORATORY"
                 subtitle={<span className="text-aureole-blue">FURNITURE</span>}
