@@ -105,4 +105,19 @@ for (const r of routes) {
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, html);
 }
+
+// Real 404 page: Vercel serves dist/404.html with status 404 for any address that has no file.
+{
+  const title = "Page not found | Aureole Pharma Tech";
+  const html = template
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
+    .replace(/<meta\s+name="description"[\s\S]*?\/>/, "")
+    .replace(/<link rel="canonical"[^>]*>/, "")
+    .replace(/<meta property="og:[^>]*>/g, "")
+    .replace(/<meta name="twitter:card"[^>]*>/, "")
+    .replace(/<meta\s+name="robots"[\s\S]*?\/>/, "")
+    .replace("</head>", `    <meta name="robots" content="noindex, follow" />\n  </head>`)
+    .replace('<div id="root"></div>', `<div id="root"><main><h1>Page not found</h1><p>The page you are looking for does not exist or has moved.</p>${nav}</main></div>`);
+  fs.writeFileSync(path.join(dist, "404.html"), html);
+}
 console.log(`prerendered ${routes.length} routes`);
