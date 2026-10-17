@@ -7,6 +7,9 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
 PUBLIC_DIR = os.path.join(ROOT_DIR, "public")
 
+# Max image width. 2400px stays sharp on retina / 4K screens while still cutting 7000px+ camera originals.
+MAX_W = 2400
+
 IMAGE_EXTS = ['.png', '.jpg', '.jpeg', '.JPG', '.PNG', '.JPEG']
 
 def get_dir_size(path):
@@ -41,9 +44,17 @@ for img_path in target_images:
     ext = os.path.splitext(img_path)[1].lower()
     webp_path = os.path.splitext(img_path)[0] + ".webp"
     
-    # cwebp compression with max 1600px width scaling to prevent oversized 4K assets
+    # cwebp compression with max-width scaling to prevent oversized camera/4K+ assets
     q = "90" if ext in [".png", ".PNG"] else "85"
-    cmd = f'cwebp -resize 1600 0 -q {q} "{img_path}" -o "{webp_path}"'
+    # only downscale: cwebp -resize always scales to the exact width, which would stretch small images/icons
+    try:
+        from PIL import Image as _Img
+        with _Img.open(img_path) as _im:
+            too_wide = _im.size[0] > MAX_W
+    except Exception:
+        too_wide = False
+    resize_arg = f"-resize {MAX_W} 0 " if too_wide else ""
+    cmd = f'cwebp {resize_arg}-q {q} "{img_path}" -o "{webp_path}"'
     
     res = subprocess.run(cmd, shell=True, capture_output=True, text=True)
     converted_ok = res.returncode == 0 and os.path.exists(webp_path)
@@ -106,6 +117,77 @@ if replacements:
                         print(f"Updated references in: {os.path.relpath(cf, ROOT_DIR)}")
                 except Exception as e:
                     print(f"Error updating {cf}: {e}")
+
+# ---------------------------------------------------------------------------
+# Second pass: shrink assets that are ALREADY .webp / .mp4 (the pass above skips them).
+# Caps width at MAX_W (webp) and re-encodes heavy videos. A file is replaced only if it gets smaller.
+# ---------------------------------------------------------------------------
+WEBP_RESHRINK_OVER = 400 * 1024   # also re-encode webp above this size even if narrow enough
+VIDEO_OVER = 1.5 * 1024 * 1024
+saved = 0
+
+try:
+    from PIL import Image
+except ImportError:
+    Image = None
+    print("Pillow missing: skipping webp shrink pass")
+
+if Image:
+    for root, dirs, files in os.walk(PUBLIC_DIR):
+        for f in files:
+            if not f.lower().endswith(".webp"):
+                continue
+            fp = os.path.join(root, f)
+            old = os.path.getsize(fp)
+            try:
+                with Image.open(fp) as im:
+                    if getattr(im, "is_animated", False):
+                        continue
+                    w, h = im.size
+                    if w <= MAX_W and old <= WEBP_RESHRINK_OVER:
+                        continue
+                    im = im.copy()
+                if w > MAX_W:
+                    im = im.resize((MAX_W, round(h * MAX_W / w)), Image.LANCZOS)
+                tmp = fp + ".tmp"
+                im.save(tmp, "WEBP", quality=80, method=6)
+                new = os.path.getsize(tmp)
+                # Resized files always win. For narrow-but-heavy files only keep a re-encode that saves >=15%,
+                # so running the script repeatedly doesn't degrade already-optimized images.
+                if new < old and (w > MAX_W or new < old * 0.85):
+                    os.replace(tmp, fp)
+                    saved += old - new
+                    print(f"Shrunk webp: {os.path.relpath(fp, PUBLIC_DIR)} ({old/1024:.0f}KB -> {new/1024:.0f}KB)")
+                else:
+                    os.remove(tmp)
+            except Exception as e:
+                print(f"Skipped {fp}: {e}")
+                if os.path.exists(fp + ".tmp"):
+                    os.remove(fp + ".tmp")
+
+if subprocess.run("which ffmpeg", shell=True, capture_output=True).returncode == 0:
+    for root, dirs, files in os.walk(PUBLIC_DIR):
+        for f in files:
+            if not f.lower().endswith(".mp4"):
+                continue
+            fp = os.path.join(root, f)
+            old = os.path.getsize(fp)
+            if old < VIDEO_OVER:
+                continue
+            tmp = fp + ".tmp.mp4"
+            cmd = (f'ffmpeg -y -loglevel error -i "{fp}" -vf "scale=\'min(1280,iw)\':-2" -c:v libx264 -crf 28 '
+                   f'-preset slow -c:a aac -b:a 96k -movflags +faststart "{tmp}"')
+            if subprocess.run(cmd, shell=True).returncode == 0 and os.path.exists(tmp) and os.path.getsize(tmp) < old * 0.9:
+                new = os.path.getsize(tmp)
+                os.replace(tmp, fp)
+                saved += old - new
+                print(f"Shrunk mp4: {os.path.relpath(fp, PUBLIC_DIR)} ({old/1048576:.1f}MB -> {new/1048576:.1f}MB)")
+            elif os.path.exists(tmp):
+                os.remove(tmp)
+else:
+    print("ffmpeg not found: skipping mp4 shrink pass")
+
+print(f"Second pass saved {saved / (1024*1024):.1f} MB")
 
 final_size = get_dir_size(PUBLIC_DIR)
 print("\n--------------------------------------------------")

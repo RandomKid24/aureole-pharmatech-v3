@@ -34,13 +34,15 @@ const vcardRewritePlugin = () => {
     }
   };
 };
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ mode, isSsrBuild }) => {
     const env = loadEnv(mode, '.', '');
     return {
       server: {
         port: 3000,
         host: '0.0.0.0',
       },
+      // The SSR build only runs scripts/prerender.entry.ts; don't copy public/ into .prerender/ a second time.
+      publicDir: isSsrBuild ? false : 'public',
       plugins: [react(), vcardRewritePlugin()],
       define: {
         'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),

@@ -81,7 +81,7 @@ Each employee has an interactive digital business card accessible at `https://ww
 ## 5. Asset & Image Optimization Standard
 
 - **Format Standard**: All raster images served on the website must be `.webp` format.
-- **Maximum Resolution**: 4K/high-res renders are capped at 1600px width.
+- **Maximum Resolution**: high-res renders and camera originals are capped at 2400px width (`MAX_W` in `scripts/optimize-images.py`); the script also shrinks oversized existing `.webp`/`.mp4` files.
 - **Automated Workflow**:
   ```bash
   npm run optimize
@@ -130,7 +130,7 @@ Whenever the user provides or asks to add a new vCard folder in `public/vcards-2
 ### 🖼️ Workflow When Adding Assets & Images:
 Whenever new assets/images (`.png`, `.jpg`, `.jpeg`, etc.) are added to `public/` or any component:
 1. **Mandatory Optimization via Script**: Always execute `npm run optimize` (`python3 scripts/optimize-images.py`).
-2. **Automatic Code Updates**: The script will convert images to `.webp`, cap 4K/oversized dimensions at 1600px width, update all `.tsx`/`.ts`/`.html`/`.css`/`.json` file references, and delete uncompressed source files.
+2. **Automatic Code Updates**: The script will convert images to `.webp`, cap oversized dimensions at 2400px width, update all `.tsx`/`.ts`/`.html`/`.css`/`.json` file references, and delete uncompressed source files.
 
 ---
 
