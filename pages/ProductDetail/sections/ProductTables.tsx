@@ -1,5 +1,6 @@
 
 import React from 'react';
+import HighlightFrame from '@/components/ui/HighlightFrame';
 import {
     Box, Thermometer, Droplets, Target, Layers,
     Maximize, Zap, Gauge, FileCheck, HeartPulse,
@@ -47,18 +48,18 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
                             <Box className="text-aureole-blue" size={18} />
                             <h3 className="text-[13px] font-bold text-slate-900">{product.featureTable.heading}</h3>
                         </div>
-                        <div className="overflow-x-auto border border-slate-200 shadow-sm max-w-3xl">
+                        <HighlightFrame className="border border-slate-300 shadow-sm max-w-3xl">
                             <table className="w-full text-left">
-                                <tbody className="divide-y divide-slate-200">
+                                <tbody className="divide-y divide-slate-300">
                                     {product.featureTable.rows.map(([label, detail]: [string, string]) => (
                                         <tr key={label}>
-                                            <td className="py-2.5 px-5 text-[11px] font-bold text-aureole-blue bg-slate-50/50 border-r border-slate-200 whitespace-nowrap w-40">{label}</td>
-                                            <td className="py-2.5 px-5 text-[11px] font-bold text-slate-900">{detail}</td>
+                                            <td className="py-2.5 px-5 text-xs font-bold text-aureole-blue bg-slate-50/50 border-r border-slate-200 whitespace-nowrap w-40">{label}</td>
+                                            <td className="py-2.5 px-5 text-xs font-bold text-aureole-slate">{detail}</td>
                                         </tr>
                                     ))}
                                 </tbody>
                             </table>
-                        </div>
+                        </HighlightFrame>
                     </div>
                 </section>
             )}
@@ -72,40 +73,40 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
                             <h3 className="text-[13px] font-bold text-slate-900">Models & Dimensions</h3>
                         </div>
 
-                        <div className="overflow-x-auto border border-slate-200 shadow-md">
+                        <HighlightFrame className="border border-slate-300 shadow-md">
                             <table className="w-full text-left min-w-[800px]">
                                 <thead>
-                                    <tr className="bg-slate-50 text-aureole-slate border-b border-slate-300">
-                                        <th className="py-5 px-8 text-[11px] font-bold text-slate-700 border-r border-slate-200">Model</th>
-                                        <th className="py-5 px-8 text-[11px] font-bold text-slate-700 border-r border-slate-200 text-center">Capacity (L)</th>
-                                        <th className="py-5 px-8 text-[11px] font-bold text-slate-700 border-r border-slate-200 text-center">Interior (W×D×H mm)</th>
+                                    <tr className="bg-slate-50 text-aureole-slate border-b border-slate-400">
+                                        <th className="py-5 px-6 text-xs font-bold text-aureole-slate border-r border-slate-200">Model</th>
+                                        <th className="py-5 px-6 text-xs font-bold text-aureole-slate border-r border-slate-200 text-center">Capacity (L)</th>
+                                        <th className="py-5 px-6 text-xs font-bold text-aureole-slate border-r border-slate-200 text-center">Interior (W×D×H mm)</th>
                                         {product.models.some((m: any) => m.exterior) && (
-                                            <th className="py-5 px-8 text-[11px] font-bold text-slate-700 border-r border-slate-200 text-center">Exterior (W×D×H mm)</th>
+                                            <th className="py-5 px-6 text-xs font-bold text-aureole-slate border-r border-slate-200 text-center">Exterior (W×D×H mm)</th>
                                         )}
                                         {product.models.some((m: any) => m.trays) && (
-                                            <th className="py-5 px-8 text-[11px] font-bold text-slate-700 border-r border-slate-200 text-center">Trays</th>
+                                            <th className="py-5 px-6 text-xs font-bold text-aureole-slate border-r border-slate-200 text-center">Trays</th>
                                         )}
-                                        <th className="py-5 px-8 text-[11px] font-bold text-slate-700 text-center">Power</th>
+                                        <th className="py-5 px-6 text-xs font-bold text-aureole-slate text-center">Power</th>
                                     </tr>
                                 </thead>
-                                <tbody className="divide-y divide-slate-300 text-slate-600">
+                                <tbody className="divide-y divide-slate-400 text-aureole-slate">
                                     {product.models.map((m: any, i: number) => (
                                         <tr key={i}>
-                                            <td className="py-4 px-8 text-[11px] font-bold text-aureole-blue border-r border-slate-200">{m.model}</td>
-                                            <td className="py-4 px-8 text-[11px] font-bold border-r border-slate-200 text-center text-slate-900">{m.capacity}</td>
-                                            <td className="py-4 px-8 text-[11px] font-bold border-r border-slate-200 text-center tracking-tight text-slate-900">{m.interior}</td>
+                                            <td className="py-4 px-6 text-xs font-bold text-aureole-blue border-r border-slate-200">{m.model}</td>
+                                            <td className="py-4 px-6 text-xs font-bold border-r border-slate-200 text-center text-aureole-slate">{m.capacity}</td>
+                                            <td className="py-4 px-6 text-xs font-bold border-r border-slate-200 text-center tracking-normal text-aureole-slate">{m.interior}</td>
                                             {product.models.some((model: any) => model.exterior) && (
-                                                <td className="py-4 px-8 text-[11px] font-bold border-r border-slate-200 text-center tracking-tight text-slate-900">{m.exterior || '-'}</td>
+                                                <td className="py-4 px-6 text-xs font-bold border-r border-slate-200 text-center tracking-normal text-aureole-slate">{m.exterior || '-'}</td>
                                             )}
                                             {product.models.some((model: any) => model.trays) && (
-                                                <td className="py-4 px-8 text-[11px] font-bold border-r border-slate-200 text-center text-slate-900">{m.trays || '-'}</td>
+                                                <td className="py-4 px-6 text-xs font-bold border-r border-slate-200 text-center text-aureole-slate">{m.trays || '-'}</td>
                                             )}
-                                            <td className="py-4 px-8 text-[11px] font-bold text-center text-slate-900">{m.power}</td>
+                                            <td className="py-4 px-6 text-xs font-bold text-center text-aureole-slate">{m.power}</td>
                                         </tr>
                                     ))}
                                 </tbody>
                             </table>
-                        </div>
+                        </HighlightFrame>
 
                         <div className="mt-12 p-10 bg-slate-50 border border-slate-100 border-l-[6px] border-aureole-cyan shadow-sm">
                             <p className="text-[12px] text-aureole-slate leading-relaxed font-bold tracking-widest">
@@ -127,18 +128,18 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
                             <h3 className="text-[13px] font-bold text-slate-900">Technical Specifications & Models</h3>
                         </div>
 
-                        <div className="overflow-x-auto border border-slate-200 shadow-md">
+                        <HighlightFrame className="border border-slate-300 shadow-md">
                             <table className="w-full text-left min-w-[800px]">
                                 <thead>
-                                    <tr className="bg-slate-50 text-aureole-slate border-b border-slate-300">
+                                    <tr className="bg-slate-50 text-aureole-slate border-b border-slate-400">
                                         {product.variantTable.headers.map((header: string, i: number) => (
-                                            <th key={i} className={`py-5 px-8 text-[11px] font-bold text-slate-700 ${i < product.variantTable!.headers.length - 1 ? 'border-r border-slate-200' : ''} ${i === 0 ? '' : 'text-center'}`}>
+                                            <th key={i} className={`py-5 px-6 text-xs font-bold text-aureole-slate ${i < product.variantTable!.headers.length - 1 ? 'border-r border-slate-200' : ''} ${i === 0 ? '' : 'text-center'}`}>
                                                 {header}
                                             </th>
                                         ))}
                                     </tr>
                                 </thead>
-                                <tbody className="divide-y divide-slate-300 text-slate-600">
+                                <tbody className="divide-y divide-slate-400 text-aureole-slate">
                                     {product.variantTable.rows.map((row: any[], i: number) => (
                                         <tr key={i}>
                                             {row.map((cell, j) => {
@@ -151,7 +152,7 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
                                                     <td
                                                         key={j}
                                                         colSpan={colSpan}
-                                                        className={`py-4 px-8 text-[11px] ${j === 0 ? 'font-bold text-aureole-blue bg-slate-50/50' : 'font-bold text-slate-900 text-center'} ${!isLastCell ? 'border-r border-slate-200' : ''}`}
+                                                        className={`py-4 px-6 text-xs ${j === 0 ? 'font-bold text-aureole-blue bg-slate-50/50' : 'font-bold text-aureole-slate text-center'} ${!isLastCell ? 'border-r border-slate-200' : ''}`}
                                                     >
                                                         {cell}
                                                     </td>
@@ -161,7 +162,7 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
                                     ))}
                                 </tbody>
                             </table>
-                        </div>
+                        </HighlightFrame>
 
                         {product.variantTable.remark !== null && (
                             <div className="mt-12 p-10 bg-slate-50 border border-slate-100 border-l-[6px] border-aureole-cyan shadow-sm">
@@ -184,9 +185,9 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
                             <h3 className="text-[13px] font-bold text-slate-900">Technical Specifications & Models</h3>
                         </div>
 
-                        <div className="overflow-x-auto border border-slate-200 shadow-md">
+                        <HighlightFrame className="border border-slate-300 shadow-md">
                             <table className="w-full text-left min-w-[1000px] border-collapse">
-                                <tbody className="divide-y divide-slate-300 text-slate-600">
+                                <tbody className="divide-y divide-slate-400 text-aureole-slate">
                                     {product.complexTable.rows.map((row: any, i: number) => (
                                         <tr key={i}>
                                             {row.cells.map((cell: any, j: number) => {
@@ -197,8 +198,8 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
                                                         colSpan={cell.colSpan || 1}
                                                         rowSpan={cell.rowSpan || 1}
                                                         className={`
-                                                        py-6 px-6 text-[11px] tracking-tight border border-slate-200
-                                                        bg-slate-50 font-bold text-slate-700 text-center
+                                                        py-6 px-6 text-xs tracking-normal border border-slate-300
+                                                        bg-slate-50 font-bold text-aureole-slate text-center
                                                     `}
                                                     >
                                                         {cell.image && (
@@ -210,7 +211,7 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
                                                                 />
                                                             </div>
                                                         )}
-                                                        <div className="tracking-widest">
+                                                        <div className="tracking-normal">
                                                             {cell.content}
                                                         </div>
                                                     </th>
@@ -218,8 +219,8 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
                                                     <td
                                                         key={j}
                                                         className={`
-                                                        py-5 px-6 text-[11px] border border-slate-200 font-bold
-                                                        ${j === 0 ? 'bg-slate-50 text-slate-900' : 'text-slate-600 text-center'}
+                                                        py-5 px-6 text-xs border border-slate-300 font-bold
+                                                        ${j === 0 ? 'bg-slate-50 text-aureole-slate' : 'text-aureole-slate text-center'}
                                                     `}
                                                     >
                                                         {isFirstCol ? (
@@ -239,7 +240,7 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
                                     ))}
                                 </tbody>
                             </table>
-                        </div>
+                        </HighlightFrame>
 
                         {product.complexTable.remark && (
                             <div className="mt-12 p-10 bg-slate-50 border border-slate-100 border-l-[6px] border-aureole-cyan shadow-sm">

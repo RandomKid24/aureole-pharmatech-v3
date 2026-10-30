@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import HighlightFrame from '@/components/ui/HighlightFrame';
 import { CheckCircle2, Box, Settings, ArrowRight } from 'lucide-react';
 
 interface VariantSectionsProps {
@@ -31,18 +32,18 @@ const VariantSections: React.FC<VariantSectionsProps> = ({ product }) => {
                     </div>
                     <p className="text-slate-600 text-base leading-relaxed font-medium max-w-4xl mb-8">{v.description}</p>
                     {v.specifications && (
-                        <div className="overflow-x-auto border border-slate-200 shadow-md mb-8">
+                        <HighlightFrame className="border border-slate-300 shadow-md mb-8">
                             <table className="w-full text-left min-w-[800px]">
-                                <tbody className="divide-y divide-slate-300 text-slate-600">
+                                <tbody className="divide-y divide-slate-400 text-aureole-slate">
                                     {v.specifications.map((s: any, i: number) => (
                                         <tr key={i}>
-                                            <td className="py-4 px-8 text-[11px] font-bold text-aureole-blue bg-slate-50/50 border-r border-slate-200 w-1/3">{s.parameter}</td>
-                                            <td className="py-4 px-8 text-[11px] font-bold text-slate-900">{s.details}</td>
+                                            <td className="py-4 px-6 text-xs font-bold text-aureole-blue bg-slate-50/50 border-r border-slate-200 w-1/3">{s.parameter}</td>
+                                            <td className="py-4 px-6 text-xs font-bold text-aureole-slate">{s.details}</td>
                                         </tr>
                                     ))}
                                 </tbody>
                             </table>
-                        </div>
+                        </HighlightFrame>
                     )}
                     {v.features && (
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-3 mb-8">
@@ -55,26 +56,26 @@ const VariantSections: React.FC<VariantSectionsProps> = ({ product }) => {
                     )}
                     <div className="space-y-8">
                         {v.table && (
-                            <div className="overflow-x-auto border border-slate-200 shadow-md">
+                            <HighlightFrame className="border border-slate-300 shadow-md">
                                 <table className="w-full text-left min-w-[800px]">
                                     <thead>
-                                        <tr className="bg-slate-50 text-aureole-slate border-b border-slate-300">
+                                        <tr className="bg-slate-50 text-aureole-slate border-b border-slate-400">
                                             {v.table.rows[0].cells.map((c: any, j: number, all: any[]) => (
-                                                <th key={j} className={`py-5 px-8 text-[11px] font-bold text-slate-700 ${j < all.length - 1 ? 'border-r border-slate-200' : ''} ${j === 0 ? '' : 'text-center'}`}>{c.content}</th>
+                                                <th key={j} className={`py-5 px-6 text-xs font-bold text-aureole-slate ${j < all.length - 1 ? 'border-r border-slate-200' : ''} ${j === 0 ? '' : 'text-center'}`}>{c.content}</th>
                                             ))}
                                         </tr>
                                     </thead>
-                                    <tbody className="divide-y divide-slate-300 text-slate-600">
+                                    <tbody className="divide-y divide-slate-400 text-aureole-slate">
                                         {v.table.rows.slice(1).map((row: any, r: number) => (
                                             <tr key={r}>
                                                 {row.cells.map((c: any, j: number, all: any[]) => (
-                                                    <td key={j} className={`py-4 px-8 text-[11px] ${j === 0 ? 'font-bold text-aureole-blue bg-slate-50/50' : 'font-bold text-slate-900 text-center'} ${j < all.length - 1 ? 'border-r border-slate-200' : ''}`}>{c.content}</td>
+                                                    <td key={j} className={`py-4 px-6 text-xs ${j === 0 ? 'font-bold text-aureole-blue bg-slate-50/50' : 'font-bold text-aureole-slate text-center'} ${j < all.length - 1 ? 'border-r border-slate-200' : ''}`}>{c.content}</td>
                                                 ))}
                                             </tr>
                                         ))}
                                     </tbody>
                                 </table>
-                            </div>
+                            </HighlightFrame>
                         )}
                     </div>
                 </div>
@@ -173,15 +174,15 @@ const VariantSections: React.FC<VariantSectionsProps> = ({ product }) => {
                                             <Settings size={16} className="text-aureole-blue" />
                                             <h4 className="text-[12px] font-black uppercase tracking-widest text-slate-900">Technical Parameters</h4>
                                         </div>
-                                        <div className="border border-slate-200 overflow-hidden rounded-sm shadow-sm group/table hover:shadow-md transition-shadow duration-500">
+                                        <HighlightFrame className="border border-slate-300 rounded-sm shadow-sm group/table hover:shadow-md transition-shadow duration-500">
                                             <table className="w-full text-left border-collapse">
-                                                <tbody className="divide-y divide-slate-100">
+                                                <tbody className="divide-y divide-slate-200">
                                                     {variant.table.rows.map((row: any, rIdx: number) => (
                                                         <tr key={rIdx} className={`${rIdx === 0 ? 'bg-slate-50/80' : 'hover:bg-slate-50/50 transition-colors'}`}>
                                                             {row.cells.map((cell: any, cIdx: number) => (
                                                                 <td
                                                                     key={cIdx}
-                                                                    className={`py-4 px-6 text-[11px] font-bold ${rIdx === 0 ? 'text-aureole-blue uppercase tracking-widest' : 'text-slate-700'}`}
+                                                                    className={`py-4 px-6 text-xs font-bold ${rIdx === 0 ? 'text-aureole-blue uppercase tracking-normal' : 'text-aureole-slate'}`}
                                                                 >
                                                                     {cell.content}
                                                                 </td>
@@ -190,7 +191,7 @@ const VariantSections: React.FC<VariantSectionsProps> = ({ product }) => {
                                                     ))}
                                                 </tbody>
                                             </table>
-                                        </div>
+                                        </HighlightFrame>
                                     </div>
                                 )}
 

@@ -367,6 +367,20 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #00a6d6;
       }
+      /* Spec tables (components/ui/HighlightFrame.tsx): row + column highlight and Interior/Exterior tint */
+      .hl-table { background-color: #ffffff; }
+      .hl-table tbody tr { cursor: pointer; }
+      .hl-table th { font-weight: 800; color: #003366; }
+      .hl-table td { font-weight: 500; }
+      .hl-table td[data-c="0"] { font-weight: 700; color: #0079ac; }
+      .hl-table tbody tr:nth-child(even) > td:not([data-grp]) { background-color: #f8fafc; }
+      .hl-table [data-grp="in"] { background-color: #f0f7fd; }
+      .hl-table th[data-grp="in"] { color: #0079ac; }
+      .hl-table [data-grp="out"] { background-color: #f1f5f9; }
+      .hl-table tr[data-hot] > td, .hl-table tr[data-hot] > th { background-color: #e3f3fd; }
+      .hl-table tr[data-pin] > td, .hl-table tr[data-pin] > th { background-color: #bfe3fa; }
+      .hl-table td[data-hotcol] { box-shadow: inset 0 0 0 999px rgba(0, 166, 214, 0.14); }
+      .hl-table th[data-hotcol] { box-shadow: inset 0 -3px 0 #00a6d6; color: #001529; }
     </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1HWT80VN52"></script>
