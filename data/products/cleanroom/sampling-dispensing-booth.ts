@@ -1,47 +1,38 @@
 import { ProductDetail } from '../types';
 
 export const samplingDispensingBooth: ProductDetail = {
-    description: "Aureole Sampling & Dispensing Booths ensure dust containment and contamination control during powder sampling, weighing, and dispensing operations. Engineered with reverse laminar airflow, they protect both personnel and products.\n\nThese smart enclosures provide dual protection—operator safety from hazardous powders and product protection from environmental contamination. Ideal for API handling, raw material dispensing, and formulation areas in pharmaceutical manufacturing.",
+    description: "Reverse Laminar Air Flow (RLAF) units, commonly used as Sampling, Dispensing or Weighing Booths, are containment systems designed to isolate airborne particulates at the source. A continuous downward vertical airflow paired with a negative pressure zone captures escaping dust, hazardous powders and chemical aerosols during bulk material transfers.\n\nThis barrier protects the technician while preventing contamination from spreading into the wider facility.",
     keyFeatures: [
-        "ISO 5/7 controlled environment",
-        "HEPA-filtered downflow + containment airflow",
-        "SS304 anti-static working surface",
-        "Operator comfort & ergonomic layout",
-        "Low turbulence airflow design",
-        "Easy filter replacement & maintenance",
-        "Optional exhaust/ducting integration",
-        "GMP/WHO compliant construction"
+        "Active ingredient weighing",
+        "Raw material sampling",
+        "Powder charging & blending",
+        "Additive manufacturing",
+        "Bulk ingredient handling"
     ],
+    keyFeaturesHeading: "Applications",
     specifications: [
-        { parameter: "Standard Sizes", details: "1220×610×610 mm, 910×610×610 mm" },
-        { parameter: "Cleanliness Class", details: "ISO 5 / ISO 7" },
-        { parameter: "Airflow Type", details: "HEPA-filtered downflow + containment" },
-        { parameter: "Work Surface", details: "SS304 anti-static" },
-        { parameter: "Filtration", details: "HEPA H13/H14" },
-        { parameter: "Design", details: "Ergonomic operator layout" },
-        { parameter: "Exhaust", details: "Optional ducting integration" },
-        { parameter: "Compliance", details: "GMP, WHO standards" }
+        { parameter: "Airflow", details: "Continuous downward vertical airflow with negative pressure zone" },
+        { parameter: "Application", details: "Sampling, dispensing and weighing" }
     ],
     models: [],
-    regularAttributes: [
-        "HEPA-filtered downflow system",
-        "Anti-static work surface",
-        "Containment airflow design",
-        "Ergonomic operator access",
-        "Low turbulence airflow",
-        "Easy filter access",
-        "GMP-compliant construction",
-        "Dust containment system"
-    ],
-    addOnsAttributes: [
-        "Exhaust ducting system",
-        "Digital airflow monitoring",
-        "Magnehelic pressure gauge",
-        "UV sterilization",
-        "Custom sizes available",
-        "Validation documentation (DQ/IQ/OQ)",
-        "Data logging system",
-        "Remote monitoring capability"
-    ],
-    hideHeroImage: true
+    variantTable: {
+        headers: ["Model", "Sizes (ft)", "Interior Dimensions (WxDxH)", "Exterior Dimensions (WxDxH)"],
+        rows: [
+            ["AP_CL_RLAF", "3’ × 3’", "955 × 995 × 1950 mm", "1035 × 1545 × 2275 mm"],
+            ["AP_CL_RLAF", "4’ × 3’", "1280 × 995 × 1950 mm", "1360 × 1545 × 2275 mm"],
+            ["AP_CL_RLAF", "4’ × 4’", "1300 × 1290 × 2245 mm", "1380 × 1840 × 2570 mm"],
+            ["AP_CL_RLAF", "5’ × 4’", "1604 × 1320 × 1830 mm", "1684 × 1920 × 2155 mm"],
+            ["AP_CL_RLAF", "5’ × 5’", "1604 × 1624 × 2000 mm", "1684 × 2224 × 2325 mm"],
+            ["AP_CL_RLAF", "6’ × 4’", "1910 × 1300 × 2135 mm", "1990 × 1850 × 2460 mm"],
+            ["AP_CL_RLAF", "6’ × 6’", "1930 × 1930 × 2000 mm", "2010 × 2530 × 2325 mm"],
+            ["AP_CL_RLAF", "8’ × 6’", "2500 × 1950 × 1950 mm", "2580 × 2550 × 2275 mm"]
+        ]
+    },
+    regularAttributes: [],
+    addOnsAttributes: [],
+    images: [
+        "/products/Cleanroom/sampling-dispensing-booth-front.webp",
+        "/products/Cleanroom/sampling-dispensing-booth-left.webp",
+        "/products/Cleanroom/sampling-dispensing-booth-right.webp"
+    ]
 };

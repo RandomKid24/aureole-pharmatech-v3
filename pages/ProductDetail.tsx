@@ -13,6 +13,7 @@ import VariantSections from './ProductDetail/sections/VariantSections';
 import ProductEnquiry from './ProductDetail/sections/ProductEnquiry';
 import InfrasArchitecture from '../components/sections/InfrasArchitecture';
 import ServiceCentersGrid from '../components/sections/ServiceCentersGrid';
+import ChamberAnatomy from '../components/sections/ChamberAnatomy';
 
 import CategoryHero from '../components/ui/CategoryHero';
 
@@ -82,6 +83,9 @@ const ProductDetail: React.FC = () => {
             <ProductHero product={product} decodedName={decodedName} />
             <TechnicalDashboard product={product} decodedName={decodedName} />
             {showInfras && <InfrasArchitecture />}
+            {decodedName === "Walk In Humidity Chamber" && <ChamberAnatomy variant="humidity" />}
+            {decodedName === "Walk In Cold Chamber" && <ChamberAnatomy variant="cold" />}
+            {decodedName === "Walk In BOD Incubator" && <ChamberAnatomy variant="bod" />}
             <ProductTables product={product} productName={decodedName} />
             <VariantSections product={product} />
             {(decodedName === "Walk In Humidity Chamber" || 

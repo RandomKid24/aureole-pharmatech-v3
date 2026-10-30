@@ -75,7 +75,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
                                     {PRODUCT_CATALOG.map((cat) => (
                                         <Link
                                             key={cat.id}
-                                            to={cat.id === 'stability' ? '/products/stability-chambers' : cat.id === 'tabletop' ? '/products/table-top-instruments' : '/products/laboratory-furniture'}
+                                            to={cat.id === 'stability' ? '/products/stability-chambers' : cat.id === 'cleanroom' ? '/products/cleanroom-equipment' : cat.id === 'tabletop' ? '/products/table-top-instruments' : '/products/laboratory-furniture'}
                                             className="text-lg font-black text-aureole-slate uppercase tracking-tighter hover:text-aureole-cyan transition-colors"
                                             onClick={() => {
                                                 onClose();

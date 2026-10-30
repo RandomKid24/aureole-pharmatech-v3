@@ -18,6 +18,7 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
                 if (sub.products.some(p => p.trim().toLowerCase() === dName || p.trim().toLowerCase() === dName.replace(/-/g, ' '))) {
                     let path = '/products';
                     if (cat.id === 'stability') path = '/products/stability-chambers';
+                    if (cat.id === 'cleanroom') path = '/products/cleanroom-equipment';
                     if (cat.id === 'tabletop') path = '/products/table-top-instruments';
                     if (cat.id === 'furniture') path = '/products/laboratory-furniture';
 

@@ -35,6 +35,23 @@ export const PRODUCT_CATALOG: Category[] = [
         ]
     },
     {
+        id: "cleanroom",
+        title: "Cleanroom Equipments",
+        description: "Biosafety cabinets, laminar air flow units and pass boxes for contamination-controlled pharmaceutical and laboratory environments.",
+        subTypes: [
+            {
+                id: "cleanroom-list",
+                name: "Cleanroom Equipments",
+                products: [
+                    "Biosafety Cabinet",
+                    "Laminar Air Flow",
+                    "Sampling / Dispensing Booth",
+                    "Pass Box"
+                ]
+            }
+        ]
+    },
+    {
         id: "tabletop",
         title: "Table Top Instruments",
         description: "Compact, high-precision laboratory instruments designed for bench-top space optimization.",

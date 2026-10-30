@@ -21,7 +21,7 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product, productName }) => {
     ].includes(productName || "");
 
     const isCleanroom = [
-        "Static Pass Box", "Dynamic Pass Box", "Laminar Air Flow",
+        "Pass Box", "Laminar Air Flow",
         "Sampling / Dispensing Booth", "Biosafety Cabinet"
     ].includes(productName || "");
 

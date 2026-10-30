@@ -68,7 +68,7 @@ const CategoryMarquees: React.FC = () => {
                         return data?.image || (data?.images && data.images.length > 0);
                     });
 
-                const mainLink = `/products/${category.id === 'stability' ? 'stability-chambers' : category.id === 'tabletop' ? 'table-top-instruments' : 'laboratory-furniture'}`;
+                const mainLink = `/products/${category.id === 'stability' ? 'stability-chambers' : category.id === 'cleanroom' ? 'cleanroom-equipment' : category.id === 'tabletop' ? 'table-top-instruments' : 'laboratory-furniture'}`;
 
                 if (productsWithImages.length === 0) return null;
 

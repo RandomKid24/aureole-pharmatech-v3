@@ -37,6 +37,15 @@
   ],
   "headers": [
     {
+      "source": "/anatomy/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
       "source": "/vcards/:path*",
       "headers": [
         {

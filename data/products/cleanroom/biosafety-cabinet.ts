@@ -1,47 +1,39 @@
 import { ProductDetail } from '../types';
 
 export const biosafetyCabinet: ProductDetail = {
-    description: "Aureole Biosafety Cabinets provide advanced biological containment with HEPA-filtered inflow and downflow air, making them ideal for microbiology labs, MLT, and sterility testing environments.\n\nOffering triple protection for operator, product, and environment, these Class II A2/B2 compliant cabinets feature 99.995% HEPA filtration efficiency. Perfect for microbiology labs, sterility testing, cell culture, and BET/MLT testing applications.",
+    description: "Biosafety Cabinets (BSCs) are specialized containment enclosures that use laminar airflow and HEPA filtration to protect the operator, the environment, and the sample from biohazards and infectious agents.\n\nClass 2 cabinets are available as Type A2 (70% recirculated air, 30% exhaust), ideal for microbiological and pharmaceutical applications, and Type B2 (100% exhausted air), ideal for handling toxic chemicals and volatile substances.",
     keyFeatures: [
-        "Class II A2 / B2 compliant design",
-        "99.995% HEPA filtration efficiency",
-        "Personnel, product & environmental protection",
-        "Digital airflow monitoring & alarms",
-        "UV sterilization & programmable timer",
-        "Tempered glass sash with ergonomic access",
-        "SS304 interior with seamless finish",
-        "NSF/EN standard compliant construction"
+        "Type A2: 70% recirculated air and 30% exhaust",
+        "Type B2: 100% exhausted air for toxic chemicals and volatile substances",
+        "Product and personnel protection",
+        "Eliminates cross-contamination risks",
+        "Energy-efficient fluorescent lamp that produces less heat",
+        "Feather-touch switches for easy operation",
+        "Minihelic gauges to monitor differential pressure",
+        "UV light with hour meter",
+        "Durable wall plenum design, easy to clean and maintain"
     ],
+    keyFeaturesHeading: "Features & Equipment",
     specifications: [
-        { parameter: "Standard Sizes", details: "1220×610×610 mm, 910×610×610 mm" },
-        { parameter: "Class Type", details: "Class II A2 / B2" },
-        { parameter: "Filtration Efficiency", details: "99.995% HEPA" },
-        { parameter: "Protection", details: "Personnel, Product, Environment" },
-        { parameter: "Interior Material", details: "SS304 seamless" },
-        { parameter: "Sash", details: "Tempered glass with ergonomic access" },
-        { parameter: "Monitoring", details: "Digital airflow with alarms" },
-        { parameter: "Compliance", details: "NSF/EN standards" }
+        { parameter: "Cleanliness Standard", details: "Class 100 (ISO Class 5 per ISO 14644-1 & 2)" },
+        { parameter: "Construction MOC", details: "Stainless Steel SS 304" },
+        { parameter: "Illumination", details: "High intensity, low wattage LED / Fluorescent lighting (> 300 Lux)" },
+        { parameter: "Noise Level", details: "Low noise level" }
     ],
     models: [],
-    regularAttributes: [
-        "HEPA filtration system",
-        "Triple protection design",
-        "Digital airflow monitoring",
-        "Alarm system",
-        "UV sterilization",
-        "Tempered glass sash",
-        "SS304 seamless interior",
-        "Ergonomic access design"
-    ],
-    addOnsAttributes: [
-        "Programmable UV timer",
-        "Data logging system",
-        "Remote monitoring",
-        "Custom sizes available",
-        "Validation documentation (DQ/IQ/OQ)",
-        "Service port for equipment",
-        "Gas/vacuum connections",
-        "21 CFR Part 11 Support"
-    ],
-    hideHeroImage: true
+    variantTable: {
+        headers: ["Model", "Sizes (Ft)", "Interior Dimensions (WxDxH)", "Exterior Dimensions (WxDxH)"],
+        rows: [
+            ["AP_CL_BS", "3’ × 2’", "955 × 650 × 600 mm", "1075 × 975 × 2100 mm"],
+            ["AP_CL_BS", "4’ × 2’", "1260 × 650 × 600 mm", "1380 × 975 × 2100 mm"]
+        ],
+        remark: "Applications: clinical & diagnostic laboratories, microbiology & virology research, pharmaceutical & biomedical manufacturing, cell & tissue culture work, genetic engineering & biotech research, chemotherapy drug preparation."
+    },
+    regularAttributes: [],
+    addOnsAttributes: [],
+    images: [
+        "/products/Cleanroom/biosafety-cabinet-front.webp",
+        "/products/Cleanroom/biosafety-cabinet-left.webp",
+        "/products/Cleanroom/biosafety-cabinet-right.webp"
+    ]
 };

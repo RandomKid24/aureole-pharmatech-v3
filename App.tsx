@@ -19,6 +19,7 @@ const Plants = lazy(() => import('./pages/about/Plants'));
 const Products = lazy(() => import('./pages/Products'));
 const ProductDetail = lazy(() => import('./pages/ProductDetail'));
 const StabilityChambers = lazy(() => import('./pages/StabilityChambers'));
+const CleanroomEquipment = lazy(() => import('./pages/CleanroomEquipment'));
 const TableTopInstruments = lazy(() => import('./pages/TableTopInstruments'));
 const LaboratoryFurniture = lazy(() => import('./pages/LaboratoryFurniture'));
 const Service = lazy(() => import('./pages/Service'));
@@ -58,6 +59,7 @@ const App: React.FC = () => {
           <Route path="/events" element={<Events />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/stability-chambers" element={<StabilityChambers />} />
+          <Route path="/products/cleanroom-equipment" element={<CleanroomEquipment />} />
           <Route path="/products/table-top-instruments" element={<TableTopInstruments />} />
           <Route path="/products/laboratory-furniture" element={<LaboratoryFurniture />} />
           <Route path="/products/:productName" element={<ProductDetail />} />

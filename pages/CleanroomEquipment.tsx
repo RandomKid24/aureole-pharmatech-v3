@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import SEO from '../components/SEO';
 import { PRODUCT_CATALOG, CLEANROOM_NAV_ITEMS, CLEANROOM_SECTIONS } from '../data/products';
 import CategoryHero from '../components/ui/CategoryHero';
 import KeyDetailsAccordion from '../components/ui/KeyDetailsAccordion';
@@ -16,6 +17,7 @@ const CleanroomEquipment: React.FC = () => {
 
     return (
         <div className="pt-24 min-h-screen bg-transparent">
+            <SEO />
             <CategoryHero
                 title="CLEANROOM"
                 subtitle={<span className="text-aureole-blue">EQUIPMENT</span>}

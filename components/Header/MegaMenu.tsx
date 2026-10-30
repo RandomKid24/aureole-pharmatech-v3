@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FlaskConical, Microscope, Hammer, ArrowRight } from 'lucide-react';
+import { FlaskConical, Microscope, Hammer, ArrowRight, Wind } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface MegaMenuProps {
@@ -23,6 +23,12 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
             title: 'Stability Testing Equipments',
             href: '/products/stability-chambers',
             icon: <FlaskConical size={16} strokeWidth={1} />,
+        },
+        {
+            id: 'cleanroom',
+            title: 'Cleanroom Equipments',
+            href: '/products/cleanroom-equipment',
+            icon: <Wind size={16} strokeWidth={1} />,
         },
         {
             id: 'tabletop',

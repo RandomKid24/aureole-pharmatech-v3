@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CheckCircle2, Box, Settings, ArrowRight } from 'lucide-react';
 
 interface VariantSectionsProps {
@@ -6,7 +6,72 @@ interface VariantSectionsProps {
 }
 
 const VariantSections: React.FC<VariantSectionsProps> = ({ product }) => {
+    const [active, setActive] = useState(0);
     if (!product.variants || product.variants.length === 0) return null;
+
+    if (product.variantsHeading) {
+        const v = product.variants[active];
+        return (
+            <section className="py-12 bg-transparent">
+                <div className="container mx-auto px-6 lg:px-24">
+                    <div className="flex items-center gap-3 mb-8">
+                        <div className="w-8 h-[2px] bg-aureole-cyan" />
+                        <h2 className="text-[11px] font-black uppercase tracking-[0.3em] text-aureole-cyan">{product.variantsHeading}</h2>
+                    </div>
+                    <div className="flex flex-wrap gap-px bg-slate-200 border border-slate-200 mb-8">
+                        {product.variants.map((x: any, i: number) => (
+                            <button
+                                key={i}
+                                onClick={() => setActive(i)}
+                                className={`flex-1 min-w-[200px] px-6 py-4 text-[11px] font-bold tracking-wider transition-colors ${i === active ? 'bg-white text-aureole-blue' : 'bg-slate-50 text-slate-400 hover:text-aureole-slate'}`}
+                            >
+                                {x.name}
+                            </button>
+                        ))}
+                    </div>
+                    <p className="text-slate-600 text-base leading-relaxed font-medium max-w-4xl mb-8">{v.description}</p>
+                    {v.specifications && (
+                        <div className="overflow-x-auto border border-slate-200 shadow-sm mb-8">
+                            <table className="w-full text-left">
+                                <tbody className="divide-y divide-slate-100">
+                                    {v.specifications.map((s: any, i: number) => (
+                                        <tr key={i}>
+                                            <td className="py-3 px-6 text-[11px] font-bold text-aureole-blue bg-slate-50/60 w-1/3">{s.parameter}</td>
+                                            <td className="py-3 px-6 text-[11px] font-bold text-slate-700">{s.details}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    )}
+                    {v.features && (
+                        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-3 mb-8">
+                            {v.features.map((f: string, i: number) => (
+                                <div key={i} className="flex items-center gap-3 text-[11px] font-bold tracking-wider text-slate-500">
+                                    <CheckCircle2 size={14} className="text-aureole-cyan" />{f}
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                    {v.table && (
+                        <div className="overflow-x-auto border border-slate-200 shadow-sm">
+                            <table className="w-full text-left min-w-[600px]">
+                                <tbody className="divide-y divide-slate-100">
+                                    {v.table.rows.map((row: any, r: number) => (
+                                        <tr key={r} className={r === 0 ? 'bg-slate-50' : ''}>
+                                            {row.cells.map((c: any, j: number) => (
+                                                <td key={j} className={`py-4 px-6 text-[11px] font-bold ${r === 0 ? 'text-aureole-blue' : 'text-slate-700'}`}>{c.content}</td>
+                                            ))}
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    )}
+                </div>
+            </section>
+        );
+    }
 
     return (
         <section className="py-12 bg-transparent relative">

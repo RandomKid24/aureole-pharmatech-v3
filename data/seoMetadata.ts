@@ -143,13 +143,9 @@ export const PRODUCT_SEO_DATA: Record<string, { title: string; description: stri
         title: "Lab Accessories Supplier in India, Aureole Pharma Tech",
         description: "Aureole Pharma Tech Suppliers of Lab Accessories in Nashik, Maharashtra, Best Quality & Price Pharmaceutical Equipment In India, Call: +91 86005 22240"
     },
-    "Static Pass Box": {
-        title: "Static Pass Box Manufacturer and Supplier in India, Aureole Pharma Tech",
-        description: "Aureole Pharma Tech Manufacturers, Suppliers of Static Pass Box in Nashik, Maharashtra, Best Quality & Price Pharmaceutical Equipment In India, Call: +91 86005 22240"
-    },
-    "Dynamic Pass Box": {
-        title: "Dynamic Pass Box Manufacturer and Supplier in India, Aureole Pharma Tech",
-        description: "Aureole Pharma Tech Manufacturers, Suppliers of Dynamic Pass Box in Nashik, Maharashtra, Best Quality & Price Pharmaceutical Equipment In India, Call: +91 86005 22240"
+    "Pass Box": {
+        title: "Pass Box Manufacturer and Supplier in India, Aureole Pharma Tech",
+        description: "Aureole Pharma Tech Manufacturers, Suppliers of Dynamic and Static Pass Box in Nashik, Maharashtra, Best Quality & Price Pharmaceutical Equipment In India, Call: +91 86005 22240"
     },
     "Laminar Air Flow": {
         title: "Laminar Air Flow Manufacturer and Supplier in India, Aureole Pharma Tech",

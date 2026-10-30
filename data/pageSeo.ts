@@ -32,6 +32,13 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     h1: "Stability Chambers & Environmental Test Equipment",
     summary: "Reach-in and walk-in stability chambers, incubators, freezers and ovens for pharmaceutical stability studies.",
   },
+  "/products/cleanroom-equipment": {
+    title: "Cleanroom Equipment: Biosafety Cabinets, Laminar Air Flow & Pass Boxes | Aureole Pharma Tech",
+    description:
+      "Biosafety cabinets, laminar air flow units, sampling and dispensing booths, and pass boxes for cleanrooms, manufactured by Aureole Pharma Tech.",
+    h1: "Cleanroom Equipment",
+    summary: "Biosafety cabinets, laminar air flow units, sampling and dispensing booths and pass boxes for controlled environments.",
+  },
   "/products/table-top-instruments": {
     title: "Table Top Instruments: Ultrasonic, Water, Steam & Oil Baths | Aureole Pharma Tech",
     description:

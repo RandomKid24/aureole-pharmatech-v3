@@ -50,6 +50,7 @@ export interface ProductDetail {
         remark?: string;
     };
     complexTable?: ComplexTable;
+    variantsHeading?: string; // set to show variants as one tabbed "types" section
     variants?: Array<{
         name: string;
         description: string;

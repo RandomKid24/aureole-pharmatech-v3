@@ -75,15 +75,14 @@ This document tracks which products are currently live on the **Aureole Pharma T
 ---
 
 ## 🧼 Cleanroom Equipment
-*⚠️ These products have no category page yet*
+*Managed under `/products/cleanroom-equipment`*
 
 | Status | Product Name | Notes |
 | :---: | :--- | :--- |
-| ❌ | Static Pass Box | Removed / no category page (not in sitemap, noindex) |
-| ❌ | Dynamic Pass Box | Removed / no category page (not in sitemap, noindex) |
-| ❌ | Laminar Air Flow | Removed / no category page (not in sitemap, noindex) |
-| ❌ | Sampling / Dispensing Booth | Removed / no category page (not in sitemap, noindex) |
-| ❌ | Biosafety Cabinet | Removed / no category page (not in sitemap, noindex) |
+| ✅ | Pass Box | Listed (Dynamic and Static types on one page) |
+| ✅ | Laminar Air Flow | Listed |
+| ✅ | Sampling / Dispensing Booth | Listed |
+| ✅ | Biosafety Cabinet | Listed |
 
 ---
 

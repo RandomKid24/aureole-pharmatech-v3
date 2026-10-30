@@ -19,6 +19,7 @@ const routes: Route[] = [];
 
 const nav = `<nav aria-label="Main"><ul>${[
   ["/products/stability-chambers/", "Stability Chambers"],
+  ["/products/cleanroom-equipment/", "Cleanroom Equipments"],
   ["/products/table-top-instruments/", "Table Top Instruments"],
   ["/products/laboratory-furniture/", "Laboratory Furniture"],
   ["/service/", "Service"], ["/software/", "Software"], ["/about/", "About"], ["/careers/", "Careers"],
