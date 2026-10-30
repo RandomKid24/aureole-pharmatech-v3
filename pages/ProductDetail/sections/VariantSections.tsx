@@ -31,13 +31,13 @@ const VariantSections: React.FC<VariantSectionsProps> = ({ product }) => {
                     </div>
                     <p className="text-slate-600 text-base leading-relaxed font-medium max-w-4xl mb-8">{v.description}</p>
                     {v.specifications && (
-                        <div className="overflow-x-auto border border-slate-200 shadow-sm mb-8">
-                            <table className="w-full text-left">
-                                <tbody className="divide-y divide-slate-100">
+                        <div className="overflow-x-auto border border-slate-200 shadow-md mb-8">
+                            <table className="w-full text-left min-w-[800px]">
+                                <tbody className="divide-y divide-slate-300 text-slate-600">
                                     {v.specifications.map((s: any, i: number) => (
                                         <tr key={i}>
-                                            <td className="py-3 px-6 text-[11px] font-bold text-aureole-blue bg-slate-50/60 w-1/3">{s.parameter}</td>
-                                            <td className="py-3 px-6 text-[11px] font-bold text-slate-700">{s.details}</td>
+                                            <td className="py-4 px-8 text-[11px] font-bold text-aureole-blue bg-slate-50/50 border-r border-slate-200 w-1/3">{s.parameter}</td>
+                                            <td className="py-4 px-8 text-[11px] font-bold text-slate-900">{s.details}</td>
                                         </tr>
                                     ))}
                                 </tbody>
@@ -48,26 +48,35 @@ const VariantSections: React.FC<VariantSectionsProps> = ({ product }) => {
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-3 mb-8">
                             {v.features.map((f: string, i: number) => (
                                 <div key={i} className="flex items-center gap-3 text-[11px] font-bold tracking-wider text-slate-500">
-                                    <CheckCircle2 size={14} className="text-aureole-cyan" />{f}
+                                    <CheckCircle2 size={14} className="text-aureole-cyan shrink-0" />{f}
                                 </div>
                             ))}
                         </div>
                     )}
-                    {v.table && (
-                        <div className="overflow-x-auto border border-slate-200 shadow-sm">
-                            <table className="w-full text-left min-w-[600px]">
-                                <tbody className="divide-y divide-slate-100">
-                                    {v.table.rows.map((row: any, r: number) => (
-                                        <tr key={r} className={r === 0 ? 'bg-slate-50' : ''}>
-                                            {row.cells.map((c: any, j: number) => (
-                                                <td key={j} className={`py-4 px-6 text-[11px] font-bold ${r === 0 ? 'text-aureole-blue' : 'text-slate-700'}`}>{c.content}</td>
+                    <div className="space-y-8">
+                        {v.table && (
+                            <div className="overflow-x-auto border border-slate-200 shadow-md">
+                                <table className="w-full text-left min-w-[800px]">
+                                    <thead>
+                                        <tr className="bg-slate-50 text-aureole-slate border-b border-slate-300">
+                                            {v.table.rows[0].cells.map((c: any, j: number, all: any[]) => (
+                                                <th key={j} className={`py-5 px-8 text-[11px] font-bold text-slate-700 ${j < all.length - 1 ? 'border-r border-slate-200' : ''} ${j === 0 ? '' : 'text-center'}`}>{c.content}</th>
                                             ))}
                                         </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div>
-                    )}
+                                    </thead>
+                                    <tbody className="divide-y divide-slate-300 text-slate-600">
+                                        {v.table.rows.slice(1).map((row: any, r: number) => (
+                                            <tr key={r}>
+                                                {row.cells.map((c: any, j: number, all: any[]) => (
+                                                    <td key={j} className={`py-4 px-8 text-[11px] ${j === 0 ? 'font-bold text-aureole-blue bg-slate-50/50' : 'font-bold text-slate-900 text-center'} ${j < all.length - 1 ? 'border-r border-slate-200' : ''}`}>{c.content}</td>
+                                                ))}
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </section>
         );

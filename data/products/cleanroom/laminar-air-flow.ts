@@ -50,15 +50,7 @@ export const laminarAirFlow: ProductDetail = {
         {
             name: "Horizontal Laminar Air Flow",
             description: "A controlled-environment workstation where high-purity air moves in a continuous, parallel, horizontal direction across the work surface, traveling from the back of the cabinet straight out toward the operator.",
-            image: "",
-            features: [
-                "Microorganism culturing",
-                "Media plate preparation",
-                "Plant tissue culture",
-                "Aseptic drug preparation",
-                "Vaccine and medicine production",
-                "Surgical and healthcare support"
-            ]
+            image: ""
         }
     ],
     images: [

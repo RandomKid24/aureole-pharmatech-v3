@@ -7,7 +7,7 @@ import { kitScript } from "/Users/ady/.claude/skills/anatomy/scripts/inline-kit.
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const theme = process.argv.includes("--light") ? "light" : "dark";
-// one figure per product: humidity chambers have steam boilers and %RH, cold chambers and BOD incubators are temperature only
+// one figure per product: humidity chambers have steam generators and %RH, cold chambers and BOD incubators are temperature only
 const product = (process.argv.find((a) => a.startsWith("--product=")) ?? "--product=humidity").split("=")[1];
 const VARIANTS = {
   humidity: { file: "walk-in-stability-chamber", title: "Walk-in stability chamber", humid: true, setpoints: [{ t: 25, rh: 60 }, { t: 30, rh: 65 }, { t: 30, rh: 75 }, { t: 40, rh: 75 }], blue: [0], blueLabel: "Refrigerant line at 25 °C, 60 %RH" },
@@ -58,8 +58,8 @@ const GAUGE_R = 4.2;
 const BUTTONS = [15, 19.5, 24, 28.5].map((y) => [y, 84]);
 // duty boiler on the left of the cabinet, standby on the right, each with its own water tank
 const BOILERS = [
-  { x: -26, y: 26, w: 18, d: 14, r: 2, name: "DUTY", label: "DUTY BOILER A" },
-  { x: -26, y: 96, w: 18, d: 14, r: 2, name: "STANDBY", label: "STANDBY BOILER B" },
+  { x: -26, y: 26, w: 18, d: 14, r: 2, name: "DUTY", label: "STEAM GENERATOR A" },
+  { x: -26, y: 96, w: 18, d: 14, r: 2, name: "STANDBY", label: "STEAM GENERATOR B" },
 ];
 const BOILER_H = 12;
 const TANKS = [
@@ -601,11 +601,11 @@ const INFO = {
   heater: ["U-shaped dry heater", "Sensible-heating stage. It is energised when chamber temperature is below setpoint (red in the drawing)."],
   coil: ["Cooling coil", "Evaporator coil fed with refrigerant from the compressor units. It removes sensible and latent heat when temperature or %RH is above setpoint (blue in the drawing)."],
   steam: ["Steam injection", "Perforated steam manifold at the base of the utility. Steam is injected into the airstream to raise %RH to setpoint."],
-  duty: ["Duty boiler A", "Primary steam source for humidification, with a dedicated feed-water tank. Its indicator lamp is lit while in service."],
-  standby: ["Standby boiler B", "Redundant steam source with its own feed-water tank. It takes over automatically if duty boiler A fails."],
+  duty: ["Steam generator A (duty)", "Primary steam source for humidification, with a dedicated feed-water tank. Its indicator lamp is lit while in service."],
+  standby: ["Steam generator B (standby)", "Redundant steam generator with its own feed-water tank. It takes over automatically if steam generator A fails."],
   steamgen: ["Steam generator A", "Generates the steam used for humidification and feeds the injection manifold, with a dedicated feed-water tank."],
-  tank: ["Water storage tank", "Feed-water storage tank for the adjacent boiler / steam generator. One tank is fitted per unit."],
-  steamline: ["Steam line", "Steam header from the boiler to the injection manifold. The routing is drawn schematically."],
+  tank: ["Water storage tank", "Feed-water storage tank for the adjacent steam generator. One tank is fitted per unit."],
+  steamline: ["Steam line", "Steam header from the steam generator to the injection manifold. The routing is drawn schematically."],
   compA: ["Compressor unit A (running)", "Remote refrigeration compressor unit. It compresses and rejects heat from the refrigerant gas circulating through the cooling coil in the utility. May be located up to 15 m from the chamber."],
   compB: ["Compressor unit B (standby)", "Redundant compressor unit, connected to the same cooling coil. It takes over if compressor A is out of service. May be located up to 15 m from the chamber."],
   refpipe: ["Refrigerant piping", "Refrigerant lines from the cooling coil inside the utility to the compressor units. They leave the cabinet through a sealed entry plate on its left side, level with the coil, with a shared header to both units. Turns blue at 25 °C / 60 %RH. Run length up to 15 m."],
@@ -735,7 +735,7 @@ const svg3 = k.figureSvg({
   height: 560,
   label:
     V.humid
-      ? "The back of a walk-in stability chamber. The utility cabinet stands against the rear wall with a service door, two blower motors and an isolator switch on its upper back face. Two compressor units stand a short way behind it and feed its cooling coil through refrigerant piping. A small control panel with four selector buttons hangs on the wall above the duty boiler. The duty boiler stands to the left of the cabinet and the standby boiler to the right, each with its own water tank, and each feeds the cabinet through an insulated steam pipe."
+      ? "The back of a walk-in stability chamber. The utility cabinet stands against the rear wall with a service door, two blower motors and an isolator switch on its upper back face. Two compressor units stand a short way behind it and feed its cooling coil through refrigerant piping. A small control panel with four selector buttons hangs on the wall above steam generator A. Steam generator A (duty) stands to the left of the cabinet and steam generator B (standby) to the right, each with its own water tank, and each feeds the cabinet through an insulated steam pipe."
       : "The back of a walk-in chamber. The utility cabinet stands against the rear wall with a service door, two blower motors and an isolator switch on its upper back face. Two compressor units, a master and a stand-by, stand a long way behind it and feed its cooling coil through refrigerant piping. A small control panel with four selector buttons hangs on the wall.",
   body: [
     floorOf(FLOOR3, [-36], [44, 88]),
@@ -922,15 +922,15 @@ const body =
   }), views) +
   withCond(k.plateHtml({
     fig: "Fig 2",
-    title: V.humid ? "Back: utility, compressors, boilers and panel" : "Back: utility, compressors and panel",
+    title: V.humid ? "Back: utility, compressors, steam generators and panel" : "Back: utility, compressors and panel",
     hint,
     readout,
     keys: [
-      { mark: "lit", label: V.humid ? "Selected condition, duty boiler A, compressor A running" : "Selected temperature, compressor A running" },
+      { mark: "lit", label: V.humid ? "Selected condition, steam generator A, compressor A running" : "Selected temperature, compressor A running" },
       { mark: "blue", label: V.blueLabel },
     ],
     caption: V.humid
-      ? "The chamber from behind: the utility cabinet with its blower motors, two compressor units (A running, B standby) that feed the cooling coil through refrigerant piping up to 15 m away, the small control panel on the wall, duty boiler A (left) and standby boiler B (right), each with its own water tank, and the 65 mm validation port holes low on the wall."
+      ? "The chamber from behind: the utility cabinet with its blower motors, two compressor units (A running, B standby) that feed the cooling coil through refrigerant piping up to 15 m away, the small control panel on the wall, steam generator A (left, duty) and steam generator B (right, standby), each with its own water tank, and the 65 mm validation port holes low on the wall."
       : "The chamber from behind: the utility cabinet with its blower motors, two compressor units (a master and a stand-by) that feed the cooling coil through refrigerant piping up to 15 m away, the small control panel on the wall, and the 65 mm validation port holes low on the wall.",
     body: stage(svg3, "Back of the walk-in chamber: arrow keys choose the storage condition"),
   }));

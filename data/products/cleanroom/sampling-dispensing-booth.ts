@@ -2,17 +2,8 @@ import { ProductDetail } from '../types';
 
 export const samplingDispensingBooth: ProductDetail = {
     description: "Reverse Laminar Air Flow (RLAF) units, commonly used as Sampling, Dispensing or Weighing Booths, are containment systems designed to isolate airborne particulates at the source. A continuous downward vertical airflow paired with a negative pressure zone captures escaping dust, hazardous powders and chemical aerosols during bulk material transfers.\n\nThis barrier protects the technician while preventing contamination from spreading into the wider facility.",
-    keyFeatures: [
-        "Active ingredient weighing",
-        "Raw material sampling",
-        "Powder charging & blending",
-        "Additive manufacturing",
-        "Bulk ingredient handling"
-    ],
-    keyFeaturesHeading: "Applications",
     specifications: [
-        { parameter: "Airflow", details: "Continuous downward vertical airflow with negative pressure zone" },
-        { parameter: "Application", details: "Sampling, dispensing and weighing" }
+        { parameter: "Airflow", details: "Continuous downward vertical airflow with negative pressure zone" }
     ],
     models: [],
     variantTable: {
@@ -26,7 +17,8 @@ export const samplingDispensingBooth: ProductDetail = {
             ["AP_CL_RLAF", "6’ × 4’", "1910 × 1300 × 2135 mm", "1990 × 1850 × 2460 mm"],
             ["AP_CL_RLAF", "6’ × 6’", "1930 × 1930 × 2000 mm", "2010 × 2530 × 2325 mm"],
             ["AP_CL_RLAF", "8’ × 6’", "2500 × 1950 × 1950 mm", "2580 × 2550 × 2275 mm"]
-        ]
+        ],
+        remark: null
     },
     regularAttributes: [],
     addOnsAttributes: [],

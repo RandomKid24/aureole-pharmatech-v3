@@ -39,6 +39,30 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
 
     return (
         <>
+            {/* Small label / detail table (Features & Equipment) */}
+            {product.featureTable && (
+                <section className="pt-8 pb-2 bg-transparent">
+                    <div className="container mx-auto px-6 lg:px-24">
+                        <div className="flex items-center gap-4 mb-5">
+                            <Box className="text-aureole-blue" size={18} />
+                            <h3 className="text-[13px] font-bold text-slate-900">{product.featureTable.heading}</h3>
+                        </div>
+                        <div className="overflow-x-auto border border-slate-200 shadow-sm max-w-3xl">
+                            <table className="w-full text-left">
+                                <tbody className="divide-y divide-slate-200">
+                                    {product.featureTable.rows.map(([label, detail]: [string, string]) => (
+                                        <tr key={label}>
+                                            <td className="py-2.5 px-5 text-[11px] font-bold text-aureole-blue bg-slate-50/50 border-r border-slate-200 whitespace-nowrap w-40">{label}</td>
+                                            <td className="py-2.5 px-5 text-[11px] font-bold text-slate-900">{detail}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            )}
+
             {/* Models and Dimensions Table */}
             {product.models && product.models.length > 0 && (
                 <section className="py-8 bg-transparent">
@@ -139,12 +163,14 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
                             </table>
                         </div>
 
-                        <div className="mt-12 p-10 bg-slate-50 border border-slate-100 border-l-[6px] border-aureole-cyan shadow-sm">
-                            <p className="text-[12px] text-aureole-slate leading-relaxed font-bold tracking-widest">
-                                <span className="text-aureole-cyan mr-4">REMARK:</span>
-                                {product.variantTable.remark || "Available in variable sizes (2 Ltr. to 22 Ltr.)"}
-                            </p>
-                        </div>
+                        {product.variantTable.remark !== null && (
+                            <div className="mt-12 p-10 bg-slate-50 border border-slate-100 border-l-[6px] border-aureole-cyan shadow-sm">
+                                <p className="text-[12px] text-aureole-slate leading-relaxed font-bold tracking-widest">
+                                    <span className="text-aureole-cyan mr-4">REMARK:</span>
+                                    {product.variantTable.remark || "Available in variable sizes (2 Ltr. to 22 Ltr.)"}
+                                </p>
+                            </div>
+                        )}
                     </div>
                 </section>
             )}

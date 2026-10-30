@@ -41,13 +41,14 @@ export interface ProductDetail {
     image?: string;
     images?: string[];
     hideHeroImage?: boolean;
+    featureTable?: { heading: string; rows: [string, string][] }; // small label / detail table, e.g. "Features & Equipment"
     imageCaptions?: string[];
     keyFeaturesHeading?: string;
     regularAttributesHeading?: string;
     variantTable?: {
         headers: string[];
         rows: string[][];
-        remark?: string;
+        remark?: string | null; // null hides the remark box
     };
     complexTable?: ComplexTable;
     variantsHeading?: string; // set to show variants as one tabbed "types" section
