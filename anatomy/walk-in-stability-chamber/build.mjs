@@ -883,6 +883,7 @@ const CSS = `<style>
 .hot{cursor:help}
 figure[hidden]{display:none!important}
 .embed .iso-caption{display:none}
+.ch-copy{margin:10px 0 0;font:11px/1 var(--anatomy-mono);letter-spacing:.04em;color:var(--anatomy-text);opacity:.75}
 .embed .iso-page{padding-top:0;padding-bottom:0}
 .ch-focus .hot:not([data-active]){opacity:.38;transition:opacity .15s}
 .hot[data-active] .iso-edge{stroke:var(--anatomy-lit);stroke-width:1.1}
@@ -899,7 +900,8 @@ figure[hidden]{display:none!important}
 .ch-cond button[aria-pressed="true"]{color:var(--anatomy-strong);border-color:var(--anatomy-hi)}
 </style>`;
 const cond = `<div class="ch-cond" role="group" aria-label="Storage condition">${SETPOINTS.map((p, i) => `<button type="button" data-sp="${i}" aria-pressed="${i === 0}">${V.humid ? `${p.t} °C / ${p.rh} %RH` : `${p.t} °C`}</button>`).join("")}</div>`;
-const withCond = (html, extra = "") => html.replace("<figcaption", extra + cond + "<figcaption");
+const copy = `<p class="ch-copy">&copy; 2026 Aureole Pharmatech</p>`;
+const withCond = (html, extra = "") => html.replace("<figcaption", extra + cond + "<figcaption").replace("</figure>", copy + "</figure>");
 const views = `<div class="ch-views" role="group" aria-label="View"><button type="button" data-view="0" aria-pressed="true">Inside</button><button type="button" data-view="1" aria-pressed="false">Outside, door side</button></div>`;
 
 const start = SETPOINTS[0];

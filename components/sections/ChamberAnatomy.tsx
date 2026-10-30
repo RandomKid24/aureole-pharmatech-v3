@@ -62,9 +62,6 @@ const ChamberAnatomy: React.FC<{ variant?: keyof typeof FIGURES }> = ({ variant 
                     className="w-full border-0 bg-white"
                     style={{ height: 720 }}
                 />
-                <p className="mt-3 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-                    &copy; {new Date().getFullYear()} Aureole Pharmatech. This illustration is the property of Aureole Pharmatech and may not be copied or reused without written permission.
-                </p>
             </div>
         </section>
     );
