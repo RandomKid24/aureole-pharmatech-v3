@@ -10,20 +10,22 @@ const LeadershipVision: React.FC = () => {
             <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
                 <div className="grid lg:grid-cols-12 gap-16 items-start">
                     <div className="lg:col-span-4 relative group">
-                        <div className="aspect-[3/4] overflow-hidden transition-all duration-1000 shadow-2xl bg-slate-50">
-                            <img
-                                src="/about/managing-director.webp"
-                                alt="Dr. Kiran Badgujar"
-                                className="w-full h-full object-cover object-top"
-                                onError={(e) => {
-                                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800";
-                                }}
-                            />
+                        <div className="frame-slant frame-slant-r pl-5 pt-5">
+                            <div className="aspect-[3/4] overflow-hidden transition-all duration-1000 bg-slate-50">
+                                <img
+                                    src="/about/managing-director.webp"
+                                    alt="Dr. Kiran Badgujar"
+                                    className="w-full h-full object-cover object-top"
+                                    onError={(e) => {
+                                        (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800";
+                                    }}
+                                />
+                            </div>
                         </div>
                         <div className="mt-8">
                             <h4 className="text-4xl font-[950] font-heading text-[#001529] uppercase tracking-tighter leading-none mb-2">Dr. Kiran Badgujar</h4>
                             <div className="flex items-center gap-4">
-                                <div className="h-[1px] w-12 bg-aureole-cyan"></div>
+                                <span className="slant-mark" aria-hidden="true"></span>
                                 <span className="text-[10px] font-black uppercase tracking-[0.4em] text-aureole-cyan">FOUNDER & DIRECTOR</span>
                             </div>
                         </div>
@@ -32,16 +34,16 @@ const LeadershipVision: React.FC = () => {
                     <div className="lg:col-span-8">
                         <div className="flex flex-col mb-12">
                             <div className="flex items-center gap-4 mb-4">
-                                <span className="w-12 h-[1px] bg-slate-200"></span>
+                                <span className="slant-mark" aria-hidden="true"></span>
                                 <h2 className="text-[11px] font-black font-heading uppercase tracking-[0.4em] text-slate-400">LEADERSHIP VISION</h2>
                             </div>
                             <h3 className="text-4xl lg:text-6xl font-[950] font-heading text-[#001529] uppercase tracking-[0.02em] leading-[0.95]">
-                                Directing <span className="text-aureole-blue">Excellence.</span>
+                                Directing <span className="gt">Excellence.</span>
                             </h3>
                         </div>
 
                         <div className="space-y-8 text-slate-600">
-                            <p className="text-xl font-medium text-[#001529] leading-tight tracking-tight border-l-2 border-aureole-cyan pl-6">
+                            <p className="text-xl font-medium text-[#001529] leading-tight tracking-tight g-left pl-8">
                                 "It gives me immense pride to address you from the Director's Desk at Aureole Group. Our mission remains steadfast—to improve lives with purpose."
                             </p>
                             <div className="text-[15px] font-medium leading-relaxed tracking-tight text-justify space-y-6">
@@ -54,13 +56,13 @@ const LeadershipVision: React.FC = () => {
                             </div>
 
                             <div className="grid grid-cols-2 gap-4 mt-12">
-                                <div className="bg-slate-50/50 border border-slate-100 p-8 rounded-sm">
-                                    <Award className="text-aureole-cyan mb-4" size={32} />
+                                <div className="bg-white border border-slate-100 p-8 rounded-sm shadow-sm g-top">
+                                    <div className="g-ico mb-4"><Award size={22} /></div>
                                     <p className="text-[10px] font-black uppercase tracking-widest text-slate-900">India 500 CEO</p>
                                     <p className="text-[8px] font-black uppercase tracking-widest text-slate-500">Recognition 2022</p>
                                 </div>
-                                <div className="bg-slate-50/50 border border-slate-100 p-8 rounded-sm">
-                                    <Award className="text-aureole-cyan mb-4" size={32} />
+                                <div className="bg-white border border-slate-100 p-8 rounded-sm shadow-sm g-top">
+                                    <div className="g-ico mb-4"><Award size={22} /></div>
                                     <p className="text-[10px] font-black uppercase tracking-widest text-slate-900">Maharashtra Udyojakta</p>
                                     <p className="text-[8px] font-black uppercase tracking-widest text-slate-500">Impact Award 2025</p>
                                 </div>

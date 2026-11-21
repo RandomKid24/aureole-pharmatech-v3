@@ -20,7 +20,7 @@ const CleanroomEquipment: React.FC = () => {
             <SEO />
             <CategoryHero
                 title="CLEANROOM"
-                subtitle={<span className="text-aureole-blue">EQUIPMENT</span>}
+                subtitle={<span className="gt">EQUIPMENT</span>}
                 watermark="STERILITY"
                 image="/assets/sketches/cleanroom-sketch.webp"
                 showAccent={false}

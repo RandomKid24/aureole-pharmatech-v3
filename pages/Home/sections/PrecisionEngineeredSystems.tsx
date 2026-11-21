@@ -86,14 +86,14 @@ const PrecisionEngineeredSystems: React.FC = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-20">
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 sm:gap-4 mb-6">
-              <span className="w-8 sm:w-12 h-[1px] bg-aureole-blue"></span>
+              <span className="slant-mark" aria-hidden="true"></span>
               <h2 className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] text-aureole-blue">
                 CORE CATALOG / <span className="text-aureole-cyan">QUALITY STANDARDS</span>
               </h2>
             </div>
 
             <h3 className="text-5xl sm:text-6xl lg:text-7xl font-black text-[#001529] uppercase tracking-tighter leading-[0.85] mb-8">
-              PRECISION <br /> ENGINEERED <span className="text-aureole-cyan">SYSTEMS.</span>
+              PRECISION <br /> ENGINEERED <span className="gt">SYSTEMS.</span>
             </h3>
 
             <p className="text-slate-500 text-[14px] sm:text-[15px] font-medium tracking-tight leading-relaxed max-w-sm">
@@ -101,15 +101,15 @@ const PrecisionEngineeredSystems: React.FC = () => {
             </p>
           </div>
 
-          <div className="w-full lg:max-w-4xl bg-white border border-slate-100 shadow-2xl shadow-slate-200/50">
+          <div className="w-full lg:max-w-4xl bg-white border border-slate-100 shadow-2xl shadow-slate-200/50 g-top">
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-px bg-slate-100">
               {stats.map((item, idx) => (
                 <div
                   key={idx}
                   className="bg-white p-8 sm:p-12 cursor-default transition-all duration-500 hover:bg-slate-50"
                 >
-                  <div className="text-aureole-blue mb-6">
-                    {React.cloneElement(item.icon as React.ReactElement, { size: 28 })}
+                  <div className="g-ico mb-6">
+                    {React.cloneElement(item.icon as React.ReactElement, { size: 22 })}
                   </div>
                   <div className="flex flex-col gap-1">
                     <span className="text-[10px] sm:text-[11px] font-black text-slate-400 uppercase tracking-widest">
@@ -159,7 +159,7 @@ const PrecisionEngineeredSystems: React.FC = () => {
             {duplicatedProducts.map((product, idx) => (
               <div
                 key={`${product.id}-${idx}`}
-                className="flex flex-col bg-white p-6 sm:p-10 border-r border-slate-100 transition-all duration-300 w-[280px] sm:w-[420px] flex-shrink-0 group/card relative"
+                className="flex flex-col bg-white p-6 sm:p-10 border-r border-slate-100 transition-all duration-300 w-[280px] sm:w-[420px] flex-shrink-0 group/card relative g-top"
               >
                 <div
                   className="aspect-[5/4] relative mb-8 overflow-hidden bg-white rounded-sm border border-slate-50 flex items-center justify-center p-6"
@@ -173,7 +173,7 @@ const PrecisionEngineeredSystems: React.FC = () => {
 
                 <div className="mb-4 flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-aureole-blue animate-pulse"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-br from-aureole-accent to-aureole-primary animate-pulse"></div>
                     <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest">{product.category}</span>
                   </div>
                 </div>
@@ -206,7 +206,7 @@ const PrecisionEngineeredSystems: React.FC = () => {
                       </span>
                       <div className="w-0 h-[1px] bg-aureole-blue transition-all group-hover/btn:w-full"></div>
                     </div>
-                    <div className="p-2 border border-slate-100 group-hover/btn:bg-aureole-cyan group-hover/btn:border-aureole-cyan transition-all">
+                    <div className="p-2 border border-slate-100 group-hover/btn:bg-gradient-to-br group-hover/btn:from-aureole-accent group-hover/btn:to-aureole-primary group-hover/btn:border-transparent transition-all">
                       <ArrowUpRight className="w-4 h-4 text-slate-300 group-hover/btn:text-white transition-colors" />
                     </div>
                   </div>

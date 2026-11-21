@@ -173,11 +173,11 @@ const OurUnitsContact: React.FC = () => {
 
           <div className="lg:col-span-12 xl:col-span-4 flex flex-col h-full">
             <div className="flex items-center gap-4 mb-8">
-              <span className="w-12 h-[2px] bg-aureole-blue"></span>
+              <span className="slant-mark" aria-hidden="true"></span>
               <h2 className="text-[12px] font-black tracking-[0.4em] text-aureole-blue">LOCATION</h2>
             </div>
             <h3 className="text-5xl sm:text-7xl lg:text-8xl font-black text-[#001529] leading-[0.85] tracking-tighter mb-12">
-              Our <br /> <span className="text-aureole-blue">Unit</span>
+              Our <br /> <span className="gt">Unit</span>
             </h3>
 
             <div className="w-full flex-1 min-h-[400px] sm:min-h-[500px] rounded-sm overflow-hidden border border-slate-100 shadow-2xl transition-all duration-700">
@@ -193,7 +193,7 @@ const OurUnitsContact: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-12 xl:col-span-8 bg-white/40 backdrop-blur-md shadow-xl rounded-3xl sm:rounded-[50px] p-6 sm:p-10 lg:p-14 border border-white/20 relative overflow-hidden">
+          <div className="lg:col-span-12 xl:col-span-8 bg-white shadow-xl rounded-sm p-6 sm:p-10 lg:p-14 border border-slate-100 g-top relative overflow-hidden">
             <div className="relative z-10">
               <div className="flex flex-col sm:flex-row gap-8 sm:gap-20 mb-10 border-b border-slate-200 pb-10">
                 <div>
@@ -206,7 +206,7 @@ const OurUnitsContact: React.FC = () => {
                 </div>
               </div>
 
-              <h4 className="text-3xl font-black text-[#001529] mb-3 tracking-tighter">Contact <span className="text-aureole-blue">Us.</span></h4>
+              <h4 className="text-3xl font-black text-[#001529] mb-3 tracking-tighter">Contact <span className="gt">Us.</span></h4>
               <p className="text-slate-500 text-[10px] font-bold mb-10 tracking-widest">Request a technical consultation.</p>
 
               {status === 'success' ? (
@@ -408,7 +408,7 @@ const OurUnitsContact: React.FC = () => {
                     disabled={status === 'loading'}
                     className="flex items-center gap-6 group mt-6 disabled:opacity-50 relative"
                   >
-                    <div className="w-16 h-16 bg-aureole-blue rounded-full flex items-center justify-center text-white transition-all group-hover:scale-110 shadow-xl shadow-blue-500/20 relative">
+                    <div className="w-16 h-16 bg-gradient-to-br from-aureole-accent to-aureole-primary rounded-full flex items-center justify-center text-white transition-all group-hover:scale-110 shadow-xl shadow-blue-500/20 relative">
                       <AnimatePresence mode="wait">
                         {status === 'loading' ? (
                           <motion.div

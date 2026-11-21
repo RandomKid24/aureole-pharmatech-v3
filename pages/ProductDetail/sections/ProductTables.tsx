@@ -73,7 +73,7 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
                             <h3 className="text-[13px] font-bold text-slate-900">Models & Dimensions</h3>
                         </div>
 
-                        <HighlightFrame className="border border-slate-300 shadow-md">
+                        <HighlightFrame className="border border-slate-300 shadow-md g-top">
                             <table className="w-full text-left min-w-[800px]">
                                 <thead>
                                     <tr className="bg-slate-50 text-aureole-slate border-b border-slate-400">
@@ -108,7 +108,7 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
                             </table>
                         </HighlightFrame>
 
-                        <div className="mt-12 p-10 bg-slate-50 border border-slate-100 border-l-[6px] border-aureole-cyan shadow-sm">
+                        <div className="mt-12 g-left p-10 pl-14 bg-slate-50 border border-slate-100 shadow-sm">
                             <p className="text-[12px] text-aureole-slate leading-relaxed font-bold tracking-widest">
                                 <span className="text-aureole-cyan mr-4">REMARK:</span>
                                 Above are standard sizes. Customised sizes are available.
@@ -128,7 +128,7 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
                             <h3 className="text-[13px] font-bold text-slate-900">Technical Specifications & Models</h3>
                         </div>
 
-                        <HighlightFrame className="border border-slate-300 shadow-md">
+                        <HighlightFrame className="border border-slate-300 shadow-md g-top">
                             <table className="w-full text-left min-w-[800px]">
                                 <thead>
                                     <tr className="bg-slate-50 text-aureole-slate border-b border-slate-400">
@@ -165,7 +165,7 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
                         </HighlightFrame>
 
                         {product.variantTable.remark !== null && (
-                            <div className="mt-12 p-10 bg-slate-50 border border-slate-100 border-l-[6px] border-aureole-cyan shadow-sm">
+                            <div className="mt-12 g-left p-10 pl-14 bg-slate-50 border border-slate-100 shadow-sm">
                                 <p className="text-[12px] text-aureole-slate leading-relaxed font-bold tracking-widest">
                                     <span className="text-aureole-cyan mr-4">REMARK:</span>
                                     {product.variantTable.remark || "Available in variable sizes (2 Ltr. to 22 Ltr.)"}
@@ -185,7 +185,7 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
                             <h3 className="text-[13px] font-bold text-slate-900">Technical Specifications & Models</h3>
                         </div>
 
-                        <HighlightFrame className="border border-slate-300 shadow-md">
+                        <HighlightFrame className="border border-slate-300 shadow-md g-top">
                             <table className="w-full text-left min-w-[1000px] border-collapse">
                                 <tbody className="divide-y divide-slate-400 text-aureole-slate">
                                     {product.complexTable.rows.map((row: any, i: number) => (
@@ -243,7 +243,7 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
                         </HighlightFrame>
 
                         {product.complexTable.remark && (
-                            <div className="mt-12 p-10 bg-slate-50 border border-slate-100 border-l-[6px] border-aureole-cyan shadow-sm">
+                            <div className="mt-12 g-left p-10 pl-14 bg-slate-50 border border-slate-100 shadow-sm">
                                 <p className="text-[12px] text-aureole-slate leading-relaxed font-bold tracking-widest">
                                     <span className="text-aureole-cyan mr-4">REMARK:</span>
                                     {product.complexTable.remark}

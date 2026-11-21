@@ -10,15 +10,6 @@ export interface EventMedia {
 
 export const EXHIBITIONS: EventMedia[] = [
     {
-        "title": "7th NIGERIA PHARMA MANUFACTURERS EXPO 2024",
-        "date": "2024/2025/2026",
-        "location": "VARIOUS LOCATIONS",
-        "description": "Expanding our footprint in the African market, showcasing global standard equipment for regional manufacturers.",
-        "thumbnail": "/events/exhibitions/7th NIGERIA PHARMA MANUFACTURERS EXPO 2024/IMG-20240904-WA0031.webp",
-        "folderPath": "/events/exhibitions/7th NIGERIA PHARMA MANUFACTURERS EXPO 2024",
-        "type": "exhibition"
-    },
-    {
         "title": "Analytica Lab Expo Mumbai 2025",
         "date": "2024/2025/2026",
         "location": "VARIOUS LOCATIONS",
@@ -37,60 +28,6 @@ export const EXHIBITIONS: EventMedia[] = [
         "type": "exhibition"
     },
     {
-        "title": "Arab Pharma Manufacturers Expo - Jordan 2025",
-        "date": "2024/2025/2026",
-        "location": "VARIOUS LOCATIONS",
-        "description": "Description pending.",
-        "thumbnail": "/events/exhibitions/Arab Pharma Manufacturers Expo - Jordan 2025/WhatsApp Image 2025-09-10 at 2.07.05 PM - Copy.webp",
-        "folderPath": "/events/exhibitions/Arab Pharma Manufacturers Expo - Jordan 2025",
-        "type": "exhibition"
-    },
-    {
-        "title": "Asia Pharma Expo 2024",
-        "date": "2024/2025/2026",
-        "location": "VARIOUS LOCATIONS",
-        "description": "Engaging with the growing pharmaceutical manufacturing hub in Bangladesh with our latest laboratory technologies.",
-        "thumbnail": "/events/exhibitions/Asia Pharma Expo 2024/WhatsApp Image 2025-09-10 at 2.46.51 PM (1).webp",
-        "folderPath": "/events/exhibitions/Asia Pharma Expo 2024",
-        "type": "exhibition"
-    },
-    {
-        "title": "CPHI PMEC (NOV 2023)",
-        "date": "2024/2025/2026",
-        "location": "VARIOUS LOCATIONS",
-        "description": "Description pending.",
-        "thumbnail": "/events/exhibitions/CPHI PMEC (NOV 2023)/WhatsApp Image 2023-12-01 at 12.05.52 PM.webp",
-        "folderPath": "/events/exhibitions/CPHI PMEC (NOV 2023)",
-        "type": "exhibition"
-    },
-    {
-        "title": "CPHI PMEC (NOV 2024)",
-        "date": "2024/2025/2026",
-        "location": "VARIOUS LOCATIONS",
-        "description": "Showcasing our precision engineered systems and compliance-ready solutions at South Asia's largest pharma event.",
-        "thumbnail": "/events/exhibitions/CPHI PMEC (NOV 2024)/CPHI-Pmec-Nov-2024.mp4",
-        "folderPath": "/events/exhibitions/CPHI PMEC (NOV 2024)",
-        "type": "exhibition"
-    },
-    {
-        "title": "India Lab Expo Mumbai (Apr 2024)",
-        "date": "2024/2025/2026",
-        "location": "VARIOUS LOCATIONS",
-        "description": "Description pending.",
-        "thumbnail": "/events/exhibitions/India Lab Expo Mumbai (Apr 2024)/india-lab-expo-1.webp",
-        "folderPath": "/events/exhibitions/India Lab Expo Mumbai (Apr 2024)",
-        "type": "exhibition"
-    },
-    {
-        "title": "Nepal Pharma Expo (March 2024)",
-        "date": "2024/2025/2026",
-        "location": "VARIOUS LOCATIONS",
-        "description": "Description pending.",
-        "thumbnail": "/events/exhibitions/Nepal Pharma Expo (March 2024)/WhatsApp-Image-2024-04-30-at-2.04.29-PM-1-1536x1152.webp",
-        "folderPath": "/events/exhibitions/Nepal Pharma Expo (March 2024)",
-        "type": "exhibition"
-    },
-    {
         "title": "Pharmac South Chennai 2026",
         "date": "2024/2025/2026",
         "location": "VARIOUS LOCATIONS",
@@ -100,48 +37,12 @@ export const EXHIBITIONS: EventMedia[] = [
         "type": "exhibition"
     },
     {
-        "title": "Pharmaconex Exhibition 2024",
-        "date": "2024/2025/2026",
-        "location": "VARIOUS LOCATIONS",
-        "description": "Strengthening our presence in the Middle East and North Africa pharmaceutical landscape.",
-        "thumbnail": "/events/exhibitions/Pharmaconex Exhibition 2024/1726393451615.webp",
-        "folderPath": "/events/exhibitions/Pharmaconex Exhibition 2024",
-        "type": "exhibition"
-    },
-    {
-        "title": "Pharmalab Chem Expo Goa 2025",
-        "date": "2024/2025/2026",
-        "location": "VARIOUS LOCATIONS",
-        "description": "Description pending.",
-        "thumbnail": "/events/exhibitions/Pharmalab Chem Expo Goa 2025/WhatsApp Image 2025-09-10 at 1.59.53 PM.webp",
-        "folderPath": "/events/exhibitions/Pharmalab Chem Expo Goa 2025",
-        "type": "exhibition"
-    },
-    {
-        "title": "PharmaTech Expo (Aug 2024)",
-        "date": "2024/2025/2026",
-        "location": "VARIOUS LOCATIONS",
-        "description": "Description pending.",
-        "thumbnail": "/events/exhibitions/PharmaTech Expo (Aug 2024)/event-aug-2024 (1).webp",
-        "folderPath": "/events/exhibitions/PharmaTech Expo (Aug 2024)",
-        "type": "exhibition"
-    },
-    {
         "title": "PharmaTech Expo - Gujarat (2025)",
         "date": "2024/2025/2026",
         "location": "VARIOUS LOCATIONS",
         "description": "Description pending.",
         "thumbnail": "/events/exhibitions/PharmaTech Expo - Gujarat (2025)/WhatsApp Image 2025-09-10 at 1.44.13 PM.webp",
         "folderPath": "/events/exhibitions/PharmaTech Expo - Gujarat (2025)",
-        "type": "exhibition"
-    },
-    {
-        "title": "Pharmatech Expo Chandigarh (Apr 2024)",
-        "date": "2024/2025/2026",
-        "location": "VARIOUS LOCATIONS",
-        "description": "Demonstrating our commitment to regional manufacturing excellence in the northern pharma hub.",
-        "thumbnail": "/events/exhibitions/Pharmatech Expo Chandigarh (Apr 2024)/Pharmatech-Expo.webp",
-        "folderPath": "/events/exhibitions/Pharmatech Expo Chandigarh (Apr 2024)",
         "type": "exhibition"
     },
     {
@@ -162,15 +63,6 @@ export const EXHIBITIONS: EventMedia[] = [
         "folderPath": "/events/exhibitions/PharmaTech Expo Chandigarh 2026",
         "type": "exhibition"
     },
-    {
-        "title": "West Africa Healthcare Show(May 2024)",
-        "date": "2024/2025/2026",
-        "location": "VARIOUS LOCATIONS",
-        "description": "Description pending.",
-        "thumbnail": "/events/exhibitions/West Africa Healthcare Show(May 2024)/WhatsApp Image 2025-09-10 at 2.44.48 PM.webp",
-        "folderPath": "/events/exhibitions/West Africa Healthcare Show(May 2024)",
-        "type": "exhibition"
-    }
 ];
 
 export const COMPANY_EVENTS: EventMedia[] = [
@@ -181,15 +73,6 @@ export const COMPANY_EVENTS: EventMedia[] = [
         "description": "Description pending.",
         "thumbnail": "/events/company-events/Diwali 2025/WhatsApp Image 2026-06-07 at 3.46.33 PM.webp",
         "folderPath": "/events/company-events/Diwali 2025",
-        "type": "company"
-    },
-    {
-        "title": "Ganesh Utsav 2024",
-        "date": "2024/2025/2026",
-        "location": "VARIOUS LOCATIONS",
-        "description": "Description pending.",
-        "thumbnail": "/events/company-events/Ganesh Utsav 2024/WhatsApp Image 2026-06-07 at 4.41.40 PM.webp",
-        "folderPath": "/events/company-events/Ganesh Utsav 2024",
         "type": "company"
     },
     {
@@ -208,15 +91,6 @@ export const COMPANY_EVENTS: EventMedia[] = [
         "description": "Description pending.",
         "thumbnail": "/events/company-events/Head Office Opening Nashik/WhatsApp Image 2026-06-07 at 3.34.39 PM.webp",
         "folderPath": "/events/company-events/Head Office Opening Nashik",
-        "type": "company"
-    },
-    {
-        "title": "Inauguration",
-        "date": "2024/2025/2026",
-        "location": "VARIOUS LOCATIONS",
-        "description": "Description pending.",
-        "thumbnail": "/events/company-events/Inauguration/MAC_0007_2-scaled.webp",
-        "folderPath": "/events/company-events/Inauguration",
         "type": "company"
     },
     {
@@ -250,16 +124,6 @@ export const COMPANY_EVENTS: EventMedia[] = [
 
 export const GET_FOLDER_GALLERY = (folderPath: string) => {
     const GALLERIES: Record<string, string[]> = {
-    "/events/exhibitions/7th NIGERIA PHARMA MANUFACTURERS EXPO 2024": [
-        "IMG-20240904-WA0031.webp",
-        "IMG-20240904-WA0032.webp",
-        "IMG-20240904-WA0033.webp",
-        "IMG-20240904-WA0034.webp",
-        "IMG-20240904-WA0036.webp",
-        "IMG-20240904-WA0059.webp",
-        "IMG-20240904-WA0060.webp",
-        "IMG-20240904-WA0088.webp"
-    ],
     "/events/exhibitions/Analytica Lab Expo Mumbai 2025": [
         "WhatsApp Image 2025-09-10 at 2.13.36 PM.webp",
         "WhatsApp Image 2025-09-10 at 2.13.39 PM.webp",
@@ -320,139 +184,6 @@ export const GET_FOLDER_GALLERY = (folderPath: string) => {
         "WhatsApp Image 2026-06-07 at 12.48.05 PM.webp",
         "WhatsApp Image 2026-06-07 at 12.48.07 PM.webp"
     ],
-    "/events/exhibitions/Arab Pharma Manufacturers Expo - Jordan 2025": [
-        "WhatsApp Image 2025-09-10 at 2.07.05 PM - Copy.webp",
-        "WhatsApp Image 2025-09-10 at 2.07.05 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.07.12 PM - Copy.webp",
-        "WhatsApp Image 2025-09-10 at 2.07.12 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.07.24 PM - Copy.webp",
-        "WhatsApp Image 2025-09-10 at 2.07.24 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.07.25 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.07.27 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.07.29 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.07.30 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.07.33 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.07.37 PM - Copy.webp",
-        "WhatsApp Image 2025-09-10 at 2.07.37 PM.webp"
-    ],
-    "/events/exhibitions/Asia Pharma Expo 2024": [
-        "WhatsApp Image 2025-09-10 at 2.46.51 PM (1).webp",
-        "WhatsApp Image 2025-09-10 at 2.46.51 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.46.54 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.46.55 PM (1).webp",
-        "WhatsApp Image 2025-09-10 at 2.46.55 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.46.56 PM (1).webp",
-        "WhatsApp Image 2025-09-10 at 2.46.56 PM (2).webp",
-        "WhatsApp Image 2025-09-10 at 2.46.56 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.46.57 PM (1).webp",
-        "WhatsApp Image 2025-09-10 at 2.46.57 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.47.01 PM (1).webp",
-        "WhatsApp Image 2025-09-10 at 2.47.01 PM (2).webp",
-        "WhatsApp Image 2025-09-10 at 2.47.01 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.47.02 PM.webp"
-    ],
-    "/events/exhibitions/CPHI PMEC (NOV 2023)": [
-        "WhatsApp Image 2023-12-01 at 12.05.52 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.47.06 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.47.07 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 4.47.07 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.47.08 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 4.47.08 PM (2).webp",
-        "WhatsApp Image 2023-12-01 at 4.47.08 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.47.09 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 4.47.09 PM (2).webp",
-        "WhatsApp Image 2023-12-01 at 4.47.09 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.47.10 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.49.33 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.49.34 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.49.36 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.52.24 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 4.52.24 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.52.25 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 4.52.25 PM (2).webp",
-        "WhatsApp Image 2023-12-01 at 4.52.25 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.52.26 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.55.37 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 4.55.37 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.55.38 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 4.55.38 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.55.39 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 4.55.39 PM (2).webp",
-        "WhatsApp Image 2023-12-01 at 4.55.39 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.55.40 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 4.55.40 PM (2).webp",
-        "WhatsApp Image 2023-12-01 at 4.55.40 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.55.41 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 4.55.41 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.55.42 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 4.55.42 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.55.43 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 4.55.43 PM (2).webp",
-        "WhatsApp Image 2023-12-01 at 4.55.43 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.55.44 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.57.30 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.57.31 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 4.57.31 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.57.32 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 4.57.32 PM.webp",
-        "WhatsApp Image 2023-12-01 at 4.57.33 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 4.57.33 PM.webp",
-        "WhatsApp Image 2023-12-01 at 5.01.15 PM.webp",
-        "WhatsApp Image 2023-12-01 at 5.01.16 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 5.01.16 PM.webp",
-        "WhatsApp Image 2023-12-01 at 5.01.17 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 5.01.17 PM (2).webp",
-        "WhatsApp Image 2023-12-01 at 5.01.17 PM.webp",
-        "WhatsApp Image 2023-12-01 at 5.01.18 PM.webp",
-        "WhatsApp Image 2023-12-01 at 5.01.19 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 5.01.19 PM (2).webp",
-        "WhatsApp Image 2023-12-01 at 5.01.19 PM (3).webp",
-        "WhatsApp Image 2023-12-01 at 5.01.19 PM.webp",
-        "WhatsApp Image 2023-12-01 at 5.01.20 PM.webp",
-        "WhatsApp Image 2023-12-01 at 5.01.21 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 5.01.21 PM (2).webp",
-        "WhatsApp Image 2023-12-01 at 5.01.21 PM.webp",
-        "WhatsApp Image 2023-12-01 at 5.01.22 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 5.01.22 PM.webp",
-        "WhatsApp Image 2023-12-01 at 5.01.23 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 5.01.23 PM.webp",
-        "WhatsApp Image 2023-12-01 at 5.01.24 PM (1).webp",
-        "WhatsApp Image 2023-12-01 at 5.02.23 PM.webp"
-    ],
-    "/events/exhibitions/CPHI PMEC (NOV 2024)": [
-        "CPHI-Pmec-Nov-2024.mp4",
-        "CPHI-Pmec-Nov-20241.mp4",
-        "cphi-pmec1.webp",
-        "cphi-pmec2.webp",
-        "cphi-pmec3.webp",
-        "cphi-pmec4.webp",
-        "cphi-pmec5.webp"
-    ],
-    "/events/exhibitions/India Lab Expo Mumbai (Apr 2024)": [
-        "india-lab-expo-1.webp",
-        "india-lab-expo-10.webp",
-        "india-lab-expo-11.webp",
-        "india-lab-expo-12.webp",
-        "india-lab-expo-13.webp",
-        "india-lab-expo-2.webp",
-        "india-lab-expo-3.webp",
-        "india-lab-expo-4.webp",
-        "india-lab-expo-5.webp",
-        "india-lab-expo-6.webp",
-        "india-lab-expo-7.webp",
-        "india-lab-expo-8.webp",
-        "india-lab-expo-9.webp"
-    ],
-    "/events/exhibitions/Nepal Pharma Expo (March 2024)": [
-        "WhatsApp-Image-2024-04-30-at-2.04.29-PM-1-1536x1152.webp",
-        "WhatsApp-Image-2024-04-30-at-2.04.29-PM-1536x1152.webp",
-        "WhatsApp-Image-2024-04-30-at-2.04.30-PM-1536x1152.webp",
-        "WhatsApp-Image-2024-04-30-at-2.04.33-PM-1-1536x1152.webp",
-        "WhatsApp-Image-2024-04-30-at-2.04.33-PM-1536x1152.webp",
-        "WhatsApp-Image-2024-04-30-at-2.04.34-PM-1.webp",
-        "WhatsApp-Image-2024-04-30-at-2.04.34-PM.webp",
-        "WhatsApp-Image-2024-04-30-at-2.04.37-PM.webp"
-    ],
     "/events/exhibitions/Pharmac South Chennai 2026": [
         "WhatsApp Image 2026-06-07 at 12.35.28 PM.webp",
         "WhatsApp Image 2026-06-07 at 12.35.29 PM.webp",
@@ -460,38 +191,6 @@ export const GET_FOLDER_GALLERY = (folderPath: string) => {
         "WhatsApp Image 2026-06-07 at 12.35.31 PM.webp",
         "WhatsApp Image 2026-06-07 at 12.35.32 PM (1).webp",
         "WhatsApp Image 2026-06-07 at 12.35.32 PM.webp"
-    ],
-    "/events/exhibitions/Pharmaconex Exhibition 2024": [
-        "1726393451615.webp",
-        "1726393595406.webp",
-        "1726393718420.webp",
-        "1726394050970.webp",
-        "1726394192471.webp",
-        "1726394336073.webp",
-        "1726394691385.webp",
-        "1726394841022.webp",
-        "OTH00458.webp",
-        "OTH00524.webp",
-        "OTH00548.webp",
-        "OTH00687.webp",
-        "OTH00689.webp",
-        "OTH00690.webp",
-        "OTH00908.webp",
-        "OTH00916.webp"
-    ],
-    "/events/exhibitions/Pharmalab Chem Expo Goa 2025": [
-        "WhatsApp Image 2025-09-10 at 1.59.53 PM.webp",
-        "WhatsApp Image 2025-09-10 at 1.59.55 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.00.06 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.00.10 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.00.11 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.00.12 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.00.13 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.03.15 PM (1).webp",
-        "WhatsApp Image 2025-09-10 at 2.03.15 PM.webp"
-    ],
-    "/events/exhibitions/PharmaTech Expo (Aug 2024)": [
-        "event-aug-2024 (1).webp"
     ],
     "/events/exhibitions/PharmaTech Expo - Gujarat (2025)": [
         "WhatsApp Image 2025-09-10 at 1.44.13 PM.webp",
@@ -519,20 +218,6 @@ export const GET_FOLDER_GALLERY = (folderPath: string) => {
         "WhatsApp Image 2025-09-10 at 1.46.30 PM (1).webp",
         "WhatsApp Image 2025-09-10 at 1.46.30 PM (2).webp",
         "WhatsApp Image 2025-09-10 at 1.46.30 PM.webp"
-    ],
-    "/events/exhibitions/Pharmatech Expo Chandigarh (Apr 2024)": [
-        "Pharmatech-Expo.webp",
-        "WhatsApp-Image-2024-04-13-at-5.51.28-PM-1536x1152.webp",
-        "WhatsApp-Image-2024-04-13-at-5.51.34-PM-1536x2048.webp",
-        "WhatsApp-Image-2024-04-13-at-6.13.19-PM-1-1536x1152.webp",
-        "WhatsApp-Image-2024-04-13-at-6.13.19-PM-1536x1152.webp",
-        "WhatsApp-Image-2024-04-13-at-6.13.20-PM-1536x2048.webp",
-        "WhatsApp-Image-2024-04-13-at-6.15.25-PM-1536x1152.webp",
-        "WhatsApp-Image-2024-04-13-at-6.15.26-PM-1536x1152.webp",
-        "WhatsApp-Image-2024-04-13-at-6.15.27-PM-1536x1152.webp",
-        "WhatsApp-Image-2024-04-14-at-1.14.37-PM-1536x1152.webp",
-        "WhatsApp-Image-2024-04-14-at-1.41.13-PM.webp",
-        "WhatsApp-Image-2024-04-14-at-1.41.15-PM.webp"
     ],
     "/events/exhibitions/PharmaTech Expo Chandigarh 2025": [
         "WhatsApp Image 2025-09-10 at 2.24.19 PM.webp",
@@ -595,18 +280,6 @@ export const GET_FOLDER_GALLERY = (folderPath: string) => {
         "WhatsApp Image 2026-06-07 at 2.43.59 PM.webp",
         "WhatsApp Image 2026-06-07 at 2.44.09 PM.webp"
     ],
-    "/events/exhibitions/West Africa Healthcare Show(May 2024)": [
-        "WhatsApp Image 2025-09-10 at 2.44.48 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.44.49 PM (1).webp",
-        "WhatsApp Image 2025-09-10 at 2.44.49 PM (2).webp",
-        "WhatsApp Image 2025-09-10 at 2.44.49 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.44.50 PM (1).webp",
-        "WhatsApp Image 2025-09-10 at 2.44.50 PM (2).webp",
-        "WhatsApp Image 2025-09-10 at 2.44.50 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.44.51 PM (1).webp",
-        "WhatsApp Image 2025-09-10 at 2.44.51 PM.webp",
-        "WhatsApp Image 2025-09-10 at 2.44.54 PM.webp"
-    ],
     "/events/company-events/Diwali 2025": [
         "WhatsApp Image 2026-06-07 at 3.46.33 PM.webp",
         "WhatsApp Image 2026-06-07 at 3.46.34 PM.webp",
@@ -625,20 +298,6 @@ export const GET_FOLDER_GALLERY = (folderPath: string) => {
         "WhatsApp Image 2026-06-07 at 3.56.30 PM (1).webp",
         "WhatsApp Image 2026-06-07 at 3.56.30 PM.webp",
         "WhatsApp Video 2026-06-07 at 3.56.31 PM.mp4"
-    ],
-    "/events/company-events/Ganesh Utsav 2024": [
-        "WhatsApp Image 2026-06-07 at 4.41.40 PM.webp",
-        "WhatsApp Image 2026-06-07 at 4.41.42 PM.webp",
-        "WhatsApp Image 2026-06-07 at 4.41.48 PM.webp",
-        "WhatsApp Image 2026-06-07 at 4.41.55 PM (1).webp",
-        "WhatsApp Image 2026-06-07 at 4.41.55 PM.webp",
-        "WhatsApp Image 2026-06-07 at 4.41.57 PM (1).webp",
-        "WhatsApp Image 2026-06-07 at 4.41.57 PM (2).webp",
-        "WhatsApp Image 2026-06-07 at 4.41.57 PM.webp",
-        "WhatsApp Image 2026-06-07 at 4.41.58 PM.webp",
-        "WhatsApp Image 2026-06-07 at 4.42.01 PM.webp",
-        "WhatsApp Image 2026-06-07 at 4.42.02 PM.webp",
-        "WhatsApp Image 2026-06-07 at 4.42.04 PM.webp"
     ],
     "/events/company-events/Ganesh Utsav 2026": [
         "WhatsApp Image 2026-06-07 at 4.23.39 PM.webp",
@@ -666,24 +325,6 @@ export const GET_FOLDER_GALLERY = (folderPath: string) => {
         "WhatsApp Image 2026-06-07 at 3.34.39 PM.webp",
         "WhatsApp Video 2026-06-07 at 3.34.38 PM.mp4",
         "WhatsApp Video 2026-06-07 at 3.34.51 PM.mp4"
-    ],
-    "/events/company-events/Inauguration": [
-        "MAC_0007_2-scaled.webp",
-        "MAC_0023-scaled.webp",
-        "MAC_0256-scaled.webp",
-        "MAC_0618-scaled.webp",
-        "MAC_0793-scaled.webp",
-        "MAC_0795-scaled.webp",
-        "MAC_0812-scaled.webp",
-        "WhatsApp-Image-2023-10-25-at-4.10.05-PM-scaled.webp",
-        "WhatsApp-Image-2023-10-25-at-4.10.38-PM-scaled.webp",
-        "WhatsApp-Image-2023-10-25-at-4.10.42-PM-1-scaled.webp",
-        "WhatsApp-Image-2023-10-25-at-4.19.09-PM-scaled.webp",
-        "WhatsApp-Image-2023-10-25-at-4.19.11-PM-scaled.webp",
-        "WhatsApp-Image-2023-10-25-at-4.19.14-PM-scaled.webp",
-        "WhatsApp-Image-2023-10-25-at-4.19.16-PM-scaled.webp",
-        "WhatsApp-Image-2023-10-26-at-4.31.06-PM-1.webp",
-        "WhatsApp-Image-2023-10-26-at-4.31.07-PM-1.webp"
     ],
     "/events/company-events/Independence Day Celebration 2025": [
         "WhatsApp-Image-2025-08-20-at-1.01.46-PM.webp",

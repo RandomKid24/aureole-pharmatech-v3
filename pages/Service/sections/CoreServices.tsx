@@ -77,15 +77,15 @@ const offerings = [
 
 const CoreServices: React.FC = () => {
     return (
-        <section className="py-24 bg-white border-y border-slate-100 min-h-screen bg-[url('/wavebg.webp')] bg-cover bg-fixed">
+        <section className="py-24 bg-transparent border-y border-slate-100 min-h-screen">
             <div className="container mx-auto px-6 sm:px-12 lg:px-16">
                 <div className="mb-20">
                     <div className="flex items-center gap-4 mb-6">
-                        <span className="w-12 h-[2px] bg-aureole-blue"></span>
+                        <span className="slant-mark" aria-hidden="true"></span>
                         <h6 className="text-[10px] font-black uppercase tracking-[0.4em] text-aureole-blue">Technical Register</h6>
                     </div>
                     <h2 className="text-4xl lg:text-5xl font-black font-heading tracking-tighter text-aureole-slate uppercase leading-[0.85]">
-                        OUR CORE <span className="text-aureole-blue">SERVICE OFFERINGS</span>
+                        OUR CORE <span className="gt">SERVICE OFFERINGS</span>
                     </h2>
                 </div>
 
@@ -95,12 +95,12 @@ const CoreServices: React.FC = () => {
                         {offerings.map((offering) => (
                             <div 
                                 key={offering.id} 
-                                className="w-[320px] lg:w-full flex flex-col bg-white border-t-4 border-aureole-blue shadow-lg hover:shadow-xl transition-all duration-300 group"
+                                className="w-[320px] lg:w-full flex flex-col bg-white g-top shadow-lg hover:shadow-xl transition-all duration-300 group"
                             >
                                  {/* Column Header - Responsive min-height to prevent overlap when text wraps */}
                                  <div className="p-8 border-b border-slate-100 bg-slate-50/30 group-hover:bg-white transition-colors min-h-[350px] flex flex-col shrink-0">
-                                     <div className="w-12 h-12 rounded-lg bg-white border border-slate-100 flex items-center justify-center mb-6 group-hover:border-aureole-cyan transition-all shrink-0">
-                                         <offering.icon className="w-6 h-6 text-aureole-blue group-hover:text-aureole-cyan transition-colors" />
+                                     <div className="g-ico mb-6 shrink-0">
+                                         <offering.icon className="w-5 h-5" />
                                      </div>
                                      <h3 className="text-base lg:text-lg font-black font-heading text-aureole-slate uppercase leading-tight tracking-tight mb-4 min-h-[5rem] shrink-0">
                                          {offering.title}
@@ -125,7 +125,7 @@ const CoreServices: React.FC = () => {
                                 </div>
 
                                 {/* Column Footer (Subtle Accent) */}
-                                <div className="h-1 bg-slate-100 group-hover:bg-aureole-cyan transition-colors mt-auto"></div>
+                                <div className="h-1 bg-slate-100 group-hover:bg-gradient-to-r group-hover:from-aureole-accent group-hover:to-aureole-primary transition-colors mt-auto"></div>
                             </div>
                         ))}
                     </div>

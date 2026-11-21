@@ -53,7 +53,7 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ images, name, captions 
             </div>
 
             {captions && captions[activeIndex] && (
-                <div className="p-4 bg-slate-50 border-l-[3px] border-aureole-cyan">
+                <div className="g-left p-4 pl-6 bg-slate-50">
                     <p className="text-[12px] font-medium text-slate-500 tracking-widest leading-relaxed uppercase">
                         {captions[activeIndex]}
                     </p>

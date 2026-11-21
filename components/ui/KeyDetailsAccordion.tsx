@@ -33,7 +33,7 @@ const KeyDetailsAccordion: React.FC<KeyDetailsAccordionProps> = ({
                 {/* Header */}
                 <div className="max-w-4xl mb-12 text-center lg:text-left">
                     <h2 className="text-4xl lg:text-5xl font-black font-heading text-[#001529] tracking-tight leading-none">
-                        {title} <span className="text-aureole-cyan font-bold">{accentTitle}.</span>
+                        {title} <span className="gt font-bold">{accentTitle}.</span>
                     </h2>
                 </div>
 
@@ -50,7 +50,7 @@ const KeyDetailsAccordion: React.FC<KeyDetailsAccordionProps> = ({
                                     }`}
                             >
                                 <div className="flex items-center gap-6">
-                                    <div className={`w-16 h-16 rounded-sm flex items-center justify-center transition-all duration-300 ${activeSection === idx ? 'bg-white shadow-sm text-aureole-blue scale-110' : 'bg-white/40 text-slate-400'}`}>
+                                    <div className={`w-16 h-16 rounded-sm flex items-center justify-center transition-all duration-300 ${activeSection === idx ? 'bg-gradient-to-br from-aureole-accent to-aureole-primary shadow-sm text-white scale-110' : 'bg-white/40 text-slate-400'}`}>
                                         {React.cloneElement(item.icon as React.ReactElement, { size: 28 })}
                                     </div>
                                     <div>
@@ -68,12 +68,12 @@ const KeyDetailsAccordion: React.FC<KeyDetailsAccordionProps> = ({
 
                     {/* Unified Content Sheet - Compact Height */}
                     <div className="lg:w-3/5">
-                        <div key={activeSection} className="h-full bg-white/60 backdrop-blur-md border border-white/50 p-8 lg:p-12 shadow-sm relative overflow-hidden animate-in fade-in duration-500 min-h-[400px]">
+                        <div key={activeSection} className="h-full bg-white/60 backdrop-blur-md border border-white/50 g-top p-8 lg:p-12 shadow-sm relative overflow-hidden animate-in fade-in duration-500 min-h-[400px]">
 
 
                             <div className="relative z-10 h-full flex flex-col">
                                 <div className="flex items-center gap-5 mb-8 border-b border-slate-200/60 pb-6">
-                                    <div className="w-12 h-12 bg-white flex items-center justify-center text-aureole-blue shadow-sm border border-slate-100">
+                                    <div className="w-12 h-12 bg-gradient-to-br from-aureole-accent to-aureole-primary flex items-center justify-center text-white shadow-sm">
                                         {React.cloneElement(navItems[activeSection].icon as React.ReactElement, { size: 22 })}
                                     </div>
                                     <div>

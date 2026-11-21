@@ -113,11 +113,11 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-8">
                             <div className="flex flex-col gap-4">
                                 <div className="flex items-center gap-4">
-                                    <span className="w-8 h-[2px] bg-aureole-cyan"></span>
+                                    <span className="slant-mark" aria-hidden="true"></span>
                                     <h2 className="text-xs font-black font-heading tracking-widest text-aureole-cyan">Product Overview</h2>
                                 </div>
                                 <h1 className="text-4xl lg:text-7xl font-black font-heading text-aureole-slate tracking-tighter leading-none">
-                                    {decodedName.split(' ').slice(0, -1).join(' ')} <span className="text-aureole-blue">{decodedName.split(' ').slice(-1)}</span>
+                                    {decodedName.split(' ').slice(0, -1).join(' ')} <span className="gt">{decodedName.split(' ').slice(-1)}</span>
                                 </h1>
                             </div>
                         </div>
@@ -152,7 +152,7 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
 
                     {!product.hideHeroImage && (
                         <div className="lg:col-span-5 lg:pl-6 relative">
-                            <div className="relative bg-white border border-slate-50 p-4 shadow-xl max-w-md ml-auto">
+                            <div className="relative bg-white border border-slate-50 p-4 shadow-xl max-w-md ml-auto g-top">
                                 <ProductGallery
                                     images={product.images || (product.image ? [product.image] : ['PLACEHOLDER'])}
                                     name={decodedName}

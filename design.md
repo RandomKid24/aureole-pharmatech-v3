@@ -71,7 +71,8 @@ We enforce a strict 5-size type scale to maintain consistent hierarchy across al
 ## 4. UI Textures & Visual Effects
 
 ### Background Details
-* **Wave Asset**: `background-image: url("/wavebg.webp")` - Fixed position background image scales dynamically using `background-size: cover`.
+* **Page surface**: plain white on `<body>` (`index.html`). The brand gradient lives in components, not in a page background.
+* **Gradient system** (classes in `index.html`): `gt` gradient text for accent words and numerals, `slant-mark` section marker (two slanted bars, the logo's angle), `g-top` / `g-left` gradient edges on cards and text blocks, `g-ico` gradient icon tile, `frame-slant` (+ `frame-slant-r`) slanted photo with a gradient slab, `btn-g` / `btn-g-o` gradient and gradient-outline buttons, `g-bar` caption bar. Gradient = `#01C2FB` to `#1D69B0` (`bg-brand-gradient`). Footer: `#0b3f7d` to Aureole Primary.
 * **Grain Filter**: An overlay grain/noise effect applied globally on body load (`.grain::before`) with `opacity: 0.02` to reduce digital flatness.
 
 ### Borders & Radius Tokens

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Quote, Linkedin, FileText, Target, Compass, ArrowRight, IdCard } from 'lucide-react';
+import { Quote, Linkedin, PlayCircle, IdCard } from 'lucide-react';
 
 const ManagingDirectorProfile: React.FC = () => {
    return (
@@ -11,17 +11,19 @@ const ManagingDirectorProfile: React.FC = () => {
                {/* Executive Profile */}
                <div className="lg:col-span-12 xl:col-span-4 relative mb-12 xl:mb-0">
                   <div className="max-w-[420px] mx-auto xl:mx-0">
-                     <div className="aspect-[3/4] transition-all duration-1000 overflow-hidden bg-slate-50 relative">
-                        <img
-                           src="/about/managing-director.webp"
-                           alt="Dr. Kiran Badgujar, Managing Director of Aureole PharmaTech"
-                           className="w-full h-full object-cover object-top"
-                        />
+                     <div className="frame-slant frame-slant-r pl-5 pt-5">
+                        <div className="aspect-[3/4] transition-all duration-1000 overflow-hidden bg-slate-50 relative">
+                           <img
+                              src="/about/managing-director.webp"
+                              alt="Dr. Kiran Badgujar, Managing Director of Aureole PharmaTech"
+                              className="w-full h-full object-cover object-top"
+                           />
+                        </div>
                      </div>
                      <div className="mt-8">
                         <h4 className="text-3xl font-black text-[#001529] uppercase tracking-tighter">Dr. Kiran Badgujar</h4>
                         <div className="flex items-center gap-4 mt-2">
-                           <div className="h-[2px] w-12 bg-aureole-blue"></div>
+                           <span className="slant-mark" aria-hidden="true"></span>
                            <span className="text-[11px] font-black uppercase tracking-[0.4em] text-aureole-blue">Managing Director</span>
                         </div>
                      </div>
@@ -33,9 +35,9 @@ const ManagingDirectorProfile: React.FC = () => {
                   <meta itemProp="name" content="Dr. Kiran Badgujar" />
                   <meta itemProp="jobTitle" content="Managing Director" />
                   <meta itemProp="worksFor" content="Aureole PharmaTech" />
-                  <Quote className="w-16 h-16 text-slate-100 mb-6" />
+                  <Quote className="w-16 h-16 text-aureole-cyan/25 mb-6" />
                   <h3 className="text-4xl lg:text-5xl font-black text-[#001529] uppercase tracking-tighter leading-[0.9] mb-8">
-                     "We engineer <span className="text-aureole-blue">trust</span> through thermal precision."
+                     "We engineer <span className="gt">trust</span> through thermal precision."
                   </h3>
                   <p className="text-lg text-slate-600 font-medium leading-relaxed mb-8" itemProp="disambiguatingDescription">
                      Over the past three decades, Aureole PharmaTech has been driven by a relentless pursuit of engineering excellence. We design and deliver solutions that ensure the pharmaceutical industry’s most sensitive products are tested and stored under absolute environmental equilibrium—where precision, reliability, and control are non-negotiable.
@@ -51,10 +53,10 @@ const ManagingDirectorProfile: React.FC = () => {
                         href="https://youtu.be/ZC_m3WGb6uA?si=JFy3CCZlqBs9oclF"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group relative overflow-hidden bg-[#001529] text-white px-8 py-4 text-[10px] font-black uppercase tracking-widest flex items-center gap-4 hover:bg-aureole-cyan transition-all duration-300"
+                        className="group relative overflow-hidden btn-g text-white px-8 py-4 text-[10px] font-black uppercase tracking-widest flex items-center gap-4 transition-all duration-300 hover:-translate-y-0.5"
                      >
                         <span className="relative z-10 flex items-center gap-4">
-                           Full Biography <FileText className="w-4 h-4" />
+                           See Our Journey <PlayCircle className="w-4 h-4" />
                         </span>
                         <div className="absolute inset-x-0 top-0 h-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] skew-x-[-25deg] transition-transform duration-700 group-hover:translate-x-[150%]" />
                      </a>
@@ -63,7 +65,7 @@ const ManagingDirectorProfile: React.FC = () => {
                         href="https://in.linkedin.com/in/dr-kiran-badgujar-385a3367"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group relative overflow-hidden bg-aureole-cyan text-white px-8 py-4 text-[10px] font-black uppercase tracking-widest flex items-center gap-4 hover:bg-aureole-blue transition-all duration-300"
+                        className="group relative overflow-hidden btn-g-o px-8 py-4 text-[10px] font-black uppercase tracking-widest flex items-center gap-4 transition-all duration-300 hover:-translate-y-0.5"
                      >
                         <span className="relative z-10 flex items-center gap-4">
                            <Linkedin className="w-4 h-4" />

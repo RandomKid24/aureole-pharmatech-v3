@@ -19,13 +19,13 @@ const PolicyFramework: React.FC = () => {
                     {/* Standards Column */}
                     <div>
                         <div className="flex items-center gap-4 mb-8">
-                            <span className="w-12 h-[1px] bg-aureole-blue"></span>
+                            <span className="slant-mark" aria-hidden="true"></span>
                             <h3 className="text-[11px] font-black font-heading tracking-[0.4em] text-aureole-blue">TECHNICAL STANDARDS</h3>
                         </div>
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[950] font-heading text-aureole-slate tracking-tighter mb-6 sm:mb-8">REFERENCED STANDARDS</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             {referencedStandards.map((std, i) => (
-                                <div key={i} className="p-4 bg-slate-50 border border-slate-100 rounded-sm hover:border-aureole-cyan transition-colors">
+                                <div key={i} className="g-left p-4 pl-6 bg-slate-50 border border-slate-100 rounded-sm transition-colors">
                                     <p className="text-[10px] font-black text-aureole-slate mb-1">{std.split(' (')[0]}</p>
                                     <p className="text-[8px] font-bold text-slate-400 tracking-widest line-clamp-1">{std.split(' (')[1]?.replace(')', '') || 'Framework'}</p>
                                 </div>
@@ -36,7 +36,7 @@ const PolicyFramework: React.FC = () => {
                     {/* Policy Column */}
                     <div>
                         <div className="flex items-center gap-4 mb-8">
-                            <span className="w-12 h-[1px] bg-slate-200"></span>
+                            <span className="slant-mark" aria-hidden="true"></span>
                             <h3 className="text-[11px] font-black font-heading tracking-[0.4em] text-slate-400">QUALITY COMMITMENT</h3>
                         </div>
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[950] font-heading text-aureole-slate tracking-tighter mb-6 sm:mb-8">QUALITY POLICY</h2>

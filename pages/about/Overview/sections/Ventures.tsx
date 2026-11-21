@@ -71,7 +71,7 @@ const Ventures: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-slate-100 bg-transparent">
                     {ventures.map((v, idx) => (
-                        <div key={idx} className={`bg-white p-10 group transition-all duration-700 flex flex-col border-r border-b border-slate-100 relative overflow-hidden ${v.isLegacy ? 'border-dashed border-slate-300 bg-slate-50/30' : 'hover:shadow-2xl hover:shadow-slate-200'}`}>
+                        <div key={idx} className={`bg-white p-10 group transition-all duration-700 flex flex-col border-r border-b border-slate-100 relative overflow-hidden ${v.isLegacy ? 'border-dashed border-slate-300 bg-slate-50/30' : 'g-top hover:shadow-2xl hover:shadow-slate-200'}`}>
                             {/* Logo Slot */}
                             <div className="h-24 w-full mb-10 flex items-center justify-center p-4 bg-slate-50/50 group-hover:bg-white transition-all duration-500 rounded-sm border border-slate-50 group-hover:border-aureole-cyan/20">
                                 {v.logo ? (
@@ -95,7 +95,7 @@ const Ventures: React.FC = () => {
                                 <span className={`text-3xl font-[950] font-heading ${v.isLegacy ? 'text-slate-300' : 'text-slate-400'} group-hover:text-aureole-blue transition-all duration-500 block mb-1 leading-none group-hover:scale-105 origin-left`}>
                                     {v.year}
                                 </span>
-                                <div className="w-8 h-[2px] bg-aureole-cyan opacity-40 group-hover:w-16 group-hover:opacity-100 transition-all duration-500"></div>
+                                <div className="w-8 h-[2px] bg-gradient-to-r from-aureole-accent to-aureole-primary opacity-60 group-hover:w-16 group-hover:opacity-100 transition-all duration-500"></div>
                             </div>
 
                             <div className="flex-grow flex flex-col">
@@ -124,7 +124,7 @@ const Ventures: React.FC = () => {
                                             <span className="text-[10px] font-black uppercase tracking-widest text-aureole-blue group-hover/visit:text-aureole-cyan transition-colors">
                                                 Visit Website
                                             </span>
-                                            <div className="p-2 bg-slate-50 group-hover/visit:bg-aureole-cyan transition-all">
+                                            <div className="p-2 bg-slate-50 group-hover/visit:bg-gradient-to-br group-hover/visit:from-aureole-accent group-hover/visit:to-aureole-primary transition-all">
                                                 <ExternalLink size={14} className="text-slate-300 group-hover/visit:text-white transition-colors" />
                                             </div>
                                         </a>

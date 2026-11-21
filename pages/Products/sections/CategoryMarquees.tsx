@@ -10,8 +10,8 @@ const ProductMarquee = ({ pNames, animationClass, duration }: { pNames: string[]
 
     return (
         <div className="flex overflow-hidden select-none py-10 bg-transparent group relative">
-            <div className="absolute inset-y-0 left-0 w-32 sm:w-64 bg-gradient-to-r from-[#f8fafc] via-[#f8fafc]/80 to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute inset-y-0 right-0 w-32 sm:w-64 bg-gradient-to-l from-[#f8fafc] via-[#f8fafc]/80 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute inset-y-0 left-0 w-32 sm:w-64 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute inset-y-0 right-0 w-32 sm:w-64 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
 
             <div
                 className={`flex items-center gap-6 whitespace-nowrap ${animationClass} group-hover:[animation-play-state:paused]`}
@@ -28,7 +28,7 @@ const ProductMarquee = ({ pNames, animationClass, duration }: { pNames: string[]
                         <Link
                             key={idx}
                             to={linkTarget}
-                            className="flex items-center gap-6 p-6 bg-white border border-slate-200 hover:border-aureole-cyan hover:shadow-xl transition-all duration-300 w-[280px] sm:w-[400px] flex-shrink-0 group/card"
+                            className="flex items-center gap-6 p-6 bg-white border border-slate-200 hover:border-aureole-cyan hover:shadow-xl transition-all duration-300 w-[280px] sm:w-[400px] flex-shrink-0 group/card g-top"
                         >
                             <div className="w-20 h-20 sm:w-28 sm:h-28 flex-shrink-0 bg-white rounded-sm overflow-hidden p-2 border border-slate-100 group-hover/card:border-aureole-cyan/30 group-hover/card:scale-105 transition-all duration-300">
                                 <img
@@ -84,7 +84,7 @@ const CategoryMarquees: React.FC = () => {
                                 <div className="max-w-3xl">
                                     <h3 className="text-4xl lg:text-7xl font-[950] font-heading text-aureole-slate tracking-tighter leading-none mb-6">
                                         {category.title.split(' ').slice(0, -1).join(' ')} <br />
-                                        <span className="text-aureole-blue">{category.title.split(' ').pop()}</span>
+                                        <span className="gt">{category.title.split(' ').pop()}</span>
                                     </h3>
                                     <p className="text-slate-500 font-medium text-[14px] sm:text-[15px] tracking-tight max-w-2xl leading-relaxed">
                                         {category.description}
@@ -93,7 +93,7 @@ const CategoryMarquees: React.FC = () => {
 
                                 <Link
                                     to={mainLink}
-                                    className="group relative inline-flex items-center gap-8 px-12 py-5 bg-aureole-blue text-white overflow-hidden transition-all duration-500 shadow-2xl hover:shadow-aureole-cyan/30"
+                                    className="group relative inline-flex items-center gap-8 px-12 py-5 btn-g text-white overflow-hidden transition-all duration-500 shadow-2xl hover:shadow-aureole-cyan/30"
                                 >
                                     <div className="absolute inset-0 w-0 bg-aureole-cyan transition-all duration-500 ease-out group-hover:w-full"></div>
                                     <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite] pointer-events-none"></div>

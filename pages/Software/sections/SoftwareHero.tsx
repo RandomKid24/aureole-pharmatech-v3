@@ -11,7 +11,7 @@ const SoftwareHero: React.FC = () => {
                     <div className="inline-flex items-center gap-3 mb-8 group">
                         <div className="relative">
                             <div className="absolute inset-0 bg-aureole-blue/20 blur-xl"></div>
-                            <div className="relative px-6 py-2 bg-gradient-to-r from-aureole-blue to-aureole-cyan">
+                            <div className="relative px-6 py-2 bg-gradient-to-r from-aureole-primary to-aureole-accent">
                                 <p className="text-xs font-black font-heading text-white tracking-[0.3em]">
                                     21 CFR PART 11
                                 </p>
@@ -22,11 +22,11 @@ const SoftwareHero: React.FC = () => {
 
                     {/* Title - Display Size */}
                     <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black font-heading text-aureole-slate tracking-tighter leading-none mb-6">
-                        SIS-<span className="text-aureole-cyan">APP</span>
+                        SIS-<span className="gt">APP</span>
                     </h1>
 
                     {/* Subtitle - Subtitle Size */}
-                    <p className="text-xl font-bold font-heading text-aureole-cyan mb-6 tracking-tight">
+                    <p className="text-xl font-bold font-heading gt mb-6 tracking-tight">
                         Pharmaceutical Monitoring Software
                     </p>
 

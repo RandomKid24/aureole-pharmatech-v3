@@ -73,11 +73,11 @@ const GlobalValidation: React.FC = () => {
       <div className="container mx-auto px-6 sm:px-8 lg:px-20 relative z-10 mb-12">
         <div className="max-w-4xl">
           <div className="flex items-center gap-4 mb-6">
-            <span className="w-12 h-[1px] bg-aureole-blue"></span>
+            <span className="slant-mark" aria-hidden="true"></span>
             <h2 className="text-[11px] font-black uppercase tracking-[0.4em] text-aureole-blue">PARTNERS</h2>
           </div>
           <h3 className="text-4xl sm:text-6xl lg:text-7xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.9] mb-8">
-            GLOBAL <br /> <span className="text-aureole-blue">VALIDATION.</span>
+            GLOBAL <br /> <span className="gt">VALIDATION.</span>
           </h3>
           <p className="text-slate-500 font-medium text-[14px] sm:text-[15px] tracking-tight max-w-2xl leading-relaxed">
             A comprehensive network of{' '}
@@ -88,19 +88,19 @@ const GlobalValidation: React.FC = () => {
           {/* Animated Stats Row */}
           <div className="flex flex-wrap gap-8 mt-10 pt-8 border-t border-slate-100">
             <div>
-              <p className="text-3xl font-black text-aureole-slate tracking-tighter">
+              <p className="text-3xl font-black gt tracking-tighter">
                 <AnimatedCounter end={15} suffix="+" />
               </p>
               <p className="text-[9px] font-black tracking-widest text-slate-400 uppercase mt-1">States Covered</p>
             </div>
             <div>
-              <p className="text-3xl font-black text-aureole-slate tracking-tighter">
+              <p className="text-3xl font-black gt tracking-tighter">
                 <AnimatedCounter end={20} suffix="+" />
               </p>
               <p className="text-[9px] font-black tracking-widest text-slate-400 uppercase mt-1">Years Experience</p>
             </div>
             <div>
-              <p className="text-3xl font-black text-aureole-slate tracking-tighter">
+              <p className="text-3xl font-black gt tracking-tighter">
                 <AnimatedCounter end={3} suffix=" Certs" />
               </p>
               <p className="text-[9px] font-black tracking-widest text-slate-400 uppercase mt-1">ISO / CE / ZED</p>

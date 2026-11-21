@@ -36,7 +36,7 @@ const CategoryHero: React.FC<CategoryHeroProps> = ({ title, subtitle, descriptio
                 <div className="max-w-4xl">
                     {showAccent && (
                         <div className="flex items-center gap-4 mb-6 sm:mb-8">
-                            <span className="w-10 h-[2px] bg-aureole-blue"></span>
+                            <span className="slant-mark" aria-hidden="true"></span>
                             <h2 className="text-[10px] sm:text-xs font-black uppercase tracking-[0.5em] text-aureole-blue">ENVIRONMENTAL CONTROL</h2>
                         </div>
                     )}

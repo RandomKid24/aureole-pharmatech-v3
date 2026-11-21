@@ -16,7 +16,7 @@ const VariantSections: React.FC<VariantSectionsProps> = ({ product }) => {
             <section className="py-12 bg-transparent">
                 <div className="container mx-auto px-6 lg:px-24">
                     <div className="flex items-center gap-3 mb-8">
-                        <div className="w-8 h-[2px] bg-aureole-cyan" />
+                        <span className="slant-mark" aria-hidden="true"></span>
                         <h2 className="text-[11px] font-black uppercase tracking-[0.3em] text-aureole-cyan">{product.variantsHeading}</h2>
                     </div>
                     <div className="flex flex-wrap gap-px bg-slate-200 border border-slate-200 mb-8">
@@ -56,7 +56,7 @@ const VariantSections: React.FC<VariantSectionsProps> = ({ product }) => {
                     )}
                     <div className="space-y-8">
                         {v.table && (
-                            <HighlightFrame className="border border-slate-300 shadow-md">
+                            <HighlightFrame className="border border-slate-300 shadow-md g-top">
                                 <table className="w-full text-left min-w-[800px]">
                                     <thead>
                                         <tr className="bg-slate-50 text-aureole-slate border-b border-slate-400">
@@ -140,7 +140,7 @@ const VariantSections: React.FC<VariantSectionsProps> = ({ product }) => {
                                 )}
                                 <div className="relative z-10 space-y-6">
                                     <div className="flex items-center gap-3">
-                                        <div className="w-8 h-[2px] bg-aureole-cyan" />
+                                        <span className="slant-mark" aria-hidden="true"></span>
                                         <span className="text-[11px] font-black uppercase tracking-[0.3em] text-aureole-cyan">Professional Model</span>
                                     </div>
                                     <h2 className="text-4xl lg:text-5xl font-[950] text-[#001529] uppercase tracking-tighter leading-[0.9] pt-2">
@@ -196,7 +196,7 @@ const VariantSections: React.FC<VariantSectionsProps> = ({ product }) => {
                                 )}
 
                                 <div className="mt-8">
-                                    <button className="px-12 py-5 bg-[#001529] text-white text-[10px] font-black uppercase tracking-[0.2em] hover:bg-aureole-blue transition-all shadow-xl shadow-slate-200 inline-flex items-center gap-3 rounded-sm group">
+                                    <button className="px-12 py-5 btn-g text-white text-[10px] font-black uppercase tracking-[0.2em] transition-all shadow-xl shadow-slate-200 inline-flex items-center gap-3 rounded-sm group">
                                         Request Model Quote
                                         <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                                     </button>

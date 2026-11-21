@@ -4,10 +4,10 @@ import { Phone, Mail, Globe } from 'lucide-react';
 
 const ServiceCTA: React.FC = () => {
     return (
-        <section className="py-16 bg-white border-t border-slate-100 bg-[url('/wavebg.webp')] bg-cover bg-fixed">
+        <section className="py-16 bg-transparent border-t border-slate-100">
             <div className="container mx-auto px-6 sm:px-12 lg:px-24">
                 <div className="max-w-5xl mx-auto text-center">
-                    <h2 className="text-3xl lg:text-5xl font-black font-heading tracking-tighter text-aureole-blue uppercase mb-12 leading-[0.85]">
+                    <h2 className="text-3xl lg:text-5xl font-black font-heading tracking-tighter gt uppercase mb-12 leading-[0.85]">
                         CONTACT SERVICE TEAM
                     </h2>
 
@@ -16,7 +16,7 @@ const ServiceCTA: React.FC = () => {
                             href="tel:+918600522240" 
                             className="flex items-center gap-4 group transition-all"
                         >
-                            <div className="w-12 h-12 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center group-hover:bg-aureole-blue group-hover:border-aureole-blue transition-all">
+                            <div className="w-12 h-12 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-aureole-accent group-hover:to-aureole-primary group-hover:border-transparent transition-all">
                                 <Phone className="w-4 h-4 text-aureole-slate group-hover:text-white transition-colors" />
                             </div>
                             <div className="text-left">
@@ -31,11 +31,11 @@ const ServiceCTA: React.FC = () => {
                             href="mailto:service.support@aureolepharmatech.com" 
                             className="flex items-center gap-4 group transition-all"
                         >
-                            <div className="w-12 h-12 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center group-hover:bg-aureole-blue group-hover:border-aureole-blue transition-all">
+                            <div className="w-12 h-12 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-aureole-accent group-hover:to-aureole-primary group-hover:border-transparent transition-all">
                                 <Mail className="w-4 h-4 text-aureole-slate group-hover:text-white transition-colors" />
                             </div>
-                            <div className="text-left">
-                                <p className="text-lg font-black font-heading text-aureole-slate tracking-tight lowercase leading-none mb-1.5">service.support@aureolepharmatech.com</p>
+                            <div className="text-left min-w-0">
+                                <p className="text-lg font-black font-heading text-aureole-slate tracking-tight lowercase leading-tight mb-1.5 break-all sm:break-normal">service.support@aureolepharmatech.com</p>
                                 <p className="text-[10px] font-black text-slate-400 tracking-[0.2em] group-hover:text-aureole-blue transition-colors">Email Support</p>
                             </div>
                         </a>

@@ -74,11 +74,11 @@ const IndustriesServed: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-10">
           <div className="max-w-3xl">
             <div className="flex items-center gap-4 mb-4">
-              <span className="w-12 h-[2px] bg-aureole-blue"></span>
+              <span className="slant-mark" aria-hidden="true"></span>
               <h2 className="text-[11px] font-black uppercase tracking-[0.4em] text-aureole-blue">MARKETS</h2>
             </div>
             <h3 className="text-4xl lg:text-6xl font-[900] text-slate-800 uppercase tracking-tighter leading-none">
-              INDUSTRIES <span className="text-aureole-cyan">SERVED.</span>
+              INDUSTRIES <span className="gt">SERVED.</span>
             </h3>
           </div>
           <p className="text-slate-500 font-medium text-sm max-w-sm text-right hidden md:block">
@@ -90,7 +90,7 @@ const IndustriesServed: React.FC = () => {
           {SECTORS_DATA.map((sector) => (
             <div
               key={sector.id}
-              className="group bg-white rounded-lg overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-cyan-100 transition-all duration-300 flex flex-col h-full"
+              className="group bg-white rounded-lg overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-cyan-100 transition-all duration-300 flex flex-col h-full g-top"
             >
               <div className="relative h-64 overflow-hidden">
                 <img
@@ -101,7 +101,7 @@ const IndustriesServed: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-60"></div>
 
                 <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
-                  <div className="bg-white/10 backdrop-blur-md p-2 rounded border border-white/20 text-white">
+                  <div className="g-ico text-white">
                     {sector.icon}
                   </div>
                 </div>

@@ -33,7 +33,7 @@ const ComplianceGrid: React.FC = () => {
             <div className="container mx-auto px-5 sm:px-6 lg:px-12">
                 <div className="grid lg:grid-cols-3 gap-px bg-transparent">
                     {/* CE Certificate Column */}
-                    <div className="bg-white p-6 sm:p-10 lg:p-14 relative overflow-hidden group border-b lg:border-b-0 lg:border-r border-slate-100">
+                    <div className="g-top bg-white p-6 sm:p-10 lg:p-14 relative overflow-hidden group border-b lg:border-b-0 lg:border-r border-slate-100">
                         <div className="flex flex-col 2xl:flex-row justify-between items-start gap-6 2xl:gap-0 mb-8 sm:mb-10">
                             <div>
                                 <h3 className="text-[10px] sm:text-[11px] font-black font-heading tracking-[0.3em] text-aureole-cyan mb-2 uppercase min-h-0 sm:min-h-[34px]">TECHNICAL COMPLIANCE</h3>
@@ -49,7 +49,7 @@ const ComplianceGrid: React.FC = () => {
                         </div>
 
                         <div className="space-y-6 mb-12 relative z-10">
-                            <div className="p-5 bg-slate-50 border-l-2 border-aureole-cyan rounded-r-sm flex items-center gap-6">
+                            <div className="g-left p-5 pl-7 bg-slate-50 flex items-center gap-6">
                                 <span className="text-[9px] font-black text-slate-400 tracking-widest min-w-max">Directive</span>
                                 <p className="text-sm font-black text-aureole-slate uppercase tracking-tighter">2007/47/EC (MDR)</p>
                             </div>
@@ -61,7 +61,7 @@ const ComplianceGrid: React.FC = () => {
                     </div>
 
                     {/* ISO Certificate Column */}
-                    <div className="bg-white p-6 sm:p-10 lg:p-14 relative overflow-hidden group border-b lg:border-b-0 lg:border-r border-slate-100">
+                    <div className="g-top bg-white p-6 sm:p-10 lg:p-14 relative overflow-hidden group border-b lg:border-b-0 lg:border-r border-slate-100">
                         <div className="flex flex-col 2xl:flex-row justify-between items-start gap-6 2xl:gap-0 mb-8 sm:mb-10">
                             <div>
                                 <h3 className="text-[10px] sm:text-[11px] font-black font-heading tracking-[0.3em] text-aureole-blue mb-2 uppercase min-h-0 sm:min-h-[34px]">QUALITY SYSTEM</h3>
@@ -77,7 +77,7 @@ const ComplianceGrid: React.FC = () => {
                         </div>
 
                         <div className="space-y-6 mb-12 relative z-10">
-                            <div className="p-5 bg-slate-50 border-l-2 border-aureole-blue rounded-r-sm flex items-center gap-6">
+                            <div className="g-left p-5 pl-7 bg-slate-50 flex items-center gap-6">
                                 <span className="text-[9px] font-black text-slate-400 tracking-widest min-w-max">Registration No.</span>
                                 <p className="text-sm font-black text-aureole-slate uppercase tracking-tighter">{isoDetails.id}</p>
                             </div>
@@ -89,7 +89,7 @@ const ComplianceGrid: React.FC = () => {
                     </div>
 
                     {/* ZED Certificate Column */}
-                    <div className="bg-white p-6 sm:p-10 lg:p-14 relative overflow-hidden group">
+                    <div className="g-top bg-white p-6 sm:p-10 lg:p-14 relative overflow-hidden group">
                         <div className="flex flex-col 2xl:flex-row justify-between items-start gap-6 2xl:gap-0 mb-8 sm:mb-10">
                             <div>
                                 <h3 className="text-[10px] sm:text-[11px] font-black font-heading tracking-[0.3em] text-aureole-blue mb-2 uppercase min-h-0 sm:min-h-[34px]">SUSTAINABLE MANUFACTURING</h3>
@@ -105,7 +105,7 @@ const ComplianceGrid: React.FC = () => {
                         </div>
 
                         <div className="space-y-6 mb-12 relative z-10">
-                            <div className="p-5 bg-slate-50 border-l-2 border-aureole-blue rounded-r-sm flex items-center gap-6">
+                            <div className="g-left p-5 pl-7 bg-slate-50 flex items-center gap-6">
                                 <span className="text-[9px] font-black text-slate-400 tracking-widest min-w-max">Certificate No.</span>
                                 <p className="text-sm font-black text-aureole-slate uppercase tracking-tighter">{zedDetails.certNo}</p>
                             </div>

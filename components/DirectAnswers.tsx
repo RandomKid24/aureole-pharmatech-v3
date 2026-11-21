@@ -21,7 +21,7 @@ const DirectAnswers: React.FC = () => {
         </h2>
         <div className="space-y-6">
           {block.items.map((it) => (
-            <div key={it.q}>
+            <div key={it.q} className="g-left pl-6">
               <h3 className="text-lg font-bold font-heading text-aureole-deep">{it.q}</h3>
               <p className="mt-1 text-slate-600 leading-relaxed">
                 {it.a}{' '}

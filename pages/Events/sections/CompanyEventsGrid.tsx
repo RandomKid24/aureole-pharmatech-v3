@@ -32,7 +32,7 @@ const CompanyEventsGrid: React.FC<CompanyEventsGridProps> = ({ companyEvents, on
                             <h3 className="text-[11px] font-black uppercase tracking-[0.3em] text-aureole-cyan">INTERNAL CULTURE</h3>
                         </div>
                         <div className="flex items-center gap-6">
-                            <h2 className="text-4xl lg:text-5xl font-black font-heading uppercase tracking-tighter text-[#001529]">COMPANY EVENTS</h2>
+                            <h2 className="text-4xl lg:text-5xl font-black font-heading uppercase tracking-tighter text-[#001529]">COMPANY <span className="gt">EVENTS</span></h2>
                             <div className="w-32 h-32">
                                 <DotLottiePlayer
                                     src="/Fist Bump.lottie"
@@ -48,7 +48,7 @@ const CompanyEventsGrid: React.FC<CompanyEventsGridProps> = ({ companyEvents, on
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {companyEvents.map((event, idx) => (
                         <div key={idx} className="group cursor-pointer" onClick={() => onEventClick(event)}>
-                            <div className="relative aspect-[16/9] overflow-hidden bg-slate-100 mb-8">
+                            <div className="relative aspect-[16/9] overflow-hidden bg-slate-100 mb-8 g-top">
                                 <div className="absolute inset-0 bg-aureole-slate/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                                 {event.thumbnail.endsWith('.mp4') ? (
                                     <video

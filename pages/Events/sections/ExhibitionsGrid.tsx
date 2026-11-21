@@ -28,14 +28,14 @@ const ExhibitionsGrid: React.FC<ExhibitionsGridProps> = ({ exhibitions, onEventC
                             <Award className="w-6 h-6 text-aureole-blue" />
                             <h3 className="text-[11px] font-black uppercase tracking-[0.3em] text-aureole-blue">INDUSTRY PRESENCE</h3>
                         </div>
-                        <h2 className="text-4xl lg:text-5xl font-black font-heading uppercase tracking-tighter text-[#001529]">PAST EXHIBITIONS</h2>
+                        <h2 className="text-4xl lg:text-5xl font-black font-heading uppercase tracking-tighter text-[#001529]">PAST <span className="gt">EXHIBITIONS</span></h2>
                     </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                     {exhibitions.map((exh, idx) => (
                         <div key={idx} className="group cursor-pointer" onClick={() => onEventClick(exh)}>
-                            <div className="relative aspect-[16/9] overflow-hidden bg-slate-100 mb-8">
+                            <div className="relative aspect-[16/9] overflow-hidden bg-slate-100 mb-8 g-top">
                                 <div className="absolute inset-0 bg-aureole-slate/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                                 {exh.thumbnail.endsWith('.mp4') ? (
                                     <video

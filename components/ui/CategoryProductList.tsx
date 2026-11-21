@@ -29,7 +29,7 @@ const MODEL_LIST_CSS = `
 .ml-row { position: relative; opacity: 0; }
 .ml-grid.is-in .ml-row { animation: ml-in .55s cubic-bezier(.2,.7,.2,1) both; animation-delay: calc(var(--i) * 50ms); }
 @keyframes ml-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; } }
-.ml-row::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: #00a6d6; transform: scaleX(0); transform-origin: left; transition: transform .4s cubic-bezier(.2,.7,.2,1); }
+.ml-row::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: linear-gradient(90deg, #01c2fb, #1d69b0); transform: scaleX(0); transform-origin: left; transition: transform .4s cubic-bezier(.2,.7,.2,1); }
 .ml-row:hover::after, .ml-row:focus-visible::after { transform: scaleX(1); }
 .ml-row:active { transform: scale(.995); }
 .ml-thumb { transition: background-color .3s; }
@@ -74,7 +74,7 @@ const CategoryProductList: React.FC<CategoryProductListProps> = ({ subTypes }) =
             <div className="container mx-auto px-6 lg:px-24">
                 <div className="max-w-4xl mb-16 text-center lg:text-left">
                     <h2 className="text-4xl lg:text-5xl font-black font-heading text-[#001529] tracking-tighter leading-none mb-4">
-                        Available <span className="text-aureole-cyan">models.</span>
+                        Available <span className="gt">models.</span>
                     </h2>
                     <p className="text-slate-500 font-medium text-base">Select a model below to see full technical specifications and features.</p>
                 </div>
@@ -83,6 +83,7 @@ const CategoryProductList: React.FC<CategoryProductListProps> = ({ subTypes }) =
                     {subTypes.map((sub, sIdx) => (
                         <div key={sIdx} className="space-y-2">
                             <div className="flex items-center gap-4 pb-4 border-b-2 border-slate-100 mb-6 font-heading">
+                                <span className="slant-mark" aria-hidden="true"></span>
                                 <h3 className="text-2xl lg:text-3xl font-bold text-[#001529] tracking-tight">
                                     {sub.name}
                                 </h3>

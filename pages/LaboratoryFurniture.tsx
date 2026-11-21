@@ -19,7 +19,7 @@ const LaboratoryFurniture: React.FC = () => {
             <SEO />
             <CategoryHero
                 title="LABORATORY"
-                subtitle={<span className="text-aureole-blue">FURNITURE</span>}
+                subtitle={<span className="gt">FURNITURE</span>}
                 description={furnitureCategory.description}
                 watermark="FURNITURE"
                 image="/assets/sketches/lab-furniture-sketch.webp"

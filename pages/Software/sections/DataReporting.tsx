@@ -10,7 +10,7 @@ const DataReporting: React.FC = () => {
                 {/* Header */}
                 <div className="max-w-4xl mb-20">
                     <h2 className="text-5xl font-black font-heading tracking-tighter text-aureole-slate leading-none mb-6">
-                        Data, Reports <br /> & <span className="text-aureole-cyan">Intelligence</span>
+                        Data, Reports <br /> & <span className="gt">Intelligence</span>
                     </h2>
                     <p className="text-xl font-sans text-slate-500 font-medium leading-relaxed">
                         Precision data management with automated logging, real-time intelligence, and secure architectural scalability.
@@ -19,7 +19,7 @@ const DataReporting: React.FC = () => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
                     {/* Block 1: Logging - Large Vertical Block */}
-                    <div className="lg:col-span-1 bg-white p-8 border-t-4 border-aureole-blue shadow-sm">
+                    <div className="lg:col-span-1 bg-white p-8 g-top shadow-sm">
                         <h3 className="text-xl font-black font-heading text-aureole-slate tracking-wide mb-6">Data Logging</h3>
                         <ul className="space-y-3">
                             {[
@@ -39,7 +39,7 @@ const DataReporting: React.FC = () => {
                     {/* Block 2: Intelligence - Center Wide Block */}
                     <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                         {/* Sub-block: Dashboard */}
-                        <div className="bg-white p-8 border-t-4 border-aureole-deep shadow-sm relative group">
+                        <div className="bg-white p-8 g-top shadow-sm relative group">
                             <h3 className="text-xl font-black font-heading text-aureole-slate tracking-wide mb-6">Dashboard & Status Monitoring</h3>
                             <ul className="space-y-3 text-base font-sans text-slate-600 font-medium">
                                 <li><span className="text-aureole-deep mr-2">•</span>E-signature status & counts</li>
@@ -50,7 +50,7 @@ const DataReporting: React.FC = () => {
                         </div>
 
                         {/* Sub-block: Monitoring */}
-                        <div className="bg-white p-8 border-b-4 border-aureole-cyan shadow-sm">
+                        <div className="bg-white p-8 g-top shadow-sm">
                             <h3 className="text-xl font-black font-heading text-aureole-slate tracking-wide mb-6">System Health</h3>
                             <ul className="space-y-3">
                                 {[
@@ -71,13 +71,13 @@ const DataReporting: React.FC = () => {
                     {/* Block 3: Security & Scale - Right Block */}
                     <div className="lg:col-span-1 flex flex-col gap-4">
                         {/* Backup */}
-                        <div className="flex-1 bg-white p-8 border-l-4 border-aureole-blue shadow-sm">
+                        <div className="flex-1 bg-white p-8 g-top shadow-sm">
                             <Database className="w-6 h-6 mb-4 text-aureole-blue" />
                             <h4 className="text-xl font-black font-heading text-aureole-slate tracking-wide mb-4">Security</h4>
                             <p className="text-base font-sans font-medium text-slate-600">Auto/Manual backup, restoration traceability, and compliance archival.</p>
                         </div>
                         {/* Scalability */}
-                        <div className="flex-1 bg-white p-8 border-r-4 border-aureole-cyan shadow-sm">
+                        <div className="flex-1 bg-white p-8 g-top shadow-sm">
                             <TrendingUp className="w-6 h-6 text-aureole-cyan mb-4" />
                             <h4 className="text-xl font-black font-heading text-aureole-slate tracking-wide mb-4">Scalability</h4>
                             <p className="text-base font-sans text-slate-600 font-medium">Multi-PLC integration & expandable architecture for future chambers.</p>

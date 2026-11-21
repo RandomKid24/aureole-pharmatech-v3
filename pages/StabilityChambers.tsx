@@ -20,7 +20,7 @@ const StabilityChambers: React.FC = () => {
             <SEO />
             <CategoryHero
                 title="precision ENVIRONMENTAL"
-                subtitle={<span className="text-aureole-blue">CONTROL</span>}
+                subtitle={<span className="gt">CONTROL</span>}
                 watermark="STABILITY"
                 image="/assets/sketches/stablitiy-chamber-hero-sketech.webp"
                 showAccent={false}

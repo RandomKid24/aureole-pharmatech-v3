@@ -5,9 +5,9 @@ import SectionHeading from '@/components/ui/SectionHeading';
 
 const Philosophy: React.FC = () => {
     const ethos = [
-        { title: "Our Vision", desc: "To be at the forefront of the pharmaceutical industry, redefining excellence through innovation, quality, and sustainability.", icon: <Eye size={32} /> },
-        { title: "Our Mission", desc: "To lead with innovation, uphold the highest quality standards, and promote sustainability in pharmaceutical solutions through integrity.", icon: <Shield size={32} /> },
-        { title: "Our Goal", desc: "To revolutionize multiple industries by consistently delivering innovative solutions and unmatched quality in pharmaceutical services.", icon: <Target size={32} /> }
+        { title: "Our Vision", desc: "To be at the forefront of the pharmaceutical industry, redefining excellence through innovation, quality, and sustainability.", icon: <Eye size={44} strokeWidth={1.5} /> },
+        { title: "Our Mission", desc: "To lead with innovation, uphold the highest quality standards, and promote sustainability in pharmaceutical solutions through integrity.", icon: <Shield size={44} strokeWidth={1.5} /> },
+        { title: "Our Goal", desc: "To revolutionize multiple industries by consistently delivering innovative solutions and unmatched quality in pharmaceutical services.", icon: <Target size={44} strokeWidth={1.5} /> }
     ];
 
     return (
@@ -28,7 +28,7 @@ const Philosophy: React.FC = () => {
                             {/* Elegant Circular Icon */}
                             <div className="relative mb-10">
                                 <div className="absolute inset-0 bg-aureole-blue/5 rounded-full scale-150 blur-2xl group-hover:bg-aureole-blue/10 transition-colors duration-700"></div>
-                                <div className="relative w-24 h-24 flex items-center justify-center bg-white rounded-full shadow-[0_15px_35px_rgba(0,0,0,0.05)] border border-slate-50 text-aureole-blue group-hover:text-aureole-cyan transition-colors duration-500">
+                                <div className="relative w-24 h-24 flex items-center justify-center text-aureole-blue group-hover:text-aureole-cyan transition-colors duration-500">
                                     <div className="transform group-hover:scale-110 transition-transform duration-500">
                                         {box.icon}
                                     </div>

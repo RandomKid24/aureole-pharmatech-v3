@@ -108,7 +108,7 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product, productName }) => {
     if (tabs.length === 0) return null;
 
     return (
-        <div className="border border-slate-200 bg-white shadow-sm">
+        <div className="border border-slate-200 bg-white shadow-sm g-top">
             <div className="flex border-b border-slate-200 bg-slate-50/50 overflow-x-auto scrollbar-hide">
                 {tabs.map((tab) => (
                     <button
@@ -123,7 +123,7 @@ const ProductTabs: React.FC<ProductTabsProps> = ({ product, productName }) => {
                             {tab.label}
                         </span>
                         {activeTab === tab.id && (
-                            <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-aureole-cyan" />
+                            <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-aureole-accent to-aureole-primary" />
                         )}
                     </button>
                 ))}

@@ -167,13 +167,96 @@
       body {
         scroll-behavior: smooth;
         -webkit-font-smoothing: antialiased;
+        /* One clean white surface; the brand gradient lives in components (see "Aureole gradient system" below). */
         background-color: #ffffff;
-        background-image: url("/wavebg.webp");
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
         font-family: "Manrope", sans-serif;
         font-weight: 400;
+      }
+
+      /* ---- Aureole gradient system: brand gradient (cyan to blue) + the logo's slant ---- */
+      .gt {
+        background: linear-gradient(135deg, #01c2fb, #1d69b0);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+      }
+      /* Section marker: two slanted gradient bars (replaces the thin line before eyebrow labels) */
+      .slant-mark {
+        display: inline-flex;
+        align-items: center;
+        gap: 3px;
+        flex-shrink: 0;
+      }
+      .slant-mark::before,
+      .slant-mark::after {
+        content: "";
+        display: block;
+        height: 24px;
+        transform: skewX(-14deg);
+        background: linear-gradient(135deg, #01c2fb, #1d69b0);
+      }
+      .slant-mark::before { width: 12px; }
+      .slant-mark::after { width: 5px; opacity: 0.45; }
+      /* 3px gradient edge on top of a card */
+      .g-top { position: relative; }
+      .g-top::before {
+        content: "";
+        position: absolute;
+        left: 0; right: 0; top: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #01c2fb, #1d69b0);
+        z-index: 2;
+      }
+      /* Gradient bar down the left of a text block */
+      .g-left { position: relative; }
+      .g-left::before {
+        content: "";
+        position: absolute;
+        left: 0; top: 0; bottom: 0;
+        width: 4px;
+        background: linear-gradient(180deg, #01c2fb, #1d69b0);
+      }
+      /* Gradient icon tile with a white icon */
+      .g-ico {
+        display: inline-grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        background: linear-gradient(135deg, #01c2fb, #1d69b0);
+        color: #fff !important;
+        transform: skewX(-8deg);
+      }
+      .g-ico > svg { transform: skewX(8deg); }
+      /* Photo with a slanted edge and a gradient slab behind it (use on the wrapper; its first child is the photo) */
+      .frame-slant { position: relative; }
+      .frame-slant::before {
+        content: "";
+        position: absolute;
+        inset: 22px -22px -22px 22px;
+        background: linear-gradient(135deg, #01c2fb, #1d69b0);
+        clip-path: polygon(9% 0, 100% 0, 100% 100%, 0 100%);
+        opacity: 0.9;
+      }
+      .frame-slant > * { position: relative; clip-path: polygon(9% 0, 100% 0, 100% 100%, 0 100%); }
+      .frame-slant-r::before { inset: -20px 20px 20px -20px; clip-path: polygon(0 0, 100% 0, 91% 100%, 0 100%); }
+      .frame-slant-r > * { clip-path: polygon(0 0, 100% 0, 91% 100%, 0 100%); }
+      /* Buttons */
+      .btn-g {
+        background: linear-gradient(135deg, #01c2fb, #1d69b0) !important;
+        color: #fff !important;
+        box-shadow: 0 10px 24px -10px rgba(29, 105, 176, 0.7);
+      }
+      .btn-g-o {
+        background: linear-gradient(#fff, #fff) padding-box, linear-gradient(135deg, #01c2fb, #1d69b0) border-box !important;
+        border: 1.5px solid transparent !important;
+        color: #001529 !important;
+      }
+      /* Solid gradient caption bar with a slanted left edge */
+      .g-bar {
+        background: linear-gradient(90deg, #01c2fb, #1d69b0);
+        color: #fff;
+        clip-path: polygon(16px 0, 100% 0, 100% 100%, 0 100%);
       }
 
       h1,

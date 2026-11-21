@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
    };
 
    return (
-      <footer className="bg-aureole-primary text-white pt-16 relative overflow-hidden">
+      <footer className="bg-gradient-to-br from-[#0b3f7d] to-aureole-primary text-white pt-16 relative overflow-hidden">
          {/* Visual Header - Branding Mask Effect */}
          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none">
             <h2 className="text-[31vw] font-bold tracking-tighter leading-none text-aureole-accent opacity-[0.07]" style={{ fontFamily: '"Levenim MT", "Questrial", sans-serif' }}>

@@ -9,7 +9,7 @@ const ComplianceFeatures: React.FC = () => {
                 {/* Section Header */}
                 <div className="max-w-4xl mb-20">
                     <h2 className="text-5xl font-black font-heading tracking-tighter text-aureole-slate leading-none mb-6">
-                        Regulatory Compliance & <span className="text-aureole-cyan">Data Integrity</span>
+                        Regulatory Compliance & <span className="gt">Data Integrity</span>
                     </h2>
                     <p className="text-xl font-sans text-slate-500 font-medium leading-relaxed">
                         Supports 21 CFR Part 11 requirements with secure electronic records, electronic signatures, and audit trails.
@@ -19,7 +19,7 @@ const ComplianceFeatures: React.FC = () => {
                 {/* Main Content Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
                     {/* Electronic Signatures - Featured Card */}
-                    <div className="lg:col-span-2 bg-white p-8 border-t-4 border-aureole-blue shadow-sm">
+                    <div className="lg:col-span-2 bg-white p-8 g-top shadow-sm">
                         <div className="mb-6">
                             <h3 className="text-xl font-black font-heading tracking-wide text-aureole-slate">
                                 Electronic Signatures
@@ -54,7 +54,7 @@ const ComplianceFeatures: React.FC = () => {
                     </div>
 
                     {/* Audit Trails - Side Card */}
-                    <div className="bg-white p-8 border-l-4 border-aureole-cyan shadow-sm">
+                    <div className="bg-white p-8 g-top shadow-sm">
                         <div className="mb-6">
                             <h3 className="text-xl font-black font-heading tracking-wide text-aureole-slate">
                                 Audit Trails
@@ -79,7 +79,7 @@ const ComplianceFeatures: React.FC = () => {
                 {/* Bottom Grid - User Management & Approval Controls */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {/* User Management */}
-                    <div className="bg-white p-8 border-b-4 border-aureole-deep shadow-sm">
+                    <div className="bg-white p-8 g-top shadow-sm">
                         <div className="mb-6">
                             <h3 className="text-xl font-black font-heading text-aureole-slate tracking-wide">
                                 User Management & Security
@@ -103,7 +103,7 @@ const ComplianceFeatures: React.FC = () => {
                     </div>
 
                     {/* Approval Controls */}
-                    <div className="bg-white p-8 border-r-4 border-aureole-blue shadow-sm">
+                    <div className="bg-white p-8 g-top shadow-sm">
                         <div className="mb-6">
                             <h3 className="text-xl font-black font-heading tracking-wide text-aureole-slate">
                                 Approval Controls

@@ -19,7 +19,7 @@ const TableTopInstruments: React.FC = () => {
             <SEO />
             <CategoryHero
                 title="TABLE TOP"
-                subtitle={<span className="text-aureole-blue">Instruments</span>}
+                subtitle={<span className="gt">Instruments</span>}
                 watermark="INSTRUMENTS"
                 image="/assets/sketches/table-top-sketch.webp"
                 showAccent={false}

@@ -43,14 +43,16 @@ const FacilityUnits: React.FC<FacilityUnitsProps> = ({ onImageClick }) => {
                         <div key={idx} className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-16 lg:gap-24 items-center`}>
                             {/* Image Column */}
                             <div className="w-full lg:w-1/2 relative group">
-                                <div className="relative overflow-hidden aspect-[4/3] shadow-2xl shadow-slate-200 border border-slate-100">
-                                    <LazyImage
-                                        src={facility.image}
-                                        alt={facility.title}
-                                        className="w-full h-full object-cover transform transition-transform duration-1000"
-                                    />
+                                <div className={`frame-slant ${idx % 2 === 0 ? 'pr-5 pb-5' : 'frame-slant-r pl-5 pt-5'}`}>
+                                    <div className="relative overflow-hidden aspect-[4/3]">
+                                        <LazyImage
+                                            src={facility.image}
+                                            alt={facility.title}
+                                            className="w-full h-full object-cover transform transition-transform duration-1000"
+                                        />
+                                    </div>
                                 </div>
-                                <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-aureole-blue hidden lg:flex items-center justify-center">
+                                <div className={`absolute bottom-9 ${idx % 2 === 0 ? 'right-9' : 'left-9'} w-20 h-20 bg-gradient-to-br from-aureole-accent to-aureole-primary hidden lg:flex items-center justify-center`}>
                                     <span className="text-white font-[950] text-xl italic tracking-tighter">{facility.unit}</span>
                                 </div>
                             </div>
@@ -59,7 +61,7 @@ const FacilityUnits: React.FC<FacilityUnitsProps> = ({ onImageClick }) => {
                             <div className="w-full lg:w-1/2">
                                 <div className="flex items-center gap-4 mb-6 justify-center lg:justify-start">
                                     <span className="text-[10px] font-black text-aureole-blue uppercase tracking-[0.3em]">{facility.unit}</span>
-                                    <div className="w-8 h-px bg-slate-200"></div>
+                                    <span className="slant-mark" aria-hidden="true"></span>
                                 </div>
                                 <h3 className="text-4xl lg:text-5xl font-[950] font-heading text-aureole-slate uppercase tracking-tighter leading-tight mb-8">
                                     {facility.title}

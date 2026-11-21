@@ -14,7 +14,7 @@ const MonitoringControl: React.FC = () => {
                     <div className="max-w-xl">
                         <div className="mb-6">
                             <h2 className="text-5xl font-black font-heading tracking-tighter text-aureole-slate leading-none">
-                                Equipment & Chamber <span className="text-aureole-cyan">Management</span>
+                                Equipment & Chamber <span className="gt">Management</span>
                             </h2>
                         </div>
 
@@ -71,7 +71,7 @@ const MonitoringControl: React.FC = () => {
 
                     {/* Right Column - Image */}
                     <div className="relative">
-                        <div className="bg-slate-50 p-6 border border-slate-200 shadow-sm">
+                        <div className="bg-slate-50 p-6 border border-slate-200 shadow-sm g-top">
                             <LazyImage
                                 src={architectureImg}
                                 alt="Software Architecture Diagram"

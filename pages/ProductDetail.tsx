@@ -38,7 +38,7 @@ const ProductDetail: React.FC = () => {
                 <SEO title="Product not found | Aureole Pharma Tech" description="This product page could not be found." noindex />
                 <div className="max-w-4xl mx-auto text-center">
                     <h1 className="text-4xl font-[950] text-[#001529] uppercase tracking-tighter mb-8">Specification Pending.</h1>
-                    <Link to="/products" className="inline-flex items-center gap-4 px-10 py-5 bg-[#001529] text-white text-[10px] font-black uppercase tracking-widest hover:bg-aureole-blue transition-all">
+                    <Link to="/products" className="inline-flex items-center gap-4 px-10 py-5 btn-g text-white text-[10px] font-black uppercase tracking-widest transition-all">
                         <ArrowLeft size={16} /> Back to Catalog
                     </Link>
                 </div>

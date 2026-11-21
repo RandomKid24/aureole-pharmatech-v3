@@ -173,7 +173,7 @@ const JobBoard: React.FC<JobBoardProps> = ({ listings, onApply, isLoading = fals
                     )}
 
                     {/* Table Header */}
-                    <div className="hidden lg:grid grid-cols-12 gap-6 bg-slate-100 p-6 text-[10px] font-black uppercase tracking-[0.3em] text-[#001529] border border-slate-200">
+                    <div className="hidden lg:grid grid-cols-12 gap-6 bg-gradient-to-r from-aureole-primary to-aureole-deep p-6 text-[10px] font-black uppercase tracking-[0.3em] text-white">
                         <div className="col-span-2">Job Code</div>
                         <div className="col-span-4">Position / Department</div>
                         <div className="col-span-2 text-center">Experience</div>
@@ -190,7 +190,7 @@ const JobBoard: React.FC<JobBoardProps> = ({ listings, onApply, isLoading = fals
                             </div>
                         )}
                         {listings.map((job) => (
-                            <div key={job.code} className={`group border border-slate-100 bg-white transition-all duration-300 ${expandedJob === job.code ? 'shadow-2xl shadow-slate-200 border-aureole-blue/20' : 'hover:border-slate-300 shadow-sm'}`}>
+                            <div key={job.code} className={`group g-top border border-slate-100 bg-white transition-all duration-300 ${expandedJob === job.code ? 'shadow-2xl shadow-slate-200 border-aureole-blue/20' : 'hover:border-slate-300 shadow-sm'}`}>
                                 <div
                                     onClick={() => toggleJob(job.code)}
                                     className="grid lg:grid-cols-12 gap-6 p-6 lg:p-8 items-center cursor-pointer select-none relative z-10"
@@ -227,7 +227,7 @@ const JobBoard: React.FC<JobBoardProps> = ({ listings, onApply, isLoading = fals
                                             <span className="opacity-70 group-hover:opacity-100">
                                                 {expandedJob === job.code ? 'Close' : 'Read more'}
                                             </span>
-                                            <div className={`p-2 rounded-full border transition-all duration-500 ${expandedJob === job.code ? 'bg-aureole-blue text-white border-aureole-blue rotate-180' : 'bg-slate-50 text-aureole-blue border-slate-100 group-hover:border-aureole-blue/30'}`}>
+                                            <div className={`p-2 rounded-full border transition-all duration-500 ${expandedJob === job.code ? 'bg-gradient-to-br from-aureole-accent to-aureole-primary text-white border-transparent rotate-180' : 'bg-slate-50 text-aureole-blue border-slate-100 group-hover:border-aureole-blue/30'}`}>
                                                 <ChevronDown size={14} className="transition-transform duration-500" />
                                             </div>
                                         </div>
@@ -380,7 +380,7 @@ const JobBoard: React.FC<JobBoardProps> = ({ listings, onApply, isLoading = fals
                                                         <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                                                             <label
                                                                 htmlFor={`resume-${job.id}`}
-                                                                className="inline-flex items-center justify-center px-4 py-2.5 bg-[#001529] text-white text-xs font-black uppercase tracking-[0.16em] cursor-pointer hover:bg-aureole-blue transition-colors"
+                                                                className="inline-flex items-center justify-center px-4 py-2.5 btn-g text-white text-xs font-black uppercase tracking-[0.16em] cursor-pointer transition-all hover:-translate-y-0.5"
                                                             >
                                                                 Upload Resume
                                                             </label>
@@ -406,7 +406,7 @@ const JobBoard: React.FC<JobBoardProps> = ({ listings, onApply, isLoading = fals
                                                         <button
                                                             type="submit"
                                                             disabled={submittingFor === job.id}
-                                                            className="px-6 py-3 bg-[#001529] text-white text-xs font-black uppercase tracking-[0.2em] disabled:opacity-60"
+                                                            className="px-6 py-3 btn-g text-white text-xs font-black uppercase tracking-[0.2em] disabled:opacity-60"
                                                         >
                                                             {submittingFor === job.id ? 'Submitting...' : 'Submit Application'}
                                                         </button>
@@ -426,11 +426,11 @@ const JobBoard: React.FC<JobBoardProps> = ({ listings, onApply, isLoading = fals
                     </div>
 
                     {/* How to Apply Section */}
-                    <div className="mt-20 p-8 lg:p-12 bg-white/50 border border-slate-200 rounded-2xl relative overflow-hidden">
+                    <div className="mt-20 p-8 lg:p-12 bg-white border border-slate-200 rounded-sm g-top relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-aureole-blue/5 rounded-full -translate-y-1/3 translate-x-1/3 blur-3xl"></div>
                         <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
                             <div>
-                                <h3 className="text-2xl font-[950] text-[#001529] uppercase tracking-tighter mb-4">How to Apply</h3>
+                                <h3 className="text-2xl font-[950] text-[#001529] uppercase tracking-tighter mb-4">How to <span className="gt">Apply</span></h3>
                                 <p className="text-slate-500 text-sm max-w-xl leading-relaxed">
                                     Interested candidates can reach out to us directly through the following channels. Please mention the Job Code in your application.
                                 </p>
