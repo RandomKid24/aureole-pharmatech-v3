@@ -28,7 +28,7 @@ Aureole Pharma Tech is a premier pharmaceutical engineering manufacturer special
 
 ## 2. Verified Statistics
 - **Client Portfolio**: 70+ verified pharmaceutical brands (including Ajanta Pharma, Akums, GL Galpha Laboratories, Aurobindo, Dabur, Hetero, Indoco Remedies, Intas, Macleods, Recipharm, and others).
-- **Geographic Footprint**: 15+ states covered with active installations.
+- **Geographic Footprint**: 15+ countries covered with active installations.
 - **Technical Certifications**: 3 major certifications including ISO 9001:2015, CE, and ZED Gold.
 - **Engineering Base**: 1,500+ successful equipment installations.
 

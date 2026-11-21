@@ -33,11 +33,11 @@ const Footer: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
                <div className="space-y-10">
-                  <Link to="/" onClick={handleScrollToTop}>
+                  <Link to="/" onClick={handleScrollToTop} className="inline-block bg-white px-5 py-3 shadow-lg">
                      <img
                         src="/aureole-logo.webp"
                         alt="Aureole Pharma-Tech"
-                        className="h-24 w-auto brightness-[1.25] contrast-[1.1] saturate-[1.1]"
+                        className="h-16 w-auto"
                      />
                   </Link>
                   <p className="text-blue-50/90 text-sm font-medium leading-relaxed max-w-xs">

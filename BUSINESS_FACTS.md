@@ -36,7 +36,7 @@ _Snapshot date: 2026-10-14. Product tables in section 7 are generated from `data
 | :--- | :--- |
 | 28+ years of precision engineering (company) | Home About + FAQ. The 27 years on the About page is the Managing Director's first-person quote. |
 | 1,500+ successful installations | Home About, Home FAQ |
-| 15+ states covered | Home About, Home FAQ |
+| 15+ countries covered | Home About, Home FAQ, Home Global Validation. Owner confirmed on 2026-11-21 that the 15+ are countries, not Indian states. |
 | 70+ verified client entities | Home About (`data/clients.ts` lists 72 logos) |
 
 ## 5. Certificates (from the PDFs in `public/compliance/`)

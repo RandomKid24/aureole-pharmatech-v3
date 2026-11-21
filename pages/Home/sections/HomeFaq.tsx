@@ -17,7 +17,7 @@ const HomeFaq: React.FC = () => {
     },
     {
       question: "Does Aureole PharmaTech serve international markets?",
-      answer: "Yes. With 1,500+ successful installations across 15+ states and multiple international hubs, Aureole PharmaTech caters to domestic and global pharmaceutical manufacturing clients from our state-of-the-art facilities in Nashik."
+      answer: "Yes. With 1,500+ successful installations across 15+ countries and multiple international hubs, Aureole PharmaTech caters to domestic and global pharmaceutical manufacturing clients from our state-of-the-art facilities in Nashik."
     },
     {
       question: "How does your equipment support data integrity and audit compliance?",

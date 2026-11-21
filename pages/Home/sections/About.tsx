@@ -26,7 +26,7 @@ const About: React.FC = () => {
             </h3>
             <div className="g-left p-8 pl-10 bg-white shadow-sm">
               <p className="text-lg lg:text-xl text-slate-700 font-bold leading-relaxed mb-6">
-                When you choose Aureole PharmaTech, you're choosing a partner with 1,500+ successful installations across 15+ states and international markets.
+                When you choose Aureole PharmaTech, you're choosing a partner with 1,500+ successful installations across 15+ countries.
               </p>
               <p className="text-[15px] text-slate-500 font-medium leading-relaxed tracking-tight">
                 For over 28 years, we have delivered custom pharmaceutical technology and services to 70+ verified client entities. Our engineering adheres strictly to GxP compliance, ISO 9001:2015, CE, ZED Gold, with software that supports 21 CFR Part 11 electronic records requirements.

@@ -91,7 +91,7 @@ const GlobalValidation: React.FC = () => {
               <p className="text-3xl font-black gt tracking-tighter">
                 <AnimatedCounter end={15} suffix="+" />
               </p>
-              <p className="text-[9px] font-black tracking-widest text-slate-400 uppercase mt-1">States Covered</p>
+              <p className="text-[9px] font-black tracking-widest text-slate-400 uppercase mt-1">Countries Covered</p>
             </div>
             <div>
               <p className="text-3xl font-black gt tracking-tighter">

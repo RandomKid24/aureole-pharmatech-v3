@@ -82,6 +82,10 @@ const Hero: React.FC = () => {
                 className="absolute left-1/2 top-1/2 w-[150%] -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none"
                 style={{ ...HALO_STYLE, aspectRatio: '1' }}
               />
+              <div
+                aria-hidden="true"
+                className="absolute left-1/2 top-1/2 w-[93%] aspect-square -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-aureole-primary/55 pointer-events-none"
+              />
               {SCENE.map((p, i) => (
                 <motion.div
                   key={p.src}

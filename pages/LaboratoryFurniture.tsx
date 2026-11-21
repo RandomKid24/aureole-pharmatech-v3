@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import SEO from '../components/SEO';
-import { PRODUCT_CATALOG, FURNITURE_NAV_ITEMS, FURNITURE_SECTIONS } from '../data/products';
+import { PRODUCT_CATALOG } from '../data/products';
 import CategoryHero from '../components/ui/CategoryHero';
-import KeyDetailsAccordion from '../components/ui/KeyDetailsAccordion';
 import CategoryProductList from '../components/ui/CategoryProductList';
 
 const LaboratoryFurniture: React.FC = () => {
@@ -26,13 +25,6 @@ const LaboratoryFurniture: React.FC = () => {
                 showAccent={false}
             />
 
-            <KeyDetailsAccordion
-                navItems={FURNITURE_NAV_ITEMS}
-                sections={FURNITURE_SECTIONS}
-                accentLabel="Workspace Layout"
-                title="W.W.W"
-                accentTitle="Insights"
-            />
 
             <CategoryProductList subTypes={furnitureCategory.subTypes} />
         </div>

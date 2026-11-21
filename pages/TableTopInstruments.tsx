@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import SEO from '../components/SEO';
-import { PRODUCT_CATALOG, TABLETOP_NAV_ITEMS, TABLETOP_SECTIONS } from '../data/products';
+import { PRODUCT_CATALOG } from '../data/products';
 import CategoryHero from '../components/ui/CategoryHero';
-import KeyDetailsAccordion from '../components/ui/KeyDetailsAccordion';
 import CategoryProductList from '../components/ui/CategoryProductList';
 
 const TableTopInstruments: React.FC = () => {
@@ -23,13 +22,6 @@ const TableTopInstruments: React.FC = () => {
                 watermark="INSTRUMENTS"
                 image="/assets/sketches/table-top-sketch.webp"
                 showAccent={false}
-            />
-            <KeyDetailsAccordion
-                navItems={TABLETOP_NAV_ITEMS}
-                sections={TABLETOP_SECTIONS}
-                accentLabel="System Performance"
-                title="W.W.W"
-                accentTitle="Insights"
             />
             <CategoryProductList subTypes={tabletopCategory.subTypes} />
         </div>

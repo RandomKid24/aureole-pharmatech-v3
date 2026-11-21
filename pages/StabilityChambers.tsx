@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import SEO from '../components/SEO';
 import DirectAnswers from '../components/DirectAnswers';
-import { PRODUCT_CATALOG, STABILITY_NAV_ITEMS, STABILITY_SECTIONS } from '../data/products';
+import { PRODUCT_CATALOG } from '../data/products';
 import CategoryHero from '../components/ui/CategoryHero';
-import KeyDetailsAccordion from '../components/ui/KeyDetailsAccordion';
 import CategoryProductList from '../components/ui/CategoryProductList';
 
 const StabilityChambers: React.FC = () => {
@@ -24,13 +23,6 @@ const StabilityChambers: React.FC = () => {
                 watermark="STABILITY"
                 image="/assets/sketches/stablitiy-chamber-hero-sketech.webp"
                 showAccent={false}
-            />
-            <KeyDetailsAccordion
-                navItems={STABILITY_NAV_ITEMS}
-                sections={STABILITY_SECTIONS}
-                accentLabel="Operational Matrix"
-                title="W.W.W"
-                accentTitle="Insights"
             />
             <CategoryProductList subTypes={stabilityCategory.subTypes} />
             <DirectAnswers />

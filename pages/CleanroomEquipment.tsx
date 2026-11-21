@@ -1,9 +1,8 @@
 
 import React, { useEffect } from 'react';
 import SEO from '../components/SEO';
-import { PRODUCT_CATALOG, CLEANROOM_NAV_ITEMS, CLEANROOM_SECTIONS } from '../data/products';
+import { PRODUCT_CATALOG } from '../data/products';
 import CategoryHero from '../components/ui/CategoryHero';
-import KeyDetailsAccordion from '../components/ui/KeyDetailsAccordion';
 import CategoryProductList from '../components/ui/CategoryProductList';
 
 const CleanroomEquipment: React.FC = () => {
@@ -24,13 +23,6 @@ const CleanroomEquipment: React.FC = () => {
                 watermark="STERILITY"
                 image="/assets/sketches/cleanroom-sketch.webp"
                 showAccent={false}
-            />
-            <KeyDetailsAccordion
-                navItems={CLEANROOM_NAV_ITEMS}
-                sections={CLEANROOM_SECTIONS}
-                accentLabel="GMP Compliance"
-                title="W.W.W"
-                accentTitle="Insights"
             />
             <CategoryProductList subTypes={cleanroomCategory.subTypes} />
         </div>
