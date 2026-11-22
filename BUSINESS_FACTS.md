@@ -34,7 +34,7 @@ _Snapshot date: 2026-10-14. Product tables in section 7 are generated from `data
 ## 4. Statistics shown on the site (taken from UI; not independently checked)
 | Claim | Where it appears |
 | :--- | :--- |
-| 28+ years of precision engineering (company) | Home About + FAQ. The 27 years on the About page is the Managing Director's first-person quote. |
+| Founder's experience: 29 years in 2026 (counted from 1997, +1 every 1 January via `utils/experience.ts`). Owner confirmed on 2026-11-22 this is the **founder's** experience, not the company's age (Aureole Pharma Pvt. Ltd. was incorporated in 2021 per the registry) | Home About heading and text, Home FAQ, `public/content.md`. The "27 years" on the About page is the Managing Director's first-person quote and is left as written (inconsistent with 29; owner to confirm). |
 | 1,500+ successful installations | Home About, Home FAQ |
 | 15+ countries covered | Home About, Home FAQ, Home Global Validation. Owner confirmed on 2026-11-21 that the 15+ are countries, not Indian states. Owner confirmed on 2026-11-22: the company manufactures in India and exports (sells in India and internationally); do not write India-only copy. |
 | 70+ verified client entities | Home About (`data/clients.ts` lists 72 logos) |

@@ -1,11 +1,12 @@
 import React from 'react';
 import { Plus } from 'lucide-react';
+import { founderYears } from '@/utils/experience';
 
 const HomeFaq: React.FC = () => {
   const FAQ_DATA = [
     {
       question: "What is Aureole PharmaTech's engineering specialty?",
-      answer: "Aureole PharmaTech is a premier pharmaceutical engineering manufacturer specializing in environmental stability chambers, walk-in chambers, cleanroom equipment, and modular laboratory furniture, backed by over 28 years of precision engineering experience."
+      answer: `Aureole PharmaTech is a premier pharmaceutical engineering manufacturer specializing in environmental stability chambers, walk-in chambers, cleanroom equipment, and modular laboratory furniture, led by a founder with over ${founderYears()} years of pharmaceutical engineering experience.`
     },
     {
       question: "What compliance standards does Aureole PharmaTech equipment meet?",

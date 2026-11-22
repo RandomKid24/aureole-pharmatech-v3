@@ -7,7 +7,7 @@ Aureole Pharma Tech is a premier pharmaceutical engineering manufacturer special
 ## 1. Company Information & Executive Leadership
 
 ### Overview
-- **Established Experience**: 28+ years of precision standards in pharmaceutical engineering.
+- **Founder's Experience**: {{FOUNDER_YEARS}}+ years in pharmaceutical engineering (the founder's own experience; counted from 1997).
 - **Managing Director**: Dr. Kiran Badgujar
 - **Mission**: To engineer trust through thermal and environmental precision, ensuring sensitive pharmaceutical products are tested and stored under absolute environmental equilibrium.
 - **Office Locations**:

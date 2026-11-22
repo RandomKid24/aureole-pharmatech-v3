@@ -5,6 +5,7 @@ import path from "node:path";
 import { SITE_URL, PAGE_SEO, breadcrumbLd, productLd, faqLd, serviceLd } from "../data/pageSeo";
 import { PAGE_DETAILS } from "../data/prerenderDetails";
 import { relatedSection } from "../data/relatedProducts";
+import { founderYears } from "../utils/experience";
 import { PRODUCT_DETAILS, LISTED_PRODUCT_NAMES } from "../data/products";
 import { PRODUCT_SEO_DATA } from "../data/seoMetadata";
 import { PRODUCT_CITY_MAPPING, PRODUCTS } from "../data/cityWiseProducts";
@@ -138,5 +139,10 @@ for (const r of routes) {
     .replace("</head>", `    <meta name="robots" content="noindex, follow" />\n  </head>`)
     .replace('<div id="root"></div>', `<div id="root"><main><h1>Page not found</h1><p>The page you are looking for does not exist or has moved.</p>${nav}</main></div>`);
   fs.writeFileSync(path.join(dist, "404.html"), html);
+}
+// Fill the {{FOUNDER_YEARS}} token in the crawler fact sheet so it counts up every year (any deploy refreshes it).
+{
+  const f = path.join(dist, "content.md");
+  if (fs.existsSync(f)) fs.writeFileSync(f, fs.readFileSync(f, "utf8").replace(/\{\{FOUNDER_YEARS\}\}/g, String(founderYears())));
 }
 console.log(`prerendered ${routes.length} routes`);

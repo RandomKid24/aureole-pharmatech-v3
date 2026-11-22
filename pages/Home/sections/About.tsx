@@ -3,6 +3,7 @@ import React from 'react';
 import { AUREOLE_VALUES } from '@/constants';
 import { Microscope } from 'lucide-react';
 import LazyImage from '@/components/LazyImage';
+import { founderYears } from '@/utils/experience';
 
 /**
  * AboutSection: Redesigned for a high-density, compact 7-letter brand mnemonic grid.
@@ -22,14 +23,14 @@ const About: React.FC = () => {
               <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-aureole-blue">ABOUT</h2>
             </div>
             <h3 className="text-4xl lg:text-6xl font-[950] text-aureole-slate uppercase tracking-tighter leading-[0.85] mb-6">
-              28 YEARS OF <br /> <span className="gt">PRECISION STANDARD.</span>
+              {founderYears()}+ YEARS OF <br /> <span className="gt">FOUNDER EXPERTISE.</span>
             </h3>
             <div className="g-left p-8 pl-10 bg-white shadow-sm">
               <p className="text-lg lg:text-xl text-slate-700 font-bold leading-relaxed mb-6">
                 When you choose Aureole PharmaTech, you're choosing a partner with 1,500+ successful installations across 15+ countries.
               </p>
               <p className="text-[15px] text-slate-500 font-medium leading-relaxed tracking-tight">
-                For over 28 years, we have delivered custom pharmaceutical technology and services to 70+ verified client entities. Our engineering adheres strictly to GxP compliance, ISO 9001:2015, CE, ZED Gold, with software that supports 21 CFR Part 11 electronic records requirements.
+                Led by a founder with over {founderYears()} years of pharmaceutical engineering experience, we have delivered custom pharmaceutical technology and services to 70+ verified client entities. Our engineering adheres strictly to GxP compliance, ISO 9001:2015, CE, ZED Gold, with software that supports 21 CFR Part 11 electronic records requirements.
               </p>
             </div>
           </div>
