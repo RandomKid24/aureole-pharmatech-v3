@@ -27,6 +27,7 @@ const Software = lazy(() => import('./pages/Software'));
 const Events = lazy(() => import('./pages/Events'));
 const Careers = lazy(() => import('./pages/Careers'));
 const Privacy = lazy(() => import('./pages/Privacy'));
+const ChamberComparison = lazy(() => import('./pages/Guides/ChamberComparison'));
 const CityWiseProductPage = lazy(() => import('./pages/CityWiseProductPage'));
 
 // Component to handle scroll to top on route change
@@ -67,6 +68,7 @@ const App: React.FC = () => {
           <Route path="/about/certification-compliance" element={<Certification />} />
           <Route path="/about/plants" element={<Plants />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/guides/stability-chamber-vs-humidity-chamber-vs-bod-incubator" element={<ChamberComparison />} />
 
           {/* Legacy SEO Redirects */}
           <Route path="/contact-us" element={<Contact />} />

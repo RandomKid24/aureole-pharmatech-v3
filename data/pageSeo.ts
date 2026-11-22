@@ -67,6 +67,13 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     h1: "Pharmaceutical Equipment Monitoring Software",
     summary: "Real-time monitoring with audit trails, electronic signatures, SCADA integration and deviation alerts.",
   },
+  "/guides/stability-chamber-vs-humidity-chamber-vs-bod-incubator": {
+    title: "Stability vs Humidity Chamber vs BOD Incubator | Aureole",
+    description:
+      "Stability vs humidity chamber vs BOD incubator: compare ranges, accuracy and use. Made in Nashik, India, exported to 15+ countries. Find your chamber.",
+    h1: "Stability Chamber vs Humidity Chamber vs BOD Incubator",
+    summary: "Compare Aureole's Stability Chamber, Humidity Chamber and BOD Incubator by temperature and humidity range, accuracy and use.",
+  },
   "/events": {
     title: "Events & Exhibitions Gallery | Aureole Pharma Tech",
     description: "Photos and videos from exhibitions and corporate events attended by Aureole Pharma Tech, a Nashik pharmaceutical equipment manufacturer.",

@@ -101,7 +101,7 @@ const CategoryProductList: React.FC<CategoryProductListProps> = ({ subTypes }) =
                                                 className="ml-row group flex items-center gap-5 py-4 border-b border-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-aureole-blue focus-visible:outline-offset-4"
                                             >
                                                 <span className="ml-thumb shrink-0 w-24 h-[72px] bg-aureole-surface flex items-center justify-center p-1.5 overflow-hidden">
-                                                    {image && <img src={image} alt="" loading="lazy" className="max-w-full max-h-full object-contain" />}
+                                                    {image && <img src={image} alt={pName} loading="lazy" className="max-w-full max-h-full object-contain" />}
                                                 </span>
                                                 <span className="min-w-0 flex-1">
                                                     <span className="ml-name block text-[17px] font-extrabold tracking-tight leading-snug text-[#001529]">{pName}</span>

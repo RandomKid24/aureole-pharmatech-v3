@@ -75,7 +75,7 @@ const TeamArchitecture: React.FC = () => {
                             <div className="hidden lg:flex items-center -space-x-4">
                                 {coreTeam.map((m, i) => (
                                     <div key={i} className="w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-lg hover:z-10 transition-transform hover:scale-110">
-                                        <img src={m.img} alt="" className="w-full h-full object-cover grayscale" />
+                                        <img src={m.img} alt={m.name} className="w-full h-full object-cover grayscale" />
                                     </div>
                                 ))}
                             </div>

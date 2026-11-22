@@ -17,6 +17,7 @@ const MAIN_PAGES = [
   { path: "/about/certification-compliance", priority: "0.6" },
   { path: "/about/plants", priority: "0.6" },
   { path: "/careers", priority: "0.6" },
+  { path: "/guides/stability-chamber-vs-humidity-chamber-vs-bod-incubator", priority: "0.7" },
   { path: "/privacy-policy", priority: "0.3" },
 ];
 
@@ -269,6 +270,7 @@ xml +=
 CITY_BASE_PRODUCTS.forEach((prod) => {
   const cities = PRODUCT_CITY_MAPPING[prod.slugPart] || [];
   cities.forEach((city) => {
+    if (/-\d+$/.test(city)) return; // e.g. Mumbai-2 repeats the Mumbai page and canonicalises to it
     const citySlug = city.toLowerCase();
     xml += `  <url>\n`;
     xml += `    <loc>${DOMAIN}/${prod.slugPart}-manufacturers-and-suppliers-in-${citySlug}/</loc>\n`;

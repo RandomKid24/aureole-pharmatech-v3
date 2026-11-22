@@ -53,4 +53,20 @@ export const PAGE_DETAILS: Record<string, DetailBlock[]> = {
   "/careers": [
     { h: "Working with us", p: ["Current openings are listed on this page. Applications can be sent to careers@aureolepharmatech.com."] },
   ],
+  "/guides/stability-chamber-vs-humidity-chamber-vs-bod-incubator": [
+    { h: "Specifications compared", ul: [
+      "Temperature range: Stability Chamber 20°C to 60°C; Humidity Chamber 20°C to 60°C; BOD Incubator 10°C to 60°C",
+      "Humidity range: Stability Chamber 40% to 95% RH; Humidity Chamber 40% to 95% RH; BOD Incubator not specified (temperature only)",
+      "Accuracy: Stability Chamber ± 0.3°C / ± 2.0% RH; Humidity Chamber ± 0.3°C / ± 2.0% RH; BOD Incubator ± 0.5°C",
+      "Uniformity: Stability Chamber ± 1.0°C / ± 3.0% RH; Humidity Chamber ± 1.0°C / ± 3.0% RH; BOD Incubator ± 2.5°C",
+      "21 CFR Part 11 support: add-on option on all three",
+    ] },
+    { h: "Which one do I need?", ul: [
+      "Long-term pharmaceutical stability studies with controlled temperature and humidity: Stability Chamber",
+      "Temperature and humidity testing across industries: Humidity Chamber",
+      "Controlled temperature only, for example incubating cultures: BOD Incubator",
+      "Room-sized storage, testing or incubation: Walk In Humidity Chamber or Walk In BOD Incubator",
+      "Light exposure studies (ICH Q1B): Photostability Chamber; cold storage at 2°C to 8°C: Cold Chamber",
+    ] },
+  ],
 };

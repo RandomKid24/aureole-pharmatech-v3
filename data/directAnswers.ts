@@ -26,6 +26,11 @@ export const DIRECT_ANSWERS: Record<string, { heading: string; items: QA[] }> = 
         a: "Yes. Aureole monitoring software supports 21 CFR Part 11 requirements through access controls, electronic signatures and audit trails, and also offers SCADA integration and SMS/email alerts. 21 CFR Part 11 support is listed as an add-on option on chamber product pages. Compliance of a given installation also depends on how the customer validates and operates it.",
         link: { href: "/software/", label: "Monitoring software" },
       },
+      {
+        q: "Which chamber should I choose: stability, humidity or BOD incubator?",
+        a: "The Stability Chamber and Humidity Chamber both list 20°C to 60°C and 40% to 95% RH; the Stability Chamber is built around long-term pharmaceutical stability studies. The BOD Incubator controls temperature only (10°C to 60°C).",
+        link: { href: "/guides/stability-chamber-vs-humidity-chamber-vs-bod-incubator/", label: "Comparison guide" },
+      },
     ],
   },
   "/software": {
@@ -69,6 +74,35 @@ export const DIRECT_ANSWERS: Record<string, { heading: string; items: QA[] }> = 
         q: "How do I request service or a quotation?",
         a: "Call +91 86005 22240 or email enquiry@aureolepharmatech.com.",
         link: { href: "/products/", label: "Browse equipment" },
+      },
+    ],
+  },
+  "/guides/stability-chamber-vs-humidity-chamber-vs-bod-incubator": {
+    heading: "Chamber comparison: quick answers",
+    items: [
+      {
+        q: "What is the difference between a stability chamber and a humidity chamber?",
+        a: "On Aureole's product pages both list 20°C to 60°C and 40% to 95% RH. The Stability Chamber is built around long-term stability studies of pharmaceutical products; the Humidity Chamber is described for temperature and humidity testing across several industries.",
+        link: { href: "/products/stability-chambers/", label: "Stability Chamber" },
+      },
+      {
+        q: "Does a BOD incubator control humidity?",
+        a: "The BOD Incubator is specified for temperature only: 10°C to 60°C with ± 0.5°C accuracy. For controlled humidity (40% to 95% RH) choose a Stability Chamber or Humidity Chamber.",
+        link: { href: "/products/bod-incubator/", label: "BOD Incubator" },
+      },
+      {
+        q: "Which Aureole chamber is listed for 25°C/60% RH and 30°C/75% RH conditions?",
+        a: "The Humidity Chamber is listed as suitable for 25°C & 60% RH, 30°C & 65% RH, 40°C & 75% RH and 30°C & 75% RH. Light exposure studies use the Photostability Chamber, designed in accordance with ICH Q1B.",
+        link: { href: "/products/humidity-chamber/", label: "Humidity Chamber" },
+      },
+      {
+        q: "Is 21 CFR Part 11 support available?",
+        a: "Yes, as an add-on option on all three. Aureole monitoring software supports Part 11 requirements through access controls, electronic signatures and audit trails; compliance of an installation also depends on how the customer validates and operates it.",
+        link: { href: "/software/", label: "Monitoring software" },
+      },
+      {
+        q: "Where are these chambers made and do you export?",
+        a: "They are made in Nashik, India, and supplied in India and to 15+ countries.",
       },
     ],
   },
