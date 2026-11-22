@@ -83,20 +83,20 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   "/about/certification-compliance": {
     title: "Certifications: ISO 9001:2015, CE, ZED Gold | Aureole",
     description:
-      "Aureole Pharma Tech holds ISO 9001:2015, CE and ZED Gold certificates. See the scope, issuer and validity of each one.",
+      "ISO 9001:2015, CE and ZED Gold certificates held by Aureole Pharma Tech. See each certificate's issuer, scope, validity and the products the CE covers.",
     h1: "Certification & Compliance",
     summary: "ISO 9001:2015, CE and ZED Gold certifications.",
   },
   "/about/plants": {
     title: "Manufacturing Plant, Malegaon MIDC, Nashik | Aureole",
     description:
-      "Aureole Pharma Tech manufactures stand-alone chambers, walk-in chambers and table-top instruments in Malegaon MIDC, Sinnar, Nashik.",
+      "Aureole Pharma Tech makes stand-alone chambers, walk-in chambers and table-top instruments at its plant in Malegaon MIDC, Sinnar, Nashik, Maharashtra, India.",
     h1: "Our Manufacturing Plants",
     summary: "Plants for stand-alone chambers, walk-in chambers and table-top instruments in Sinnar, Nashik.",
   },
   "/privacy-policy": {
     title: "Privacy Policy | Aureole Pharma Tech",
-    description: "How Aureole Pharma Tech collects, uses and protects personal information submitted through enquiry, careers and contact forms.",
+    description: "How Aureole Pharma Tech collects, uses and protects information from enquiry, careers and contact forms. Privacy questions: enquiry@aureolepharmatech.com.",
     h1: "Privacy Policy",
     summary: "What personal information we collect, why, who processes it, and how to contact us about it.",
   },
