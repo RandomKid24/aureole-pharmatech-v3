@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Settings, Thermometer, Droplets, Target, Layers, Maximize, Zap, Gauge, FileCheck, HeartPulse, ChevronRight, Home, Clock, Waves, Cpu, Box, Package, Activity, Shield, Monitor, Wind, Network } from 'lucide-react';
 import ProductImageStage from '@/components/ui/ProductImageStage';
-import ProductTypeStage, { ProductType } from '@/components/ui/ProductTypeStage';
 import { PRODUCT_CATALOG } from '@/data/products/catalog';
 
 interface ProductHeroProps {
@@ -71,7 +70,7 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
     // Product types (e.g. Constant / Circulating Water Bath): header cells of the comparison table that carry a picture.
     // Pills switch the type; the picture and the type's own specs follow.
     const headerCells: any[] = product.complexTable?.rows?.[0]?.cells ?? [];
-    const types: (ProductType & { col: number })[] = product.hideHeroImage
+    const types: { name: string; image: string; col: number }[] = product.hideHeroImage
         ? headerCells.map((c, col) => ({ name: String(c.content).replace(/\s+/g, ' ').trim(), image: c.image as string, col })).filter((t) => t.image)
         : [];
     const hasTypes = types.length >= 2;
@@ -163,7 +162,13 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
 
                 {hasTypes && (
                     <>
-                        <ProductTypeStage types={types} active={typeIdx} onSelect={setTypeIdx} productName={decodedName} />
+                        <ProductImageStage
+                            images={types.map((t) => t.image)}
+                            name={decodedName}
+                            labels={types.map((t) => t.name)}
+                            namedPills
+                            onActiveChange={setTypeIdx}
+                        />
                         {typeSpecs.length > 0 && (
                             <div className="mt-12">
                                 <h3 className="text-center text-xs font-black tracking-widest uppercase text-aureole-cyan mb-8">{types[typeIdx].name} specifications</h3>

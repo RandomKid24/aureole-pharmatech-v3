@@ -12,18 +12,21 @@ interface Props {
     images: string[];
     name: string;
     captions?: string[];
+    labels?: string[];                       // names for the pills (e.g. product types); default Left/Front/Right or captions
+    namedPills?: boolean;                    // show the labels as separate named pills instead of the sliding switch
+    onActiveChange?: (index: number) => void; // reports which picture is in the middle
 }
 
 const clamp = (n: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, n));
 
-const CoverflowStage: React.FC<Props> = ({ images, name, captions }) => {
+const CoverflowStage: React.FC<Props> = ({ images, name, captions, labels: labelsProp, namedPills, onActiveChange }) => {
     const n = images.length;
     const isTrio = n === 3;
     // Order of pictures around the ring, and which one starts in the middle.
     const order = isTrio ? [1, 0, 2] : images.map((_, i) => i);
     const start = isTrio ? 1 : 0;
-    const labels = isTrio ? ['Left', 'Front', 'Right'] : order.map((i) => (captions?.[i] || `View ${i + 1}`).replace(/ view$/i, ''));
-    const usePills = n <= 4;
+    const labels = labelsProp ?? (isTrio ? ['Left', 'Front', 'Right'] : order.map((i) => (captions?.[i] || `View ${i + 1}`).replace(/ view$/i, '')));
+    const usePills = !namedPills && n <= 4;
 
     const [active, setActive] = useState(start);
     const prevActive = useRef(start);
@@ -32,6 +35,7 @@ const CoverflowStage: React.FC<Props> = ({ images, name, captions }) => {
     const lastWheel = useRef(0);
 
     useEffect(() => { prevActive.current = active; });
+    useEffect(() => { onActiveChange?.(order[active]); }, [active]); // eslint-disable-line react-hooks/exhaustive-deps
 
     const go = (to: number) => setActive(((to % n) + n) % n);
     // Signed distance of ring position r from the active one: 0 = middle, -1 = left slot, 1 = right slot, beyond = hidden.
@@ -162,6 +166,25 @@ const CoverflowStage: React.FC<Props> = ({ images, name, captions }) => {
                             </button>
                         ))}
                     </div>
+                ) : namedPills ? (
+                    // product types: named pills
+                    <div role="tablist" aria-label="Product types" className="flex flex-wrap justify-center gap-2">
+                        {labels.map((l, i) => (
+                            <button
+                                key={l + i}
+                                type="button"
+                                role="tab"
+                                aria-selected={i === active}
+                                tabIndex={i === active ? 0 : -1}
+                                onClick={() => go(i)}
+                                className={`px-5 py-2.5 rounded-full border text-[11px] font-black tracking-widest uppercase transition-all duration-300 motion-reduce:transition-none ${i === active
+                                    ? 'bg-gradient-to-r from-aureole-accent to-aureole-primary text-white border-transparent shadow-md'
+                                    : 'bg-white text-slate-500 border-slate-200 hover:border-aureole-cyan hover:text-aureole-slate'}`}
+                            >
+                                {l}
+                            </button>
+                        ))}
+                    </div>
                 ) : (
                     // many pictures: caption and dots
                     <>
@@ -209,12 +232,12 @@ const SingleStage: React.FC<{ src: string; name: string }> = ({ src, name }) => 
     </div>
 );
 
-const ProductImageStage: React.FC<Props> = ({ images, name, captions }) => {
+const ProductImageStage: React.FC<Props> = ({ images, name, captions, labels, namedPills, onActiveChange }) => {
     if (!images || images.length === 0 || images[0] === 'PLACEHOLDER') {
         return <ProductImage src="PLACEHOLDER" alt={name} className="group" />;
     }
     if (images.length === 1) return <SingleStage src={images[0]} name={name} />;
-    return <CoverflowStage images={images} name={name} captions={captions} />;
+    return <CoverflowStage images={images} name={name} captions={captions} labels={labels} namedPills={namedPills} onActiveChange={onActiveChange} />;
 };
 
 export default ProductImageStage;
