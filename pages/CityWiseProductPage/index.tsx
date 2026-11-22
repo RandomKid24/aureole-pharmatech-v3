@@ -4,7 +4,7 @@ import { PRODUCT_DETAILS } from '../../data/products';
 import SEO from '../../components/SEO';
 import NotFound from '../NotFound';
 import { productLd, SITE_URL } from '../../data/pageSeo';
-import { CITY_REGION } from '../../data/cityWiseProducts';
+import { cityPageContent, cityLabel } from '../../data/cityPageContent';
 import { PRODUCTS, CITIES } from '../../data/cityWiseProducts';
 import ProductHero from '../ProductDetail/sections/ProductHero';
 import TechnicalDashboard from '../ProductDetail/sections/TechnicalDashboard';
@@ -13,7 +13,7 @@ import VariantSections from '../ProductDetail/sections/VariantSections';
 import ProductEnquiry from '../ProductDetail/sections/ProductEnquiry';
 import InfrasArchitecture from '../../components/sections/InfrasArchitecture';
 import ServiceCentersGrid from '../../components/sections/ServiceCentersGrid';
-import { MapPin } from 'lucide-react';
+import ChamberAnatomy from '../../components/sections/ChamberAnatomy';
 
 const CityWiseProductPage: React.FC = () => {
     const { cityProductSlug } = useParams<{ cityProductSlug: string }>();
@@ -53,14 +53,17 @@ const CityWiseProductPage: React.FC = () => {
     }
 
     const showInfras = productName === "Walk In Humidity Chamber";
+    const content = cityPageContent(productName, cityName);
+    // "Mumbai-2" repeats the Mumbai page, so it points search engines at Mumbai.
+    const canonicalSlug = cityLabel(cityName) !== cityName ? cityProductSlug.replace(/-\d+$/, '') : cityProductSlug;
 
     return (
         <div className="pt-24 min-h-screen bg-transparent selection:bg-aureole-blue selection:text-white">
-            <SEO 
-                title={`${productName} Manufacturers and Suppliers in ${cityName} | Aureole PharmaTech`}
-                description={`Aureole Pharma Tech Manufacturers, Suppliers of ${productName} in ${cityName}${CITY_REGION[cityName] ? `, ${CITY_REGION[cityName]}` : ''}. Best Quality & Price Pharmaceutical Equipment In India, Call: +91 86005 22240`}
-                canonical={`${SITE_URL}/${cityProductSlug}/`}
-                jsonLd={[productLd(`${productName} in ${cityName}`, product.description, `${SITE_URL}/${cityProductSlug}/`, product.images || (product.image ? [product.image] : []))]}
+            <SEO
+                title={content.title}
+                description={content.description}
+                canonical={`${SITE_URL}/${canonicalSlug}/`}
+                jsonLd={[productLd(`${productName} in ${content.label}`, product.description, `${SITE_URL}/${canonicalSlug}/`, product.images || (product.image ? [product.image] : []))]}
             />
             {/* SEO specific content can be added here if needed, like a breadcrumb or custom title */}
             <div className="container mx-auto px-6 lg:px-24 mb-8">
@@ -69,37 +72,18 @@ const CityWiseProductPage: React.FC = () => {
                     <span>/</span>
                     <Link to="/products" className="hover:text-aureole-blue transition-colors">Products</Link>
                     <span>/</span>
-                    <span className="text-aureole-blue font-bold">{productName} in {cityName}</span>
+                    <span className="text-aureole-blue font-bold">{productName} in {content.label}</span>
                 </nav>
             </div>
 
-            <ProductHero product={product} decodedName={`${productName} in ${cityName}`} />
+            <ProductHero product={product} decodedName={`${productName} in ${content.label}`} />
             
             <TechnicalDashboard product={product} decodedName={productName} />
             {showInfras && <InfrasArchitecture />}
+            {productName === "Walk In Humidity Chamber" && <ChamberAnatomy variant="humidity" />}
+            {productName === "Walk In Cold Chamber" && <ChamberAnatomy variant="cold" />}
+            {productName === "Walk In BOD Incubator" && <ChamberAnatomy variant="bod" />}
             
-            {/* Service Centers Section */}
-            <section className="py-20 bg-transparent border-t border-slate-200/50">
-                <div className="container mx-auto px-6 lg:px-24">
-                    <div className="flex flex-col items-center text-center max-w-5xl mx-auto mb-8">
-                        <p className="text-[9px] font-black uppercase tracking-[0.3em] text-aureole-blue mb-4">Local Logistics & Support</p>
-                        <h2 className="text-3xl lg:text-4xl font-[950] text-aureole-slate uppercase tracking-tighter mb-4 leading-none">
-                            Service Centers in <Link to={`/${cityProductSlug}`} className="text-aureole-blue hover:underline decoration-4 underline-offset-4 transition-all">{cityName}</Link>
-                        </h2>
-                        <p className="text-slate-500 text-xs lg:text-sm font-medium leading-relaxed max-w-2xl mb-6">
-                            Aureole PharmaTech provides comprehensive support and maintenance services for {productName} across major industrial hubs in {cityName}.
-                        </p>
-                        <div className="flex items-center gap-3 py-2 px-6 bg-white/50 backdrop-blur-sm border border-slate-200/50 shadow-sm">
-                            <MapPin className="text-aureole-blue" size={16} strokeWidth={2} />
-                            <span className="text-[9px] font-black uppercase tracking-widest text-aureole-slate">{cityName} Operational Hub</span>
-                        </div>
-                    </div>
-                </div>
-
-
-            </section>
-
-
             <ProductTables product={product} productName={productName} />
             <VariantSections product={product} />
             <ServiceCentersGrid productName={productName} />

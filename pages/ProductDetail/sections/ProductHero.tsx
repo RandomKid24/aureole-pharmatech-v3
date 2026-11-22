@@ -122,6 +122,14 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
                             </div>
                         </div>
 
+                        {typeof product.description === 'string' && product.description.trim().length > 80 && (
+                            <div className="max-w-2xl mb-10 space-y-3">
+                                {product.description.split(/\n+/).map((para: string, i: number) => (
+                                    <p key={i} className="text-slate-500 text-sm lg:text-base font-medium leading-relaxed">{para}</p>
+                                ))}
+                            </div>
+                        )}
+
                         <div className={`pt-10 ${product.specifications && product.specifications.length > 0 ? 'border-t border-slate-100 mb-24' : ''}`}>
                             {product.specifications && product.specifications.length > 0 && (
                                 <div className="space-y-10">

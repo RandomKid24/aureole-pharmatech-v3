@@ -3,9 +3,9 @@
 export const SITE_URL = "https://www.aureolepharmatech.com";
 
 export const DEFAULT_SEO = {
-  title: "Stability Chambers & Pharmaceutical Equipment Manufacturer, Nashik | Aureole Pharma Tech",
+  title: "Stability Chamber Manufacturer, Nashik | Aureole Pharma Tech",
   description:
-    "Aureole Pharma Tech manufactures stability chambers, walk-in chambers, table-top instruments, cleanroom equipment and laboratory furniture in Nashik, Maharashtra. Call +91 86005 22240.",
+    "Manufacturer of stability chambers, walk-in chambers, incubators and freezers in Nashik. ISO 9001:2015 certified. Get a quote: +91 86005 22240.",
 };
 
 export interface PageSeo { title: string; description: string; h1: string; summary: string }
@@ -26,9 +26,9 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     summary: "Stability chambers, table-top instruments and laboratory furniture manufactured by Aureole Pharma Tech.",
   },
   "/products/stability-chambers": {
-    title: "Stability Chambers & Walk-in Chambers Manufacturer in India | Aureole Pharma Tech",
+    title: "Stability & Walk-in Chambers Manufacturer India | Aureole",
     description:
-      "Stability chambers, humidity chambers, BOD and cooling incubators, deep freezers, photostability chambers and walk-in chambers. Manufactured in Nashik, supplied across India.",
+      "Humidity, photostability and walk-in stability chambers made in Nashik. Suitable for 25°C/60% RH, 30°C/65% RH, 30°C/75% RH and 40°C/75% RH. Request a quote.",
     h1: "Stability Chambers & Environmental Test Equipment",
     summary: "Reach-in and walk-in stability chambers, incubators, freezers and ovens for pharmaceutical stability studies.",
   },
@@ -54,16 +54,16 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     summary: "Laboratory benches, cabinets, fume hoods and stainless steel accessories.",
   },
   "/service": {
-    title: "Stability Chamber Service, Calibration & Validation Support | Aureole Pharma Tech",
+    title: "Stability Chamber Calibration, IQ/OQ/PQ & AMC | Aureole",
     description:
-      "Installation, preventive maintenance, calibration, IQ/OQ/PQ validation support and troubleshooting for stability chambers and GMP-critical laboratory equipment.",
+      "AMC, temperature and humidity calibration, IQ/OQ/PQ execution, thermal mapping and re-validation for stability chambers. Call +91 86005 22240.",
     h1: "Service, Maintenance & Validation Support",
     summary: "Installation, preventive maintenance, AMC/CAMC maintenance, calibration, IQ/OQ/PQ validation and re-qualification.",
   },
   "/software": {
-    title: "Chamber Monitoring Software: 21 CFR Part 11, SCADA & Alerts | Aureole Pharma Tech",
+    title: "Chamber Monitoring Software | Part 11 Support | Aureole",
     description:
-      "Monitoring software for pharmaceutical chambers that supports 21 CFR Part 11 requirements: access controls, electronic signatures and audit trails, plus SCADA integration and SMS/email deviation alerts.",
+      "Monitoring software with access controls, electronic signatures and audit trails that support 21 CFR Part 11 requirements. SMS and email deviation alerts, SCADA integration.",
     h1: "Pharmaceutical Equipment Monitoring Software",
     summary: "Real-time monitoring with audit trails, electronic signatures, SCADA integration and deviation alerts.",
   },

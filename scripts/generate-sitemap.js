@@ -276,12 +276,8 @@ CITY_BASE_PRODUCTS.forEach((prod) => {
   });
 });
 
-// Append V-Cards from vcard_urls.txt if it exists
-const urlsPath = path.join(process.cwd(), "vcard_urls.txt");
-if (fs.existsSync(urlsPath)) {
-  const vcardUrls = fs.readFileSync(urlsPath, "utf8");
-  xml += "\n" + vcardUrls;
-}
+// vCards are intentionally NOT listed in the sitemap (personal contact pages, not search landing pages).
+// vcard_urls.txt is kept as the registry of published vCards only.
 
 xml += "\n</urlset>";
 
@@ -292,4 +288,4 @@ console.log(`  - ${PRODUCTS.length} product pages`);
 console.log(
   `  - City-wise pages: ${CITY_BASE_PRODUCTS.reduce((acc, p) => acc + (PRODUCT_CITY_MAPPING[p.slugPart]?.length || 0), 0)}`,
 );
-console.log(`  - ${VCARDS.length} v-cards`);
+console.log(`  - ${VCARDS.length} v-cards (not in sitemap)`);

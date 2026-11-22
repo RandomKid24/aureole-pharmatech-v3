@@ -39,7 +39,7 @@ aureole-pharmatech-v3/
 ├── scripts/                   # Automation scripts (Sitemaps, V-Cards, Image optimization)
 │   ├── optimize-images.py     # Converts JPG/PNG to WebP and updates code references
 │   ├── prerender.entry.ts     # Build step: writes dist/<route>/index.html for all 141 routes
-│   ├── generate-sitemap.js    # Compiles core pages, products, cities, and vcards to sitemap.xml
+│   ├── generate-sitemap.js    # Compiles core pages, products and cities to sitemap.xml (vCards are not listed)
 │   ├── fix-all-vcards.js      # Refactors vCards to use _shared assets and fixes metadata
 │   └── add-vcard.js           # CLI tool to scaffold new employee digital business cards
 ├── vcard_urls.txt             # Registered XML loc records for all published vCards

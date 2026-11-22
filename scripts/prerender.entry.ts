@@ -7,6 +7,7 @@ import { PRODUCT_DETAILS, LISTED_PRODUCT_NAMES } from "../data/products";
 import { PRODUCT_SEO_DATA } from "../data/seoMetadata";
 import { PRODUCT_CITY_MAPPING, PRODUCTS } from "../data/cityWiseProducts";
 import { DIRECT_ANSWERS } from "../data/directAnswers";
+import { cityPageContent, cityLabel } from "../data/cityPageContent";
 import { slugify } from "../utils/urlUtils";
 
 const dist = path.resolve("dist");
@@ -14,7 +15,7 @@ const template = fs.readFileSync(path.join(dist, "index.html"), "utf8");
 const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const abs = (p: string) => (p.startsWith("http") ? p : encodeURI(`${SITE_URL}${p}`));
 
-interface Route { path: string; title: string; description: string; h1: string; body: string; image?: string; ld: object[] }
+interface Route { canonicalPath?: string; path: string; title: string; description: string; h1: string; body: string; image?: string; ld: object[] }
 const routes: Route[] = [];
 
 const nav = `<nav aria-label="Main"><ul>${[
@@ -58,14 +59,20 @@ for (const prod of PRODUCTS) {
   const d = PRODUCT_DETAILS[prod.name];
   for (const city of PRODUCT_CITY_MAPPING[prod.name] || []) {
     const slug = `${prod.slugPart}-manufacturers-and-suppliers-in-${city.toLowerCase()}`;
+    const canonicalSlug = cityLabel(city) !== city ? slug.replace(/-\d+$/, "") : slug; // Mumbai-2 -> Mumbai
+    const c = cityPageContent(prod.name, city);
     routes.push({
       path: `/${slug}`,
-      title: `${prod.name} Manufacturers and Suppliers in ${city} | Aureole PharmaTech`,
-      description: `Aureole Pharma Tech manufactures ${prod.name} in Nashik, Maharashtra and supplies it to ${city}. Call: +91 86005 22240`,
-      h1: `${prod.name} in ${city}`,
+      canonicalPath: `/${canonicalSlug}`,
+      title: c.title,
+      description: c.description,
+      h1: `${prod.name} in ${c.label}`,
       image: d?.images?.[0] || d?.image,
-      body: `<p><a href="/products/${slugify(prod.name)}/">${esc(prod.name)} specifications</a></p>` + (d ? `<p>${esc(d.description.split(/\n+/)[0])}</p>` : ""),
-      ld: [productLd(`${prod.name} in ${city}`, d?.description || prod.name, `${SITE_URL}/${slug}/`, d?.images || [])],
+      body: `<p><a href="/products/${slugify(prod.name)}/">${esc(prod.name)} specifications</a></p>` +
+        (d ? d.description.split(/\n+/).map((x) => `<p>${esc(x)}</p>`).join("") +
+          (d.keyFeatures?.length ? `<h2>Key features</h2><ul>${d.keyFeatures.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>` : "") +
+          `<h2>Specifications</h2><table>${d.specifications.map((x) => `<tr><th>${esc(x.parameter)}</th><td>${esc(x.details)}</td></tr>`).join("")}</table>` : ""),
+      ld: [productLd(`${prod.name} in ${c.label}`, d?.description || prod.name, `${SITE_URL}/${canonicalSlug}/`, d?.images || [])],
     });
   }
 }
@@ -74,7 +81,7 @@ for (const prod of PRODUCTS) {
 const tag = (t: string) => t.replace(/^<(\w+)/, '<$1 data-rh="true"');
 
 for (const r of routes) {
-  const url = r.path === "/" ? `${SITE_URL}/` : `${SITE_URL}${r.path}/`;
+  const url = r.path === "/" ? `${SITE_URL}/` : `${SITE_URL}${r.canonicalPath || r.path}/`;
   const img = abs(r.image || "/aureole-logo.webp");
   const head = [
     `<meta name="description" content="${esc(r.description)}" />`,
