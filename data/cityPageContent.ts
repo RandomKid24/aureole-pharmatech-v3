@@ -12,6 +12,14 @@ export interface CityContent {
   description: string;
 }
 
+// One verified spec phrase per walk-in product (from data/products), used in the city meta description.
+const SPEC_PHRASE: Record<string, string> = {
+  "Walk In Humidity Chamber": "20°C to 60°C, 40% to 95% RH",
+  "Walk In Cold Chamber": "2°C to 8°C",
+  "Walk In BOD Incubator": "10°C to 60°C",
+  "Walk In Deep Freezer": "-5°C to -20°C or -25°C to -40°C",
+};
+
 export function cityPageContent(productName: string, city: string): CityContent {
   const label = cityLabel(city);
   const region = CITY_REGION[city] || CITY_REGION[label];
@@ -19,6 +27,6 @@ export function cityPageContent(productName: string, city: string): CityContent 
   return {
     label,
     title: `${productName} Manufacturer in ${label} | Aureole`,
-    description: `Aureole Pharma Tech manufactures ${productName} in Nashik and supplies it to ${place}. Request specifications and a quote: +91 86005 22240.`,
+    description: `${productName} for ${place}${SPEC_PHRASE[productName] ? `: ${SPEC_PHRASE[productName]}` : ''}. Made in Nashik by Aureole Pharma Tech. Quote: +91 86005 22240.`,
   };
 }
