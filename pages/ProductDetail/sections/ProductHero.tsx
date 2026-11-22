@@ -71,7 +71,7 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
     const specs: { parameter: string; details: string }[] = (product.specifications || []).filter((x: any) => x.parameter !== 'Power Supply');
     const heroImages: string[] = product.images || (product.image ? [product.image] : ['PLACEHOLDER']);
     const hasImage = !product.hideHeroImage;
-    const isTrio = hasImage && heroImages.length === 3; // front, left, right shown together
+    const isTrio = hasImage && heroImages.length >= 2; // several pictures: wide coverflow viewer, specs in a grid below
     const perSide = Math.min(4, Math.ceil(specs.length / 2));
     const flank = hasImage && !isTrio; // specs beside a single picture
     const leftSpecs = flank ? specs.slice(0, perSide) : [];

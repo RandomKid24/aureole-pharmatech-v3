@@ -3,10 +3,10 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ProductImage from '@/components/ProductImage';
 
 // Product pictures on a soft circle.
-//  - exactly 3 pictures (front, left, right): coverflow viewer (TrioStage): front in the middle, left and right views on each side;
-//    click a side picture, use the arrows or pills, drag/swipe, scroll sideways or press the arrow keys to bring another view to the middle
-//  - 1 picture: centred on the circle
-//  - any other number: one at a time with arrows, dots and swipe
+//  - 1 picture: centred, floating gently, with a slowly turning ring
+//  - 2 or more: coverflow viewer. The active picture is in the middle, its neighbours tilt on each side.
+//    Click a side picture, use the arrows or the switch, drag/swipe, scroll sideways or press the arrow keys.
+//    Exactly 3 pictures are treated as [front, left, right] and shown as left | front | right.
 
 interface Props {
     images: string[];
@@ -14,37 +14,51 @@ interface Props {
     captions?: string[];
 }
 
+const clamp = (n: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, n));
 
-// ---- Coverflow viewer for [front, left, right] -------------------------------------------------
-const TrioStage: React.FC<Props> = ({ images, name, captions }) => {
-    // Ring order on screen: left, front, right. Start on the front picture.
-    const ring = [1, 0, 2];
-    const labels = ['Left', 'Front', 'Right'];
-    const [active, setActive] = useState(1); // index into ring
-    const prevActive = useRef(1);
+const CoverflowStage: React.FC<Props> = ({ images, name, captions }) => {
+    const n = images.length;
+    const isTrio = n === 3;
+    // Order of pictures around the ring, and which one starts in the middle.
+    const order = isTrio ? [1, 0, 2] : images.map((_, i) => i);
+    const start = isTrio ? 1 : 0;
+    const labels = isTrio ? ['Left', 'Front', 'Right'] : order.map((i) => (captions?.[i] || `View ${i + 1}`).replace(/ view$/i, ''));
+    const usePills = n <= 4;
+
+    const [active, setActive] = useState(start);
+    const prevActive = useRef(start);
     const dragX = useRef<number | null>(null);
     const dragged = useRef(false);
     const lastWheel = useRef(0);
 
     useEffect(() => { prevActive.current = active; });
 
-    const go = (to: number) => setActive(((to % 3) + 3) % 3);
-    // -1 = left slot, 0 = centre, 1 = right slot
-    const slot = (r: number, a: number) => { const raw = (((r - a) % 3) + 3) % 3; return raw === 2 ? -1 : raw; };
+    const go = (to: number) => setActive(((to % n) + n) % n);
+    // Signed distance of ring position r from the active one: 0 = middle, -1 = left slot, 1 = right slot, beyond = hidden.
+    const dist = (r: number, a: number) => { const d = (((r - a) % n) + n) % n; return d > n / 2 ? d - n : d; };
 
     const styleFor = (r: number): React.CSSProperties => {
-        const o = slot(r, active);
-        const jumped = Math.abs(o - slot(r, prevActive.current)) === 2; // crossing from one side to the other: fade instead of flying through the middle
-        const t = o === 0 ? 'translate3d(0,0,0) scale(1) rotateY(0deg)'
-            : `translate3d(${o * 74}%,3%,0) scale(0.66) rotateY(${o * -26}deg)`;
+        const d = clamp(dist(r, active), -2, 2);
+        const jumped = Math.abs(d - clamp(dist(r, prevActive.current), -2, 2)) >= 2; // wrapping round the ring: fade instead of flying across the middle
+        const hidden = Math.abs(d) === 2;
+        const side = Math.sign(d);
+        const transform = d === 0
+            ? 'translate3d(0,0,0) scale(1) rotateY(0deg)'
+            : hidden
+                ? `translate3d(${side * 110}%,3%,0) scale(0.45) rotateY(${side * -30}deg)`
+                : `translate3d(${side * 74}%,3%,0) scale(0.66) rotateY(${side * -26}deg)`;
         return {
-            transform: t,
-            opacity: o === 0 ? 1 : 0.92,
-            zIndex: o === 0 ? 30 : 40,
+            transform,
+            opacity: d === 0 ? 1 : hidden ? 0 : 0.92,
+            zIndex: d === 0 ? 30 : hidden ? 10 : 40,
+            pointerEvents: hidden ? 'none' : undefined,
             transition: jumped ? 'none' : 'transform 850ms cubic-bezier(0.22,1,0.36,1), opacity 600ms ease',
-            animation: jumped ? 'stageIn 700ms ease-out' : undefined,
+            animation: jumped && !hidden ? 'stageIn 700ms ease-out' : undefined,
+            transformOrigin: '50% 100%',
         };
     };
+
+    const caption = captions?.[order[active]];
 
     return (
         <div className="w-full max-w-5xl mx-auto">
@@ -76,30 +90,31 @@ const TrioStage: React.FC<Props> = ({ images, name, captions }) => {
                 <div
                     aria-hidden="true"
                     className="absolute left-1/2 top-1/2 h-[90%] aspect-square rounded-full border border-dashed border-aureole-accent/40"
-                    style={{ transform: `translate(-50%,-50%) rotate(${active * 120}deg)`, transition: 'transform 1100ms cubic-bezier(0.22,1,0.36,1)' }}
+                    style={{ transform: `translate(-50%,-50%) rotate(${active * (360 / n)}deg)`, transition: 'transform 1100ms cubic-bezier(0.22,1,0.36,1)' }}
                 />
 
-                {ring.map((imgIndex, r) => {
-                    const isCenter = slot(r, active) === 0;
+                {order.map((imgIndex, r) => {
+                    const isCenter = dist(r, active) === 0;
+                    const label = labels[r];
                     return (
                         <div
                             key={imgIndex}
                             role="button"
                             tabIndex={isCenter ? -1 : 0}
-                            aria-label={isCenter ? `${name}, ${labels[r]} view` : `Show ${labels[r].toLowerCase()} view`}
+                            aria-label={isCenter ? `${name}, ${label} view` : `Show ${label.toLowerCase()} view`}
                             aria-current={isCenter}
                             onClick={() => { if (!isCenter && !dragged.current) go(r); }}
                             onKeyDown={(e) => { if (!isCenter && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); go(r); } }}
                             className={`absolute left-1/2 top-[6%] -ml-[25%] w-1/2 h-[80%] flex items-end justify-center will-change-transform motion-reduce:!transition-none motion-reduce:!animate-none ${isCenter ? '' : 'cursor-pointer hover:brightness-105'}`}
-                            style={{ ...styleFor(r), transformOrigin: '50% 100%' }}
+                            style={styleFor(r)}
                         >
                             <div aria-hidden="true" className="absolute -bottom-1 left-[8%] right-[8%] h-4 rounded-full bg-aureole-slate/20 blur-md" />
                             <img
                                 src={encodeURI(images[imgIndex])}
                                 alt=""
                                 draggable={false}
-                                loading="eager"
-                                fetchPriority={imgIndex === 0 ? 'high' : 'auto'}
+                                loading={Math.abs(dist(r, start)) <= 1 ? 'eager' : 'lazy'}
+                                fetchPriority={r === start ? 'high' : 'auto'}
                                 decoding="async"
                                 className="relative w-full h-full object-contain object-bottom [content-visibility:visible] drop-shadow-[0_20px_24px_rgba(0,21,41,0.22)]"
                             />
@@ -125,124 +140,81 @@ const TrioStage: React.FC<Props> = ({ images, name, captions }) => {
                 </button>
             </div>
 
-            {/* view switcher with a sliding highlight */}
-            <div className="mt-6 flex justify-center">
-                <div role="tablist" aria-label="Product views" className="relative grid grid-cols-3 w-72 max-w-full rounded-full border border-slate-200 bg-white p-1">
-                    <span
-                        aria-hidden="true"
-                        className="absolute top-1 bottom-1 left-1 w-[calc((100%-0.5rem)/3)] rounded-full bg-gradient-to-r from-aureole-accent to-aureole-primary shadow"
-                        style={{ transform: `translateX(${active * 100}%)`, transition: 'transform 600ms cubic-bezier(0.22,1,0.36,1)' }}
-                    />
-                    {labels.map((l, i) => (
-                        <button
-                            key={l}
-                            type="button"
-                            role="tab"
-                            aria-selected={i === active}
-                            onClick={() => go(i)}
-                            className={`relative z-10 py-2 text-[11px] font-black tracking-widest uppercase transition-colors duration-300 ${i === active ? 'text-white' : 'text-slate-500 hover:text-aureole-slate'}`}
-                        >
-                            {l}
-                        </button>
-                    ))}
-                </div>
+            <div className="mt-6 flex flex-col items-center gap-3">
+                {usePills ? (
+                    // view switch with a sliding highlight
+                    <div role="tablist" aria-label="Product views" className="relative grid w-72 max-w-full rounded-full border border-slate-200 bg-white p-1" style={{ gridTemplateColumns: `repeat(${n}, minmax(0, 1fr))` }}>
+                        <span
+                            aria-hidden="true"
+                            className="absolute top-1 bottom-1 left-1 rounded-full bg-gradient-to-r from-aureole-accent to-aureole-primary shadow"
+                            style={{ width: `calc((100% - 0.5rem) / ${n})`, transform: `translateX(${active * 100}%)`, transition: 'transform 600ms cubic-bezier(0.22,1,0.36,1)' }}
+                        />
+                        {labels.map((l, i) => (
+                            <button
+                                key={l + i}
+                                type="button"
+                                role="tab"
+                                aria-selected={i === active}
+                                onClick={() => go(i)}
+                                className={`relative z-10 py-2 text-[11px] font-black tracking-widest uppercase transition-colors duration-300 ${i === active ? 'text-white' : 'text-slate-500 hover:text-aureole-slate'}`}
+                            >
+                                {l}
+                            </button>
+                        ))}
+                    </div>
+                ) : (
+                    // many pictures: caption and dots
+                    <>
+                        <p className="text-[11px] font-bold tracking-widest uppercase text-slate-500 min-h-[1rem]">{caption}</p>
+                        <div role="tablist" aria-label="Product views" className="flex gap-2 flex-wrap justify-center">
+                            {labels.map((l, i) => (
+                                <button
+                                    key={l + i}
+                                    type="button"
+                                    role="tab"
+                                    aria-selected={i === active}
+                                    aria-label={l}
+                                    onClick={() => go(i)}
+                                    className={`h-2 rounded-full transition-all duration-300 motion-reduce:transition-none ${i === active ? 'w-8 bg-gradient-to-r from-aureole-accent to-aureole-primary' : 'w-2 bg-slate-300 hover:bg-slate-400'}`}
+                                />
+                            ))}
+                        </div>
+                    </>
+                )}
             </div>
         </div>
     );
 };
 
-const ProductImageStage: React.FC<Props> = ({ images, name, captions }) => {
-    const [active, setActive] = useState(0);
-    const touchX = useRef<number | null>(null);
+const SingleStage: React.FC<{ src: string; name: string }> = ({ src, name }) => (
+    <div className="w-full max-w-[560px] mx-auto">
+        <div className="relative aspect-square">
+            <div aria-hidden="true" className="absolute inset-[7%] rounded-full bg-gradient-to-b from-aureole-surface to-white shadow-[inset_0_0_80px_rgba(1,194,251,0.14)]" />
+            <div aria-hidden="true" className="absolute inset-[3%] rounded-full border border-aureole-accent/30" />
+            <div aria-hidden="true" className="absolute inset-0 rounded-full border border-dashed border-aureole-accent/40 animate-[spin_90s_linear_infinite] motion-reduce:animate-none" />
+            <div className="absolute inset-0 flex items-center justify-center p-[9%] animate-float motion-reduce:animate-none">
+                <div className="relative w-full h-full flex items-end justify-center">
+                    <div aria-hidden="true" className="absolute -bottom-2 left-[12%] right-[12%] h-4 rounded-full bg-aureole-slate/20 blur-md" />
+                    <img
+                        src={encodeURI(src)}
+                        alt={name}
+                        loading="eager"
+                        fetchPriority="high"
+                        decoding="async"
+                        className="relative w-full h-full object-contain [content-visibility:visible] drop-shadow-[0_24px_30px_rgba(0,21,41,0.22)]"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+);
 
+const ProductImageStage: React.FC<Props> = ({ images, name, captions }) => {
     if (!images || images.length === 0 || images[0] === 'PLACEHOLDER') {
         return <ProductImage src="PLACEHOLDER" alt={name} className="group" />;
     }
-
-    const count = images.length;
-
-    if (count === 3) return <TrioStage images={images} name={name} captions={captions} />;
-
-    const go = (to: number) => setActive((to + count) % count);
-    const caption = captions?.[active];
-
-    return (
-        <div className="w-full max-w-[560px] mx-auto">
-            <div
-                className="relative aspect-square select-none"
-                onTouchStart={(e) => { touchX.current = e.touches[0].clientX; }}
-                onTouchEnd={(e) => {
-                    if (touchX.current === null || count < 2) return;
-                    const dx = e.changedTouches[0].clientX - touchX.current;
-                    if (Math.abs(dx) > 40) go(active + (dx < 0 ? 1 : -1));
-                    touchX.current = null;
-                }}
-            >
-                {/* circle behind the product */}
-                <div aria-hidden="true" className="absolute inset-[7%] rounded-full bg-gradient-to-b from-aureole-surface to-white shadow-[inset_0_0_80px_rgba(1,194,251,0.14)]" />
-                <div aria-hidden="true" className="absolute inset-[3%] rounded-full border border-aureole-accent/30" />
-
-                {images.map((src, i) => (
-                    <div
-                        key={src + i}
-                        aria-hidden={i !== active}
-                        className={`absolute inset-0 flex items-center justify-center p-[9%] transition-all duration-500 motion-reduce:transition-none ${i === active ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}
-                    >
-                        <img
-                            src={encodeURI(src)}
-                            alt={i === active ? `${name}${caption ? ` - ${caption}` : ''}` : ''}
-                            loading={i === 0 ? 'eager' : 'lazy'}
-                            fetchPriority={i === 0 ? 'high' : 'auto'}
-                            decoding="async"
-                            className="w-full h-full object-contain [content-visibility:visible] drop-shadow-[0_24px_30px_rgba(0,21,41,0.22)]"
-                        />
-                    </div>
-                ))}
-
-                {count > 1 && (
-                    <>
-                        <button
-                            type="button"
-                            aria-label="Previous view"
-                            onClick={() => go(active - 1)}
-                            className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white border border-slate-200 shadow-md flex items-center justify-center text-aureole-blue hover:border-aureole-cyan transition-colors z-10"
-                        >
-                            <ChevronLeft size={20} />
-                        </button>
-                        <button
-                            type="button"
-                            aria-label="Next view"
-                            onClick={() => go(active + 1)}
-                            className="absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white border border-slate-200 shadow-md flex items-center justify-center text-aureole-blue hover:border-aureole-cyan transition-colors z-10"
-                        >
-                            <ChevronRight size={20} />
-                        </button>
-                    </>
-                )}
-            </div>
-
-            {(count > 1 || caption) && (
-                <div className="mt-4 flex flex-col items-center gap-3">
-                    {caption && <p className="text-[11px] font-bold tracking-widest uppercase text-slate-500">{caption}</p>}
-                    {count > 1 && (
-                        <div className="flex gap-2" role="tablist" aria-label="Product views">
-                            {images.map((_, i) => (
-                                <button
-                                    key={i}
-                                    type="button"
-                                    role="tab"
-                                    aria-selected={i === active}
-                                    aria-label={captions?.[i] || `View ${i + 1}`}
-                                    onClick={() => setActive(i)}
-                                    className={`h-2 rounded-full transition-all duration-300 motion-reduce:transition-none ${i === active ? 'w-8 bg-gradient-to-r from-aureole-accent to-aureole-primary' : 'w-2 bg-slate-300 hover:bg-slate-400'}`}
-                                />
-                            ))}
-                        </div>
-                    )}
-                </div>
-            )}
-        </div>
-    );
+    if (images.length === 1) return <SingleStage src={images[0]} name={name} />;
+    return <CoverflowStage images={images} name={name} captions={captions} />;
 };
 
 export default ProductImageStage;
