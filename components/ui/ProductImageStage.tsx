@@ -2,7 +2,10 @@ import React, { useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ProductImage from '@/components/ProductImage';
 
-// Product picture on a soft circle with a front / left / right switcher (arrows, dots, swipe).
+// Product pictures on a soft circle.
+//  - exactly 3 pictures (front, left, right): shown together, left on the left, right on the right, front in the middle
+//  - 1 picture: centred on the circle
+//  - any other number: one at a time with arrows, dots and swipe
 
 interface Props {
     images: string[];
@@ -19,6 +22,32 @@ const ProductImageStage: React.FC<Props> = ({ images, name, captions }) => {
     }
 
     const count = images.length;
+
+    if (count === 3) {
+        const [front, left, right] = images;
+        const pic = (src: string, label: string, box: string, z: string, eager = true) => ( // all three sit above the fold, so load them right away
+            <div className={`absolute bottom-[7%] flex items-end justify-center ${box} ${z}`}>
+                <div aria-hidden="true" className="absolute -bottom-1 left-[8%] right-[8%] h-4 rounded-full bg-aureole-slate/15 blur-md" />
+                <img
+                    src={encodeURI(src)}
+                    alt={`${name} - ${label}`}
+                    loading={eager ? 'eager' : 'lazy'}
+                    fetchPriority={eager ? 'high' : 'auto'}
+                    decoding="async"
+                    className="relative w-full h-full object-contain object-bottom [content-visibility:visible] drop-shadow-[0_18px_22px_rgba(0,21,41,0.2)]"
+                />
+            </div>
+        );
+        return (
+            <div className="relative w-full max-w-5xl mx-auto aspect-[4/3] sm:aspect-[2/1]">
+                <div aria-hidden="true" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[100%] aspect-square rounded-full border border-aureole-primary/40 bg-gradient-to-b from-aureole-surface/70 to-white" />
+                <div aria-hidden="true" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[90%] aspect-square rounded-full border border-aureole-accent/20" />
+                {pic(left, 'left view', 'left-[6%] w-[33%] h-[56%]', 'z-10')}
+                {pic(right, 'right view', 'right-[6%] w-[33%] h-[56%]', 'z-10')}
+                {pic(front, 'front view', 'left-1/2 -translate-x-1/2 w-[46%] h-[76%]', 'z-20', true)}
+            </div>
+        );
+    }
     const go = (to: number) => setActive((to + count) % count);
     const caption = captions?.[active];
 
@@ -50,7 +79,7 @@ const ProductImageStage: React.FC<Props> = ({ images, name, captions }) => {
                             loading={i === 0 ? 'eager' : 'lazy'}
                             fetchPriority={i === 0 ? 'high' : 'auto'}
                             decoding="async"
-                            className="w-full h-full object-contain drop-shadow-[0_24px_30px_rgba(0,21,41,0.22)]"
+                            className="w-full h-full object-contain [content-visibility:visible] drop-shadow-[0_24px_30px_rgba(0,21,41,0.22)]"
                         />
                     </div>
                 ))}

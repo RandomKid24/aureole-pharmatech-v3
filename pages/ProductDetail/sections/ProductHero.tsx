@@ -69,11 +69,14 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
 
     // Specs (Power Supply is shown in the models table). Up to 4 flank each side of the picture; any extras go in a grid below.
     const specs: { parameter: string; details: string }[] = (product.specifications || []).filter((x: any) => x.parameter !== 'Power Supply');
+    const heroImages: string[] = product.images || (product.image ? [product.image] : ['PLACEHOLDER']);
     const hasImage = !product.hideHeroImage;
+    const isTrio = hasImage && heroImages.length === 3; // front, left, right shown together
     const perSide = Math.min(4, Math.ceil(specs.length / 2));
-    const leftSpecs = hasImage ? specs.slice(0, perSide) : [];
-    const rightSpecs = hasImage ? specs.slice(perSide, perSide * 2) : [];
-    const restSpecs = hasImage ? specs.slice(perSide * 2) : specs;
+    const flank = hasImage && !isTrio; // specs beside a single picture
+    const leftSpecs = flank ? specs.slice(0, perSide) : [];
+    const rightSpecs = flank ? specs.slice(perSide, perSide * 2) : [];
+    const restSpecs = flank ? specs.slice(perSide * 2) : specs;
     const hasDescription = typeof product.description === 'string' && product.description.trim().length > 80;
 
     const SpecItem: React.FC<{ spec: { parameter: string; details: string }; align: 'left' | 'right' }> = ({ spec, align }) => (
@@ -126,23 +129,22 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
                     </h1>
                 </div>
 
-                {hasImage ? (
+                {isTrio && (
+                    <ProductImageStage images={heroImages} name={decodedName} captions={product.imageCaptions} />
+                )}
+                {flank && (
                     <div className="grid lg:grid-cols-12 gap-y-10 lg:gap-x-8 items-center">
                         <div className="order-2 lg:order-1 lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-8">
                             {leftSpecs.map((sp, i) => <SpecItem key={i} spec={sp} align="right" />)}
                         </div>
                         <div className="order-1 lg:order-2 lg:col-span-6">
-                            <ProductImageStage
-                                images={product.images || (product.image ? [product.image] : ['PLACEHOLDER'])}
-                                name={decodedName}
-                                captions={product.imageCaptions}
-                            />
+                            <ProductImageStage images={heroImages} name={decodedName} captions={product.imageCaptions} />
                         </div>
                         <div className="order-3 lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-8">
                             {rightSpecs.map((sp, i) => <SpecItem key={i} spec={sp} align="left" />)}
                         </div>
                     </div>
-                ) : null}
+                )}
 
                 {restSpecs.length > 0 && (
                     <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8 ${hasImage ? 'mt-12 pt-10 border-t border-slate-100' : 'mt-2'}`}>
