@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Settings, Thermometer, Droplets, Target, Layers, Maximize, Zap, Gauge, FileCheck, HeartPulse, ChevronRight, Home, Clock, Waves, Cpu, Box, Package, Activity, Shield, Monitor, Wind, Network } from 'lucide-react';
 import ProductImageStage from '@/components/ui/ProductImageStage';
+import ProductTypeStage, { ProductType } from '@/components/ui/ProductTypeStage';
 import { PRODUCT_CATALOG } from '@/data/products/catalog';
 
 interface ProductHeroProps {
@@ -66,6 +67,20 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
 
         return <Settings size={12} />;
     };
+
+    // Product types (e.g. Constant / Circulating Water Bath): header cells of the comparison table that carry a picture.
+    // Pills switch the type; the picture and the type's own specs follow.
+    const headerCells: any[] = product.complexTable?.rows?.[0]?.cells ?? [];
+    const types: (ProductType & { col: number })[] = product.hideHeroImage
+        ? headerCells.map((c, col) => ({ name: String(c.content).replace(/\s+/g, ' ').trim(), image: c.image as string, col })).filter((t) => t.image)
+        : [];
+    const hasTypes = types.length >= 2;
+    const [typeIdx, setTypeIdx] = useState(0);
+    const typeSpecs: { parameter: string; details: string }[] = hasTypes
+        ? (product.complexTable.rows as any[]).slice(1)
+            .map((r) => ({ parameter: String(r.cells?.[0]?.content ?? '').replace(/\s+/g, ' ').trim(), details: String(r.cells?.[types[typeIdx].col]?.content ?? '').replace(/\s+/g, ' ').trim() }))
+            .filter((x) => x.parameter && x.details && x.details !== '-')
+        : [];
 
     // Specs (Power Supply is shown in the models table). Up to 4 flank each side of the picture; any extras go in a grid below.
     const specs: { parameter: string; details: string }[] = (product.specifications || []).filter((x: any) => x.parameter !== 'Power Supply');
@@ -146,8 +161,22 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
                     </div>
                 )}
 
+                {hasTypes && (
+                    <>
+                        <ProductTypeStage types={types} active={typeIdx} onSelect={setTypeIdx} productName={decodedName} />
+                        {typeSpecs.length > 0 && (
+                            <div className="mt-12">
+                                <h3 className="text-center text-xs font-black tracking-widest uppercase text-aureole-cyan mb-8">{types[typeIdx].name} specifications</h3>
+                                <div key={types[typeIdx].name} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8" style={{ animation: 'typeIn 550ms cubic-bezier(0.22,1,0.36,1)' }}>
+                                    {typeSpecs.map((sp, i) => <SpecItem key={i} spec={sp} align="left" />)}
+                                </div>
+                            </div>
+                        )}
+                    </>
+                )}
+
                 {restSpecs.length > 0 && (
-                    <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8 ${hasImage ? 'mt-12 pt-10 border-t border-slate-100' : 'mt-2'}`}>
+                    <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8 ${hasImage || hasTypes ? 'mt-12 pt-10 border-t border-slate-100' : 'mt-2'}`}>
                         {restSpecs.map((sp, i) => <SpecItem key={i} spec={sp} align="left" />)}
                     </div>
                 )}
