@@ -299,6 +299,11 @@ section {
 .hl-table td[data-hotcol] { box-shadow: inset 0 0 0 999px rgba(0, 166, 214, 0.14); }
 .hl-table th[data-hotcol] { box-shadow: inset 0 -3px 0 #00a6d6; color: #001529; }
 
+@keyframes stageIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 /* Tailwind (v3) utilities load after the custom rules above, matching the old CDN injection order. */
 @tailwind base;
 @tailwind components;
