@@ -27,6 +27,6 @@ export function cityPageContent(productName: string, city: string): CityContent 
   return {
     label,
     title: `${productName} Manufacturer in ${label} | Aureole`,
-    description: `${productName} for ${place}${SPEC_PHRASE[productName] ? `: ${SPEC_PHRASE[productName]}` : ''}. Made in Nashik by Aureole Pharma Tech. Quote: +91 86005 22240.`,
+    description: `${productName} for ${place}${SPEC_PHRASE[productName] ? `: ${SPEC_PHRASE[productName]}` : ''}. Nashik-made, exported to 15+ countries. Quote: +91 86005 22240.`,
   };
 }
