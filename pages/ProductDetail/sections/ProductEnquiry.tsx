@@ -163,7 +163,7 @@ const ProductEnquiry: React.FC = () => {
     };
 
     return (
-        <section className="py-16 bg-transparent relative overflow-hidden group/section">
+        <section id="enquiry" className="py-16 bg-transparent relative overflow-hidden group/section">
             {/* Background Elements */}
             <div className="absolute inset-0 opacity-[0.4] bg-[radial-gradient(#aureole-blue_1px,transparent_1px)] [background-size:24px_24px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)]"></div>
 

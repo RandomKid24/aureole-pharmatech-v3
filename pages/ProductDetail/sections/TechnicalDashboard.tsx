@@ -1,5 +1,7 @@
 import React from 'react';
 import ProductTabs from '@/components/ui/ProductTabs';
+import ProductFeatureScroll from '@/components/ui/ProductFeatureScroll';
+import { COMPACT_LAYOUT_PRODUCTS } from '@/components/ui/attributeIcons';
 
 interface TechnicalDashboardProps {
     product: any;
@@ -17,7 +19,9 @@ const TechnicalDashboard: React.FC<TechnicalDashboardProps> = ({ product, decode
         <section className="bg-transparent">
             <div className="container mx-auto px-6 lg:px-24 py-4">
                 <div className="max-w-7xl mx-auto">
-                    <ProductTabs product={product} productName={decodedName} />
+                    {COMPACT_LAYOUT_PRODUCTS.includes(decodedName)
+                        ? <ProductTabs product={product} productName={decodedName} />
+                        : <ProductFeatureScroll product={product} />}
                 </div>
             </div>
         </section>

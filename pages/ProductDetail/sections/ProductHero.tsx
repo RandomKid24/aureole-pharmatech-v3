@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Settings, Thermometer, Droplets, Target, Layers, Maximize, Zap, Gauge, FileCheck, HeartPulse, ChevronRight, Home, Clock, Waves, Cpu, Box, Package, Activity, Shield, Monitor, Wind, Network } from 'lucide-react';
-import ProductGallery from '@/components/ui/ProductGallery';
+import ProductImageStage from '@/components/ui/ProductImageStage';
 import { PRODUCT_CATALOG } from '@/data/products/catalog';
 
 interface ProductHeroProps {
@@ -67,109 +67,99 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
         return <Settings size={12} />;
     };
 
+    // Specs (Power Supply is shown in the models table). Up to 4 flank each side of the picture; any extras go in a grid below.
+    const specs: { parameter: string; details: string }[] = (product.specifications || []).filter((x: any) => x.parameter !== 'Power Supply');
+    const hasImage = !product.hideHeroImage;
+    const perSide = Math.min(4, Math.ceil(specs.length / 2));
+    const leftSpecs = hasImage ? specs.slice(0, perSide) : [];
+    const rightSpecs = hasImage ? specs.slice(perSide, perSide * 2) : [];
+    const restSpecs = hasImage ? specs.slice(perSide * 2) : specs;
+    const hasDescription = typeof product.description === 'string' && product.description.trim().length > 80;
+
+    const SpecItem: React.FC<{ spec: { parameter: string; details: string }; align: 'left' | 'right' }> = ({ spec, align }) => (
+        <div className={`flex gap-3 ${align === 'right' ? 'lg:flex-row-reverse lg:text-right' : ''}`}>
+            <div className="shrink-0 mt-1 text-aureole-blue">
+                {React.cloneElement(getSpecIcon(spec.parameter) as React.ReactElement, { size: 18 })}
+            </div>
+            <div className="flex flex-col gap-1">
+                <span className="text-xs font-bold text-slate-400 tracking-wider">{spec.parameter}</span>
+                <span className="text-base text-slate-900 font-bold leading-snug tracking-tight">{spec.details}</span>
+            </div>
+        </div>
+    );
+
     return (
         <section className="relative bg-transparent">
-            <div className="container mx-auto px-6 lg:px-24 pt-12 lg:pt-16 pb-0">
-                <div className="grid lg:grid-cols-12 gap-10 items-start">
-                    <div className={product.hideHeroImage ? "lg:col-span-12" : "lg:col-span-7"}>
-                        <nav className="flex items-center gap-4 mb-6 flex-wrap">
-                            <Link to="/" className="flex items-center gap-2.5 text-slate-400 hover:text-aureole-blue transition-all group">
-                                <Home size={16} className="group-hover:scale-110 transition-transform" />
-                                <span className="text-xs font-bold tracking-wider">Home</span>
-                            </Link>
-
+            <div className="container mx-auto px-6 lg:px-24 pt-12 lg:pt-16">
+                <nav className="flex items-center gap-4 mb-8 flex-wrap">
+                    <Link to="/" className="flex items-center gap-2.5 text-slate-400 hover:text-aureole-blue transition-all group">
+                        <Home size={16} className="group-hover:scale-110 transition-transform" />
+                        <span className="text-xs font-bold tracking-wider">Home</span>
+                    </Link>
+                    <ChevronRight size={14} className="text-slate-300" />
+                    <Link to="/products" className="text-slate-400 hover:text-aureole-blue transition-all text-xs font-bold tracking-wider">Products</Link>
+                    {hierarchy && (
+                        <>
                             <ChevronRight size={14} className="text-slate-300" />
-
-                            <Link to="/products" className="text-slate-400 hover:text-aureole-blue transition-all text-xs font-bold tracking-wider">
-                                Products
+                            <Link to={hierarchy.path} className="text-slate-400 hover:text-aureole-blue transition-all text-xs font-bold tracking-wider line-clamp-1 capitalize">
+                                {hierarchy.category.toLowerCase()}
                             </Link>
-
-                            {hierarchy && (
+                            {!isRedundantSubtype && (
                                 <>
                                     <ChevronRight size={14} className="text-slate-300" />
-                                    <Link to={hierarchy.path} className="text-slate-400 hover:text-aureole-blue transition-all text-xs font-bold tracking-wider line-clamp-1 capitalize">
-                                        {hierarchy.category.toLowerCase()}
-                                    </Link>
-
-                                    {!isRedundantSubtype && (
-                                        <>
-                                            <ChevronRight size={14} className="text-slate-300" />
-                                            <span className="text-aureole-blue text-xs font-black tracking-wider line-clamp-1">
-                                                {hierarchy.subType}
-                                            </span>
-                                        </>
-                                    )}
+                                    <span className="text-aureole-blue text-xs font-black tracking-wider line-clamp-1">{hierarchy.subType}</span>
                                 </>
                             )}
-
-                            <ChevronRight size={14} className="text-slate-300" />
-                            <span className="text-aureole-slate text-xs font-black tracking-wider line-clamp-1">
-                                {decodedName}
-                            </span>
-                        </nav>
-                    </div>
-
-                    <div className={product.hideHeroImage ? "lg:col-span-12" : "lg:col-span-7"}>
-                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-8">
-                            <div className="flex flex-col gap-4">
-                                <div className="flex items-center gap-4">
-                                    <span className="slant-mark" aria-hidden="true"></span>
-                                    <h2 className="text-xs font-black font-heading tracking-widest text-aureole-cyan">Product Overview</h2>
-                                </div>
-                                <h1 className="text-4xl lg:text-7xl font-black font-heading text-aureole-slate tracking-tighter leading-none">
-                                    {decodedName.split(' ').slice(0, -1).join(' ')} <span className="gt">{decodedName.split(' ').slice(-1)}</span>
-                                </h1>
-                            </div>
-                        </div>
-
-                        {typeof product.description === 'string' && product.description.trim().length > 80 && (
-                            <div className="max-w-2xl mb-10 space-y-3">
-                                {product.description.split(/\n+/).map((para: string, i: number) => (
-                                    <p key={i} className="text-slate-500 text-sm lg:text-base font-medium leading-relaxed">{para}</p>
-                                ))}
-                            </div>
-                        )}
-
-                        <div className={`pt-10 ${product.specifications && product.specifications.length > 0 ? 'border-t border-slate-100 mb-24' : ''}`}>
-                            {product.specifications && product.specifications.length > 0 && (
-                                <div className="space-y-10">
-                                    <div className="flex items-center gap-3">
-                                        <Settings size={20} className="text-aureole-blue" />
-                                        <h3 className="text-xl font-black tracking-tight text-slate-900 leading-none">Technical Specification</h3>
-                                    </div>
-
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
-                                        {product.specifications.filter((spec: any) => spec.parameter !== 'Power Supply').map((spec: any, i: number) => (
-                                            <div key={i} className="flex gap-4 group">
-                                                <div className="flex-shrink-0 mt-1 text-aureole-blue">
-                                                    {React.cloneElement(getSpecIcon(spec.parameter) as React.ReactElement, { size: 18 })}
-                                                </div>
-                                                <div className="flex flex-col gap-1">
-                                                    <span className="text-xs font-bold text-slate-400 tracking-wider transition-colors">{spec.parameter}</span>
-                                                    <span className="text-base text-slate-900 font-bold leading-snug tracking-tight">
-                                                        {spec.details}
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-                    </div>
-
-                    {!product.hideHeroImage && (
-                        <div className="lg:col-span-5 lg:pl-6 relative">
-                            <div className="relative bg-white border border-slate-50 p-4 shadow-xl max-w-md ml-auto g-top">
-                                <ProductGallery
-                                    images={product.images || (product.image ? [product.image] : ['PLACEHOLDER'])}
-                                    name={decodedName}
-                                    captions={product.imageCaptions}
-                                />
-                            </div>
-                        </div>
+                        </>
                     )}
+                    <ChevronRight size={14} className="text-slate-300" />
+                    <span className="text-aureole-slate text-xs font-black tracking-wider line-clamp-1">{decodedName}</span>
+                </nav>
+
+                <div className="flex flex-col items-center text-center gap-4 mb-10 lg:mb-6">
+                    <div className="flex items-center gap-4">
+                        <span className="slant-mark" aria-hidden="true"></span>
+                        <h2 className="text-xs font-black font-heading tracking-widest text-aureole-cyan">Product Overview</h2>
+                    </div>
+                    <h1 className="text-4xl lg:text-7xl font-black font-heading text-aureole-slate tracking-tighter leading-none">
+                        {decodedName.split(' ').slice(0, -1).join(' ')} <span className="gt">{decodedName.split(' ').slice(-1)}</span>
+                    </h1>
                 </div>
+
+                {hasImage ? (
+                    <div className="grid lg:grid-cols-12 gap-y-10 lg:gap-x-8 items-center">
+                        <div className="order-2 lg:order-1 lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-8">
+                            {leftSpecs.map((sp, i) => <SpecItem key={i} spec={sp} align="right" />)}
+                        </div>
+                        <div className="order-1 lg:order-2 lg:col-span-6">
+                            <ProductImageStage
+                                images={product.images || (product.image ? [product.image] : ['PLACEHOLDER'])}
+                                name={decodedName}
+                                captions={product.imageCaptions}
+                            />
+                        </div>
+                        <div className="order-3 lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-8">
+                            {rightSpecs.map((sp, i) => <SpecItem key={i} spec={sp} align="left" />)}
+                        </div>
+                    </div>
+                ) : null}
+
+                {restSpecs.length > 0 && (
+                    <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8 ${hasImage ? 'mt-12 pt-10 border-t border-slate-100' : 'mt-2'}`}>
+                        {restSpecs.map((sp, i) => <SpecItem key={i} spec={sp} align="left" />)}
+                    </div>
+                )}
+
+                {(
+                    <div className="max-w-3xl mx-auto text-center mt-14 mb-16 lg:mb-24 space-y-4">
+                        {hasDescription && product.description.split(/\n+/).map((para: string, i: number) => (
+                            <p key={i} className="text-slate-500 text-sm lg:text-base font-medium leading-relaxed">{para}</p>
+                        ))}
+                        <a href="#enquiry" className="inline-flex items-center gap-3 px-8 py-4 btn-g text-[10px] font-black uppercase tracking-widest mt-2">
+                            Request a quote
+                        </a>
+                    </div>
+                )}
             </div>
         </section>
     );
