@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ProductImage from '@/components/ProductImage';
 
 // Product pictures on a soft circle.
-//  - exactly 3 pictures (front, left, right): shown together, left on the left, right on the right, front in the middle
+//  - exactly 3 pictures (front, left, right): shown together, front in the middle, left and right angles in front of it on each side
 //  - 1 picture: centred on the circle
 //  - any other number: one at a time with arrows, dots and swipe
 
@@ -42,8 +42,8 @@ const ProductImageStage: React.FC<Props> = ({ images, name, captions }) => {
             <div className="relative w-full max-w-5xl mx-auto aspect-[4/3] sm:aspect-[2/1]">
                 <div aria-hidden="true" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[100%] aspect-square rounded-full border border-aureole-primary/40 bg-gradient-to-b from-aureole-surface/70 to-white" />
                 <div aria-hidden="true" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[90%] aspect-square rounded-full border border-aureole-accent/20" />
-                {pic(left, 'left view', 'left-[6%] w-[33%] h-[56%]', 'z-10')}
-                {pic(right, 'right view', 'right-[6%] w-[33%] h-[56%]', 'z-10')}
+                {pic(left, 'left view', 'left-[3%] w-[33%] h-[56%]', 'z-30')}
+                {pic(right, 'right view', 'right-[3%] w-[33%] h-[56%]', 'z-30')}
                 {pic(front, 'front view', 'left-1/2 -translate-x-1/2 w-[46%] h-[76%]', 'z-20', true)}
             </div>
         );
