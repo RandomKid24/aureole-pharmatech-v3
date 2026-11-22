@@ -152,7 +152,7 @@ export const PRODUCT_SEO_DATA: Record<string, { title: string; description: stri
         description: "Laminar air flow unit, Class 100, 90 FPM ±20% airflow, 99.999% HEPA efficiency. Nashik-made; sold in India, exported to 15+ countries. Quote: +91 86005 22240."
     },
     "Sampling / Dispensing Booth": {
-        title: "Sampling / Dispensing Booth Manufacturer & Exporter | Aureole",
+        title: "Sampling & Dispensing Booth Manufacturer, Exporter | Aureole",
         description: "Sampling and dispensing booth with downward airflow and negative-pressure zone. Nashik-made; sold in India, exported to 15+ countries. Quote: +91 86005 22240."
     },
     "Biosafety Cabinet": {

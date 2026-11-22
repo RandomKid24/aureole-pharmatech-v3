@@ -19,35 +19,35 @@ export const PAGE_SEO: Record<string, PageSeo> = {
       "Aureole Pharma Tech is a Nashik-based manufacturer of stability chambers, walk-in chambers, ovens, freezers, table-top instruments, cleanroom equipment and modular laboratory furniture for pharmaceutical and research laboratories.",
   },
   "/products": {
-    title: "Pharmaceutical Equipment Catalogue: Stability Chambers, Instruments, Lab Furniture | Aureole",
+    title: "Pharmaceutical & Lab Equipment Manufacturer | Aureole",
     description:
       "Stability chambers, incubators, freezers, ovens, baths, cleanroom equipment and modular laboratory furniture made in Nashik, India, exported to 15+ countries.",
     h1: "Pharmaceutical & Laboratory Equipment Catalogue",
     summary: "Stability chambers, table-top instruments and laboratory furniture manufactured by Aureole Pharma Tech.",
   },
   "/products/stability-chambers": {
-    title: "Stability & Walk-in Chambers Manufacturer & Exporter | Aureole",
+    title: "Stability & Walk-in Chamber Manufacturer, Exporter | Aureole",
     description:
       "Humidity, photostability and walk-in stability chambers made in Nashik, India and exported to 15+ countries. For 25°C/60%, 30°C/65%, 30°C/75%, 40°C/75% RH.",
     h1: "Stability Chambers & Environmental Test Equipment",
     summary: "Reach-in and walk-in stability chambers, incubators, freezers and ovens for pharmaceutical stability studies.",
   },
   "/products/cleanroom-equipment": {
-    title: "Cleanroom Equipment: Biosafety Cabinets, Laminar Air Flow & Pass Boxes | Aureole Pharma Tech",
+    title: "Cleanroom Equipment Manufacturer & Exporter | Aureole",
     description:
       "Biosafety cabinets, laminar air flow units, sampling and dispensing booths and pass boxes for cleanrooms. Made in Nashik, India, exported to 15+ countries.",
     h1: "Cleanroom Equipment",
     summary: "Biosafety cabinets, laminar air flow units, sampling and dispensing booths and pass boxes for controlled environments.",
   },
   "/products/table-top-instruments": {
-    title: "Table Top Instruments: Ultrasonic, Water, Steam & Oil Baths | Aureole Pharma Tech",
+    title: "Table Top Instruments: Baths & Air Samplers | Aureole",
     description:
       "Ultrasonic, water, steam, oil and dry baths and microbial air samplers for pharma and research labs. Made in Nashik, India, exported to 15+ countries.",
     h1: "Table Top Laboratory Instruments",
     summary: "Ultrasonic, water, steam, oil and dry baths plus air samplers for laboratory use.",
   },
   "/products/laboratory-furniture": {
-    title: "Modular Laboratory Furniture & Stainless Steel Accessories | Aureole Pharma Tech",
+    title: "Modular Laboratory Furniture Manufacturer | Aureole",
     description:
       "Modular laboratory benches, fume hoods, storage cabinets, sinks and stainless steel accessories. Made in Nashik, India, exported to 15+ countries.",
     h1: "Modular Laboratory Furniture",
@@ -74,21 +74,21 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     summary: "Gallery of exhibitions and corporate events.",
   },
   "/about": {
-    title: "About Aureole Pharma Tech: Nashik Pharmaceutical Equipment Manufacturer",
+    title: "About Aureole Pharma Tech | Nashik Equipment Manufacturer",
     description:
       "Aureole Pharma Tech, led by Managing Director Dr. Kiran Badgujar, makes stability chambers and laboratory equipment in Nashik, Maharashtra, India.",
     h1: "About Aureole Pharma Tech",
     summary: "Company overview, leadership and ventures.",
   },
   "/about/certification-compliance": {
-    title: "Certifications: ISO 9001:2015, CE & ZED Gold | Aureole Pharma Tech",
+    title: "Certifications: ISO 9001:2015, CE, ZED Gold | Aureole",
     description:
       "Aureole Pharma Tech holds ISO 9001:2015, CE and ZED Gold certificates. See the scope, issuer and validity of each one.",
     h1: "Certification & Compliance",
     summary: "ISO 9001:2015, CE and ZED Gold certifications.",
   },
   "/about/plants": {
-    title: "Manufacturing Plants in Malegaon MIDC, Sinnar, Nashik | Aureole Pharma Tech",
+    title: "Manufacturing Plant, Malegaon MIDC, Nashik | Aureole",
     description:
       "Aureole Pharma Tech manufactures stand-alone chambers, walk-in chambers and table-top instruments in Malegaon MIDC, Sinnar, Nashik.",
     h1: "Our Manufacturing Plants",
