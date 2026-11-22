@@ -26,7 +26,8 @@ export function cityPageContent(productName: string, city: string): CityContent 
   const place = region ? `${label}, ${region}` : label;
   return {
     label,
-    title: `${productName} Manufacturer in ${label} | Aureole`,
+    // "Manufacturer" is dropped when the full title would pass 60 characters (long product plus long place name).
+    title: (() => { const t = `${productName} Manufacturer in ${label} | Aureole`; return t.length <= 60 ? t : `${productName} in ${label} | Aureole`; })(),
     description: `${productName} for ${place}${SPEC_PHRASE[productName] ? `: ${SPEC_PHRASE[productName]}` : ''}. Nashik-made, exported to 15+ countries. Quote: +91 86005 22240.`,
   };
 }
