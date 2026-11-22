@@ -5,7 +5,7 @@ export const SITE_URL = "https://www.aureolepharmatech.com";
 export const DEFAULT_SEO = {
   title: "Stability Chamber Manufacturer, Nashik | Aureole Pharma Tech",
   description:
-    "Manufacturer of stability chambers, walk-in chambers, incubators and freezers in Nashik. ISO 9001:2015 certified. Get a quote: +91 86005 22240.",
+    "Stability chambers, walk-in chambers, incubators and freezers made in Nashik, India and supplied in 15+ countries. ISO 9001:2015. Quote: +91 86005 22240.",
 };
 
 export interface PageSeo { title: string; description: string; h1: string; summary: string }
@@ -21,35 +21,35 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   "/products": {
     title: "Pharmaceutical Equipment Catalogue: Stability Chambers, Instruments, Lab Furniture | Aureole",
     description:
-      "Stability chambers, incubators, freezers, ovens, baths, cleanroom equipment and modular laboratory furniture made in Nashik. Request a quote.",
+      "Stability chambers, incubators, freezers, ovens, baths, cleanroom equipment and modular laboratory furniture made in Nashik, supplied in 15+ countries.",
     h1: "Pharmaceutical & Laboratory Equipment Catalogue",
     summary: "Stability chambers, table-top instruments and laboratory furniture manufactured by Aureole Pharma Tech.",
   },
   "/products/stability-chambers": {
     title: "Stability & Walk-in Chambers Manufacturer India | Aureole",
     description:
-      "Humidity, photostability and walk-in stability chambers made in Nashik. Suitable for 25°C/60% RH, 30°C/65% RH, 30°C/75% RH and 40°C/75% RH. Request a quote.",
+      "Humidity, photostability and walk-in stability chambers made in Nashik, supplied in 15+ countries. For 25°C/60%, 30°C/65%, 30°C/75% and 40°C/75% RH.",
     h1: "Stability Chambers & Environmental Test Equipment",
     summary: "Reach-in and walk-in stability chambers, incubators, freezers and ovens for pharmaceutical stability studies.",
   },
   "/products/cleanroom-equipment": {
     title: "Cleanroom Equipment: Biosafety Cabinets, Laminar Air Flow & Pass Boxes | Aureole Pharma Tech",
     description:
-      "Biosafety cabinets, laminar air flow units, sampling and dispensing booths and pass boxes for cleanrooms. Made in Nashik. Request a quote.",
+      "Biosafety cabinets, laminar air flow units, sampling and dispensing booths and pass boxes for cleanrooms. Made in Nashik, supplied in 15+ countries.",
     h1: "Cleanroom Equipment",
     summary: "Biosafety cabinets, laminar air flow units, sampling and dispensing booths and pass boxes for controlled environments.",
   },
   "/products/table-top-instruments": {
     title: "Table Top Instruments: Ultrasonic, Water, Steam & Oil Baths | Aureole Pharma Tech",
     description:
-      "Ultrasonic, water, steam, oil and dry baths and microbial air samplers for pharma and research labs. Made in Nashik. Request a quote.",
+      "Ultrasonic, water, steam, oil and dry baths and microbial air samplers for pharma and research labs. Made in Nashik, supplied in 15+ countries.",
     h1: "Table Top Laboratory Instruments",
     summary: "Ultrasonic, water, steam, oil and dry baths plus air samplers for laboratory use.",
   },
   "/products/laboratory-furniture": {
     title: "Modular Laboratory Furniture & Stainless Steel Accessories | Aureole Pharma Tech",
     description:
-      "Modular laboratory benches, fume hoods, storage cabinets, sinks and stainless steel accessories. Made in Nashik, India. Request a quote.",
+      "Modular laboratory benches, fume hoods, storage cabinets, sinks and stainless steel accessories. Made in Nashik, India, supplied in 15+ countries.",
     h1: "Modular Laboratory Furniture",
     summary: "Laboratory benches, cabinets, fume hoods and stainless steel accessories.",
   },
