@@ -81,7 +81,7 @@ export const PRODUCTS = [
         id: 'humidity-chamber',
         name: 'HUMIDITY CHAMBER',
         category: 'STABILITY',
-        image: '/Aureole Product 3D/Front Angle/Humidity Chamberr Front Angle.webp',
+        image: '/Aureole Product 3D/Front Angle/Humidity Chamber Front Angle.webp',
         description: 'Precise environmental control for long-term stability studies and ICH compliance.',
         specs: { 'Range': '20°C to 60°C', 'Humidity': '40% to 95% RH' }
     },
@@ -97,7 +97,7 @@ export const PRODUCTS = [
         id: 'muffle-furnance',
         name: 'MUFFLE FURNANCE',
         category: 'STABILITY',
-        image: '/products/StablilityChamber-Standalone/muffle-furnace.webp',
+        image: '/products/StabilityChamber-Standalone/muffle-furnace.webp',
         description: 'Designed for high-temperature applications up to 1150°C with precise heat treatment.',
         specs: { 'Range': 'Upto 1150°C', 'Accuracy': '± 5°C' }
     },
@@ -105,7 +105,7 @@ export const PRODUCTS = [
         id: 'ultrasonic-bath',
         name: 'ECO SERIES',
         category: 'ULTRASONIC',
-        image: '/Aureole Product 3D/Table Top/ultrasomic Cleaner M Series.webp',
+        image: '/Aureole Product 3D/Table Top/Ultrasonic Cleaner M Series.webp',
         description: 'Efficient ultrasonic cleaning solutions for laboratory and healthcare use.',
         specs: { 'Cleaning': 'Ultrasonic', 'Control': 'Analog/Digital' }
     },
@@ -137,7 +137,7 @@ export const PRODUCTS = [
         id: 'air-sampler',
         name: 'AIR SAMPLER BASIC 4',
         category: 'AIR SAMPLER',
-        image: '/Aureole Product 3D/Table Top/Air Sampaler.webp',
+        image: '/Aureole Product 3D/Table Top/Air Sampler.webp',
         description: 'Advanced air sampling system for environmental monitoring and QC applications.',
         specs: { 'Flow Rate': '25-200 L/min', 'Volume': '25-2000 L' }
     }

@@ -10,7 +10,7 @@ export const muffleFurnace: ProductDetail = {
     models: [],
     regularAttributes: [],
     addOnsAttributes: [],
-    image: "/products/StablilityChamber-Standalone/muffle-furnace.webp",
+    image: "/products/StabilityChamber-Standalone/muffle-furnace.webp",
     complexTable: {
         rows: [
             {
