@@ -13,6 +13,7 @@ import VariantSections from './ProductDetail/sections/VariantSections';
 import ProductEnquiry from './ProductDetail/sections/ProductEnquiry';
 import InfrasArchitecture from '../components/sections/InfrasArchitecture';
 import ServiceCentersGrid from '../components/sections/ServiceCentersGrid';
+import RelatedProducts from '../components/sections/RelatedProducts';
 import ChamberAnatomy from '../components/sections/ChamberAnatomy';
 
 import CategoryHero from '../components/ui/CategoryHero';
@@ -94,6 +95,7 @@ const ProductDetail: React.FC = () => {
               decodedName === "Walk In Deep Freezer") && (
                 <ServiceCentersGrid productName={decodedName} />
             )}
+            <RelatedProducts productName={decodedName} />
             <ProductEnquiry />
         </div>
 

@@ -14,6 +14,7 @@ import ProductEnquiry from '../ProductDetail/sections/ProductEnquiry';
 import InfrasArchitecture from '../../components/sections/InfrasArchitecture';
 import ServiceCentersGrid from '../../components/sections/ServiceCentersGrid';
 import ChamberAnatomy from '../../components/sections/ChamberAnatomy';
+import RelatedProducts from '../../components/sections/RelatedProducts';
 
 const CityWiseProductPage: React.FC = () => {
     const { cityProductSlug } = useParams<{ cityProductSlug: string }>();
@@ -87,6 +88,7 @@ const CityWiseProductPage: React.FC = () => {
             <ProductTables product={product} productName={productName} />
             <VariantSections product={product} />
             <ServiceCentersGrid productName={productName} />
+            <RelatedProducts productName={productName} includeSelf />
             <ProductEnquiry />
         </div>
 

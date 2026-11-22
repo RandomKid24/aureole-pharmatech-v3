@@ -4,6 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { SITE_URL, PAGE_SEO, breadcrumbLd, productLd, faqLd, serviceLd } from "../data/pageSeo";
 import { PAGE_DETAILS } from "../data/prerenderDetails";
+import { relatedSection } from "../data/relatedProducts";
 import { PRODUCT_DETAILS, LISTED_PRODUCT_NAMES } from "../data/products";
 import { PRODUCT_SEO_DATA } from "../data/seoMetadata";
 import { PRODUCT_CITY_MAPPING, PRODUCTS } from "../data/cityWiseProducts";
@@ -18,6 +19,8 @@ const abs = (p: string) => (p.startsWith("http") ? p : encodeURI(`${SITE_URL}${p
 
 interface Route { canonicalPath?: string; path: string; title: string; description: string; h1: string; body: string; image?: string; ld: object[] }
 const routes: Route[] = [];
+
+const relatedHtml = (name: string, includeSelf = false) => { const l = relatedSection(name, { includeSelf }); return l.length ? `<h2>Related products</h2><ul>${l.map((x) => `<li><a href="${x.href}">${esc(x.label)}</a></li>`).join("")}</ul>` : ""; };
 
 const nav = `<nav aria-label="Main"><ul>${[
   ["/products/stability-chambers/", "Stability Chambers"],
@@ -56,7 +59,8 @@ for (const [name, d] of Object.entries(PRODUCT_DETAILS)) {
     image: imgs[0],
     body: d.description.split(/\n+/).map((x) => `<p>${esc(x)}</p>`).join("") +
       (d.keyFeatures?.length ? `<h2>Key features</h2><ul>${d.keyFeatures.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>` : "") +
-      (specs ? `<h2>Specifications</h2><table>${specs}</table>` : ""),
+      (specs ? `<h2>Specifications</h2><table>${specs}</table>` : "") +
+      relatedHtml(name),
     ld: [productLd(name, seo?.description || d.description, url, imgs)],
   });
 }
@@ -77,7 +81,8 @@ for (const prod of PRODUCTS) {
       body: `<p><a href="/products/${slugify(prod.name)}/">${esc(prod.name)} specifications</a></p>` +
         (d ? d.description.split(/\n+/).map((x) => `<p>${esc(x)}</p>`).join("") +
           (d.keyFeatures?.length ? `<h2>Key features</h2><ul>${d.keyFeatures.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>` : "") +
-          `<h2>Specifications</h2><table>${d.specifications.map((x) => `<tr><th>${esc(x.parameter)}</th><td>${esc(x.details)}</td></tr>`).join("")}</table>` : ""),
+          `<h2>Specifications</h2><table>${d.specifications.map((x) => `<tr><th>${esc(x.parameter)}</th><td>${esc(x.details)}</td></tr>`).join("")}</table>` : "") +
+        relatedHtml(prod.name, true),
       ld: [productLd(`${prod.name} in ${c.label}`, d?.description || prod.name, `${SITE_URL}/${canonicalSlug}/`, d?.images || [])],
     });
   }
