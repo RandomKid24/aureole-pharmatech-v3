@@ -2,7 +2,8 @@
 // Built with `vite build --ssr` and executed by `npm run build`; React replaces #root on load.
 import fs from "node:fs";
 import path from "node:path";
-import { SITE_URL, PAGE_SEO, breadcrumbLd, productLd, faqLd } from "../data/pageSeo";
+import { SITE_URL, PAGE_SEO, breadcrumbLd, productLd, faqLd, serviceLd } from "../data/pageSeo";
+import { PAGE_DETAILS } from "../data/prerenderDetails";
 import { PRODUCT_DETAILS, LISTED_PRODUCT_NAMES } from "../data/products";
 import { PRODUCT_SEO_DATA } from "../data/seoMetadata";
 import { PRODUCT_CITY_MAPPING, PRODUCTS } from "../data/cityWiseProducts";
@@ -32,7 +33,12 @@ for (const [p, s] of Object.entries(PAGE_SEO)) {
     : "";
   const da = DIRECT_ANSWERS[p];
   const qa = da ? `<h2>${esc(da.heading)}</h2>${da.items.map((i) => `<h3>${esc(i.q)}</h3><p>${esc(i.a)}${i.link ? ` <a href="${i.link.href}">${esc(i.link.label)}</a>` : ""}</p>`).join("")}` : "";
-  routes.push({ path: p, title: s.title, description: s.description, h1: s.h1, body: `<p>${esc(s.summary)}</p>${links}${qa}`, ld: da ? [faqLd(da.items.map((i) => ({ q: i.q, a: i.a })))] : [] });
+  const details = (PAGE_DETAILS[p] || []).map((d) => `<h2>${esc(d.h)}</h2>${(d.p || []).map((x) => `<p>${esc(x)}</p>`).join("")}${d.ul ? `<ul>${d.ul.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}`).join("");
+  routes.push({
+    path: p, title: s.title, description: s.description, h1: s.h1,
+    body: `<p>${esc(s.summary)}</p>${details}${links}${qa}`,
+    ld: [...(da ? [faqLd(da.items.map((i) => ({ q: i.q, a: i.a })))] : []), ...(p === "/service" ? [serviceLd] : [])],
+  });
 }
 
 for (const [name, d] of Object.entries(PRODUCT_DETAILS)) {

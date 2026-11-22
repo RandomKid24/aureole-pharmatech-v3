@@ -1,21 +1,37 @@
 # Aureole Pharma Tech
 > Pharmaceutical engineering manufacturer in Nashik, Maharashtra, India. Makes stability chambers, walk-in chambers, incubators, freezers, ovens, table-top instruments, cleanroom equipment and modular laboratory furniture, with monitoring software and service support.
 
+Legal name: Aureole Pharma Private Limited. Also written Aureole Pharmatech.
 Contact: enquiry@aureolepharmatech.com | +91 86005 22240
-Offices: Nashik (Office No. 6004, Satyanarayan Mall, Lawate Nagar) and Thane (Unit 103, Centura Square, Wagale Industrial Estate).
+Offices: Nashik (Office No. 6004, Satyanarayan Mall, Lawate Nagar) and Thane (Unit 103, Centura Square, Wagale Industrial Estate). Plant: Malegaon MIDC, Sinnar, Nashik.
 Managing Director: Dr. Kiran Badgujar.
+Certifications: ISO 9001:2015, CE certificate, ZED Gold.
 Fuller factual overview: https://www.aureolepharmatech.com/content.md
 
-## Products
-- [Stability chambers and walk-in chambers](https://www.aureolepharmatech.com/products/stability-chambers/)
+## Stability chambers and incubators
+- [Stability chambers hub](https://www.aureolepharmatech.com/products/stability-chambers/)
+- [Humidity Chamber](https://www.aureolepharmatech.com/products/humidity-chamber/)
+- [Photostability Chamber](https://www.aureolepharmatech.com/products/photostability-chamber/)
+- [BOD Incubator](https://www.aureolepharmatech.com/products/bod-incubator/)
+- [Cold Chamber](https://www.aureolepharmatech.com/products/cold-chamber/)
+- [Walk In Humidity Chamber](https://www.aureolepharmatech.com/products/walk-in-humidity-chamber/)
+- [Walk In Cold Chamber](https://www.aureolepharmatech.com/products/walk-in-cold-chamber/)
+- [Walk In BOD Incubator](https://www.aureolepharmatech.com/products/walk-in-bod-incubator/)
+- [Walk In Deep Freezer](https://www.aureolepharmatech.com/products/walk-in-deep-freezer/)
+- [Ultra Low Deep Freezer (-80°C)](https://www.aureolepharmatech.com/products/ultra-low-deep-freezer-80c/)
+
+## Other equipment
 - [Table top instruments](https://www.aureolepharmatech.com/products/table-top-instruments/)
+- [Cleanroom equipment](https://www.aureolepharmatech.com/products/cleanroom-equipment/)
 - [Laboratory furniture](https://www.aureolepharmatech.com/products/laboratory-furniture/)
 - [Full catalogue](https://www.aureolepharmatech.com/products/)
+
+## Software and service
+- [Monitoring software (supports 21 CFR Part 11 requirements)](https://www.aureolepharmatech.com/software/)
+- [Service: calibration, IQ/OQ/PQ, AMC](https://www.aureolepharmatech.com/service/)
 
 ## Company
 - [About](https://www.aureolepharmatech.com/about/)
 - [Certifications](https://www.aureolepharmatech.com/about/certification-compliance/)
 - [Plants](https://www.aureolepharmatech.com/about/plants/)
-- [Service](https://www.aureolepharmatech.com/service/)
-- [Software](https://www.aureolepharmatech.com/software/)
 - [Careers](https://www.aureolepharmatech.com/careers/)

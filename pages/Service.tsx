@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import SEO from '../components/SEO';
+import { serviceLd } from '../data/pageSeo';
 import DirectAnswers from '../components/DirectAnswers';
 import ServiceHero from './Service/sections/ServiceHero';
 import CoreServices from './Service/sections/CoreServices';
@@ -13,7 +14,7 @@ const Service: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32 pb-20 bg-transparent">
-            <SEO />
+            <SEO jsonLd={[serviceLd]} />
             <ServiceHero />
             <CoreServices />
             <WhyChooseUs />

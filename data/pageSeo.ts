@@ -144,3 +144,15 @@ export const productLd = (name: string, description: string, url: string, images
   brand: { "@type": "Brand", name: "Aureole Pharma Tech" },
   manufacturer: { "@id": `${SITE_URL}/#organization` },
 });
+
+// Calibration, qualification and maintenance service (used on /service and in its prerendered head).
+export const serviceLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${SITE_URL}/service/#service`,
+  name: "Stability chamber calibration, qualification and maintenance",
+  serviceType: "Calibration, IQ/OQ/PQ execution, thermal mapping and annual maintenance",
+  url: `${SITE_URL}/service/`,
+  provider: { "@id": `${SITE_URL}/#organization` },
+  areaServed: { "@type": "Country", name: "India" },
+};

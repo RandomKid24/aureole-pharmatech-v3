@@ -18,7 +18,7 @@ _Snapshot date: 2026-10-14. Product tables in section 7 are generated from `data
 | Website | https://www.aureolepharmatech.com (www is canonical) | `vercel.json`, `data/pageSeo.ts` |
 | Industry | Manufacturer of pharmaceutical / laboratory equipment (stability chambers, walk-in chambers, ovens, freezers, table-top instruments, cleanroom equipment, lab furniture) | site UI; ISO scope "Manufacturing of pharma industry lab equipment" |
 | Managing Director | Dr. Kiran Badgujar (LinkedIn: in.linkedin.com/in/dr-kiran-badgujar-385a3367) | Quality Policy PDF, About page |
-| Social profiles | LinkedIn company page `aureole-pharmatech`; Instagram `aureole_pharmatech` | `components/Footer.tsx` |
+| Social profiles | LinkedIn company page `aureole-pharmatech`; Instagram `aureole_pharmatech`; IndiaMART `indiamart.com/aureolepharma/` (profile lists deep freezer / hot air oven; user to add stability chambers) | `components/Footer.tsx`; IndiaMART from the owner |
 
 ## 3. Contact and locations (as used on the website)
 | Fact | Value | Source |

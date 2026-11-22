@@ -35,9 +35,14 @@
           "@type": "Organization",
           "@id": "https://www.aureolepharmatech.com/#organization",
           "name": "Aureole Pharma Tech",
+          "legalName": "Aureole Pharma Private Limited",
+          "alternateName": [
+            "Aureole Pharmatech",
+            "Aureolepharmatech"
+          ],
           "url": "https://www.aureolepharmatech.com/",
           "logo": "https://www.aureolepharmatech.com/aureole-logo.webp",
-          "description": "Aureole Pharma Tech is a pharmaceutical engineering manufacturer of stability chambers, cleanroom equipment, table-top instruments and laboratory furniture, based in Nashik, Maharashtra, India.",
+          "description": "Aureole Pharma Tech is a pharmaceutical engineering manufacturer of stability chambers, walk-in chambers, cleanroom equipment, table-top instruments and laboratory furniture, based in Nashik, Maharashtra, India.",
           "email": "enquiry@aureolepharmatech.com",
           "telephone": "+91-86005-22240",
           "address": {
@@ -48,15 +53,51 @@
             "postalCode": "422002",
             "addressCountry": "IN"
           },
+          "location": [
+            {
+              "@type": "Place",
+              "name": "Aureole Pharma Tech, Thane head office",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Unit No. 103, 1st Floor, Centura Square, Wagale Industrial Estate",
+                "addressLocality": "Thane",
+                "addressRegion": "Maharashtra",
+                "addressCountry": "IN"
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Aureole Pharma Tech, manufacturing plant",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Plot No. B-61, Malegaon MIDC, Tal. Sinnar",
+                "addressLocality": "Nashik",
+                "addressRegion": "Maharashtra",
+                "postalCode": "422113",
+                "addressCountry": "IN"
+              }
+            }
+          ],
           "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+91-86005-22240",
             "email": "enquiry@aureolepharmatech.com",
             "contactType": "sales",
             "areaServed": "IN",
-            "availableLanguage": ["en"]
+            "availableLanguage": [
+              "en"
+            ]
           },
-          "founder": { "@id": "https://www.aureolepharmatech.com/#kiran-badgujar" },
+          "knowsAbout": [
+            "Stability chambers",
+            "Walk-in chambers",
+            "Photostability testing",
+            "21 CFR Part 11 monitoring software",
+            "Equipment qualification (IQ, OQ, PQ)"
+          ],
+          "founder": {
+            "@id": "https://www.aureolepharmatech.com/#kiran-badgujar"
+          },
           "sameAs": [
             "https://www.linkedin.com/company/aureole-pharmatech/",
             "https://www.instagram.com/aureole_pharmatech",
@@ -68,7 +109,9 @@
           "@id": "https://www.aureolepharmatech.com/#kiran-badgujar",
           "name": "Dr. Kiran Badgujar",
           "jobTitle": "Managing Director",
-          "worksFor": { "@id": "https://www.aureolepharmatech.com/#organization" },
+          "worksFor": {
+            "@id": "https://www.aureolepharmatech.com/#organization"
+          },
           "sameAs": "https://in.linkedin.com/in/dr-kiran-badgujar-385a3367"
         },
         {
@@ -77,7 +120,9 @@
           "url": "https://www.aureolepharmatech.com/",
           "name": "Aureole Pharma Tech",
           "inLanguage": "en-IN",
-          "publisher": { "@id": "https://www.aureolepharmatech.com/#organization" }
+          "publisher": {
+            "@id": "https://www.aureolepharmatech.com/#organization"
+          }
         }
       ]
     }
