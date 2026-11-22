@@ -15,6 +15,8 @@ import InfrasArchitecture from '../../components/sections/InfrasArchitecture';
 import ServiceCentersGrid from '../../components/sections/ServiceCentersGrid';
 import ChamberAnatomy from '../../components/sections/ChamberAnatomy';
 import RelatedProducts from '../../components/sections/RelatedProducts';
+import ProductSectionNav from '../../components/ui/ProductSectionNav';
+import CustomSizeStrip from '../../components/sections/CustomSizeStrip';
 
 const CityWiseProductPage: React.FC = () => {
     const { cityProductSlug } = useParams<{ cityProductSlug: string }>();
@@ -78,6 +80,7 @@ const CityWiseProductPage: React.FC = () => {
             </div>
 
             <ProductHero product={product} decodedName={`${productName} in ${content.label}`} />
+            <ProductSectionNav />
             
             <TechnicalDashboard product={product} decodedName={productName} />
             {showInfras && <InfrasArchitecture />}
@@ -87,6 +90,7 @@ const CityWiseProductPage: React.FC = () => {
             
             <ProductTables product={product} productName={productName} />
             <VariantSections product={product} />
+            <CustomSizeStrip product={product} />
             <ServiceCentersGrid productName={productName} />
             <RelatedProducts productName={productName} includeSelf />
             <ProductEnquiry />

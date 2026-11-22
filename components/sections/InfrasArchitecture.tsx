@@ -24,7 +24,7 @@ const InfrasArchitecture: React.FC = () => {
     return (
         <section ref={sectionRef} className="relative bg-white overflow-hidden border-t border-slate-100 my-12">
             {/* Trigger Section */}
-            <div className="container mx-auto px-4 sm:px-8 lg:px-16">
+            <div className="container mx-auto px-6 lg:px-24">
                 <div
                     className="py-6 flex items-center justify-between cursor-pointer group/gate transition-all duration-500"
                     onClick={handleToggle}
@@ -35,7 +35,7 @@ const InfrasArchitecture: React.FC = () => {
                         </div>
                         <div>
                             <h2 className="text-2xl lg:text-3xl font-black font-heading text-aureole-slate tracking-tighter leading-none mb-1 uppercase">
-                                Introducing <span className="text-aureole-blue">RHS</span>
+                                Introducing <span className="gt">RHS</span>
                             </h2>
                             <p className="text-xs font-black text-slate-400 uppercase tracking-widest">Rapid Humidification by Sonification</p>
                         </div>
@@ -56,7 +56,7 @@ const InfrasArchitecture: React.FC = () => {
             <div className={`grid transition-[grid-template-rows,opacity] duration-[1000ms] ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                 <div ref={contentRef} className="overflow-hidden">
                     <div className="bg-gradient-to-b from-slate-50 to-white py-10 lg:py-14 border-t border-slate-100">
-                        <div className="container mx-auto px-4 sm:px-8 lg:px-16">
+                        <div className="container mx-auto px-6 lg:px-24">
                             <div className="max-w-5xl mx-auto">
                                 
                                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">

@@ -16,7 +16,7 @@ const TechnicalDashboard: React.FC<TechnicalDashboardProps> = ({ product, decode
     if (!hasAnyTabs) return null;
 
     return (
-        <section className="bg-transparent">
+        <section id="features" className="bg-transparent scroll-mt-40">
             <div className="container mx-auto px-6 lg:px-24 py-4">
                 <div className="max-w-7xl mx-auto">
                     {COMPACT_LAYOUT_PRODUCTS.includes(decodedName)

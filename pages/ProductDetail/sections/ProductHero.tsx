@@ -106,7 +106,7 @@ const ProductHero: React.FC<ProductHeroProps> = ({ product, decodedName }) => {
     );
 
     return (
-        <section className="relative bg-transparent">
+        <section id="overview" className="relative bg-transparent scroll-mt-40">
             <div className="container mx-auto px-6 lg:px-24 pt-12 lg:pt-16">
                 <nav className="flex items-center gap-4 mb-8 flex-wrap">
                     <Link to="/" className="flex items-center gap-2.5 text-slate-400 hover:text-aureole-blue transition-all group">

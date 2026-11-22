@@ -14,6 +14,8 @@ import ProductEnquiry from './ProductDetail/sections/ProductEnquiry';
 import InfrasArchitecture from '../components/sections/InfrasArchitecture';
 import ServiceCentersGrid from '../components/sections/ServiceCentersGrid';
 import RelatedProducts from '../components/sections/RelatedProducts';
+import ProductSectionNav from '../components/ui/ProductSectionNav';
+import CustomSizeStrip from '../components/sections/CustomSizeStrip';
 import ChamberAnatomy from '../components/sections/ChamberAnatomy';
 
 import CategoryHero from '../components/ui/CategoryHero';
@@ -82,6 +84,7 @@ const ProductDetail: React.FC = () => {
                     jsonLd={[productLd(decodedName, seoData?.description || product.description, `${SITE_URL}/products/${productName}/`, product.images || (product.image ? [product.image] : []))]}
             />
             <ProductHero product={product} decodedName={decodedName} />
+            <ProductSectionNav />
             <TechnicalDashboard product={product} decodedName={decodedName} />
             {showInfras && <InfrasArchitecture />}
             {decodedName === "Walk In Humidity Chamber" && <ChamberAnatomy variant="humidity" />}
@@ -89,6 +92,7 @@ const ProductDetail: React.FC = () => {
             {decodedName === "Walk In BOD Incubator" && <ChamberAnatomy variant="bod" />}
             <ProductTables product={product} productName={decodedName} />
             <VariantSections product={product} />
+            <CustomSizeStrip product={product} />
             {(decodedName === "Walk In Humidity Chamber" || 
               decodedName === "Walk In Cold Chamber" || 
               decodedName === "Walk In BOD Incubator" || 

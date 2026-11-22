@@ -29,12 +29,12 @@ const ChamberAnatomy: React.FC<{ variant?: keyof typeof FIGURES }> = ({ variant 
     };
 
     return (
-        <section className="bg-white border-t border-slate-100 my-12">
-            <div className="container mx-auto px-4 sm:px-8 lg:px-16 py-10">
+        <section id="inside" className="bg-white border-t border-slate-100 my-12 scroll-mt-40">
+            <div className="container mx-auto px-6 lg:px-24 py-10">
                 <div className="flex flex-wrap items-end justify-between gap-4 mb-4">
                     <div>
                         <h2 className="text-2xl lg:text-3xl font-black font-heading text-aureole-slate tracking-tighter leading-none mb-1 uppercase">
-                            Inside the <span className="text-aureole-blue">Chamber</span>
+                            Inside the <span className="gt">Chamber</span>
                         </h2>
                         <p className="text-xs font-black text-slate-400 uppercase tracking-widest">Interactive anatomy: pick a view, then hover any part</p>
                     </div>
