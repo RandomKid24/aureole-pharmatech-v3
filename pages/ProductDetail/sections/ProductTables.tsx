@@ -243,11 +243,20 @@ const ProductTables: React.FC<ProductTablesProps> = ({ product, productName }) =
                         </HighlightFrame>
 
                         {product.complexTable.remark && (
-                            <div className="mt-8 g-left p-6 pl-8 bg-slate-50 border border-slate-100">
-                                <p className="text-[12px] text-aureole-slate leading-relaxed font-bold tracking-widest">
-                                    <span className="text-aureole-cyan mr-4">REMARK:</span>
-                                    {product.complexTable.remark}
-                                </p>
+                            <div className="mt-8 g-left py-7 px-8 bg-slate-50 border border-slate-100">
+                                <p className="text-[11px] font-bold tracking-widest text-aureole-cyan mb-4">NOTES</p>
+                                <ul className="space-y-3">
+                                    {product.complexTable.remark.split('\n').map((line, i) => (
+                                        <li key={i} className="flex gap-3 text-[14px] leading-relaxed text-aureole-slate">
+                                            <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-aureole-cyan" />
+                                            <span>
+                                                {line.replace(/^•\s*/, '').split(/(Single Phase 230 V|Three Phase 415 V)/).map((part, j) =>
+                                                    j % 2 ? <strong key={j} className="font-bold text-slate-900">{part}</strong> : part
+                                                )}
+                                            </span>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
                         )}
                     </div>

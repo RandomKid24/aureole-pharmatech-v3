@@ -56,28 +56,28 @@ export const walkInHumidityChamber: ProductDetail = {
                 cells: [
                     { content: "AP_WC_HC-2.0K_V**" },
                     { content: "2000", align: 'center' },
-                    { content: "12", align: 'center' },
-                    { content: "-", align: 'center' },
+                    { content: "10", align: 'center' },
+                    { content: "600 x 525 x 30", align: 'center' },
                     { content: "1700 x 800 x 1900", align: 'center' },
                     { content: "1860 x 960 x 2060", align: 'center' }
                 ]
             },
             {
                 cells: [
-                    { content: "AP_WC_HC-3.0K_V**" },
-                    { content: "3000", align: 'center' },
-                    { content: "12", align: 'center' },
-                    { content: "-", align: 'center' },
-                    { content: "1800 x 1000 x 1900", align: 'center' },
-                    { content: "1960 x 1160 x 2060", align: 'center' }
+                    { content: "AP_WC_HC-4.0K_V**" },
+                    { content: "4000", align: 'center' },
+                    { content: "10", align: 'center' },
+                    { content: "800 x 650 x 30", align: 'center' },
+                    { content: "2000 x 1000 x 2000", align: 'center' },
+                    { content: "2160 x 1160 x 2160", align: 'center' }
                 ]
             },
             {
                 cells: [
                     { content: "AP_WC_HC-6.0K_V**" },
                     { content: "6000", align: 'center' },
-                    { content: "24", align: 'center' },
-                    { content: "-", align: 'center' },
+                    { content: "20", align: 'center' },
+                    { content: "650 x 625 x 30", align: 'center' },
                     { content: "2000 x 1500 x 2000", align: 'center' },
                     { content: "2160 x 1660 x 2160", align: 'center' }
                 ]
@@ -86,8 +86,8 @@ export const walkInHumidityChamber: ProductDetail = {
                 cells: [
                     { content: "AP_WC_HC-8.0K_V**" },
                     { content: "8000", align: 'center' },
-                    { content: "24", align: 'center' },
-                    { content: "-", align: 'center' },
+                    { content: "20", align: 'center' },
+                    { content: "900 x 625 x 30", align: 'center' },
                     { content: "2000 x 2000 x 2000", align: 'center' },
                     { content: "2160 x 2160 x 2160", align: 'center' }
                 ]
@@ -96,53 +96,33 @@ export const walkInHumidityChamber: ProductDetail = {
                 cells: [
                     { content: "AP_WC_HC-10.0K_V**" },
                     { content: "10000", align: 'center' },
-                    { content: "36", align: 'center' },
-                    { content: "-", align: 'center' },
+                    { content: "30", align: 'center' },
+                    { content: "725 x 625 x 30", align: 'center' },
                     { content: "2000 x 2500 x 2000", align: 'center' },
                     { content: "2160 x 2660 x 2160", align: 'center' }
                 ]
             },
             {
                 cells: [
-                    { content: "AP_WC_HC-20.0K_V**" },
-                    { content: "20000", align: 'center' },
-                    { content: "60", align: 'center' },
-                    { content: "-", align: 'center' },
-                    { content: "2000 x 4000 x 2500", align: 'center' },
-                    { content: "2160 x 4160 x 2660", align: 'center' }
+                    { content: "AP_WC_HC-12.0K_V**" },
+                    { content: "12000", align: 'center' },
+                    { content: "40", align: 'center' },
+                    { content: "650 x 625 x 30", align: 'center' },
+                    { content: "2000 x 3000 x 2000", align: 'center' },
+                    { content: "2160 x 3160 x 2160", align: 'center' }
                 ]
             },
             {
                 cells: [
-                    { content: "AP_WC_HC-30.0K_V**" },
-                    { content: "30000", align: 'center' },
-                    { content: "84", align: 'center' },
-                    { content: "-", align: 'center' },
-                    { content: "2500 x 4800 x 2500", align: 'center' },
-                    { content: "2660 x 4960 x 2660", align: 'center' }
-                ]
-            },
-            {
-                cells: [
-                    { content: "AP_WC_HC-40.0K_V**" },
-                    { content: "40000", align: 'center' },
-                    { content: "108", align: 'center' },
-                    { content: "-", align: 'center' },
-                    { content: "4000 x 4000 x 2500", align: 'center' },
-                    { content: "4160 x 4160 x 2600", align: 'center' }
-                ]
-            },
-            {
-                cells: [
-                    { content: "AP_WC_HC-50.0K_V**" },
-                    { content: "50000", align: 'center' },
-                    { content: "144", align: 'center' },
-                    { content: "-", align: 'center' },
-                    { content: "4000 x 5000 x 2500", align: 'center' },
-                    { content: "4160 x 5160 x 2660", align: 'center' }
+                    { content: "AP_WC_HC-14.0K_V**" },
+                    { content: "14000", align: 'center' },
+                    { content: "56", align: 'center' },
+                    { content: "675 x 625 x 30", align: 'center' },
+                    { content: "2000 x 3000 x 2350", align: 'center' },
+                    { content: "2160 x 3160 x 2510", align: 'center' }
                 ]
             }
         ],
-        remark: "• Power Supply: Single Phase 230 V (up to 3000L), Three Phase 415 V (6000L and above). Above are standard sizes and we can offer other (customised) sizes also V** = variant based upon construction & body."
+        remark: "• Power supply: Single Phase 230 V for 2,000 L and 4,000 L models; Three Phase 415 V for 6,000 L and above.\n• Sizes shown are standard. Customised sizes are available on request.\n• V** denotes the variant, based on construction and body."
     }
 };

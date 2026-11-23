@@ -16,7 +16,7 @@ const COUNTRIES = new Set(["Bangladesh", "Ghana", "Nepal", "Nigeria", "Vietnam"]
 
 // Verified spec phrases per walk-in product (from data/products), longest first. The meta description uses the longest that fits.
 const SPEC_PHRASES: Record<string, string[]> = {
-  "Walk In Humidity Chamber": ["20°C to 60°C, 40% to 95% RH, models from 2,000 L to 50,000 L", "20°C to 60°C, 40% to 95% RH, ±0.3°C / ±2.0% RH", "20°C to 60°C, 40% to 95% RH"],
+  "Walk In Humidity Chamber": ["20°C to 60°C, 40% to 95% RH, models from 2,000 L to 14,000 L", "20°C to 60°C, 40% to 95% RH, ±0.3°C / ±2.0% RH", "20°C to 60°C, 40% to 95% RH"],
   "Walk In Cold Chamber": ["2°C to 8°C, ±1°C accuracy, PUF panels", "2°C to 8°C, ±1°C accuracy", "2°C to 8°C"],
   "Walk In BOD Incubator": ["10°C to 60°C, ±0.5°C accuracy, ±2.5°C uniformity", "10°C to 60°C, ±0.5°C accuracy", "10°C to 60°C"],
   "Walk In Deep Freezer": ["-5°C to -20°C or -25°C to -40°C, ±3°C accuracy", "-5°C to -20°C or -25°C to -40°C"],

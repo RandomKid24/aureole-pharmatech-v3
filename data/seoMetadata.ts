@@ -49,7 +49,7 @@ export const PRODUCT_SEO_DATA: Record<string, { title: string; description: stri
     },
     "Walk In Humidity Chamber": {
         title: "Walk In Humidity Chamber Manufacturer & Exporter | Aureole",
-        description: "Walk-in humidity chamber, 20–60°C, 40–95% RH, 2,000 L to 50,000 L models. Nashik-made, sold in India and exported to 15+ countries. Quote: +91 86005 22240."
+        description: "Walk-in humidity chamber, 20–60°C, 40–95% RH, 2,000 L to 14,000 L models. Nashik-made, sold in India and exported to 15+ countries. Quote: +91 86005 22240."
     },
     "Walk In Cold Chamber": {
         title: "Walk In Cold Chamber Manufacturer & Exporter | Aureole",
