@@ -8,6 +8,7 @@ import NotFound from './pages/NotFound';
 import Contact from './pages/Contact';
 import AboutUs from './pages/AboutUs';
 import { Navigate } from 'react-router-dom';
+import CookieBanner from './components/CookieBanner';
 import PageLoader from './components/PageLoader';
 import { preloadCriticalImages } from './utils/imagePreloader';
 
@@ -91,6 +92,7 @@ const App: React.FC = () => {
         </Suspense>
 
         <Footer />
+        <CookieBanner />
       </div>
     </Router>
   );

@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import FormNotice from '../../../components/FormNotice';
 import { track } from '../../../utils/track';
 import { MapPin, ArrowRight, ChevronDown, Activity, CheckCircle2, AlertCircle, Loader2, Globe, Search } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -449,6 +450,7 @@ const OurUnitsContact: React.FC = () => {
                       </div>
                     </div>
                   </button>
+                    <FormNotice />
                 </form>
               )}
             </div>

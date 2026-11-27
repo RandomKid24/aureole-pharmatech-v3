@@ -2,6 +2,7 @@
 import React from 'react';
 import { Linkedin, Instagram, MapPin, Mail, Phone } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { resetCookieChoice } from './CookieBanner';
 
 const Footer: React.FC = () => {
    const location = useLocation();
@@ -33,11 +34,11 @@ const Footer: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
                <div className="space-y-10">
-                  <Link to="/" onClick={handleScrollToTop} className="inline-block bg-white px-5 py-3 shadow-lg">
+                  <Link to="/" onClick={handleScrollToTop} className="inline-block">
                      <img
                         src="/aureole-logo.webp"
                         alt="Aureole Pharma-Tech"
-                        className="h-16 w-auto"
+                        className="h-20 w-auto -ml-4 brightness-0 invert"
                      />
                   </Link>
                   <p className="text-blue-50/90 text-sm font-medium leading-relaxed max-w-xs">
@@ -186,6 +187,8 @@ const Footer: React.FC = () => {
                   <span>All Rights Reserved.</span>
                   <span className="hidden md:inline opacity-20">|</span>
                   <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                  <span className="hidden md:inline opacity-20">|</span>
+                  <button type="button" onClick={resetCookieChoice} className="uppercase tracking-[0.2em] font-bold hover:text-white transition-colors">Cookie settings</button>
                </div>
             </div>
          </div>

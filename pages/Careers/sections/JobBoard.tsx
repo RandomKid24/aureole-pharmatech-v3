@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import FormNotice from '../../../components/FormNotice';
 import { ChevronDown, Zap, Target, Plus, Trash2 } from 'lucide-react';
 
 export interface JobListing {
@@ -416,6 +417,7 @@ const JobBoard: React.FC<JobBoardProps> = ({ listings, onApply, isLoading = fals
                                                             {applyStatus[job.id].message}
                                                         </div>
                                                     )}
+                                                    <FormNotice className="lg:col-span-3" />
                                                 </form>
                                             </div>
                                         </div>

@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import FormNotice from '../../../components/FormNotice';
 import { track } from '../../../utils/track';
 import { Mail, Phone, ArrowRight, CheckCircle2, AlertCircle, Loader2, ChevronDown, Search } from 'lucide-react';
 
@@ -381,6 +382,7 @@ const ProductEnquiry: React.FC = () => {
                                             </div>
                                         </div>
                                     </button>
+                                    <FormNotice />
                                 </form>
                             )}
                         </div>

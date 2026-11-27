@@ -1,0 +1,2180 @@
+{
+  "version": 1,
+  "nodes": [
+    {
+      "id": "session:2026-11-27",
+      "kind": "session",
+      "title": "Session 2026-11-27",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/fonts/bebas-neue-latin.woff2",
+      "kind": "file",
+      "title": "public/fonts/bebas-neue-latin.woff2",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/fonts/inter-latin-variable.woff2",
+      "kind": "file",
+      "title": "public/fonts/inter-latin-variable.woff2",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/fonts/manrope-latin-variable.woff2",
+      "kind": "file",
+      "title": "public/fonts/manrope-latin-variable.woff2",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/fonts/questrial-latin.woff2",
+      "kind": "file",
+      "title": "public/fonts/questrial-latin.woff2",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/_shared/fonts/poppins-400-latin.woff2",
+      "kind": "file",
+      "title": "public/vcards-2026/_shared/fonts/poppins-400-latin.woff2",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/_shared/fonts/poppins-500-latin.woff2",
+      "kind": "file",
+      "title": "public/vcards-2026/_shared/fonts/poppins-500-latin.woff2",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/_shared/fonts/poppins-600-latin.woff2",
+      "kind": "file",
+      "title": "public/vcards-2026/_shared/fonts/poppins-600-latin.woff2",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/_shared/fonts/poppins-700-latin.woff2",
+      "kind": "file",
+      "title": "public/vcards-2026/_shared/fonts/poppins-700-latin.woff2",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/fonts/OFL-BebasNeue.txt",
+      "kind": "file",
+      "title": "public/fonts/OFL-BebasNeue.txt",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/fonts/OFL-Inter.txt",
+      "kind": "file",
+      "title": "public/fonts/OFL-Inter.txt",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/fonts/OFL-Manrope.txt",
+      "kind": "file",
+      "title": "public/fonts/OFL-Manrope.txt",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/fonts/OFL-Questrial.txt",
+      "kind": "file",
+      "title": "public/fonts/OFL-Questrial.txt",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/_shared/fonts/OFL-Poppins.txt",
+      "kind": "file",
+      "title": "public/vcards-2026/_shared/fonts/OFL-Poppins.txt",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:index.css",
+      "kind": "file",
+      "title": "index.css",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:index.html",
+      "kind": "file",
+      "title": "index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/_shared/css/style.css",
+      "kind": "file",
+      "title": "public/vcards-2026/_shared/css/style.css",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:scripts/fix-all-vcards.js",
+      "kind": "file",
+      "title": "scripts/fix-all-vcards.js",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:vercel.json",
+      "kind": "file",
+      "title": "vercel.json",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:pages/Privacy.tsx",
+      "kind": "file",
+      "title": "pages/Privacy.tsx",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/aarti-avhad/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/aarti-avhad/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/akshada-shinde/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/akshada-shinde/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/altaf-shaikh/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/altaf-shaikh/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/anita-kanse/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/anita-kanse/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/ashwini-sangale/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/ashwini-sangale/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/asmita-pawar/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/asmita-pawar/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/bhagwat-badgujar/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/bhagwat-badgujar/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/bipin-badgujar/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/bipin-badgujar/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/chinna-janumala/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/chinna-janumala/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/deepak-s-andhale/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/deepak-s-andhale/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/devika-pange/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/devika-pange/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/dnyaneshwar-gaikwad/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/dnyaneshwar-gaikwad/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/dr-kiran-badgujar/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/dr-kiran-badgujar/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/jayashri-bagul/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/jayashri-bagul/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/jitendra-tajanpure/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/jitendra-tajanpure/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/komal-kate/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/komal-kate/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/mithesh-rai/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/mithesh-rai/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/mrunali-sali/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/mrunali-sali/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/pooja-kolse/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/pooja-kolse/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/pritam-gujarathi/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/pritam-gujarathi/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/priyanka-mithe/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/priyanka-mithe/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/ramesh-mali/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/ramesh-mali/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/ramprasad-bairagi/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/ramprasad-bairagi/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/rohan-gujarathi/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/rohan-gujarathi/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/roshan-patil/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/roshan-patil/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/sagar-ranmale/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/sagar-ranmale/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/sahil-rajguru/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/sahil-rajguru/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/sakshi-gujrathi/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/sakshi-gujrathi/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/samir-ekhande/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/samir-ekhande/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/sandip-kale/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/sandip-kale/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/sanket-jagtap/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/sanket-jagtap/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/shalaka-nargolkar/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/shalaka-nargolkar/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/shital-ghorpade/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/shital-ghorpade/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/shubham-badgujar/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/shubham-badgujar/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/shubhangi-gaikhe/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/shubhangi-gaikhe/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/sonali-shirsath/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/sonali-shirsath/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/suvarna-palde/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/suvarna-palde/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/tejal-shinde/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/tejal-shinde/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/vijay-mahajan/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/vijay-mahajan/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/vikas-patole/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/vikas-patole/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/vikrant-shewale/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/vikrant-shewale/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/vishwanath-ghuge/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/vishwanath-ghuge/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/yogeeta-pawar/index.html",
+      "kind": "file",
+      "title": "public/vcards-2026/yogeeta-pawar/index.html",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:.memory/graph.json",
+      "kind": "file",
+      "title": ".memory/graph.json",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/noise.webp",
+      "kind": "file",
+      "title": "public/noise.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:utils/consent.ts",
+      "kind": "file",
+      "title": "utils/consent.ts",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:components/CookieConsent.tsx",
+      "kind": "file",
+      "title": "components/CookieConsent.tsx",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:components/ConsentMap.tsx",
+      "kind": "file",
+      "title": "components/ConsentMap.tsx",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:utils/track.ts",
+      "kind": "file",
+      "title": "utils/track.ts",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:index.tsx",
+      "kind": "file",
+      "title": "index.tsx",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:App.tsx",
+      "kind": "file",
+      "title": "App.tsx",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:components/Footer.tsx",
+      "kind": "file",
+      "title": "components/Footer.tsx",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:pages/Home/sections/OurUnitsContact.tsx",
+      "kind": "file",
+      "title": "pages/Home/sections/OurUnitsContact.tsx",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:design.md",
+      "kind": "file",
+      "title": "design.md",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:pages/about/Overview/sections/LeadershipVision.tsx",
+      "kind": "file",
+      "title": "pages/about/Overview/sections/LeadershipVision.tsx",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:pages/ProductDetail/sections/SSAccessoriesGrid.tsx",
+      "kind": "file",
+      "title": "pages/ProductDetail/sections/SSAccessoriesGrid.tsx",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:data/clients.ts",
+      "kind": "file",
+      "title": "data/clients.ts",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/vcards-2026/_shared/js/consent.js",
+      "kind": "file",
+      "title": "public/vcards-2026/_shared/js/consent.js",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/BOD Chamber Front.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/BOD Chamber Front.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/BOD Chamber Front.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/BOD Chamber Front.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Bio safety Cabinet Front.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Bio safety Cabinet Front.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Bio safety Cabinet Front.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Bio safety Cabinet Front.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Cold Chamber Front.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Cold Chamber Front.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Cold Chamber Front.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Cold Chamber Front.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Dual Zone Chamber Front.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Dual Zone Chamber Front.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Dual Zone Chamber Front.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Dual Zone Chamber Front.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Humidity Chamberr Front Angle.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Humidity Chamberr Front Angle.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Humidity Chamberr Front Angle.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Humidity Chamberr Front Angle.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Luminar Air Flow Front.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Luminar Air Flow Front.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Luminar Air Flow Front.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Luminar Air Flow Front.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/New Bacteriological Incubator Front.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/New Bacteriological Incubator Front.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/New Bacteriological Incubator Front.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/New Bacteriological Incubator Front.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/New Bacteriological Incubator with Eva t Front.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/New Bacteriological Incubator with Eva t Front.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/New Bacteriological Incubator with Eva t Front.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/New Bacteriological Incubator with Eva t Front.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/New Deep Freezer Ultra Low Final Front.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/New Deep Freezer Ultra Low Final Front.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/New Deep Freezer Ultra Low Final Front.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/New Deep Freezer Ultra Low Final Front.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/New Hot Air Oven Final 3 Front.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/New Hot Air Oven Final 3 Front.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/New Hot Air Oven Final 3 Front.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/New Hot Air Oven Final 3 Front.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Pass Box Front.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Pass Box Front.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Pass Box Front.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Pass Box Front.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Photostability Chamber Front Angle.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Photostability Chamber Front Angle.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Photostability Chamber Front Angle.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Photostability Chamber Front Angle.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Samp Booth Front.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Samp Booth Front.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Samp Booth Front.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Samp Booth Front.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/V Autoclave Front.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/V Autoclave Front.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/V Autoclave Front.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/V Autoclave Front.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Walk in BOD Chamber Final Front.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Walk in BOD Chamber Final Front.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Walk in BOD Chamber Final Front.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Walk in BOD Chamber Final Front.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Walk in Cold Chamber Final 4 Front.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Walk in Cold Chamber Final 4 Front.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Walk in Cold Chamber Final 4 Front.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Walk in Cold Chamber Final 4 Front.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Walk in Deep Freezerr Final Front.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Walk in Deep Freezerr Final Front.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Walk in Deep Freezerr Final Front.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Walk in Deep Freezerr Final Front.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Walk in Humidity Chamber Final Front.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Walk in Humidity Chamber Final Front.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Front Angle Render/Walk in Humidity Chamber Final Front.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Front Angle Render/Walk in Humidity Chamber Final Front.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/BOD Chamber Side Left.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/BOD Chamber Side Left.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/BOD Chamber Side Left.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/BOD Chamber Side Left.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Bio safety Cabinet Left.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Bio safety Cabinet Left.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Bio safety Cabinet Left.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Bio safety Cabinet Left.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Cold Chamber Left.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Cold Chamber Left.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Cold Chamber Left.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Cold Chamber Left.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Dual Zone Chamber Left.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Dual Zone Chamber Left.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Dual Zone Chamber Left.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Dual Zone Chamber Left.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Humidity Chamber Left Angle.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Humidity Chamber Left Angle.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Humidity Chamber Left Angle.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Humidity Chamber Left Angle.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Luminar Air Flow Left.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Luminar Air Flow Left.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Luminar Air Flow Left.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Luminar Air Flow Left.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/New Bacteriological Incubator Left.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/New Bacteriological Incubator Left.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/New Bacteriological Incubator Left.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/New Bacteriological Incubator Left.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/New Bacteriological Incubator with Eva t Left.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/New Bacteriological Incubator with Eva t Left.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/New Bacteriological Incubator with Eva t Left.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/New Bacteriological Incubator with Eva t Left.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/New Deep Freezer Ultra Low Final Left.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/New Deep Freezer Ultra Low Final Left.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/New Deep Freezer Ultra Low Final Left.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/New Deep Freezer Ultra Low Final Left.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/New Hot Air Oven Final 3 Left.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/New Hot Air Oven Final 3 Left.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/New Hot Air Oven Final 3 Left.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/New Hot Air Oven Final 3 Left.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Pass Box Left.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Pass Box Left.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Pass Box Left.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Pass Box Left.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Photostability Chamber Left Angle.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Photostability Chamber Left Angle.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Photostability Chamber Left Angle.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Photostability Chamber Left Angle.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Samp Booth Left.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Samp Booth Left.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Samp Booth Left.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Samp Booth Left.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/V Autoclave Left.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/V Autoclave Left.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/V Autoclave Left.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/V Autoclave Left.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Walk in BOD Chamber Final Left.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Walk in BOD Chamber Final Left.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Walk in BOD Chamber Final Left.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Walk in BOD Chamber Final Left.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Walk in Cold Chamber Final 4 Left.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Walk in Cold Chamber Final 4 Left.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Walk in Cold Chamber Final 4 Left.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Walk in Cold Chamber Final 4 Left.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Walk in Deep Freezerr Final Left.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Walk in Deep Freezerr Final Left.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Walk in Deep Freezerr Final Left.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Walk in Deep Freezerr Final Left.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Walk in Humidity Chamber Final Left Angle 2.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Walk in Humidity Chamber Final Left Angle 2.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Left Angle Render/Walk in Humidity Chamber Final Left Angle 2.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Left Angle Render/Walk in Humidity Chamber Final Left Angle 2.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/BOD Chamber Side Right.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/BOD Chamber Side Right.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/BOD Chamber Side Right.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/BOD Chamber Side Right.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Bio safety Cabinet Right.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Bio safety Cabinet Right.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Bio safety Cabinet Right.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Bio safety Cabinet Right.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Cold Chamber Right.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Cold Chamber Right.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Cold Chamber Right.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Cold Chamber Right.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Dual Zone Chamber Right.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Dual Zone Chamber Right.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Dual Zone Chamber Right.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Dual Zone Chamber Right.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Humidity Chamberr Right Angle.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Humidity Chamberr Right Angle.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Humidity Chamberr Right Angle.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Humidity Chamberr Right Angle.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Luminar Air Flow Right.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Luminar Air Flow Right.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Luminar Air Flow Right.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Luminar Air Flow Right.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/New Bacteriological Incubator Right.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/New Bacteriological Incubator Right.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/New Bacteriological Incubator Right.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/New Bacteriological Incubator Right.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/New Bacteriological Incubator With Eva t Final.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/New Bacteriological Incubator With Eva t Final.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/New Bacteriological Incubator With Eva t Final.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/New Bacteriological Incubator With Eva t Final.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/New Deep Freezer Ultra Low Final Right.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/New Deep Freezer Ultra Low Final Right.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/New Deep Freezer Ultra Low Final Right.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/New Deep Freezer Ultra Low Final Right.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/New Hot Air Oven Final 3 Right.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/New Hot Air Oven Final 3 Right.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/New Hot Air Oven Final 3 Right.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/New Hot Air Oven Final 3 Right.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Pass Box Right.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Pass Box Right.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Pass Box Right.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Pass Box Right.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Photostability Chamber Right Angle.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Photostability Chamber Right Angle.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Photostability Chamber Right Angle.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Photostability Chamber Right Angle.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Samp Booth Right.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Samp Booth Right.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Samp Booth Right.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Samp Booth Right.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/V Autoclave Right.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/V Autoclave Right.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/V Autoclave Right.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/V Autoclave Right.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Walk in BOD Chamber Final Right.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Walk in BOD Chamber Final Right.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Walk in BOD Chamber Final Right.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Walk in BOD Chamber Final Right.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Walk in Cold Chamber Final Right.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Walk in Cold Chamber Final Right.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Walk in Cold Chamber Final Right.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Walk in Cold Chamber Final Right.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Walk in Deep Freezerr Final Right.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Walk in Deep Freezerr Final Right.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Walk in Deep Freezerr Final Right.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Walk in Deep Freezerr Final Right.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Walk in Humidity Chamber Final Right.png",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Walk in Humidity Chamber Final Right.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:public/Products 3D render/Right Angle Render/Walk in Humidity Chamber Final Right.webp",
+      "kind": "file",
+      "title": "public/Products 3D render/Right Angle Render/Walk in Humidity Chamber Final Right.webp",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:reports/consent-check-prompt.md",
+      "kind": "file",
+      "title": "reports/consent-check-prompt.md",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:VCARD_MAINTENANCE.md",
+      "kind": "file",
+      "title": "VCARD_MAINTENANCE.md",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:.ui-fix/runs/2026-11-27-cookie-consent/backup-before/components/CookieConsent.tsx",
+      "kind": "file",
+      "title": ".ui-fix/runs/2026-11-27-cookie-consent/backup-before/components/CookieConsent.tsx",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:.ui-fix/runs/2026-11-27-cookie-consent/backup-before/public/vcards-2026/_shared/css/style.css",
+      "kind": "file",
+      "title": ".ui-fix/runs/2026-11-27-cookie-consent/backup-before/public/vcards-2026/_shared/css/style.css",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:.ui-fix/runs/2026-11-27-cookie-consent/backup-before/public/vcards-2026/_shared/js/consent.js",
+      "kind": "file",
+      "title": ".ui-fix/runs/2026-11-27-cookie-consent/backup-before/public/vcards-2026/_shared/js/consent.js",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:.ui-fix/runs/2026-11-27-cookie-consent/restore.sh",
+      "kind": "file",
+      "title": ".ui-fix/runs/2026-11-27-cookie-consent/restore.sh",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:.ui-fix/runs/2026-11-27-cookie-consent/before-desktop.png",
+      "kind": "file",
+      "title": ".ui-fix/runs/2026-11-27-cookie-consent/before-desktop.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:.ui-fix/runs/2026-11-27-cookie-consent/after-desktop.png",
+      "kind": "file",
+      "title": ".ui-fix/runs/2026-11-27-cookie-consent/after-desktop.png",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:reports/Website privacy compliance checklist.md",
+      "kind": "file",
+      "title": "reports/Website privacy compliance checklist.md",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:research_notes/Website privacy compliance checklist/eu_gdpr.md",
+      "kind": "file",
+      "title": "research_notes/Website privacy compliance checklist/eu_gdpr.md",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:research_notes/Website privacy compliance checklist/india_dpdp.md",
+      "kind": "file",
+      "title": "research_notes/Website privacy compliance checklist/india_dpdp.md",
+      "at": 1795774025745
+    },
+    {
+      "id": "file:research_notes/Website privacy compliance checklist/third_party.md",
+      "kind": "file",
+      "title": "research_notes/Website privacy compliance checklist/third_party.md",
+      "at": 1795774025745
+    }
+  ],
+  "edges": [
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/fonts/bebas-neue-latin.woff2",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/fonts/inter-latin-variable.woff2",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/fonts/manrope-latin-variable.woff2",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/fonts/questrial-latin.woff2",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/_shared/fonts/poppins-400-latin.woff2",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/_shared/fonts/poppins-500-latin.woff2",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/_shared/fonts/poppins-600-latin.woff2",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/_shared/fonts/poppins-700-latin.woff2",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/fonts/OFL-BebasNeue.txt",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/fonts/OFL-Inter.txt",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/fonts/OFL-Manrope.txt",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/fonts/OFL-Questrial.txt",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/_shared/fonts/OFL-Poppins.txt",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:index.css",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/_shared/css/style.css",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:scripts/fix-all-vcards.js",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:vercel.json",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:pages/Privacy.tsx",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/aarti-avhad/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/akshada-shinde/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/altaf-shaikh/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/anita-kanse/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/ashwini-sangale/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/asmita-pawar/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/bhagwat-badgujar/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/bipin-badgujar/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/chinna-janumala/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/deepak-s-andhale/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/devika-pange/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/dnyaneshwar-gaikwad/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/dr-kiran-badgujar/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/jayashri-bagul/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/jitendra-tajanpure/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/komal-kate/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/mithesh-rai/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/mrunali-sali/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/pooja-kolse/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/pritam-gujarathi/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/priyanka-mithe/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/ramesh-mali/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/ramprasad-bairagi/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/rohan-gujarathi/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/roshan-patil/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/sagar-ranmale/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/sahil-rajguru/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/sakshi-gujrathi/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/samir-ekhande/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/sandip-kale/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/sanket-jagtap/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/shalaka-nargolkar/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/shital-ghorpade/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/shubham-badgujar/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/shubhangi-gaikhe/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/sonali-shirsath/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/suvarna-palde/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/tejal-shinde/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/vijay-mahajan/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/vikas-patole/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/vikrant-shewale/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/vishwanath-ghuge/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/yogeeta-pawar/index.html",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:.memory/graph.json",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/noise.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:utils/consent.ts",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:components/CookieConsent.tsx",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:components/ConsentMap.tsx",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:utils/track.ts",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:index.tsx",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:App.tsx",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:components/Footer.tsx",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:pages/Home/sections/OurUnitsContact.tsx",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:design.md",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:pages/about/Overview/sections/LeadershipVision.tsx",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:pages/ProductDetail/sections/SSAccessoriesGrid.tsx",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:data/clients.ts",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/vcards-2026/_shared/js/consent.js",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/BOD Chamber Front.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/BOD Chamber Front.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Bio safety Cabinet Front.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Bio safety Cabinet Front.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Cold Chamber Front.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Cold Chamber Front.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Dual Zone Chamber Front.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Dual Zone Chamber Front.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Humidity Chamberr Front Angle.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Humidity Chamberr Front Angle.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Luminar Air Flow Front.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Luminar Air Flow Front.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/New Bacteriological Incubator Front.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/New Bacteriological Incubator Front.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/New Bacteriological Incubator with Eva t Front.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/New Bacteriological Incubator with Eva t Front.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/New Deep Freezer Ultra Low Final Front.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/New Deep Freezer Ultra Low Final Front.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/New Hot Air Oven Final 3 Front.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/New Hot Air Oven Final 3 Front.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Pass Box Front.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Pass Box Front.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Photostability Chamber Front Angle.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Photostability Chamber Front Angle.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Samp Booth Front.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Samp Booth Front.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/V Autoclave Front.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/V Autoclave Front.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Walk in BOD Chamber Final Front.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Walk in BOD Chamber Final Front.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Walk in Cold Chamber Final 4 Front.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Walk in Cold Chamber Final 4 Front.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Walk in Deep Freezerr Final Front.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Walk in Deep Freezerr Final Front.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Walk in Humidity Chamber Final Front.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Front Angle Render/Walk in Humidity Chamber Final Front.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/BOD Chamber Side Left.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/BOD Chamber Side Left.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Bio safety Cabinet Left.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Bio safety Cabinet Left.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Cold Chamber Left.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Cold Chamber Left.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Dual Zone Chamber Left.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Dual Zone Chamber Left.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Humidity Chamber Left Angle.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Humidity Chamber Left Angle.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Luminar Air Flow Left.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Luminar Air Flow Left.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/New Bacteriological Incubator Left.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/New Bacteriological Incubator Left.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/New Bacteriological Incubator with Eva t Left.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/New Bacteriological Incubator with Eva t Left.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/New Deep Freezer Ultra Low Final Left.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/New Deep Freezer Ultra Low Final Left.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/New Hot Air Oven Final 3 Left.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/New Hot Air Oven Final 3 Left.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Pass Box Left.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Pass Box Left.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Photostability Chamber Left Angle.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Photostability Chamber Left Angle.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Samp Booth Left.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Samp Booth Left.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/V Autoclave Left.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/V Autoclave Left.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Walk in BOD Chamber Final Left.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Walk in BOD Chamber Final Left.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Walk in Cold Chamber Final 4 Left.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Walk in Cold Chamber Final 4 Left.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Walk in Deep Freezerr Final Left.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Walk in Deep Freezerr Final Left.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Walk in Humidity Chamber Final Left Angle 2.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Left Angle Render/Walk in Humidity Chamber Final Left Angle 2.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/BOD Chamber Side Right.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/BOD Chamber Side Right.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Bio safety Cabinet Right.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Bio safety Cabinet Right.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Cold Chamber Right.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Cold Chamber Right.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Dual Zone Chamber Right.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Dual Zone Chamber Right.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Humidity Chamberr Right Angle.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Humidity Chamberr Right Angle.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Luminar Air Flow Right.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Luminar Air Flow Right.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/New Bacteriological Incubator Right.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/New Bacteriological Incubator Right.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/New Bacteriological Incubator With Eva t Final.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/New Bacteriological Incubator With Eva t Final.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/New Deep Freezer Ultra Low Final Right.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/New Deep Freezer Ultra Low Final Right.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/New Hot Air Oven Final 3 Right.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/New Hot Air Oven Final 3 Right.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Pass Box Right.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Pass Box Right.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Photostability Chamber Right Angle.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Photostability Chamber Right Angle.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Samp Booth Right.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Samp Booth Right.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/V Autoclave Right.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/V Autoclave Right.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Walk in BOD Chamber Final Right.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Walk in BOD Chamber Final Right.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Walk in Cold Chamber Final Right.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Walk in Cold Chamber Final Right.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Walk in Deep Freezerr Final Right.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Walk in Deep Freezerr Final Right.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Walk in Humidity Chamber Final Right.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:public/Products 3D render/Right Angle Render/Walk in Humidity Chamber Final Right.webp",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:reports/consent-check-prompt.md",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:VCARD_MAINTENANCE.md",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:.ui-fix/runs/2026-11-27-cookie-consent/backup-before/components/CookieConsent.tsx",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:.ui-fix/runs/2026-11-27-cookie-consent/backup-before/public/vcards-2026/_shared/css/style.css",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:.ui-fix/runs/2026-11-27-cookie-consent/backup-before/public/vcards-2026/_shared/js/consent.js",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:.ui-fix/runs/2026-11-27-cookie-consent/restore.sh",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:.ui-fix/runs/2026-11-27-cookie-consent/before-desktop.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:.ui-fix/runs/2026-11-27-cookie-consent/after-desktop.png",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:reports/Website privacy compliance checklist.md",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:research_notes/Website privacy compliance checklist/eu_gdpr.md",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:research_notes/Website privacy compliance checklist/india_dpdp.md",
+      "type": "touched"
+    },
+    {
+      "from": "session:2026-11-27",
+      "to": "file:research_notes/Website privacy compliance checklist/third_party.md",
+      "type": "touched"
+    }
+  ]
+}

@@ -18,14 +18,14 @@ const Privacy: React.FC = () => {
             <SEO />
             <div className="container mx-auto px-6 lg:px-24 max-w-4xl">
                 <h1 className="text-4xl lg:text-5xl font-black font-heading tracking-tighter text-aureole-slate">Privacy Policy</h1>
-                <p className="mt-3 text-sm text-slate-500">Last updated: 14 October 2026</p>
+                <p className="mt-3 text-sm text-slate-500">Last updated: 27 November 2026</p>
                 <p className="mt-6 text-slate-600 leading-relaxed">
                     This policy explains how Aureole Pharma Pvt. Ltd. (&quot;Aureole Pharma Tech&quot;, &quot;we&quot;) handles personal information collected through www.aureolepharmatech.com.
                 </p>
 
                 <Section title="What we collect">
-                    <p><strong>Enquiry forms:</strong> your name, company name, location, email address, phone number and the message you write.</p>
-                    <p><strong>Careers applications:</strong> the details and documents you submit with an application.</p>
+                    <p><strong>Enquiry forms:</strong> your name, company name, email address, phone number, your location or the product you are interested in, and the message you write. We save these details to contact you.</p>
+                    <p><strong>Careers applications:</strong> your name and contact details, including address; your current company, position, experience, notice period, current and expected salary; your education, certifications and skills; LinkedIn and portfolio links; your cover letter and resume. Some of these are optional. We save them to review your application and contact you.</p>
                     <p><strong>Usage data:</strong> we use Google Analytics to see which pages are visited. It uses cookies or similar identifiers and records technical data such as pages viewed, device type and approximate location.</p>
                     <p><strong>Chat widget:</strong> a third-party chat widget is loaded on the site. Anything you type into it is handled by that provider and by us.</p>
                 </Section>
@@ -40,7 +40,7 @@ const Privacy: React.FC = () => {
                 </Section>
 
                 <Section title="Who handles it">
-                    <p>Form submissions are sent to our enquiry and careers management system. Service providers that host the website, run analytics or provide the chat widget may process data on our behalf. We may disclose information if the law requires it.</p>
+                    <p>We save the details you submit through our forms so we can contact you and respond. Service providers that host the website, run analytics or provide the chat widget may process data on our behalf. We may disclose information if the law requires it.</p>
                 </Section>
 
                 <Section title="How long we keep it">
@@ -48,7 +48,7 @@ const Privacy: React.FC = () => {
                 </Section>
 
                 <Section title="Your choices">
-                    <p>You can ask us to tell you what we hold about you, correct it, or delete it. You can also block cookies in your browser settings or opt out of Google Analytics using Google&apos;s browser add-on. We handle personal data in line with applicable Indian law, including the Digital Personal Data Protection Act, 2023.</p>
+                    <p>You can ask us to tell you what we hold about you, correct it, or delete it. Analytics and the chat widget load only if you choose &quot;Accept&quot; in the cookie banner; you can change this with &quot;Cookie settings&quot; at the bottom of any page. You can also block cookies in your browser settings or opt out of Google Analytics using Google&apos;s browser add-on. We handle personal data in line with applicable Indian law, including the Digital Personal Data Protection Act, 2023.</p>
                 </Section>
 
                 <Section title="Contact us">
