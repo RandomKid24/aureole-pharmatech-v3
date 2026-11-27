@@ -34,13 +34,6 @@ const Footer: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
                <div className="space-y-10">
-                  <Link to="/" onClick={handleScrollToTop} className="inline-block">
-                     <img
-                        src="/aureole-logo.webp"
-                        alt="Aureole Pharma-Tech"
-                        className="h-20 w-auto -ml-4 brightness-0 invert"
-                     />
-                  </Link>
                   <p className="text-blue-50/90 text-sm font-medium leading-relaxed max-w-xs">
                      Precision engineering leaders in environmental stabilization and thermal control solutions for global pharmaceutical manufacturing.
                   </p>
